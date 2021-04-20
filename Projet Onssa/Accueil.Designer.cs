@@ -52,11 +52,13 @@ namespace Projet_Onssa
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel16 = new System.Windows.Forms.Panel();
+            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
@@ -408,11 +410,26 @@ namespace Projet_Onssa
             // 
             // panel16
             // 
+            this.panel16.Controls.Add(this.bunifuDropdown1);
             this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel16.Location = new System.Drawing.Point(296, 96);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(986, 653);
             this.panel16.TabIndex = 4;
+            // 
+            // bunifuDropdown1
+            // 
+            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown1.BorderRadius = 3;
+            this.bunifuDropdown1.ForeColor = System.Drawing.Color.White;
+            this.bunifuDropdown1.Items = new string[0];
+            this.bunifuDropdown1.Location = new System.Drawing.Point(218, 189);
+            this.bunifuDropdown1.Name = "bunifuDropdown1";
+            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuDropdown1.selectedIndex = -1;
+            this.bunifuDropdown1.Size = new System.Drawing.Size(217, 35);
+            this.bunifuDropdown1.TabIndex = 0;
             // 
             // Accueil
             // 
@@ -433,6 +450,7 @@ namespace Projet_Onssa
             this.panel7.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -461,5 +479,6 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
+        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
     }
 }
