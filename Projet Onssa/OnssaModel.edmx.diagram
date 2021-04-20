@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0304173820524863a319b5867ba385fe" Name="Diagram1" ZoomLevel="106" >
+        <EntityTypeShape EntityType="OnssaModel.Fournisseur" Width="1.5" PointX="8.875" PointY="3.375" />
+        <EntityTypeShape EntityType="OnssaModel.Commission" Width="1.5" PointX="10.75" PointY="9" />
+        <EntityTypeShape EntityType="OnssaModel.Consultation" Width="1.5" PointX="3.5" PointY="3.375" />
+        <EntityTypeShape EntityType="OnssaModel.PVJ" Width="1.5" PointX="1.625" PointY="6.5" />
+        <EntityTypeShape EntityType="OnssaModel.ModeleDevis" Width="1.5" PointX="13.125" PointY="0.875" />
+        <EntityTypeShape EntityType="OnssaModel.Produit" Width="1.5" PointX="6.125" PointY="2.125" />
+        <EntityTypeShape EntityType="OnssaModel.PVR" Width="1.5" PointX="11.125" PointY="12.625" />
+        <EntityTypeShape EntityType="OnssaModel.BC" Width="1.5" PointX="1.75" PointY="11.5" />
+        <EntityTypeShape EntityType="OnssaModel.FE" Width="1.5" PointX="6.125" PointY="10.375" />
+        <EntityTypeShape EntityType="OnssaModel.Morasse" Width="1.5" PointX="0.875" PointY="15.375" />
+        <EntityTypeShape EntityType="OnssaModel.OI" Width="1.5" PointX="5.125" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnssaModel.OP" Width="1.5" PointX="5.875" PointY="20.375" />
+        <EntityTypeShape EntityType="OnssaModel.OV" Width="1.5" PointX="9.75" PointY="16.75" />
+        <EntityTypeShape EntityType="OnssaModel.GestionCompte" Width="1.5" PointX="11.375" PointY="4.375" />
+        <AssociationConnector Association="OnssaModel.PVJFournisseur" />
+        <AssociationConnector Association="OnssaModel.ModeleDevisFournisseur" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="OnssaModel.PVJCommission" />
+        <AssociationConnector Association="OnssaModel.PVJConsultation" />
+        <AssociationConnector Association="OnssaModel.ModeleDevisProduit" ManuallyRouted="true" >
+          <ConnectorPoint PointX="13.125" PointY="2.5862939453125" />
+          <ConnectorPoint PointX="9.7083333333333339" PointY="2.5862939453124993" />
+          <ConnectorPoint PointX="9.5416666666666661" PointY="2.5862939453125" />
+          <ConnectorPoint PointX="7.625" PointY="2.5862939453125" />
+        </AssociationConnector>
+        <AssociationConnector Association="OnssaModel.ModeleDevisPVJ" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="OnssaModel.ConsultationFournisseur" />
+        <AssociationConnector Association="OnssaModel.CommissionPVR" />
+        <AssociationConnector Association="OnssaModel.OIPVR" />
+        <AssociationConnector Association="OnssaModel.FEOI" />
+        <AssociationConnector Association="OnssaModel.OIOP" />
+        <AssociationConnector Association="OnssaModel.BCFE" />
+        <AssociationConnector Association="OnssaModel.BCMorasse" />
+        <AssociationConnector Association="OnssaModel.OVOP" />
+        <AssociationConnector Association="OnssaModel.PVJBC" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="OnssaModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="OnssaModelStoreContainer">
+    <EntitySet Name="FournisseurSet" EntityType="OnssaModel.Store.FournisseurSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommissionSet" EntityType="OnssaModel.Store.CommissionSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsultationSet" EntityType="OnssaModel.Store.ConsultationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PVJSet" EntityType="OnssaModel.Store.PVJSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModeleDevisSet" EntityType="OnssaModel.Store.ModeleDevisSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ProduitSet" EntityType="OnssaModel.Store.ProduitSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PVRSet" EntityType="OnssaModel.Store.PVRSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="BCSet" EntityType="OnssaModel.Store.BCSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FESet" EntityType="OnssaModel.Store.FESet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MorasseSet" EntityType="OnssaModel.Store.MorasseSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OISet" EntityType="OnssaModel.Store.OISet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OPSet" EntityType="OnssaModel.Store.OPSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OVSet" EntityType="OnssaModel.Store.OVSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="GestionCompteSet" EntityType="OnssaModel.Store.GestionCompteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PVJFournisseur" EntityType="OnssaModel.Store.PVJFournisseur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PVJCommission" EntityType="OnssaModel.Store.PVJCommission" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ModeleDevisProduit" EntityType="OnssaModel.Store.ModeleDevisProduit" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ConsultationFournisseur" EntityType="OnssaModel.Store.ConsultationFournisseur" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommissionPVR" EntityType="OnssaModel.Store.CommissionPVR" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_PVJFournisseur_PVJ" Association="OnssaModel.Store.FK_PVJFournisseur_PVJ">
+      <End Role="PVJ" EntitySet="PVJSet" />
+      <End Role="PVJFournisseur" EntitySet="PVJFournisseur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PVJFournisseur_Fournisseur" Association="OnssaModel.Store.FK_PVJFournisseur_Fournisseur">
+      <End Role="Fournisseur" EntitySet="FournisseurSet" />
+      <End Role="PVJFournisseur" EntitySet="PVJFournisseur" />
+    </AssociationSet>
+    <AssociationSet Name="ModeleDevisFournisseur" Association="OnssaModel.Store.ModeleDevisFournisseur">
+      <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+      <End Role="Fournisseur" EntitySet="FournisseurSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PVJCommission_PVJ" Association="OnssaModel.Store.FK_PVJCommission_PVJ">
+      <End Role="PVJ" EntitySet="PVJSet" />
+      <End Role="PVJCommission" EntitySet="PVJCommission" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PVJCommission_Commission" Association="OnssaModel.Store.FK_PVJCommission_Commission">
+      <End Role="Commission" EntitySet="CommissionSet" />
+      <End Role="PVJCommission" EntitySet="PVJCommission" />
+    </AssociationSet>
+    <AssociationSet Name="PVJConsultation" Association="OnssaModel.Store.PVJConsultation">
+      <End Role="PVJ" EntitySet="PVJSet" />
+      <End Role="Consultation" EntitySet="ConsultationSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModeleDevisProduit_ModeleDevis" Association="OnssaModel.Store.FK_ModeleDevisProduit_ModeleDevis">
+      <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+      <End Role="ModeleDevisProduit" EntitySet="ModeleDevisProduit" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ModeleDevisProduit_Produit" Association="OnssaModel.Store.FK_ModeleDevisProduit_Produit">
+      <End Role="Produit" EntitySet="ProduitSet" />
+      <End Role="ModeleDevisProduit" EntitySet="ModeleDevisProduit" />
+    </AssociationSet>
+    <AssociationSet Name="ModeleDevisPVJ" Association="OnssaModel.Store.ModeleDevisPVJ">
+      <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+      <End Role="PVJ" EntitySet="PVJSet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsultationFournisseur_Consultation" Association="OnssaModel.Store.FK_ConsultationFournisseur_Consultation">
+      <End Role="Consultation" EntitySet="ConsultationSet" />
+      <End Role="ConsultationFournisseur" EntitySet="ConsultationFournisseur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ConsultationFournisseur_Fournisseur" Association="OnssaModel.Store.FK_ConsultationFournisseur_Fournisseur">
+      <End Role="Fournisseur" EntitySet="FournisseurSet" />
+      <End Role="ConsultationFournisseur" EntitySet="ConsultationFournisseur" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommissionPVR_Commission" Association="OnssaModel.Store.FK_CommissionPVR_Commission">
+      <End Role="Commission" EntitySet="CommissionSet" />
+      <End Role="CommissionPVR" EntitySet="CommissionPVR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CommissionPVR_PVR" Association="OnssaModel.Store.FK_CommissionPVR_PVR">
+      <End Role="PVR" EntitySet="PVRSet" />
+      <End Role="CommissionPVR" EntitySet="CommissionPVR" />
+    </AssociationSet>
+    <AssociationSet Name="OIPVR" Association="OnssaModel.Store.OIPVR">
+      <End Role="OI" EntitySet="OISet" />
+      <End Role="PVR" EntitySet="PVRSet" />
+    </AssociationSet>
+    <AssociationSet Name="FEOI" Association="OnssaModel.Store.FEOI">
+      <End Role="FE" EntitySet="FESet" />
+      <End Role="OI" EntitySet="OISet" />
+    </AssociationSet>
+    <AssociationSet Name="OIOP" Association="OnssaModel.Store.OIOP">
+      <End Role="OI" EntitySet="OISet" />
+      <End Role="OP" EntitySet="OPSet" />
+    </AssociationSet>
+    <AssociationSet Name="BCFE" Association="OnssaModel.Store.BCFE">
+      <End Role="BC" EntitySet="BCSet" />
+      <End Role="FE" EntitySet="FESet" />
+    </AssociationSet>
+    <AssociationSet Name="BCMorasse" Association="OnssaModel.Store.BCMorasse">
+      <End Role="BC" EntitySet="BCSet" />
+      <End Role="Morasse" EntitySet="MorasseSet" />
+    </AssociationSet>
+    <AssociationSet Name="OVOP" Association="OnssaModel.Store.OVOP">
+      <End Role="OV" EntitySet="OVSet" />
+      <End Role="OP" EntitySet="OPSet" />
+    </AssociationSet>
+    <AssociationSet Name="PVJBC" Association="OnssaModel.Store.PVJBC">
+      <End Role="PVJ" EntitySet="PVJSet" />
+      <End Role="BC" EntitySet="BCSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="FournisseurSet">
+    <Key>
+      <PropertyRef Name="IdFournisseur" />
+    </Key>
+    <Property Name="IdFournisseur" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Adresse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="RC_n" Type="int" Nullable="false" />
+    <Property Name="Patente_n" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IF_n" Type="int" Nullable="false" />
+    <Property Name="CNSS_n" Type="int" Nullable="false" />
+    <Property Name="Compte_bancaire_n" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ICE" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ville" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Banque" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommissionSet">
+    <Key>
+      <PropertyRef Name="IdCommission" />
+    </Key>
+    <Property Name="IdCommission" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Prenom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fonction" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Affectation" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConsultationSet">
+    <Key>
+      <PropertyRef Name="IdConsultation" />
+    </Key>
+    <Property Name="IdConsultation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ObjetConsultation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumConsultation" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PVJSet">
+    <Key>
+      <PropertyRef Name="IdPVJ" />
+    </Key>
+    <Property Name="IdPVJ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DatePvj" Type="datetime" Nullable="false" />
+    <Property Name="InfoConsultation_IdConsultation" Type="int" Nullable="false" />
+    <Property Name="InfoBC_IdBC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModeleDevisSet">
+    <Key>
+      <PropertyRef Name="IdModeleDevis" />
+    </Key>
+    <Property Name="IdModeleDevis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumDevis" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="InfoFournisseur_IdFournisseur" Type="int" Nullable="false" />
+    <Property Name="InfoPVJ_IdPVJ" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProduitSet">
+    <Key>
+      <PropertyRef Name="IdProduit" />
+    </Key>
+    <Property Name="IdProduit" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Designation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Unite" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Quantite" Type="int" Nullable="false" />
+    <Property Name="Prix_Unitaire" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PVRSet">
+    <Key>
+      <PropertyRef Name="IdPVR" />
+    </Key>
+    <Property Name="IdPVR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DatePVR" Type="datetime" Nullable="false" />
+    <Property Name="InfoOI_IdOI" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BCSet">
+    <Key>
+      <PropertyRef Name="IdBC" />
+    </Key>
+    <Property Name="IdBC" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumBc" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Destination" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DelaiExecution" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateBC" Type="datetime" Nullable="false" />
+    <Property Name="InfoMorasse_Code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FESet">
+    <Key>
+      <PropertyRef Name="IdFE" />
+    </Key>
+    <Property Name="IdFE" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CreditsBudgetaires" Type="int" Nullable="false" />
+    <Property Name="DepensesEngagees" Type="int" Nullable="false" />
+    <Property Name="Disponible" Type="int" Nullable="false" />
+    <Property Name="EngagementDepensesPropose" Type="int" Nullable="false" />
+    <Property Name="InfoBC_IdBC" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MorasseSet">
+    <Key>
+      <PropertyRef Name="Code" />
+    </Key>
+    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Exercice" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Budget" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PAR" Type="int" Nullable="false" />
+    <Property Name="LRG" Type="int" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OISet">
+    <Key>
+      <PropertyRef Name="IdOI" />
+    </Key>
+    <Property Name="IdOI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateOI" Type="datetime" Nullable="false" />
+    <Property Name="NumCompteDebit" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisaControle" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisaCsrs" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DatePaiement" Type="datetime" Nullable="false" />
+    <Property Name="VisaSordonnateur" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="VisaTresorierPayeur" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InfoFE_IdFE" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OPSet">
+    <Key>
+      <PropertyRef Name="IdOP" />
+    </Key>
+    <Property Name="IdOP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOP" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateOP" Type="datetime" Nullable="false" />
+    <Property Name="InfoOI_IdOI" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OVSet">
+    <Key>
+      <PropertyRef Name="IdOV" />
+    </Key>
+    <Property Name="IdOV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumOV" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SousOrdonnateur" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TresorierPayeur" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InfoOP_IdOP" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GestionCompteSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nom" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MotDePasse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TypeCompte" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PVJFournisseur">
+    <Key>
+      <PropertyRef Name="ListPVJ_IdPVJ" />
+      <PropertyRef Name="ListFournisseursRepondu_IdFournisseur" />
+    </Key>
+    <Property Name="ListPVJ_IdPVJ" Type="int" Nullable="false" />
+    <Property Name="ListFournisseursRepondu_IdFournisseur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PVJCommission">
+    <Key>
+      <PropertyRef Name="ListPVJ_IdPVJ" />
+      <PropertyRef Name="ListCommissions_IdCommission" />
+    </Key>
+    <Property Name="ListPVJ_IdPVJ" Type="int" Nullable="false" />
+    <Property Name="ListCommissions_IdCommission" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ModeleDevisProduit">
+    <Key>
+      <PropertyRef Name="ListModeleDevis_IdModeleDevis" />
+      <PropertyRef Name="ListProduit_IdProduit" />
+    </Key>
+    <Property Name="ListModeleDevis_IdModeleDevis" Type="int" Nullable="false" />
+    <Property Name="ListProduit_IdProduit" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ConsultationFournisseur">
+    <Key>
+      <PropertyRef Name="ListConsultation_IdConsultation" />
+      <PropertyRef Name="ListFournisseur_IdFournisseur" />
+    </Key>
+    <Property Name="ListConsultation_IdConsultation" Type="int" Nullable="false" />
+    <Property Name="ListFournisseur_IdFournisseur" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommissionPVR">
+    <Key>
+      <PropertyRef Name="ListCommission_IdCommission" />
+      <PropertyRef Name="ListPVR_IdPVR" />
+    </Key>
+    <Property Name="ListCommission_IdCommission" Type="int" Nullable="false" />
+    <Property Name="ListPVR_IdPVR" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="ModeleDevisFournisseur">
+    <End Role="ModeleDevis" Type="OnssaModel.Store.ModeleDevisSet" Multiplicity="*" />
+    <End Role="Fournisseur" Type="OnssaModel.Store.FournisseurSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="IdFournisseur" />
+      </Principal>
+      <Dependent Role="ModeleDevis">
+        <PropertyRef Name="InfoFournisseur_IdFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PVJConsultation">
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="*" />
+    <End Role="Consultation" Type="OnssaModel.Store.ConsultationSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Consultation">
+        <PropertyRef Name="IdConsultation" />
+      </Principal>
+      <Dependent Role="PVJ">
+        <PropertyRef Name="InfoConsultation_IdConsultation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ModeleDevisPVJ">
+    <End Role="ModeleDevis" Type="OnssaModel.Store.ModeleDevisSet" Multiplicity="*" />
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="PVJ">
+        <PropertyRef Name="IdPVJ" />
+      </Principal>
+      <Dependent Role="ModeleDevis">
+        <PropertyRef Name="InfoPVJ_IdPVJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OIPVR">
+    <End Role="OI" Type="OnssaModel.Store.OISet" Multiplicity="1" />
+    <End Role="PVR" Type="OnssaModel.Store.PVRSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OI">
+        <PropertyRef Name="IdOI" />
+      </Principal>
+      <Dependent Role="PVR">
+        <PropertyRef Name="InfoOI_IdOI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FEOI">
+    <End Role="FE" Type="OnssaModel.Store.FESet" Multiplicity="1" />
+    <End Role="OI" Type="OnssaModel.Store.OISet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FE">
+        <PropertyRef Name="IdFE" />
+      </Principal>
+      <Dependent Role="OI">
+        <PropertyRef Name="InfoFE_IdFE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OIOP">
+    <End Role="OI" Type="OnssaModel.Store.OISet" Multiplicity="1" />
+    <End Role="OP" Type="OnssaModel.Store.OPSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="OI">
+        <PropertyRef Name="IdOI" />
+      </Principal>
+      <Dependent Role="OP">
+        <PropertyRef Name="InfoOI_IdOI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BCFE">
+    <End Role="BC" Type="OnssaModel.Store.BCSet" Multiplicity="1" />
+    <End Role="FE" Type="OnssaModel.Store.FESet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BC">
+        <PropertyRef Name="IdBC" />
+      </Principal>
+      <Dependent Role="FE">
+        <PropertyRef Name="InfoBC_IdBC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="BCMorasse">
+    <End Role="BC" Type="OnssaModel.Store.BCSet" Multiplicity="*" />
+    <End Role="Morasse" Type="OnssaModel.Store.MorasseSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Morasse">
+        <PropertyRef Name="Code" />
+      </Principal>
+      <Dependent Role="BC">
+        <PropertyRef Name="InfoMorasse_Code" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OVOP">
+    <End Role="OV" Type="OnssaModel.Store.OVSet" Multiplicity="*" />
+    <End Role="OP" Type="OnssaModel.Store.OPSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="OP">
+        <PropertyRef Name="IdOP" />
+      </Principal>
+      <Dependent Role="OV">
+        <PropertyRef Name="InfoOP_IdOP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PVJBC">
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="*" />
+    <End Role="BC" Type="OnssaModel.Store.BCSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="BC">
+        <PropertyRef Name="IdBC" />
+      </Principal>
+      <Dependent Role="PVJ">
+        <PropertyRef Name="InfoBC_IdBC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PVJFournisseur_PVJ">
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="1" />
+    <End Role="PVJFournisseur" Type="OnssaModel.Store.PVJFournisseur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PVJ">
+        <PropertyRef Name="IdPVJ" />
+      </Principal>
+      <Dependent Role="PVJFournisseur">
+        <PropertyRef Name="ListPVJ_IdPVJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PVJFournisseur_Fournisseur">
+    <End Role="PVJFournisseur" Type="OnssaModel.Store.PVJFournisseur" Multiplicity="*" />
+    <End Role="Fournisseur" Type="OnssaModel.Store.FournisseurSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="IdFournisseur" />
+      </Principal>
+      <Dependent Role="PVJFournisseur">
+        <PropertyRef Name="ListFournisseursRepondu_IdFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PVJCommission_PVJ">
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="1" />
+    <End Role="PVJCommission" Type="OnssaModel.Store.PVJCommission" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PVJ">
+        <PropertyRef Name="IdPVJ" />
+      </Principal>
+      <Dependent Role="PVJCommission">
+        <PropertyRef Name="ListPVJ_IdPVJ" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PVJCommission_Commission">
+    <End Role="PVJCommission" Type="OnssaModel.Store.PVJCommission" Multiplicity="*" />
+    <End Role="Commission" Type="OnssaModel.Store.CommissionSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Commission">
+        <PropertyRef Name="IdCommission" />
+      </Principal>
+      <Dependent Role="PVJCommission">
+        <PropertyRef Name="ListCommissions_IdCommission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModeleDevisProduit_ModeleDevis">
+    <End Role="ModeleDevis" Type="OnssaModel.Store.ModeleDevisSet" Multiplicity="1" />
+    <End Role="ModeleDevisProduit" Type="OnssaModel.Store.ModeleDevisProduit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ModeleDevis">
+        <PropertyRef Name="IdModeleDevis" />
+      </Principal>
+      <Dependent Role="ModeleDevisProduit">
+        <PropertyRef Name="ListModeleDevis_IdModeleDevis" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ModeleDevisProduit_Produit">
+    <End Role="ModeleDevisProduit" Type="OnssaModel.Store.ModeleDevisProduit" Multiplicity="*" />
+    <End Role="Produit" Type="OnssaModel.Store.ProduitSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Produit">
+        <PropertyRef Name="IdProduit" />
+      </Principal>
+      <Dependent Role="ModeleDevisProduit">
+        <PropertyRef Name="ListProduit_IdProduit" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsultationFournisseur_Consultation">
+    <End Role="Consultation" Type="OnssaModel.Store.ConsultationSet" Multiplicity="1" />
+    <End Role="ConsultationFournisseur" Type="OnssaModel.Store.ConsultationFournisseur" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Consultation">
+        <PropertyRef Name="IdConsultation" />
+      </Principal>
+      <Dependent Role="ConsultationFournisseur">
+        <PropertyRef Name="ListConsultation_IdConsultation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ConsultationFournisseur_Fournisseur">
+    <End Role="ConsultationFournisseur" Type="OnssaModel.Store.ConsultationFournisseur" Multiplicity="*" />
+    <End Role="Fournisseur" Type="OnssaModel.Store.FournisseurSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="IdFournisseur" />
+      </Principal>
+      <Dependent Role="ConsultationFournisseur">
+        <PropertyRef Name="ListFournisseur_IdFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommissionPVR_Commission">
+    <End Role="Commission" Type="OnssaModel.Store.CommissionSet" Multiplicity="1" />
+    <End Role="CommissionPVR" Type="OnssaModel.Store.CommissionPVR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Commission">
+        <PropertyRef Name="IdCommission" />
+      </Principal>
+      <Dependent Role="CommissionPVR">
+        <PropertyRef Name="ListCommission_IdCommission" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CommissionPVR_PVR">
+    <End Role="CommissionPVR" Type="OnssaModel.Store.CommissionPVR" Multiplicity="*" />
+    <End Role="PVR" Type="OnssaModel.Store.PVRSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="PVR">
+        <PropertyRef Name="IdPVR" />
+      </Principal>
+      <Dependent Role="CommissionPVR">
+        <PropertyRef Name="ListPVR_IdPVR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="OnssaModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="OnssaModelContainer4" annotation:LazyLoadingEnabled="true" cg:TypeAccess="Public">
+          <EntitySet Name="FournisseurSet" EntityType="OnssaModel.Fournisseur" />
+          <EntitySet Name="CommissionSet" EntityType="OnssaModel.Commission" />
+          <EntitySet Name="ConsultationSet" EntityType="OnssaModel.Consultation" />
+          <EntitySet Name="PVJSet" EntityType="OnssaModel.PVJ" />
+          <EntitySet Name="ModeleDevisSet" EntityType="OnssaModel.ModeleDevis" />
+          <EntitySet Name="ProduitSet" EntityType="OnssaModel.Produit" />
+          <EntitySet Name="PVRSet" EntityType="OnssaModel.PVR" />
+          <EntitySet Name="BCSet" EntityType="OnssaModel.BC" />
+          <EntitySet Name="FESet" EntityType="OnssaModel.FE" />
+          <EntitySet Name="MorasseSet" EntityType="OnssaModel.Morasse" />
+          <EntitySet Name="OISet" EntityType="OnssaModel.OI" />
+          <EntitySet Name="OPSet" EntityType="OnssaModel.OP" />
+          <EntitySet Name="OVSet" EntityType="OnssaModel.OV" />
+          <EntitySet Name="GestionCompteSet" EntityType="OnssaModel.GestionCompte" />
+          <AssociationSet Name="PVJFournisseur" Association="OnssaModel.PVJFournisseur">
+            <End Role="PVJ" EntitySet="PVJSet" />
+            <End Role="Fournisseur" EntitySet="FournisseurSet" />
+          </AssociationSet>
+          <AssociationSet Name="ModeleDevisFournisseur" Association="OnssaModel.ModeleDevisFournisseur">
+            <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+            <End Role="Fournisseur" EntitySet="FournisseurSet" />
+          </AssociationSet>
+          <AssociationSet Name="PVJCommission" Association="OnssaModel.PVJCommission">
+            <End Role="PVJ" EntitySet="PVJSet" />
+            <End Role="Commission" EntitySet="CommissionSet" />
+          </AssociationSet>
+          <AssociationSet Name="PVJConsultation" Association="OnssaModel.PVJConsultation">
+            <End Role="PVJ" EntitySet="PVJSet" />
+            <End Role="Consultation" EntitySet="ConsultationSet" />
+          </AssociationSet>
+          <AssociationSet Name="ModeleDevisProduit" Association="OnssaModel.ModeleDevisProduit">
+            <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+            <End Role="Produit" EntitySet="ProduitSet" />
+          </AssociationSet>
+          <AssociationSet Name="ModeleDevisPVJ" Association="OnssaModel.ModeleDevisPVJ">
+            <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+            <End Role="PVJ" EntitySet="PVJSet" />
+          </AssociationSet>
+          <AssociationSet Name="ConsultationFournisseur" Association="OnssaModel.ConsultationFournisseur">
+            <End Role="Consultation" EntitySet="ConsultationSet" />
+            <End Role="Fournisseur" EntitySet="FournisseurSet" />
+          </AssociationSet>
+          <AssociationSet Name="CommissionPVR" Association="OnssaModel.CommissionPVR">
+            <End Role="Commission" EntitySet="CommissionSet" />
+            <End Role="PVR" EntitySet="PVRSet" />
+          </AssociationSet>
+          <AssociationSet Name="OIPVR" Association="OnssaModel.OIPVR">
+            <End Role="OI" EntitySet="OISet" />
+            <End Role="PVR" EntitySet="PVRSet" />
+          </AssociationSet>
+          <AssociationSet Name="FEOI" Association="OnssaModel.FEOI">
+            <End Role="FE" EntitySet="FESet" />
+            <End Role="OI" EntitySet="OISet" />
+          </AssociationSet>
+          <AssociationSet Name="OIOP" Association="OnssaModel.OIOP">
+            <End Role="OI" EntitySet="OISet" />
+            <End Role="OP" EntitySet="OPSet" />
+          </AssociationSet>
+          <AssociationSet Name="BCFE" Association="OnssaModel.BCFE">
+            <End Role="BC" EntitySet="BCSet" />
+            <End Role="FE" EntitySet="FESet" />
+          </AssociationSet>
+          <AssociationSet Name="BCMorasse" Association="OnssaModel.BCMorasse">
+            <End Role="BC" EntitySet="BCSet" />
+            <End Role="Morasse" EntitySet="MorasseSet" />
+          </AssociationSet>
+          <AssociationSet Name="OVOP" Association="OnssaModel.OVOP">
+            <End Role="OV" EntitySet="OVSet" />
+            <End Role="OP" EntitySet="OPSet" />
+          </AssociationSet>
+          <AssociationSet Name="PVJBC" Association="OnssaModel.PVJBC">
+            <End Role="PVJ" EntitySet="PVJSet" />
+            <End Role="BC" EntitySet="BCSet" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Fournisseur">
+          <Key>
+            <PropertyRef Name="IdFournisseur" />
+          </Key>
+          <Property Name="IdFournisseur" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" Nullable="false" />
+          <Property Name="Adresse" Type="String" Nullable="false" />
+          <Property Name="RC_n" Type="Int32" Nullable="false" />
+          <Property Name="Patente_n" Type="String" Nullable="false" />
+          <Property Name="IF_n" Type="Int32" Nullable="false" />
+          <Property Name="CNSS_n" Type="Int32" Nullable="false" />
+          <Property Name="Compte_bancaire_n" Type="String" Nullable="false" />
+          <Property Name="ICE" Type="String" Nullable="false" />
+          <Property Name="Ville" Type="String" Nullable="false" />
+          <Property Name="Banque" Type="String" Nullable="false" />
+          <NavigationProperty Name="ListPVJ" Relationship="OnssaModel.PVJFournisseur" FromRole="Fournisseur" ToRole="PVJ" />
+          <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisFournisseur" FromRole="Fournisseur" ToRole="ModeleDevis" />
+          <NavigationProperty Name="ListConsultation" Relationship="OnssaModel.ConsultationFournisseur" FromRole="Fournisseur" ToRole="Consultation" />
+        </EntityType>
+        <EntityType Name="Commission">
+          <Key>
+            <PropertyRef Name="IdCommission" />
+          </Key>
+          <Property Name="IdCommission" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nom" Type="String" Nullable="false" />
+          <Property Name="Prenom" Type="String" Nullable="false" />
+          <Property Name="Fonction" Type="String" Nullable="false" />
+          <Property Name="Affectation" Type="String" Nullable="false" />
+          <NavigationProperty Name="ListPVJ" Relationship="OnssaModel.PVJCommission" FromRole="Commission" ToRole="PVJ" />
+          <NavigationProperty Name="ListPVR" Relationship="OnssaModel.CommissionPVR" FromRole="Commission" ToRole="PVR" />
+        </EntityType>
+        <EntityType Name="Consultation">
+          <Key>
+            <PropertyRef Name="IdConsultation" />
+          </Key>
+          <Property Name="IdConsultation" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ObjetConsultation" Type="String" Nullable="false" />
+          <Property Name="NumConsultation" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoPVJ" Relationship="OnssaModel.PVJConsultation" FromRole="Consultation" ToRole="PVJ" />
+          <NavigationProperty Name="ListFournisseur" Relationship="OnssaModel.ConsultationFournisseur" FromRole="Consultation" ToRole="Fournisseur" />
+        </EntityType>
+        <EntityType Name="PVJ">
+          <Key>
+            <PropertyRef Name="IdPVJ" />
+          </Key>
+          <Property Name="IdPVJ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateString" Type="String" Nullable="false" />
+          <Property Name="DatePvj" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ListFournisseursRepondu" Relationship="OnssaModel.PVJFournisseur" FromRole="PVJ" ToRole="Fournisseur" />
+          <NavigationProperty Name="ListCommissions" Relationship="OnssaModel.PVJCommission" FromRole="PVJ" ToRole="Commission" />
+          <NavigationProperty Name="InfoConsultation" Relationship="OnssaModel.PVJConsultation" FromRole="PVJ" ToRole="Consultation" />
+          <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisPVJ" FromRole="PVJ" ToRole="ModeleDevis" />
+          <NavigationProperty Name="InfoBC" Relationship="OnssaModel.PVJBC" FromRole="PVJ" ToRole="BC" />
+        </EntityType>
+        <EntityType Name="ModeleDevis">
+          <Key>
+            <PropertyRef Name="IdModeleDevis" />
+          </Key>
+          <Property Name="IdModeleDevis" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumDevis" Type="String" Nullable="false" />
+          <Property Name="Date" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="InfoFournisseur" Relationship="OnssaModel.ModeleDevisFournisseur" FromRole="ModeleDevis" ToRole="Fournisseur" />
+          <NavigationProperty Name="ListProduit" Relationship="OnssaModel.ModeleDevisProduit" FromRole="ModeleDevis" ToRole="Produit" />
+          <NavigationProperty Name="InfoPVJ" Relationship="OnssaModel.ModeleDevisPVJ" FromRole="ModeleDevis" ToRole="PVJ" />
+        </EntityType>
+        <EntityType Name="Produit">
+          <Key>
+            <PropertyRef Name="IdProduit" />
+          </Key>
+          <Property Name="IdProduit" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Designation" Type="String" Nullable="false" />
+          <Property Name="Unite" Type="String" Nullable="false" />
+          <Property Name="Quantite" Type="Int32" Nullable="false" />
+          <Property Name="Prix_Unitaire" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisProduit" FromRole="Produit" ToRole="ModeleDevis" />
+        </EntityType>
+        <EntityType Name="PVR">
+          <Key>
+            <PropertyRef Name="IdPVR" />
+          </Key>
+          <Property Name="IdPVR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateString" Type="String" Nullable="false" />
+          <Property Name="DatePVR" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="ListCommission" Relationship="OnssaModel.CommissionPVR" FromRole="PVR" ToRole="Commission" />
+          <NavigationProperty Name="InfoOI" Relationship="OnssaModel.OIPVR" FromRole="PVR" ToRole="OI" />
+        </EntityType>
+        <EntityType Name="BC">
+          <Key>
+            <PropertyRef Name="IdBC" />
+          </Key>
+          <Property Name="IdBC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumBc" Type="String" Nullable="false" />
+          <Property Name="Destination" Type="String" Nullable="false" />
+          <Property Name="DelaiExecution" Type="String" Nullable="false" />
+          <Property Name="DateBC" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="InfoFE" Relationship="OnssaModel.BCFE" FromRole="BC" ToRole="FE" />
+          <NavigationProperty Name="InfoMorasse" Relationship="OnssaModel.BCMorasse" FromRole="BC" ToRole="Morasse" />
+          <NavigationProperty Name="InfoPVJ" Relationship="OnssaModel.PVJBC" FromRole="BC" ToRole="PVJ" />
+        </EntityType>
+        <EntityType Name="FE">
+          <Key>
+            <PropertyRef Name="IdFE" />
+          </Key>
+          <Property Name="IdFE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreditsBudgetaires" Type="Int32" Nullable="false" />
+          <Property Name="DepensesEngagees" Type="Int32" Nullable="false" />
+          <Property Name="Disponible" Type="Int32" Nullable="false" />
+          <Property Name="EngagementDepensesPropose" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="InfoOI" Relationship="OnssaModel.FEOI" FromRole="FE" ToRole="OI" />
+          <NavigationProperty Name="InfoBC" Relationship="OnssaModel.BCFE" FromRole="FE" ToRole="BC" />
+        </EntityType>
+        <EntityType Name="Morasse">
+          <Key>
+            <PropertyRef Name="Code" />
+          </Key>
+          <Property Name="Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Exercice" Type="String" Nullable="false" />
+          <Property Name="Budget" Type="String" Nullable="false" />
+          <Property Name="PAR" Type="Int32" Nullable="false" />
+          <Property Name="LRG" Type="Int32" Nullable="false" />
+          <Property Name="Description" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoBC" Relationship="OnssaModel.BCMorasse" FromRole="Morasse" ToRole="BC" />
+        </EntityType>
+        <EntityType Name="OI">
+          <Key>
+            <PropertyRef Name="IdOI" />
+          </Key>
+          <Property Name="IdOI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumOi" Type="String" Nullable="false" />
+          <Property Name="DateOI" Type="DateTime" Nullable="false" />
+          <Property Name="NumCompteDebit" Type="String" Nullable="false" />
+          <Property Name="VisaControle" Type="String" Nullable="false" />
+          <Property Name="VisaCsrs" Type="String" Nullable="false" />
+          <Property Name="DatePaiement" Type="DateTime" Nullable="false" />
+          <Property Name="VisaSordonnateur" Type="String" Nullable="false" />
+          <Property Name="VisaTresorierPayeur" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoPVR" Relationship="OnssaModel.OIPVR" FromRole="OI" ToRole="PVR" />
+          <NavigationProperty Name="InfoFE" Relationship="OnssaModel.FEOI" FromRole="OI" ToRole="FE" />
+          <NavigationProperty Name="InfoOP" Relationship="OnssaModel.OIOP" FromRole="OI" ToRole="OP" />
+        </EntityType>
+        <EntityType Name="OP">
+          <Key>
+            <PropertyRef Name="IdOP" />
+          </Key>
+          <Property Name="IdOP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumOP" Type="String" Nullable="false" />
+          <Property Name="DateOP" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="InfoOI" Relationship="OnssaModel.OIOP" FromRole="OP" ToRole="OI" />
+          <NavigationProperty Name="InfoOV" Relationship="OnssaModel.OVOP" FromRole="OP" ToRole="OV" />
+        </EntityType>
+        <EntityType Name="OV">
+          <Key>
+            <PropertyRef Name="IdOV" />
+          </Key>
+          <Property Name="IdOV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumOV" Type="String" Nullable="false" />
+          <Property Name="SousOrdonnateur" Type="String" Nullable="false" />
+          <Property Name="TresorierPayeur" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoOP" Relationship="OnssaModel.OVOP" FromRole="OV" ToRole="OP" />
+        </EntityType>
+        <EntityType Name="GestionCompte">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" cg:GetterAccess="Public" />
+          <Property Name="Nom" Type="String" Nullable="false" />
+          <Property Name="MotDePasse" Type="String" Nullable="false" />
+          <Property Name="TypeCompte" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="PVJFournisseur">
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="*" />
+          <End Type="OnssaModel.Fournisseur" Role="Fournisseur" Multiplicity="*" />
+        </Association>
+        <Association Name="ModeleDevisFournisseur">
+          <End Type="OnssaModel.ModeleDevis" Role="ModeleDevis" Multiplicity="*" />
+          <End Type="OnssaModel.Fournisseur" Role="Fournisseur" Multiplicity="1" />
+        </Association>
+        <Association Name="PVJCommission">
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="*" />
+          <End Type="OnssaModel.Commission" Role="Commission" Multiplicity="*" />
+        </Association>
+        <Association Name="PVJConsultation">
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
+          <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="1" />
+        </Association>
+        <Association Name="ModeleDevisProduit">
+          <End Type="OnssaModel.ModeleDevis" Role="ModeleDevis" Multiplicity="*" />
+          <End Type="OnssaModel.Produit" Role="Produit" Multiplicity="*" />
+        </Association>
+        <Association Name="ModeleDevisPVJ">
+          <End Type="OnssaModel.ModeleDevis" Role="ModeleDevis" Multiplicity="*" />
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
+        </Association>
+        <Association Name="ConsultationFournisseur">
+          <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="*" />
+          <End Type="OnssaModel.Fournisseur" Role="Fournisseur" Multiplicity="*" />
+        </Association>
+        <Association Name="CommissionPVR">
+          <End Type="OnssaModel.Commission" Role="Commission" Multiplicity="*" />
+          <End Type="OnssaModel.PVR" Role="PVR" Multiplicity="*" />
+        </Association>
+        <Association Name="OIPVR">
+          <End Type="OnssaModel.OI" Role="OI" Multiplicity="1" />
+          <End Type="OnssaModel.PVR" Role="PVR" Multiplicity="0..1" />
+        </Association>
+        <Association Name="FEOI">
+          <End Type="OnssaModel.FE" Role="FE" Multiplicity="1" />
+          <End Type="OnssaModel.OI" Role="OI" Multiplicity="0..1" />
+        </Association>
+        <Association Name="OIOP">
+          <End Type="OnssaModel.OI" Role="OI" Multiplicity="1" />
+          <End Type="OnssaModel.OP" Role="OP" Multiplicity="0..1" />
+        </Association>
+        <Association Name="BCFE">
+          <End Type="OnssaModel.BC" Role="BC" Multiplicity="1" />
+          <End Type="OnssaModel.FE" Role="FE" Multiplicity="0..1" />
+        </Association>
+        <Association Name="BCMorasse">
+          <End Type="OnssaModel.BC" Role="BC" Multiplicity="*" />
+          <End Type="OnssaModel.Morasse" Role="Morasse" Multiplicity="1" />
+        </Association>
+        <Association Name="OVOP">
+          <End Type="OnssaModel.OV" Role="OV" Multiplicity="0..1" />
+          <End Type="OnssaModel.OP" Role="OP" Multiplicity="1" />
+        </Association>
+        <Association Name="PVJBC">
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
+          <End Type="OnssaModel.BC" Role="BC" Multiplicity="1" />
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OnssaModelStoreContainer" CdmEntityContainer="OnssaModelContainer4">
+    <EntitySetMapping Name="FournisseurSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Fournisseur)">
+        <MappingFragment StoreEntitySet="FournisseurSet">
+          <ScalarProperty Name="IdFournisseur" ColumnName="IdFournisseur" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Adresse" ColumnName="Adresse" />
+          <ScalarProperty Name="RC_n" ColumnName="RC_n" />
+          <ScalarProperty Name="Patente_n" ColumnName="Patente_n" />
+          <ScalarProperty Name="IF_n" ColumnName="IF_n" />
+          <ScalarProperty Name="CNSS_n" ColumnName="CNSS_n" />
+          <ScalarProperty Name="Compte_bancaire_n" ColumnName="Compte_bancaire_n" />
+          <ScalarProperty Name="ICE" ColumnName="ICE" />
+          <ScalarProperty Name="Ville" ColumnName="Ville" />
+          <ScalarProperty Name="Banque" ColumnName="Banque" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommissionSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Commission)">
+        <MappingFragment StoreEntitySet="CommissionSet">
+          <ScalarProperty Name="IdCommission" ColumnName="IdCommission" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Fonction" ColumnName="Fonction" />
+          <ScalarProperty Name="Affectation" ColumnName="Affectation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConsultationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Consultation)">
+        <MappingFragment StoreEntitySet="ConsultationSet">
+          <ScalarProperty Name="IdConsultation" ColumnName="IdConsultation" />
+          <ScalarProperty Name="ObjetConsultation" ColumnName="ObjetConsultation" />
+          <ScalarProperty Name="NumConsultation" ColumnName="NumConsultation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PVJSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.PVJ)">
+        <MappingFragment StoreEntitySet="PVJSet">
+          <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
+          <ScalarProperty Name="DateString" ColumnName="DateString" />
+          <ScalarProperty Name="DatePvj" ColumnName="DatePvj" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ModeleDevisSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.ModeleDevis)">
+        <MappingFragment StoreEntitySet="ModeleDevisSet">
+          <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
+          <ScalarProperty Name="NumDevis" ColumnName="NumDevis" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProduitSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Produit)">
+        <MappingFragment StoreEntitySet="ProduitSet">
+          <ScalarProperty Name="IdProduit" ColumnName="IdProduit" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+          <ScalarProperty Name="Unite" ColumnName="Unite" />
+          <ScalarProperty Name="Quantite" ColumnName="Quantite" />
+          <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PVRSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.PVR)">
+        <MappingFragment StoreEntitySet="PVRSet">
+          <ScalarProperty Name="IdPVR" ColumnName="IdPVR" />
+          <ScalarProperty Name="DateString" ColumnName="DateString" />
+          <ScalarProperty Name="DatePVR" ColumnName="DatePVR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BCSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.BC)">
+        <MappingFragment StoreEntitySet="BCSet">
+          <ScalarProperty Name="IdBC" ColumnName="IdBC" />
+          <ScalarProperty Name="NumBc" ColumnName="NumBc" />
+          <ScalarProperty Name="Destination" ColumnName="Destination" />
+          <ScalarProperty Name="DelaiExecution" ColumnName="DelaiExecution" />
+          <ScalarProperty Name="DateBC" ColumnName="DateBC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FESet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.FE)">
+        <MappingFragment StoreEntitySet="FESet">
+          <ScalarProperty Name="IdFE" ColumnName="IdFE" />
+          <ScalarProperty Name="CreditsBudgetaires" ColumnName="CreditsBudgetaires" />
+          <ScalarProperty Name="DepensesEngagees" ColumnName="DepensesEngagees" />
+          <ScalarProperty Name="Disponible" ColumnName="Disponible" />
+          <ScalarProperty Name="EngagementDepensesPropose" ColumnName="EngagementDepensesPropose" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MorasseSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Morasse)">
+        <MappingFragment StoreEntitySet="MorasseSet">
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Exercice" ColumnName="Exercice" />
+          <ScalarProperty Name="Budget" ColumnName="Budget" />
+          <ScalarProperty Name="PAR" ColumnName="PAR" />
+          <ScalarProperty Name="LRG" ColumnName="LRG" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OISet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.OI)">
+        <MappingFragment StoreEntitySet="OISet">
+          <ScalarProperty Name="IdOI" ColumnName="IdOI" />
+          <ScalarProperty Name="NumOi" ColumnName="NumOi" />
+          <ScalarProperty Name="DateOI" ColumnName="DateOI" />
+          <ScalarProperty Name="NumCompteDebit" ColumnName="NumCompteDebit" />
+          <ScalarProperty Name="VisaControle" ColumnName="VisaControle" />
+          <ScalarProperty Name="VisaCsrs" ColumnName="VisaCsrs" />
+          <ScalarProperty Name="DatePaiement" ColumnName="DatePaiement" />
+          <ScalarProperty Name="VisaSordonnateur" ColumnName="VisaSordonnateur" />
+          <ScalarProperty Name="VisaTresorierPayeur" ColumnName="VisaTresorierPayeur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OPSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.OP)">
+        <MappingFragment StoreEntitySet="OPSet">
+          <ScalarProperty Name="IdOP" ColumnName="IdOP" />
+          <ScalarProperty Name="NumOP" ColumnName="NumOP" />
+          <ScalarProperty Name="DateOP" ColumnName="DateOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OVSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.OV)">
+        <MappingFragment StoreEntitySet="OVSet">
+          <ScalarProperty Name="IdOV" ColumnName="IdOV" />
+          <ScalarProperty Name="NumOV" ColumnName="NumOV" />
+          <ScalarProperty Name="SousOrdonnateur" ColumnName="SousOrdonnateur" />
+          <ScalarProperty Name="TresorierPayeur" ColumnName="TresorierPayeur" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GestionCompteSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.GestionCompte)">
+        <MappingFragment StoreEntitySet="GestionCompteSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
+          <ScalarProperty Name="TypeCompte" ColumnName="TypeCompte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="PVJFournisseur" TypeName="OnssaModel.PVJFournisseur" StoreEntitySet="PVJFournisseur">
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="ListPVJ_IdPVJ" />
+      </EndProperty>
+      <EndProperty Name="Fournisseur">
+        <ScalarProperty Name="IdFournisseur" ColumnName="ListFournisseursRepondu_IdFournisseur" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ModeleDevisFournisseur" TypeName="OnssaModel.ModeleDevisFournisseur" StoreEntitySet="ModeleDevisSet">
+      <EndProperty Name="Fournisseur">
+        <ScalarProperty Name="IdFournisseur" ColumnName="InfoFournisseur_IdFournisseur" />
+      </EndProperty>
+      <EndProperty Name="ModeleDevis">
+        <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PVJCommission" TypeName="OnssaModel.PVJCommission" StoreEntitySet="PVJCommission">
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="ListPVJ_IdPVJ" />
+      </EndProperty>
+      <EndProperty Name="Commission">
+        <ScalarProperty Name="IdCommission" ColumnName="ListCommissions_IdCommission" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PVJConsultation" TypeName="OnssaModel.PVJConsultation" StoreEntitySet="PVJSet">
+      <EndProperty Name="Consultation">
+        <ScalarProperty Name="IdConsultation" ColumnName="InfoConsultation_IdConsultation" />
+      </EndProperty>
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ModeleDevisProduit" TypeName="OnssaModel.ModeleDevisProduit" StoreEntitySet="ModeleDevisProduit">
+      <EndProperty Name="ModeleDevis">
+        <ScalarProperty Name="IdModeleDevis" ColumnName="ListModeleDevis_IdModeleDevis" />
+      </EndProperty>
+      <EndProperty Name="Produit">
+        <ScalarProperty Name="IdProduit" ColumnName="ListProduit_IdProduit" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ModeleDevisPVJ" TypeName="OnssaModel.ModeleDevisPVJ" StoreEntitySet="ModeleDevisSet">
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="InfoPVJ_IdPVJ" />
+      </EndProperty>
+      <EndProperty Name="ModeleDevis">
+        <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ConsultationFournisseur" TypeName="OnssaModel.ConsultationFournisseur" StoreEntitySet="ConsultationFournisseur">
+      <EndProperty Name="Consultation">
+        <ScalarProperty Name="IdConsultation" ColumnName="ListConsultation_IdConsultation" />
+      </EndProperty>
+      <EndProperty Name="Fournisseur">
+        <ScalarProperty Name="IdFournisseur" ColumnName="ListFournisseur_IdFournisseur" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CommissionPVR" TypeName="OnssaModel.CommissionPVR" StoreEntitySet="CommissionPVR">
+      <EndProperty Name="Commission">
+        <ScalarProperty Name="IdCommission" ColumnName="ListCommission_IdCommission" />
+      </EndProperty>
+      <EndProperty Name="PVR">
+        <ScalarProperty Name="IdPVR" ColumnName="ListPVR_IdPVR" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OIPVR" TypeName="OnssaModel.OIPVR" StoreEntitySet="PVRSet">
+      <EndProperty Name="OI">
+        <ScalarProperty Name="IdOI" ColumnName="InfoOI_IdOI" />
+      </EndProperty>
+      <EndProperty Name="PVR">
+        <ScalarProperty Name="IdPVR" ColumnName="IdPVR" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FEOI" TypeName="OnssaModel.FEOI" StoreEntitySet="OISet">
+      <EndProperty Name="FE">
+        <ScalarProperty Name="IdFE" ColumnName="InfoFE_IdFE" />
+      </EndProperty>
+      <EndProperty Name="OI">
+        <ScalarProperty Name="IdOI" ColumnName="IdOI" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OIOP" TypeName="OnssaModel.OIOP" StoreEntitySet="OPSet">
+      <EndProperty Name="OI">
+        <ScalarProperty Name="IdOI" ColumnName="InfoOI_IdOI" />
+      </EndProperty>
+      <EndProperty Name="OP">
+        <ScalarProperty Name="IdOP" ColumnName="IdOP" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BCFE" TypeName="OnssaModel.BCFE" StoreEntitySet="FESet">
+      <EndProperty Name="BC">
+        <ScalarProperty Name="IdBC" ColumnName="InfoBC_IdBC" />
+      </EndProperty>
+      <EndProperty Name="FE">
+        <ScalarProperty Name="IdFE" ColumnName="IdFE" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="BCMorasse" TypeName="OnssaModel.BCMorasse" StoreEntitySet="BCSet">
+      <EndProperty Name="Morasse">
+        <ScalarProperty Name="Code" ColumnName="InfoMorasse_Code" />
+      </EndProperty>
+      <EndProperty Name="BC">
+        <ScalarProperty Name="IdBC" ColumnName="IdBC" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OVOP" TypeName="OnssaModel.OVOP" StoreEntitySet="OVSet">
+      <EndProperty Name="OP">
+        <ScalarProperty Name="IdOP" ColumnName="InfoOP_IdOP" />
+      </EndProperty>
+      <EndProperty Name="OV">
+        <ScalarProperty Name="IdOV" ColumnName="IdOV" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PVJBC" TypeName="OnssaModel.PVJBC" StoreEntitySet="PVJSet">
+      <EndProperty Name="BC">
+        <ScalarProperty Name="IdBC" ColumnName="InfoBC_IdBC" />
+      </EndProperty>
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
