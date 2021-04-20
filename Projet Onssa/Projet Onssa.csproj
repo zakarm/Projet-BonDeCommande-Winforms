@@ -85,6 +85,12 @@
     <Compile Include="Consultation.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ConsultationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultationForm.Designer.cs">
+      <DependentUpon>ConsultationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FE.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultationForm.resx">
+      <DependentUpon>ConsultationForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
