@@ -21,5 +21,10 @@ namespace Projet_Onssa
         {
 
         }
+
+        private void Accueil_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
