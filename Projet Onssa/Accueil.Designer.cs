@@ -87,14 +87,14 @@ namespace Projet_Onssa
             this.bunifuFlatButton5.Iconimage_right = null;
             this.bunifuFlatButton5.Iconimage_right_Selected = null;
             this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 13;
+            this.bunifuFlatButton5.IconMarginLeft = 16;
             this.bunifuFlatButton5.IconMarginRight = 0;
             this.bunifuFlatButton5.IconRightVisible = true;
             this.bunifuFlatButton5.IconRightZoom = 0D;
             this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 60D;
+            this.bunifuFlatButton5.IconZoom = 50D;
             this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 139);
+            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 181);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
             this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
@@ -109,7 +109,7 @@ namespace Projet_Onssa
             // panel13
             // 
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 123);
+            this.panel13.Location = new System.Drawing.Point(0, 165);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(55, 16);
             this.panel13.TabIndex = 6;
@@ -129,14 +129,14 @@ namespace Projet_Onssa
             this.bunifuFlatButton2.Iconimage_right = null;
             this.bunifuFlatButton2.Iconimage_right_Selected = null;
             this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 13;
+            this.bunifuFlatButton2.IconMarginLeft = 15;
             this.bunifuFlatButton2.IconMarginRight = 0;
             this.bunifuFlatButton2.IconRightVisible = true;
             this.bunifuFlatButton2.IconRightZoom = 0D;
             this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 60D;
+            this.bunifuFlatButton2.IconZoom = 50D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 75);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 117);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
@@ -154,7 +154,7 @@ namespace Projet_Onssa
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(55, 75);
+            this.panel3.Size = new System.Drawing.Size(55, 117);
             this.panel3.TabIndex = 4;
             // 
             // panel5
@@ -162,7 +162,7 @@ namespace Projet_Onssa
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(55, 69);
+            this.panel5.Size = new System.Drawing.Size(55, 96);
             this.panel5.TabIndex = 5;
             // 
             // panel7
@@ -207,7 +207,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton7.IconVisible = true;
             this.bunifuFlatButton7.IconZoom = 55D;
             this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 407);
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 397);
             this.bunifuFlatButton7.Name = "bunifuFlatButton7";
             this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -224,7 +224,7 @@ namespace Projet_Onssa
             // 
             this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(0, 390);
+            this.panel17.Location = new System.Drawing.Point(0, 380);
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(219, 17);
             this.panel17.TabIndex = 9;
@@ -251,7 +251,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton6.IconVisible = true;
             this.bunifuFlatButton6.IconZoom = 55D;
             this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 337);
+            this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 327);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
             this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -268,7 +268,7 @@ namespace Projet_Onssa
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 320);
+            this.panel15.Location = new System.Drawing.Point(0, 310);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(219, 17);
             this.panel15.TabIndex = 7;
@@ -295,7 +295,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 55D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 267);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 257);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -312,7 +312,7 @@ namespace Projet_Onssa
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 250);
+            this.panel4.Location = new System.Drawing.Point(0, 240);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(219, 17);
             this.panel4.TabIndex = 5;
@@ -339,7 +339,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 55D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 197);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 187);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -356,7 +356,7 @@ namespace Projet_Onssa
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 180);
+            this.panel8.Location = new System.Drawing.Point(0, 170);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(219, 17);
             this.panel8.TabIndex = 3;
@@ -383,7 +383,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton4.IconVisible = true;
             this.bunifuFlatButton4.IconZoom = 55D;
             this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 127);
+            this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 117);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
             this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -403,7 +403,7 @@ namespace Projet_Onssa
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 96);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(219, 31);
+            this.panel10.Size = new System.Drawing.Size(219, 21);
             this.panel10.TabIndex = 1;
             // 
             // panel11
