@@ -16,5 +16,12 @@ namespace Projet_Onssa
         {
             InitializeComponent();
         }
+
+
+
+        private void ConsultationForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
