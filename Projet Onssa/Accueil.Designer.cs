@@ -31,12 +31,21 @@ namespace Projet_Onssa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_Gcompte = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.btn_Gpaiement = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_Accueil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.btn_Ov = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.btn_Op = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.btn_Oi = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel16 = new System.Windows.Forms.Panel();
             this.btn_Fe = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel17 = new System.Windows.Forms.Panel();
             this.btn_Bc = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,21 +55,12 @@ namespace Projet_Onssa
             this.btn_Pvj = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_Consultation = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.btn_Gcompte = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.btn_Oi = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.btn_Op = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.btn_Ov = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel19 = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -81,6 +81,48 @@ namespace Projet_Onssa
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(55, 749);
             this.panel6.TabIndex = 2;
+            // 
+            // btn_Gcompte
+            // 
+            this.btn_Gcompte.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Gcompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Gcompte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Gcompte.BorderRadius = 0;
+            this.btn_Gcompte.ButtonText = "";
+            this.btn_Gcompte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Gcompte.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Gcompte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Gcompte.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Gcompte.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Gcompte.Iconimage")));
+            this.btn_Gcompte.Iconimage_right = null;
+            this.btn_Gcompte.Iconimage_right_Selected = null;
+            this.btn_Gcompte.Iconimage_Selected = null;
+            this.btn_Gcompte.IconMarginLeft = 16;
+            this.btn_Gcompte.IconMarginRight = 0;
+            this.btn_Gcompte.IconRightVisible = true;
+            this.btn_Gcompte.IconRightZoom = 0D;
+            this.btn_Gcompte.IconVisible = true;
+            this.btn_Gcompte.IconZoom = 50D;
+            this.btn_Gcompte.IsTab = false;
+            this.btn_Gcompte.Location = new System.Drawing.Point(0, 222);
+            this.btn_Gcompte.Name = "btn_Gcompte";
+            this.btn_Gcompte.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Gcompte.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Gcompte.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Gcompte.selected = false;
+            this.btn_Gcompte.Size = new System.Drawing.Size(55, 48);
+            this.btn_Gcompte.TabIndex = 9;
+            this.btn_Gcompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Gcompte.Textcolor = System.Drawing.Color.White;
+            this.btn_Gcompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 212);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(55, 10);
+            this.panel12.TabIndex = 8;
             // 
             // btn_Gpaiement
             // 
@@ -203,6 +245,147 @@ namespace Projet_Onssa
             this.panel7.Size = new System.Drawing.Size(227, 749);
             this.panel7.TabIndex = 3;
             // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 579);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(227, 7);
+            this.panel19.TabIndex = 17;
+            // 
+            // btn_Ov
+            // 
+            this.btn_Ov.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Ov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Ov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Ov.BorderRadius = 0;
+            this.btn_Ov.ButtonText = "Ordre de virement";
+            this.btn_Ov.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Ov.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Ov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Ov.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Ov.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Ov.Iconimage")));
+            this.btn_Ov.Iconimage_right = null;
+            this.btn_Ov.Iconimage_right_Selected = null;
+            this.btn_Ov.Iconimage_Selected = null;
+            this.btn_Ov.IconMarginLeft = 0;
+            this.btn_Ov.IconMarginRight = 0;
+            this.btn_Ov.IconRightVisible = true;
+            this.btn_Ov.IconRightZoom = 0D;
+            this.btn_Ov.IconVisible = true;
+            this.btn_Ov.IconZoom = 40D;
+            this.btn_Ov.IsTab = false;
+            this.btn_Ov.Location = new System.Drawing.Point(0, 526);
+            this.btn_Ov.Name = "btn_Ov";
+            this.btn_Ov.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Ov.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Ov.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Ov.selected = false;
+            this.btn_Ov.Size = new System.Drawing.Size(227, 53);
+            this.btn_Ov.TabIndex = 16;
+            this.btn_Ov.Text = "Ordre de virement";
+            this.btn_Ov.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Ov.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Ov.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(0, 519);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(227, 7);
+            this.panel9.TabIndex = 15;
+            // 
+            // btn_Op
+            // 
+            this.btn_Op.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Op.BorderRadius = 0;
+            this.btn_Op.ButtonText = "Ordre de paiement";
+            this.btn_Op.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Op.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Op.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Op.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Op.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Op.Iconimage")));
+            this.btn_Op.Iconimage_right = null;
+            this.btn_Op.Iconimage_right_Selected = null;
+            this.btn_Op.Iconimage_Selected = null;
+            this.btn_Op.IconMarginLeft = 0;
+            this.btn_Op.IconMarginRight = 0;
+            this.btn_Op.IconRightVisible = true;
+            this.btn_Op.IconRightZoom = 0D;
+            this.btn_Op.IconVisible = true;
+            this.btn_Op.IconZoom = 40D;
+            this.btn_Op.IsTab = false;
+            this.btn_Op.Location = new System.Drawing.Point(0, 466);
+            this.btn_Op.Name = "btn_Op";
+            this.btn_Op.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Op.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Op.selected = false;
+            this.btn_Op.Size = new System.Drawing.Size(227, 53);
+            this.btn_Op.TabIndex = 14;
+            this.btn_Op.Text = "Ordre de paiement";
+            this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 459);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(227, 7);
+            this.panel18.TabIndex = 13;
+            // 
+            // btn_Oi
+            // 
+            this.btn_Oi.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Oi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Oi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Oi.BorderRadius = 0;
+            this.btn_Oi.ButtonText = "Ordre d\'imputation";
+            this.btn_Oi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Oi.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Oi.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Oi.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Oi.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Oi.Iconimage")));
+            this.btn_Oi.Iconimage_right = null;
+            this.btn_Oi.Iconimage_right_Selected = null;
+            this.btn_Oi.Iconimage_Selected = null;
+            this.btn_Oi.IconMarginLeft = 0;
+            this.btn_Oi.IconMarginRight = 0;
+            this.btn_Oi.IconRightVisible = true;
+            this.btn_Oi.IconRightZoom = 0D;
+            this.btn_Oi.IconVisible = true;
+            this.btn_Oi.IconZoom = 40D;
+            this.btn_Oi.IsTab = false;
+            this.btn_Oi.Location = new System.Drawing.Point(0, 406);
+            this.btn_Oi.Name = "btn_Oi";
+            this.btn_Oi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Oi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Oi.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Oi.selected = false;
+            this.btn_Oi.Size = new System.Drawing.Size(227, 53);
+            this.btn_Oi.TabIndex = 12;
+            this.btn_Oi.Text = "Ordre d\'imputation";
+            this.btn_Oi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Oi.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Oi.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel16.Location = new System.Drawing.Point(0, 399);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(227, 7);
+            this.panel16.TabIndex = 11;
+            // 
             // btn_Fe
             // 
             this.btn_Fe.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -281,7 +464,6 @@ namespace Projet_Onssa
             this.btn_Bc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Bc.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Bc.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Bc.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // panel15
             // 
@@ -414,7 +596,16 @@ namespace Projet_Onssa
             this.btn_Consultation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Consultation.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Consultation.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Consultation.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
+            this.btn_Consultation.Click += new System.EventHandler(this.btn_Consultation_Click);
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 96);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(227, 10);
+            this.panel10.TabIndex = 1;
             // 
             // panel11
             // 
@@ -457,198 +648,6 @@ namespace Projet_Onssa
             this.panel_childform.Name = "panel_childform";
             this.panel_childform.Size = new System.Drawing.Size(1000, 653);
             this.panel_childform.TabIndex = 4;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 96);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(227, 10);
-            this.panel10.TabIndex = 1;
-            // 
-            // panel12
-            // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 212);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(55, 10);
-            this.panel12.TabIndex = 8;
-            // 
-            // btn_Gcompte
-            // 
-            this.btn_Gcompte.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Gcompte.BorderRadius = 0;
-            this.btn_Gcompte.ButtonText = "";
-            this.btn_Gcompte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Gcompte.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Gcompte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Gcompte.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Gcompte.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Gcompte.Iconimage")));
-            this.btn_Gcompte.Iconimage_right = null;
-            this.btn_Gcompte.Iconimage_right_Selected = null;
-            this.btn_Gcompte.Iconimage_Selected = null;
-            this.btn_Gcompte.IconMarginLeft = 16;
-            this.btn_Gcompte.IconMarginRight = 0;
-            this.btn_Gcompte.IconRightVisible = true;
-            this.btn_Gcompte.IconRightZoom = 0D;
-            this.btn_Gcompte.IconVisible = true;
-            this.btn_Gcompte.IconZoom = 50D;
-            this.btn_Gcompte.IsTab = false;
-            this.btn_Gcompte.Location = new System.Drawing.Point(0, 222);
-            this.btn_Gcompte.Name = "btn_Gcompte";
-            this.btn_Gcompte.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Gcompte.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Gcompte.selected = false;
-            this.btn_Gcompte.Size = new System.Drawing.Size(55, 48);
-            this.btn_Gcompte.TabIndex = 9;
-            this.btn_Gcompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Gcompte.Textcolor = System.Drawing.Color.White;
-            this.btn_Gcompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel16.Location = new System.Drawing.Point(0, 399);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(227, 7);
-            this.panel16.TabIndex = 11;
-            // 
-            // btn_Oi
-            // 
-            this.btn_Oi.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Oi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Oi.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Oi.BorderRadius = 0;
-            this.btn_Oi.ButtonText = "Ordre d\'imputation";
-            this.btn_Oi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Oi.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Oi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Oi.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Oi.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Oi.Iconimage")));
-            this.btn_Oi.Iconimage_right = null;
-            this.btn_Oi.Iconimage_right_Selected = null;
-            this.btn_Oi.Iconimage_Selected = null;
-            this.btn_Oi.IconMarginLeft = 0;
-            this.btn_Oi.IconMarginRight = 0;
-            this.btn_Oi.IconRightVisible = true;
-            this.btn_Oi.IconRightZoom = 0D;
-            this.btn_Oi.IconVisible = true;
-            this.btn_Oi.IconZoom = 40D;
-            this.btn_Oi.IsTab = false;
-            this.btn_Oi.Location = new System.Drawing.Point(0, 406);
-            this.btn_Oi.Name = "btn_Oi";
-            this.btn_Oi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Oi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Oi.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Oi.selected = false;
-            this.btn_Oi.Size = new System.Drawing.Size(227, 53);
-            this.btn_Oi.TabIndex = 12;
-            this.btn_Oi.Text = "Ordre d\'imputation";
-            this.btn_Oi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Oi.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.btn_Oi.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // panel18
-            // 
-            this.panel18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel18.Location = new System.Drawing.Point(0, 459);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(227, 7);
-            this.panel18.TabIndex = 13;
-            // 
-            // btn_Op
-            // 
-            this.btn_Op.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Op.BorderRadius = 0;
-            this.btn_Op.ButtonText = "Ordre de paiement";
-            this.btn_Op.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Op.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Op.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Op.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Op.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Op.Iconimage")));
-            this.btn_Op.Iconimage_right = null;
-            this.btn_Op.Iconimage_right_Selected = null;
-            this.btn_Op.Iconimage_Selected = null;
-            this.btn_Op.IconMarginLeft = 0;
-            this.btn_Op.IconMarginRight = 0;
-            this.btn_Op.IconRightVisible = true;
-            this.btn_Op.IconRightZoom = 0D;
-            this.btn_Op.IconVisible = true;
-            this.btn_Op.IconZoom = 40D;
-            this.btn_Op.IsTab = false;
-            this.btn_Op.Location = new System.Drawing.Point(0, 466);
-            this.btn_Op.Name = "btn_Op";
-            this.btn_Op.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Op.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Op.selected = false;
-            this.btn_Op.Size = new System.Drawing.Size(227, 53);
-            this.btn_Op.TabIndex = 14;
-            this.btn_Op.Text = "Ordre de paiement";
-            this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 519);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(227, 7);
-            this.panel9.TabIndex = 15;
-            // 
-            // btn_Ov
-            // 
-            this.btn_Ov.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ov.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Ov.BorderRadius = 0;
-            this.btn_Ov.ButtonText = "Ordre de virement";
-            this.btn_Ov.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Ov.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Ov.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Ov.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Ov.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Ov.Iconimage")));
-            this.btn_Ov.Iconimage_right = null;
-            this.btn_Ov.Iconimage_right_Selected = null;
-            this.btn_Ov.Iconimage_Selected = null;
-            this.btn_Ov.IconMarginLeft = 0;
-            this.btn_Ov.IconMarginRight = 0;
-            this.btn_Ov.IconRightVisible = true;
-            this.btn_Ov.IconRightZoom = 0D;
-            this.btn_Ov.IconVisible = true;
-            this.btn_Ov.IconZoom = 40D;
-            this.btn_Ov.IsTab = false;
-            this.btn_Ov.Location = new System.Drawing.Point(0, 526);
-            this.btn_Ov.Name = "btn_Ov";
-            this.btn_Ov.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ov.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Ov.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Ov.selected = false;
-            this.btn_Ov.Size = new System.Drawing.Size(227, 53);
-            this.btn_Ov.TabIndex = 16;
-            this.btn_Ov.Text = "Ordre de virement";
-            this.btn_Ov.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Ov.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.btn_Ov.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // panel19
-            // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Location = new System.Drawing.Point(0, 579);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(227, 7);
-            this.panel19.TabIndex = 17;
             // 
             // Accueil
             // 

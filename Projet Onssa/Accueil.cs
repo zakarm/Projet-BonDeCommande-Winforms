@@ -17,10 +17,7 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private Form activeForm = null;
         private void openchildform(Form childForm)
         {
@@ -56,14 +53,9 @@ namespace Projet_Onssa
             
         }
 
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
+        private void btn_Consultation_Click(object sender, EventArgs e)
         {
             openchildform(new ConsultationForm());
-        }
-
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

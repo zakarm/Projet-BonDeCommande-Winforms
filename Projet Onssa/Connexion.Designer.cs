@@ -35,7 +35,7 @@ namespace Projet_Onssa
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Cnx = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel_banner = new System.Windows.Forms.Panel();
@@ -51,7 +51,7 @@ namespace Projet_Onssa
             this.panel_content.Controls.Add(this.label3);
             this.panel_content.Controls.Add(this.label2);
             this.panel_content.Controls.Add(this.label1);
-            this.panel_content.Controls.Add(this.bunifuFlatButton2);
+            this.panel_content.Controls.Add(this.btn_Cnx);
             this.panel_content.Controls.Add(this.bunifuMaterialTextbox3);
             this.panel_content.Controls.Add(this.bunifuMaterialTextbox4);
             this.panel_content.Location = new System.Drawing.Point(0, 0);
@@ -108,46 +108,45 @@ namespace Projet_Onssa
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(124, 77);
+            this.label1.Location = new System.Drawing.Point(114, 88);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(129, 41);
             this.label1.TabIndex = 12;
             this.label1.Text = "Sign In";
             // 
-            // bunifuFlatButton2
+            // btn_Cnx
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 7;
-            this.bunifuFlatButton2.ButtonText = "Sign In";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = null;
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = true;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 90D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(111, 394);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(142, 48);
-            this.bunifuFlatButton2.TabIndex = 11;
-            this.bunifuFlatButton2.Text = "Sign In";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
+            this.btn_Cnx.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Cnx.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(77)))));
+            this.btn_Cnx.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Cnx.BorderRadius = 7;
+            this.btn_Cnx.ButtonText = "Sign In";
+            this.btn_Cnx.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Cnx.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Cnx.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Cnx.Iconimage = null;
+            this.btn_Cnx.Iconimage_right = null;
+            this.btn_Cnx.Iconimage_right_Selected = null;
+            this.btn_Cnx.Iconimage_Selected = null;
+            this.btn_Cnx.IconMarginLeft = 0;
+            this.btn_Cnx.IconMarginRight = 0;
+            this.btn_Cnx.IconRightVisible = true;
+            this.btn_Cnx.IconRightZoom = 0D;
+            this.btn_Cnx.IconVisible = true;
+            this.btn_Cnx.IconZoom = 90D;
+            this.btn_Cnx.IsTab = false;
+            this.btn_Cnx.Location = new System.Drawing.Point(111, 394);
+            this.btn_Cnx.Name = "btn_Cnx";
+            this.btn_Cnx.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(77)))));
+            this.btn_Cnx.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Cnx.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Cnx.selected = false;
+            this.btn_Cnx.Size = new System.Drawing.Size(142, 48);
+            this.btn_Cnx.TabIndex = 11;
+            this.btn_Cnx.Text = "Sign In";
+            this.btn_Cnx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Cnx.Textcolor = System.Drawing.Color.White;
+            this.btn_Cnx.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // bunifuMaterialTextbox3
             // 
@@ -215,7 +214,6 @@ namespace Projet_Onssa
             this.Name = "Connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
-            this.Load += new System.EventHandler(this.Connexion_Load);
             this.panel_content.ResumeLayout(false);
             this.panel_content.PerformLayout();
             this.ResumeLayout(false);
@@ -227,7 +225,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_banner;
         private System.Windows.Forms.Panel panel_content;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Cnx;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
         private System.Windows.Forms.Label label4;

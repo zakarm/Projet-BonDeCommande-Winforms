@@ -18,14 +18,6 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void Connexion_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }
