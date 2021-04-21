@@ -37,6 +37,8 @@ namespace Projet_Onssa
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel17 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel15 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -46,24 +48,20 @@ namespace Projet_Onssa
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.panel6.Controls.Add(this.bunifuFlatButton5);
             this.panel6.Controls.Add(this.panel13);
             this.panel6.Controls.Add(this.bunifuFlatButton2);
@@ -71,13 +69,13 @@ namespace Projet_Onssa
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(61, 749);
+            this.panel6.Size = new System.Drawing.Size(55, 749);
             this.panel6.TabIndex = 2;
             // 
             // bunifuFlatButton5
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton5.BorderRadius = 0;
             this.bunifuFlatButton5.ButtonText = "";
@@ -94,15 +92,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton5.IconRightVisible = true;
             this.bunifuFlatButton5.IconRightZoom = 0D;
             this.bunifuFlatButton5.IconVisible = true;
-            this.bunifuFlatButton5.IconZoom = 70D;
+            this.bunifuFlatButton5.IconZoom = 60D;
             this.bunifuFlatButton5.IsTab = false;
             this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 139);
             this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(61, 48);
+            this.bunifuFlatButton5.Size = new System.Drawing.Size(55, 48);
             this.bunifuFlatButton5.TabIndex = 7;
             this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
@@ -113,13 +111,13 @@ namespace Projet_Onssa
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 123);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(61, 16);
+            this.panel13.Size = new System.Drawing.Size(55, 16);
             this.panel13.TabIndex = 6;
             // 
             // bunifuFlatButton2
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton2.BorderRadius = 0;
             this.bunifuFlatButton2.ButtonText = "";
@@ -136,15 +134,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton2.IconRightVisible = true;
             this.bunifuFlatButton2.IconRightZoom = 0D;
             this.bunifuFlatButton2.IconVisible = true;
-            this.bunifuFlatButton2.IconZoom = 70D;
+            this.bunifuFlatButton2.IconZoom = 60D;
             this.bunifuFlatButton2.IsTab = false;
             this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 75);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(128)))), ((int)(((byte)(192)))));
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
             this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(61, 48);
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(55, 48);
             this.bunifuFlatButton2.TabIndex = 5;
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
@@ -156,7 +154,7 @@ namespace Projet_Onssa
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(61, 75);
+            this.panel3.Size = new System.Drawing.Size(55, 75);
             this.panel3.TabIndex = 4;
             // 
             // panel5
@@ -164,12 +162,12 @@ namespace Projet_Onssa
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(61, 69);
+            this.panel5.Size = new System.Drawing.Size(55, 69);
             this.panel5.TabIndex = 5;
             // 
             // panel7
             // 
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel7.Controls.Add(this.bunifuFlatButton7);
             this.panel7.Controls.Add(this.panel17);
             this.panel7.Controls.Add(this.bunifuFlatButton6);
@@ -182,15 +180,59 @@ namespace Projet_Onssa
             this.panel7.Controls.Add(this.panel10);
             this.panel7.Controls.Add(this.panel11);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(61, 0);
+            this.panel7.Location = new System.Drawing.Point(55, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(235, 749);
+            this.panel7.Size = new System.Drawing.Size(219, 749);
             this.panel7.TabIndex = 3;
+            // 
+            // bunifuFlatButton7
+            // 
+            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton7.BorderRadius = 0;
+            this.bunifuFlatButton7.ButtonText = "Fiche d\'engagement";
+            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
+            this.bunifuFlatButton7.Iconimage_right = null;
+            this.bunifuFlatButton7.Iconimage_right_Selected = null;
+            this.bunifuFlatButton7.Iconimage_Selected = null;
+            this.bunifuFlatButton7.IconMarginLeft = 30;
+            this.bunifuFlatButton7.IconMarginRight = 0;
+            this.bunifuFlatButton7.IconRightVisible = true;
+            this.bunifuFlatButton7.IconRightZoom = 0D;
+            this.bunifuFlatButton7.IconVisible = true;
+            this.bunifuFlatButton7.IconZoom = 55D;
+            this.bunifuFlatButton7.IsTab = false;
+            this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 407);
+            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
+            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.bunifuFlatButton7.selected = false;
+            this.bunifuFlatButton7.Size = new System.Drawing.Size(219, 53);
+            this.bunifuFlatButton7.TabIndex = 10;
+            this.bunifuFlatButton7.Text = "Fiche d\'engagement";
+            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 390);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(219, 17);
+            this.panel17.TabIndex = 9;
             // 
             // bunifuFlatButton6
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton6.BorderRadius = 0;
             this.bunifuFlatButton6.ButtonText = "Bon de commande";
@@ -207,15 +249,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton6.IconRightVisible = true;
             this.bunifuFlatButton6.IconRightZoom = 0D;
             this.bunifuFlatButton6.IconVisible = true;
-            this.bunifuFlatButton6.IconZoom = 60D;
+            this.bunifuFlatButton6.IconZoom = 55D;
             this.bunifuFlatButton6.IsTab = false;
             this.bunifuFlatButton6.Location = new System.Drawing.Point(0, 337);
             this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(235, 53);
+            this.bunifuFlatButton6.Size = new System.Drawing.Size(219, 53);
             this.bunifuFlatButton6.TabIndex = 8;
             this.bunifuFlatButton6.Text = "Bon de commande";
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -224,16 +266,17 @@ namespace Projet_Onssa
             // 
             // panel15
             // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel15.Location = new System.Drawing.Point(0, 320);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(235, 17);
+            this.panel15.Size = new System.Drawing.Size(219, 17);
             this.panel15.TabIndex = 7;
             // 
             // bunifuFlatButton1
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
             this.bunifuFlatButton1.ButtonText = "Modele de devis";
@@ -250,15 +293,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton1.IconRightVisible = true;
             this.bunifuFlatButton1.IconRightZoom = 0D;
             this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 60D;
+            this.bunifuFlatButton1.IconZoom = 55D;
             this.bunifuFlatButton1.IsTab = false;
             this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 267);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(235, 53);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(219, 53);
             this.bunifuFlatButton1.TabIndex = 6;
             this.bunifuFlatButton1.Text = "Modele de devis";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -267,16 +310,17 @@ namespace Projet_Onssa
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 250);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(235, 17);
+            this.panel4.Size = new System.Drawing.Size(219, 17);
             this.panel4.TabIndex = 5;
             // 
             // bunifuFlatButton3
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton3.BorderRadius = 0;
             this.bunifuFlatButton3.ButtonText = "Procès verbal de jugement";
@@ -293,15 +337,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconRightVisible = true;
             this.bunifuFlatButton3.IconRightZoom = 0D;
             this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
+            this.bunifuFlatButton3.IconZoom = 55D;
             this.bunifuFlatButton3.IsTab = false;
             this.bunifuFlatButton3.Location = new System.Drawing.Point(0, 197);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(235, 53);
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(219, 53);
             this.bunifuFlatButton3.TabIndex = 4;
             this.bunifuFlatButton3.Text = "Procès verbal de jugement";
             this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -310,16 +354,17 @@ namespace Projet_Onssa
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel8.Location = new System.Drawing.Point(0, 180);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(235, 17);
+            this.panel8.Size = new System.Drawing.Size(219, 17);
             this.panel8.TabIndex = 3;
             // 
             // bunifuFlatButton4
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton4.BorderRadius = 0;
             this.bunifuFlatButton4.ButtonText = "         Consultation";
@@ -336,15 +381,15 @@ namespace Projet_Onssa
             this.bunifuFlatButton4.IconRightVisible = true;
             this.bunifuFlatButton4.IconRightZoom = 0D;
             this.bunifuFlatButton4.IconVisible = true;
-            this.bunifuFlatButton4.IconZoom = 60D;
+            this.bunifuFlatButton4.IconZoom = 55D;
             this.bunifuFlatButton4.IsTab = false;
             this.bunifuFlatButton4.Location = new System.Drawing.Point(0, 127);
             this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(235, 53);
+            this.bunifuFlatButton4.Size = new System.Drawing.Size(219, 53);
             this.bunifuFlatButton4.TabIndex = 2;
             this.bunifuFlatButton4.Text = "         Consultation";
             this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -354,28 +399,20 @@ namespace Projet_Onssa
             // 
             // panel10
             // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 96);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(235, 31);
+            this.panel10.Size = new System.Drawing.Size(219, 31);
             this.panel10.TabIndex = 1;
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.panel12);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(0, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(235, 96);
+            this.panel11.Size = new System.Drawing.Size(219, 96);
             this.panel11.TabIndex = 0;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.panel12.Location = new System.Drawing.Point(-60, 92);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(1400, 1);
-            this.panel12.TabIndex = 1;
             // 
             // panel9
             // 
@@ -390,9 +427,9 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.panel14);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(296, 0);
+            this.panel1.Location = new System.Drawing.Point(274, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(986, 96);
+            this.panel1.Size = new System.Drawing.Size(1008, 96);
             this.panel1.TabIndex = 2;
             // 
             // panel14
@@ -414,53 +451,10 @@ namespace Projet_Onssa
             // panel_childform
             // 
             this.panel_childform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childform.Location = new System.Drawing.Point(296, 96);
+            this.panel_childform.Location = new System.Drawing.Point(274, 96);
             this.panel_childform.Name = "panel_childform";
-            this.panel_childform.Size = new System.Drawing.Size(986, 653);
+            this.panel_childform.Size = new System.Drawing.Size(1008, 653);
             this.panel_childform.TabIndex = 4;
-            // 
-            // panel17
-            // 
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel17.Location = new System.Drawing.Point(0, 390);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(235, 17);
-            this.panel17.TabIndex = 9;
-            // 
-            // bunifuFlatButton7
-            // 
-            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton7.BorderRadius = 0;
-            this.bunifuFlatButton7.ButtonText = "Fiche d\'engagement";
-            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
-            this.bunifuFlatButton7.Iconimage_right = null;
-            this.bunifuFlatButton7.Iconimage_right_Selected = null;
-            this.bunifuFlatButton7.Iconimage_Selected = null;
-            this.bunifuFlatButton7.IconMarginLeft = 30;
-            this.bunifuFlatButton7.IconMarginRight = 0;
-            this.bunifuFlatButton7.IconRightVisible = true;
-            this.bunifuFlatButton7.IconRightZoom = 0D;
-            this.bunifuFlatButton7.IconVisible = true;
-            this.bunifuFlatButton7.IconZoom = 60D;
-            this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(0, 407);
-            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
-            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.bunifuFlatButton7.selected = false;
-            this.bunifuFlatButton7.Size = new System.Drawing.Size(235, 53);
-            this.bunifuFlatButton7.TabIndex = 10;
-            this.bunifuFlatButton7.Text = "Fiche d\'engagement";
-            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Accueil
             // 
@@ -479,7 +473,6 @@ namespace Projet_Onssa
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -495,7 +488,6 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
