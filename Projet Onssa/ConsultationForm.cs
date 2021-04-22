@@ -59,11 +59,9 @@ namespace Projet_Onssa
                         
                         try
                         {
-                            test = true;
-                           
-                                  Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].Value.ToString()));
-                                  
-                                  con.ListFournisseur.Add(fr);
+                            test = true;      
+                            Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].Value.ToString()));
+                            con.ListFournisseur.Add(fr);
                             
                         }
                         catch (Exception ex)
@@ -111,6 +109,34 @@ namespace Projet_Onssa
             }
            
                 
+        }
+
+        public void recherche()
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                
+                Consultation c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                txtarea_Objet.Text = c.ObjetConsultation;
+                foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
+                {
+                    drm.Cells["ck_btn"].Value = false;
+                    foreach (Fournisseur f in c.ListFournisseur)
+                    {
+                        if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
+                        {
+                            drm.Cells["ck_btn"].Value = true;
+                            
+                        }
+                    }             
+                }
+            }
+            
+        }
+
+        private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            recherche();
         }
     }
 }
