@@ -20,7 +20,7 @@ namespace Projet_Onssa
 
         private void btn_Cnx_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 o = new OnssaModelContainer4())
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 ///////////methode recherche simple//////////////
 
@@ -46,7 +46,7 @@ namespace Projet_Onssa
                 //    MessageBox.Show("had Lcompte makanch", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 ///////////methode recherche linq//////////////
-                var query = from g in o.GestionCompteSet
+                var query = from g in ctx.GestionCompteSet
                             where g.Nom == bunifuMaterialTextbox4.Text && g.MotDePasse == bunifuMaterialTextbox3.Text
                             select g ;
 

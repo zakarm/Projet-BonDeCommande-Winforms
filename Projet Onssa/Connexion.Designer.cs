@@ -151,7 +151,6 @@ namespace Projet_Onssa
             // 
             // bunifuMaterialTextbox3
             // 
-      
             this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
@@ -167,7 +166,6 @@ namespace Projet_Onssa
             this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
             this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(284, 44);
             this.bunifuMaterialTextbox3.TabIndex = 10;
-            this.bunifuMaterialTextbox3.Text = "Password";
             this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuMaterialTextbox4
@@ -187,7 +185,6 @@ namespace Projet_Onssa
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
             this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(284, 44);
             this.bunifuMaterialTextbox4.TabIndex = 9;
-            this.bunifuMaterialTextbox4.Text = "you.example@gmail.com";
             this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel_banner

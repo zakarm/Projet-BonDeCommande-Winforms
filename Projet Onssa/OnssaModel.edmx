@@ -797,7 +797,7 @@
           <End Type="OnssaModel.Commission" Role="Commission" Multiplicity="*" />
         </Association>
         <Association Name="PVJConsultation">
-          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="0..1" />
           <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="1" />
         </Association>
         <Association Name="ModeleDevisProduit">
@@ -1034,6 +1034,7 @@
       <EndProperty Name="PVJ">
         <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
       </EndProperty>
+            <Condition ColumnName="InfoConsultation_IdConsultation" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="ModeleDevisProduit" TypeName="OnssaModel.ModeleDevisProduit" StoreEntitySet="ModeleDevisProduit">
       <EndProperty Name="ModeleDevis">

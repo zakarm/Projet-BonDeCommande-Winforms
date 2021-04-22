@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0304173820524863a319b5867ba385fe" Name="Diagram1" ZoomLevel="39" >
+      <Diagram DiagramId="0304173820524863a319b5867ba385fe" Name="Diagram1" ZoomLevel="65" >
         <EntityTypeShape EntityType="OnssaModel.Fournisseur" Width="1.5" PointX="8.875" PointY="3.375" />
         <EntityTypeShape EntityType="OnssaModel.Commission" Width="1.5" PointX="10.75" PointY="9" />
         <EntityTypeShape EntityType="OnssaModel.Consultation" Width="1.5" PointX="3.5" PointY="3.375" />
