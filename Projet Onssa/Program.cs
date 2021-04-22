@@ -8,6 +8,9 @@ namespace Projet_Onssa
 {
     static class Program
     {
+        //public static string typeCompte;
+        public static GestionCompte OG ;
+
         /// <summary>
         /// Point d'entrée principal de l'application.
         /// </summary>
@@ -16,7 +19,7 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Accueil());
+            Application.Run(new Connexion());
         }
     }
 }

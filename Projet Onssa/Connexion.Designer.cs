@@ -98,7 +98,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.label2.Location = new System.Drawing.Point(33, 179);
+            this.label2.Location = new System.Drawing.Point(33, 162);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 17);
             this.label2.TabIndex = 13;
@@ -147,9 +147,11 @@ namespace Projet_Onssa
             this.btn_Cnx.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Cnx.Textcolor = System.Drawing.Color.White;
             this.btn_Cnx.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cnx.Click += new System.EventHandler(this.btn_Cnx_Click);
             // 
             // bunifuMaterialTextbox3
             // 
+      
             this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
@@ -185,7 +187,7 @@ namespace Projet_Onssa
             this.bunifuMaterialTextbox4.Name = "bunifuMaterialTextbox4";
             this.bunifuMaterialTextbox4.Size = new System.Drawing.Size(284, 44);
             this.bunifuMaterialTextbox4.TabIndex = 9;
-            this.bunifuMaterialTextbox4.Text = "you.example@zaka.com";
+            this.bunifuMaterialTextbox4.Text = "you.example@gmail.com";
             this.bunifuMaterialTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel_banner
