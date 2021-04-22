@@ -19,6 +19,7 @@ namespace Projet_Onssa
         }
 
         bool test = false;
+        Consultation c;
 
         private void ConsultationForm_Load(object sender, EventArgs e)
         {
@@ -116,7 +117,7 @@ namespace Projet_Onssa
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 
-                Consultation c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
                 txtarea_Objet.Text = c.ObjetConsultation;
                 foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
                 {
@@ -137,6 +138,18 @@ namespace Projet_Onssa
         private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
         {
             recherche();
+        }
+
+        private void btn_Supprimer_Click(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                ctx.ConsultationSet.Remove(c);
+                ctx.SaveChanges();
+                cb_Num.DataSource = ctx.ConsultationSet.ToList();
+            }
         }
     }
 }
