@@ -257,8 +257,7 @@ namespace Projet_Onssa
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Fournisseur.ColumnHeadersHeight = 35;
-            this.dgv_Fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_Fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
@@ -267,6 +266,7 @@ namespace Projet_Onssa
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
             this.dgv_Fournisseur.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Fournisseur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgv_Fournisseur.Location = new System.Drawing.Point(465, 189);
@@ -338,7 +338,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ConsultationForm";
             this.Text = "ConsultationForm";
             this.Load += new System.EventHandler(this.ConsultationForm_Load);

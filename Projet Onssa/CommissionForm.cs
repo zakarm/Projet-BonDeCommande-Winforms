@@ -16,5 +16,10 @@ namespace Projet_Onssa
         {
             InitializeComponent();
         }
+
+        private void CommissionForm_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

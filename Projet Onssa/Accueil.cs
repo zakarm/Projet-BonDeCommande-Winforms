@@ -68,11 +68,7 @@ namespace Projet_Onssa
             }
         }
 
-        private void btn_Consultation_Click(object sender, EventArgs e)
-        {
-            openchildform(new ConsultationForm());
-        }
-
+        
         private void btn_Out_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -116,6 +112,8 @@ namespace Projet_Onssa
         {
             btn_Fr.Visible = s;
             panel_Fr.Visible = s;
+            btn_Co.Visible = s;
+            panel_Commission.Visible = s;
         }
 
         private void btn_Gpaiement_Click(object sender, EventArgs e)
@@ -124,9 +122,19 @@ namespace Projet_Onssa
             btnM(false);
         }
 
+        private void btn_Consultation_Click(object sender, EventArgs e)
+        {
+            openchildform(new ConsultationForm());
+        }
+
         private void btn_Fr_Click(object sender, EventArgs e)
         {
-            openchildform(new FournisseurForm ());
+            openchildform(new FournisseurForm());
+        }
+
+        private void btn_Co_Click(object sender, EventArgs e)
+        {
+            openchildform(new CommissionForm());
         }
     }
 }

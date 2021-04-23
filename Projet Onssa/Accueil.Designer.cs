@@ -32,16 +32,17 @@ namespace Projet_Onssa
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.panel6 = new System.Windows.Forms.Panel();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel_Mamber = new System.Windows.Forms.Panel();
             this.btn_Mamber = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Out = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel_Gpaiement = new System.Windows.Forms.Panel();
             this.btn_Gpaiement = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel_Accueil = new System.Windows.Forms.Panel();
             this.btn_Accueil = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel_submenu = new System.Windows.Forms.Panel();
+            this.panel_subsubmenu = new System.Windows.Forms.Panel();
             this.panel_Fr = new System.Windows.Forms.Panel();
             this.btn_Fr = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Op = new System.Windows.Forms.Panel();
@@ -62,33 +63,35 @@ namespace Projet_Onssa
             this.btn_Pvj = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Consultation = new System.Windows.Forms.Panel();
             this.btn_Consultation = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
+            this.panel_headermenu = new System.Windows.Forms.Panel();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_header = new System.Windows.Forms.Panel();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
+            this.btn_Co = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Commission = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel11.SuspendLayout();
+            this.panel_submenu.SuspendLayout();
+            this.panel_subsubmenu.SuspendLayout();
+            this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.panel_header.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.panel6.Controls.Add(this.bunifuFlatButton2);
-            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.panel_Mamber);
             this.panel6.Controls.Add(this.btn_Mamber);
             this.panel6.Controls.Add(this.btn_Out);
-            this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.panel_Gpaiement);
             this.panel6.Controls.Add(this.btn_Gpaiement);
-            this.panel6.Controls.Add(this.panel13);
+            this.panel6.Controls.Add(this.panel_Accueil);
             this.panel6.Controls.Add(this.btn_Accueil);
             this.panel6.Controls.Add(this.panel3);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
@@ -131,13 +134,13 @@ namespace Projet_Onssa
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel4
+            // panel_Mamber
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 270);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(55, 10);
-            this.panel4.TabIndex = 13;
+            this.panel_Mamber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Mamber.Location = new System.Drawing.Point(0, 270);
+            this.panel_Mamber.Name = "panel_Mamber";
+            this.panel_Mamber.Size = new System.Drawing.Size(55, 10);
+            this.panel_Mamber.TabIndex = 13;
             // 
             // btn_Mamber
             // 
@@ -209,13 +212,13 @@ namespace Projet_Onssa
             this.btn_Out.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Out.Click += new System.EventHandler(this.btn_Out_Click);
             // 
-            // panel12
+            // panel_Gpaiement
             // 
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 212);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(55, 10);
-            this.panel12.TabIndex = 8;
+            this.panel_Gpaiement.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Gpaiement.Location = new System.Drawing.Point(0, 212);
+            this.panel_Gpaiement.Name = "panel_Gpaiement";
+            this.panel_Gpaiement.Size = new System.Drawing.Size(55, 10);
+            this.panel_Gpaiement.TabIndex = 8;
             // 
             // btn_Gpaiement
             // 
@@ -252,13 +255,13 @@ namespace Projet_Onssa
             this.btn_Gpaiement.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Gpaiement.Click += new System.EventHandler(this.btn_Gpaiement_Click);
             // 
-            // panel13
+            // panel_Accueil
             // 
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 154);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(55, 10);
-            this.panel13.TabIndex = 6;
+            this.panel_Accueil.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Accueil.Location = new System.Drawing.Point(0, 154);
+            this.panel_Accueil.Name = "panel_Accueil";
+            this.panel_Accueil.Size = new System.Drawing.Size(55, 10);
+            this.panel_Accueil.TabIndex = 6;
             // 
             // btn_Accueil
             // 
@@ -311,46 +314,59 @@ namespace Projet_Onssa
             this.panel5.Size = new System.Drawing.Size(55, 106);
             this.panel5.TabIndex = 5;
             // 
-            // panel7
+            // panel_submenu
             // 
-            this.panel7.AutoScroll = true;
-            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel7.Controls.Add(this.panel_Fr);
-            this.panel7.Controls.Add(this.btn_Fr);
-            this.panel7.Controls.Add(this.panel_Op);
-            this.panel7.Controls.Add(this.btn_Op);
-            this.panel7.Controls.Add(this.panel_Ov);
-            this.panel7.Controls.Add(this.btn_Ov);
-            this.panel7.Controls.Add(this.panel_Pvr);
-            this.panel7.Controls.Add(this.btn_Pvr);
-            this.panel7.Controls.Add(this.panel_Oi);
-            this.panel7.Controls.Add(this.btn_Oi);
-            this.panel7.Controls.Add(this.panel_Fe);
-            this.panel7.Controls.Add(this.btn_Fe);
-            this.panel7.Controls.Add(this.panel_Bc);
-            this.panel7.Controls.Add(this.btn_Bc);
-            this.panel7.Controls.Add(this.panel_Mdevis);
-            this.panel7.Controls.Add(this.btn_Mdevis);
-            this.panel7.Controls.Add(this.panel_Pvj);
-            this.panel7.Controls.Add(this.btn_Pvj);
-            this.panel7.Controls.Add(this.panel_Consultation);
-            this.panel7.Controls.Add(this.btn_Consultation);
-            this.panel7.Controls.Add(this.panel10);
-            this.panel7.Controls.Add(this.panel11);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(55, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(227, 749);
-            this.panel7.TabIndex = 3;
+            this.panel_submenu.AutoScroll = true;
+            this.panel_submenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_submenu.Controls.Add(this.panel_subsubmenu);
+            this.panel_submenu.Controls.Add(this.panel_logo);
+            this.panel_submenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_submenu.Location = new System.Drawing.Point(55, 0);
+            this.panel_submenu.Name = "panel_submenu";
+            this.panel_submenu.Size = new System.Drawing.Size(227, 749);
+            this.panel_submenu.TabIndex = 3;
+            // 
+            // panel_subsubmenu
+            // 
+            this.panel_subsubmenu.AutoScroll = true;
+            this.panel_subsubmenu.AutoScrollMargin = new System.Drawing.Size(0, 1000);
+            this.panel_subsubmenu.Controls.Add(this.panel_Commission);
+            this.panel_subsubmenu.Controls.Add(this.btn_Co);
+            this.panel_subsubmenu.Controls.Add(this.panel_Fr);
+            this.panel_subsubmenu.Controls.Add(this.btn_Fr);
+            this.panel_subsubmenu.Controls.Add(this.panel_Op);
+            this.panel_subsubmenu.Controls.Add(this.btn_Op);
+            this.panel_subsubmenu.Controls.Add(this.panel_Ov);
+            this.panel_subsubmenu.Controls.Add(this.btn_Ov);
+            this.panel_subsubmenu.Controls.Add(this.panel_Pvr);
+            this.panel_subsubmenu.Controls.Add(this.btn_Pvr);
+            this.panel_subsubmenu.Controls.Add(this.panel_Oi);
+            this.panel_subsubmenu.Controls.Add(this.btn_Oi);
+            this.panel_subsubmenu.Controls.Add(this.panel_Fe);
+            this.panel_subsubmenu.Controls.Add(this.btn_Fe);
+            this.panel_subsubmenu.Controls.Add(this.panel_Bc);
+            this.panel_subsubmenu.Controls.Add(this.btn_Bc);
+            this.panel_subsubmenu.Controls.Add(this.panel_Mdevis);
+            this.panel_subsubmenu.Controls.Add(this.btn_Mdevis);
+            this.panel_subsubmenu.Controls.Add(this.panel_Pvj);
+            this.panel_subsubmenu.Controls.Add(this.btn_Pvj);
+            this.panel_subsubmenu.Controls.Add(this.panel_Consultation);
+            this.panel_subsubmenu.Controls.Add(this.btn_Consultation);
+            this.panel_subsubmenu.Controls.Add(this.panel_headermenu);
+            this.panel_subsubmenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_subsubmenu.Location = new System.Drawing.Point(0, 96);
+            this.panel_subsubmenu.Name = "panel_subsubmenu";
+            this.panel_subsubmenu.Size = new System.Drawing.Size(227, 653);
+            this.panel_subsubmenu.TabIndex = 1;
             // 
             // panel_Fr
             // 
             this.panel_Fr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Fr.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Fr.Location = new System.Drawing.Point(0, 699);
+            this.panel_Fr.Location = new System.Drawing.Point(0, 603);
             this.panel_Fr.Name = "panel_Fr";
-            this.panel_Fr.Size = new System.Drawing.Size(227, 7);
-            this.panel_Fr.TabIndex = 21;
+            this.panel_Fr.Size = new System.Drawing.Size(210, 7);
+            this.panel_Fr.TabIndex = 42;
             // 
             // btn_Fr
             // 
@@ -372,16 +388,16 @@ namespace Projet_Onssa
             this.btn_Fr.IconRightVisible = true;
             this.btn_Fr.IconRightZoom = 0D;
             this.btn_Fr.IconVisible = true;
-            this.btn_Fr.IconZoom = 40D;
+            this.btn_Fr.IconZoom = 45D;
             this.btn_Fr.IsTab = false;
-            this.btn_Fr.Location = new System.Drawing.Point(0, 646);
+            this.btn_Fr.Location = new System.Drawing.Point(0, 550);
             this.btn_Fr.Name = "btn_Fr";
             this.btn_Fr.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Fr.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Fr.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Fr.selected = false;
-            this.btn_Fr.Size = new System.Drawing.Size(227, 53);
-            this.btn_Fr.TabIndex = 20;
+            this.btn_Fr.Size = new System.Drawing.Size(210, 53);
+            this.btn_Fr.TabIndex = 41;
             this.btn_Fr.Text = "Fournisseur";
             this.btn_Fr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Fr.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -392,10 +408,10 @@ namespace Projet_Onssa
             // 
             this.panel_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Op.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Op.Location = new System.Drawing.Point(0, 639);
+            this.panel_Op.Location = new System.Drawing.Point(0, 543);
             this.panel_Op.Name = "panel_Op";
-            this.panel_Op.Size = new System.Drawing.Size(227, 7);
-            this.panel_Op.TabIndex = 19;
+            this.panel_Op.Size = new System.Drawing.Size(210, 7);
+            this.panel_Op.TabIndex = 40;
             // 
             // btn_Op
             // 
@@ -419,14 +435,14 @@ namespace Projet_Onssa
             this.btn_Op.IconVisible = true;
             this.btn_Op.IconZoom = 40D;
             this.btn_Op.IsTab = false;
-            this.btn_Op.Location = new System.Drawing.Point(0, 586);
+            this.btn_Op.Location = new System.Drawing.Point(0, 490);
             this.btn_Op.Name = "btn_Op";
             this.btn_Op.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Op.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Op.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Op.selected = false;
-            this.btn_Op.Size = new System.Drawing.Size(227, 53);
-            this.btn_Op.TabIndex = 18;
+            this.btn_Op.Size = new System.Drawing.Size(210, 53);
+            this.btn_Op.TabIndex = 39;
             this.btn_Op.Text = "Ordre de paiement";
             this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -436,10 +452,10 @@ namespace Projet_Onssa
             // 
             this.panel_Ov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Ov.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Ov.Location = new System.Drawing.Point(0, 579);
+            this.panel_Ov.Location = new System.Drawing.Point(0, 483);
             this.panel_Ov.Name = "panel_Ov";
-            this.panel_Ov.Size = new System.Drawing.Size(227, 7);
-            this.panel_Ov.TabIndex = 17;
+            this.panel_Ov.Size = new System.Drawing.Size(210, 7);
+            this.panel_Ov.TabIndex = 38;
             // 
             // btn_Ov
             // 
@@ -463,14 +479,14 @@ namespace Projet_Onssa
             this.btn_Ov.IconVisible = true;
             this.btn_Ov.IconZoom = 40D;
             this.btn_Ov.IsTab = false;
-            this.btn_Ov.Location = new System.Drawing.Point(0, 526);
+            this.btn_Ov.Location = new System.Drawing.Point(0, 430);
             this.btn_Ov.Name = "btn_Ov";
             this.btn_Ov.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ov.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Ov.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Ov.selected = false;
-            this.btn_Ov.Size = new System.Drawing.Size(227, 53);
-            this.btn_Ov.TabIndex = 16;
+            this.btn_Ov.Size = new System.Drawing.Size(210, 53);
+            this.btn_Ov.TabIndex = 37;
             this.btn_Ov.Text = "Ordre de virement";
             this.btn_Ov.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ov.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -480,10 +496,10 @@ namespace Projet_Onssa
             // 
             this.panel_Pvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Pvr.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Pvr.Location = new System.Drawing.Point(0, 519);
+            this.panel_Pvr.Location = new System.Drawing.Point(0, 423);
             this.panel_Pvr.Name = "panel_Pvr";
-            this.panel_Pvr.Size = new System.Drawing.Size(227, 7);
-            this.panel_Pvr.TabIndex = 15;
+            this.panel_Pvr.Size = new System.Drawing.Size(210, 7);
+            this.panel_Pvr.TabIndex = 36;
             // 
             // btn_Pvr
             // 
@@ -507,14 +523,14 @@ namespace Projet_Onssa
             this.btn_Pvr.IconVisible = true;
             this.btn_Pvr.IconZoom = 40D;
             this.btn_Pvr.IsTab = false;
-            this.btn_Pvr.Location = new System.Drawing.Point(0, 466);
+            this.btn_Pvr.Location = new System.Drawing.Point(0, 370);
             this.btn_Pvr.Name = "btn_Pvr";
             this.btn_Pvr.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Pvr.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Pvr.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Pvr.selected = false;
-            this.btn_Pvr.Size = new System.Drawing.Size(227, 53);
-            this.btn_Pvr.TabIndex = 14;
+            this.btn_Pvr.Size = new System.Drawing.Size(210, 53);
+            this.btn_Pvr.TabIndex = 35;
             this.btn_Pvr.Text = "Procès verbale de reception";
             this.btn_Pvr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pvr.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -524,10 +540,10 @@ namespace Projet_Onssa
             // 
             this.panel_Oi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Oi.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Oi.Location = new System.Drawing.Point(0, 459);
+            this.panel_Oi.Location = new System.Drawing.Point(0, 363);
             this.panel_Oi.Name = "panel_Oi";
-            this.panel_Oi.Size = new System.Drawing.Size(227, 7);
-            this.panel_Oi.TabIndex = 13;
+            this.panel_Oi.Size = new System.Drawing.Size(210, 7);
+            this.panel_Oi.TabIndex = 34;
             // 
             // btn_Oi
             // 
@@ -551,14 +567,14 @@ namespace Projet_Onssa
             this.btn_Oi.IconVisible = true;
             this.btn_Oi.IconZoom = 40D;
             this.btn_Oi.IsTab = false;
-            this.btn_Oi.Location = new System.Drawing.Point(0, 406);
+            this.btn_Oi.Location = new System.Drawing.Point(0, 310);
             this.btn_Oi.Name = "btn_Oi";
             this.btn_Oi.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Oi.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Oi.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Oi.selected = false;
-            this.btn_Oi.Size = new System.Drawing.Size(227, 53);
-            this.btn_Oi.TabIndex = 12;
+            this.btn_Oi.Size = new System.Drawing.Size(210, 53);
+            this.btn_Oi.TabIndex = 33;
             this.btn_Oi.Text = "Ordre d\'imputation";
             this.btn_Oi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Oi.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -568,10 +584,10 @@ namespace Projet_Onssa
             // 
             this.panel_Fe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Fe.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Fe.Location = new System.Drawing.Point(0, 399);
+            this.panel_Fe.Location = new System.Drawing.Point(0, 303);
             this.panel_Fe.Name = "panel_Fe";
-            this.panel_Fe.Size = new System.Drawing.Size(227, 7);
-            this.panel_Fe.TabIndex = 11;
+            this.panel_Fe.Size = new System.Drawing.Size(210, 7);
+            this.panel_Fe.TabIndex = 32;
             // 
             // btn_Fe
             // 
@@ -595,14 +611,14 @@ namespace Projet_Onssa
             this.btn_Fe.IconVisible = true;
             this.btn_Fe.IconZoom = 40D;
             this.btn_Fe.IsTab = false;
-            this.btn_Fe.Location = new System.Drawing.Point(0, 346);
+            this.btn_Fe.Location = new System.Drawing.Point(0, 250);
             this.btn_Fe.Name = "btn_Fe";
             this.btn_Fe.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Fe.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Fe.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Fe.selected = false;
-            this.btn_Fe.Size = new System.Drawing.Size(227, 53);
-            this.btn_Fe.TabIndex = 10;
+            this.btn_Fe.Size = new System.Drawing.Size(210, 53);
+            this.btn_Fe.TabIndex = 31;
             this.btn_Fe.Text = "Fiche d\'engagement";
             this.btn_Fe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Fe.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -612,10 +628,10 @@ namespace Projet_Onssa
             // 
             this.panel_Bc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Bc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Bc.Location = new System.Drawing.Point(0, 339);
+            this.panel_Bc.Location = new System.Drawing.Point(0, 243);
             this.panel_Bc.Name = "panel_Bc";
-            this.panel_Bc.Size = new System.Drawing.Size(227, 7);
-            this.panel_Bc.TabIndex = 9;
+            this.panel_Bc.Size = new System.Drawing.Size(210, 7);
+            this.panel_Bc.TabIndex = 30;
             // 
             // btn_Bc
             // 
@@ -639,14 +655,14 @@ namespace Projet_Onssa
             this.btn_Bc.IconVisible = true;
             this.btn_Bc.IconZoom = 40D;
             this.btn_Bc.IsTab = false;
-            this.btn_Bc.Location = new System.Drawing.Point(0, 286);
+            this.btn_Bc.Location = new System.Drawing.Point(0, 190);
             this.btn_Bc.Name = "btn_Bc";
             this.btn_Bc.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Bc.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Bc.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Bc.selected = false;
-            this.btn_Bc.Size = new System.Drawing.Size(227, 53);
-            this.btn_Bc.TabIndex = 8;
+            this.btn_Bc.Size = new System.Drawing.Size(210, 53);
+            this.btn_Bc.TabIndex = 29;
             this.btn_Bc.Text = "Bon de commande";
             this.btn_Bc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Bc.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -656,10 +672,10 @@ namespace Projet_Onssa
             // 
             this.panel_Mdevis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Mdevis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Mdevis.Location = new System.Drawing.Point(0, 279);
+            this.panel_Mdevis.Location = new System.Drawing.Point(0, 183);
             this.panel_Mdevis.Name = "panel_Mdevis";
-            this.panel_Mdevis.Size = new System.Drawing.Size(227, 7);
-            this.panel_Mdevis.TabIndex = 7;
+            this.panel_Mdevis.Size = new System.Drawing.Size(210, 7);
+            this.panel_Mdevis.TabIndex = 28;
             // 
             // btn_Mdevis
             // 
@@ -683,14 +699,14 @@ namespace Projet_Onssa
             this.btn_Mdevis.IconVisible = true;
             this.btn_Mdevis.IconZoom = 40D;
             this.btn_Mdevis.IsTab = false;
-            this.btn_Mdevis.Location = new System.Drawing.Point(0, 226);
+            this.btn_Mdevis.Location = new System.Drawing.Point(0, 130);
             this.btn_Mdevis.Name = "btn_Mdevis";
             this.btn_Mdevis.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Mdevis.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Mdevis.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Mdevis.selected = false;
-            this.btn_Mdevis.Size = new System.Drawing.Size(227, 53);
-            this.btn_Mdevis.TabIndex = 6;
+            this.btn_Mdevis.Size = new System.Drawing.Size(210, 53);
+            this.btn_Mdevis.TabIndex = 27;
             this.btn_Mdevis.Text = "Modele de devis";
             this.btn_Mdevis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Mdevis.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -700,10 +716,10 @@ namespace Projet_Onssa
             // 
             this.panel_Pvj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Pvj.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Pvj.Location = new System.Drawing.Point(0, 219);
+            this.panel_Pvj.Location = new System.Drawing.Point(0, 123);
             this.panel_Pvj.Name = "panel_Pvj";
-            this.panel_Pvj.Size = new System.Drawing.Size(227, 7);
-            this.panel_Pvj.TabIndex = 5;
+            this.panel_Pvj.Size = new System.Drawing.Size(210, 7);
+            this.panel_Pvj.TabIndex = 26;
             // 
             // btn_Pvj
             // 
@@ -727,14 +743,14 @@ namespace Projet_Onssa
             this.btn_Pvj.IconVisible = true;
             this.btn_Pvj.IconZoom = 40D;
             this.btn_Pvj.IsTab = false;
-            this.btn_Pvj.Location = new System.Drawing.Point(0, 166);
+            this.btn_Pvj.Location = new System.Drawing.Point(0, 70);
             this.btn_Pvj.Name = "btn_Pvj";
             this.btn_Pvj.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Pvj.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Pvj.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Pvj.selected = false;
-            this.btn_Pvj.Size = new System.Drawing.Size(227, 53);
-            this.btn_Pvj.TabIndex = 4;
+            this.btn_Pvj.Size = new System.Drawing.Size(210, 53);
+            this.btn_Pvj.TabIndex = 25;
             this.btn_Pvj.Text = "Procès verbal de jugement";
             this.btn_Pvj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pvj.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
@@ -744,10 +760,10 @@ namespace Projet_Onssa
             // 
             this.panel_Consultation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_Consultation.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Consultation.Location = new System.Drawing.Point(0, 159);
+            this.panel_Consultation.Location = new System.Drawing.Point(0, 63);
             this.panel_Consultation.Name = "panel_Consultation";
-            this.panel_Consultation.Size = new System.Drawing.Size(227, 7);
-            this.panel_Consultation.TabIndex = 3;
+            this.panel_Consultation.Size = new System.Drawing.Size(210, 7);
+            this.panel_Consultation.TabIndex = 24;
             // 
             // btn_Consultation
             // 
@@ -771,37 +787,37 @@ namespace Projet_Onssa
             this.btn_Consultation.IconVisible = true;
             this.btn_Consultation.IconZoom = 40D;
             this.btn_Consultation.IsTab = false;
-            this.btn_Consultation.Location = new System.Drawing.Point(0, 106);
+            this.btn_Consultation.Location = new System.Drawing.Point(0, 10);
             this.btn_Consultation.Name = "btn_Consultation";
             this.btn_Consultation.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Consultation.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Consultation.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Consultation.selected = false;
-            this.btn_Consultation.Size = new System.Drawing.Size(227, 53);
-            this.btn_Consultation.TabIndex = 2;
+            this.btn_Consultation.Size = new System.Drawing.Size(210, 53);
+            this.btn_Consultation.TabIndex = 23;
             this.btn_Consultation.Text = "Consultation";
             this.btn_Consultation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Consultation.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Consultation.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Consultation.Click += new System.EventHandler(this.btn_Consultation_Click);
             // 
-            // panel10
+            // panel_headermenu
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 96);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(227, 10);
-            this.panel10.TabIndex = 1;
+            this.panel_headermenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_headermenu.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_headermenu.Location = new System.Drawing.Point(0, 0);
+            this.panel_headermenu.Name = "panel_headermenu";
+            this.panel_headermenu.Size = new System.Drawing.Size(210, 10);
+            this.panel_headermenu.TabIndex = 22;
             // 
-            // panel11
+            // panel_logo
             // 
-            this.panel11.Controls.Add(this.pictureBox1);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(0, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(227, 96);
-            this.panel11.TabIndex = 0;
+            this.panel_logo.Controls.Add(this.pictureBox1);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(227, 96);
+            this.panel_logo.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -813,17 +829,16 @@ namespace Projet_Onssa
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
+            // panel_header
             // 
-            this.panel1.Controls.Add(this.bunifuTextbox1);
-            this.panel1.Controls.Add(this.bunifuFlatButton3);
-            this.panel1.Controls.Add(this.panel14);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(282, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1000, 96);
-            this.panel1.TabIndex = 2;
+            this.panel_header.Controls.Add(this.bunifuTextbox1);
+            this.panel_header.Controls.Add(this.bunifuFlatButton3);
+            this.panel_header.Controls.Add(this.panel_slide);
+            this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_header.Location = new System.Drawing.Point(282, 0);
+            this.panel_header.Name = "panel_header";
+            this.panel_header.Size = new System.Drawing.Size(1000, 96);
+            this.panel_header.TabIndex = 2;
             // 
             // bunifuTextbox1
             // 
@@ -873,21 +888,13 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel14
+            // panel_slide
             // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.panel14.Location = new System.Drawing.Point(1, 1);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1, 1200);
-            this.panel14.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.panel2.Location = new System.Drawing.Point(-237, 92);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1400, 1);
-            this.panel2.TabIndex = 0;
+            this.panel_slide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.panel_slide.Location = new System.Drawing.Point(-237, 92);
+            this.panel_slide.Name = "panel_slide";
+            this.panel_slide.Size = new System.Drawing.Size(1400, 1);
+            this.panel_slide.TabIndex = 0;
             // 
             // panel_childform
             // 
@@ -897,6 +904,51 @@ namespace Projet_Onssa
             this.panel_childform.Size = new System.Drawing.Size(1000, 653);
             this.panel_childform.TabIndex = 4;
             // 
+            // btn_Co
+            // 
+            this.btn_Co.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Co.BorderRadius = 0;
+            this.btn_Co.ButtonText = "Commission";
+            this.btn_Co.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Co.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Co.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Co.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Co.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Co.Iconimage")));
+            this.btn_Co.Iconimage_right = null;
+            this.btn_Co.Iconimage_right_Selected = null;
+            this.btn_Co.Iconimage_Selected = null;
+            this.btn_Co.IconMarginLeft = 0;
+            this.btn_Co.IconMarginRight = 0;
+            this.btn_Co.IconRightVisible = true;
+            this.btn_Co.IconRightZoom = 0D;
+            this.btn_Co.IconVisible = true;
+            this.btn_Co.IconZoom = 45D;
+            this.btn_Co.IsTab = false;
+            this.btn_Co.Location = new System.Drawing.Point(0, 610);
+            this.btn_Co.Name = "btn_Co";
+            this.btn_Co.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Co.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Co.selected = false;
+            this.btn_Co.Size = new System.Drawing.Size(210, 53);
+            this.btn_Co.TabIndex = 43;
+            this.btn_Co.Text = "Commission";
+            this.btn_Co.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Co.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Co.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Co.Click += new System.EventHandler(this.btn_Co_Click);
+            // 
+            // panel_Commission
+            // 
+            this.panel_Commission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Commission.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Commission.Location = new System.Drawing.Point(0, 663);
+            this.panel_Commission.Name = "panel_Commission";
+            this.panel_Commission.Size = new System.Drawing.Size(210, 7);
+            this.panel_Commission.TabIndex = 44;
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -904,18 +956,19 @@ namespace Projet_Onssa
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1282, 749);
             this.Controls.Add(this.panel_childform);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel7);
+            this.Controls.Add(this.panel_header);
+            this.Controls.Add(this.panel_submenu);
             this.Controls.Add(this.panel6);
             this.Name = "Accueil";
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.panel6.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
+            this.panel_submenu.ResumeLayout(false);
+            this.panel_subsubmenu.ResumeLayout(false);
+            this.panel_logo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.panel_header.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -923,45 +976,47 @@ namespace Projet_Onssa
         #endregion
 
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Pvj;
-        private System.Windows.Forms.Panel panel_Consultation;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Consultation;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel_submenu;
+        private System.Windows.Forms.Panel panel_logo;
+        private System.Windows.Forms.Panel panel_header;
+        private System.Windows.Forms.Panel panel_slide;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Accueil;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Mdevis;
-        private System.Windows.Forms.Panel panel_Pvj;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Gpaiement;
-        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel_Accueil;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel14;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Bc;
-        private System.Windows.Forms.Panel panel_Mdevis;
         private System.Windows.Forms.Panel panel_childform;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Fe;
-        private System.Windows.Forms.Panel panel_Bc;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Panel panel_Oi;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Oi;
-        private System.Windows.Forms.Panel panel_Fe;
-        private System.Windows.Forms.Panel panel10;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Pvr;
-        private System.Windows.Forms.Panel panel_Pvr;
+        private System.Windows.Forms.Panel panel_Gpaiement;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Out;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.Panel panel_Mamber;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Mamber;
+        private System.Windows.Forms.Panel panel_subsubmenu;
+        private System.Windows.Forms.Panel panel_Fr;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Fr;
+        private System.Windows.Forms.Panel panel_Op;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Op;
         private System.Windows.Forms.Panel panel_Ov;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ov;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel_Op;
-        private System.Windows.Forms.Panel panel_Fr;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Fr;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private System.Windows.Forms.Panel panel4;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Mamber;
+        private System.Windows.Forms.Panel panel_Pvr;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Pvr;
+        private System.Windows.Forms.Panel panel_Oi;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Oi;
+        private System.Windows.Forms.Panel panel_Fe;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Fe;
+        private System.Windows.Forms.Panel panel_Bc;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Bc;
+        private System.Windows.Forms.Panel panel_Mdevis;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Mdevis;
+        private System.Windows.Forms.Panel panel_Pvj;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Pvj;
+        private System.Windows.Forms.Panel panel_Consultation;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Consultation;
+        private System.Windows.Forms.Panel panel_headermenu;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Co;
+        private System.Windows.Forms.Panel panel_Commission;
     }
 }

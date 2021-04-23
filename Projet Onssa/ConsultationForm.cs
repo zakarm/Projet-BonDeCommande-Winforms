@@ -107,7 +107,7 @@ namespace Projet_Onssa
 
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
-                        MessageBox.Show("Ajout De Consultation");
+                        MessageBox.Show("Ajouté avec succès");
                         
                         
                     }
@@ -200,7 +200,7 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
-                        MessageBox.Show("ok");     
+                        MessageBox.Show("Modifié avec succès");     
                     }
                 }
                 catch(Exception ex)
