@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Projet_Onssa
 {
-    public partial class CommissionForm : Form
+    public partial class FournisseurForm : Form
     {
-        public CommissionForm()
+        public FournisseurForm()
         {
             InitializeComponent();
         }

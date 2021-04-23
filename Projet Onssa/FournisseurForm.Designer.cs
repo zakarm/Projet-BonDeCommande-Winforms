@@ -1,7 +1,7 @@
 ﻿
 namespace Projet_Onssa
 {
-    partial class CommissionForm
+    partial class FournisseurForm
     {
         /// <summary>
         /// Required designer variable.
@@ -71,6 +71,7 @@ namespace Projet_Onssa
             // 
             // bunifuCards1
             // 
+            this.bunifuCards1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuCards1.BackColor = System.Drawing.Color.White;
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
@@ -433,7 +434,7 @@ namespace Projet_Onssa
             this.label4.TabIndex = 90;
             this.label4.Text = "Nom \r\n";
             // 
-            // CommissionForm
+            // FournisseurForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -441,7 +442,7 @@ namespace Projet_Onssa
             this.ClientSize = new System.Drawing.Size(954, 575);
             this.Controls.Add(this.bunifuCards1);
             this.Controls.Add(this.label5);
-            this.Name = "CommissionForm";
+            this.Name = "FournisseurForm";
             this.Text = "CommissionForm";
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();

@@ -73,11 +73,11 @@
     <Compile Include="Commission.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CommissionForm.cs">
+    <Compile Include="FournisseurForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CommissionForm.Designer.cs">
-      <DependentUpon>CommissionForm.cs</DependentUpon>
+    <Compile Include="FournisseurForm.Designer.cs">
+      <DependentUpon>FournisseurForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
@@ -147,8 +147,8 @@
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CommissionForm.resx">
-      <DependentUpon>CommissionForm.cs</DependentUpon>
+    <EmbeddedResource Include="FournisseurForm.resx">
+      <DependentUpon>FournisseurForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>

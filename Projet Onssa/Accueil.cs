@@ -85,20 +85,47 @@ namespace Projet_Onssa
 
         private void btn_Mamber_Click(object sender, EventArgs e)
         {
-            btn_Consultation.Visible = false;
-            panel_Consultation.Visible = false;
-            btn_Pvj.Visible = false;
-            panel_Pvj.Visible = false;
-            btn_Mdevis.Visible = false;
-            panel_Mdevis.Visible = false;
-            btn_Bc.Visible = false;
-            panel_Bc.Visible = false;
-            btn_Fe.Visible = false;
-            panel_Fe.Visible = false;
-            btn_Oi.Visible = false;
-            panel_Oi.Visible = false;
-            btn_Pvr.Visible = false;
-            panel_Pvr.Visible = false;
+            btnM(true);
+            btnP(false);
+        }
+
+        private void btnP(bool s)
+        {
+
+            btn_Consultation.Visible = s;
+            panel_Consultation.Visible = s;
+            btn_Pvj.Visible = s;
+            panel_Pvj.Visible = s;
+            btn_Mdevis.Visible = s;
+            panel_Mdevis.Visible = s;
+            btn_Bc.Visible = s;
+            panel_Bc.Visible =s;
+            btn_Fe.Visible = s;
+            panel_Fe.Visible = s;
+            btn_Oi.Visible = s;
+            panel_Oi.Visible = s;
+            btn_Pvr.Visible = s;
+            panel_Pvr.Visible = s;
+            btn_Op.Visible = s;
+            panel_Op.Visible = s;
+            btn_Ov.Visible = s;
+            panel_Ov.Visible = s;
+        }
+        private void btnM(bool s)
+        {
+            btn_Fr.Visible = s;
+            panel_Fr.Visible = s;
+        }
+
+        private void btn_Gpaiement_Click(object sender, EventArgs e)
+        {
+            btnP(true);
+            btnM(false);
+        }
+
+        private void btn_Fr_Click(object sender, EventArgs e)
+        {
+            openchildform(new FournisseurForm ());
         }
     }
 }
