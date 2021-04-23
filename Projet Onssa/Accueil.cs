@@ -64,6 +64,7 @@ namespace Projet_Onssa
                 panel_Fe.Visible = false;
                 btn_Oi.Visible = false;
                 panel_Oi.Visible = false;
+                btn_Mamber.Visible = false;
             }
         }
 

@@ -215,13 +215,7 @@ namespace Projet_Onssa
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
 
-                
                 MessageBox.Show(drm.Cells[4].FormattedValue.ToString());
-                dgv_Fournisseur.ClearSelection();
-
-
-
-
 
             }
         }

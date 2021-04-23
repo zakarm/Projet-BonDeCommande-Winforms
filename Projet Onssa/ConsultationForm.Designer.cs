@@ -258,7 +258,6 @@ namespace Projet_Onssa
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Fournisseur.ColumnHeadersHeight = 35;
-            this.dgv_Fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
@@ -267,7 +266,6 @@ namespace Projet_Onssa
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
             this.dgv_Fournisseur.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Fournisseur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgv_Fournisseur.Location = new System.Drawing.Point(465, 189);
@@ -307,7 +305,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(62, 507);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(117, 494);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
