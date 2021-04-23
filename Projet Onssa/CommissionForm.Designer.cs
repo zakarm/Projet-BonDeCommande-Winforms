@@ -30,18 +30,6 @@ namespace Projet_Onssa
         private void InitializeComponent()
         {
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCustomTextbox9 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox8 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox7 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox6 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox5 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox4 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
@@ -64,18 +52,6 @@ namespace Projet_Onssa
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(8)))));
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox9);
-            this.bunifuCards1.Controls.Add(this.label12);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox8);
-            this.bunifuCards1.Controls.Add(this.label11);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox7);
-            this.bunifuCards1.Controls.Add(this.label10);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox6);
-            this.bunifuCards1.Controls.Add(this.label9);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox5);
-            this.bunifuCards1.Controls.Add(this.label8);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox4);
-            this.bunifuCards1.Controls.Add(this.label2);
             this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox3);
             this.bunifuCards1.Controls.Add(this.label7);
             this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox2);
@@ -95,144 +71,12 @@ namespace Projet_Onssa
             this.bunifuCards1.Size = new System.Drawing.Size(845, 453);
             this.bunifuCards1.TabIndex = 46;
             // 
-            // bunifuCustomTextbox9
-            // 
-            this.bunifuCustomTextbox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox9.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox9.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox9.Location = new System.Drawing.Point(28, 330);
-            this.bunifuCustomTextbox9.Name = "bunifuCustomTextbox9";
-            this.bunifuCustomTextbox9.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox9.TabIndex = 111;
-            // 
-            // label12
-            // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(24, 306);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 21);
-            this.label12.TabIndex = 110;
-            this.label12.Text = "Adresse";
-            // 
-            // bunifuCustomTextbox8
-            // 
-            this.bunifuCustomTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox8.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox8.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox8.Location = new System.Drawing.Point(480, 330);
-            this.bunifuCustomTextbox8.Name = "bunifuCustomTextbox8";
-            this.bunifuCustomTextbox8.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox8.TabIndex = 109;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(476, 306);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(71, 21);
-            this.label11.TabIndex = 108;
-            this.label11.Text = "Adresse";
-            // 
-            // bunifuCustomTextbox7
-            // 
-            this.bunifuCustomTextbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox7.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox7.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox7.Location = new System.Drawing.Point(480, 268);
-            this.bunifuCustomTextbox7.Name = "bunifuCustomTextbox7";
-            this.bunifuCustomTextbox7.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox7.TabIndex = 107;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(476, 244);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
-            this.label10.TabIndex = 106;
-            this.label10.Text = "Adresse";
-            // 
-            // bunifuCustomTextbox6
-            // 
-            this.bunifuCustomTextbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox6.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox6.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox6.Location = new System.Drawing.Point(480, 196);
-            this.bunifuCustomTextbox6.Name = "bunifuCustomTextbox6";
-            this.bunifuCustomTextbox6.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox6.TabIndex = 105;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(476, 172);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 21);
-            this.label9.TabIndex = 104;
-            this.label9.Text = "Adresse";
-            // 
-            // bunifuCustomTextbox5
-            // 
-            this.bunifuCustomTextbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox5.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox5.Location = new System.Drawing.Point(480, 125);
-            this.bunifuCustomTextbox5.Name = "bunifuCustomTextbox5";
-            this.bunifuCustomTextbox5.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox5.TabIndex = 103;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(476, 101);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 21);
-            this.label8.TabIndex = 102;
-            this.label8.Text = "Adresse";
-            // 
-            // bunifuCustomTextbox4
-            // 
-            this.bunifuCustomTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox4.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox4.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox4.Location = new System.Drawing.Point(480, 54);
-            this.bunifuCustomTextbox4.Name = "bunifuCustomTextbox4";
-            this.bunifuCustomTextbox4.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox4.TabIndex = 101;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(476, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
-            this.label2.TabIndex = 100;
-            this.label2.Text = "Adresse";
-            // 
             // bunifuCustomTextbox3
             // 
             this.bunifuCustomTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomTextbox3.BorderColor = System.Drawing.SystemColors.Control;
             this.bunifuCustomTextbox3.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(28, 268);
+            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(61, 288);
             this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
             this.bunifuCustomTextbox3.Size = new System.Drawing.Size(340, 27);
             this.bunifuCustomTextbox3.TabIndex = 99;
@@ -243,18 +87,18 @@ namespace Projet_Onssa
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(24, 244);
+            this.label7.Location = new System.Drawing.Point(57, 264);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 21);
+            this.label7.Size = new System.Drawing.Size(101, 21);
             this.label7.TabIndex = 98;
-            this.label7.Text = "Adresse";
+            this.label7.Text = "Affectation";
             // 
             // bunifuCustomTextbox2
             // 
             this.bunifuCustomTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomTextbox2.BorderColor = System.Drawing.SystemColors.Control;
             this.bunifuCustomTextbox2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox2.Location = new System.Drawing.Point(28, 196);
+            this.bunifuCustomTextbox2.Location = new System.Drawing.Point(61, 216);
             this.bunifuCustomTextbox2.Name = "bunifuCustomTextbox2";
             this.bunifuCustomTextbox2.Size = new System.Drawing.Size(340, 27);
             this.bunifuCustomTextbox2.TabIndex = 97;
@@ -265,18 +109,18 @@ namespace Projet_Onssa
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(24, 172);
+            this.label6.Location = new System.Drawing.Point(57, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 21);
+            this.label6.Size = new System.Drawing.Size(78, 21);
             this.label6.TabIndex = 96;
-            this.label6.Text = "Adresse";
+            this.label6.Text = "Fonction";
             // 
             // bunifuCustomTextbox1
             // 
             this.bunifuCustomTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.bunifuCustomTextbox1.BorderColor = System.Drawing.SystemColors.Control;
             this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(28, 125);
+            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(61, 145);
             this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
             this.bunifuCustomTextbox1.Size = new System.Drawing.Size(340, 27);
             this.bunifuCustomTextbox1.TabIndex = 95;
@@ -288,7 +132,7 @@ namespace Projet_Onssa
             this.cb_Num.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Num.FormattingEnabled = true;
             this.cb_Num.ItemHeight = 19;
-            this.cb_Num.Location = new System.Drawing.Point(28, 54);
+            this.cb_Num.Location = new System.Drawing.Point(61, 74);
             this.cb_Num.Name = "cb_Num";
             this.cb_Num.Size = new System.Drawing.Size(340, 27);
             this.cb_Num.TabIndex = 94;
@@ -369,7 +213,7 @@ namespace Projet_Onssa
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(24, 101);
+            this.label3.Location = new System.Drawing.Point(57, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(69, 21);
             this.label3.TabIndex = 89;
@@ -416,7 +260,7 @@ namespace Projet_Onssa
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(24, 30);
+            this.label4.Location = new System.Drawing.Point(57, 50);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 21);
             this.label4.TabIndex = 90;
@@ -453,18 +297,6 @@ namespace Projet_Onssa
         #endregion
 
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox9;
-        private System.Windows.Forms.Label label12;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox8;
-        private System.Windows.Forms.Label label11;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox7;
-        private System.Windows.Forms.Label label10;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox6;
-        private System.Windows.Forms.Label label9;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox5;
-        private System.Windows.Forms.Label label8;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox4;
-        private System.Windows.Forms.Label label2;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox3;
         private System.Windows.Forms.Label label7;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox2;
