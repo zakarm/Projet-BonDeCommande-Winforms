@@ -31,24 +31,24 @@ namespace Projet_Onssa
         {
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCustomTextbox9 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Ifn = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label12 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox8 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Banque = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label11 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox7 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Ville = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label10 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox6 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Ice = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label9 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox5 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_CmptBancaire = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label8 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox4 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_cnss = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox3 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Patenten = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label7 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox2 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.btn_Rcn = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
-            this.cb_Num = new System.Windows.Forms.ComboBox();
+            this.btn_Adresse = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.cb_Nom = new System.Windows.Forms.ComboBox();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -76,24 +76,24 @@ namespace Projet_Onssa
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(8)))));
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox9);
+            this.bunifuCards1.Controls.Add(this.btn_Ifn);
             this.bunifuCards1.Controls.Add(this.label12);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox8);
+            this.bunifuCards1.Controls.Add(this.btn_Banque);
             this.bunifuCards1.Controls.Add(this.label11);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox7);
+            this.bunifuCards1.Controls.Add(this.btn_Ville);
             this.bunifuCards1.Controls.Add(this.label10);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox6);
+            this.bunifuCards1.Controls.Add(this.btn_Ice);
             this.bunifuCards1.Controls.Add(this.label9);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox5);
+            this.bunifuCards1.Controls.Add(this.btn_CmptBancaire);
             this.bunifuCards1.Controls.Add(this.label8);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox4);
+            this.bunifuCards1.Controls.Add(this.btn_cnss);
             this.bunifuCards1.Controls.Add(this.label2);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox3);
+            this.bunifuCards1.Controls.Add(this.btn_Patenten);
             this.bunifuCards1.Controls.Add(this.label7);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox2);
+            this.bunifuCards1.Controls.Add(this.btn_Rcn);
             this.bunifuCards1.Controls.Add(this.label6);
-            this.bunifuCards1.Controls.Add(this.bunifuCustomTextbox1);
-            this.bunifuCards1.Controls.Add(this.cb_Num);
+            this.bunifuCards1.Controls.Add(this.btn_Adresse);
+            this.bunifuCards1.Controls.Add(this.cb_Nom);
             this.bunifuCards1.Controls.Add(this.btn_Supprimer);
             this.bunifuCards1.Controls.Add(this.btn_Ajouter);
             this.bunifuCards1.Controls.Add(this.label3);
@@ -107,15 +107,15 @@ namespace Projet_Onssa
             this.bunifuCards1.Size = new System.Drawing.Size(845, 453);
             this.bunifuCards1.TabIndex = 44;
             // 
-            // bunifuCustomTextbox9
+            // btn_Ifn
             // 
-            this.bunifuCustomTextbox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox9.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox9.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox9.Location = new System.Drawing.Point(28, 330);
-            this.bunifuCustomTextbox9.Name = "bunifuCustomTextbox9";
-            this.bunifuCustomTextbox9.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox9.TabIndex = 111;
+            this.btn_Ifn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Ifn.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Ifn.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Ifn.Location = new System.Drawing.Point(28, 330);
+            this.btn_Ifn.Name = "btn_Ifn";
+            this.btn_Ifn.Size = new System.Drawing.Size(340, 27);
+            this.btn_Ifn.TabIndex = 111;
             // 
             // label12
             // 
@@ -125,19 +125,19 @@ namespace Projet_Onssa
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.Location = new System.Drawing.Point(24, 306);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 21);
+            this.label12.Size = new System.Drawing.Size(44, 21);
             this.label12.TabIndex = 110;
-            this.label12.Text = "Adresse";
+            this.label12.Text = "IF N\"";
             // 
-            // bunifuCustomTextbox8
+            // btn_Banque
             // 
-            this.bunifuCustomTextbox8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox8.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox8.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox8.Location = new System.Drawing.Point(480, 330);
-            this.bunifuCustomTextbox8.Name = "bunifuCustomTextbox8";
-            this.bunifuCustomTextbox8.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox8.TabIndex = 109;
+            this.btn_Banque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Banque.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Banque.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Banque.Location = new System.Drawing.Point(480, 330);
+            this.btn_Banque.Name = "btn_Banque";
+            this.btn_Banque.Size = new System.Drawing.Size(340, 27);
+            this.btn_Banque.TabIndex = 109;
             // 
             // label11
             // 
@@ -149,17 +149,17 @@ namespace Projet_Onssa
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(71, 21);
             this.label11.TabIndex = 108;
-            this.label11.Text = "Adresse";
+            this.label11.Text = "Banque";
             // 
-            // bunifuCustomTextbox7
+            // btn_Ville
             // 
-            this.bunifuCustomTextbox7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox7.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox7.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox7.Location = new System.Drawing.Point(480, 268);
-            this.bunifuCustomTextbox7.Name = "bunifuCustomTextbox7";
-            this.bunifuCustomTextbox7.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox7.TabIndex = 107;
+            this.btn_Ville.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Ville.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Ville.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Ville.Location = new System.Drawing.Point(480, 268);
+            this.btn_Ville.Name = "btn_Ville";
+            this.btn_Ville.Size = new System.Drawing.Size(340, 27);
+            this.btn_Ville.TabIndex = 107;
             // 
             // label10
             // 
@@ -169,19 +169,19 @@ namespace Projet_Onssa
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.Location = new System.Drawing.Point(476, 244);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 21);
+            this.label10.Size = new System.Drawing.Size(40, 21);
             this.label10.TabIndex = 106;
-            this.label10.Text = "Adresse";
+            this.label10.Text = "Ville";
             // 
-            // bunifuCustomTextbox6
+            // btn_Ice
             // 
-            this.bunifuCustomTextbox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox6.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox6.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox6.Location = new System.Drawing.Point(480, 196);
-            this.bunifuCustomTextbox6.Name = "bunifuCustomTextbox6";
-            this.bunifuCustomTextbox6.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox6.TabIndex = 105;
+            this.btn_Ice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Ice.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Ice.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Ice.Location = new System.Drawing.Point(480, 196);
+            this.btn_Ice.Name = "btn_Ice";
+            this.btn_Ice.Size = new System.Drawing.Size(340, 27);
+            this.btn_Ice.TabIndex = 105;
             // 
             // label9
             // 
@@ -191,19 +191,19 @@ namespace Projet_Onssa
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.Location = new System.Drawing.Point(476, 172);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 21);
+            this.label9.Size = new System.Drawing.Size(37, 21);
             this.label9.TabIndex = 104;
-            this.label9.Text = "Adresse";
+            this.label9.Text = "ICE";
             // 
-            // bunifuCustomTextbox5
+            // btn_CmptBancaire
             // 
-            this.bunifuCustomTextbox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox5.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox5.Location = new System.Drawing.Point(480, 125);
-            this.bunifuCustomTextbox5.Name = "bunifuCustomTextbox5";
-            this.bunifuCustomTextbox5.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox5.TabIndex = 103;
+            this.btn_CmptBancaire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_CmptBancaire.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_CmptBancaire.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_CmptBancaire.Location = new System.Drawing.Point(480, 125);
+            this.btn_CmptBancaire.Name = "btn_CmptBancaire";
+            this.btn_CmptBancaire.Size = new System.Drawing.Size(340, 27);
+            this.btn_CmptBancaire.TabIndex = 103;
             // 
             // label8
             // 
@@ -213,19 +213,19 @@ namespace Projet_Onssa
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.Location = new System.Drawing.Point(476, 101);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(71, 21);
+            this.label8.Size = new System.Drawing.Size(149, 21);
             this.label8.TabIndex = 102;
-            this.label8.Text = "Adresse";
+            this.label8.Text = "Compte Bancaire";
             // 
-            // bunifuCustomTextbox4
+            // btn_cnss
             // 
-            this.bunifuCustomTextbox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox4.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox4.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox4.Location = new System.Drawing.Point(480, 54);
-            this.bunifuCustomTextbox4.Name = "bunifuCustomTextbox4";
-            this.bunifuCustomTextbox4.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox4.TabIndex = 101;
+            this.btn_cnss.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_cnss.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_cnss.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_cnss.Location = new System.Drawing.Point(480, 54);
+            this.btn_cnss.Name = "btn_cnss";
+            this.btn_cnss.Size = new System.Drawing.Size(340, 27);
+            this.btn_cnss.TabIndex = 101;
             // 
             // label2
             // 
@@ -235,19 +235,19 @@ namespace Projet_Onssa
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(476, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
+            this.label2.Size = new System.Drawing.Size(72, 21);
             this.label2.TabIndex = 100;
-            this.label2.Text = "Adresse";
+            this.label2.Text = "CNSS N\"";
             // 
-            // bunifuCustomTextbox3
+            // btn_Patenten
             // 
-            this.bunifuCustomTextbox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox3.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox3.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox3.Location = new System.Drawing.Point(28, 268);
-            this.bunifuCustomTextbox3.Name = "bunifuCustomTextbox3";
-            this.bunifuCustomTextbox3.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox3.TabIndex = 99;
+            this.btn_Patenten.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Patenten.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Patenten.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Patenten.Location = new System.Drawing.Point(28, 268);
+            this.btn_Patenten.Name = "btn_Patenten";
+            this.btn_Patenten.Size = new System.Drawing.Size(340, 27);
+            this.btn_Patenten.TabIndex = 99;
             // 
             // label7
             // 
@@ -257,19 +257,19 @@ namespace Projet_Onssa
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.Location = new System.Drawing.Point(24, 244);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 21);
+            this.label7.Size = new System.Drawing.Size(95, 21);
             this.label7.TabIndex = 98;
-            this.label7.Text = "Adresse";
+            this.label7.Text = "Patente N\"";
             // 
-            // bunifuCustomTextbox2
+            // btn_Rcn
             // 
-            this.bunifuCustomTextbox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox2.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox2.Location = new System.Drawing.Point(28, 196);
-            this.bunifuCustomTextbox2.Name = "bunifuCustomTextbox2";
-            this.bunifuCustomTextbox2.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox2.TabIndex = 97;
+            this.btn_Rcn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Rcn.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Rcn.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Rcn.Location = new System.Drawing.Point(28, 196);
+            this.btn_Rcn.Name = "btn_Rcn";
+            this.btn_Rcn.Size = new System.Drawing.Size(340, 27);
+            this.btn_Rcn.TabIndex = 97;
             // 
             // label6
             // 
@@ -279,31 +279,31 @@ namespace Projet_Onssa
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.Location = new System.Drawing.Point(24, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 21);
+            this.label6.Size = new System.Drawing.Size(54, 21);
             this.label6.TabIndex = 96;
-            this.label6.Text = "Adresse";
+            this.label6.Text = "RC N\"";
             // 
-            // bunifuCustomTextbox1
+            // btn_Adresse
             // 
-            this.bunifuCustomTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.SystemColors.Control;
-            this.bunifuCustomTextbox1.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(28, 125);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(340, 27);
-            this.bunifuCustomTextbox1.TabIndex = 95;
+            this.btn_Adresse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btn_Adresse.BorderColor = System.Drawing.SystemColors.Control;
+            this.btn_Adresse.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            this.btn_Adresse.Location = new System.Drawing.Point(28, 125);
+            this.btn_Adresse.Name = "btn_Adresse";
+            this.btn_Adresse.Size = new System.Drawing.Size(340, 27);
+            this.btn_Adresse.TabIndex = 95;
             // 
-            // cb_Num
+            // cb_Nom
             // 
-            this.cb_Num.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Num.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.cb_Num.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Num.FormattingEnabled = true;
-            this.cb_Num.ItemHeight = 19;
-            this.cb_Num.Location = new System.Drawing.Point(28, 54);
-            this.cb_Num.Name = "cb_Num";
-            this.cb_Num.Size = new System.Drawing.Size(340, 27);
-            this.cb_Num.TabIndex = 94;
+            this.cb_Nom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Nom.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.cb_Nom.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Nom.FormattingEnabled = true;
+            this.cb_Nom.ItemHeight = 19;
+            this.cb_Nom.Location = new System.Drawing.Point(28, 54);
+            this.cb_Nom.Name = "cb_Nom";
+            this.cb_Nom.Size = new System.Drawing.Size(340, 27);
+            this.cb_Nom.TabIndex = 94;
             // 
             // btn_Supprimer
             // 
@@ -454,24 +454,24 @@ namespace Projet_Onssa
         #endregion
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox9;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Ifn;
         private System.Windows.Forms.Label label12;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox8;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Banque;
         private System.Windows.Forms.Label label11;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox7;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Ville;
         private System.Windows.Forms.Label label10;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox6;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Ice;
         private System.Windows.Forms.Label label9;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox5;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_CmptBancaire;
         private System.Windows.Forms.Label label8;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox4;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_cnss;
         private System.Windows.Forms.Label label2;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox3;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Patenten;
         private System.Windows.Forms.Label label7;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox2;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Rcn;
         private System.Windows.Forms.Label label6;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
-        private System.Windows.Forms.ComboBox cb_Num;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox btn_Adresse;
+        private System.Windows.Forms.ComboBox cb_Nom;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Supprimer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ajouter;
         private System.Windows.Forms.Label label3;
