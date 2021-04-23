@@ -57,28 +57,33 @@ namespace Projet_Onssa
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
             bool test = false;
+            
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
-                
-                if ((bool) drm.Cells["ck_btn"].FormattedValue == true)
-                {   
-                        try
-                        {
-                            test = true;
-                            
-                            Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
-                            con.ListFournisseur.Add(fr);   
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show(ex.Message);
-                        } 
+
+                if ((bool)drm.Cells[4].FormattedValue.Equals(true))
+                {
+                    try
+                    {
+                        test = true;
+
+                        Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
+                        con.ListFournisseur.Add(fr);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
-                MessageBox.Show(drm.Cells["ck_btn"].FormattedValue.ToString());
+                MessageBox.Show(drm.Cells[4].FormattedValue.ToString());
                 drm.Cells["ck_btn"].Value = false;
 
 
+
+
             }
+            dgv_Fournisseur.ClearSelection();
+
            
 
             return test;
@@ -86,6 +91,7 @@ namespace Projet_Onssa
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
+           
             try
             { 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -122,33 +128,33 @@ namespace Projet_Onssa
         }
 
         public void recherche()
-        { 
+        {
             try
-            { 
-                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                    {
-                                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
-                                txtarea_Objet.Text = c.ObjetConsultation;
-                                foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
-                                {
-                                    drm.Cells["ck_btn"].Value = false;
-                                    foreach (Fournisseur f in c.ListFournisseur)
-                                    {   
-                                        if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
-                                        {
-                                            drm.Cells["ck_btn"].Value = true;
-                            
-                                        }
-                                    }             
-                                }
-
-               
-                    }
-            
-            }
-            catch(Exception ex)
             {
-                    MessageBox.Show(ex.Message);
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                    txtarea_Objet.Text = c.ObjetConsultation;
+                    foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
+                    {
+                        drm.Cells["ck_btn"].Value = false;
+                        foreach (Fournisseur f in c.ListFournisseur)
+                        {
+                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
+                            {
+                                drm.Cells["ck_btn"].Value = true;
+
+                            }
+                        }
+                    }
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -203,5 +209,23 @@ namespace Projet_Onssa
                 }
            
         }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
+            {
+
+                
+                MessageBox.Show(drm.Cells[4].FormattedValue.ToString());
+                dgv_Fournisseur.ClearSelection();
+
+
+
+
+
+            }
+        }
+
+        
     }
 }

@@ -31,14 +31,13 @@ namespace Projet_Onssa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel20 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel_Ov = new System.Windows.Forms.Panel();
+            this.panel_Pvr = new System.Windows.Forms.Panel();
             this.panel_Oi = new System.Windows.Forms.Panel();
             this.panel_Fe = new System.Windows.Forms.Panel();
             this.panel_Bc = new System.Windows.Forms.Panel();
@@ -51,11 +50,12 @@ namespace Projet_Onssa
             this.panel14 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
+            this.panel_Op = new System.Windows.Forms.Panel();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Ov = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Op = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Ov = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Pvr = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Oi = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Fe = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Bc = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -64,10 +64,13 @@ namespace Projet_Onssa
             this.btn_Consultation = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_Out = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btn_Gcompte = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Gpaiement = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Accueil = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel21 = new System.Windows.Forms.Panel();
+            this.btn_Fr = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Fr = new System.Windows.Forms.Panel();
+            this.btn_Mamber = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -79,9 +82,10 @@ namespace Projet_Onssa
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.panel6.Controls.Add(this.bunifuFlatButton2);
+            this.panel6.Controls.Add(this.panel4);
+            this.panel6.Controls.Add(this.btn_Mamber);
             this.panel6.Controls.Add(this.btn_Out);
-            this.panel6.Controls.Add(this.panel20);
-            this.panel6.Controls.Add(this.btn_Gcompte);
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.btn_Gpaiement);
             this.panel6.Controls.Add(this.panel13);
@@ -92,14 +96,6 @@ namespace Projet_Onssa
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(55, 749);
             this.panel6.TabIndex = 2;
-            // 
-            // panel20
-            // 
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel20.Location = new System.Drawing.Point(0, 270);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(55, 10);
-            this.panel20.TabIndex = 10;
             // 
             // panel12
             // 
@@ -138,12 +134,14 @@ namespace Projet_Onssa
             // 
             this.panel7.AutoScroll = true;
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel7.Controls.Add(this.panel21);
-            this.panel7.Controls.Add(this.bunifuFlatButton1);
-            this.panel7.Controls.Add(this.panel19);
-            this.panel7.Controls.Add(this.btn_Ov);
-            this.panel7.Controls.Add(this.panel9);
+            this.panel7.Controls.Add(this.panel_Fr);
+            this.panel7.Controls.Add(this.btn_Fr);
+            this.panel7.Controls.Add(this.panel_Op);
             this.panel7.Controls.Add(this.btn_Op);
+            this.panel7.Controls.Add(this.panel_Ov);
+            this.panel7.Controls.Add(this.btn_Ov);
+            this.panel7.Controls.Add(this.panel_Pvr);
+            this.panel7.Controls.Add(this.btn_Pvr);
             this.panel7.Controls.Add(this.panel_Oi);
             this.panel7.Controls.Add(this.btn_Oi);
             this.panel7.Controls.Add(this.panel_Fe);
@@ -164,23 +162,23 @@ namespace Projet_Onssa
             this.panel7.Size = new System.Drawing.Size(227, 749);
             this.panel7.TabIndex = 3;
             // 
-            // panel19
+            // panel_Ov
             // 
-            this.panel19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel19.Location = new System.Drawing.Point(0, 579);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(227, 7);
-            this.panel19.TabIndex = 17;
+            this.panel_Ov.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Ov.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Ov.Location = new System.Drawing.Point(0, 579);
+            this.panel_Ov.Name = "panel_Ov";
+            this.panel_Ov.Size = new System.Drawing.Size(227, 7);
+            this.panel_Ov.TabIndex = 17;
             // 
-            // panel9
+            // panel_Pvr
             // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(0, 519);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(227, 7);
-            this.panel9.TabIndex = 15;
+            this.panel_Pvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Pvr.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Pvr.Location = new System.Drawing.Point(0, 519);
+            this.panel_Pvr.Name = "panel_Pvr";
+            this.panel_Pvr.Size = new System.Drawing.Size(227, 7);
+            this.panel_Pvr.TabIndex = 15;
             // 
             // panel_Oi
             // 
@@ -290,6 +288,15 @@ namespace Projet_Onssa
             this.panel_childform.Size = new System.Drawing.Size(1000, 653);
             this.panel_childform.TabIndex = 4;
             // 
+            // panel_Op
+            // 
+            this.panel_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Op.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Op.Location = new System.Drawing.Point(0, 639);
+            this.panel_Op.Name = "panel_Op";
+            this.panel_Op.Size = new System.Drawing.Size(227, 7);
+            this.panel_Op.TabIndex = 19;
+            // 
             // bunifuTextbox1
             // 
             this.bunifuTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -338,40 +345,40 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
+            // btn_Op
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Ordre de paiement";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 40D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 586);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(227, 53);
-            this.bunifuFlatButton1.TabIndex = 18;
-            this.bunifuFlatButton1.Text = "Ordre de paiement";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Op.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Op.BorderRadius = 0;
+            this.btn_Op.ButtonText = "Ordre de paiement";
+            this.btn_Op.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Op.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Op.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Op.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Op.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Op.Iconimage")));
+            this.btn_Op.Iconimage_right = null;
+            this.btn_Op.Iconimage_right_Selected = null;
+            this.btn_Op.Iconimage_Selected = null;
+            this.btn_Op.IconMarginLeft = 0;
+            this.btn_Op.IconMarginRight = 0;
+            this.btn_Op.IconRightVisible = true;
+            this.btn_Op.IconRightZoom = 0D;
+            this.btn_Op.IconVisible = true;
+            this.btn_Op.IconZoom = 40D;
+            this.btn_Op.IsTab = false;
+            this.btn_Op.Location = new System.Drawing.Point(0, 586);
+            this.btn_Op.Name = "btn_Op";
+            this.btn_Op.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Op.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Op.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Op.selected = false;
+            this.btn_Op.Size = new System.Drawing.Size(227, 53);
+            this.btn_Op.TabIndex = 18;
+            this.btn_Op.Text = "Ordre de paiement";
+            this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Ov
             // 
@@ -408,40 +415,40 @@ namespace Projet_Onssa
             this.btn_Ov.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Ov.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // btn_Op
+            // btn_Pvr
             // 
-            this.btn_Op.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Op.BorderRadius = 0;
-            this.btn_Op.ButtonText = "Procès verbale de reception";
-            this.btn_Op.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Op.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Op.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Op.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Op.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Op.Iconimage")));
-            this.btn_Op.Iconimage_right = null;
-            this.btn_Op.Iconimage_right_Selected = null;
-            this.btn_Op.Iconimage_Selected = null;
-            this.btn_Op.IconMarginLeft = 0;
-            this.btn_Op.IconMarginRight = 0;
-            this.btn_Op.IconRightVisible = true;
-            this.btn_Op.IconRightZoom = 0D;
-            this.btn_Op.IconVisible = true;
-            this.btn_Op.IconZoom = 40D;
-            this.btn_Op.IsTab = false;
-            this.btn_Op.Location = new System.Drawing.Point(0, 466);
-            this.btn_Op.Name = "btn_Op";
-            this.btn_Op.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Op.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Op.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Op.selected = false;
-            this.btn_Op.Size = new System.Drawing.Size(227, 53);
-            this.btn_Op.TabIndex = 14;
-            this.btn_Op.Text = "Procès verbale de reception";
-            this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pvr.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Pvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Pvr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Pvr.BorderRadius = 0;
+            this.btn_Pvr.ButtonText = "Procès verbale de reception";
+            this.btn_Pvr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Pvr.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Pvr.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Pvr.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Pvr.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Pvr.Iconimage")));
+            this.btn_Pvr.Iconimage_right = null;
+            this.btn_Pvr.Iconimage_right_Selected = null;
+            this.btn_Pvr.Iconimage_Selected = null;
+            this.btn_Pvr.IconMarginLeft = 0;
+            this.btn_Pvr.IconMarginRight = 0;
+            this.btn_Pvr.IconRightVisible = true;
+            this.btn_Pvr.IconRightZoom = 0D;
+            this.btn_Pvr.IconVisible = true;
+            this.btn_Pvr.IconZoom = 40D;
+            this.btn_Pvr.IsTab = false;
+            this.btn_Pvr.Location = new System.Drawing.Point(0, 466);
+            this.btn_Pvr.Name = "btn_Pvr";
+            this.btn_Pvr.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Pvr.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Pvr.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Pvr.selected = false;
+            this.btn_Pvr.Size = new System.Drawing.Size(227, 53);
+            this.btn_Pvr.TabIndex = 14;
+            this.btn_Pvr.Text = "Procès verbale de reception";
+            this.btn_Pvr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Pvr.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Pvr.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // btn_Oi
             // 
@@ -699,40 +706,6 @@ namespace Projet_Onssa
             this.btn_Out.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Out.Click += new System.EventHandler(this.btn_Out_Click);
             // 
-            // btn_Gcompte
-            // 
-            this.btn_Gcompte.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Gcompte.BorderRadius = 0;
-            this.btn_Gcompte.ButtonText = "";
-            this.btn_Gcompte.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Gcompte.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Gcompte.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Gcompte.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Gcompte.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Gcompte.Iconimage")));
-            this.btn_Gcompte.Iconimage_right = null;
-            this.btn_Gcompte.Iconimage_right_Selected = null;
-            this.btn_Gcompte.Iconimage_Selected = null;
-            this.btn_Gcompte.IconMarginLeft = 16;
-            this.btn_Gcompte.IconMarginRight = 0;
-            this.btn_Gcompte.IconRightVisible = true;
-            this.btn_Gcompte.IconRightZoom = 0D;
-            this.btn_Gcompte.IconVisible = true;
-            this.btn_Gcompte.IconZoom = 50D;
-            this.btn_Gcompte.IsTab = false;
-            this.btn_Gcompte.Location = new System.Drawing.Point(0, 222);
-            this.btn_Gcompte.Name = "btn_Gcompte";
-            this.btn_Gcompte.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Gcompte.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Gcompte.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Gcompte.selected = false;
-            this.btn_Gcompte.Size = new System.Drawing.Size(55, 48);
-            this.btn_Gcompte.TabIndex = 9;
-            this.btn_Gcompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Gcompte.Textcolor = System.Drawing.Color.White;
-            this.btn_Gcompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // btn_Gpaiement
             // 
             this.btn_Gpaiement.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -801,14 +774,126 @@ namespace Projet_Onssa
             this.btn_Accueil.Textcolor = System.Drawing.Color.White;
             this.btn_Accueil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel21
+            // btn_Fr
             // 
-            this.panel21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel21.Location = new System.Drawing.Point(0, 639);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(227, 7);
-            this.panel21.TabIndex = 19;
+            this.btn_Fr.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Fr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Fr.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Fr.BorderRadius = 0;
+            this.btn_Fr.ButtonText = "Fournisseur";
+            this.btn_Fr.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Fr.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Fr.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Fr.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Fr.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Fr.Iconimage")));
+            this.btn_Fr.Iconimage_right = null;
+            this.btn_Fr.Iconimage_right_Selected = null;
+            this.btn_Fr.Iconimage_Selected = null;
+            this.btn_Fr.IconMarginLeft = 0;
+            this.btn_Fr.IconMarginRight = 0;
+            this.btn_Fr.IconRightVisible = true;
+            this.btn_Fr.IconRightZoom = 0D;
+            this.btn_Fr.IconVisible = true;
+            this.btn_Fr.IconZoom = 40D;
+            this.btn_Fr.IsTab = false;
+            this.btn_Fr.Location = new System.Drawing.Point(0, 646);
+            this.btn_Fr.Name = "btn_Fr";
+            this.btn_Fr.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Fr.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Fr.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Fr.selected = false;
+            this.btn_Fr.Size = new System.Drawing.Size(227, 53);
+            this.btn_Fr.TabIndex = 20;
+            this.btn_Fr.Text = "Fournisseur";
+            this.btn_Fr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Fr.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Fr.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel_Fr
+            // 
+            this.panel_Fr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Fr.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Fr.Location = new System.Drawing.Point(0, 699);
+            this.panel_Fr.Name = "panel_Fr";
+            this.panel_Fr.Size = new System.Drawing.Size(227, 7);
+            this.panel_Fr.TabIndex = 21;
+            // 
+            // btn_Mamber
+            // 
+            this.btn_Mamber.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Mamber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Mamber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Mamber.BorderRadius = 0;
+            this.btn_Mamber.ButtonText = "";
+            this.btn_Mamber.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Mamber.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Mamber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Mamber.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Mamber.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Mamber.Iconimage")));
+            this.btn_Mamber.Iconimage_right = null;
+            this.btn_Mamber.Iconimage_right_Selected = null;
+            this.btn_Mamber.Iconimage_Selected = null;
+            this.btn_Mamber.IconMarginLeft = 16;
+            this.btn_Mamber.IconMarginRight = 0;
+            this.btn_Mamber.IconRightVisible = true;
+            this.btn_Mamber.IconRightZoom = 0D;
+            this.btn_Mamber.IconVisible = true;
+            this.btn_Mamber.IconZoom = 50D;
+            this.btn_Mamber.IsTab = false;
+            this.btn_Mamber.Location = new System.Drawing.Point(0, 222);
+            this.btn_Mamber.Name = "btn_Mamber";
+            this.btn_Mamber.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Mamber.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Mamber.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Mamber.selected = false;
+            this.btn_Mamber.Size = new System.Drawing.Size(55, 48);
+            this.btn_Mamber.TabIndex = 12;
+            this.btn_Mamber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Mamber.Textcolor = System.Drawing.Color.White;
+            this.btn_Mamber.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mamber.Click += new System.EventHandler(this.btn_Mamber_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 270);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(55, 10);
+            this.panel4.TabIndex = 13;
+            // 
+            // bunifuFlatButton2
+            // 
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 0;
+            this.bunifuFlatButton2.ButtonText = "";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 16;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 50D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(0, 280);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(55, 48);
+            this.bunifuFlatButton2.TabIndex = 14;
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // Accueil
             // 
@@ -856,22 +941,25 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_childform;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Fe;
         private System.Windows.Forms.Panel panel_Bc;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Gcompte;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Panel panel_Oi;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Oi;
         private System.Windows.Forms.Panel panel_Fe;
         private System.Windows.Forms.Panel panel10;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Op;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel20;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Pvr;
+        private System.Windows.Forms.Panel panel_Pvr;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Out;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private System.Windows.Forms.Panel panel19;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Op;
+        private System.Windows.Forms.Panel panel_Ov;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ov;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel_Op;
+        private System.Windows.Forms.Panel panel_Fr;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Fr;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.Panel panel4;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Mamber;
     }
 }

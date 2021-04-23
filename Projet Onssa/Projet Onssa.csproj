@@ -73,6 +73,12 @@
     <Compile Include="Commission.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="CommissionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommissionForm.Designer.cs">
+      <DependentUpon>CommissionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connexion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +146,9 @@
     </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommissionForm.resx">
+      <DependentUpon>CommissionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Connexion.resx">
       <DependentUpon>Connexion.cs</DependentUpon>

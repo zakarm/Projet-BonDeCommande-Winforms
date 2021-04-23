@@ -83,6 +83,22 @@ namespace Projet_Onssa
             a.Close();
         }
 
-        
+        private void btn_Mamber_Click(object sender, EventArgs e)
+        {
+            btn_Consultation.Visible = false;
+            panel_Consultation.Visible = false;
+            btn_Pvj.Visible = false;
+            panel_Pvj.Visible = false;
+            btn_Mdevis.Visible = false;
+            panel_Mdevis.Visible = false;
+            btn_Bc.Visible = false;
+            panel_Bc.Visible = false;
+            btn_Fe.Visible = false;
+            panel_Fe.Visible = false;
+            btn_Oi.Visible = false;
+            panel_Oi.Visible = false;
+            btn_Pvr.Visible = false;
+            panel_Pvr.Visible = false;
+        }
     }
 }
