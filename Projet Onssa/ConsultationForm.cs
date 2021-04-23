@@ -18,7 +18,7 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        bool test = false;
+        
         Consultation c;
 
         private void ConsultationForm_Load(object sender, EventArgs e)
@@ -39,35 +39,47 @@ namespace Projet_Onssa
 
                             };
                 dgv_Fournisseur.DataSource = query.ToList();
-                DataGridViewCheckBoxColumn ck_btn = new DataGridViewCheckBoxColumn();
-                ck_btn.HeaderText = "Select";
-                ck_btn.Name = "ck_btn";
-                ck_btn.ValueType = typeof(bool);
-                dgv_Fournisseur.Columns.Add(ck_btn);
+                DataGridViewCheckBoxColumn ck = new DataGridViewCheckBoxColumn();
+                ck.ValueType = typeof(bool);
+                ck.HeaderText = "Select";
+                ck.Name = "ck_btn";
+                dgv_Fournisseur.Columns.Add(ck);
+               
+                
                 
             }
 
             
         }
+       
+
+
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
+            bool test = false;
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
-                if (bool.Parse(drm.Cells["ck_btn"].FormattedValue.ToString()) == true)
+                
+                if ((bool) drm.Cells["ck_btn"].FormattedValue == true)
                 {   
                         try
                         {
-                            test = true;      
-                            Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].Value.ToString()));
+                            test = true;
+                            
+                            Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
                             con.ListFournisseur.Add(fr);   
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
-                        }
+                        } 
                 }
+                MessageBox.Show(drm.Cells["ck_btn"].FormattedValue.ToString());
                 drm.Cells["ck_btn"].Value = false;
+
+
             }
+           
 
             return test;
         }
@@ -84,10 +96,14 @@ namespace Projet_Onssa
                     {
                         con.NumConsultation = cb_Num.Text;
                         con.ObjetConsultation = txtarea_Objet.Text;
+                        ctx.Entry(con).State = System.Data.Entity.EntityState.Added;
                         ctx.ConsultationSet.Add(con);
+
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
                         MessageBox.Show("Ajout De Consultation");
+                        
+                        
                     }
                     else
                     {
@@ -117,7 +133,7 @@ namespace Projet_Onssa
                                 {
                                     drm.Cells["ck_btn"].Value = false;
                                     foreach (Fournisseur f in c.ListFournisseur)
-                                    {
+                                    {   
                                         if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
                                         {
                                             drm.Cells["ck_btn"].Value = true;
