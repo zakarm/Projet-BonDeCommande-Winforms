@@ -79,7 +79,7 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     Consultation con = new Consultation();
-                    con.ListFournisseur.Clear();
+                    
                     if (check(con, ctx) == true)
                     {
                         con.NumConsultation = cb_Num.Text;
