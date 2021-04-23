@@ -51,8 +51,6 @@ namespace Projet_Onssa
         }
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
-            
-
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
                 if (bool.Parse(drm.Cells["ck_btn"].FormattedValue.ToString()) == true)
@@ -81,7 +79,7 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     Consultation con = new Consultation();
-                    
+                    con.ListFournisseur.Clear();
                     if (check(con, ctx) == true)
                     {
                         con.NumConsultation = cb_Num.Text;

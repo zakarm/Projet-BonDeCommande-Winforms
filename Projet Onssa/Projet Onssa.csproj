@@ -202,6 +202,10 @@
       <LastGenOutput>OnssaModel.cs</LastGenOutput>
       <DependentUpon>OnssaModel.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\onssa-logo-2518B6FC5C-seeklogo.com.png" />
+    <None Include="Resources\dd_32.png" />
+    <None Include="Resources\icons8_exit_32.png" />
+    <None Include="Resources\icons8_notification_32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -56,7 +56,8 @@ namespace Projet_Onssa
                     Accueil FormAcc = new Accueil();
                     this.Hide();
                     FormAcc.Show();
-                    Connexion c = new Connexion();c.Close();
+                    Connexion c = new Connexion();
+                    c.Close();
                 }
                 else
                  MessageBox.Show("Compte Introuvable !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);

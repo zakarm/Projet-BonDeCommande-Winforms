@@ -50,20 +50,39 @@ namespace Projet_Onssa
         }
         private void Accueil_Load(object sender, EventArgs e)
         {
-            //if (Program.OG.TypeCompte.Equals("cord"))
-            //{
-            //    btn_Consultation.Visible = false;
-            //    btn_Pvj.Visible = false;
-            //    btn_Mdevis.Visible = false;
-            //    btn_Bc.Visible = false;
-            //    btn_Fe.Visible = false;
-            //    btn_Oi.Visible = false;
-            //}
+            if (Program.OG.TypeCompte.Equals("cord"))
+            {
+                btn_Consultation.Visible = false;
+                panel_Consultation.Visible = false;
+                btn_Pvj.Visible = false;
+                panel_Pvj.Visible = false;
+                btn_Mdevis.Visible = false;
+                panel_Mdevis.Visible = false;
+                btn_Bc.Visible = false;
+                panel_Bc.Visible = false;
+                btn_Fe.Visible = false;
+                panel_Fe.Visible = false;
+                btn_Oi.Visible = false;
+                panel_Oi.Visible = false;
+            }
         }
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
             openchildform(new ConsultationForm());
         }
+
+        private void btn_Out_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+            Connexion c = new Connexion();
+            c.Show();
+ 
+            Accueil a = new Accueil();
+            a.Close();
+        }
+
+        
     }
 }
