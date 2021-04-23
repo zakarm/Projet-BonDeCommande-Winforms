@@ -147,6 +147,12 @@
     <Compile Include="PVJ.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="PvjForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PvjForm.Designer.cs">
+      <DependentUpon>PvjForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PVR.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -175,6 +181,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="PvjForm.resx">
+      <DependentUpon>PvjForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="OnssaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OnssaModel.Designer.cs</LastGenOutput>
