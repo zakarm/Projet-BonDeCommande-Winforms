@@ -93,7 +93,7 @@ namespace Projet_Onssa
                     }
                     else
                     {
-                        MessageBox.Show("Selectione un fournisseur d'abord", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
              
                 }
@@ -108,26 +108,34 @@ namespace Projet_Onssa
         }
 
         public void recherche()
-        {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                
-                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
-                txtarea_Objet.Text = c.ObjetConsultation;
-                foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
-                {
-                    drm.Cells["ck_btn"].Value = false;
-                    foreach (Fournisseur f in c.ListFournisseur)
+        { 
+            try
+            { 
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                     {
-                        if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
-                        {
-                            drm.Cells["ck_btn"].Value = true;
+                                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                                txtarea_Objet.Text = c.ObjetConsultation;
+                                foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
+                                {
+                                    drm.Cells["ck_btn"].Value = false;
+                                    foreach (Fournisseur f in c.ListFournisseur)
+                                    {
+                                        if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
+                                        {
+                                            drm.Cells["ck_btn"].Value = true;
                             
-                        }
-                    }             
-                }
-            }
+                                        }
+                                    }             
+                                }
+
+               
+                    }
             
+            }
+            catch(Exception ex)
+            {
+                    MessageBox.Show(ex.Message);
+            }
         }
 
         private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
@@ -137,40 +145,49 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            try
             {
-                ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
-                ctx.ConsultationSet.Remove(c);
-                ctx.SaveChanges();
-                cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                    ctx.ConsultationSet.Remove(c);
+                    ctx.SaveChanges();
+                    cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
+            
                 try
-                {
-                    c.ListFournisseur.Clear();
-                    check(c, ctx);
+                {   
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                    {
+                        c.ListFournisseur.Clear();
+                        check(c, ctx);
 
-                    c.NumConsultation = cb_Num.Text;
-                    c.ObjetConsultation = txtarea_Objet.Text;
+                        c.NumConsultation = cb_Num.Text;
+                        c.ObjetConsultation = txtarea_Objet.Text;
 
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
 
-                    ctx.SaveChanges();
-                    cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                        ctx.SaveChanges();
+                        cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
-                    MessageBox.Show("ok");
+                        MessageBox.Show("ok");     
+                    }
                 }
-                catch(Exception o)
+                catch(Exception ex)
                 {
-                    MessageBox.Show(o.Message);
+                    MessageBox.Show(ex.Message);
                 }
-                
-            }
+           
         }
     }
 }
