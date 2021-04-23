@@ -56,22 +56,17 @@ namespace Projet_Onssa
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
                 if (bool.Parse(drm.Cells["ck_btn"].FormattedValue.ToString()) == true)
-                {
-                        
+                {   
                         try
                         {
                             test = true;      
                             Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].Value.ToString()));
-                            con.ListFournisseur.Add(fr);
-                            
+                            con.ListFournisseur.Add(fr);   
                         }
                         catch (Exception ex)
                         {
                             MessageBox.Show(ex.Message);
                         }
-
-                   
-
                 }
                 drm.Cells["ck_btn"].Value = false;
             }
@@ -144,11 +139,37 @@ namespace Projet_Onssa
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
-                c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
                 ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
                 ctx.ConsultationSet.Remove(c);
                 ctx.SaveChanges();
                 cb_Num.DataSource = ctx.ConsultationSet.ToList();
+            }
+        }
+
+        private void btn_Modifier_Click(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                try
+                {
+                    c.ListFournisseur.Clear();
+                    check(c, ctx);
+
+                    c.NumConsultation = cb_Num.Text;
+                    c.ObjetConsultation = txtarea_Objet.Text;
+
+                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+                    ctx.SaveChanges();
+                    cb_Num.DataSource = ctx.ConsultationSet.ToList();
+
+                    MessageBox.Show("ok");
+                }
+                catch(Exception o)
+                {
+                    MessageBox.Show(o.Message);
+                }
+                
             }
         }
     }
