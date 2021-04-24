@@ -304,6 +304,7 @@ namespace Projet_Onssa
             this.cb_Nom.Name = "cb_Nom";
             this.cb_Nom.Size = new System.Drawing.Size(340, 27);
             this.cb_Nom.TabIndex = 94;
+            this.cb_Nom.SelectedIndexChanged += new System.EventHandler(this.cb_Nom_SelectedIndexChanged);
             // 
             // btn_Supprimer
             // 
@@ -339,6 +340,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Supprimer.Textcolor = System.Drawing.Color.White;
             this.btn_Supprimer.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
             // btn_Ajouter
             // 
@@ -374,6 +376,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ajouter.Textcolor = System.Drawing.Color.White;
             this.btn_Ajouter.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // label3
             // 
@@ -421,6 +424,7 @@ namespace Projet_Onssa
             this.btn_Modifier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Modifier.Textcolor = System.Drawing.Color.White;
             this.btn_Modifier.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // label4
             // 
@@ -444,6 +448,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.label5);
             this.Name = "FournisseurForm";
             this.Text = "CommissionForm";
+            this.Load += new System.EventHandler(this.FournisseurForm_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.ResumeLayout(false);
