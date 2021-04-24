@@ -19,7 +19,7 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ConsultationForm());
+            Application.Run(new PvjForm());
         }
     }
 }

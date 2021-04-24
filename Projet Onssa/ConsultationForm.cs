@@ -76,13 +76,14 @@ namespace Projet_Onssa
                         MessageBox.Show(ex.Message);
                     }
                 }
+                dgv_Fournisseur.ClearSelection();
                 drm.Cells["ck_btn"].Value = false;
 
 
 
 
             }
-            dgv_Fournisseur.ClearSelection();
+            
 
            
 

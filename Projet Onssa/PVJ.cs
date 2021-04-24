@@ -19,20 +19,18 @@ namespace Projet_Onssa
         {
             this.ListFournisseursRepondu = new HashSet<Fournisseur>();
             this.ListCommissions = new HashSet<Commission>();
-            this.ListModeleDevis = new HashSet<ModeleDevis>();
         }
     
         public int IdPVJ { get; set; }
         public string DateString { get; set; }
         public System.DateTime DatePvj { get; set; }
+        public string NumPvj { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Fournisseur> ListFournisseursRepondu { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Commission> ListCommissions { get; set; }
         public virtual Consultation InfoConsultation { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ModeleDevis> ListModeleDevis { get; set; }
         public virtual BC InfoBC { get; set; }
     }
 }

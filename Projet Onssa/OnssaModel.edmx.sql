@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/24/2021 14:54:13
+-- Date Created: 04/24/2021 17:43:01
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -41,9 +41,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ModeleDevisProduit_Produit]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ModeleDevisProduit] DROP CONSTRAINT [FK_ModeleDevisProduit_Produit];
 GO
-IF OBJECT_ID(N'[dbo].[FK_ModeleDevisPVJ]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ModeleDevisSet] DROP CONSTRAINT [FK_ModeleDevisPVJ];
-GO
 IF OBJECT_ID(N'[dbo].[FK_ConsultationFournisseur_Consultation]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ConsultationFournisseur] DROP CONSTRAINT [FK_ConsultationFournisseur_Consultation];
 GO
@@ -75,7 +72,7 @@ IF OBJECT_ID(N'[dbo].[FK_OVOP]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[OVSet] DROP CONSTRAINT [FK_OVOP];
 GO
 IF OBJECT_ID(N'[dbo].[FK_PVJBC]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[PVJSet] DROP CONSTRAINT [FK_PVJBC];
+    ALTER TABLE [dbo].[BCSet] DROP CONSTRAINT [FK_PVJBC];
 GO
 
 -- --------------------------------------------------
@@ -183,8 +180,8 @@ CREATE TABLE [dbo].[PVJSet] (
     [IdPVJ] int IDENTITY(1,1) NOT NULL,
     [DateString] nvarchar(max)  NOT NULL,
     [DatePvj] datetime  NOT NULL,
-    [InfoConsultation_IdConsultation] int  NOT NULL,
-    [InfoBC_IdBC] int  NOT NULL
+    [NumPvj] nvarchar(max)  NOT NULL,
+    [InfoConsultation_IdConsultation] int  NOT NULL
 );
 GO
 
@@ -193,8 +190,7 @@ CREATE TABLE [dbo].[ModeleDevisSet] (
     [IdModeleDevis] int IDENTITY(1,1) NOT NULL,
     [NumDevis] nvarchar(max)  NOT NULL,
     [Date] datetime  NOT NULL,
-    [InfoFournisseur_IdFournisseur] int  NOT NULL,
-    [InfoPVJ_IdPVJ] int  NOT NULL
+    [InfoFournisseur_IdFournisseur] int  NOT NULL
 );
 GO
 
@@ -224,7 +220,8 @@ CREATE TABLE [dbo].[BCSet] (
     [Destination] nvarchar(max)  NOT NULL,
     [DelaiExecution] nvarchar(max)  NOT NULL,
     [DateBC] datetime  NOT NULL,
-    [InfoMorasse_Code] int  NOT NULL
+    [InfoMorasse_Code] int  NOT NULL,
+    [InfoPVJ_IdPVJ] int  NOT NULL
 );
 GO
 
@@ -552,21 +549,6 @@ ON [dbo].[ModeleDevisProduit]
     ([ListProduit_IdProduit]);
 GO
 
--- Creating foreign key on [InfoPVJ_IdPVJ] in table 'ModeleDevisSet'
-ALTER TABLE [dbo].[ModeleDevisSet]
-ADD CONSTRAINT [FK_ModeleDevisPVJ]
-    FOREIGN KEY ([InfoPVJ_IdPVJ])
-    REFERENCES [dbo].[PVJSet]
-        ([IdPVJ])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_ModeleDevisPVJ'
-CREATE INDEX [IX_FK_ModeleDevisPVJ]
-ON [dbo].[ModeleDevisSet]
-    ([InfoPVJ_IdPVJ]);
-GO
-
 -- Creating foreign key on [ListConsultation_IdConsultation] in table 'ConsultationFournisseur'
 ALTER TABLE [dbo].[ConsultationFournisseur]
 ADD CONSTRAINT [FK_ConsultationFournisseur_Consultation]
@@ -705,19 +687,19 @@ ON [dbo].[OVSet]
     ([InfoOP_IdOP]);
 GO
 
--- Creating foreign key on [InfoBC_IdBC] in table 'PVJSet'
-ALTER TABLE [dbo].[PVJSet]
+-- Creating foreign key on [InfoPVJ_IdPVJ] in table 'BCSet'
+ALTER TABLE [dbo].[BCSet]
 ADD CONSTRAINT [FK_PVJBC]
-    FOREIGN KEY ([InfoBC_IdBC])
-    REFERENCES [dbo].[BCSet]
-        ([IdBC])
+    FOREIGN KEY ([InfoPVJ_IdPVJ])
+    REFERENCES [dbo].[PVJSet]
+        ([IdPVJ])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_PVJBC'
 CREATE INDEX [IX_FK_PVJBC]
-ON [dbo].[PVJSet]
-    ([InfoBC_IdBC]);
+ON [dbo].[BCSet]
+    ([InfoPVJ_IdPVJ]);
 GO
 
 -- --------------------------------------------------
