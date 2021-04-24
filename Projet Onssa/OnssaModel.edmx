@@ -841,7 +841,7 @@
           <End Type="OnssaModel.OP" Role="OP" Multiplicity="1" />
         </Association>
         <Association Name="PVJBC">
-          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="0..1" />
           <End Type="OnssaModel.BC" Role="BC" Multiplicity="1" />
         </Association>
       </Schema>
@@ -1034,7 +1034,6 @@
       <EndProperty Name="PVJ">
         <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
       </EndProperty>
-            <Condition ColumnName="InfoConsultation_IdConsultation" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="ModeleDevisProduit" TypeName="OnssaModel.ModeleDevisProduit" StoreEntitySet="ModeleDevisProduit">
       <EndProperty Name="ModeleDevis">
