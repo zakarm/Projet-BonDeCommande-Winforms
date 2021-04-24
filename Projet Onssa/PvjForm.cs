@@ -126,8 +126,8 @@ namespace Projet_Onssa
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -135,7 +135,7 @@ namespace Projet_Onssa
                     PVJ pv = new PVJ();
                     Consultation c = new Consultation();
 
-                    if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx))
+                    if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
                     {
 
                         //ctx.Entry(pv).State = System.Data.Entity.EntityState.Added;
@@ -161,12 +161,12 @@ namespace Projet_Onssa
                     }
 
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
         }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
 
         private void dgv_Fournisseur_Rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -224,13 +224,16 @@ namespace Projet_Onssa
             try
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
+                { 
+                    
+                    ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
                     Consultation c = new Consultation();
-                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx))
+                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true)
                     {
 
-                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
-                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                       
 
                         c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
@@ -305,6 +308,56 @@ namespace Projet_Onssa
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgv_Commission_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void date_Pvj_onValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtarea_DateString_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
