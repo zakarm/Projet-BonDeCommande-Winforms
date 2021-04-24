@@ -57,7 +57,8 @@ namespace Projet_Onssa
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
             bool test = false;
-            
+            dgv_Fournisseur.CurrentCell = dgv_Fournisseur.Rows[0].Cells[0];
+
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
 
@@ -75,7 +76,6 @@ namespace Projet_Onssa
                         MessageBox.Show(ex.Message);
                     }
                 }
-                MessageBox.Show(drm.Cells[4].FormattedValue.ToString());
                 drm.Cells["ck_btn"].Value = false;
 
 
@@ -184,42 +184,33 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            
-                try
-                {   
-                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            try
+            {   
+               using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+               {
+                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                    c.ListFournisseur.Clear();
+                    if(check(c, ctx)==true)
                     {
-                        c.ListFournisseur.Clear();
-                        check(c, ctx);
-
                         c.NumConsultation = cb_Num.Text;
                         c.ObjetConsultation = txtarea_Objet.Text;
-
-                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
-
+                                                    
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
-                        MessageBox.Show("Modifié avec succès");     
+                        MessageBox.Show("Modifié avec succès");
+                    }
+                    else
+                    {
+                        MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
-                catch(Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+            }
+            catch(Exception ex)
+            {
+                 MessageBox.Show(ex.Message);
+            }
            
         }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
-            {
-
-                MessageBox.Show(drm.Cells[4].FormattedValue.ToString());
-
-            }
-        }
-
-        
     }
 }
