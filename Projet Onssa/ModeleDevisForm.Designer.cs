@@ -37,17 +37,17 @@ namespace Projet_Onssa
             this.date_MDevis = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Produits = new System.Windows.Forms.DataGridView();
-            this.cb_NumC = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cb_NumF = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,20 +150,39 @@ namespace Projet_Onssa
             this.dgv_Produits.RowHeadersWidth = 4;
             this.dgv_Produits.Size = new System.Drawing.Size(416, 179);
             this.dgv_Produits.TabIndex = 60;
-            this.dgv_Produits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Produits_CellContentClick);
             // 
-            // cb_NumC
+            // Column1
             // 
-            this.cb_NumC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumC.BackColor = System.Drawing.Color.Gainsboro;
-            this.cb_NumC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumC.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_NumC.FormattingEnabled = true;
-            this.cb_NumC.ItemHeight = 19;
-            this.cb_NumC.Location = new System.Drawing.Point(68, 271);
-            this.cb_NumC.Name = "cb_NumC";
-            this.cb_NumC.Size = new System.Drawing.Size(376, 27);
-            this.cb_NumC.TabIndex = 59;
+            this.Column1.HeaderText = "Produit ";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Designation";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Unite";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Quantite";
+            this.Column4.Name = "Column4";
+            // 
+            // cb_NumF
+            // 
+            this.cb_NumF.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumF.BackColor = System.Drawing.Color.Gainsboro;
+            this.cb_NumF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumF.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_NumF.FormattingEnabled = true;
+            this.cb_NumF.ItemHeight = 19;
+            this.cb_NumF.Location = new System.Drawing.Point(68, 271);
+            this.cb_NumF.Name = "cb_NumF";
+            this.cb_NumF.Size = new System.Drawing.Size(376, 27);
+            this.cb_NumF.TabIndex = 59;
             // 
             // label5
             // 
@@ -246,6 +265,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ajouter.Textcolor = System.Drawing.Color.White;
             this.btn_Ajouter.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // btn_Modifier
             // 
@@ -281,7 +301,6 @@ namespace Projet_Onssa
             this.btn_Modifier.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Modifier.Textcolor = System.Drawing.Color.White;
             this.btn_Modifier.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // label4
             // 
@@ -307,26 +326,6 @@ namespace Projet_Onssa
             this.label2.TabIndex = 51;
             this.label2.Text = "Produits :";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Produit ";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Designation";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Unite";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Quantite";
-            this.Column4.Name = "Column4";
-            // 
             // ModeleDevisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,7 +336,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.date_MDevis);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgv_Produits);
-            this.Controls.Add(this.cb_NumC);
+            this.Controls.Add(this.cb_NumF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Supprimer);
             this.Controls.Add(this.btn_Ajouter);
@@ -347,6 +346,7 @@ namespace Projet_Onssa
             this.MaximumSize = new System.Drawing.Size(970, 614);
             this.Name = "ModeleDevisForm";
             this.Text = "ModeleDevisForm";
+            this.Load += new System.EventHandler(this.ModeleDevisForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -360,7 +360,7 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuDatepicker date_MDevis;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgv_Produits;
-        private System.Windows.Forms.ComboBox cb_NumC;
+        private System.Windows.Forms.ComboBox cb_NumF;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Supprimer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ajouter;

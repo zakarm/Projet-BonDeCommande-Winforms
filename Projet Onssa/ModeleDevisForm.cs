@@ -17,12 +17,21 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        private void btn_Modifier_Click(object sender, EventArgs e)
+        private void ModeleDevisForm_Load(object sender, EventArgs e)
         {
+            using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                cb_NumMdevis.DisplayMember = "NumDevis";
+                cb_NumMdevis.ValueMember = "IdModeleDevis";
+                cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
 
+                cb_NumF.ValueMember = "IdFournisseur";
+                cb_NumF.DisplayMember = "Nom";
+                cb_NumF.DataSource = ctx.ModeleDevisSet.ToList();
+            }
         }
 
-        private void dgv_Produits_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_Ajouter_Click(object sender, EventArgs e)
         {
 
         }
