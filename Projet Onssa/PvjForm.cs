@@ -132,19 +132,24 @@ namespace Projet_Onssa
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    PVJ p = new PVJ();
+                    PVJ pv = new PVJ();
                     Consultation c = new Consultation();
 
-                    if (check(dgv_Commission, p, ctx) == true && check(dgv_Fournisseur_Rep, p, ctx))
+                    if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx))
                     {
 
-                        ctx.Entry(p).State = System.Data.Entity.EntityState.Added;
+                        //ctx.Entry(pv).State = System.Data.Entity.EntityState.Added;
+                        //ctx.Entry(c).State = System.Data.Entity.EntityState.Added;
+                        
                         c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
-                        p.NumPvj = cb_NumPvj.Text;
-                        p.DateString = txtarea_DateString.Text;
-                        p.DatePvj = date_Pvj.Value;
-                        p.InfoConsultation = c;
-                        ctx.PVJSet.Add(p);
+
+                        pv.NumPvj = cb_NumPvj.Text;
+                        pv.InfoConsultation = c;
+                        pv.DateString = txtarea_DateString.Text;
+                        pv.DatePvj = date_Pvj.Value;
+                        
+                        ctx.PVJSet.Add(pv);
+
                         ctx.SaveChanges();
                         cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                         MessageBox.Show("Ajouté avec succès");
@@ -190,6 +195,72 @@ namespace Projet_Onssa
         }
 
         private void cb_NumC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_Supprimer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    ctx.Entry(pn).State = System.Data.Entity.EntityState.Deleted;
+                    ctx.PVJSet.Remove(pn);
+                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                    ctx.SaveChanges();
+
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Modifier_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    Consultation c = new Consultation();
+                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx))
+                    {
+
+                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+                        c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+
+                        pn.NumPvj = cb_NumPvj.Text;
+                        pn.InfoConsultation = c;
+                        pn.DateString = txtarea_DateString.Text;
+                        pn.DatePvj = date_Pvj.Value;
+
+                        
+                        ctx.SaveChanges();
+
+                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                        MessageBox.Show("Modifié avec succès");
+                    }
+                    else
+                    {
+                        MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb_NumPvj_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {

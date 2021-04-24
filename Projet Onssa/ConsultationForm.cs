@@ -191,6 +191,7 @@ namespace Projet_Onssa
                {
                     ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                     c.ListFournisseur.Clear();
+
                     if(check(c, ctx)==true)
                     {
                         c.NumConsultation = cb_Num.Text;
