@@ -183,7 +183,7 @@ namespace Projet_Onssa
             //    {
 
             //        DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())];
-            //        int fe = (int) de.Cells["Num"].Value;
+            //        int fe = (int)de.Cells["Num"].Value;
             //        var query = from f in ctx.FournisseurSet
             //                    where f.IdFournisseur == fe
             //                    select new

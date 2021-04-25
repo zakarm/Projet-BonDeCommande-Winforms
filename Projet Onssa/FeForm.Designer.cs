@@ -29,32 +29,26 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.dgv_Produit = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cb_Pvj = new System.Windows.Forms.ComboBox();
+            this.cb_Bc = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.cb_NumBc = new System.Windows.Forms.ComboBox();
-            this.txt_Delai = new MaterialSkin.Controls.MaterialTextBox();
+            this.cb_NumFe = new System.Windows.Forms.ComboBox();
+            this.txt_DepensesE = new MaterialSkin.Controls.MaterialTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Destination = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_Budgetaires = new MaterialSkin.Controls.MaterialTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_Dispo = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_engagementDP = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Produit)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -136,12 +130,12 @@ namespace Projet_Onssa
             // 
             this.materialCard2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.materialTextBox2);
-            this.materialCard2.Controls.Add(this.dgv_Produit);
-            this.materialCard2.Controls.Add(this.label5);
-            this.materialCard2.Controls.Add(this.cb_Pvj);
+            this.materialCard2.Controls.Add(this.txt_Dispo);
+            this.materialCard2.Controls.Add(this.txt_engagementDP);
+            this.materialCard2.Controls.Add(this.cb_Bc);
             this.materialCard2.Controls.Add(this.label7);
             this.materialCard2.Controls.Add(this.label6);
+            this.materialCard2.Controls.Add(this.label4);
             this.materialCard2.Depth = 0;
             this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard2.Location = new System.Drawing.Point(491, 25);
@@ -152,77 +146,24 @@ namespace Projet_Onssa
             this.materialCard2.Size = new System.Drawing.Size(444, 438);
             this.materialCard2.TabIndex = 149;
             // 
-            // dgv_Produit
+            // cb_Bc
             // 
-            this.dgv_Produit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_Produit.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Produit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.dgv_Produit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Produit.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_Produit.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Produit.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
-            this.dgv_Produit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Produit.DefaultCellStyle = dataGridViewCellStyle20;
-            this.dgv_Produit.EnableHeadersVisualStyles = false;
-            this.dgv_Produit.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Produit.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Produit.Location = new System.Drawing.Point(52, 200);
-            this.dgv_Produit.Name = "dgv_Produit";
-            this.dgv_Produit.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Produit.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
-            this.dgv_Produit.RowHeadersWidth = 4;
-            this.dgv_Produit.Size = new System.Drawing.Size(351, 205);
-            this.dgv_Produit.TabIndex = 148;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(51, 173);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 18);
-            this.label5.TabIndex = 147;
-            this.label5.Text = "Produit";
-            // 
-            // cb_Pvj
-            // 
-            this.cb_Pvj.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Pvj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_Pvj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Pvj.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Pvj.FormattingEnabled = true;
-            this.cb_Pvj.ItemHeight = 25;
-            this.cb_Pvj.Location = new System.Drawing.Point(52, 123);
-            this.cb_Pvj.Name = "cb_Pvj";
-            this.cb_Pvj.Size = new System.Drawing.Size(351, 33);
-            this.cb_Pvj.TabIndex = 146;
+            this.cb_Bc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Bc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cb_Bc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Bc.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Bc.FormattingEnabled = true;
+            this.cb_Bc.ItemHeight = 25;
+            this.cb_Bc.Location = new System.Drawing.Point(54, 289);
+            this.cb_Bc.Name = "cb_Bc";
+            this.cb_Bc.Size = new System.Drawing.Size(351, 33);
+            this.cb_Bc.TabIndex = 146;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(51, 28);
+            this.label7.Location = new System.Drawing.Point(47, 59);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(241, 18);
             this.label7.TabIndex = 142;
@@ -232,24 +173,22 @@ namespace Projet_Onssa
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(51, 102);
+            this.label6.Location = new System.Drawing.Point(53, 268);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 18);
+            this.label6.Size = new System.Drawing.Size(151, 18);
             this.label6.TabIndex = 143;
-            this.label6.Text = "Procès-verbal de jugement";
+            this.label6.Text = "Bon de commande";
             // 
             // materialCard1
             // 
             this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialTextBox1);
-            this.materialCard1.Controls.Add(this.cb_NumBc);
-            this.materialCard1.Controls.Add(this.txt_Delai);
+            this.materialCard1.Controls.Add(this.cb_NumFe);
+            this.materialCard1.Controls.Add(this.txt_DepensesE);
             this.materialCard1.Controls.Add(this.label3);
-            this.materialCard1.Controls.Add(this.txt_Destination);
+            this.materialCard1.Controls.Add(this.txt_Budgetaires);
             this.materialCard1.Controls.Add(this.label1);
             this.materialCard1.Controls.Add(this.label2);
-            this.materialCard1.Controls.Add(this.label4);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(19, 25);
@@ -260,76 +199,76 @@ namespace Projet_Onssa
             this.materialCard1.Size = new System.Drawing.Size(444, 438);
             this.materialCard1.TabIndex = 148;
             // 
-            // cb_NumBc
+            // cb_NumFe
             // 
-            this.cb_NumBc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumBc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_NumBc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumBc.Font = new System.Drawing.Font("Roboto", 15.75F);
-            this.cb_NumBc.FormattingEnabled = true;
-            this.cb_NumBc.ItemHeight = 25;
-            this.cb_NumBc.Location = new System.Drawing.Point(38, 70);
-            this.cb_NumBc.Name = "cb_NumBc";
-            this.cb_NumBc.Size = new System.Drawing.Size(351, 33);
-            this.cb_NumBc.TabIndex = 140;
+            this.cb_NumFe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumFe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cb_NumFe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumFe.Font = new System.Drawing.Font("Roboto", 15.75F);
+            this.cb_NumFe.FormattingEnabled = true;
+            this.cb_NumFe.ItemHeight = 25;
+            this.cb_NumFe.Location = new System.Drawing.Point(50, 94);
+            this.cb_NumFe.Name = "cb_NumFe";
+            this.cb_NumFe.Size = new System.Drawing.Size(351, 33);
+            this.cb_NumFe.TabIndex = 140;
             // 
-            // txt_Delai
+            // txt_DepensesE
             // 
-            this.txt_Delai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Delai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_Delai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Delai.Depth = 0;
-            this.txt_Delai.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Delai.Location = new System.Drawing.Point(38, 221);
-            this.txt_Delai.MaxLength = 50;
-            this.txt_Delai.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_Delai.Multiline = false;
-            this.txt_Delai.Name = "txt_Delai";
-            this.txt_Delai.Size = new System.Drawing.Size(353, 50);
-            this.txt_Delai.TabIndex = 134;
-            this.txt_Delai.Text = "";
+            this.txt_DepensesE.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_DepensesE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_DepensesE.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_DepensesE.Depth = 0;
+            this.txt_DepensesE.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_DepensesE.Location = new System.Drawing.Point(50, 272);
+            this.txt_DepensesE.MaxLength = 50;
+            this.txt_DepensesE.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_DepensesE.Multiline = false;
+            this.txt_DepensesE.Name = "txt_DepensesE";
+            this.txt_DepensesE.Size = new System.Drawing.Size(353, 50);
+            this.txt_DepensesE.TabIndex = 134;
+            this.txt_DepensesE.Text = "";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(37, 200);
+            this.label3.Location = new System.Drawing.Point(49, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 18);
             this.label3.TabIndex = 143;
             this.label3.Text = "Depenses Engagees";
             // 
-            // txt_Destination
+            // txt_Budgetaires
             // 
-            this.txt_Destination.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Destination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_Destination.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Destination.Depth = 0;
-            this.txt_Destination.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Destination.Location = new System.Drawing.Point(38, 131);
-            this.txt_Destination.MaxLength = 50;
-            this.txt_Destination.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_Destination.Multiline = false;
-            this.txt_Destination.Name = "txt_Destination";
-            this.txt_Destination.Size = new System.Drawing.Size(353, 50);
-            this.txt_Destination.TabIndex = 131;
-            this.txt_Destination.Text = "";
+            this.txt_Budgetaires.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Budgetaires.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_Budgetaires.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Budgetaires.Depth = 0;
+            this.txt_Budgetaires.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_Budgetaires.Location = new System.Drawing.Point(50, 177);
+            this.txt_Budgetaires.MaxLength = 50;
+            this.txt_Budgetaires.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_Budgetaires.Multiline = false;
+            this.txt_Budgetaires.Name = "txt_Budgetaires";
+            this.txt_Budgetaires.Size = new System.Drawing.Size(353, 50);
+            this.txt_Budgetaires.TabIndex = 131;
+            this.txt_Budgetaires.Text = "";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(37, 40);
+            this.label1.Location = new System.Drawing.Point(47, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 18);
+            this.label1.Size = new System.Drawing.Size(199, 18);
             this.label1.TabIndex = 141;
-            this.label1.Text = "Num FE";
+            this.label1.Text = "Num Fiche d\'engagement";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(37, 110);
+            this.label2.Location = new System.Drawing.Point(49, 156);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(150, 18);
             this.label2.TabIndex = 142;
@@ -339,43 +278,43 @@ namespace Projet_Onssa
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(37, 284);
+            this.label4.Location = new System.Drawing.Point(51, 156);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 18);
             this.label4.TabIndex = 144;
             this.label4.Text = "Disponible";
             // 
-            // materialTextBox1
+            // txt_Dispo
             // 
-            this.materialTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox1.Location = new System.Drawing.Point(38, 305);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(353, 50);
-            this.materialTextBox1.TabIndex = 145;
-            this.materialTextBox1.Text = "";
+            this.txt_Dispo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Dispo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_Dispo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Dispo.Depth = 0;
+            this.txt_Dispo.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_Dispo.Location = new System.Drawing.Point(54, 177);
+            this.txt_Dispo.MaxLength = 50;
+            this.txt_Dispo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_Dispo.Multiline = false;
+            this.txt_Dispo.Name = "txt_Dispo";
+            this.txt_Dispo.Size = new System.Drawing.Size(353, 50);
+            this.txt_Dispo.TabIndex = 145;
+            this.txt_Dispo.Text = "";
             // 
-            // materialTextBox2
+            // txt_engagementDP
             // 
-            this.materialTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox2.Location = new System.Drawing.Point(54, 49);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(353, 50);
-            this.materialTextBox2.TabIndex = 146;
-            this.materialTextBox2.Text = "";
+            this.txt_engagementDP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_engagementDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_engagementDP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_engagementDP.Depth = 0;
+            this.txt_engagementDP.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_engagementDP.Location = new System.Drawing.Point(50, 84);
+            this.txt_engagementDP.MaxLength = 50;
+            this.txt_engagementDP.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_engagementDP.Multiline = false;
+            this.txt_engagementDP.Name = "txt_engagementDP";
+            this.txt_engagementDP.Size = new System.Drawing.Size(353, 50);
+            this.txt_engagementDP.TabIndex = 146;
+            this.txt_engagementDP.Text = "";
             // 
             // FeForm
             // 
@@ -390,7 +329,6 @@ namespace Projet_Onssa
             this.materialCard3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Produit)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
             this.ResumeLayout(false);
@@ -404,20 +342,18 @@ namespace Projet_Onssa
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
         private MaterialSkin.Controls.MaterialCard materialCard2;
-        private System.Windows.Forms.DataGridView dgv_Produit;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cb_Pvj;
+        private System.Windows.Forms.ComboBox cb_Bc;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private System.Windows.Forms.ComboBox cb_NumBc;
-        private MaterialSkin.Controls.MaterialTextBox txt_Delai;
+        private System.Windows.Forms.ComboBox cb_NumFe;
+        private MaterialSkin.Controls.MaterialTextBox txt_DepensesE;
         private System.Windows.Forms.Label label3;
-        private MaterialSkin.Controls.MaterialTextBox txt_Destination;
+        private MaterialSkin.Controls.MaterialTextBox txt_Budgetaires;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox txt_Dispo;
+        private MaterialSkin.Controls.MaterialTextBox txt_engagementDP;
     }
 }
