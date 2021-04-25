@@ -227,17 +227,13 @@ namespace Projet_Onssa
                 { 
                     
                     ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
-                    Consultation c = new Consultation();
+                    Consultation c =  c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
                     ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                     pn.ListFournisseursRepondu.Clear();
                     pn.ListCommissions.Clear();
 
                     if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true)
                     {
-
-                       
-
-                        c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
                         pn.NumPvj = cb_NumPvj.Text;
                         pn.InfoConsultation = c;

@@ -37,10 +37,6 @@ namespace Projet_Onssa
             this.date_MDevis = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label1 = new System.Windows.Forms.Label();
             this.dgv_Produits = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cb_NumF = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,6 +44,10 @@ namespace Projet_Onssa
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@ namespace Projet_Onssa
             this.cb_NumMdevis.Name = "cb_NumMdevis";
             this.cb_NumMdevis.Size = new System.Drawing.Size(376, 27);
             this.cb_NumMdevis.TabIndex = 66;
+            this.cb_NumMdevis.SelectedIndexChanged += new System.EventHandler(this.cb_NumMdevis_SelectedIndexChanged);
             // 
             // label7
             // 
@@ -104,12 +105,12 @@ namespace Projet_Onssa
             // 
             // dgv_Produits
             // 
-            this.dgv_Produits.AllowUserToOrderColumns = true;
+            this.dgv_Produits.AllowUserToResizeColumns = false;
+            this.dgv_Produits.AllowUserToResizeRows = false;
             this.dgv_Produits.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Produits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Produits.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv_Produits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Produits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Produits.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
@@ -121,10 +122,10 @@ namespace Projet_Onssa
             this.dgv_Produits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Produits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Produits.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.Column2,
             this.Column3,
-            this.Column4});
+            this.Column4,
+            this.Column5});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
@@ -150,26 +151,6 @@ namespace Projet_Onssa
             this.dgv_Produits.RowHeadersWidth = 4;
             this.dgv_Produits.Size = new System.Drawing.Size(416, 179);
             this.dgv_Produits.TabIndex = 60;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Produit ";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Designation";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Unite";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Quantite";
-            this.Column4.Name = "Column4";
             // 
             // cb_NumF
             // 
@@ -230,6 +211,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Supprimer.Textcolor = System.Drawing.Color.White;
             this.btn_Supprimer.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
             // btn_Ajouter
             // 
@@ -326,6 +308,26 @@ namespace Projet_Onssa
             this.label2.TabIndex = 51;
             this.label2.Text = "Produits :";
             // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Designation";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Unite";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Quantite";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Prix Unitaire";
+            this.Column5.Name = "Column5";
+            // 
             // ModeleDevisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -367,9 +369,9 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton btn_Modifier;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
