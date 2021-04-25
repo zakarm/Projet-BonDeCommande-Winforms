@@ -126,7 +126,6 @@ namespace Projet_Onssa
             this.txtarea_DateString.Size = new System.Drawing.Size(376, 69);
             this.txtarea_DateString.TabIndex = 36;
             this.txtarea_DateString.Text = "";
-            this.txtarea_DateString.TextChanged += new System.EventHandler(this.txtarea_DateString_TextChanged);
             // 
             // label5
             // 
@@ -139,7 +138,6 @@ namespace Projet_Onssa
             this.label5.Size = new System.Drawing.Size(654, 56);
             this.label5.TabIndex = 41;
             this.label5.Text = "Procès verbal de jugement";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // btn_Supprimer
             // 
@@ -260,7 +258,6 @@ namespace Projet_Onssa
             this.label4.Size = new System.Drawing.Size(209, 21);
             this.label4.TabIndex = 37;
             this.label4.Text = "Numéro de Consultation :";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -273,7 +270,6 @@ namespace Projet_Onssa
             this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 35;
             this.label3.Text = "Date S :";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -286,7 +282,6 @@ namespace Projet_Onssa
             this.label2.Size = new System.Drawing.Size(183, 21);
             this.label2.TabIndex = 34;
             this.label2.Text = "Fournisseurs Repondu :";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -299,7 +294,6 @@ namespace Projet_Onssa
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 45;
             this.label1.Text = "Date  :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // date_Pvj
             // 
@@ -314,7 +308,6 @@ namespace Projet_Onssa
             this.date_Pvj.Size = new System.Drawing.Size(376, 37);
             this.date_Pvj.TabIndex = 46;
             this.date_Pvj.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
-            this.date_Pvj.onValueChanged += new System.EventHandler(this.date_Pvj_onValueChanged);
             // 
             // dgv_Commission
             // 
@@ -358,8 +351,7 @@ namespace Projet_Onssa
             this.dgv_Commission.RowHeadersWidth = 4;
             this.dgv_Commission.Size = new System.Drawing.Size(376, 97);
             this.dgv_Commission.TabIndex = 48;
-            this.dgv_Commission.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Commission_CellContentClick);
-            // 
+            
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -371,7 +363,6 @@ namespace Projet_Onssa
             this.label6.Size = new System.Drawing.Size(115, 21);
             this.label6.TabIndex = 47;
             this.label6.Text = "Commissions :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // cb_NumPvj
             // 
@@ -398,7 +389,6 @@ namespace Projet_Onssa
             this.label7.Size = new System.Drawing.Size(123, 21);
             this.label7.TabIndex = 49;
             this.label7.Text = "Numéro de Pvj";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -424,8 +414,7 @@ namespace Projet_Onssa
             this.cb_fchoisie.Name = "cb_fchoisie";
             this.cb_fchoisie.Size = new System.Drawing.Size(376, 27);
             this.cb_fchoisie.TabIndex = 52;
-            this.cb_fchoisie.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
+           
             // PvjForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

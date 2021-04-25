@@ -174,31 +174,45 @@ namespace Projet_Onssa
 
         private void dgv_Fournisseur_Rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                DataTable dt;
 
-                if (e.ColumnIndex == 4)
-                {
-                    
-                    DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())];
-                    int fe = (int) de.Cells["Num"].Value;
-                    var query = from f in ctx.FournisseurSet
-                                where f.IdFournisseur == fe
-                                select new
-                                {
-                                    Num = f.IdFournisseur,
-                                    Nom = f.Nom,
-                                    
-                                };
+            //using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            //{
+            //    DataTable dt;
 
-                    dt = query.;
-                    cb_fchoisie.DisplayMember = "Nom";
-                    cb_fchoisie.ValueMember = "Num";
-                    cb_fchoisie.DataSource = query.ToList();
-                }
+            //    if (e.ColumnIndex == 4)
+            //    {
 
-            }
+            //        DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())];
+            //        int fe = (int) de.Cells["Num"].Value;
+            //        var query = from f in ctx.FournisseurSet
+            //                    where f.IdFournisseur == fe
+            //                    select new
+            //                    {
+            //                        Num = f.IdFournisseur,
+            //                        Nom = f.Nom,
+
+            //                    };
+
+            //        dt = query.cop;
+            //        cb_fchoisie.DisplayMember = "Nom";
+            //        cb_fchoisie.ValueMember = "Num";
+            //        cb_fchoisie.DataSource = query.ToList();
+            //    }
+
+            //}
+
+            //cb_fchoisie.Items.Clear();
+            //using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            //{
+            //    foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
+            //    {
+            //        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
+            //        {
+            //            cb_fchoisie.Items.Add(dr.Cells[0].FormattedValue.ToString());
+            //        }
+            //    }
+
+            //}
 
 
         }
@@ -317,59 +331,5 @@ namespace Projet_Onssa
             }
         }
 
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgv_Commission_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void date_Pvj_onValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtarea_DateString_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
