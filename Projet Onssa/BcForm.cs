@@ -21,5 +21,10 @@ namespace Projet_Onssa
         {
             
         }
+
+        private void viderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.vider(this);
+        }
     }
 }
