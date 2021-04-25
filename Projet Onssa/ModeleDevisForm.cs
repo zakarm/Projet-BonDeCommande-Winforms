@@ -19,7 +19,7 @@ namespace Projet_Onssa
         ModeleDevis md;
         private void ModeleDevisForm_Load(object sender, EventArgs e)
         {
-            using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 cb_NumMdevis.DisplayMember = "NumDevis";
                 cb_NumMdevis.ValueMember = "IdModeleDevis";
@@ -33,37 +33,45 @@ namespace Projet_Onssa
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            if (dgv_Produits.Rows.Count > 1)
             {
-                ModeleDevis m = new ModeleDevis();
-                Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
-                Produit p ;
-
-                m.NumDevis = cb_NumMdevis.Text;
-                m.InfoFournisseur = f;
-                m.Date = date_MDevis.Value;
-
-                foreach (DataGridViewRow dr in dgv_Produits.Rows)
+                dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    if (dr.Cells[1].Value != null)
+                    ModeleDevis m = new ModeleDevis();
+                    Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                    Produit p;
+
+                    m.NumDevis = cb_NumMdevis.Text;
+                    m.InfoFournisseur = f;
+                    m.Date = date_MDevis.Value;
+
+                    foreach (DataGridViewRow dr in dgv_Produits.Rows)
                     {
-                        p = new Produit();
-                        p.Designation = dr.Cells[0].Value.ToString();
-                        p.Unite = dr.Cells[1].Value.ToString();
-                        p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
-                        p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
-                        m.ListProduit.Add(p);
+                        if (dr.Cells[1].Value != null)
+                        {
+                            p = new Produit();
+                            p.Designation = dr.Cells[0].Value.ToString();
+                            p.Unite = dr.Cells[1].Value.ToString();
+                            p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
+                            p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                            m.ListProduit.Add(p);
+                        }
+
                     }
 
+                    ctx.ModeleDevisSet.Add(m);
+                    ctx.SaveChanges();
+                    cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                    dgv_Produits.Rows.Clear();
+                    MessageBox.Show("Ajouté avec succès");
                 }
-
-                ctx.ModeleDevisSet.Add(m);
-                ctx.SaveChanges();
-                cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
-                dgv_Produits.Rows.Clear();
-                MessageBox.Show("Ajouté avec succès");
             }
+            else
+            {
+                MessageBox.Show("Modèle de devis sans produit !");
+            }
+
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -74,12 +82,12 @@ namespace Projet_Onssa
                 {
                     ctx.Entry(md).State = System.Data.Entity.EntityState.Deleted;
                     ctx.ModeleDevisSet.Remove(md);
-                    cb_NumMdevis.DataSource = ctx.PVJSet.ToList();
                     ctx.SaveChanges();
+                    cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -113,45 +121,53 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            if (dgv_Produits.Rows.Count > 1)
             {
-                ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
-                Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
-                Produit p;
-
-                md.NumDevis = cb_NumMdevis.Text;
-                md.InfoFournisseur = f;
-                md.Date = date_MDevis.Value;
-                md.ListProduit.Clear();
-
-                foreach (DataGridViewRow dr in dgv_Produits.Rows)
+                dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    if (dr.Cells[1].Value != null)
+                    ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
+                    Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                    Produit p;
+
+                    md.NumDevis = cb_NumMdevis.Text;
+                    md.InfoFournisseur = f;
+                    md.Date = date_MDevis.Value;
+                    md.ListProduit.Clear();
+
+                    foreach (DataGridViewRow dr in dgv_Produits.Rows)
                     {
-                        p = new Produit();
-                        p.Designation = dr.Cells[0].Value.ToString();
-                        p.Unite = dr.Cells[1].Value.ToString();
-                        p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
-                        p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
-                        md.ListProduit.Add(p);
+                        if (dr.Cells[1].Value != null)
+                        {
+                            p = new Produit();
+                            p.Designation = dr.Cells[0].Value.ToString();
+                            p.Unite = dr.Cells[1].Value.ToString();
+                            p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
+                            p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                            md.ListProduit.Add(p);
+                        }
+
                     }
 
+                    ctx.SaveChanges();
+                    cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                    dgv_Produits.Rows.Clear();
+                    MessageBox.Show("Modifier avec succès");
                 }
-
-                ctx.SaveChanges();
-                cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
-                dgv_Produits.Rows.Clear();
-                MessageBox.Show("Modifier avec succès");
             }
+            else
+            {
+                MessageBox.Show("Modèle de devis sans produit !");
+            }
+
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
             try
             {
-                
-                if(dgv_Produits.Rows.Count > 2)
+
+                if (dgv_Produits.Rows.Count > 2)
                 {
                     dgv_Produits.Rows.Remove(dgv_Produits.CurrentRow);
                     MessageBox.Show("Supression du Produit");
@@ -160,12 +176,20 @@ namespace Projet_Onssa
                 {
                     MessageBox.Show("Modèle de devis sans produit !");
                 }
-                    
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+       
+
+        private void bunifuFlatButton2_Click_1(object sender, EventArgs e)
+        {
+            dgv_Produits.Rows.Clear();
+
         }
     }
 }
