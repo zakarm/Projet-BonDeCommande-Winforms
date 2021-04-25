@@ -48,7 +48,15 @@ namespace Projet_Onssa
 
         private void cb_Pvj_SelectedIndexChanged(object sender, EventArgs e)
         {
+            using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                var query = from  p in ctx.PVJSet join m in ctx.ModeleDevisSet
+                            on p.InfoFournisseur.IdFournisseur equals m.InfoFournisseur.IdFournisseur 
+                            where p.IdPVJ == int.Parse(cb_Pvj.Text.ToString())
+                            select m.ListProduit;
 
+                dgv_Produit.DataSource = query.ToList();
+            }
         }
     }
 }

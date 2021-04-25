@@ -17,9 +17,10 @@ namespace Projet_Onssa
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Fournisseur()
         {
-            this.ListPVJ = new HashSet<PVJ>();
+            this.ListPVJ1 = new HashSet<PVJ>();
             this.ListModeleDevis = new HashSet<ModeleDevis>();
             this.ListConsultation = new HashSet<Consultation>();
+            this.ListPVJ2 = new HashSet<PVJ>();
         }
     
         public int IdFournisseur { get; set; }
@@ -35,10 +36,12 @@ namespace Projet_Onssa
         public string Banque { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PVJ> ListPVJ { get; set; }
+        public virtual ICollection<PVJ> ListPVJ1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ModeleDevis> ListModeleDevis { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Consultation> ListConsultation { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PVJ> ListPVJ2 { get; set; }
     }
 }

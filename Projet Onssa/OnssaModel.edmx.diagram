@@ -35,6 +35,7 @@
         <AssociationConnector Association="OnssaModel.BCMorasse" />
         <AssociationConnector Association="OnssaModel.OVOP" />
         <AssociationConnector Association="OnssaModel.PVJBC" />
+        <AssociationConnector Association="OnssaModel.PVJFournisseur1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -175,46 +175,6 @@ namespace Projet_Onssa
         private void dgv_Fournisseur_Rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            //using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            //{
-            //    DataTable dt;
-
-            //    if (e.ColumnIndex == 4)
-            //    {
-
-            //        DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())];
-            //        int fe = (int)de.Cells["Num"].Value;
-            //        var query = from f in ctx.FournisseurSet
-            //                    where f.IdFournisseur == fe
-            //                    select new
-            //                    {
-            //                        Num = f.IdFournisseur,
-            //                        Nom = f.Nom,
-
-            //                    };
-
-            //        dt = query.cop;
-            //        cb_fchoisie.DisplayMember = "Nom";
-            //        cb_fchoisie.ValueMember = "Num";
-            //        cb_fchoisie.DataSource = query.ToList();
-            //    }
-
-            //}
-
-            //cb_fchoisie.Items.Clear();
-            //using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            //{
-            //    foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
-            //    {
-            //        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
-            //        {
-            //            cb_fchoisie.Items.Add(dr.Cells[0].FormattedValue.ToString());
-            //        }
-            //    }
-
-            //}
-
-
         }
 
         private void cb_NumC_SelectedIndexChanged(object sender, EventArgs e)
@@ -331,5 +291,30 @@ namespace Projet_Onssa
             }
         }
 
+        private void dgv_Fournisseur_Rep_CellValidated(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                cb_fchoisie.Items.Clear();
+                cb_fchoisie.Text = "";
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
+                    {
+                        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
+                        {
+                            cb_fchoisie.Items.Add(dr.Cells[1].FormattedValue.ToString());
+                        }
+                    }
+
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

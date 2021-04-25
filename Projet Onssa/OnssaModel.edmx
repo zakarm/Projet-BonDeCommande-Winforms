@@ -101,6 +101,10 @@
       <End Role="PVJ" EntitySet="PVJSet" />
       <End Role="BC" EntitySet="BCSet" />
     </AssociationSet>
+    <AssociationSet Name="PVJFournisseur1" Association="OnssaModel.Store.PVJFournisseur1">
+      <End Role="PVJ" EntitySet="PVJSet" />
+      <End Role="Fournisseur" EntitySet="FournisseurSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="FournisseurSet">
     <Key>
@@ -144,8 +148,8 @@
     <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DatePvj" Type="datetime" Nullable="false" />
     <Property Name="NumPvj" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="NomFournisseurSelection" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoConsultation_IdConsultation" Type="int" Nullable="false" />
+    <Property Name="InfoFournisseur_IdFournisseur" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ModeleDevisSet">
     <Key>
@@ -255,10 +259,10 @@
   </EntityType>
   <EntityType Name="PVJFournisseur">
     <Key>
-      <PropertyRef Name="ListPVJ_IdPVJ" />
+      <PropertyRef Name="ListPVJ1_IdPVJ" />
       <PropertyRef Name="ListFournisseursRepondu_IdFournisseur" />
     </Key>
-    <Property Name="ListPVJ_IdPVJ" Type="int" Nullable="false" />
+    <Property Name="ListPVJ1_IdPVJ" Type="int" Nullable="false" />
     <Property Name="ListFournisseursRepondu_IdFournisseur" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PVJCommission">
@@ -401,6 +405,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="PVJFournisseur1">
+    <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="*" />
+    <End Role="Fournisseur" Type="OnssaModel.Store.FournisseurSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Fournisseur">
+        <PropertyRef Name="IdFournisseur" />
+      </Principal>
+      <Dependent Role="PVJ">
+        <PropertyRef Name="InfoFournisseur_IdFournisseur" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_PVJFournisseur_PVJ">
     <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="1" />
     <End Role="PVJFournisseur" Type="OnssaModel.Store.PVJFournisseur" Multiplicity="*" />
@@ -409,7 +425,7 @@
         <PropertyRef Name="IdPVJ" />
       </Principal>
       <Dependent Role="PVJFournisseur">
-        <PropertyRef Name="ListPVJ_IdPVJ" />
+        <PropertyRef Name="ListPVJ1_IdPVJ" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -596,6 +612,10 @@
             <End Role="PVJ" EntitySet="PVJSet" />
             <End Role="BC" EntitySet="BCSet" />
           </AssociationSet>
+          <AssociationSet Name="PVJFournisseur1" Association="OnssaModel.PVJFournisseur1">
+            <End Role="PVJ" EntitySet="PVJSet" />
+            <End Role="Fournisseur" EntitySet="FournisseurSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Fournisseur">
           <Key>
@@ -612,9 +632,10 @@
           <Property Name="ICE" Type="String" Nullable="false" />
           <Property Name="Ville" Type="String" Nullable="false" />
           <Property Name="Banque" Type="String" Nullable="false" />
-          <NavigationProperty Name="ListPVJ" Relationship="OnssaModel.PVJFournisseur" FromRole="Fournisseur" ToRole="PVJ" />
+          <NavigationProperty Name="ListPVJ1" Relationship="OnssaModel.PVJFournisseur" FromRole="Fournisseur" ToRole="PVJ" />
           <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisFournisseur" FromRole="Fournisseur" ToRole="ModeleDevis" />
           <NavigationProperty Name="ListConsultation" Relationship="OnssaModel.ConsultationFournisseur" FromRole="Fournisseur" ToRole="Consultation" />
+          <NavigationProperty Name="ListPVJ2" Relationship="OnssaModel.PVJFournisseur1" FromRole="Fournisseur" ToRole="PVJ" />
         </EntityType>
         <EntityType Name="Commission">
           <Key>
@@ -650,7 +671,7 @@
           <NavigationProperty Name="InfoConsultation" Relationship="OnssaModel.PVJConsultation" FromRole="PVJ" ToRole="Consultation" />
           <NavigationProperty Name="InfoBC" Relationship="OnssaModel.PVJBC" FromRole="PVJ" ToRole="BC" />
           <Property Name="NumPvj" Type="String" Nullable="false" />
-          <Property Name="NomFournisseurSelection" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoFournisseur" Relationship="OnssaModel.PVJFournisseur1" FromRole="PVJ" ToRole="Fournisseur" />
         </EntityType>
         <EntityType Name="ModeleDevis">
           <Key>
@@ -823,6 +844,10 @@
           <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="1" />
           <End Type="OnssaModel.BC" Role="BC" Multiplicity="0..1" />
         </Association>
+        <Association Name="PVJFournisseur1">
+          <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="*" />
+          <End Type="OnssaModel.Fournisseur" Role="Fournisseur" Multiplicity="1" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -873,7 +898,6 @@
           <ScalarProperty Name="DateString" ColumnName="DateString" />
           <ScalarProperty Name="DatePvj" ColumnName="DatePvj" />
           <ScalarProperty Name="NumPvj" ColumnName="NumPvj" />
-          <ScalarProperty Name="NomFournisseurSelection" ColumnName="NomFournisseurSelection" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -987,7 +1011,7 @@
     </EntitySetMapping>
     <AssociationSetMapping Name="PVJFournisseur" TypeName="OnssaModel.PVJFournisseur" StoreEntitySet="PVJFournisseur">
       <EndProperty Name="PVJ">
-        <ScalarProperty Name="IdPVJ" ColumnName="ListPVJ_IdPVJ" />
+        <ScalarProperty Name="IdPVJ" ColumnName="ListPVJ1_IdPVJ" />
       </EndProperty>
       <EndProperty Name="Fournisseur">
         <ScalarProperty Name="IdFournisseur" ColumnName="ListFournisseursRepondu_IdFournisseur" />
@@ -1095,6 +1119,14 @@
       </EndProperty>
       <EndProperty Name="BC">
         <ScalarProperty Name="IdBC" ColumnName="IdBC" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="PVJFournisseur1" TypeName="OnssaModel.PVJFournisseur1" StoreEntitySet="PVJSet">
+      <EndProperty Name="Fournisseur">
+        <ScalarProperty Name="IdFournisseur" ColumnName="InfoFournisseur_IdFournisseur" />
+      </EndProperty>
+      <EndProperty Name="PVJ">
+        <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

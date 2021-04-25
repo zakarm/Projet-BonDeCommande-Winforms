@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/25/2021 17:48:02
+-- Date Created: 04/25/2021 22:50:01
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -181,8 +181,8 @@ CREATE TABLE [dbo].[PVJSet] (
     [DateString] nvarchar(max)  NOT NULL,
     [DatePvj] datetime  NOT NULL,
     [NumPvj] nvarchar(max)  NOT NULL,
-    [NomFournisseurSelection] nvarchar(max)  NOT NULL,
-    [InfoConsultation_IdConsultation] int  NOT NULL
+    [InfoConsultation_IdConsultation] int  NOT NULL,
+    [InfoFournisseur_IdFournisseur] int  NOT NULL
 );
 GO
 
@@ -294,7 +294,7 @@ GO
 
 -- Creating table 'PVJFournisseur'
 CREATE TABLE [dbo].[PVJFournisseur] (
-    [ListPVJ_IdPVJ] int  NOT NULL,
+    [ListPVJ1_IdPVJ] int  NOT NULL,
     [ListFournisseursRepondu_IdFournisseur] int  NOT NULL
 );
 GO
@@ -415,10 +415,10 @@ ADD CONSTRAINT [PK_GestionCompteSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
 GO
 
--- Creating primary key on [ListPVJ_IdPVJ], [ListFournisseursRepondu_IdFournisseur] in table 'PVJFournisseur'
+-- Creating primary key on [ListPVJ1_IdPVJ], [ListFournisseursRepondu_IdFournisseur] in table 'PVJFournisseur'
 ALTER TABLE [dbo].[PVJFournisseur]
 ADD CONSTRAINT [PK_PVJFournisseur]
-    PRIMARY KEY CLUSTERED ([ListPVJ_IdPVJ], [ListFournisseursRepondu_IdFournisseur] ASC);
+    PRIMARY KEY CLUSTERED ([ListPVJ1_IdPVJ], [ListFournisseursRepondu_IdFournisseur] ASC);
 GO
 
 -- Creating primary key on [ListPVJ_IdPVJ], [ListCommissions_IdCommission] in table 'PVJCommission'
@@ -449,10 +449,10 @@ GO
 -- Creating all FOREIGN KEY constraints
 -- --------------------------------------------------
 
--- Creating foreign key on [ListPVJ_IdPVJ] in table 'PVJFournisseur'
+-- Creating foreign key on [ListPVJ1_IdPVJ] in table 'PVJFournisseur'
 ALTER TABLE [dbo].[PVJFournisseur]
 ADD CONSTRAINT [FK_PVJFournisseur_PVJ]
-    FOREIGN KEY ([ListPVJ_IdPVJ])
+    FOREIGN KEY ([ListPVJ1_IdPVJ])
     REFERENCES [dbo].[PVJSet]
         ([IdPVJ])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
@@ -702,6 +702,21 @@ GO
 CREATE INDEX [IX_FK_PVJBC]
 ON [dbo].[BCSet]
     ([InfoPVJ_IdPVJ]);
+GO
+
+-- Creating foreign key on [InfoFournisseur_IdFournisseur] in table 'PVJSet'
+ALTER TABLE [dbo].[PVJSet]
+ADD CONSTRAINT [FK_PVJFournisseur1]
+    FOREIGN KEY ([InfoFournisseur_IdFournisseur])
+    REFERENCES [dbo].[FournisseurSet]
+        ([IdFournisseur])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_PVJFournisseur1'
+CREATE INDEX [IX_FK_PVJFournisseur1]
+ON [dbo].[PVJSet]
+    ([InfoFournisseur_IdFournisseur]);
 GO
 
 -- --------------------------------------------------

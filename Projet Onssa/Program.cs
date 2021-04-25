@@ -25,7 +25,7 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FeForm());
+            Application.Run(new BcForm());
         }
         public static void vider(Control f)
         {

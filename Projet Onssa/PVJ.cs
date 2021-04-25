@@ -25,7 +25,6 @@ namespace Projet_Onssa
         public string DateString { get; set; }
         public System.DateTime DatePvj { get; set; }
         public string NumPvj { get; set; }
-        public string NomFournisseurSelection { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Fournisseur> ListFournisseursRepondu { get; set; }
@@ -33,5 +32,6 @@ namespace Projet_Onssa
         public virtual ICollection<Commission> ListCommissions { get; set; }
         public virtual Consultation InfoConsultation { get; set; }
         public virtual BC InfoBC { get; set; }
+        public virtual Fournisseur InfoFournisseur { get; set; }
     }
 }
