@@ -144,6 +144,7 @@
     <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DatePvj" Type="datetime" Nullable="false" />
     <Property Name="NumPvj" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NomFournisseurSelection" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoConsultation_IdConsultation" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ModeleDevisSet">
@@ -195,6 +196,7 @@
     <Property Name="DepensesEngagees" Type="int" Nullable="false" />
     <Property Name="Disponible" Type="int" Nullable="false" />
     <Property Name="EngagementDepensesPropose" Type="int" Nullable="false" />
+    <Property Name="NumFe" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoBC_IdBC" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="MorasseSet">
@@ -648,6 +650,7 @@
           <NavigationProperty Name="InfoConsultation" Relationship="OnssaModel.PVJConsultation" FromRole="PVJ" ToRole="Consultation" />
           <NavigationProperty Name="InfoBC" Relationship="OnssaModel.PVJBC" FromRole="PVJ" ToRole="BC" />
           <Property Name="NumPvj" Type="String" Nullable="false" />
+          <Property Name="NomFournisseurSelection" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="ModeleDevis">
           <Key>
@@ -704,6 +707,7 @@
           <Property Name="EngagementDepensesPropose" Type="Int32" Nullable="false" />
           <NavigationProperty Name="InfoOI" Relationship="OnssaModel.FEOI" FromRole="FE" ToRole="OI" />
           <NavigationProperty Name="InfoBC" Relationship="OnssaModel.BCFE" FromRole="FE" ToRole="BC" />
+          <Property Name="NumFe" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Morasse">
           <Key>
@@ -869,6 +873,7 @@
           <ScalarProperty Name="DateString" ColumnName="DateString" />
           <ScalarProperty Name="DatePvj" ColumnName="DatePvj" />
           <ScalarProperty Name="NumPvj" ColumnName="NumPvj" />
+          <ScalarProperty Name="NomFournisseurSelection" ColumnName="NomFournisseurSelection" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -920,6 +925,7 @@
           <ScalarProperty Name="DepensesEngagees" ColumnName="DepensesEngagees" />
           <ScalarProperty Name="Disponible" ColumnName="Disponible" />
           <ScalarProperty Name="EngagementDepensesPropose" ColumnName="EngagementDepensesPropose" />
+          <ScalarProperty Name="NumFe" ColumnName="NumFe" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

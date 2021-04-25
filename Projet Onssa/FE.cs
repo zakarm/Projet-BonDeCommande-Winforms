@@ -19,6 +19,7 @@ namespace Projet_Onssa
         public int DepensesEngagees { get; set; }
         public int Disponible { get; set; }
         public int EngagementDepensesPropose { get; set; }
+        public string NumFe { get; set; }
     
         public virtual OI InfoOI { get; set; }
         public virtual BC InfoBC { get; set; }

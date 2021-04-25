@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Entity;
+using System.Data.Sql;
+using System.Linq.Expressions;
+using System.Data.SqlTypes;
 
 namespace Projet_Onssa
 {
@@ -170,28 +174,33 @@ namespace Projet_Onssa
 
         private void dgv_Fournisseur_Rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            //{
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                DataTable dt;
 
-                        
-            //    if (e.ColumnIndex == 4)
-            //    {
-            //        DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())]; 
-            //        var query = from m in ctx.ModeleDevisSet join f in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals f.IdFournisseur
-            //                    where m.InfoFournisseur.IdFournisseur == (int) de.Cells["Num"].Value
-            //                    select new
-            //                    {
-            //                        Nom = f.Nom,
-            //                        Devis = m.NumDevis,
-            //                        Date = m.Date,
+                if (e.ColumnIndex == 4)
+                {
+                    
+                    DataGridViewRow de = dgv_Fournisseur_Rep.Rows[int.Parse(e.RowIndex.ToString())];
+                    int fe = (int) de.Cells["Num"].Value;
+                    var query = from f in ctx.FournisseurSet
+                                where f.IdFournisseur == fe
+                                select new
+                                {
+                                    Num = f.IdFournisseur,
+                                    Nom = f.Nom,
+                                    
+                                };
 
-            //                    };
-            //        dgv_Mdevis.DataSource = query.ToList();
-            //    }
+                    dt = query.;
+                    cb_fchoisie.DisplayMember = "Nom";
+                    cb_fchoisie.ValueMember = "Num";
+                    cb_fchoisie.DataSource = query.ToList();
+                }
 
-            //}
-            
-                
+            }
+
+
         }
 
         private void cb_NumC_SelectedIndexChanged(object sender, EventArgs e)
@@ -354,6 +363,11 @@ namespace Projet_Onssa
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
