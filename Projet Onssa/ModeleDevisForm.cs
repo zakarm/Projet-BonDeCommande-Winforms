@@ -99,14 +99,70 @@ namespace Projet_Onssa
                     foreach (Produit m in md.ListProduit)
                     {
 
-                        dgv_Produits.Rows.Add(m.Designation,m.Unite,m.Quantite,m.Prix_Unitaire);
+                        dgv_Produits.Rows.Add(m.Designation, m.Unite, m.Quantite, m.Prix_Unitaire);
 
                     }
-                    
 
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btn_Modifier_Click(object sender, EventArgs e)
+        {
+            dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
+                Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                Produit p;
+
+                md.NumDevis = cb_NumMdevis.Text;
+                md.InfoFournisseur = f;
+                md.Date = date_MDevis.Value;
+                md.ListProduit.Clear();
+
+                foreach (DataGridViewRow dr in dgv_Produits.Rows)
+                {
+                    if (dr.Cells[1].Value != null)
+                    {
+                        p = new Produit();
+                        p.Designation = dr.Cells[0].Value.ToString();
+                        p.Unite = dr.Cells[1].Value.ToString();
+                        p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
+                        p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                        md.ListProduit.Add(p);
+                    }
+
+                }
+
+                ctx.SaveChanges();
+                cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                dgv_Produits.Rows.Clear();
+                MessageBox.Show("Modifier avec succès");
+            }
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                
+                if(dgv_Produits.Rows.Count > 2)
+                {
+                    dgv_Produits.Rows.Remove(dgv_Produits.CurrentRow);
+                    MessageBox.Show("Supression du Produit");
+                }
+                else
+                {
+                    MessageBox.Show("Modèle de devis sans produit !");
+                }
+                    
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }

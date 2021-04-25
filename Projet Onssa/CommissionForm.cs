@@ -12,16 +12,17 @@ using MaterialSkin.Controls;
 
 namespace Projet_Onssa
 {
-    public partial class CommissionForm : MaterialForm
+    public partial class CommissionForm : Form
     {
         Commission c;
         public CommissionForm()
         {
             InitializeComponent();
-            var materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Color.FromArgb(32, 38,50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), TextShade.WHITE);
+            //var materialSkinManager = MaterialSkinManager.Instance;
+            //materialSkinManager.AddFormToManage(this);
+            //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            //materialSkinManager.ColorScheme = new ColorScheme(Color.FromArgb(32, 38,50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), TextShade.WHITE);
+
         }
 
         private void remplir_DGV()
@@ -72,7 +73,63 @@ namespace Projet_Onssa
 
         }
 
-        private void btn_Modifier_Click_1(object sender, EventArgs e)
+      
+
+        
+
+        
+
+        private void btn_Ajouter_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    Commission oc = new Commission();
+
+                    oc.Nom = cb_Nom.Text;
+                    oc.Prenom = txt_Prenom.Text;
+                    oc.Affectation = txt_Affectation.Text;
+                    oc.Fonction = txt_Fonction.Text;
+
+                    ctx.CommissionSet.Add(oc);
+                    ctx.SaveChanges();
+
+                    cb_Nom.DataSource = ctx.CommissionSet.ToList();
+
+                    MessageBox.Show("Ajouté avec succès");
+                }
+                remplir_DGV();
+            }
+            catch (Exception o)
+            {
+                MessageBox.Show(o.Message);
+            }
+
+        }
+
+        private void btn_Supprimer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                    ctx.CommissionSet.Remove(c);
+                    ctx.SaveChanges();
+
+                    cb_Nom.DataSource = ctx.CommissionSet.ToList();
+                }
+
+            }
+            catch (Exception o)
+            {
+                MessageBox.Show(o.Message);
+            }
+            remplir_DGV();
+        }
+
+        private void btn_Modifier_Click(object sender, EventArgs e)
         {
             try
             {
@@ -99,58 +156,6 @@ namespace Projet_Onssa
                 MessageBox.Show(o.Message);
             }
             remplir_DGV();
-        
-        }
-
-        private void btn_Supprimer_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.CommissionSet.Remove(c);
-                    ctx.SaveChanges();
-
-                    cb_Nom.DataSource = ctx.CommissionSet.ToList();
-                }
-
-            }
-            catch (Exception o)
-            {
-                MessageBox.Show(o.Message);
-            }
-            remplir_DGV();
-        }
-
-        private void btn_Ajouter_Click_1(object sender, EventArgs e)
-        {
-           
-                try
-                {
-                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                    {
-                        Commission oc = new Commission();
-
-                        oc.Nom = cb_Nom.Text;
-                        oc.Prenom = txt_Prenom.Text;
-                        oc.Affectation = txt_Affectation.Text;
-                        oc.Fonction = txt_Fonction.Text;
-
-                        ctx.CommissionSet.Add(oc);
-                        ctx.SaveChanges();
-
-                        cb_Nom.DataSource = ctx.CommissionSet.ToList();
-
-                        MessageBox.Show("Ajouté avec succès");
-                    }
-                    remplir_DGV();
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
-                }
-            
         }
     }
 }

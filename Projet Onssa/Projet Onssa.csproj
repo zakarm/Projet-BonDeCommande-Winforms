@@ -73,6 +73,9 @@
     <Compile Include="BC.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Button_WOC.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Commission.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -167,6 +170,9 @@
     </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Button_WOC.resx">
+      <DependentUpon>Button_WOC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CommissionForm.resx">
       <DependentUpon>CommissionForm.cs</DependentUpon>
