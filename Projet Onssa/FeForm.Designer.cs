@@ -34,9 +34,12 @@ namespace Projet_Onssa
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.txt_Dispo = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_engagementDP = new MaterialSkin.Controls.MaterialTextBox();
             this.cb_Bc = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.cb_NumFe = new System.Windows.Forms.ComboBox();
             this.txt_DepensesE = new MaterialSkin.Controls.MaterialTextBox();
@@ -44,9 +47,6 @@ namespace Projet_Onssa
             this.txt_Budgetaires = new MaterialSkin.Controls.MaterialTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_Dispo = new MaterialSkin.Controls.MaterialTextBox();
-            this.txt_engagementDP = new MaterialSkin.Controls.MaterialTextBox();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -87,6 +87,7 @@ namespace Projet_Onssa
             this.btn_Modifier.Text = "MODIFIER";
             this.btn_Modifier.TextColor = System.Drawing.Color.White;
             this.btn_Modifier.UseVisualStyleBackColor = false;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // btn_Ajouter
             // 
@@ -106,6 +107,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.Text = "AJOUTER";
             this.btn_Ajouter.TextColor = System.Drawing.Color.White;
             this.btn_Ajouter.UseVisualStyleBackColor = false;
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // btn_Supprimer
             // 
@@ -125,6 +127,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.Text = "SUPPRIMER";
             this.btn_Supprimer.TextColor = System.Drawing.Color.White;
             this.btn_Supprimer.UseVisualStyleBackColor = false;
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
             // materialCard2
             // 
@@ -145,6 +148,38 @@ namespace Projet_Onssa
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard2.Size = new System.Drawing.Size(444, 438);
             this.materialCard2.TabIndex = 149;
+            // 
+            // txt_Dispo
+            // 
+            this.txt_Dispo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Dispo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_Dispo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_Dispo.Depth = 0;
+            this.txt_Dispo.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_Dispo.Location = new System.Drawing.Point(54, 177);
+            this.txt_Dispo.MaxLength = 50;
+            this.txt_Dispo.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_Dispo.Multiline = false;
+            this.txt_Dispo.Name = "txt_Dispo";
+            this.txt_Dispo.Size = new System.Drawing.Size(353, 50);
+            this.txt_Dispo.TabIndex = 145;
+            this.txt_Dispo.Text = "";
+            // 
+            // txt_engagementDP
+            // 
+            this.txt_engagementDP.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_engagementDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_engagementDP.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_engagementDP.Depth = 0;
+            this.txt_engagementDP.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_engagementDP.Location = new System.Drawing.Point(50, 84);
+            this.txt_engagementDP.MaxLength = 50;
+            this.txt_engagementDP.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_engagementDP.Multiline = false;
+            this.txt_engagementDP.Name = "txt_engagementDP";
+            this.txt_engagementDP.Size = new System.Drawing.Size(353, 50);
+            this.txt_engagementDP.TabIndex = 146;
+            this.txt_engagementDP.Text = "";
             // 
             // cb_Bc
             // 
@@ -179,6 +214,16 @@ namespace Projet_Onssa
             this.label6.TabIndex = 143;
             this.label6.Text = "Bon de commande";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(51, 156);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 18);
+            this.label4.TabIndex = 144;
+            this.label4.Text = "Disponible";
+            // 
             // materialCard1
             // 
             this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -211,6 +256,7 @@ namespace Projet_Onssa
             this.cb_NumFe.Name = "cb_NumFe";
             this.cb_NumFe.Size = new System.Drawing.Size(351, 33);
             this.cb_NumFe.TabIndex = 140;
+            this.cb_NumFe.SelectedIndexChanged += new System.EventHandler(this.cb_NumFe_SelectedIndexChanged);
             // 
             // txt_DepensesE
             // 
@@ -274,48 +320,6 @@ namespace Projet_Onssa
             this.label2.TabIndex = 142;
             this.label2.Text = "Credits Budgetaires";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(51, 156);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 18);
-            this.label4.TabIndex = 144;
-            this.label4.Text = "Disponible";
-            // 
-            // txt_Dispo
-            // 
-            this.txt_Dispo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Dispo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_Dispo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Dispo.Depth = 0;
-            this.txt_Dispo.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Dispo.Location = new System.Drawing.Point(54, 177);
-            this.txt_Dispo.MaxLength = 50;
-            this.txt_Dispo.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_Dispo.Multiline = false;
-            this.txt_Dispo.Name = "txt_Dispo";
-            this.txt_Dispo.Size = new System.Drawing.Size(353, 50);
-            this.txt_Dispo.TabIndex = 145;
-            this.txt_Dispo.Text = "";
-            // 
-            // txt_engagementDP
-            // 
-            this.txt_engagementDP.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_engagementDP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_engagementDP.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_engagementDP.Depth = 0;
-            this.txt_engagementDP.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_engagementDP.Location = new System.Drawing.Point(50, 84);
-            this.txt_engagementDP.MaxLength = 50;
-            this.txt_engagementDP.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_engagementDP.Multiline = false;
-            this.txt_engagementDP.Name = "txt_engagementDP";
-            this.txt_engagementDP.Size = new System.Drawing.Size(353, 50);
-            this.txt_engagementDP.TabIndex = 146;
-            this.txt_engagementDP.Text = "";
-            // 
             // FeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,6 +330,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.materialCard1);
             this.Name = "FeForm";
             this.Text = "FeForm";
+            this.Load += new System.EventHandler(this.FeForm_Load);
             this.materialCard3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();

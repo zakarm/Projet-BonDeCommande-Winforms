@@ -99,9 +99,7 @@ namespace Projet_Onssa
             this.dgv_Fournisseur_Rep.RowHeadersWidth = 4;
             this.dgv_Fournisseur_Rep.Size = new System.Drawing.Size(376, 91);
             this.dgv_Fournisseur_Rep.TabIndex = 43;
-            this.dgv_Fournisseur_Rep.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Fournisseur_Rep_CellContentClick);
-            this.dgv_Fournisseur_Rep.CellValidated += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_Fournisseur_Rep_CellValidated);
-            // 
+            
             // cb_NumC
             // 
             this.cb_NumC.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -114,7 +112,6 @@ namespace Projet_Onssa
             this.cb_NumC.Name = "cb_NumC";
             this.cb_NumC.Size = new System.Drawing.Size(376, 27);
             this.cb_NumC.TabIndex = 42;
-            this.cb_NumC.SelectedIndexChanged += new System.EventHandler(this.cb_NumC_SelectedIndexChanged);
             // 
             // txtarea_DateString
             // 
@@ -415,6 +412,7 @@ namespace Projet_Onssa
             this.cb_fchoisie.Name = "cb_fchoisie";
             this.cb_fchoisie.Size = new System.Drawing.Size(376, 27);
             this.cb_fchoisie.TabIndex = 52;
+            this.cb_fchoisie.Click += new System.EventHandler(this.cb_fchoisie_Click);
             // 
             // PvjForm
             // 

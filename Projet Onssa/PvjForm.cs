@@ -25,7 +25,7 @@ namespace Projet_Onssa
 
         private void load()
         {
-            using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 cb_NumPvj.ValueMember = "IdPVJ";
                 cb_NumPvj.DisplayMember = "NumPvj";
@@ -33,7 +33,7 @@ namespace Projet_Onssa
 
 
                 cb_NumC.ValueMember = "IdConsultation";
-                cb_NumC.DisplayMember = "ObjetConsultation";
+                cb_NumC.DisplayMember = "NumConsultation";
                 cb_NumC.DataSource = ctx.ConsultationSet.ToList();
                 //--------------------------------------------linq to Commission--------------------------------------------
 
@@ -81,10 +81,9 @@ namespace Projet_Onssa
         private void PvjForm_Load(object sender, EventArgs e)
         {
             load();
-  
         }
 
-        private bool check(DataGridView dv,PVJ pv, OnssaModelContainer4 ctx)
+        private bool check(DataGridView dv, PVJ pv, OnssaModelContainer4 ctx)
         {
             bool test = false;
             dv.CurrentCell = dv.Rows[0].Cells[0];
@@ -92,32 +91,32 @@ namespace Projet_Onssa
             try
             {
 
-                    foreach (DataGridViewRow drm in dv.Rows)
+                foreach (DataGridViewRow drm in dv.Rows)
+                {
+
+                    if ((bool)drm.Cells["ck_btn"].FormattedValue.Equals(true))
                     {
 
-                        if ((bool)drm.Cells["ck_btn"].FormattedValue.Equals(true))
+
+                        if (dv.Name.Equals("dgv_Fournisseur_Rep"))
                         {
-
-                             
-                              if(dv.Name.Equals("dgv_Fournisseur_Rep"))
-                              {
-                                    test = true;
-                                    Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
-                                    pv.ListFournisseursRepondu.Add(fr);
-
-                              }
-                              else
-                              {
-                                    test = true;
-                                    Commission cm = ctx.CommissionSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
-                                    pv.ListCommissions.Add(cm);
-                              }
-                            
+                            test = true;
+                            Fournisseur fr = ctx.FournisseurSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
+                            pv.ListFournisseursRepondu.Add(fr);
 
                         }
-                        drm.Cells["ck_btn"].Value = false;
+                        else
+                        {
+                            test = true;
+                            Commission cm = ctx.CommissionSet.Find(int.Parse(drm.Cells["Num"].FormattedValue.ToString()));
+                            pv.ListCommissions.Add(cm);
+                        }
+
+
                     }
-                    
+                    drm.Cells["ck_btn"].Value = false;
+                }
+
 
             }
             catch (Exception ex)
@@ -128,75 +127,71 @@ namespace Projet_Onssa
             return test;
         }
 
+        private int fournisseurCh()
+        {
+            foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
+            {
+                if (dr.Cells[1].Value.ToString() == cb_fchoisie.Text)
+                {
+                    return int.Parse(dr.Cells[0].Value.ToString());
+                }
+            }
+            return -1;
+        }
+
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            try
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
+                PVJ pv = new PVJ();
+                Consultation c = new Consultation();
+                Fournisseur f = new Fournisseur();
 
-
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
                 {
-                    PVJ pv = new PVJ();
-                    Consultation c = new Consultation();
+                    c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
-                    if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
-                    {
+                    int idF = fournisseurCh();
+                    f = ctx.FournisseurSet.Find(idF);
 
-                        //ctx.Entry(pv).State = System.Data.Entity.EntityState.Added;
-                        //ctx.Entry(c).State = System.Data.Entity.EntityState.Added;
-                        
-                        c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                    pv.NumPvj = cb_NumPvj.Text;
+                    pv.InfoConsultation = c;
+                    pv.DateString = txtarea_DateString.Text;
+                    pv.DatePvj = date_Pvj.Value;
+                    pv.InfoFournisseur = f;
 
-                        pv.NumPvj = cb_NumPvj.Text;
-                        pv.InfoConsultation = c;
-                        pv.DateString = txtarea_DateString.Text;
-                        pv.DatePvj = date_Pvj.Value;
-                        
-                        ctx.PVJSet.Add(pv);
+                    ctx.PVJSet.Add(pv);
 
-                        ctx.SaveChanges();
-                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
-                        MessageBox.Show("Ajouté avec succès");
-                    }
-                    else
-                    {
-                        MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
+                    ctx.SaveChanges();
+                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                    MessageBox.Show("Ajouté avec succès");
+                }
+                else
+                {
+                    MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-        }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+
             }
-}
-
-        private void dgv_Fournisseur_Rep_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         }
 
-        private void cb_NumC_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
             try
             {
-                using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     ctx.Entry(pn).State = System.Data.Entity.EntityState.Deleted;
                     ctx.PVJSet.Remove(pn);
-                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                     ctx.SaveChanges();
-
+                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                 }
-                
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -207,27 +202,36 @@ namespace Projet_Onssa
             try
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                { 
-                    
+                {
+
                     ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
-                    Consultation c =  c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                    Consultation c = c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                    Fournisseur f;
                     ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                     pn.ListFournisseursRepondu.Clear();
                     pn.ListCommissions.Clear();
 
-                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true)
+                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
                     {
+                        int idF = fournisseurCh();
+                        if (idF != -1)
+                        {
+                            f = ctx.FournisseurSet.Find(idF);
+                            pn.NumPvj = cb_NumPvj.Text;
+                            pn.InfoConsultation = c;
+                            pn.DateString = txtarea_DateString.Text;
+                            pn.DatePvj = date_Pvj.Value;
+                            pn.InfoFournisseur = f;
 
-                        pn.NumPvj = cb_NumPvj.Text;
-                        pn.InfoConsultation = c;
-                        pn.DateString = txtarea_DateString.Text;
-                        pn.DatePvj = date_Pvj.Value;
+                            ctx.SaveChanges();
 
-                        
-                        ctx.SaveChanges();
+                            cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                            MessageBox.Show("Modifié avec succès");
+                        }
+                        else
+                            MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
-                        MessageBox.Show("Modifié avec succès");
+
                     }
                     else
                     {
@@ -254,6 +258,7 @@ namespace Projet_Onssa
                     cb_NumC.Text = pn.InfoConsultation.NumConsultation;
                     txtarea_DateString.Text = pn.DateString;
                     date_Pvj.Value = pn.DatePvj;
+                    cb_fchoisie.Text = pn.InfoFournisseur.Nom;
 
                     foreach (DataGridViewRow drm in dgv_Commission.Rows)
                     {
@@ -291,8 +296,11 @@ namespace Projet_Onssa
             }
         }
 
-        private void dgv_Fournisseur_Rep_CellValidated(object sender, DataGridViewCellEventArgs e)
+        
+
+        private void cb_fchoisie_Click(object sender, EventArgs e)
         {
+            //dgv_Fournisseur_Rep.CurrentCell = dgv_Fournisseur_Rep.Rows[0].Cells[0];
             try
             {
                 cb_fchoisie.Items.Clear();
@@ -306,9 +314,6 @@ namespace Projet_Onssa
                             cb_fchoisie.Items.Add(dr.Cells[1].FormattedValue.ToString());
                         }
                     }
-
-
-
                 }
             }
             catch (Exception ex)

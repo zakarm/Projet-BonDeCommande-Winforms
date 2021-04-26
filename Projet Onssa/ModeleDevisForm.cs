@@ -83,6 +83,7 @@ namespace Projet_Onssa
                     ctx.Entry(md).State = System.Data.Entity.EntityState.Deleted;
                     ctx.ModeleDevisSet.Remove(md);
                     ctx.SaveChanges();
+                    MessageBox.Show("Supprimé avec succès");
                     cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
 
                 }
