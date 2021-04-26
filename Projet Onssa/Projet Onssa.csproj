@@ -166,8 +166,20 @@
     <Compile Include="OP.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OpForm.Designer.cs">
+      <DependentUpon>OpForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OV.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OvForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OvForm.Designer.cs">
+      <DependentUpon>OvForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Produit.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
@@ -185,6 +197,12 @@
     </Compile>
     <Compile Include="PVR.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PvrForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PvrForm.Designer.cs">
+      <DependentUpon>PvrForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
@@ -216,6 +234,12 @@
     <EmbeddedResource Include="OiForm.resx">
       <DependentUpon>OiForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OpForm.resx">
+      <DependentUpon>OpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OvForm.resx">
+      <DependentUpon>OvForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -228,6 +252,9 @@
     </Compile>
     <EmbeddedResource Include="PvjForm.resx">
       <DependentUpon>PvjForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PvrForm.resx">
+      <DependentUpon>PvrForm.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="OnssaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
