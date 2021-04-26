@@ -142,6 +142,12 @@
     <Compile Include="OI.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="OiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OiForm.Designer.cs">
+      <DependentUpon>OiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="OnssaModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -206,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModeleDevisForm.resx">
       <DependentUpon>ModeleDevisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OiForm.resx">
+      <DependentUpon>OiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

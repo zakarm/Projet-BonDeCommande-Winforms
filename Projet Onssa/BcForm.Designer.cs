@@ -44,11 +44,11 @@ namespace Projet_Onssa
             this.label6 = new System.Windows.Forms.Label();
             this.cb_Morasse = new System.Windows.Forms.ComboBox();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.viderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.viderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
             this.materialCard3.SuspendLayout();
@@ -258,24 +258,6 @@ namespace Projet_Onssa
             this.materialCard3.Size = new System.Drawing.Size(916, 72);
             this.materialCard3.TabIndex = 147;
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viderToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(954, 25);
-            this.menuStrip1.TabIndex = 148;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // viderToolStripMenuItem
-            // 
-            this.viderToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viderToolStripMenuItem.Name = "viderToolStripMenuItem";
-            this.viderToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
-            this.viderToolStripMenuItem.Text = "Vider";
-            this.viderToolStripMenuItem.Click += new System.EventHandler(this.viderToolStripMenuItem_Click);
-            // 
             // btn_Modifier
             // 
             this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
@@ -335,6 +317,24 @@ namespace Projet_Onssa
             this.btn_Supprimer.TextColor = System.Drawing.Color.White;
             this.btn_Supprimer.UseVisualStyleBackColor = false;
             this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viderToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(954, 25);
+            this.menuStrip1.TabIndex = 148;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // viderToolStripMenuItem
+            // 
+            this.viderToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viderToolStripMenuItem.Name = "viderToolStripMenuItem";
+            this.viderToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
+            this.viderToolStripMenuItem.Text = "Vider";
+            this.viderToolStripMenuItem.Click += new System.EventHandler(this.viderToolStripMenuItem_Click);
             // 
             // BcForm
             // 
