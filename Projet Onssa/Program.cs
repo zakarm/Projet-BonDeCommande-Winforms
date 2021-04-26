@@ -50,14 +50,7 @@ namespace Projet_Onssa
                             MaterialTextBox t = (MaterialTextBox)c;
                             t.Clear();
                         }
-                        else
-                        {
-                            if(c is DataGridView)
-                            {
-                                DataGridView t = (DataGridView)c;
-                                t.Rows.Clear();
-                            }
-                        }
+                       
                     }
                 }
                 if (c.Controls.Count != 0)

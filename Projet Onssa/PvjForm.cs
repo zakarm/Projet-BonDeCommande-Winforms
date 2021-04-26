@@ -127,32 +127,22 @@ namespace Projet_Onssa
             return test;
         }
 
-        private int fournisseurCh()
-        {
-            foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
-            {
-                if (dr.Cells[1].Value.ToString() == cb_fchoisie.Text)
-                {
-                    return int.Parse(dr.Cells[0].Value.ToString());
-                }
-            }
-            return -1;
-        }
+        
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 PVJ pv = new PVJ();
-                Consultation c = new Consultation();
-                Fournisseur f = new Fournisseur();
+                Consultation c ;
+                Fournisseur f ;
 
                 if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
                 {
                     c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
-                    int idF = fournisseurCh();
-                    f = ctx.FournisseurSet.Find(idF);
+                   
+                    f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
 
                     pv.NumPvj = cb_NumPvj.Text;
                     pv.InfoConsultation = c;
@@ -213,10 +203,9 @@ namespace Projet_Onssa
 
                     if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
                     {
-                        int idF = fournisseurCh();
-                        if (idF != -1)
-                        {
-                            f = ctx.FournisseurSet.Find(idF);
+                        
+                        
+                            f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
                             pn.DateString = txtarea_DateString.Text;
@@ -227,10 +216,7 @@ namespace Projet_Onssa
 
                             cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                             MessageBox.Show("Modifié avec succès");
-                        }
-                        else
-                            MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                       
 
                     }
                     else
@@ -303,17 +289,23 @@ namespace Projet_Onssa
             //dgv_Fournisseur_Rep.CurrentCell = dgv_Fournisseur_Rep.Rows[0].Cells[0];
             try
             {
-                cb_fchoisie.Items.Clear();
+                cb_fchoisie.DataSource = null;
                 cb_fchoisie.Text = "";
+                Dictionary<int, string> test = new Dictionary<int, string>();
+
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
                     {
                         if ((bool)dr.Cells[4].FormattedValue.Equals(true))
                         {
-                            cb_fchoisie.Items.Add(dr.Cells[1].FormattedValue.ToString());
+                            test.Add(int.Parse(dr.Cells["Num"].FormattedValue.ToString()),dr.Cells["Nom"].FormattedValue.ToString());
                         }
                     }
+
+                    cb_fchoisie.ValueMember = "Key";
+                    cb_fchoisie.DisplayMember = "Value";
+                    cb_fchoisie.DataSource = new BindingSource(test, null);
                 }
             }
             catch (Exception ex)
@@ -321,5 +313,12 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void viderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Program.vider(this);
+        }
+
+      
     }
 }
