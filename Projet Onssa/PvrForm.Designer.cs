@@ -29,14 +29,16 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dgv_Commission = new System.Windows.Forms.DataGridView();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -46,12 +48,10 @@ namespace Projet_Onssa
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgv_Commission = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
-            this.materialCard1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
+            this.materialCard1.SuspendLayout();
             this.SuspendLayout();
             // 
             // materialCard3
@@ -89,6 +89,7 @@ namespace Projet_Onssa
             this.btn_Modifier.Text = "MODIFIER";
             this.btn_Modifier.TextColor = System.Drawing.Color.White;
             this.btn_Modifier.UseVisualStyleBackColor = false;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // btn_Ajouter
             // 
@@ -143,6 +144,59 @@ namespace Projet_Onssa
             this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard2.Size = new System.Drawing.Size(444, 426);
             this.materialCard2.TabIndex = 155;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(26, 55);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(103, 18);
+            this.label3.TabIndex = 169;
+            this.label3.Text = "Commissions";
+            // 
+            // dgv_Commission
+            // 
+            this.dgv_Commission.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Commission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Commission.EnableHeadersVisualStyles = false;
+            this.dgv_Commission.GridColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Commission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dgv_Commission.Location = new System.Drawing.Point(29, 80);
+            this.dgv_Commission.Name = "dgv_Commission";
+            this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgv_Commission.RowHeadersWidth = 4;
+            this.dgv_Commission.Size = new System.Drawing.Size(384, 291);
+            this.dgv_Commission.TabIndex = 50;
             // 
             // materialCard1
             // 
@@ -231,6 +285,7 @@ namespace Projet_Onssa
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(351, 33);
             this.cb_Oi.TabIndex = 166;
+            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged);
             // 
             // Numé
             // 
@@ -262,59 +317,6 @@ namespace Projet_Onssa
             this.label2.TabIndex = 164;
             this.label2.Text = "DateS";
             // 
-            // dgv_Commission
-            // 
-            this.dgv_Commission.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Commission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Commission.EnableHeadersVisualStyles = false;
-            this.dgv_Commission.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Commission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Commission.Location = new System.Drawing.Point(29, 80);
-            this.dgv_Commission.Name = "dgv_Commission";
-            this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Commission.RowHeadersWidth = 4;
-            this.dgv_Commission.Size = new System.Drawing.Size(384, 291);
-            this.dgv_Commission.TabIndex = 50;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(26, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 18);
-            this.label3.TabIndex = 169;
-            this.label3.Text = "Commissions";
-            // 
             // PvrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,12 +327,13 @@ namespace Projet_Onssa
             this.Controls.Add(this.materialCard1);
             this.Name = "PvrForm";
             this.Text = "PvrForm";
+            this.Load += new System.EventHandler(this.PvrForm_Load);
             this.materialCard3.ResumeLayout(false);
             this.materialCard2.ResumeLayout(false);
             this.materialCard2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
             this.ResumeLayout(false);
 
         }

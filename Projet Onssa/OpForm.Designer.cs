@@ -29,12 +29,12 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.data_Paiement = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.cb_Op = new System.Windows.Forms.ComboBox();
+            this.date_Op = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.cb_Oi = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,8 +56,8 @@ namespace Projet_Onssa
             // 
             this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.data_Paiement);
-            this.materialCard1.Controls.Add(this.cb_Op);
+            this.materialCard1.Controls.Add(this.date_Op);
+            this.materialCard1.Controls.Add(this.cb_Oi);
             this.materialCard1.Controls.Add(this.label9);
             this.materialCard1.Controls.Add(this.Numé);
             this.materialCard1.Controls.Add(this.label1);
@@ -72,32 +72,33 @@ namespace Projet_Onssa
             this.materialCard1.Size = new System.Drawing.Size(444, 373);
             this.materialCard1.TabIndex = 152;
             // 
-            // data_Paiement
+            // date_Op
             // 
-            this.data_Paiement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.data_Paiement.BorderRadius = 0;
-            this.data_Paiement.ForeColor = System.Drawing.Color.Black;
-            this.data_Paiement.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data_Paiement.FormatCustom = null;
-            this.data_Paiement.Location = new System.Drawing.Point(49, 267);
-            this.data_Paiement.Margin = new System.Windows.Forms.Padding(4);
-            this.data_Paiement.Name = "data_Paiement";
-            this.data_Paiement.Size = new System.Drawing.Size(351, 47);
-            this.data_Paiement.TabIndex = 165;
-            this.data_Paiement.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
+            this.date_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.date_Op.BorderRadius = 0;
+            this.date_Op.ForeColor = System.Drawing.Color.Black;
+            this.date_Op.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date_Op.FormatCustom = null;
+            this.date_Op.Location = new System.Drawing.Point(49, 267);
+            this.date_Op.Margin = new System.Windows.Forms.Padding(4);
+            this.date_Op.Name = "date_Op";
+            this.date_Op.Size = new System.Drawing.Size(351, 47);
+            this.date_Op.TabIndex = 165;
+            this.date_Op.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
             // 
-            // cb_Op
+            // cb_Oi
             // 
-            this.cb_Op.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Op.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_Op.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Op.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Op.FormattingEnabled = true;
-            this.cb_Op.ItemHeight = 25;
-            this.cb_Op.Location = new System.Drawing.Point(47, 172);
-            this.cb_Op.Name = "cb_Op";
-            this.cb_Op.Size = new System.Drawing.Size(351, 33);
-            this.cb_Op.TabIndex = 164;
+            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Oi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Oi.FormattingEnabled = true;
+            this.cb_Oi.ItemHeight = 25;
+            this.cb_Oi.Location = new System.Drawing.Point(47, 172);
+            this.cb_Oi.Name = "cb_Oi";
+            this.cb_Oi.Size = new System.Drawing.Size(351, 33);
+            this.cb_Oi.TabIndex = 164;
+            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged);
             // 
             // label9
             // 
@@ -141,6 +142,7 @@ namespace Projet_Onssa
             this.cb_NumOp.Name = "cb_NumOp";
             this.cb_NumOp.Size = new System.Drawing.Size(351, 33);
             this.cb_NumOp.TabIndex = 161;
+            this.cb_NumOp.SelectedIndexChanged += new System.EventHandler(this.cb_NumOp_SelectedIndexChanged);
             // 
             // materialCard2
             // 
@@ -193,6 +195,7 @@ namespace Projet_Onssa
             this.btn_Modifier.Text = "MODIFIER";
             this.btn_Modifier.TextColor = System.Drawing.Color.White;
             this.btn_Modifier.UseVisualStyleBackColor = false;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
             // btn_Ajouter
             // 
@@ -212,6 +215,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.Text = "AJOUTER";
             this.btn_Ajouter.TextColor = System.Drawing.Color.White;
             this.btn_Ajouter.UseVisualStyleBackColor = false;
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // btn_Supprimer
             // 
@@ -231,6 +235,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.Text = "SUPPRIMER";
             this.btn_Supprimer.TextColor = System.Drawing.Color.White;
             this.btn_Supprimer.UseVisualStyleBackColor = false;
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
             // dgv_Info
             // 
@@ -240,37 +245,37 @@ namespace Projet_Onssa
             this.dgv_Info.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Info.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Info.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Info.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Info.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Info.DefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Info.EnableHeadersVisualStyles = false;
             this.dgv_Info.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Info.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dgv_Info.Location = new System.Drawing.Point(34, 84);
             this.dgv_Info.Name = "dgv_Info";
             this.dgv_Info.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Info.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Info.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Info.RowHeadersWidth = 4;
             this.dgv_Info.Size = new System.Drawing.Size(376, 230);
             this.dgv_Info.TabIndex = 49;
@@ -309,8 +314,8 @@ namespace Projet_Onssa
         #endregion
 
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private Bunifu.Framework.UI.BunifuDatepicker data_Paiement;
-        private System.Windows.Forms.ComboBox cb_Op;
+        private Bunifu.Framework.UI.BunifuDatepicker date_Op;
+        private System.Windows.Forms.ComboBox cb_Oi;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label Numé;
         private System.Windows.Forms.Label label1;
