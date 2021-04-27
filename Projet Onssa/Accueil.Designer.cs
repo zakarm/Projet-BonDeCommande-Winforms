@@ -43,6 +43,8 @@ namespace Projet_Onssa
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel_submenu = new System.Windows.Forms.Panel();
             this.panel_subsubmenu = new System.Windows.Forms.Panel();
+            this.panel_Commission = new System.Windows.Forms.Panel();
+            this.btn_Co = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Fr = new System.Windows.Forms.Panel();
             this.btn_Fr = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Op = new System.Windows.Forms.Panel();
@@ -71,8 +73,6 @@ namespace Projet_Onssa
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
-            this.btn_Co = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_Commission = new System.Windows.Forms.Panel();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_submenu.SuspendLayout();
@@ -359,6 +359,51 @@ namespace Projet_Onssa
             this.panel_subsubmenu.Size = new System.Drawing.Size(227, 653);
             this.panel_subsubmenu.TabIndex = 1;
             // 
+            // panel_Commission
+            // 
+            this.panel_Commission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Commission.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Commission.Location = new System.Drawing.Point(0, 663);
+            this.panel_Commission.Name = "panel_Commission";
+            this.panel_Commission.Size = new System.Drawing.Size(210, 7);
+            this.panel_Commission.TabIndex = 44;
+            // 
+            // btn_Co
+            // 
+            this.btn_Co.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Co.BorderRadius = 0;
+            this.btn_Co.ButtonText = "Commission";
+            this.btn_Co.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Co.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Co.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Co.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Co.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Co.Iconimage")));
+            this.btn_Co.Iconimage_right = null;
+            this.btn_Co.Iconimage_right_Selected = null;
+            this.btn_Co.Iconimage_Selected = null;
+            this.btn_Co.IconMarginLeft = 0;
+            this.btn_Co.IconMarginRight = 0;
+            this.btn_Co.IconRightVisible = true;
+            this.btn_Co.IconRightZoom = 0D;
+            this.btn_Co.IconVisible = true;
+            this.btn_Co.IconZoom = 45D;
+            this.btn_Co.IsTab = false;
+            this.btn_Co.Location = new System.Drawing.Point(0, 610);
+            this.btn_Co.Name = "btn_Co";
+            this.btn_Co.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Co.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Co.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Co.selected = false;
+            this.btn_Co.Size = new System.Drawing.Size(210, 53);
+            this.btn_Co.TabIndex = 43;
+            this.btn_Co.Text = "Commission";
+            this.btn_Co.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Co.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.btn_Co.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Co.Click += new System.EventHandler(this.btn_Co_Click);
+            // 
             // panel_Fr
             // 
             this.panel_Fr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -447,6 +492,7 @@ namespace Projet_Onssa
             this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Op.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Op.Click += new System.EventHandler(this.btn_Op_Click);
             // 
             // panel_Ov
             // 
@@ -491,6 +537,7 @@ namespace Projet_Onssa
             this.btn_Ov.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ov.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Ov.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Ov.Click += new System.EventHandler(this.btn_Ov_Click);
             // 
             // panel_Pvr
             // 
@@ -535,6 +582,7 @@ namespace Projet_Onssa
             this.btn_Pvr.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pvr.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Pvr.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pvr.Click += new System.EventHandler(this.btn_Pvr_Click);
             // 
             // panel_Oi
             // 
@@ -579,6 +627,7 @@ namespace Projet_Onssa
             this.btn_Oi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Oi.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Oi.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Oi.Click += new System.EventHandler(this.btn_Oi_Click);
             // 
             // panel_Fe
             // 
@@ -623,6 +672,7 @@ namespace Projet_Onssa
             this.btn_Fe.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Fe.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Fe.TextFont = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Fe.Click += new System.EventHandler(this.btn_Fe_Click);
             // 
             // panel_Bc
             // 
@@ -667,6 +717,7 @@ namespace Projet_Onssa
             this.btn_Bc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Bc.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Bc.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Bc.Click += new System.EventHandler(this.btn_Bc_Click);
             // 
             // panel_Mdevis
             // 
@@ -711,6 +762,7 @@ namespace Projet_Onssa
             this.btn_Mdevis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Mdevis.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Mdevis.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mdevis.Click += new System.EventHandler(this.btn_Mdevis_Click);
             // 
             // panel_Pvj
             // 
@@ -755,6 +807,7 @@ namespace Projet_Onssa
             this.btn_Pvj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pvj.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.btn_Pvj.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Pvj.Click += new System.EventHandler(this.btn_Pvj_Click);
             // 
             // panel_Consultation
             // 
@@ -848,7 +901,7 @@ namespace Projet_Onssa
             this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(648, 33);
+            this.bunifuTextbox1.Location = new System.Drawing.Point(668, 33);
             this.bunifuTextbox1.Name = "bunifuTextbox1";
             this.bunifuTextbox1.Size = new System.Drawing.Size(205, 31);
             this.bunifuTextbox1.TabIndex = 0;
@@ -876,7 +929,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 60D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(870, 31);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(890, 31);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -903,51 +956,6 @@ namespace Projet_Onssa
             this.panel_childform.Name = "panel_childform";
             this.panel_childform.Size = new System.Drawing.Size(1000, 653);
             this.panel_childform.TabIndex = 4;
-            // 
-            // btn_Co
-            // 
-            this.btn_Co.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Co.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Co.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Co.BorderRadius = 0;
-            this.btn_Co.ButtonText = "Commission";
-            this.btn_Co.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Co.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Co.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Co.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Co.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Co.Iconimage")));
-            this.btn_Co.Iconimage_right = null;
-            this.btn_Co.Iconimage_right_Selected = null;
-            this.btn_Co.Iconimage_Selected = null;
-            this.btn_Co.IconMarginLeft = 0;
-            this.btn_Co.IconMarginRight = 0;
-            this.btn_Co.IconRightVisible = true;
-            this.btn_Co.IconRightZoom = 0D;
-            this.btn_Co.IconVisible = true;
-            this.btn_Co.IconZoom = 45D;
-            this.btn_Co.IsTab = false;
-            this.btn_Co.Location = new System.Drawing.Point(0, 610);
-            this.btn_Co.Name = "btn_Co";
-            this.btn_Co.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Co.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Co.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Co.selected = false;
-            this.btn_Co.Size = new System.Drawing.Size(210, 53);
-            this.btn_Co.TabIndex = 43;
-            this.btn_Co.Text = "Commission";
-            this.btn_Co.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Co.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.btn_Co.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Co.Click += new System.EventHandler(this.btn_Co_Click);
-            // 
-            // panel_Commission
-            // 
-            this.panel_Commission.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_Commission.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Commission.Location = new System.Drawing.Point(0, 663);
-            this.panel_Commission.Name = "panel_Commission";
-            this.panel_Commission.Size = new System.Drawing.Size(210, 7);
-            this.panel_Commission.TabIndex = 44;
             // 
             // Accueil
             // 

@@ -52,19 +52,14 @@ namespace Projet_Onssa
         {
             if (Program.OG.TypeCompte.Equals("cord"))
             {
-                btn_Consultation.Visible = false;
-                panel_Consultation.Visible = false;
-                btn_Pvj.Visible = false;
-                panel_Pvj.Visible = false;
-                btn_Mdevis.Visible = false;
-                panel_Mdevis.Visible = false;
-                btn_Bc.Visible = false;
-                panel_Bc.Visible = false;
-                btn_Fe.Visible = false;
-                panel_Fe.Visible = false;
-                btn_Oi.Visible = false;
-                panel_Oi.Visible = false;
-                btn_Mamber.Visible = false;
+                btnPcord(true);
+            }
+            else
+            {
+                if(Program.OG.TypeCompte.Equals("csrs"))
+                {
+                    btnPcsrs(true);
+                }
             }
         }
 
@@ -82,11 +77,38 @@ namespace Projet_Onssa
 
         private void btn_Mamber_Click(object sender, EventArgs e)
         {
-            btnM(true);
-            btnP(false);
+            btnMcsrs(true);
+            
         }
 
-        private void btnP(bool s)
+        private void btnPcord(bool s)
+        {
+            btn_Consultation.Visible = false;
+            panel_Consultation.Visible = false;
+            btn_Pvj.Visible = false;
+            panel_Pvj.Visible = false;
+            btn_Mdevis.Visible = false;
+            panel_Mdevis.Visible = false;
+            btn_Bc.Visible = false;
+            panel_Bc.Visible = false;
+            btn_Fe.Visible = false;
+            panel_Fe.Visible = false;
+            btn_Oi.Visible = false;
+            panel_Oi.Visible = false;
+            btn_Mamber.Visible = false;
+            btn_Co.Visible = false;
+            btn_Fr.Visible = false;
+            panel_Fr.Visible = false;
+
+            btn_Pvr.Visible = s;
+            panel_Pvr.Visible = s;
+            btn_Op.Visible = s;
+            panel_Op.Visible = s;
+            btn_Ov.Visible = s;
+            panel_Ov.Visible = s;
+        }
+
+        private void btnPcsrs(bool s)
         {
 
             btn_Consultation.Visible = s;
@@ -107,19 +129,23 @@ namespace Projet_Onssa
             panel_Op.Visible = s;
             btn_Ov.Visible = s;
             panel_Ov.Visible = s;
+            btnMcsrs(false);
         }
-        private void btnM(bool s)
+        private void btnMcsrs(bool s)
         {
             btn_Fr.Visible = s;
             panel_Fr.Visible = s;
             btn_Co.Visible = s;
             panel_Commission.Visible = s;
+            btnPcsrs(false);
         }
 
         private void btn_Gpaiement_Click(object sender, EventArgs e)
         {
-            btnP(true);
-            btnM(false);
+            
+                btnPcsrs(true);
+            
+            
         }
 
         private void btn_Consultation_Click(object sender, EventArgs e)
@@ -135,6 +161,46 @@ namespace Projet_Onssa
         private void btn_Co_Click(object sender, EventArgs e)
         {
             openchildform(new CommissionForm());
+        }
+
+        private void btn_Pvj_Click(object sender, EventArgs e)
+        {
+            openchildform(new PvjForm());
+        }
+
+        private void btn_Mdevis_Click(object sender, EventArgs e)
+        {
+            openchildform(new ModeleDevisForm());
+        }
+
+        private void btn_Bc_Click(object sender, EventArgs e)
+        {
+            openchildform(new BcForm());
+        }
+
+        private void btn_Fe_Click(object sender, EventArgs e)
+        {
+            openchildform(new FeForm());
+        }
+
+        private void btn_Oi_Click(object sender, EventArgs e)
+        {
+            openchildform(new OiForm());
+        }
+
+        private void btn_Pvr_Click(object sender, EventArgs e)
+        {
+            openchildform(new PvrForm());
+        }
+
+        private void btn_Ov_Click(object sender, EventArgs e)
+        {
+            openchildform(new OvForm());
+        }
+
+        private void btn_Op_Click(object sender, EventArgs e)
+        {
+            openchildform(new OpForm());
         }
     }
 }

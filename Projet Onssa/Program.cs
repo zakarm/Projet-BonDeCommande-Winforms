@@ -25,7 +25,7 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PvrForm());
+            Application.Run(new Connexion());
         }
         public static void vider(Control f)
         {
