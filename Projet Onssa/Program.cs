@@ -25,40 +25,8 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Connexion());
+            Application.Run(new PvrForm());
         }
-        public static void vider(Control f)
-        {
-            foreach (Control c in f.Controls)
-            {
-                if (c is TextBox)
-                {
-                    TextBox t = (TextBox)c;
-                    t.Clear();
-                }
-                else
-                {
-                    if (c is ComboBox)
-                    {
-                        ComboBox t = (ComboBox)c;
-                        t.Text = "";
-                    }
-                    else
-                    {
-                        if(c is MaterialTextBox)
-                        {
-                            MaterialTextBox t = (MaterialTextBox)c;
-                            t.Clear();
-                        }
-                       
-                    }
-                }
-                if (c.Controls.Count != 0)
-                {
-                    vider(c);
-                }
-            }
-
-        }
+        
     }
 }

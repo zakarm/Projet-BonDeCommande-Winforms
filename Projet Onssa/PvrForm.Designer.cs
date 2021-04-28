@@ -33,9 +33,6 @@ namespace Projet_Onssa
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.btn_Modifier = new Projet_Onssa.Button_WOC();
-            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
-            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.label3 = new System.Windows.Forms.Label();
             this.dgv_Commission = new System.Windows.Forms.DataGridView();
@@ -48,6 +45,14 @@ namespace Projet_Onssa
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Modifier = new Projet_Onssa.Button_WOC();
+            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
+            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard3.SuspendLayout();
             this.materialCard2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
@@ -70,64 +75,6 @@ namespace Projet_Onssa
             this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(916, 72);
             this.materialCard3.TabIndex = 156;
-            // 
-            // btn_Modifier
-            // 
-            this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Modifier.FlatAppearance.BorderSize = 0;
-            this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(513, 17);
-            this.btn_Modifier.Name = "btn_Modifier";
-            this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Modifier.Size = new System.Drawing.Size(114, 41);
-            this.btn_Modifier.TabIndex = 145;
-            this.btn_Modifier.Text = "MODIFIER";
-            this.btn_Modifier.TextColor = System.Drawing.Color.White;
-            this.btn_Modifier.UseVisualStyleBackColor = false;
-            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
-            // 
-            // btn_Ajouter
-            // 
-            this.btn_Ajouter.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ajouter.FlatAppearance.BorderSize = 0;
-            this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(273, 16);
-            this.btn_Ajouter.Name = "btn_Ajouter";
-            this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.Size = new System.Drawing.Size(114, 41);
-            this.btn_Ajouter.TabIndex = 143;
-            this.btn_Ajouter.Text = "AJOUTER";
-            this.btn_Ajouter.TextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.UseVisualStyleBackColor = false;
-            // 
-            // btn_Supprimer
-            // 
-            this.btn_Supprimer.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Supprimer.FlatAppearance.BorderSize = 0;
-            this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(393, 16);
-            this.btn_Supprimer.Name = "btn_Supprimer";
-            this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.Size = new System.Drawing.Size(114, 41);
-            this.btn_Supprimer.TabIndex = 144;
-            this.btn_Supprimer.Text = "SUPPRIMER";
-            this.btn_Supprimer.TextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.UseVisualStyleBackColor = false;
             // 
             // materialCard2
             // 
@@ -157,6 +104,7 @@ namespace Projet_Onssa
             // 
             // dgv_Commission
             // 
+            this.dgv_Commission.AllowUserToAddRows = false;
             this.dgv_Commission.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
@@ -172,6 +120,12 @@ namespace Projet_Onssa
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_Commission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_Commission.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Num,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
@@ -183,7 +137,7 @@ namespace Projet_Onssa
             this.dgv_Commission.EnableHeadersVisualStyles = false;
             this.dgv_Commission.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Commission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Commission.Location = new System.Drawing.Point(29, 80);
+            this.dgv_Commission.Location = new System.Drawing.Point(17, 80);
             this.dgv_Commission.Name = "dgv_Commission";
             this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -195,7 +149,7 @@ namespace Projet_Onssa
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Commission.RowHeadersWidth = 4;
-            this.dgv_Commission.Size = new System.Drawing.Size(384, 291);
+            this.dgv_Commission.Size = new System.Drawing.Size(410, 291);
             this.dgv_Commission.TabIndex = 50;
             // 
             // materialCard1
@@ -256,6 +210,7 @@ namespace Projet_Onssa
             this.cb_NumPvr.Name = "cb_NumPvr";
             this.cb_NumPvr.Size = new System.Drawing.Size(351, 33);
             this.cb_NumPvr.TabIndex = 162;
+            this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged);
             // 
             // txt_dateString
             // 
@@ -281,7 +236,7 @@ namespace Projet_Onssa
             this.cb_Oi.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Oi.FormattingEnabled = true;
             this.cb_Oi.ItemHeight = 25;
-            this.cb_Oi.Location = new System.Drawing.Point(49, 156);
+            this.cb_Oi.Location = new System.Drawing.Point(47, 156);
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(351, 33);
             this.cb_Oi.TabIndex = 166;
@@ -316,6 +271,91 @@ namespace Projet_Onssa
             this.label2.Size = new System.Drawing.Size(51, 18);
             this.label2.TabIndex = 164;
             this.label2.Text = "DateS";
+            // 
+            // btn_Modifier
+            // 
+            this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Modifier.FlatAppearance.BorderSize = 0;
+            this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Modifier.Location = new System.Drawing.Point(513, 17);
+            this.btn_Modifier.Name = "btn_Modifier";
+            this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Modifier.Size = new System.Drawing.Size(114, 41);
+            this.btn_Modifier.TabIndex = 145;
+            this.btn_Modifier.Text = "MODIFIER";
+            this.btn_Modifier.TextColor = System.Drawing.Color.White;
+            this.btn_Modifier.UseVisualStyleBackColor = false;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
+            // 
+            // btn_Ajouter
+            // 
+            this.btn_Ajouter.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Ajouter.FlatAppearance.BorderSize = 0;
+            this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Ajouter.Location = new System.Drawing.Point(273, 16);
+            this.btn_Ajouter.Name = "btn_Ajouter";
+            this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Ajouter.Size = new System.Drawing.Size(114, 41);
+            this.btn_Ajouter.TabIndex = 143;
+            this.btn_Ajouter.Text = "AJOUTER";
+            this.btn_Ajouter.TextColor = System.Drawing.Color.White;
+            this.btn_Ajouter.UseVisualStyleBackColor = false;
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
+            // 
+            // btn_Supprimer
+            // 
+            this.btn_Supprimer.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Supprimer.FlatAppearance.BorderSize = 0;
+            this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Supprimer.Location = new System.Drawing.Point(393, 16);
+            this.btn_Supprimer.Name = "btn_Supprimer";
+            this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Supprimer.Size = new System.Drawing.Size(114, 41);
+            this.btn_Supprimer.TabIndex = 144;
+            this.btn_Supprimer.Text = "SUPPRIMER";
+            this.btn_Supprimer.TextColor = System.Drawing.Color.White;
+            this.btn_Supprimer.UseVisualStyleBackColor = false;
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
+            // 
+            // Num
+            // 
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nom";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Prénom";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Affectation";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Fonction";
+            this.Column5.Name = "Column5";
             // 
             // PvrForm
             // 
@@ -356,5 +396,10 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgv_Commission;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

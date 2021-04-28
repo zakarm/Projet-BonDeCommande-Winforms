@@ -23,7 +23,9 @@ namespace Projet_Onssa
 
         PVJ pn;
 
-        private void load()
+        //---------------------------------------------Load-form----------------------------------------
+        
+        private void PvjForm_Load(object sender, EventArgs e)
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
@@ -65,7 +67,7 @@ namespace Projet_Onssa
                                  Ville = f.Ville,
 
                              };
-                dgv_Fournisseur_Rep.DataSource = queryy.ToList();
+                dgv_Fournisseur.DataSource = queryy.ToList();
 
                 //-----checkbox---datagrid2
 
@@ -73,14 +75,8 @@ namespace Projet_Onssa
                 ck2.ValueType = typeof(bool);
                 ck2.HeaderText = "Select";
                 ck2.Name = "ck_btn";
-                dgv_Fournisseur_Rep.Columns.Add(ck2);
+                dgv_Fournisseur.Columns.Add(ck2);
             }
-
-        }
-
-        private void PvjForm_Load(object sender, EventArgs e)
-        {
-            load();
         }
 
         private bool check(DataGridView dv, PVJ pv, OnssaModelContainer4 ctx)
@@ -127,8 +123,8 @@ namespace Projet_Onssa
             return test;
         }
 
-        
 
+        //---------------------------------------------Ajouter-----------------------------------------
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -137,7 +133,7 @@ namespace Projet_Onssa
                 Consultation c ;
                 Fournisseur f ;
 
-                if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
+                if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur, pv, ctx) == true)
                 {
                     c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
@@ -166,8 +162,8 @@ namespace Projet_Onssa
 
         }
 
-        
 
+        //---------------------------------------------Supprimer----------------------------------------
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
             try
@@ -187,6 +183,7 @@ namespace Projet_Onssa
             }
         }
 
+        //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
             try
@@ -201,7 +198,7 @@ namespace Projet_Onssa
                     pn.ListFournisseursRepondu.Clear();
                     pn.ListCommissions.Clear();
 
-                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
+                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur, pn, ctx) == true && cb_fchoisie.Text != "")
                     {
                         
                         
@@ -234,6 +231,7 @@ namespace Projet_Onssa
             }
         }
 
+        //---------------------------------------------Recherche-with-Combo----------------------------
         private void cb_NumPvj_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
@@ -259,7 +257,7 @@ namespace Projet_Onssa
                         }
                     }
 
-                    foreach (DataGridViewRow drm in dgv_Fournisseur_Rep.Rows)
+                    foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
                     {
                         drm.Cells["ck_btn"].Value = false;
                         foreach (Fournisseur f in pn.ListFournisseursRepondu)
@@ -282,8 +280,7 @@ namespace Projet_Onssa
             }
         }
 
-        
-
+        //---------------------------------------------Load-Combo-From-gridview-to-Combo----------------
         private void cb_fchoisie_Click(object sender, EventArgs e)
         {
             //dgv_Fournisseur_Rep.CurrentCell = dgv_Fournisseur_Rep.Rows[0].Cells[0];
@@ -295,7 +292,7 @@ namespace Projet_Onssa
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    foreach (DataGridViewRow dr in dgv_Fournisseur_Rep.Rows)
+                    foreach (DataGridViewRow dr in dgv_Fournisseur.Rows)
                     {
                         if ((bool)dr.Cells[4].FormattedValue.Equals(true))
                         {
@@ -313,10 +310,10 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
-
+        //---------------------------------------------Viderr----------------------------------------
         private void viderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Program.vider(this);
+            DeclarationGlobale.vider(this);
         }
 
       

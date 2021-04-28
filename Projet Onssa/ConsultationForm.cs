@@ -17,10 +17,10 @@ namespace Projet_Onssa
         {
             InitializeComponent();
         }
-
         
         Consultation c;
 
+        //---------------------------------------------Load-Form--------------------------------------
         private void ConsultationForm_Load(object sender, EventArgs e)
         {
             using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -45,15 +45,11 @@ namespace Projet_Onssa
                 ck.Name = "ck_btn";
                 dgv_Fournisseur.Columns.Add(ck);
                
-                
-                
             }
 
-            
         }
-       
 
-
+        //-------------------------------Function-Ajout-Fournniseur-Dans-La-List---------------------
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
             bool test = false;
@@ -79,17 +75,12 @@ namespace Projet_Onssa
                 dgv_Fournisseur.ClearSelection();
                 drm.Cells["ck_btn"].Value = false;
 
-
-
-
             }
             
-
-           
-
             return test;
         }
 
+        //---------------------------------------------Ajouter----------------------------------------
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
            
@@ -116,7 +107,6 @@ namespace Projet_Onssa
                     {
                         MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-             
                 }
 
             }
@@ -125,10 +115,10 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
            
-                
         }
 
-        public void recherche()
+        //---------------------------------------------Recherche-with-Combobox--------------------------
+        private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
         {
             try
             {
@@ -136,6 +126,7 @@ namespace Projet_Onssa
                 {
                     c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
                     txtarea_Objet.Text = c.ObjetConsultation;
+
                     foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
                     {
                         drm.Cells["ck_btn"].Value = false;
@@ -149,7 +140,6 @@ namespace Projet_Onssa
                         }
                     }
 
-
                 }
 
             }
@@ -159,11 +149,7 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            recherche();
-        }
-
+       //---------------------------------------------Supprimer----------------------------------------
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
             try
@@ -183,6 +169,7 @@ namespace Projet_Onssa
             
         }
 
+        //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
             try
