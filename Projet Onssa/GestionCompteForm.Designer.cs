@@ -30,18 +30,18 @@ namespace Projet_Onssa
         private void InitializeComponent()
         {
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.btn_Modifier = new Projet_Onssa.Button_WOC();
-            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
-            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialTextBox2 = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_typeccompte = new MaterialSkin.Controls.MaterialTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.materialTextBox1 = new MaterialSkin.Controls.MaterialTextBox();
-            this.cb_NumPvr = new System.Windows.Forms.ComboBox();
-            this.txt_dateString = new MaterialSkin.Controls.MaterialTextBox();
+            this.txt_conf_mot_de_passe = new MaterialSkin.Controls.MaterialTextBox();
+            this.cb_Numcompte = new System.Windows.Forms.ComboBox();
+            this.txt_motdepasse = new MaterialSkin.Controls.MaterialTextBox();
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_Modifier = new Projet_Onssa.Button_WOC();
+            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
+            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.materialCard3.SuspendLayout();
             this.materialCard1.SuspendLayout();
             this.SuspendLayout();
@@ -63,72 +63,15 @@ namespace Projet_Onssa
             this.materialCard3.Size = new System.Drawing.Size(916, 72);
             this.materialCard3.TabIndex = 159;
             // 
-            // btn_Modifier
-            // 
-            this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Modifier.FlatAppearance.BorderSize = 0;
-            this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(513, 17);
-            this.btn_Modifier.Name = "btn_Modifier";
-            this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Modifier.Size = new System.Drawing.Size(114, 41);
-            this.btn_Modifier.TabIndex = 145;
-            this.btn_Modifier.Text = "MODIFIER";
-            this.btn_Modifier.TextColor = System.Drawing.Color.White;
-            this.btn_Modifier.UseVisualStyleBackColor = false;
-            // 
-            // btn_Ajouter
-            // 
-            this.btn_Ajouter.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ajouter.FlatAppearance.BorderSize = 0;
-            this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(273, 16);
-            this.btn_Ajouter.Name = "btn_Ajouter";
-            this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.Size = new System.Drawing.Size(114, 41);
-            this.btn_Ajouter.TabIndex = 143;
-            this.btn_Ajouter.Text = "AJOUTER";
-            this.btn_Ajouter.TextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.UseVisualStyleBackColor = false;
-            // 
-            // btn_Supprimer
-            // 
-            this.btn_Supprimer.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Supprimer.FlatAppearance.BorderSize = 0;
-            this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(393, 16);
-            this.btn_Supprimer.Name = "btn_Supprimer";
-            this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.Size = new System.Drawing.Size(114, 41);
-            this.btn_Supprimer.TabIndex = 144;
-            this.btn_Supprimer.Text = "SUPPRIMER";
-            this.btn_Supprimer.TextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.UseVisualStyleBackColor = false;
-            // 
             // materialCard1
             // 
             this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialTextBox2);
+            this.materialCard1.Controls.Add(this.txt_typeccompte);
             this.materialCard1.Controls.Add(this.label3);
-            this.materialCard1.Controls.Add(this.materialTextBox1);
-            this.materialCard1.Controls.Add(this.cb_NumPvr);
-            this.materialCard1.Controls.Add(this.txt_dateString);
+            this.materialCard1.Controls.Add(this.txt_conf_mot_de_passe);
+            this.materialCard1.Controls.Add(this.cb_Numcompte);
+            this.materialCard1.Controls.Add(this.txt_motdepasse);
             this.materialCard1.Controls.Add(this.Numé);
             this.materialCard1.Controls.Add(this.label1);
             this.materialCard1.Controls.Add(this.label2);
@@ -142,21 +85,21 @@ namespace Projet_Onssa
             this.materialCard1.Size = new System.Drawing.Size(912, 436);
             this.materialCard1.TabIndex = 157;
             // 
-            // materialTextBox2
+            // txt_typeccompte
             // 
-            this.materialTextBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.materialTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox2.Depth = 0;
-            this.materialTextBox2.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox2.Location = new System.Drawing.Point(282, 331);
-            this.materialTextBox2.MaxLength = 50;
-            this.materialTextBox2.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox2.Multiline = false;
-            this.materialTextBox2.Name = "materialTextBox2";
-            this.materialTextBox2.Size = new System.Drawing.Size(349, 50);
-            this.materialTextBox2.TabIndex = 176;
-            this.materialTextBox2.Text = "";
+            this.txt_typeccompte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_typeccompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_typeccompte.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_typeccompte.Depth = 0;
+            this.txt_typeccompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_typeccompte.Location = new System.Drawing.Point(282, 331);
+            this.txt_typeccompte.MaxLength = 50;
+            this.txt_typeccompte.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_typeccompte.Multiline = false;
+            this.txt_typeccompte.Name = "txt_typeccompte";
+            this.txt_typeccompte.Size = new System.Drawing.Size(349, 50);
+            this.txt_typeccompte.TabIndex = 176;
+            this.txt_typeccompte.Text = "";
             // 
             // label3
             // 
@@ -168,50 +111,51 @@ namespace Projet_Onssa
             this.label3.TabIndex = 175;
             this.label3.Text = "Type de compte";
             // 
-            // materialTextBox1
+            // txt_conf_mot_de_passe
             // 
-            this.materialTextBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.materialTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialTextBox1.Depth = 0;
-            this.materialTextBox1.Font = new System.Drawing.Font("Roboto", 12F);
-            this.materialTextBox1.Location = new System.Drawing.Point(282, 242);
-            this.materialTextBox1.MaxLength = 50;
-            this.materialTextBox1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialTextBox1.Multiline = false;
-            this.materialTextBox1.Name = "materialTextBox1";
-            this.materialTextBox1.Size = new System.Drawing.Size(349, 50);
-            this.materialTextBox1.TabIndex = 174;
-            this.materialTextBox1.Text = "";
+            this.txt_conf_mot_de_passe.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_conf_mot_de_passe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_conf_mot_de_passe.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_conf_mot_de_passe.Depth = 0;
+            this.txt_conf_mot_de_passe.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_conf_mot_de_passe.Location = new System.Drawing.Point(282, 242);
+            this.txt_conf_mot_de_passe.MaxLength = 50;
+            this.txt_conf_mot_de_passe.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_conf_mot_de_passe.Multiline = false;
+            this.txt_conf_mot_de_passe.Name = "txt_conf_mot_de_passe";
+            this.txt_conf_mot_de_passe.Size = new System.Drawing.Size(349, 50);
+            this.txt_conf_mot_de_passe.TabIndex = 174;
+            this.txt_conf_mot_de_passe.Text = "";
             // 
-            // cb_NumPvr
+            // cb_Numcompte
             // 
-            this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumPvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 15.75F);
-            this.cb_NumPvr.FormattingEnabled = true;
-            this.cb_NumPvr.ItemHeight = 25;
-            this.cb_NumPvr.Location = new System.Drawing.Point(282, 65);
-            this.cb_NumPvr.Name = "cb_NumPvr";
-            this.cb_NumPvr.Size = new System.Drawing.Size(351, 33);
-            this.cb_NumPvr.TabIndex = 170;
+            this.cb_Numcompte.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Numcompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.cb_Numcompte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Numcompte.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.cb_Numcompte.FormattingEnabled = true;
+            this.cb_Numcompte.ItemHeight = 25;
+            this.cb_Numcompte.Location = new System.Drawing.Point(282, 65);
+            this.cb_Numcompte.Name = "cb_Numcompte";
+            this.cb_Numcompte.Size = new System.Drawing.Size(351, 33);
+            this.cb_Numcompte.TabIndex = 170;
+            this.cb_Numcompte.SelectedIndexChanged += new System.EventHandler(this.cb_Numcompte_SelectedIndexChanged);
             // 
-            // txt_dateString
+            // txt_motdepasse
             // 
-            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dateString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_dateString.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_dateString.Depth = 0;
-            this.txt_dateString.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_dateString.Location = new System.Drawing.Point(282, 147);
-            this.txt_dateString.MaxLength = 50;
-            this.txt_dateString.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_dateString.Multiline = false;
-            this.txt_dateString.Name = "txt_dateString";
-            this.txt_dateString.Size = new System.Drawing.Size(349, 50);
-            this.txt_dateString.TabIndex = 169;
-            this.txt_dateString.Text = "";
+            this.txt_motdepasse.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_motdepasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_motdepasse.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_motdepasse.Depth = 0;
+            this.txt_motdepasse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txt_motdepasse.Location = new System.Drawing.Point(282, 147);
+            this.txt_motdepasse.MaxLength = 50;
+            this.txt_motdepasse.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_motdepasse.Multiline = false;
+            this.txt_motdepasse.Name = "txt_motdepasse";
+            this.txt_motdepasse.Size = new System.Drawing.Size(349, 50);
+            this.txt_motdepasse.TabIndex = 169;
+            this.txt_motdepasse.Text = "";
             // 
             // Numé
             // 
@@ -243,6 +187,66 @@ namespace Projet_Onssa
             this.label2.TabIndex = 172;
             this.label2.Text = "Confirmation du mot de passe";
             // 
+            // btn_Modifier
+            // 
+            this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Modifier.FlatAppearance.BorderSize = 0;
+            this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Modifier.Location = new System.Drawing.Point(513, 17);
+            this.btn_Modifier.Name = "btn_Modifier";
+            this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Modifier.Size = new System.Drawing.Size(114, 41);
+            this.btn_Modifier.TabIndex = 145;
+            this.btn_Modifier.Text = "MODIFIER";
+            this.btn_Modifier.TextColor = System.Drawing.Color.White;
+            this.btn_Modifier.UseVisualStyleBackColor = false;
+            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
+            // 
+            // btn_Ajouter
+            // 
+            this.btn_Ajouter.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Ajouter.FlatAppearance.BorderSize = 0;
+            this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Ajouter.Location = new System.Drawing.Point(273, 16);
+            this.btn_Ajouter.Name = "btn_Ajouter";
+            this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Ajouter.Size = new System.Drawing.Size(114, 41);
+            this.btn_Ajouter.TabIndex = 143;
+            this.btn_Ajouter.Text = "AJOUTER";
+            this.btn_Ajouter.TextColor = System.Drawing.Color.White;
+            this.btn_Ajouter.UseVisualStyleBackColor = false;
+            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
+            // 
+            // btn_Supprimer
+            // 
+            this.btn_Supprimer.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.BorderColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Supprimer.FlatAppearance.BorderSize = 0;
+            this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_Supprimer.Location = new System.Drawing.Point(393, 16);
+            this.btn_Supprimer.Name = "btn_Supprimer";
+            this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Supprimer.Size = new System.Drawing.Size(114, 41);
+            this.btn_Supprimer.TabIndex = 144;
+            this.btn_Supprimer.Text = "SUPPRIMER";
+            this.btn_Supprimer.TextColor = System.Drawing.Color.White;
+            this.btn_Supprimer.UseVisualStyleBackColor = false;
+            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
+            // 
             // GestionCompteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -252,6 +256,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.materialCard1);
             this.Name = "GestionCompteForm";
             this.Text = "GestionCompteForm";
+            this.Load += new System.EventHandler(this.GestionCompteForm_Load);
             this.materialCard3.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
@@ -266,11 +271,11 @@ namespace Projet_Onssa
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox2;
+        private MaterialSkin.Controls.MaterialTextBox txt_typeccompte;
         private System.Windows.Forms.Label label3;
-        private MaterialSkin.Controls.MaterialTextBox materialTextBox1;
-        private System.Windows.Forms.ComboBox cb_NumPvr;
-        private MaterialSkin.Controls.MaterialTextBox txt_dateString;
+        private MaterialSkin.Controls.MaterialTextBox txt_conf_mot_de_passe;
+        private System.Windows.Forms.ComboBox cb_Numcompte;
+        private MaterialSkin.Controls.MaterialTextBox txt_motdepasse;
         private System.Windows.Forms.Label Numé;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
