@@ -29,14 +29,13 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgv_Fournisseur = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,6 +47,7 @@ namespace Projet_Onssa
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.viderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.txtarea_DateString = new MaterialSkin.Controls.MaterialTextBox();
             this.cb_NumPvj = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -55,7 +55,6 @@ namespace Projet_Onssa
             this.cb_NumC = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtarea_DateString = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -70,52 +69,40 @@ namespace Projet_Onssa
             this.dgv_Fournisseur.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Fournisseur.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Fournisseur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_Fournisseur.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
             this.dgv_Fournisseur.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Fournisseur.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Fournisseur.Location = new System.Drawing.Point(766, 299);
+            this.dgv_Fournisseur.Location = new System.Drawing.Point(525, 275);
             this.dgv_Fournisseur.Name = "dgv_Fournisseur";
             this.dgv_Fournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Fournisseur.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Fournisseur.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_Fournisseur.RowHeadersWidth = 4;
             this.dgv_Fournisseur.Size = new System.Drawing.Size(376, 91);
             this.dgv_Fournisseur.TabIndex = 43;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.label5.Location = new System.Drawing.Point(304, 44);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(654, 56);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Procès verbal de jugement";
             // 
             // btn_Supprimer
             // 
@@ -139,7 +126,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.IconVisible = true;
             this.btn_Supprimer.IconZoom = 90D;
             this.btn_Supprimer.IsTab = false;
-            this.btn_Supprimer.Location = new System.Drawing.Point(682, 523);
+            this.btn_Supprimer.Location = new System.Drawing.Point(443, 498);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -175,7 +162,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.IconVisible = true;
             this.btn_Ajouter.IconZoom = 90D;
             this.btn_Ajouter.IsTab = false;
-            this.btn_Ajouter.Location = new System.Drawing.Point(564, 523);
+            this.btn_Ajouter.Location = new System.Drawing.Point(325, 498);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -211,7 +198,7 @@ namespace Projet_Onssa
             this.btn_Modifier.IconVisible = true;
             this.btn_Modifier.IconZoom = 90D;
             this.btn_Modifier.IsTab = false;
-            this.btn_Modifier.Location = new System.Drawing.Point(800, 523);
+            this.btn_Modifier.Location = new System.Drawing.Point(561, 498);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -231,7 +218,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(762, 275);
+            this.label2.Location = new System.Drawing.Point(521, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(183, 21);
             this.label2.TabIndex = 34;
@@ -245,37 +232,37 @@ namespace Projet_Onssa
             this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_Commission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_Commission.EnableHeadersVisualStyles = false;
             this.dgv_Commission.GridColor = System.Drawing.Color.Gainsboro;
             this.dgv_Commission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Commission.Location = new System.Drawing.Point(766, 163);
+            this.dgv_Commission.Location = new System.Drawing.Point(525, 139);
             this.dgv_Commission.Name = "dgv_Commission";
             this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_Commission.RowHeadersWidth = 4;
             this.dgv_Commission.Size = new System.Drawing.Size(376, 97);
             this.dgv_Commission.TabIndex = 48;
@@ -286,7 +273,7 @@ namespace Projet_Onssa
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(762, 136);
+            this.label6.Location = new System.Drawing.Point(521, 112);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(115, 21);
             this.label6.TabIndex = 47;
@@ -298,7 +285,7 @@ namespace Projet_Onssa
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(762, 412);
+            this.label8.Location = new System.Drawing.Point(521, 388);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(152, 21);
             this.label8.TabIndex = 51;
@@ -312,7 +299,7 @@ namespace Projet_Onssa
             this.cb_fchoisie.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_fchoisie.FormattingEnabled = true;
             this.cb_fchoisie.ItemHeight = 19;
-            this.cb_fchoisie.Location = new System.Drawing.Point(766, 436);
+            this.cb_fchoisie.Location = new System.Drawing.Point(525, 412);
             this.cb_fchoisie.Name = "cb_fchoisie";
             this.cb_fchoisie.Size = new System.Drawing.Size(376, 27);
             this.cb_fchoisie.TabIndex = 52;
@@ -357,6 +344,20 @@ namespace Projet_Onssa
             this.materialCard1.Size = new System.Drawing.Size(452, 348);
             this.materialCard1.TabIndex = 150;
             // 
+            // txtarea_DateString
+            // 
+            this.txtarea_DateString.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtarea_DateString.Depth = 0;
+            this.txtarea_DateString.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtarea_DateString.Location = new System.Drawing.Point(42, 184);
+            this.txtarea_DateString.MaxLength = 50;
+            this.txtarea_DateString.MouseState = MaterialSkin.MouseState.OUT;
+            this.txtarea_DateString.Multiline = false;
+            this.txtarea_DateString.Name = "txtarea_DateString";
+            this.txtarea_DateString.Size = new System.Drawing.Size(372, 50);
+            this.txtarea_DateString.TabIndex = 60;
+            this.txtarea_DateString.Text = "";
+            // 
             // cb_NumPvj
             // 
             this.cb_NumPvj.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -389,7 +390,7 @@ namespace Projet_Onssa
             this.date_Pvj.ForeColor = System.Drawing.Color.Black;
             this.date_Pvj.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_Pvj.FormatCustom = null;
-            this.date_Pvj.Location = new System.Drawing.Point(40, 293);
+            this.date_Pvj.Location = new System.Drawing.Point(38, 275);
             this.date_Pvj.Margin = new System.Windows.Forms.Padding(4);
             this.date_Pvj.Name = "date_Pvj";
             this.date_Pvj.Size = new System.Drawing.Size(376, 37);
@@ -402,7 +403,7 @@ namespace Projet_Onssa
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(36, 268);
+            this.label1.Location = new System.Drawing.Point(34, 250);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 21);
             this.label1.TabIndex = 55;
@@ -416,7 +417,7 @@ namespace Projet_Onssa
             this.cb_NumC.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_NumC.FormattingEnabled = true;
             this.cb_NumC.ItemHeight = 19;
-            this.cb_NumC.Location = new System.Drawing.Point(40, 108);
+            this.cb_NumC.Location = new System.Drawing.Point(40, 111);
             this.cb_NumC.Name = "cb_NumC";
             this.cb_NumC.Size = new System.Drawing.Size(376, 27);
             this.cb_NumC.TabIndex = 54;
@@ -427,7 +428,7 @@ namespace Projet_Onssa
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(38, 80);
+            this.label4.Location = new System.Drawing.Point(38, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 21);
             this.label4.TabIndex = 53;
@@ -445,29 +446,6 @@ namespace Projet_Onssa
             this.label3.TabIndex = 51;
             this.label3.Text = "Date S :";
             // 
-            // txtarea_DateString
-            // 
-            this.txtarea_DateString.BorderRadius = 10;
-            this.txtarea_DateString.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtarea_DateString.DefaultText = "";
-            this.txtarea_DateString.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtarea_DateString.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtarea_DateString.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtarea_DateString.DisabledState.Parent = this.txtarea_DateString;
-            this.txtarea_DateString.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtarea_DateString.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtarea_DateString.FocusedState.Parent = this.txtarea_DateString;
-            this.txtarea_DateString.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtarea_DateString.HoverState.Parent = this.txtarea_DateString;
-            this.txtarea_DateString.Location = new System.Drawing.Point(42, 184);
-            this.txtarea_DateString.Name = "txtarea_DateString";
-            this.txtarea_DateString.PasswordChar = '\0';
-            this.txtarea_DateString.PlaceholderText = "";
-            this.txtarea_DateString.SelectedText = "";
-            this.txtarea_DateString.ShadowDecoration.Parent = this.txtarea_DateString;
-            this.txtarea_DateString.Size = new System.Drawing.Size(372, 39);
-            this.txtarea_DateString.TabIndex = 59;
-            // 
             // PvjForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,7 +459,6 @@ namespace Projet_Onssa
             this.Controls.Add(this.dgv_Commission);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.dgv_Fournisseur);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_Supprimer);
             this.Controls.Add(this.btn_Ajouter);
             this.Controls.Add(this.btn_Modifier);
@@ -503,7 +480,6 @@ namespace Projet_Onssa
         #endregion
 
         private System.Windows.Forms.DataGridView dgv_Fournisseur;
-        private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Supprimer;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ajouter;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Modifier;
@@ -515,7 +491,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem viderToolStripMenuItem;
         private MaterialSkin.Controls.MaterialCard materialCard1;
-        private Guna.UI2.WinForms.Guna2TextBox txtarea_DateString;
         private System.Windows.Forms.ComboBox cb_NumPvj;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuDatepicker date_Pvj;
@@ -523,5 +498,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.ComboBox cb_NumC;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private MaterialSkin.Controls.MaterialTextBox txtarea_DateString;
     }
 }

@@ -44,7 +44,7 @@ namespace Projet_Onssa
 
         private void viderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeclarationGlobale.vider(this);
+            //DeclarationGlobale.vider(this);
         }
 
       

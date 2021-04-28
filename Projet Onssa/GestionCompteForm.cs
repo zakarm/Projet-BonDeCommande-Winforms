@@ -60,6 +60,10 @@ namespace Projet_Onssa
                         MessageBox.Show("Ajouté avec succès");
                         cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
                     }
+                    else
+                    {
+                        MessageBox.Show("Confi");
+                    }
                 }
             }
             catch (Exception ex)
@@ -77,13 +81,13 @@ namespace Projet_Onssa
                 {
                     if (txt_motdepasse.Text.Equals(txt_conf_mot_de_passe.Text))
                     {
+                        ctx.Entry(og).State = System.Data.Entity.EntityState.Modified;
                         og.Nom = cb_Numcompte.Text.ToString();
                         og.MotDePasse = txt_motdepasse.Text.ToString();
                         og.TypeCompte = txt_typeccompte.Text.ToString();
                         og.TypeCompte = txt_typeccompte.Text.ToString();
-
                         ctx.SaveChanges();
-                        MessageBox.Show("Modifier avec succès");
+                        MessageBox.Show("Modifié avec succès");
                         cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
                     }
                     else
@@ -98,7 +102,20 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    ctx.Entry(og).State = System.Data.Entity.EntityState.Deleted;
+                    ctx.GestionCompteSet.Remove(og);
+                    ctx.SaveChanges();
+                    cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

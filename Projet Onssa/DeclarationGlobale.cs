@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MaterialSkin;
-using MaterialSkin.Controls;
-using MaterialSkin.Properties;
+using MaterialSkin.Animations;
 using Bunifu.Framework.UI;
 using Bunifu.Framework.Lib;
 using Bunifu.Framework;
 using System.Windows.Forms;
+using MaterialSkin.Controls;
 
 namespace Projet_Onssa
 {
@@ -26,9 +26,9 @@ namespace Projet_Onssa
                 }
                 else
                 {
-                    if (c is ComboBox)
+                    if (c is MaterialTextBox)
                     {
-                        ComboBox t = (ComboBox)c;
+                        MaterialTextBox t = (MaterialTextBox)c;
                         t.Text = "";
                     }
                     else

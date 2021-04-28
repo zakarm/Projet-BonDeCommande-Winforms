@@ -125,5 +125,17 @@ namespace Projet_Onssa
                 Invalidate();
             }
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        private void guna2VTrackBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }

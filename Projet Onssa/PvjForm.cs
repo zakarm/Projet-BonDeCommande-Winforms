@@ -19,6 +19,7 @@ namespace Projet_Onssa
         public PvjForm()
         {
             InitializeComponent();
+
         }
 
         PVJ pn;
@@ -313,7 +314,7 @@ namespace Projet_Onssa
         //---------------------------------------------Viderr----------------------------------------
         private void viderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DeclarationGlobale.vider(this);
+            //DeclarationGlobale.vider(this);
         }
 
       

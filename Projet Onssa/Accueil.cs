@@ -59,6 +59,17 @@ namespace Projet_Onssa
                 if(Program.OG.TypeCompte.Equals("csrs"))
                 {
                     btnPcsrs(true);
+                    btnMcsrs(false);
+                }
+                else
+                {
+                    if(Program.OG.TypeCompte.Equals("dr"))
+                    {
+                        btnMcsrs(false);
+                        btnPcsrs(false);
+                        btnPcord(false);
+                        btn_Gpaiement.Visible = false;
+                    }
                 }
             }
         }
@@ -77,6 +88,7 @@ namespace Projet_Onssa
 
         private void btn_Mamber_Click(object sender, EventArgs e)
         {
+            btnPcsrs(false);
             btnMcsrs(true);
             
         }
@@ -99,6 +111,8 @@ namespace Projet_Onssa
             btn_Co.Visible = false;
             btn_Fr.Visible = false;
             panel_Fr.Visible = false;
+            btn_GestionCompte.Visible = false;
+            btn_Mamber.Visible = false;
 
             btn_Pvr.Visible = s;
             panel_Pvr.Visible = s;
@@ -129,7 +143,6 @@ namespace Projet_Onssa
             panel_Op.Visible = s;
             btn_Ov.Visible = s;
             panel_Ov.Visible = s;
-            btnMcsrs(false);
         }
         private void btnMcsrs(bool s)
         {
@@ -137,70 +150,89 @@ namespace Projet_Onssa
             panel_Fr.Visible = s;
             btn_Co.Visible = s;
             panel_Commission.Visible = s;
-            btnPcsrs(false);
         }
 
         private void btn_Gpaiement_Click(object sender, EventArgs e)
         {
-            
-                btnPcsrs(true);
-            
-            
+            if (Program.OG.TypeCompte.Equals("cord"))
+            {
+                btnPcord(true);
+            }
+            else
+            {
+                if (Program.OG.TypeCompte.Equals("csrs"))
+                {
+                    btnPcsrs(true);
+                    btnMcsrs(false);
+                }
+            }
+
         }
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
             openchildform(new ConsultationForm());
+            label_txt.Text = "Consultation";
         }
 
         private void btn_Fr_Click(object sender, EventArgs e)
         {
             openchildform(new FournisseurForm());
+            label_txt.Text = "Fournniseur";
         }
 
         private void btn_Co_Click(object sender, EventArgs e)
         {
             openchildform(new CommissionForm());
+            label_txt.Text = "Commission";
         }
 
         private void btn_Pvj_Click(object sender, EventArgs e)
         {
             openchildform(new PvjForm());
+            label_txt.Text = "Procès verbal de jugement";
         }
 
         private void btn_Mdevis_Click(object sender, EventArgs e)
         {
             openchildform(new ModeleDevisForm());
+            label_txt.Text = "Modele Devis";
         }
 
         private void btn_Bc_Click(object sender, EventArgs e)
         {
             openchildform(new BcForm());
+            label_txt.Text = "Bon de commande";
         }
 
         private void btn_Fe_Click(object sender, EventArgs e)
         {
             openchildform(new FeForm());
+            label_txt.Text = "Fiche d'engagement";
         }
 
         private void btn_Oi_Click(object sender, EventArgs e)
         {
             openchildform(new OiForm());
+            label_txt.Text = "Ordre d'imputation";
         }
 
         private void btn_Pvr_Click(object sender, EventArgs e)
         {
             openchildform(new PvrForm());
+            label_txt.Text = "Procès verbal de reception";
         }
 
         private void btn_Ov_Click(object sender, EventArgs e)
         {
             openchildform(new OvForm());
+            label_txt.Text = "Ordre de virement";
         }
 
         private void btn_Op_Click(object sender, EventArgs e)
         {
             openchildform(new OpForm());
+            label_txt.Text = "Ordre de paeiment";
         }
     }
 }
