@@ -33,9 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>..\..\..\..\Downloads\Bunifu_UI_v1.52.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -55,6 +60,8 @@
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -94,12 +101,29 @@
     <Compile Include="CommissionForm.Designer.cs">
       <DependentUpon>CommissionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReportConsultation.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportConsultation.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSetReport.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeclarationGlobale.cs" />
     <Compile Include="FeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FeForm.Designer.cs">
       <DependentUpon>FeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureConsultation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectureConsultation.Designer.cs">
+      <DependentUpon>LectureConsultation.cs</DependentUpon>
     </Compile>
     <Compile Include="FournisseurForm.cs">
       <SubType>Form</SubType>
@@ -214,12 +238,6 @@
     <Compile Include="PvrForm.Designer.cs">
       <DependentUpon>PvrForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="test.Designer.cs">
-      <DependentUpon>test.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +249,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CommissionForm.resx">
       <DependentUpon>CommissionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportConsultation.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportConsultation.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FeForm.resx">
       <DependentUpon>FeForm.cs</DependentUpon>
@@ -246,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCompteForm.resx">
       <DependentUpon>GestionCompteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureConsultation.resx">
+      <DependentUpon>LectureConsultation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModeleDevisForm.resx">
       <DependentUpon>ModeleDevisForm.cs</DependentUpon>
@@ -275,13 +300,21 @@
     <EmbeddedResource Include="PvrForm.resx">
       <DependentUpon>PvrForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="test.resx">
-      <DependentUpon>test.cs</DependentUpon>
-    </EmbeddedResource>
     <EntityDeploy Include="OnssaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OnssaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DataSetReport.xsc">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetReport.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetReport.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetReport.xss">
+      <DependentUpon>DataSetReport.xsd</DependentUpon>
+    </None>
     <None Include="OnssaModel.edmx.diagram">
       <DependentUpon>OnssaModel.edmx</DependentUpon>
     </None>
@@ -310,6 +343,7 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="OnssaModel.Context.tt">
