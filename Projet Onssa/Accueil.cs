@@ -232,7 +232,7 @@ namespace Projet_Onssa
         private void btn_Op_Click(object sender, EventArgs e)
         {
             openchildform(new OpForm());
-            label_txt.Text = "Ordre de paeiment";
+            label_txt.Text = "Ordre de paiement";
         }
     }
 }

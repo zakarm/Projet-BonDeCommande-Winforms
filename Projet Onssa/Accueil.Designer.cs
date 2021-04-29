@@ -330,7 +330,7 @@ namespace Projet_Onssa
             // panel_subsubmenu
             // 
             this.panel_subsubmenu.AutoScroll = true;
-            this.panel_subsubmenu.AutoScrollMargin = new System.Drawing.Size(0, 1000);
+            this.panel_subsubmenu.AutoScrollMargin = new System.Drawing.Size(0, 200);
             this.panel_subsubmenu.Controls.Add(this.panel_Commission);
             this.panel_subsubmenu.Controls.Add(this.btn_Co);
             this.panel_subsubmenu.Controls.Add(this.panel_Fr);

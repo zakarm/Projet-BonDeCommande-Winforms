@@ -29,9 +29,9 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtarea_Objet = new System.Windows.Forms.RichTextBox();
@@ -50,22 +50,22 @@ namespace Projet_Onssa
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(441, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 24);
+            this.label2.Size = new System.Drawing.Size(117, 19);
             this.label2.TabIndex = 18;
             this.label2.Text = "Fournisseurs :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(39, 193);
+            this.label3.Location = new System.Drawing.Point(39, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(270, 24);
+            this.label3.Size = new System.Drawing.Size(215, 19);
             this.label3.TabIndex = 19;
             this.label3.Text = "Objet de la Consultation :";
             // 
@@ -75,8 +75,8 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Left)));
             this.txtarea_Objet.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txtarea_Objet.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtarea_Objet.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            this.txtarea_Objet.Location = new System.Drawing.Point(43, 220);
+            this.txtarea_Objet.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txtarea_Objet.Location = new System.Drawing.Point(43, 240);
             this.txtarea_Objet.Name = "txtarea_Objet";
             this.txtarea_Objet.Size = new System.Drawing.Size(358, 159);
             this.txtarea_Objet.TabIndex = 21;
@@ -85,11 +85,11 @@ namespace Projet_Onssa
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(39, 101);
+            this.label4.Location = new System.Drawing.Point(39, 92);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(298, 24);
+            this.label4.Size = new System.Drawing.Size(237, 19);
             this.label4.TabIndex = 23;
             this.label4.Text = "Numéro de la Consultation :";
             // 
@@ -205,12 +205,12 @@ namespace Projet_Onssa
             // 
             this.cb_Num.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cb_Num.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Num.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Num.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.cb_Num.FormattingEnabled = true;
-            this.cb_Num.ItemHeight = 19;
-            this.cb_Num.Location = new System.Drawing.Point(43, 128);
+            this.cb_Num.ItemHeight = 25;
+            this.cb_Num.Location = new System.Drawing.Point(41, 128);
             this.cb_Num.Name = "cb_Num";
-            this.cb_Num.Size = new System.Drawing.Size(360, 27);
+            this.cb_Num.Size = new System.Drawing.Size(360, 33);
             this.cb_Num.TabIndex = 30;
             this.cb_Num.SelectedIndexChanged += new System.EventHandler(this.cb_Num_SelectedIndexChanged);
             // 
@@ -220,7 +220,7 @@ namespace Projet_Onssa
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.label1.Location = new System.Drawing.Point(615, 382);
+            this.label1.Location = new System.Drawing.Point(616, 400);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 17);
             this.label1.TabIndex = 13;
@@ -252,42 +252,42 @@ namespace Projet_Onssa
             // 
             // dgv_Fournisseur
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Fournisseur.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_Fournisseur.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Fournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Fournisseur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Fournisseur.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Fournisseur.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Fournisseur.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_Fournisseur.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dgv_Fournisseur.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Fournisseur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(8)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Fournisseur.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Fournisseur.DoubleBuffered = true;
             this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
-            this.dgv_Fournisseur.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(205)))), ((int)(((byte)(8)))));
+            this.dgv_Fournisseur.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_Fournisseur.Location = new System.Drawing.Point(446, 128);
             this.dgv_Fournisseur.Name = "dgv_Fournisseur";
             this.dgv_Fournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Fournisseur.RowHeadersWidth = 5;
-            this.dgv_Fournisseur.Size = new System.Drawing.Size(432, 251);
+            this.dgv_Fournisseur.Size = new System.Drawing.Size(432, 268);
             this.dgv_Fournisseur.TabIndex = 33;
             // 
             // ConsultationForm

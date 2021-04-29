@@ -342,7 +342,7 @@ namespace Projet_Onssa
             this.bunifuCards3.BackColor = System.Drawing.Color.White;
             this.bunifuCards3.BorderRadius = 50;
             this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuCards3.color = System.Drawing.Color.White;
             this.bunifuCards3.Controls.Add(this.btn_Modifier);
             this.bunifuCards3.Controls.Add(this.btn_Ajouter);
             this.bunifuCards3.Controls.Add(this.btn_Supprimer);

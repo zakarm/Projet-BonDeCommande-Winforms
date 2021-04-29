@@ -122,12 +122,12 @@ namespace Projet_Onssa
             this.txt_Dispo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Dispo.Depth = 0;
             this.txt_Dispo.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Dispo.Location = new System.Drawing.Point(56, 206);
+            this.txt_Dispo.Location = new System.Drawing.Point(34, 326);
             this.txt_Dispo.MaxLength = 50;
             this.txt_Dispo.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Dispo.Multiline = false;
             this.txt_Dispo.Name = "txt_Dispo";
-            this.txt_Dispo.Size = new System.Drawing.Size(353, 50);
+            this.txt_Dispo.Size = new System.Drawing.Size(400, 50);
             this.txt_Dispo.TabIndex = 145;
             this.txt_Dispo.Text = "";
             // 
@@ -138,12 +138,12 @@ namespace Projet_Onssa
             this.txt_engagementDP.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_engagementDP.Depth = 0;
             this.txt_engagementDP.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_engagementDP.Location = new System.Drawing.Point(52, 113);
+            this.txt_engagementDP.Location = new System.Drawing.Point(34, 221);
             this.txt_engagementDP.MaxLength = 50;
             this.txt_engagementDP.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_engagementDP.Multiline = false;
             this.txt_engagementDP.Name = "txt_engagementDP";
-            this.txt_engagementDP.Size = new System.Drawing.Size(353, 50);
+            this.txt_engagementDP.Size = new System.Drawing.Size(400, 50);
             this.txt_engagementDP.TabIndex = 146;
             this.txt_engagementDP.Text = "";
             // 
@@ -155,19 +155,19 @@ namespace Projet_Onssa
             this.cb_Bc.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Bc.FormattingEnabled = true;
             this.cb_Bc.ItemHeight = 25;
-            this.cb_Bc.Location = new System.Drawing.Point(56, 318);
+            this.cb_Bc.Location = new System.Drawing.Point(25, 221);
             this.cb_Bc.Name = "cb_Bc";
-            this.cb_Bc.Size = new System.Drawing.Size(351, 33);
+            this.cb_Bc.Size = new System.Drawing.Size(373, 33);
             this.cb_Bc.TabIndex = 146;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(53, 89);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label7.Location = new System.Drawing.Point(30, 195);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(241, 18);
+            this.label7.Size = new System.Drawing.Size(272, 19);
             this.label7.TabIndex = 142;
             this.label7.Text = "Engagement Depenses Propose";
             // 
@@ -175,10 +175,10 @@ namespace Projet_Onssa
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(53, 288);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label6.Location = new System.Drawing.Point(22, 193);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 18);
+            this.label6.Size = new System.Drawing.Size(169, 19);
             this.label6.TabIndex = 143;
             this.label6.Text = "Bon de commande";
             // 
@@ -186,10 +186,10 @@ namespace Projet_Onssa
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(53, 180);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label4.Location = new System.Drawing.Point(30, 300);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 18);
+            this.label4.Size = new System.Drawing.Size(95, 19);
             this.label4.TabIndex = 144;
             this.label4.Text = "Disponible";
             // 
@@ -201,9 +201,9 @@ namespace Projet_Onssa
             this.cb_NumFe.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.cb_NumFe.FormattingEnabled = true;
             this.cb_NumFe.ItemHeight = 25;
-            this.cb_NumFe.Location = new System.Drawing.Point(34, 123);
+            this.cb_NumFe.Location = new System.Drawing.Point(25, 130);
             this.cb_NumFe.Name = "cb_NumFe";
-            this.cb_NumFe.Size = new System.Drawing.Size(351, 33);
+            this.cb_NumFe.Size = new System.Drawing.Size(373, 33);
             this.cb_NumFe.TabIndex = 140;
             this.cb_NumFe.SelectedIndexChanged += new System.EventHandler(this.cb_NumFe_SelectedIndexChanged);
             // 
@@ -214,12 +214,12 @@ namespace Projet_Onssa
             this.txt_DepensesE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_DepensesE.Depth = 0;
             this.txt_DepensesE.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_DepensesE.Location = new System.Drawing.Point(34, 301);
+            this.txt_DepensesE.Location = new System.Drawing.Point(34, 113);
             this.txt_DepensesE.MaxLength = 50;
             this.txt_DepensesE.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_DepensesE.Multiline = false;
             this.txt_DepensesE.Name = "txt_DepensesE";
-            this.txt_DepensesE.Size = new System.Drawing.Size(353, 50);
+            this.txt_DepensesE.Size = new System.Drawing.Size(400, 50);
             this.txt_DepensesE.TabIndex = 134;
             this.txt_DepensesE.Text = "";
             // 
@@ -227,10 +227,10 @@ namespace Projet_Onssa
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(31, 272);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(30, 87);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 18);
+            this.label3.Size = new System.Drawing.Size(178, 19);
             this.label3.TabIndex = 143;
             this.label3.Text = "Depenses Engagees";
             // 
@@ -241,12 +241,12 @@ namespace Projet_Onssa
             this.txt_Budgetaires.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_Budgetaires.Depth = 0;
             this.txt_Budgetaires.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Budgetaires.Location = new System.Drawing.Point(34, 206);
+            this.txt_Budgetaires.Location = new System.Drawing.Point(26, 312);
             this.txt_Budgetaires.MaxLength = 50;
             this.txt_Budgetaires.MouseState = MaterialSkin.MouseState.OUT;
             this.txt_Budgetaires.Multiline = false;
             this.txt_Budgetaires.Name = "txt_Budgetaires";
-            this.txt_Budgetaires.Size = new System.Drawing.Size(353, 50);
+            this.txt_Budgetaires.Size = new System.Drawing.Size(373, 50);
             this.txt_Budgetaires.TabIndex = 131;
             this.txt_Budgetaires.Text = "";
             // 
@@ -254,21 +254,21 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(31, 88);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(22, 106);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 18);
+            this.label1.Size = new System.Drawing.Size(250, 19);
             this.label1.TabIndex = 141;
-            this.label1.Text = "Num Fiche d\'engagement";
+            this.label1.Text = "Numéro Fiche d\'engagement";
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(31, 179);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(22, 286);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 18);
+            this.label2.Size = new System.Drawing.Size(166, 19);
             this.label2.TabIndex = 142;
             this.label2.Text = "Credits Budgetaires";
             // 
@@ -283,9 +283,9 @@ namespace Projet_Onssa
             this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuCards2.Controls.Add(this.txt_Dispo);
             this.bunifuCards2.Controls.Add(this.txt_engagementDP);
-            this.bunifuCards2.Controls.Add(this.cb_Bc);
+            this.bunifuCards2.Controls.Add(this.txt_DepensesE);
+            this.bunifuCards2.Controls.Add(this.label3);
             this.bunifuCards2.Controls.Add(this.label7);
-            this.bunifuCards2.Controls.Add(this.label6);
             this.bunifuCards2.Controls.Add(this.label4);
             this.bunifuCards2.LeftSahddow = true;
             this.bunifuCards2.Location = new System.Drawing.Point(483, 25);
@@ -304,11 +304,11 @@ namespace Projet_Onssa
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuCards1.Controls.Add(this.cb_NumFe);
-            this.bunifuCards1.Controls.Add(this.txt_DepensesE);
-            this.bunifuCards1.Controls.Add(this.label3);
             this.bunifuCards1.Controls.Add(this.txt_Budgetaires);
+            this.bunifuCards1.Controls.Add(this.cb_Bc);
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.Controls.Add(this.label2);
+            this.bunifuCards1.Controls.Add(this.label6);
             this.bunifuCards1.LeftSahddow = true;
             this.bunifuCards1.Location = new System.Drawing.Point(35, 25);
             this.bunifuCards1.Name = "bunifuCards1";
@@ -324,7 +324,7 @@ namespace Projet_Onssa
             this.bunifuCards3.BackColor = System.Drawing.Color.White;
             this.bunifuCards3.BorderRadius = 50;
             this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuCards3.color = System.Drawing.Color.White;
             this.bunifuCards3.Controls.Add(this.btn_Modifier);
             this.bunifuCards3.Controls.Add(this.btn_Ajouter);
             this.bunifuCards3.Controls.Add(this.btn_Supprimer);

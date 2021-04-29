@@ -29,14 +29,13 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btn_Modifier = new Projet_Onssa.Button_WOC();
+            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
+            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.label3 = new System.Windows.Forms.Label();
-            this.dgv_Commission = new System.Windows.Forms.DataGridView();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label9 = new System.Windows.Forms.Label();
             this.cb_NumPvr = new System.Windows.Forms.ComboBox();
@@ -45,232 +44,15 @@ namespace Projet_Onssa
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btn_Modifier = new Projet_Onssa.Button_WOC();
-            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
-            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.materialCard3.SuspendLayout();
-            this.materialCard2.SuspendLayout();
+            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
+            this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuCards1.SuspendLayout();
+            this.bunifuCards2.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
-            this.materialCard1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // materialCard3
-            // 
-            this.materialCard3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.btn_Modifier);
-            this.materialCard3.Controls.Add(this.btn_Ajouter);
-            this.materialCard3.Controls.Add(this.btn_Supprimer);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(20, 483);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(916, 72);
-            this.materialCard3.TabIndex = 156;
-            // 
-            // materialCard2
-            // 
-            this.materialCard2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard2.Controls.Add(this.label3);
-            this.materialCard2.Controls.Add(this.dgv_Commission);
-            this.materialCard2.Depth = 0;
-            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard2.Location = new System.Drawing.Point(491, 33);
-            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard2.Name = "materialCard2";
-            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard2.Size = new System.Drawing.Size(444, 426);
-            this.materialCard2.TabIndex = 155;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(26, 55);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 18);
-            this.label3.TabIndex = 169;
-            this.label3.Text = "Commissions";
-            // 
-            // dgv_Commission
-            // 
-            this.dgv_Commission.AllowUserToAddRows = false;
-            this.dgv_Commission.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_Commission.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Commission.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Num,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift Light", 12F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgv_Commission.EnableHeadersVisualStyles = false;
-            this.dgv_Commission.GridColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Commission.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.dgv_Commission.Location = new System.Drawing.Point(17, 80);
-            this.dgv_Commission.Name = "dgv_Commission";
-            this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgv_Commission.RowHeadersWidth = 4;
-            this.dgv_Commission.Size = new System.Drawing.Size(410, 291);
-            this.dgv_Commission.TabIndex = 50;
-            // 
-            // materialCard1
-            // 
-            this.materialCard1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.data_Pvr);
-            this.materialCard1.Controls.Add(this.label9);
-            this.materialCard1.Controls.Add(this.cb_NumPvr);
-            this.materialCard1.Controls.Add(this.txt_dateString);
-            this.materialCard1.Controls.Add(this.cb_Oi);
-            this.materialCard1.Controls.Add(this.Numé);
-            this.materialCard1.Controls.Add(this.label1);
-            this.materialCard1.Controls.Add(this.label2);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(19, 33);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(444, 426);
-            this.materialCard1.TabIndex = 154;
-            // 
-            // data_Pvr
-            // 
-            this.data_Pvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.data_Pvr.BorderRadius = 0;
-            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
-            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data_Pvr.FormatCustom = null;
-            this.data_Pvr.Location = new System.Drawing.Point(47, 324);
-            this.data_Pvr.Margin = new System.Windows.Forms.Padding(4);
-            this.data_Pvr.Name = "data_Pvr";
-            this.data_Pvr.Size = new System.Drawing.Size(351, 47);
-            this.data_Pvr.TabIndex = 167;
-            this.data_Pvr.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(46, 300);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(68, 18);
-            this.label9.TabIndex = 168;
-            this.label9.Text = "Date Pvr";
-            // 
-            // cb_NumPvr
-            // 
-            this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumPvr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 15.75F);
-            this.cb_NumPvr.FormattingEnabled = true;
-            this.cb_NumPvr.ItemHeight = 25;
-            this.cb_NumPvr.Location = new System.Drawing.Point(47, 80);
-            this.cb_NumPvr.Name = "cb_NumPvr";
-            this.cb_NumPvr.Size = new System.Drawing.Size(351, 33);
-            this.cb_NumPvr.TabIndex = 162;
-            this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged);
-            // 
-            // txt_dateString
-            // 
-            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dateString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_dateString.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_dateString.Depth = 0;
-            this.txt_dateString.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_dateString.Location = new System.Drawing.Point(49, 230);
-            this.txt_dateString.MaxLength = 50;
-            this.txt_dateString.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_dateString.Multiline = false;
-            this.txt_dateString.Name = "txt_dateString";
-            this.txt_dateString.Size = new System.Drawing.Size(349, 50);
-            this.txt_dateString.TabIndex = 161;
-            this.txt_dateString.Text = "";
-            // 
-            // cb_Oi
-            // 
-            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Oi.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.ItemHeight = 25;
-            this.cb_Oi.Location = new System.Drawing.Point(47, 156);
-            this.cb_Oi.Name = "cb_Oi";
-            this.cb_Oi.Size = new System.Drawing.Size(351, 33);
-            this.cb_Oi.TabIndex = 166;
-            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged);
-            // 
-            // Numé
-            // 
-            this.Numé.AutoSize = true;
-            this.Numé.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.Numé.Location = new System.Drawing.Point(48, 135);
-            this.Numé.Name = "Numé";
-            this.Numé.Size = new System.Drawing.Size(146, 18);
-            this.Numé.TabIndex = 165;
-            this.Numé.Text = "Ordre d\'imputation";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(44, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(294, 18);
-            this.label1.TabIndex = 163;
-            this.label1.Text = "Numéro du Procès verbal de reception";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(52, 209);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 18);
-            this.label2.TabIndex = 164;
-            this.label2.Text = "DateS";
             // 
             // btn_Modifier
             // 
@@ -280,12 +62,12 @@ namespace Projet_Onssa
             this.btn_Modifier.FlatAppearance.BorderSize = 0;
             this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(513, 17);
+            this.btn_Modifier.Location = new System.Drawing.Point(537, 26);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Modifier.Size = new System.Drawing.Size(114, 41);
+            this.btn_Modifier.Size = new System.Drawing.Size(114, 48);
             this.btn_Modifier.TabIndex = 145;
             this.btn_Modifier.Text = "MODIFIER";
             this.btn_Modifier.TextColor = System.Drawing.Color.White;
@@ -300,12 +82,12 @@ namespace Projet_Onssa
             this.btn_Ajouter.FlatAppearance.BorderSize = 0;
             this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(273, 16);
+            this.btn_Ajouter.Location = new System.Drawing.Point(297, 25);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.Size = new System.Drawing.Size(114, 41);
+            this.btn_Ajouter.Size = new System.Drawing.Size(114, 48);
             this.btn_Ajouter.TabIndex = 143;
             this.btn_Ajouter.Text = "AJOUTER";
             this.btn_Ajouter.TextColor = System.Drawing.Color.White;
@@ -320,72 +102,258 @@ namespace Projet_Onssa
             this.btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(393, 16);
+            this.btn_Supprimer.Location = new System.Drawing.Point(417, 25);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.Size = new System.Drawing.Size(114, 41);
+            this.btn_Supprimer.Size = new System.Drawing.Size(114, 48);
             this.btn_Supprimer.TabIndex = 144;
             this.btn_Supprimer.Text = "SUPPRIMER";
             this.btn_Supprimer.TextColor = System.Drawing.Color.White;
             this.btn_Supprimer.UseVisualStyleBackColor = false;
             this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
-            // Num
+            // label3
             // 
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label3.Location = new System.Drawing.Point(26, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(118, 19);
+            this.label3.TabIndex = 169;
+            this.label3.Text = "Commissions";
             // 
-            // Column2
+            // data_Pvr
             // 
-            this.Column2.HeaderText = "Nom";
-            this.Column2.Name = "Column2";
+            this.data_Pvr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.data_Pvr.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.data_Pvr.BorderRadius = 0;
+            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
+            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.data_Pvr.FormatCustom = null;
+            this.data_Pvr.Location = new System.Drawing.Point(48, 311);
+            this.data_Pvr.Margin = new System.Windows.Forms.Padding(4);
+            this.data_Pvr.Name = "data_Pvr";
+            this.data_Pvr.Size = new System.Drawing.Size(351, 47);
+            this.data_Pvr.TabIndex = 167;
+            this.data_Pvr.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
             // 
-            // Column3
+            // label9
             // 
-            this.Column3.HeaderText = "Prénom";
-            this.Column3.Name = "Column3";
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label9.Location = new System.Drawing.Point(47, 287);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 19);
+            this.label9.TabIndex = 168;
+            this.label9.Text = "Date Pvr";
             // 
-            // Column4
+            // cb_NumPvr
             // 
-            this.Column4.HeaderText = "Affectation";
-            this.Column4.Name = "Column4";
+            this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumPvr.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 15.75F);
+            this.cb_NumPvr.FormattingEnabled = true;
+            this.cb_NumPvr.ItemHeight = 25;
+            this.cb_NumPvr.Location = new System.Drawing.Point(48, 67);
+            this.cb_NumPvr.Name = "cb_NumPvr";
+            this.cb_NumPvr.Size = new System.Drawing.Size(351, 33);
+            this.cb_NumPvr.TabIndex = 162;
+            this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged);
             // 
-            // Column5
+            // txt_dateString
             // 
-            this.Column5.HeaderText = "Fonction";
-            this.Column5.Name = "Column5";
+            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_dateString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
+            this.txt_dateString.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_dateString.Depth = 0;
+            this.txt_dateString.Font = new System.Drawing.Font("Roboto", 12F);
+            this.txt_dateString.Location = new System.Drawing.Point(50, 217);
+            this.txt_dateString.MaxLength = 50;
+            this.txt_dateString.MouseState = MaterialSkin.MouseState.OUT;
+            this.txt_dateString.Multiline = false;
+            this.txt_dateString.Name = "txt_dateString";
+            this.txt_dateString.Size = new System.Drawing.Size(349, 50);
+            this.txt_dateString.TabIndex = 161;
+            this.txt_dateString.Text = "";
+            // 
+            // cb_Oi
+            // 
+            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Oi.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Oi.FormattingEnabled = true;
+            this.cb_Oi.ItemHeight = 25;
+            this.cb_Oi.Location = new System.Drawing.Point(48, 143);
+            this.cb_Oi.Name = "cb_Oi";
+            this.cb_Oi.Size = new System.Drawing.Size(351, 33);
+            this.cb_Oi.TabIndex = 166;
+            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged);
+            // 
+            // Numé
+            // 
+            this.Numé.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Numé.AutoSize = true;
+            this.Numé.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.Numé.Location = new System.Drawing.Point(49, 122);
+            this.Numé.Name = "Numé";
+            this.Numé.Size = new System.Drawing.Size(160, 19);
+            this.Numé.TabIndex = 165;
+            this.Numé.Text = "Ordre d\'imputation";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(45, 42);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(329, 19);
+            this.label1.TabIndex = 163;
+            this.label1.Text = "Numéro du Procès verbal de reception";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label2.Location = new System.Drawing.Point(53, 196);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.TabIndex = 164;
+            this.label2.Text = "DateS";
+            // 
+            // bunifuCards1
+            // 
+            this.bunifuCards1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCards1.BackColor = System.Drawing.Color.White;
+            this.bunifuCards1.BorderRadius = 50;
+            this.bunifuCards1.BottomSahddow = true;
+            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuCards1.Controls.Add(this.dgv_Commission);
+            this.bunifuCards1.Controls.Add(this.label3);
+            this.bunifuCards1.LeftSahddow = true;
+            this.bunifuCards1.Location = new System.Drawing.Point(479, 43);
+            this.bunifuCards1.Name = "bunifuCards1";
+            this.bunifuCards1.RightSahddow = true;
+            this.bunifuCards1.ShadowDepth = 20;
+            this.bunifuCards1.Size = new System.Drawing.Size(458, 408);
+            this.bunifuCards1.TabIndex = 170;
+            // 
+            // bunifuCards2
+            // 
+            this.bunifuCards2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.bunifuCards2.BackColor = System.Drawing.Color.White;
+            this.bunifuCards2.BorderRadius = 50;
+            this.bunifuCards2.BottomSahddow = true;
+            this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuCards2.Controls.Add(this.data_Pvr);
+            this.bunifuCards2.Controls.Add(this.label9);
+            this.bunifuCards2.Controls.Add(this.cb_NumPvr);
+            this.bunifuCards2.Controls.Add(this.txt_dateString);
+            this.bunifuCards2.Controls.Add(this.cb_Oi);
+            this.bunifuCards2.Controls.Add(this.Numé);
+            this.bunifuCards2.Controls.Add(this.label2);
+            this.bunifuCards2.Controls.Add(this.label1);
+            this.bunifuCards2.LeftSahddow = true;
+            this.bunifuCards2.Location = new System.Drawing.Point(12, 43);
+            this.bunifuCards2.Name = "bunifuCards2";
+            this.bunifuCards2.RightSahddow = true;
+            this.bunifuCards2.ShadowDepth = 20;
+            this.bunifuCards2.Size = new System.Drawing.Size(458, 408);
+            this.bunifuCards2.TabIndex = 171;
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCards3.BackColor = System.Drawing.Color.White;
+            this.bunifuCards3.BorderRadius = 50;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.White;
+            this.bunifuCards3.Controls.Add(this.btn_Modifier);
+            this.bunifuCards3.Controls.Add(this.btn_Ajouter);
+            this.bunifuCards3.Controls.Add(this.btn_Supprimer);
+            this.bunifuCards3.LeftSahddow = true;
+            this.bunifuCards3.Location = new System.Drawing.Point(12, 457);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(930, 97);
+            this.bunifuCards3.TabIndex = 172;
+            // 
+            // dgv_Commission
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Commission.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_Commission.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_Commission.DoubleBuffered = true;
+            this.dgv_Commission.EnableHeadersVisualStyles = false;
+            this.dgv_Commission.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.dgv_Commission.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_Commission.Location = new System.Drawing.Point(30, 90);
+            this.dgv_Commission.Name = "dgv_Commission";
+            this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Commission.RowHeadersWidth = 5;
+            this.dgv_Commission.Size = new System.Drawing.Size(400, 268);
+            this.dgv_Commission.TabIndex = 170;
             // 
             // PvrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 575);
-            this.Controls.Add(this.materialCard3);
-            this.Controls.Add(this.materialCard2);
-            this.Controls.Add(this.materialCard1);
+            this.Controls.Add(this.bunifuCards3);
+            this.Controls.Add(this.bunifuCards2);
+            this.Controls.Add(this.bunifuCards1);
             this.Name = "PvrForm";
             this.Text = "PvrForm";
             this.Load += new System.EventHandler(this.PvrForm_Load);
-            this.materialCard3.ResumeLayout(false);
-            this.materialCard2.ResumeLayout(false);
-            this.materialCard2.PerformLayout();
+            this.bunifuCards1.ResumeLayout(false);
+            this.bunifuCards1.PerformLayout();
+            this.bunifuCards2.ResumeLayout(false);
+            this.bunifuCards2.PerformLayout();
+            this.bunifuCards3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private MaterialSkin.Controls.MaterialCard materialCard3;
         private Button_WOC btn_Modifier;
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
-        private MaterialSkin.Controls.MaterialCard materialCard2;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private Bunifu.Framework.UI.BunifuDatepicker data_Pvr;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cb_NumPvr;
@@ -395,11 +363,9 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dgv_Commission;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
     }
 }

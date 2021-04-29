@@ -231,9 +231,45 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
+       
+        //---------------------------------------------Load-Combo-From-gridview-to-Combo----------------
+        private void cb_fchoisie_Click(object sender, EventArgs e)
+        {
+            //dgv_Fournisseur_Rep.CurrentCell = dgv_Fournisseur_Rep.Rows[0].Cells[0];
+            try
+            {
+                cb_fchoisie.DataSource = null;
+                cb_fchoisie.Text = "";
+                Dictionary<int, string> test = new Dictionary<int, string>();
+
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    foreach (DataGridViewRow dr in dgv_Fournisseur.Rows)
+                    {
+                        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
+                        {
+                            test.Add(int.Parse(dr.Cells["Num"].FormattedValue.ToString()),dr.Cells["Nom"].FormattedValue.ToString());
+                        }
+                    }
+
+                    cb_fchoisie.ValueMember = "Key";
+                    cb_fchoisie.DisplayMember = "Value";
+                    cb_fchoisie.DataSource = new BindingSource(test, null);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //---------------------------------------------Viderr----------------------------------------
+        private void viderToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //DeclarationGlobale.vider(this);
+        }
 
         //---------------------------------------------Recherche-with-Combo----------------------------
-        private void cb_NumPvj_SelectedIndexChanged(object sender, EventArgs e)
+        private void cb_NumPvj_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -280,43 +316,5 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
-
-        //---------------------------------------------Load-Combo-From-gridview-to-Combo----------------
-        private void cb_fchoisie_Click(object sender, EventArgs e)
-        {
-            //dgv_Fournisseur_Rep.CurrentCell = dgv_Fournisseur_Rep.Rows[0].Cells[0];
-            try
-            {
-                cb_fchoisie.DataSource = null;
-                cb_fchoisie.Text = "";
-                Dictionary<int, string> test = new Dictionary<int, string>();
-
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    foreach (DataGridViewRow dr in dgv_Fournisseur.Rows)
-                    {
-                        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
-                        {
-                            test.Add(int.Parse(dr.Cells["Num"].FormattedValue.ToString()),dr.Cells["Nom"].FormattedValue.ToString());
-                        }
-                    }
-
-                    cb_fchoisie.ValueMember = "Key";
-                    cb_fchoisie.DisplayMember = "Value";
-                    cb_fchoisie.DataSource = new BindingSource(test, null);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //---------------------------------------------Viderr----------------------------------------
-        private void viderToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //DeclarationGlobale.vider(this);
-        }
-
-      
     }
 }
