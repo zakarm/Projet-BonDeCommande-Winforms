@@ -21,7 +21,8 @@ namespace Projet_Onssa
             //var materialSkinManager = MaterialSkinManager.Instance;
             //materialSkinManager.AddFormToManage(this);
             //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            //materialSkinManager.ColorScheme = new ColorScheme(Color.FromArgb(32, 38,50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), TextShade.WHITE);
+            //materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            //materialSkinManager.ColorScheme = new ColorScheme(Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), TextShade.WHITE);
 
         }
 
@@ -47,9 +48,14 @@ namespace Projet_Onssa
 
         private void CommissionForm_Load(object sender, EventArgs e)
         {
-           
+
+            
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
+                cb_Nom.DisplayMember = "Nom";
+                cb_Nom.ValueMember = "IdCommission";
+                cb_Nom.DataSource = ctx.CommissionSet.ToList();
+
                 cb_Nom.DisplayMember = "Nom";
                 cb_Nom.ValueMember = "IdCommission";
                 cb_Nom.DataSource = ctx.CommissionSet.ToList();
@@ -58,26 +64,6 @@ namespace Projet_Onssa
         }
 
       
-       
-
-        private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                c = ctx.CommissionSet.Find(cb_Nom.SelectedValue);
-
-                txt_Prenom.Text = c.Prenom;
-                txt_Fonction.Text = c.Fonction;
-                txt_Affectation.Text = c.Affectation;
-            }
-
-        }
-
-      
-
-        
-
-        
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
@@ -117,7 +103,7 @@ namespace Projet_Onssa
                     ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
                     ctx.CommissionSet.Remove(c);
                     ctx.SaveChanges();
-
+                    MessageBox.Show("Supprimé avec succès");
                     cb_Nom.DataSource = ctx.CommissionSet.ToList();
                 }
 
@@ -156,6 +142,21 @@ namespace Projet_Onssa
                 MessageBox.Show(o.Message);
             }
             remplir_DGV();
+        }
+
+        
+
+
+        private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                c = ctx.CommissionSet.Find(cb_Nom.SelectedValue);
+
+                txt_Prenom.Text = c.Prenom;
+                txt_Fonction.Text = c.Fonction;
+                txt_Affectation.Text = c.Affectation;
+            }
         }
     }
 }

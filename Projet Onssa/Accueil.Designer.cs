@@ -69,11 +69,11 @@ namespace Projet_Onssa
             this.panel_logo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_header = new System.Windows.Forms.Panel();
+            this.label_txt = new System.Windows.Forms.Label();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
-            this.label_txt = new System.Windows.Forms.Label();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_submenu.SuspendLayout();
@@ -895,6 +895,18 @@ namespace Projet_Onssa
             this.panel_header.Size = new System.Drawing.Size(1000, 96);
             this.panel_header.TabIndex = 2;
             // 
+            // label_txt
+            // 
+            this.label_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_txt.AutoSize = true;
+            this.label_txt.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.label_txt.Location = new System.Drawing.Point(44, 25);
+            this.label_txt.Name = "label_txt";
+            this.label_txt.Size = new System.Drawing.Size(159, 44);
+            this.label_txt.TabIndex = 30;
+            this.label_txt.Text = "Accueil";
+            // 
             // bunifuTextbox1
             // 
             this.bunifuTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -959,18 +971,6 @@ namespace Projet_Onssa
             this.panel_childform.Size = new System.Drawing.Size(1000, 653);
             this.panel_childform.TabIndex = 4;
             // 
-            // label_txt
-            // 
-            this.label_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_txt.AutoSize = true;
-            this.label_txt.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.label_txt.Location = new System.Drawing.Point(44, 25);
-            this.label_txt.Name = "label_txt";
-            this.label_txt.Size = new System.Drawing.Size(159, 44);
-            this.label_txt.TabIndex = 30;
-            this.label_txt.Text = "Accueil";
-            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -982,6 +982,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.panel_submenu);
             this.Controls.Add(this.panel6);
             this.Name = "Accueil";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Accueil";
             this.Load += new System.EventHandler(this.Accueil_Load);
             this.panel6.ResumeLayout(false);
