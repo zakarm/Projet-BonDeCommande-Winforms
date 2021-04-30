@@ -70,10 +70,10 @@ namespace Projet_Onssa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_header = new System.Windows.Forms.Panel();
             this.label_txt = new System.Windows.Forms.Label();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_submenu.SuspendLayout();
@@ -885,6 +885,7 @@ namespace Projet_Onssa
             // 
             // panel_header
             // 
+            this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.panel_header.Controls.Add(this.label_txt);
             this.panel_header.Controls.Add(this.bunifuTextbox1);
             this.panel_header.Controls.Add(this.bunifuFlatButton3);
@@ -899,27 +900,29 @@ namespace Projet_Onssa
             // 
             this.label_txt.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_txt.AutoSize = true;
-            this.label_txt.Font = new System.Drawing.Font("Century Gothic", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_txt.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.label_txt.Location = new System.Drawing.Point(44, 25);
+            this.label_txt.Location = new System.Drawing.Point(11, 28);
             this.label_txt.Name = "label_txt";
-            this.label_txt.Size = new System.Drawing.Size(159, 44);
+            this.label_txt.Size = new System.Drawing.Size(114, 32);
             this.label_txt.TabIndex = 30;
             this.label_txt.Text = "Accueil";
             // 
-            // bunifuTextbox1
+            // panel_slide
             // 
-            this.bunifuTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(699, 30);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(205, 31);
-            this.bunifuTextbox1.TabIndex = 0;
-            this.bunifuTextbox1.text = "";
+            this.panel_slide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.panel_slide.Location = new System.Drawing.Point(-237, 92);
+            this.panel_slide.Name = "panel_slide";
+            this.panel_slide.Size = new System.Drawing.Size(1400, 1);
+            this.panel_slide.TabIndex = 0;
+            // 
+            // panel_childform
+            // 
+            this.panel_childform.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_childform.Location = new System.Drawing.Point(282, 96);
+            this.panel_childform.Name = "panel_childform";
+            this.panel_childform.Size = new System.Drawing.Size(1000, 653);
+            this.panel_childform.TabIndex = 4;
             // 
             // bunifuFlatButton3
             // 
@@ -943,7 +946,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 60D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(921, 28);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(920, 30);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -955,21 +958,19 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
             this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // panel_slide
+            // bunifuTextbox1
             // 
-            this.panel_slide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.panel_slide.Location = new System.Drawing.Point(-237, 92);
-            this.panel_slide.Name = "panel_slide";
-            this.panel_slide.Size = new System.Drawing.Size(1400, 1);
-            this.panel_slide.TabIndex = 0;
-            // 
-            // panel_childform
-            // 
-            this.panel_childform.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_childform.Location = new System.Drawing.Point(282, 96);
-            this.panel_childform.Name = "panel_childform";
-            this.panel_childform.Size = new System.Drawing.Size(1000, 653);
-            this.panel_childform.TabIndex = 4;
+            this.bunifuTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
+            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
+            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
+            this.bunifuTextbox1.Location = new System.Drawing.Point(710, 34);
+            this.bunifuTextbox1.Name = "bunifuTextbox1";
+            this.bunifuTextbox1.Size = new System.Drawing.Size(205, 31);
+            this.bunifuTextbox1.TabIndex = 0;
+            this.bunifuTextbox1.text = "";
             // 
             // Accueil
             // 
@@ -1011,9 +1012,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel_childform;
         private System.Windows.Forms.Panel panel_Gpaiement;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Out;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_GestionCompte;
         private System.Windows.Forms.Panel panel_Mamber;
@@ -1043,5 +1042,7 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton btn_Co;
         private System.Windows.Forms.Panel panel_Commission;
         private System.Windows.Forms.Label label_txt;
+        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
     }
 }
