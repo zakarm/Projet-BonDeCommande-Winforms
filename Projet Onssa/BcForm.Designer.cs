@@ -29,97 +29,53 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            this.cb_NumBc = new System.Windows.Forms.ComboBox();
-            this.txt_Delai = new MaterialSkin.Controls.MaterialTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txt_Destination = new MaterialSkin.Controls.MaterialTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.date_Bc = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.cb_Pvj = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.cb_Morasse = new System.Windows.Forms.ComboBox();
+            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_NumBc = new System.Windows.Forms.ComboBox();
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.viderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.menuStrip1.SuspendLayout();
-            this.bunifuCards2.SuspendLayout();
-            this.bunifuCards1.SuspendLayout();
-            this.bunifuCards3.SuspendLayout();
+            this.txt_Destination = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_Delai = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_Morasse = new System.Windows.Forms.ComboBox();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuMetroTextbox4 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cb_Pvj = new System.Windows.Forms.ComboBox();
+            this.date_Bc = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard4 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            this.materialCard3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // cb_NumBc
-            // 
-            this.cb_NumBc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumBc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_NumBc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumBc.Font = new System.Drawing.Font("Roboto", 15.75F);
-            this.cb_NumBc.FormattingEnabled = true;
-            this.cb_NumBc.ItemHeight = 25;
-            this.cb_NumBc.Location = new System.Drawing.Point(40, 84);
-            this.cb_NumBc.Name = "cb_NumBc";
-            this.cb_NumBc.Size = new System.Drawing.Size(351, 33);
-            this.cb_NumBc.TabIndex = 140;
-            this.cb_NumBc.SelectedIndexChanged += new System.EventHandler(this.cb_NumBc_SelectedIndexChanged);
-            // 
-            // txt_Delai
-            // 
-            this.txt_Delai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Delai.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_Delai.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Delai.Depth = 0;
-            this.txt_Delai.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Delai.Location = new System.Drawing.Point(38, 264);
-            this.txt_Delai.MaxLength = 50;
-            this.txt_Delai.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_Delai.Multiline = false;
-            this.txt_Delai.Name = "txt_Delai";
-            this.txt_Delai.Size = new System.Drawing.Size(353, 50);
-            this.txt_Delai.TabIndex = 134;
-            this.txt_Delai.Text = "";
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(37, 243);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 18);
+            this.label3.Size = new System.Drawing.Size(125, 20);
             this.label3.TabIndex = 143;
             this.label3.Text = "Delai Execution ";
-            // 
-            // txt_Destination
-            // 
-            this.txt_Destination.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Destination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_Destination.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_Destination.Depth = 0;
-            this.txt_Destination.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_Destination.Location = new System.Drawing.Point(36, 164);
-            this.txt_Destination.MaxLength = 50;
-            this.txt_Destination.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_Destination.Multiline = false;
-            this.txt_Destination.Name = "txt_Destination";
-            this.txt_Destination.Size = new System.Drawing.Size(353, 50);
-            this.txt_Destination.TabIndex = 131;
-            this.txt_Destination.Text = "";
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(39, 54);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(22, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 18);
+            this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 141;
             this.label1.Text = "Num BC";
             // 
@@ -127,60 +83,21 @@ namespace Projet_Onssa
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(35, 143);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(22, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 18);
+            this.label2.Size = new System.Drawing.Size(90, 20);
             this.label2.TabIndex = 142;
             this.label2.Text = "Destination";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(43, 248);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 18);
-            this.label4.TabIndex = 144;
-            this.label4.Text = "Date";
-            // 
-            // date_Bc
-            // 
-            this.date_Bc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.date_Bc.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.date_Bc.BorderRadius = 0;
-            this.date_Bc.ForeColor = System.Drawing.Color.Black;
-            this.date_Bc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.date_Bc.FormatCustom = null;
-            this.date_Bc.Location = new System.Drawing.Point(44, 272);
-            this.date_Bc.Margin = new System.Windows.Forms.Padding(4);
-            this.date_Bc.Name = "date_Bc";
-            this.date_Bc.Size = new System.Drawing.Size(351, 47);
-            this.date_Bc.TabIndex = 143;
-            this.date_Bc.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
-            // 
-            // cb_Pvj
-            // 
-            this.cb_Pvj.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Pvj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_Pvj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Pvj.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Pvj.FormattingEnabled = true;
-            this.cb_Pvj.ItemHeight = 25;
-            this.cb_Pvj.Location = new System.Drawing.Point(44, 183);
-            this.cb_Pvj.Name = "cb_Pvj";
-            this.cb_Pvj.Size = new System.Drawing.Size(351, 33);
-            this.cb_Pvj.TabIndex = 146;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(43, 63);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(20, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 18);
+            this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 142;
             this.label7.Text = "Code Morasse";
             // 
@@ -188,25 +105,42 @@ namespace Projet_Onssa
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label6.Location = new System.Drawing.Point(43, 162);
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 97);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 18);
+            this.label6.Size = new System.Drawing.Size(209, 20);
             this.label6.TabIndex = 143;
             this.label6.Text = "Procès-verbal de jugement";
             // 
-            // cb_Morasse
+            // bunifuMetroTextbox1
             // 
-            this.cb_Morasse.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.cb_Morasse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Morasse.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Morasse.FormattingEnabled = true;
-            this.cb_Morasse.ItemHeight = 25;
-            this.cb_Morasse.Location = new System.Drawing.Point(44, 89);
-            this.cb_Morasse.Name = "cb_Morasse";
-            this.cb_Morasse.Size = new System.Drawing.Size(351, 33);
-            this.cb_Morasse.TabIndex = 145;
+            this.bunifuMetroTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox1.BorderThickness = 1;
+            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.isPassword = false;
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(25, 36);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.TabIndex = 130;
+            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_NumBc
+            // 
+            this.cb_NumBc.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumBc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumBc.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumBc.FormattingEnabled = true;
+            this.cb_NumBc.Location = new System.Drawing.Point(34, 45);
+            this.cb_NumBc.Name = "cb_NumBc";
+            this.cb_NumBc.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumBc.TabIndex = 144;
+            this.cb_NumBc.SelectedIndexChanged += new System.EventHandler(this.cb_NumBc_SelectedIndexChanged_1);
             // 
             // btn_Modifier
             // 
@@ -217,7 +151,7 @@ namespace Projet_Onssa
             this.btn_Modifier.FlatAppearance.BorderSize = 0;
             this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(539, 28);
+            this.btn_Modifier.Location = new System.Drawing.Point(322, 28);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -238,7 +172,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.FlatAppearance.BorderSize = 0;
             this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(299, 26);
+            this.btn_Ajouter.Location = new System.Drawing.Point(82, 26);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -259,7 +193,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(419, 26);
+            this.btn_Supprimer.Location = new System.Drawing.Point(202, 26);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -271,134 +205,261 @@ namespace Projet_Onssa
             this.btn_Supprimer.UseVisualStyleBackColor = false;
             this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
-            // menuStrip1
+            // txt_Destination
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.viderToolStripMenuItem});
-            this.menuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.Table;
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(984, 25);
-            this.menuStrip1.TabIndex = 148;
-            this.menuStrip1.Text = "menuStrip1";
+            this.txt_Destination.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Destination.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Destination.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Destination.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Destination.BorderThickness = 1;
+            this.txt_Destination.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Destination.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Destination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Destination.isPassword = false;
+            this.txt_Destination.Location = new System.Drawing.Point(25, 115);
+            this.txt_Destination.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Destination.Name = "txt_Destination";
+            this.txt_Destination.Size = new System.Drawing.Size(375, 44);
+            this.txt_Destination.TabIndex = 145;
+            this.txt_Destination.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // viderToolStripMenuItem
+            // txt_Delai
             // 
-            this.viderToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viderToolStripMenuItem.Name = "viderToolStripMenuItem";
-            this.viderToolStripMenuItem.Size = new System.Drawing.Size(53, 21);
-            this.viderToolStripMenuItem.Text = "Vider";
-            this.viderToolStripMenuItem.Click += new System.EventHandler(this.viderToolStripMenuItem_Click);
+            this.txt_Delai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Delai.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Delai.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Delai.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Delai.BorderThickness = 1;
+            this.txt_Delai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Delai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Delai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Delai.isPassword = false;
+            this.txt_Delai.Location = new System.Drawing.Point(26, 196);
+            this.txt_Delai.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Delai.Name = "txt_Delai";
+            this.txt_Delai.Size = new System.Drawing.Size(375, 44);
+            this.txt_Delai.TabIndex = 146;
+            this.txt_Delai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // bunifuCards2
+            // bunifuMetroTextbox2
             // 
-            this.bunifuCards2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox2.BorderThickness = 1;
+            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox2.isPassword = false;
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(21, 42);
+            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox2.TabIndex = 147;
+            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_Morasse
+            // 
+            this.cb_Morasse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Morasse.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Morasse.FormattingEnabled = true;
+            this.cb_Morasse.Location = new System.Drawing.Point(31, 51);
+            this.cb_Morasse.Name = "cb_Morasse";
+            this.cb_Morasse.Size = new System.Drawing.Size(358, 27);
+            this.cb_Morasse.TabIndex = 147;
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderThickness = 1;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(21, 200);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox3.TabIndex = 146;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // bunifuMetroTextbox4
+            // 
+            this.bunifuMetroTextbox4.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox4.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox4.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox4.BorderThickness = 1;
+            this.bunifuMetroTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox4.isPassword = false;
+            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(21, 119);
+            this.bunifuMetroTextbox4.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox4.Name = "bunifuMetroTextbox4";
+            this.bunifuMetroTextbox4.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox4.TabIndex = 145;
+            this.bunifuMetroTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(20, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.TabIndex = 143;
+            this.label5.Text = "Delai Execution ";
+            // 
+            // cb_Pvj
+            // 
+            this.cb_Pvj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Pvj.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Pvj.FormattingEnabled = true;
+            this.cb_Pvj.Location = new System.Drawing.Point(31, 128);
+            this.cb_Pvj.Name = "cb_Pvj";
+            this.cb_Pvj.Size = new System.Drawing.Size(358, 27);
+            this.cb_Pvj.TabIndex = 147;
+            // 
+            // date_Bc
+            // 
+            this.date_Bc.BackColor = System.Drawing.Color.Transparent;
+            this.date_Bc.BorderRadius = 0;
+            this.date_Bc.ForeColor = System.Drawing.Color.Black;
+            this.date_Bc.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date_Bc.FormatCustom = null;
+            this.date_Bc.Location = new System.Drawing.Point(26, 207);
+            this.date_Bc.Name = "date_Bc";
+            this.date_Bc.Size = new System.Drawing.Size(364, 30);
+            this.date_Bc.TabIndex = 148;
+            this.date_Bc.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // materialCard1
+            // 
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.txt_Delai);
+            this.materialCard1.Controls.Add(this.txt_Destination);
+            this.materialCard1.Controls.Add(this.label2);
+            this.materialCard1.Controls.Add(this.cb_NumBc);
+            this.materialCard1.Controls.Add(this.label3);
+            this.materialCard1.Controls.Add(this.bunifuMetroTextbox1);
+            this.materialCard1.Controls.Add(this.label1);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(23, 23);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(422, 280);
+            this.materialCard1.TabIndex = 154;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.date_Bc);
+            this.materialCard2.Controls.Add(this.cb_Pvj);
+            this.materialCard2.Controls.Add(this.label7);
+            this.materialCard2.Controls.Add(this.cb_Morasse);
+            this.materialCard2.Controls.Add(this.label6);
+            this.materialCard2.Controls.Add(this.bunifuMetroTextbox3);
+            this.materialCard2.Controls.Add(this.label5);
+            this.materialCard2.Controls.Add(this.bunifuMetroTextbox2);
+            this.materialCard2.Controls.Add(this.bunifuMetroTextbox4);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(23, 314);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(422, 280);
+            this.materialCard2.TabIndex = 155;
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCards2.BackColor = System.Drawing.Color.White;
-            this.bunifuCards2.BorderRadius = 50;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuCards2.Controls.Add(this.date_Bc);
-            this.bunifuCards2.Controls.Add(this.cb_Pvj);
-            this.bunifuCards2.Controls.Add(this.label7);
-            this.bunifuCards2.Controls.Add(this.label6);
-            this.bunifuCards2.Controls.Add(this.cb_Morasse);
-            this.bunifuCards2.Controls.Add(this.label4);
-            this.bunifuCards2.LeftSahddow = true;
-            this.bunifuCards2.Location = new System.Drawing.Point(495, 46);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(465, 434);
-            this.bunifuCards2.TabIndex = 149;
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.btn_Supprimer);
+            this.materialCard3.Controls.Add(this.btn_Ajouter);
+            this.materialCard3.Controls.Add(this.btn_Modifier);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(455, 490);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(516, 104);
+            this.materialCard3.TabIndex = 156;
             // 
-            // bunifuCards1
+            // materialCard4
             // 
-            this.bunifuCards1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialCard4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
-            this.bunifuCards1.BorderRadius = 50;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuCards1.Controls.Add(this.cb_NumBc);
-            this.bunifuCards1.Controls.Add(this.txt_Delai);
-            this.bunifuCards1.Controls.Add(this.label3);
-            this.bunifuCards1.Controls.Add(this.txt_Destination);
-            this.bunifuCards1.Controls.Add(this.label1);
-            this.bunifuCards1.Controls.Add(this.label2);
-            this.bunifuCards1.LeftSahddow = true;
-            this.bunifuCards1.Location = new System.Drawing.Point(21, 46);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(465, 434);
-            this.bunifuCards1.TabIndex = 150;
-            // 
-            // bunifuCards3
-            // 
-            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCards3.BackColor = System.Drawing.Color.White;
-            this.bunifuCards3.BorderRadius = 50;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.White;
-            this.bunifuCards3.Controls.Add(this.btn_Modifier);
-            this.bunifuCards3.Controls.Add(this.btn_Ajouter);
-            this.bunifuCards3.Controls.Add(this.btn_Supprimer);
-            this.bunifuCards3.LeftSahddow = true;
-            this.bunifuCards3.Location = new System.Drawing.Point(21, 488);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(945, 97);
-            this.bunifuCards3.TabIndex = 151;
+            this.materialCard4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard4.Depth = 0;
+            this.materialCard4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard4.Location = new System.Drawing.Point(455, 23);
+            this.materialCard4.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard4.Name = "materialCard4";
+            this.materialCard4.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard4.Size = new System.Drawing.Size(516, 454);
+            this.materialCard4.TabIndex = 155;
             // 
             // BcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(984, 614);
-            this.Controls.Add(this.bunifuCards3);
-            this.Controls.Add(this.bunifuCards1);
-            this.Controls.Add(this.bunifuCards2);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.materialCard4);
+            this.Controls.Add(this.materialCard3);
+            this.Controls.Add(this.materialCard2);
+            this.Controls.Add(this.materialCard1);
             this.Name = "BcForm";
             this.Text = "BcForm";
             this.Load += new System.EventHandler(this.BcForm_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            this.bunifuCards2.ResumeLayout(false);
-            this.bunifuCards2.PerformLayout();
-            this.bunifuCards1.ResumeLayout(false);
-            this.bunifuCards1.PerformLayout();
-            this.bunifuCards3.ResumeLayout(false);
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
+            this.materialCard3.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cb_NumBc;
-        private MaterialSkin.Controls.MaterialTextBox txt_Destination;
-        private MaterialSkin.Controls.MaterialTextBox txt_Delai;
-        private Bunifu.Framework.UI.BunifuDatepicker date_Bc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cb_Pvj;
-        private System.Windows.Forms.ComboBox cb_Morasse;
         private Button_WOC btn_Modifier;
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem viderToolStripMenuItem;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
+        private System.Windows.Forms.ComboBox cb_NumBc;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Delai;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Destination;
+        private System.Windows.Forms.ComboBox cb_Morasse;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private Bunifu.Framework.UI.BunifuDatepicker date_Bc;
+        private System.Windows.Forms.ComboBox cb_Pvj;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox4;
+        private System.Windows.Forms.Label label5;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialCard materialCard3;
+        private MaterialSkin.Controls.MaterialCard materialCard4;
     }
 }

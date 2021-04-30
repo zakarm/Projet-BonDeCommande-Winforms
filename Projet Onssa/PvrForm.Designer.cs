@@ -36,22 +36,25 @@ namespace Projet_Onssa
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.label3 = new System.Windows.Forms.Label();
-            this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.cb_NumPvr = new System.Windows.Forms.ComboBox();
-            this.txt_dateString = new MaterialSkin.Controls.MaterialTextBox();
-            this.cb_Oi = new System.Windows.Forms.ComboBox();
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bunifuCards1 = new Bunifu.Framework.UI.BunifuCards();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards3 = new Bunifu.Framework.UI.BunifuCards();
-            this.bunifuCards1.SuspendLayout();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.txt_dateString = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_Destination = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_NumPvr = new System.Windows.Forms.ComboBox();
+            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_Oi = new System.Windows.Forms.ComboBox();
+            this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
-            this.bunifuCards2.SuspendLayout();
-            this.bunifuCards3.SuspendLayout();
+            this.materialCard1.SuspendLayout();
+            this.materialCard2.SuspendLayout();
+            this.materialCard3.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Modifier
@@ -62,7 +65,7 @@ namespace Projet_Onssa
             this.btn_Modifier.FlatAppearance.BorderSize = 0;
             this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(537, 26);
+            this.btn_Modifier.Location = new System.Drawing.Point(271, 12);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -82,7 +85,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.FlatAppearance.BorderSize = 0;
             this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(297, 25);
+            this.btn_Ajouter.Location = new System.Drawing.Point(31, 11);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -102,7 +105,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(417, 25);
+            this.btn_Supprimer.Location = new System.Drawing.Point(151, 11);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -117,91 +120,32 @@ namespace Projet_Onssa
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(26, 54);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(11, 25);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 19);
+            this.label3.Size = new System.Drawing.Size(113, 21);
             this.label3.TabIndex = 169;
             this.label3.Text = "Commissions";
-            // 
-            // data_Pvr
-            // 
-            this.data_Pvr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.data_Pvr.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.data_Pvr.BorderRadius = 0;
-            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
-            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data_Pvr.FormatCustom = null;
-            this.data_Pvr.Location = new System.Drawing.Point(48, 311);
-            this.data_Pvr.Margin = new System.Windows.Forms.Padding(4);
-            this.data_Pvr.Name = "data_Pvr";
-            this.data_Pvr.Size = new System.Drawing.Size(351, 47);
-            this.data_Pvr.TabIndex = 167;
-            this.data_Pvr.Value = new System.DateTime(2021, 4, 24, 15, 0, 22, 282);
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(47, 287);
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(23, 339);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 19);
+            this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 168;
             this.label9.Text = "Date Pvr";
-            // 
-            // cb_NumPvr
-            // 
-            this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumPvr.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 15.75F);
-            this.cb_NumPvr.FormattingEnabled = true;
-            this.cb_NumPvr.ItemHeight = 25;
-            this.cb_NumPvr.Location = new System.Drawing.Point(48, 67);
-            this.cb_NumPvr.Name = "cb_NumPvr";
-            this.cb_NumPvr.Size = new System.Drawing.Size(351, 33);
-            this.cb_NumPvr.TabIndex = 162;
-            this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged);
-            // 
-            // txt_dateString
-            // 
-            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dateString.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
-            this.txt_dateString.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_dateString.Depth = 0;
-            this.txt_dateString.Font = new System.Drawing.Font("Roboto", 12F);
-            this.txt_dateString.Location = new System.Drawing.Point(50, 217);
-            this.txt_dateString.MaxLength = 50;
-            this.txt_dateString.MouseState = MaterialSkin.MouseState.OUT;
-            this.txt_dateString.Multiline = false;
-            this.txt_dateString.Name = "txt_dateString";
-            this.txt_dateString.Size = new System.Drawing.Size(349, 50);
-            this.txt_dateString.TabIndex = 161;
-            this.txt_dateString.Text = "";
-            // 
-            // cb_Oi
-            // 
-            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Oi.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.ItemHeight = 25;
-            this.cb_Oi.Location = new System.Drawing.Point(48, 143);
-            this.cb_Oi.Name = "cb_Oi";
-            this.cb_Oi.Size = new System.Drawing.Size(351, 33);
-            this.cb_Oi.TabIndex = 166;
-            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged);
             // 
             // Numé
             // 
             this.Numé.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Numé.AutoSize = true;
-            this.Numé.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
-            this.Numé.Location = new System.Drawing.Point(49, 122);
+            this.Numé.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Numé.Location = new System.Drawing.Point(20, 156);
             this.Numé.Name = "Numé";
-            this.Numé.Size = new System.Drawing.Size(160, 19);
+            this.Numé.Size = new System.Drawing.Size(168, 21);
             this.Numé.TabIndex = 165;
             this.Numé.Text = "Ordre d\'imputation";
             // 
@@ -209,10 +153,10 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(45, 42);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(16, 67);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(329, 19);
+            this.label1.Size = new System.Drawing.Size(335, 21);
             this.label1.TabIndex = 163;
             this.label1.Text = "Numéro du Procès verbal de reception";
             // 
@@ -220,37 +164,19 @@ namespace Projet_Onssa
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(53, 196);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(20, 247);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 19);
+            this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 164;
             this.label2.Text = "DateS";
-            // 
-            // bunifuCards1
-            // 
-            this.bunifuCards1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCards1.BackColor = System.Drawing.Color.White;
-            this.bunifuCards1.BorderRadius = 50;
-            this.bunifuCards1.BottomSahddow = true;
-            this.bunifuCards1.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuCards1.Controls.Add(this.dgv_Commission);
-            this.bunifuCards1.Controls.Add(this.label3);
-            this.bunifuCards1.LeftSahddow = true;
-            this.bunifuCards1.Location = new System.Drawing.Point(479, 43);
-            this.bunifuCards1.Name = "bunifuCards1";
-            this.bunifuCards1.RightSahddow = true;
-            this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(458, 408);
-            this.bunifuCards1.TabIndex = 170;
             // 
             // dgv_Commission
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Commission.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
@@ -279,73 +205,201 @@ namespace Projet_Onssa
             this.dgv_Commission.EnableHeadersVisualStyles = false;
             this.dgv_Commission.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Commission.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Commission.Location = new System.Drawing.Point(30, 90);
+            this.dgv_Commission.Location = new System.Drawing.Point(12, 52);
             this.dgv_Commission.Name = "dgv_Commission";
             this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Commission.RowHeadersWidth = 5;
-            this.dgv_Commission.Size = new System.Drawing.Size(400, 268);
+            this.dgv_Commission.Size = new System.Drawing.Size(484, 491);
             this.dgv_Commission.TabIndex = 170;
             // 
-            // bunifuCards2
+            // materialCard1
             // 
-            this.bunifuCards2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.bunifuCards2.BackColor = System.Drawing.Color.White;
-            this.bunifuCards2.BorderRadius = 50;
-            this.bunifuCards2.BottomSahddow = true;
-            this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.bunifuCards2.Controls.Add(this.data_Pvr);
-            this.bunifuCards2.Controls.Add(this.label9);
-            this.bunifuCards2.Controls.Add(this.cb_NumPvr);
-            this.bunifuCards2.Controls.Add(this.txt_dateString);
-            this.bunifuCards2.Controls.Add(this.cb_Oi);
-            this.bunifuCards2.Controls.Add(this.Numé);
-            this.bunifuCards2.Controls.Add(this.label2);
-            this.bunifuCards2.Controls.Add(this.label1);
-            this.bunifuCards2.LeftSahddow = true;
-            this.bunifuCards2.Location = new System.Drawing.Point(12, 43);
-            this.bunifuCards2.Name = "bunifuCards2";
-            this.bunifuCards2.RightSahddow = true;
-            this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(458, 408);
-            this.bunifuCards2.TabIndex = 171;
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.data_Pvr);
+            this.materialCard1.Controls.Add(this.bunifuMetroTextbox3);
+            this.materialCard1.Controls.Add(this.cb_Oi);
+            this.materialCard1.Controls.Add(this.txt_dateString);
+            this.materialCard1.Controls.Add(this.txt_Destination);
+            this.materialCard1.Controls.Add(this.cb_NumPvr);
+            this.materialCard1.Controls.Add(this.bunifuMetroTextbox1);
+            this.materialCard1.Controls.Add(this.label9);
+            this.materialCard1.Controls.Add(this.label1);
+            this.materialCard1.Controls.Add(this.Numé);
+            this.materialCard1.Controls.Add(this.label2);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(12, 9);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(422, 465);
+            this.materialCard1.TabIndex = 169;
             // 
-            // bunifuCards3
+            // txt_dateString
             // 
-            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_dateString.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_dateString.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_dateString.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_dateString.BorderThickness = 1;
+            this.txt_dateString.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_dateString.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_dateString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_dateString.isPassword = false;
+            this.txt_dateString.Location = new System.Drawing.Point(21, 270);
+            this.txt_dateString.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dateString.Name = "txt_dateString";
+            this.txt_dateString.Size = new System.Drawing.Size(375, 44);
+            this.txt_dateString.TabIndex = 146;
+            this.txt_dateString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txt_Destination
+            // 
+            this.txt_Destination.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Destination.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Destination.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Destination.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Destination.BorderThickness = 1;
+            this.txt_Destination.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Destination.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Destination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Destination.isPassword = false;
+            this.txt_Destination.Location = new System.Drawing.Point(20, 178);
+            this.txt_Destination.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Destination.Name = "txt_Destination";
+            this.txt_Destination.Size = new System.Drawing.Size(375, 44);
+            this.txt_Destination.TabIndex = 145;
+            this.txt_Destination.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_NumPvr
+            // 
+            this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumPvr.FormattingEnabled = true;
+            this.cb_NumPvr.Location = new System.Drawing.Point(29, 98);
+            this.cb_NumPvr.Name = "cb_NumPvr";
+            this.cb_NumPvr.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumPvr.TabIndex = 144;
+            this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged_1);
+            // 
+            // bunifuMetroTextbox1
+            // 
+            this.bunifuMetroTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox1.BorderThickness = 1;
+            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox1.isPassword = false;
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(20, 89);
+            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.TabIndex = 130;
+            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_Oi
+            // 
+            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Oi.FormattingEnabled = true;
+            this.cb_Oi.Location = new System.Drawing.Point(27, 188);
+            this.cb_Oi.Name = "cb_Oi";
+            this.cb_Oi.Size = new System.Drawing.Size(358, 27);
+            this.cb_Oi.TabIndex = 164;
+            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged_1);
+            // 
+            // data_Pvr
+            // 
+            this.data_Pvr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.data_Pvr.BackColor = System.Drawing.Color.Transparent;
+            this.data_Pvr.BorderRadius = 0;
+            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
+            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.data_Pvr.FormatCustom = null;
+            this.data_Pvr.Location = new System.Drawing.Point(27, 369);
+            this.data_Pvr.Name = "data_Pvr";
+            this.data_Pvr.Size = new System.Drawing.Size(364, 30);
+            this.data_Pvr.TabIndex = 169;
+            this.data_Pvr.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderThickness = 1;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(22, 362);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox3.TabIndex = 168;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // materialCard2
+            // 
+            this.materialCard2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.btn_Modifier);
+            this.materialCard2.Controls.Add(this.btn_Supprimer);
+            this.materialCard2.Controls.Add(this.btn_Ajouter);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(12, 480);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(422, 85);
+            this.materialCard2.TabIndex = 170;
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuCards3.BackColor = System.Drawing.Color.White;
-            this.bunifuCards3.BorderRadius = 50;
-            this.bunifuCards3.BottomSahddow = true;
-            this.bunifuCards3.color = System.Drawing.Color.White;
-            this.bunifuCards3.Controls.Add(this.btn_Modifier);
-            this.bunifuCards3.Controls.Add(this.btn_Ajouter);
-            this.bunifuCards3.Controls.Add(this.btn_Supprimer);
-            this.bunifuCards3.LeftSahddow = true;
-            this.bunifuCards3.Location = new System.Drawing.Point(12, 457);
-            this.bunifuCards3.Name = "bunifuCards3";
-            this.bunifuCards3.RightSahddow = true;
-            this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(930, 97);
-            this.bunifuCards3.TabIndex = 172;
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.dgv_Commission);
+            this.materialCard3.Controls.Add(this.label3);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(444, 9);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(506, 556);
+            this.materialCard3.TabIndex = 171;
             // 
             // PvrForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(954, 575);
-            this.Controls.Add(this.bunifuCards3);
-            this.Controls.Add(this.bunifuCards2);
-            this.Controls.Add(this.bunifuCards1);
+            this.Controls.Add(this.materialCard3);
+            this.Controls.Add(this.materialCard2);
+            this.Controls.Add(this.materialCard1);
             this.Name = "PvrForm";
             this.Text = "PvrForm";
             this.Load += new System.EventHandler(this.PvrForm_Load);
-            this.bunifuCards1.ResumeLayout(false);
-            this.bunifuCards1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
-            this.bunifuCards2.ResumeLayout(false);
-            this.bunifuCards2.PerformLayout();
-            this.bunifuCards3.ResumeLayout(false);
+            this.materialCard1.ResumeLayout(false);
+            this.materialCard1.PerformLayout();
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard3.ResumeLayout(false);
+            this.materialCard3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,18 +408,21 @@ namespace Projet_Onssa
         private Button_WOC btn_Modifier;
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
-        private Bunifu.Framework.UI.BunifuDatepicker data_Pvr;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cb_NumPvr;
-        private MaterialSkin.Controls.MaterialTextBox txt_dateString;
-        private System.Windows.Forms.ComboBox cb_Oi;
         private System.Windows.Forms.Label Numé;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards1;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards2;
-        private Bunifu.Framework.UI.BunifuCards bunifuCards3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
+        private MaterialSkin.Controls.MaterialCard materialCard1;
+        private System.Windows.Forms.ComboBox cb_Oi;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_dateString;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Destination;
+        private System.Windows.Forms.ComboBox cb_NumPvr;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuDatepicker data_Pvr;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private MaterialSkin.Controls.MaterialCard materialCard3;
     }
 }

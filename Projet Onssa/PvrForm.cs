@@ -73,87 +73,9 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_Oi_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                dgv_Commission.Rows.Clear();
+       
 
-                if (dgv_Commission.Columns.Count <= 5)
-                {
-                    DataGridViewCheckBoxColumn ck2 = new DataGridViewCheckBoxColumn();
-                    ck2.ValueType = typeof(bool);
-                    ck2.HeaderText = "Select";
-                    ck2.Name = "ck_btn";
-                    dgv_Commission.Columns.Add(ck2);
-                }
-
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    var query = from oi in ctx.OISet
-                                join fe in ctx.FESet on oi.InfoFE.IdFE equals fe.IdFE
-                                join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC
-                                join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
-                                where oi.IdOI == (int)cb_Oi.SelectedValue
-                                select pvj.IdPVJ;
-
-                    int idpvj = int.Parse(query.FirstOrDefault().ToString());
-
-                    foreach (PVJ p in ctx.PVJSet)
-                    {
-                        if (p.IdPVJ == idpvj)
-                        {
-                            foreach (Commission c in p.ListCommissions)
-                            {
-                                dgv_Commission.Rows.Add(c.IdCommission, c.Nom, c.Prenom, c.Affectation, c.Fonction);
-                            }
-                            break;
-                        }
-
-                    }
-
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void cb_NumPvr_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            try
-            {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
-                    txt_dateString.Text = p.DateString;
-                    data_Pvr.Value = p.DatePVR;
-                    cb_Oi.SelectedValue = p.InfoOI.IdOI;
-                    cb_NumPvr.SelectedValue = p.IdPVR;
-
-                    foreach (DataGridViewRow drm in dgv_Commission.Rows)
-                    {
-                        drm.Cells["ck_btn"].Value = false;
-                        foreach (Commission m in p.ListCommission)
-                        {
-                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == m.IdCommission)
-                            {
-                                drm.Cells["ck_btn"].Value = true;
-
-                            }
-                        }
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
 
         private bool check(PVR pvr, OnssaModelContainer4 ctx)
         {
@@ -239,6 +161,85 @@ namespace Projet_Onssa
             }
         }
 
-        
+        private void cb_NumPvr_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
+                    txt_dateString.Text = p.DateString;
+                    data_Pvr.Value = p.DatePVR;
+                    cb_Oi.SelectedValue = p.InfoOI.IdOI;
+                    cb_NumPvr.SelectedValue = p.IdPVR;
+
+                    foreach (DataGridViewRow drm in dgv_Commission.Rows)
+                    {
+                        drm.Cells["ck_btn"].Value = false;
+                        foreach (Commission m in p.ListCommission)
+                        {
+                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == m.IdCommission)
+                            {
+                                drm.Cells["ck_btn"].Value = true;
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void cb_Oi_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                dgv_Commission.Rows.Clear();
+
+                if (dgv_Commission.Columns.Count <= 5)
+                {
+                    DataGridViewCheckBoxColumn ck2 = new DataGridViewCheckBoxColumn();
+                    ck2.ValueType = typeof(bool);
+                    ck2.HeaderText = "Select";
+                    ck2.Name = "ck_btn";
+                    dgv_Commission.Columns.Add(ck2);
+                }
+
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    var query = from oi in ctx.OISet
+                                join fe in ctx.FESet on oi.InfoFE.IdFE equals fe.IdFE
+                                join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC
+                                join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
+                                where oi.IdOI == (int)cb_Oi.SelectedValue
+                                select pvj.IdPVJ;
+
+                    int idpvj = int.Parse(query.FirstOrDefault().ToString());
+
+                    foreach (PVJ p in ctx.PVJSet)
+                    {
+                        if (p.IdPVJ == idpvj)
+                        {
+                            foreach (Commission c in p.ListCommissions)
+                            {
+                                dgv_Commission.Rows.Add(c.IdCommission, c.Nom, c.Prenom, c.Affectation, c.Fonction);
+                            }
+                            break;
+                        }
+
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

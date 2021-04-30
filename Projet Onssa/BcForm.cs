@@ -106,26 +106,7 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_NumBc_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                using(OnssaModelContainer4 ctx =new OnssaModelContainer4())
-                {
-                    bc = ctx.BCSet.Find(cb_NumBc.SelectedValue);
-                    txt_Delai.Text = bc.DelaiExecution;
-                    txt_Destination.Text = bc.Destination;
-                    date_Bc.Value = bc.DateBC;
-                    cb_Morasse.SelectedValue = bc.InfoMorasse.Code;
-                    cb_Pvj.SelectedValue = bc.InfoPVJ.IdPVJ;
-
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
@@ -154,5 +135,30 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
+
+       
+
+        private void cb_NumBc_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    bc = ctx.BCSet.Find(cb_NumBc.SelectedValue);
+                    txt_Delai.Text = bc.DelaiExecution;
+                    txt_Destination.Text = bc.Destination;
+                    date_Bc.Value = bc.DateBC;
+                    cb_Morasse.SelectedValue = bc.InfoMorasse.Code;
+                    cb_Pvj.SelectedValue = bc.InfoPVJ.IdPVJ;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+       
     }
 }
