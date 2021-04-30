@@ -158,6 +158,9 @@
     <Property Name="IdModeleDevis" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NumDevis" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Date" Type="datetime" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="Tva" Type="float" Nullable="false" />
+    <Property Name="Ttc" Type="float" Nullable="false" />
     <Property Name="InfoFournisseur_IdFournisseur" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProduitSet">
@@ -168,7 +171,8 @@
     <Property Name="Designation" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Unite" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Quantite" Type="int" Nullable="false" />
-    <Property Name="Prix_Unitaire" Type="int" Nullable="false" />
+    <Property Name="Prix_Unitaire" Type="float" Nullable="false" />
+    <Property Name="Prix_Total" Type="float" Nullable="false" />
   </EntityType>
   <EntityType Name="PVRSet">
     <Key>
@@ -682,6 +686,9 @@
           <Property Name="Date" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="InfoFournisseur" Relationship="OnssaModel.ModeleDevisFournisseur" FromRole="ModeleDevis" ToRole="Fournisseur" />
           <NavigationProperty Name="ListProduit" Relationship="OnssaModel.ModeleDevisProduit" FromRole="ModeleDevis" ToRole="Produit" />
+          <Property Name="Total" Type="Double" Nullable="false" />
+          <Property Name="Tva" Type="Double" Nullable="false" />
+          <Property Name="Ttc" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="Produit">
           <Key>
@@ -691,8 +698,9 @@
           <Property Name="Designation" Type="String" Nullable="false" />
           <Property Name="Unite" Type="String" Nullable="false" />
           <Property Name="Quantite" Type="Int32" Nullable="false" />
-          <Property Name="Prix_Unitaire" Type="Int32" Nullable="false" />
+          <Property Name="Prix_Unitaire" Type="Double" Nullable="false" />
           <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisProduit" FromRole="Produit" ToRole="ModeleDevis" />
+          <Property Name="Prix_Total" Type="Double" Nullable="false" />
         </EntityType>
         <EntityType Name="PVR">
           <Key>
@@ -907,6 +915,9 @@
           <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
           <ScalarProperty Name="NumDevis" ColumnName="NumDevis" />
           <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Tva" ColumnName="Tva" />
+          <ScalarProperty Name="Ttc" ColumnName="Ttc" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -918,6 +929,7 @@
           <ScalarProperty Name="Unite" ColumnName="Unite" />
           <ScalarProperty Name="Quantite" ColumnName="Quantite" />
           <ScalarProperty Name="Prix_Unitaire" ColumnName="Prix_Unitaire" />
+          <ScalarProperty Name="Prix_Total" ColumnName="Prix_Total" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

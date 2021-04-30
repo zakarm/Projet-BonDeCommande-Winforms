@@ -23,6 +23,9 @@ namespace Projet_Onssa
         public int IdModeleDevis { get; set; }
         public string NumDevis { get; set; }
         public System.DateTime Date { get; set; }
+        public double Total { get; set; }
+        public double Tva { get; set; }
+        public double Ttc { get; set; }
     
         public virtual Fournisseur InfoFournisseur { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

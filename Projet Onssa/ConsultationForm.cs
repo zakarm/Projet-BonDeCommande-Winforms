@@ -58,7 +58,7 @@ namespace Projet_Onssa
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
 
-                if ((bool)drm.Cells[4].FormattedValue.Equals(true))
+                if ((bool)drm.Cells["ck_btn"].FormattedValue.Equals(true))
                 {
                     try
                     {

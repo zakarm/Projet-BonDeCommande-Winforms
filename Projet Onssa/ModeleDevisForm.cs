@@ -41,11 +41,10 @@ namespace Projet_Onssa
                     ModeleDevis m = new ModeleDevis();
                     Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
                     Produit p;
-
                     m.NumDevis = cb_NumMdevis.Text;
                     m.InfoFournisseur = f;
                     m.Date = date_MDevis.Value;
-
+                   
                     foreach (DataGridViewRow dr in dgv_Produits.Rows)
                     {
                         if (dr.Cells[1].Value != null)
@@ -55,10 +54,22 @@ namespace Projet_Onssa
                             p.Unite = dr.Cells[1].Value.ToString();
                             p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
                             p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                            p.Prix_Total =  p.Prix_Unitaire * p.Quantite;
                             m.ListProduit.Add(p);
                         }
-
                     }
+
+                    double total = 0;
+
+                    foreach(Produit pr in m.ListProduit)
+                    {
+                        total = pr.Prix_Total + total;
+                    }
+
+                    m.Total = total;
+                    m.Tva = total * 20 / 100;
+                    m.Ttc = m.Tva + m.Total;
+
 
                     ctx.ModeleDevisSet.Add(m);
                     ctx.SaveChanges();

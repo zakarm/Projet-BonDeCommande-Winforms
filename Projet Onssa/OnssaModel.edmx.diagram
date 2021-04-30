@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0304173820524863a319b5867ba385fe" Name="Diagram1" ZoomLevel="32" >
+      <Diagram DiagramId="0304173820524863a319b5867ba385fe" Name="Diagram1" ZoomLevel="81" >
         <EntityTypeShape EntityType="OnssaModel.Fournisseur" Width="1.5" PointX="8.875" PointY="3.375" />
         <EntityTypeShape EntityType="OnssaModel.Commission" Width="1.5" PointX="10.75" PointY="9" />
         <EntityTypeShape EntityType="OnssaModel.Consultation" Width="1.5" PointX="3.5" PointY="3.375" />
         <EntityTypeShape EntityType="OnssaModel.PVJ" Width="1.5" PointX="1.625" PointY="6.5" />
         <EntityTypeShape EntityType="OnssaModel.ModeleDevis" Width="1.5" PointX="13.125" PointY="0.875" />
-        <EntityTypeShape EntityType="OnssaModel.Produit" Width="1.5" PointX="17.625" PointY="2" />
+        <EntityTypeShape EntityType="OnssaModel.Produit" Width="1.5" PointX="14.5" PointY="5" />
         <EntityTypeShape EntityType="OnssaModel.PVR" Width="1.5" PointX="11.125" PointY="12.625" />
         <EntityTypeShape EntityType="OnssaModel.BC" Width="1.5" PointX="1.75" PointY="11.5" />
         <EntityTypeShape EntityType="OnssaModel.FE" Width="1.5" PointX="6.125" PointY="10.375" />

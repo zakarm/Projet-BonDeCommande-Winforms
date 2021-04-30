@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/25/2021 22:50:01
+-- Date Created: 04/30/2021 17:39:41
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -73,6 +73,9 @@ IF OBJECT_ID(N'[dbo].[FK_OVOP]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_PVJBC]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[BCSet] DROP CONSTRAINT [FK_PVJBC];
+GO
+IF OBJECT_ID(N'[dbo].[FK_PVJFournisseur1]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[PVJSet] DROP CONSTRAINT [FK_PVJFournisseur1];
 GO
 
 -- --------------------------------------------------
@@ -191,6 +194,9 @@ CREATE TABLE [dbo].[ModeleDevisSet] (
     [IdModeleDevis] int IDENTITY(1,1) NOT NULL,
     [NumDevis] nvarchar(max)  NOT NULL,
     [Date] datetime  NOT NULL,
+    [Total] float  NOT NULL,
+    [Tva] float  NOT NULL,
+    [Ttc] float  NOT NULL,
     [InfoFournisseur_IdFournisseur] int  NOT NULL
 );
 GO
@@ -201,7 +207,8 @@ CREATE TABLE [dbo].[ProduitSet] (
     [Designation] nvarchar(max)  NOT NULL,
     [Unite] nvarchar(max)  NOT NULL,
     [Quantite] int  NOT NULL,
-    [Prix_Unitaire] int  NOT NULL
+    [Prix_Unitaire] float  NOT NULL,
+    [Prix_Total] float  NOT NULL
 );
 GO
 

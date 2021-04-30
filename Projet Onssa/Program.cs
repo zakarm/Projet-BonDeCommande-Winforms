@@ -25,7 +25,7 @@ namespace Projet_Onssa
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LectureOv());
+            Application.Run(new Connexion());
         }
         
     }

@@ -36,26 +36,39 @@ namespace Projet_Onssa
             dapvj.Fill(ds.PVJSet);
             daf.Fill(ds.FournisseurSet);
             dapvjf.Fill(ds.PVJFournisseur) ;
-            dap.Fill(ds.ProduitSet);
-
-            daov.Fill(ds.OVSet);
-
+            dap.Fill(ds.ProduitSet); 
+            //daov.Fill(ds.OVSet);
             daop.Fill(ds.OPSet);
-
             daoi.Fill(ds.OISet);
-
             damp.Fill(ds.ModeleDevisProduit);
-
             dam.Fill(ds.ModeleDevisSet);
 
-            cb_Ov.DisplayMember = "NuMM";
-            cb_Ov.ValueMember = "IdOv";
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+
+
+                cb_Ov.ValueMember = "IdOV";
+                cb_Ov.DisplayMember = "NumOV";
+                cb_Ov.DataSource = ctx.OVSet.ToList();
+            }
+            
+            
+        }
+
+        private void cb_Ov_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = int.Parse(cb_Ov.SelectedValue.ToString());
+            ds.OVSet.Dispose();
+            daov.FillByOV(ds.OVSet, i);
+
 
             CrystalReportOv ce = new CrystalReportOv();
 
             ce.SetDataSource(ds);
             crystalReportViewer1.ReportSource = ce;
             crystalReportViewer1.Refresh();
+
+           
         }
     }
 }

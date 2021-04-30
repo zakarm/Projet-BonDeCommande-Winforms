@@ -24,7 +24,8 @@ namespace Projet_Onssa
         public string Designation { get; set; }
         public string Unite { get; set; }
         public int Quantite { get; set; }
-        public int Prix_Unitaire { get; set; }
+        public double Prix_Unitaire { get; set; }
+        public double Prix_Total { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ModeleDevis> ListModeleDevis { get; set; }
