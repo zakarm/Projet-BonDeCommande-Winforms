@@ -45,8 +45,6 @@ namespace Projet_Onssa
 
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
-
-
                 cb_Ov.ValueMember = "IdOV";
                 cb_Ov.DisplayMember = "NumOV";
                 cb_Ov.DataSource = ctx.OVSet.ToList();
@@ -58,11 +56,10 @@ namespace Projet_Onssa
         private void cb_Ov_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = int.Parse(cb_Ov.SelectedValue.ToString());
-            ds.OVSet.Dispose();
             daov.FillByOV(ds.OVSet, i);
 
 
-            CrystalReportOv ce = new CrystalReportOv();
+            test ce = new test();
 
             ce.SetDataSource(ds);
             crystalReportViewer1.ReportSource = ce;

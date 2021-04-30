@@ -247,6 +247,12 @@
     <Compile Include="PvrForm.Designer.cs">
       <DependentUpon>PvrForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="test.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>test.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Accueil.resx">
       <DependentUpon>Accueil.cs</DependentUpon>
     </EmbeddedResource>
@@ -315,6 +321,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PvrForm.resx">
       <DependentUpon>PvrForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="test.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>test.cs</LastGenOutput>
     </EmbeddedResource>
     <EntityDeploy Include="OnssaModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
