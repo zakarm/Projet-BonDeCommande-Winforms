@@ -59,8 +59,7 @@ namespace Projet_Onssa
         {
 
             var query = from ov in ds.OVSet
-                        join
-            op in ds.OPSet on ov.InfoOP_IdOP equals op.IdOP
+                        join op in ds.OPSet on ov.InfoOP_IdOP equals op.IdOP
                         join oi in ds.OISet on op.InfoOI_IdOI equals oi.IdOI
                         join fe in ds.FESet on oi.InfoFE_IdFE equals fe.IdFE
                         join bc in ds.BCSet on fe.InfoBC_IdBC equals bc.IdBC

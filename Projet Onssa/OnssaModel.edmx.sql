@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/30/2021 23:28:16
--- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
+-- Date Created: 05/01/2021 14:15:43
+-- Generated from EDMX file: C:\Users\Minfo\Desktop\Projet Stage\Projet-Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -76,6 +76,9 @@ IF OBJECT_ID(N'[dbo].[FK_PVJBC]', 'F') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[FK_PVJFournisseur1]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[PVJSet] DROP CONSTRAINT [FK_PVJFournisseur1];
+GO
+IF OBJECT_ID(N'[dbo].[FK_ModeleDevisConsultation]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[ModeleDevisSet] DROP CONSTRAINT [FK_ModeleDevisConsultation];
 GO
 
 -- --------------------------------------------------
