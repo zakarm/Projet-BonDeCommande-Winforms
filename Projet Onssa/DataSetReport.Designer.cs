@@ -70,10 +70,6 @@ namespace Projet_Onssa {
         
         private global::System.Data.DataRelation relationFK_CommissionPVR_PVR;
         
-        private global::System.Data.DataRelation relationFK_ModeleDevisProduit_ModeleDevis;
-        
-        private global::System.Data.DataRelation relationFK_ModeleDevisProduit_Produit;
-        
         private global::System.Data.DataRelation relationFK_BCFE;
         
         private global::System.Data.DataRelation relationFK_ConsultationFournisseur_Consultation;
@@ -99,6 +95,12 @@ namespace Projet_Onssa {
         private global::System.Data.DataRelation relationFK_OIOP;
         
         private global::System.Data.DataRelation relationFK_FEOI;
+        
+        private global::System.Data.DataRelation relationFK_ModeleDevisProduit_Produit;
+        
+        private global::System.Data.DataRelation relationFK_ModeleDevisProduit_ModeleDevis;
+        
+        private global::System.Data.DataRelation relationFK_ModeleDevisConsultation;
         
         private global::System.Data.DataRelation relationFK_ModeleDevisFournisseur;
         
@@ -670,8 +672,6 @@ namespace Projet_Onssa {
             this.relationFK_PVJBC = this.Relations["FK_PVJBC"];
             this.relationFK_CommissionPVR_Commission = this.Relations["FK_CommissionPVR_Commission"];
             this.relationFK_CommissionPVR_PVR = this.Relations["FK_CommissionPVR_PVR"];
-            this.relationFK_ModeleDevisProduit_ModeleDevis = this.Relations["FK_ModeleDevisProduit_ModeleDevis"];
-            this.relationFK_ModeleDevisProduit_Produit = this.Relations["FK_ModeleDevisProduit_Produit"];
             this.relationFK_BCFE = this.Relations["FK_BCFE"];
             this.relationFK_ConsultationFournisseur_Consultation = this.Relations["FK_ConsultationFournisseur_Consultation"];
             this.relationFK_ConsultationFournisseur_Fournisseur = this.Relations["FK_ConsultationFournisseur_Fournisseur"];
@@ -685,6 +685,9 @@ namespace Projet_Onssa {
             this.relationFK_OVOP = this.Relations["FK_OVOP"];
             this.relationFK_OIOP = this.Relations["FK_OIOP"];
             this.relationFK_FEOI = this.Relations["FK_FEOI"];
+            this.relationFK_ModeleDevisProduit_Produit = this.Relations["FK_ModeleDevisProduit_Produit"];
+            this.relationFK_ModeleDevisProduit_ModeleDevis = this.Relations["FK_ModeleDevisProduit_ModeleDevis"];
+            this.relationFK_ModeleDevisConsultation = this.Relations["FK_ModeleDevisConsultation"];
             this.relationFK_ModeleDevisFournisseur = this.Relations["FK_ModeleDevisFournisseur"];
         }
         
@@ -750,14 +753,6 @@ namespace Projet_Onssa {
                         this.tablePVRSet.IdPVRColumn}, new global::System.Data.DataColumn[] {
                         this.tableCommissionPVR.ListPVR_IdPVRColumn}, false);
             this.Relations.Add(this.relationFK_CommissionPVR_PVR);
-            this.relationFK_ModeleDevisProduit_ModeleDevis = new global::System.Data.DataRelation("FK_ModeleDevisProduit_ModeleDevis", new global::System.Data.DataColumn[] {
-                        this.tableModeleDevisSet.IdModeleDevisColumn}, new global::System.Data.DataColumn[] {
-                        this.tableModeleDevisProduit.ListModeleDevis_IdModeleDevisColumn}, false);
-            this.Relations.Add(this.relationFK_ModeleDevisProduit_ModeleDevis);
-            this.relationFK_ModeleDevisProduit_Produit = new global::System.Data.DataRelation("FK_ModeleDevisProduit_Produit", new global::System.Data.DataColumn[] {
-                        this.tableProduitSet.IdProduitColumn}, new global::System.Data.DataColumn[] {
-                        this.tableModeleDevisProduit.ListProduit_IdProduitColumn}, false);
-            this.Relations.Add(this.relationFK_ModeleDevisProduit_Produit);
             this.relationFK_BCFE = new global::System.Data.DataRelation("FK_BCFE", new global::System.Data.DataColumn[] {
                         this.tableBCSet.IdBCColumn}, new global::System.Data.DataColumn[] {
                         this.tableFESet.InfoBC_IdBCColumn}, false);
@@ -810,6 +805,18 @@ namespace Projet_Onssa {
                         this.tableFESet.IdFEColumn}, new global::System.Data.DataColumn[] {
                         this.tableOISet.InfoFE_IdFEColumn}, false);
             this.Relations.Add(this.relationFK_FEOI);
+            this.relationFK_ModeleDevisProduit_Produit = new global::System.Data.DataRelation("FK_ModeleDevisProduit_Produit", new global::System.Data.DataColumn[] {
+                        this.tableProduitSet.IdProduitColumn}, new global::System.Data.DataColumn[] {
+                        this.tableModeleDevisProduit.ListProduit_IdProduitColumn}, false);
+            this.Relations.Add(this.relationFK_ModeleDevisProduit_Produit);
+            this.relationFK_ModeleDevisProduit_ModeleDevis = new global::System.Data.DataRelation("FK_ModeleDevisProduit_ModeleDevis", new global::System.Data.DataColumn[] {
+                        this.tableModeleDevisSet.IdModeleDevisColumn}, new global::System.Data.DataColumn[] {
+                        this.tableModeleDevisProduit.ListModeleDevis_IdModeleDevisColumn}, false);
+            this.Relations.Add(this.relationFK_ModeleDevisProduit_ModeleDevis);
+            this.relationFK_ModeleDevisConsultation = new global::System.Data.DataRelation("FK_ModeleDevisConsultation", new global::System.Data.DataColumn[] {
+                        this.tableConsultationSet.IdConsultationColumn}, new global::System.Data.DataColumn[] {
+                        this.tableModeleDevisSet.InfoConsultation_IdConsultationColumn}, false);
+            this.Relations.Add(this.relationFK_ModeleDevisConsultation);
             this.relationFK_ModeleDevisFournisseur = new global::System.Data.DataRelation("FK_ModeleDevisFournisseur", new global::System.Data.DataColumn[] {
                         this.tableFournisseurSet.IdFournisseurColumn}, new global::System.Data.DataColumn[] {
                         this.tableModeleDevisSet.InfoFournisseur_IdFournisseurColumn}, false);
@@ -6909,6 +6916,8 @@ namespace Projet_Onssa {
             
             private global::System.Data.DataColumn columnInfoFournisseur_IdFournisseur;
             
+            private global::System.Data.DataColumn columnInfoConsultation_IdConsultation;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ModeleDevisSetDataTable() {
@@ -7000,6 +7009,14 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn InfoConsultation_IdConsultationColumn {
+                get {
+                    return this.columnInfoConsultation_IdConsultation;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -7035,7 +7052,7 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModeleDevisSetRow AddModeleDevisSetRow(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, FournisseurSetRow parentFournisseurSetRowByFK_ModeleDevisFournisseur) {
+            public ModeleDevisSetRow AddModeleDevisSetRow(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, FournisseurSetRow parentFournisseurSetRowByFK_ModeleDevisFournisseur, ConsultationSetRow parentConsultationSetRowByFK_ModeleDevisConsultation) {
                 ModeleDevisSetRow rowModeleDevisSetRow = ((ModeleDevisSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -7044,9 +7061,13 @@ namespace Projet_Onssa {
                         Total,
                         Tva,
                         Ttc,
+                        null,
                         null};
                 if ((parentFournisseurSetRowByFK_ModeleDevisFournisseur != null)) {
                     columnValuesArray[6] = parentFournisseurSetRowByFK_ModeleDevisFournisseur[0];
+                }
+                if ((parentConsultationSetRowByFK_ModeleDevisConsultation != null)) {
+                    columnValuesArray[7] = parentConsultationSetRowByFK_ModeleDevisConsultation[0];
                 }
                 rowModeleDevisSetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowModeleDevisSetRow);
@@ -7084,6 +7105,7 @@ namespace Projet_Onssa {
                 this.columnTva = base.Columns["Tva"];
                 this.columnTtc = base.Columns["Ttc"];
                 this.columnInfoFournisseur_IdFournisseur = base.Columns["InfoFournisseur_IdFournisseur"];
+                this.columnInfoConsultation_IdConsultation = base.Columns["InfoConsultation_IdConsultation"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7103,6 +7125,8 @@ namespace Projet_Onssa {
                 base.Columns.Add(this.columnTtc);
                 this.columnInfoFournisseur_IdFournisseur = new global::System.Data.DataColumn("InfoFournisseur_IdFournisseur", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnInfoFournisseur_IdFournisseur);
+                this.columnInfoConsultation_IdConsultation = new global::System.Data.DataColumn("InfoConsultation_IdConsultation", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInfoConsultation_IdConsultation);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdModeleDevis}, true));
                 this.columnIdModeleDevis.AutoIncrement = true;
@@ -7118,6 +7142,7 @@ namespace Projet_Onssa {
                 this.columnTva.AllowDBNull = false;
                 this.columnTtc.AllowDBNull = false;
                 this.columnInfoFournisseur_IdFournisseur.AllowDBNull = false;
+                this.columnInfoConsultation_IdConsultation.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7558,23 +7583,23 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ModeleDevisSetRow ModeleDevisSetRow {
-                get {
-                    return ((ModeleDevisSetRow)(this.GetParentRow(this.Table.ParentRelations["FK_ModeleDevisProduit_ModeleDevis"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_ModeleDevisProduit_ModeleDevis"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ProduitSetRow ProduitSetRow {
                 get {
                     return ((ProduitSetRow)(this.GetParentRow(this.Table.ParentRelations["FK_ModeleDevisProduit_Produit"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_ModeleDevisProduit_Produit"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ModeleDevisSetRow ModeleDevisSetRow {
+                get {
+                    return ((ModeleDevisSetRow)(this.GetParentRow(this.Table.ParentRelations["FK_ModeleDevisProduit_ModeleDevis"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_ModeleDevisProduit_ModeleDevis"]);
                 }
             }
         }
@@ -7998,6 +8023,17 @@ namespace Projet_Onssa {
                 }
                 else {
                     return ((PVJSetRow[])(base.GetChildRows(this.Table.ChildRelations["FK_PVJConsultation"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ModeleDevisSetRow[] GetModeleDevisSetRows() {
+                if ((this.Table.ChildRelations["FK_ModeleDevisConsultation"] == null)) {
+                    return new ModeleDevisSetRow[0];
+                }
+                else {
+                    return ((ModeleDevisSetRow[])(base.GetChildRows(this.Table.ChildRelations["FK_ModeleDevisConsultation"])));
                 }
             }
         }
@@ -8988,6 +9024,28 @@ namespace Projet_Onssa {
                 }
                 set {
                     this[this.tableModeleDevisSet.InfoFournisseur_IdFournisseurColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public int InfoConsultation_IdConsultation {
+                get {
+                    return ((int)(this[this.tableModeleDevisSet.InfoConsultation_IdConsultationColumn]));
+                }
+                set {
+                    this[this.tableModeleDevisSet.InfoConsultation_IdConsultationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ConsultationSetRow ConsultationSetRow {
+                get {
+                    return ((ConsultationSetRow)(this.GetParentRow(this.Table.ParentRelations["FK_ModeleDevisConsultation"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_ModeleDevisConsultation"]);
                 }
             }
             
@@ -15933,10 +15991,11 @@ SELECT Code, Exercice, Budget, PAR, LRG, Description FROM MorasseSet WHERE (Code
             tableMapping.ColumnMappings.Add("Tva", "Tva");
             tableMapping.ColumnMappings.Add("Ttc", "Ttc");
             tableMapping.ColumnMappings.Add("InfoFournisseur_IdFournisseur", "InfoFournisseur_IdFournisseur");
+            tableMapping.ColumnMappings.Add("InfoConsultation_IdConsultation", "InfoConsultation_IdConsultation");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ModeleDevisSet] WHERE (([IdModeleDevis] = @Original_IdModeleDevis) AND ([Date] = @Original_Date) AND ([Total] = @Original_Total) AND ([Tva] = @Original_Tva) AND ([Ttc] = @Original_Ttc) AND ([InfoFournisseur_IdFournisseur] = @Original_InfoFournisseur_IdFournisseur))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[ModeleDevisSet] WHERE (([IdModeleDevis] = @Original_IdModeleDevis) AND ([Date] = @Original_Date) AND ([Total] = @Original_Total) AND ([Tva] = @Original_Tva) AND ([Ttc] = @Original_Ttc) AND ([InfoFournisseur_IdFournisseur] = @Original_InfoFournisseur_IdFournisseur) AND ([InfoConsultation_IdConsultation] = @Original_InfoConsultation_IdConsultation))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdModeleDevis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdModeleDevis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
@@ -15944,10 +16003,11 @@ SELECT Code, Exercice, Budget, PAR, LRG, Description FROM MorasseSet WHERE (Code
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tva", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ttc", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ttc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InfoFournisseur_IdFournisseur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoFournisseur_IdFournisseur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InfoConsultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoConsultation_IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ModeleDevisSet] ([NumDevis], [Date], [Total], [Tva], [Ttc], [InfoFournisseur_IdFournisseur]) VALUES (@NumDevis, @Date, @Total, @Tva, @Ttc, @InfoFournisseur_IdFournisseur);
-SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur FROM ModeleDevisSet WHERE (IdModeleDevis = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ModeleDevisSet] ([NumDevis], [Date], [Total], [Tva], [Ttc], [InfoFournisseur_IdFournisseur], [InfoConsultation_IdConsultation]) VALUES (@NumDevis, @Date, @Total, @Tva, @Ttc, @InfoFournisseur_IdFournisseur, @InfoConsultation_IdConsultation);
+SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur, InfoConsultation_IdConsultation FROM ModeleDevisSet WHERE (IdModeleDevis = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumDevis", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumDevis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15955,10 +16015,11 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tva", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ttc", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ttc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InfoFournisseur_IdFournisseur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoFournisseur_IdFournisseur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InfoConsultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoConsultation_IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ModeleDevisSet] SET [NumDevis] = @NumDevis, [Date] = @Date, [Total] = @Total, [Tva] = @Tva, [Ttc] = @Ttc, [InfoFournisseur_IdFournisseur] = @InfoFournisseur_IdFournisseur WHERE (([IdModeleDevis] = @Original_IdModeleDevis) AND ([Date] = @Original_Date) AND ([Total] = @Original_Total) AND ([Tva] = @Original_Tva) AND ([Ttc] = @Original_Ttc) AND ([InfoFournisseur_IdFournisseur] = @Original_InfoFournisseur_IdFournisseur));
-SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur FROM ModeleDevisSet WHERE (IdModeleDevis = @IdModeleDevis)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ModeleDevisSet] SET [NumDevis] = @NumDevis, [Date] = @Date, [Total] = @Total, [Tva] = @Tva, [Ttc] = @Ttc, [InfoFournisseur_IdFournisseur] = @InfoFournisseur_IdFournisseur, [InfoConsultation_IdConsultation] = @InfoConsultation_IdConsultation WHERE (([IdModeleDevis] = @Original_IdModeleDevis) AND ([Date] = @Original_Date) AND ([Total] = @Original_Total) AND ([Tva] = @Original_Tva) AND ([Ttc] = @Original_Ttc) AND ([InfoFournisseur_IdFournisseur] = @Original_InfoFournisseur_IdFournisseur) AND ([InfoConsultation_IdConsultation] = @Original_InfoConsultation_IdConsultation));
+SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur, InfoConsultation_IdConsultation FROM ModeleDevisSet WHERE (IdModeleDevis = @IdModeleDevis)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumDevis", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumDevis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -15966,12 +16027,14 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Tva", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tva", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ttc", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ttc", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InfoFournisseur_IdFournisseur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoFournisseur_IdFournisseur", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@InfoConsultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoConsultation_IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdModeleDevis", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdModeleDevis", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Total", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Total", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Tva", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Tva", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ttc", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ttc", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InfoFournisseur_IdFournisseur", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoFournisseur_IdFournisseur", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_InfoConsultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "InfoConsultation_IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdModeleDevis", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdModeleDevis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -15989,7 +16052,7 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFourniss" +
-                "eur FROM dbo.ModeleDevisSet";
+                "eur, InfoConsultation_IdConsultation FROM dbo.ModeleDevisSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -16050,13 +16113,14 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur) {
+        public virtual int Delete(int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur, int Original_InfoConsultation_IdConsultation) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdModeleDevis));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Total));
             this.Adapter.DeleteCommand.Parameters[3].Value = ((double)(Original_Tva));
             this.Adapter.DeleteCommand.Parameters[4].Value = ((double)(Original_Ttc));
             this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_InfoFournisseur_IdFournisseur));
+            this.Adapter.DeleteCommand.Parameters[6].Value = ((int)(Original_InfoConsultation_IdConsultation));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16077,7 +16141,7 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur) {
+        public virtual int Insert(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur, int InfoConsultation_IdConsultation) {
             if ((NumDevis == null)) {
                 throw new global::System.ArgumentNullException("NumDevis");
             }
@@ -16089,6 +16153,7 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
             this.Adapter.InsertCommand.Parameters[3].Value = ((double)(Tva));
             this.Adapter.InsertCommand.Parameters[4].Value = ((double)(Ttc));
             this.Adapter.InsertCommand.Parameters[5].Value = ((int)(InfoFournisseur_IdFournisseur));
+            this.Adapter.InsertCommand.Parameters[6].Value = ((int)(InfoConsultation_IdConsultation));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16109,7 +16174,7 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur, int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur, int IdModeleDevis) {
+        public virtual int Update(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur, int InfoConsultation_IdConsultation, int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur, int Original_InfoConsultation_IdConsultation, int IdModeleDevis) {
             if ((NumDevis == null)) {
                 throw new global::System.ArgumentNullException("NumDevis");
             }
@@ -16121,13 +16186,15 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
             this.Adapter.UpdateCommand.Parameters[3].Value = ((double)(Tva));
             this.Adapter.UpdateCommand.Parameters[4].Value = ((double)(Ttc));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(InfoFournisseur_IdFournisseur));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_IdModeleDevis));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((double)(Original_Total));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Tva));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Ttc));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(Original_InfoFournisseur_IdFournisseur));
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(IdModeleDevis));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(InfoConsultation_IdConsultation));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_IdModeleDevis));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((double)(Original_Total));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((double)(Original_Tva));
+            this.Adapter.UpdateCommand.Parameters[11].Value = ((double)(Original_Ttc));
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_InfoFournisseur_IdFournisseur));
+            this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Original_InfoConsultation_IdConsultation));
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((int)(IdModeleDevis));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -16148,8 +16215,8 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur, int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur) {
-            return this.Update(NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur, Original_IdModeleDevis, Original_Date, Original_Total, Original_Tva, Original_Ttc, Original_InfoFournisseur_IdFournisseur, Original_IdModeleDevis);
+        public virtual int Update(string NumDevis, System.DateTime Date, double Total, double Tva, double Ttc, int InfoFournisseur_IdFournisseur, int InfoConsultation_IdConsultation, int Original_IdModeleDevis, System.DateTime Original_Date, double Original_Total, double Original_Tva, double Original_Ttc, int Original_InfoFournisseur_IdFournisseur, int Original_InfoConsultation_IdConsultation) {
+            return this.Update(NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournisseur, InfoConsultation_IdConsultation, Original_IdModeleDevis, Original_Date, Original_Total, Original_Tva, Original_Ttc, Original_InfoFournisseur_IdFournisseur, Original_InfoConsultation_IdConsultation, Original_IdModeleDevis);
         }
     }
     

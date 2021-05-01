@@ -105,6 +105,10 @@
       <End Role="PVJ" EntitySet="PVJSet" />
       <End Role="Fournisseur" EntitySet="FournisseurSet" />
     </AssociationSet>
+    <AssociationSet Name="ModeleDevisConsultation" Association="OnssaModel.Store.ModeleDevisConsultation">
+      <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+      <End Role="Consultation" EntitySet="ConsultationSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="FournisseurSet">
     <Key>
@@ -162,6 +166,7 @@
     <Property Name="Tva" Type="float" Nullable="false" />
     <Property Name="Ttc" Type="float" Nullable="false" />
     <Property Name="InfoFournisseur_IdFournisseur" Type="int" Nullable="false" />
+    <Property Name="InfoConsultation_IdConsultation" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProduitSet">
     <Key>
@@ -421,6 +426,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="ModeleDevisConsultation">
+    <End Role="ModeleDevis" Type="OnssaModel.Store.ModeleDevisSet" Multiplicity="*" />
+    <End Role="Consultation" Type="OnssaModel.Store.ConsultationSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Consultation">
+        <PropertyRef Name="IdConsultation" />
+      </Principal>
+      <Dependent Role="ModeleDevis">
+        <PropertyRef Name="InfoConsultation_IdConsultation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_PVJFournisseur_PVJ">
     <End Role="PVJ" Type="OnssaModel.Store.PVJSet" Multiplicity="1" />
     <End Role="PVJFournisseur" Type="OnssaModel.Store.PVJFournisseur" Multiplicity="*" />
@@ -620,6 +637,10 @@
             <End Role="PVJ" EntitySet="PVJSet" />
             <End Role="Fournisseur" EntitySet="FournisseurSet" />
           </AssociationSet>
+          <AssociationSet Name="ModeleDevisConsultation" Association="OnssaModel.ModeleDevisConsultation">
+            <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
+            <End Role="Consultation" EntitySet="ConsultationSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Fournisseur">
           <Key>
@@ -662,6 +683,7 @@
           <Property Name="NumConsultation" Type="String" Nullable="false" />
           <NavigationProperty Name="InfoPVJ" Relationship="OnssaModel.PVJConsultation" FromRole="Consultation" ToRole="PVJ" />
           <NavigationProperty Name="ListFournisseur" Relationship="OnssaModel.ConsultationFournisseur" FromRole="Consultation" ToRole="Fournisseur" />
+          <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisConsultation" FromRole="Consultation" ToRole="ModeleDevis" />
         </EntityType>
         <EntityType Name="PVJ">
           <Key>
@@ -689,6 +711,7 @@
           <Property Name="Total" Type="Double" Nullable="false" />
           <Property Name="Tva" Type="Double" Nullable="false" />
           <Property Name="Ttc" Type="Double" Nullable="false" />
+          <NavigationProperty Name="InfoConsultation" Relationship="OnssaModel.ModeleDevisConsultation" FromRole="ModeleDevis" ToRole="Consultation" />
         </EntityType>
         <EntityType Name="Produit">
           <Key>
@@ -855,6 +878,10 @@
         <Association Name="PVJFournisseur1">
           <End Type="OnssaModel.PVJ" Role="PVJ" Multiplicity="*" />
           <End Type="OnssaModel.Fournisseur" Role="Fournisseur" Multiplicity="1" />
+        </Association>
+        <Association Name="ModeleDevisConsultation">
+          <End Type="OnssaModel.ModeleDevis" Role="ModeleDevis" Multiplicity="*" />
+          <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -1052,6 +1079,7 @@
       <EndProperty Name="PVJ">
         <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
       </EndProperty>
+            <Condition ColumnName="InfoConsultation_IdConsultation" IsNull="false" />
     </AssociationSetMapping>
     <AssociationSetMapping Name="ModeleDevisProduit" TypeName="OnssaModel.ModeleDevisProduit" StoreEntitySet="ModeleDevisProduit">
       <EndProperty Name="ModeleDevis">
@@ -1139,6 +1167,14 @@
       </EndProperty>
       <EndProperty Name="PVJ">
         <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ModeleDevisConsultation" TypeName="OnssaModel.ModeleDevisConsultation" StoreEntitySet="ModeleDevisSet">
+      <EndProperty Name="Consultation">
+        <ScalarProperty Name="IdConsultation" ColumnName="InfoConsultation_IdConsultation" />
+      </EndProperty>
+      <EndProperty Name="ModeleDevis">
+        <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

@@ -18,6 +18,7 @@ namespace Projet_Onssa
         public Consultation()
         {
             this.ListFournisseur = new HashSet<Fournisseur>();
+            this.ListModeleDevis = new HashSet<ModeleDevis>();
         }
     
         public int IdConsultation { get; set; }
@@ -27,5 +28,7 @@ namespace Projet_Onssa
         public virtual PVJ InfoPVJ { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Fournisseur> ListFournisseur { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ModeleDevis> ListModeleDevis { get; set; }
     }
 }

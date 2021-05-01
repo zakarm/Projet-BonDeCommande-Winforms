@@ -36,6 +36,7 @@
         <AssociationConnector Association="OnssaModel.OVOP" />
         <AssociationConnector Association="OnssaModel.PVJBC" />
         <AssociationConnector Association="OnssaModel.PVJFournisseur1" />
+        <AssociationConnector Association="OnssaModel.ModeleDevisConsultation" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 04/30/2021 17:39:41
+-- Date Created: 04/30/2021 23:28:16
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -197,7 +197,8 @@ CREATE TABLE [dbo].[ModeleDevisSet] (
     [Total] float  NOT NULL,
     [Tva] float  NOT NULL,
     [Ttc] float  NOT NULL,
-    [InfoFournisseur_IdFournisseur] int  NOT NULL
+    [InfoFournisseur_IdFournisseur] int  NOT NULL,
+    [InfoConsultation_IdConsultation] int  NOT NULL
 );
 GO
 
@@ -724,6 +725,21 @@ GO
 CREATE INDEX [IX_FK_PVJFournisseur1]
 ON [dbo].[PVJSet]
     ([InfoFournisseur_IdFournisseur]);
+GO
+
+-- Creating foreign key on [InfoConsultation_IdConsultation] in table 'ModeleDevisSet'
+ALTER TABLE [dbo].[ModeleDevisSet]
+ADD CONSTRAINT [FK_ModeleDevisConsultation]
+    FOREIGN KEY ([InfoConsultation_IdConsultation])
+    REFERENCES [dbo].[ConsultationSet]
+        ([IdConsultation])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ModeleDevisConsultation'
+CREATE INDEX [IX_FK_ModeleDevisConsultation]
+ON [dbo].[ModeleDevisSet]
+    ([InfoConsultation_IdConsultation]);
 GO
 
 -- --------------------------------------------------

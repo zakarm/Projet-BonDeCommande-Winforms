@@ -30,5 +30,6 @@ namespace Projet_Onssa
         public virtual Fournisseur InfoFournisseur { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Produit> ListProduit { get; set; }
+        public virtual Consultation InfoConsultation { get; set; }
     }
 }
