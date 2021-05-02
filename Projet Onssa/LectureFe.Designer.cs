@@ -65,6 +65,7 @@ namespace Projet_Onssa
             this.cb_Fe.Name = "cb_Fe";
             this.cb_Fe.Size = new System.Drawing.Size(155, 21);
             this.cb_Fe.TabIndex = 10;
+            this.cb_Fe.SelectedIndexChanged += new System.EventHandler(this.cb_Fe_SelectedIndexChanged);
             // 
             // crystalReportViewer2
             // 
@@ -88,6 +89,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "LectureFe";
             this.Text = "LectureFe";
+            this.Load += new System.EventHandler(this.LectureFe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
