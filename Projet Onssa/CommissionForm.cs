@@ -18,12 +18,7 @@ namespace Projet_Onssa
         public CommissionForm()
         {
             InitializeComponent();
-            //var materialSkinManager = MaterialSkinManager.Instance;
-            //materialSkinManager.AddFormToManage(this);
-            //materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            //materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            //materialSkinManager.ColorScheme = new ColorScheme(Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), Color.FromArgb(32, 38, 50), TextShade.WHITE);
-
+           
         }
 
         private void remplir_DGV()
@@ -144,10 +139,8 @@ namespace Projet_Onssa
             remplir_DGV();
         }
 
-        
-
-
-        private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
+      
+        private void cb_Nom_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {

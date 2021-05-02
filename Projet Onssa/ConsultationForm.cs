@@ -117,37 +117,7 @@ namespace Projet_Onssa
            
         }
 
-        //---------------------------------------------Recherche-with-Combobox--------------------------
-        private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
-                    txtarea_Objet.Text = c.ObjetConsultation;
-
-                    foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
-                    {
-                        drm.Cells["ck_btn"].Value = false;
-                        foreach (Fournisseur f in c.ListFournisseur)
-                        {
-                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
-                            {
-                                drm.Cells["ck_btn"].Value = true;
-
-                            }
-                        }
-                    }
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
        //---------------------------------------------Supprimer----------------------------------------
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -200,6 +170,39 @@ namespace Projet_Onssa
                  MessageBox.Show(ex.Message);
             }
            
+        }
+
+        //---------------------------------------------Recherche-with-Combobox--------------------------
+
+        private void cb_Num_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
+                    txtarea_Objet.Text = c.ObjetConsultation;
+
+                    foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
+                    {
+                        drm.Cells["ck_btn"].Value = false;
+                        foreach (Fournisseur f in c.ListFournisseur)
+                        {
+                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == f.IdFournisseur)
+                            {
+                                drm.Cells["ck_btn"].Value = true;
+
+                            }
+                        }
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

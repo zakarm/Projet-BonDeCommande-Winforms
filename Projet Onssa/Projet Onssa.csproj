@@ -176,6 +176,12 @@
     <Compile Include="GestionCompteForm.Designer.cs">
       <DependentUpon>GestionCompteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LectureOi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectureOi.Designer.cs">
+      <DependentUpon>LectureOi.cs</DependentUpon>
+    </Compile>
     <Compile Include="LectureOp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -311,6 +317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LectureConsultation.resx">
       <DependentUpon>LectureConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureOi.resx">
+      <DependentUpon>LectureOi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureOp.resx">
       <DependentUpon>LectureOp.cs</DependentUpon>
