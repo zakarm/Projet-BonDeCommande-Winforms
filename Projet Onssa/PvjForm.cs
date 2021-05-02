@@ -143,7 +143,7 @@ namespace Projet_Onssa
 
                     pv.NumPvj = cb_NumPvj.Text;
                     pv.InfoConsultation = c;
-                    pv.DateString = tr.Ninetotwelvedigit(txtarea_DateString.Text);
+                    pv.DateString = txtarea_DateString.Text;
                     pv.DatePvj = date_Pvj.Value;
                     pv.InfoFournisseur = f;
 
