@@ -104,6 +104,12 @@
       <DependentUpon>CrystalReportConsultation.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportFE.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportFE.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportOi.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -175,6 +181,12 @@
     </Compile>
     <Compile Include="GestionCompteForm.Designer.cs">
       <DependentUpon>GestionCompteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LectureFe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectureFe.Designer.cs">
+      <DependentUpon>LectureFe.cs</DependentUpon>
     </Compile>
     <Compile Include="LectureOi.cs">
       <SubType>Form</SubType>
@@ -288,6 +300,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportConsultation.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportFE.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportFE.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportOi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportOi.cs</LastGenOutput>
@@ -317,6 +333,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LectureConsultation.resx">
       <DependentUpon>LectureConsultation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LectureFe.resx">
+      <DependentUpon>LectureFe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureOi.resx">
       <DependentUpon>LectureOi.cs</DependentUpon>
