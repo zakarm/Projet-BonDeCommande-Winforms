@@ -133,7 +133,7 @@ namespace Projet_Onssa
                 PVJ pv = new PVJ();
                 Consultation c ;
                 Fournisseur f ;
-
+                NumToString tr = new NumToString();
                 if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur, pv, ctx) == true)
                 {
                     c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
@@ -143,7 +143,7 @@ namespace Projet_Onssa
 
                     pv.NumPvj = cb_NumPvj.Text;
                     pv.InfoConsultation = c;
-                    pv.DateString = txtarea_DateString.Text;
+                    pv.DateString = tr.Ninetotwelvedigit(txtarea_DateString.Text);
                     pv.DatePvj = date_Pvj.Value;
                     pv.InfoFournisseur = f;
 
@@ -156,7 +156,6 @@ namespace Projet_Onssa
                 else
                 {
                     MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
                 }
 
             }

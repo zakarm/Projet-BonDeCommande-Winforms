@@ -58,27 +58,30 @@ namespace Projet_Onssa
         private void cb_Ov_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            var query = from ov in ds.OVSet
-                        join op in ds.OPSet on ov.InfoOP_IdOP equals op.IdOP
-                        join oi in ds.OISet on op.InfoOI_IdOI equals oi.IdOI
-                        join fe in ds.FESet on oi.InfoFE_IdFE equals fe.IdFE
-                        join bc in ds.BCSet on fe.InfoBC_IdBC equals bc.IdBC
-                        join pvj in ds.PVJSet on bc.InfoPVJ_IdPVJ equals pvj.IdPVJ
-                        join m in ds.ModeleDevisSet on pvj.InfoFournisseur_IdFournisseur equals
-                        m.InfoFournisseur_IdFournisseur
-                        where ov.IdOV == (int)cb_Ov.SelectedValue && m.InfoConsultation_IdConsultation == pvj.InfoConsultation_IdConsultation
-                        select m.Ttc;
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                var query = from ov in ctx.OVSet
+                            join op in ctx.OPSet on ov.InfoOP.IdOP equals op.IdOP
+                            join oi in ctx.OISet on op.InfoOI.IdOI equals oi.IdOI
+                            join fe in ctx.FESet on oi.InfoFE.IdFE equals fe.IdFE
+                            join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC
+                            join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
+                            join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
+                            m.InfoFournisseur.IdFournisseur
+                            where ov.IdOV == (int)cb_Ov.SelectedValue && m.InfoConsultation.IdConsultation== pvj.InfoConsultation.IdConsultation
+                            select new
+                            {
+                                ttc = m.Ttc,
+                            };
 
-            double p = int.Parse(query.FirstOrDefault().ToString());
-            int i = int.Parse(cb_Ov.SelectedValue.ToString());
-            daov.FillByOV(ds.OVSet, i);
-
-            CrystalReportOv ce = new CrystalReportOv();
-            ce.SetDataSource(ds); 
-            ce.SetParameterValue("ttc", p);
-            crystalReportViewer1.ReportSource = ce;
-            crystalReportViewer1.Refresh();
-
+                int i = int.Parse(cb_Ov.SelectedValue.ToString());
+                daov.FillByOV(ds.OVSet, i);
+                 CrystalReportOv ce = new CrystalReportOv();
+                ce.SetDataSource(ds);
+                ce.SetParameterValue("ttc", query.FirstOrDefault().ttc.ToString());
+                crystalReportViewer1.ReportSource = ce;
+                crystalReportViewer1.Refresh();
+            }
 
 
 

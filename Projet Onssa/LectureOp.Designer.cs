@@ -32,8 +32,6 @@ namespace Projet_Onssa
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_Op = new System.Windows.Forms.ComboBox();
-            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.CrystalReportOp1 = new Projet_Onssa.CrystalReportOp();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -68,18 +66,6 @@ namespace Projet_Onssa
             this.cb_Op.TabIndex = 5;
             this.cb_Op.SelectedIndexChanged += new System.EventHandler(this.cb_Op_SelectedIndexChanged);
             // 
-            // crystalReportViewer2
-            // 
-            this.crystalReportViewer2.ActiveViewIndex = 0;
-            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.ReportSource = this.CrystalReportOp1;
-            this.crystalReportViewer2.Size = new System.Drawing.Size(968, 575);
-            this.crystalReportViewer2.TabIndex = 4;
-            // 
             // LectureOp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -87,7 +73,6 @@ namespace Projet_Onssa
             this.ClientSize = new System.Drawing.Size(968, 575);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cb_Op);
-            this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "LectureOp";
             this.Text = "LectureOp";
@@ -102,7 +87,5 @@ namespace Projet_Onssa
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cb_Op;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
-        private CrystalReportOp CrystalReportOp1;
     }
 }

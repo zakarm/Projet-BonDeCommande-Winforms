@@ -16,14 +16,14 @@ namespace Projet_Onssa {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportOp : ReportClass {
+    public class CrystalReportOi : ReportClass {
         
-        public CrystalReportOp() {
+        public CrystalReportOi() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportOp.rpt";
+                return "CrystalReportOi.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Projet_Onssa {
         
         public override string FullResourceName {
             get {
-                return "Projet_Onssa.CrystalReportOp.rpt";
+                return "Projet_Onssa.CrystalReportOi.rpt";
             }
             set {
                 // Do nothing
@@ -119,92 +119,12 @@ namespace Projet_Onssa {
                 return this.DataDefinition.ParameterFields[3];
             }
         }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_numoi {
-            get {
-                return this.DataDefinition.ParameterFields[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_numcompte {
-            get {
-                return this.DataDefinition.ParameterFields[5];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_dateoi {
-            get {
-                return this.DataDefinition.ParameterFields[6];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_numop {
-            get {
-                return this.DataDefinition.ParameterFields[7];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_code {
-            get {
-                return this.DataDefinition.ParameterFields[8];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_dateop {
-            get {
-                return this.DataDefinition.ParameterFields[9];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_objet {
-            get {
-                return this.DataDefinition.ParameterFields[10];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_datepvr {
-            get {
-                return this.DataDefinition.ParameterFields[11];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_exercice {
-            get {
-                return this.DataDefinition.ParameterFields[12];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_compte {
-            get {
-                return this.DataDefinition.ParameterFields[13];
-            }
-        }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportOp : Component, ICachedReport {
+    public class CachedCrystalReportOi : Component, ICachedReport {
         
-        public CachedCrystalReportOp() {
+        public CachedCrystalReportOi() {
         }
         
         [Browsable(false)]
@@ -241,7 +161,7 @@ namespace Projet_Onssa {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportOp rpt = new CrystalReportOp();
+            CrystalReportOi rpt = new CrystalReportOi();
             rpt.Site = this.Site;
             return rpt;
         }

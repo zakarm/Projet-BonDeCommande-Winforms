@@ -104,6 +104,12 @@
       <DependentUpon>CrystalReportConsultation.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportOi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportOi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportOp.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -194,6 +200,7 @@
     <Compile Include="Morasse.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="NumToString.cs" />
     <Compile Include="OI.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -280,6 +287,10 @@
     <EmbeddedResource Include="CrystalReportConsultation.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportConsultation.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportOi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportOi.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportOp.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
