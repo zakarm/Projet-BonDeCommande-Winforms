@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using MaterialSkin;
+using MaterialSkin.Controls;
+using MaterialSkin.Properties;
 namespace Projet_Onssa
 {
     public partial class Accueil : Form
@@ -37,6 +40,32 @@ namespace Projet_Onssa
 
         }
 
+        private void openchildformtab(Form childForm1,Form childForm2)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            activeForm = childForm1 ;
+            childForm1.TopLevel = false;
+            childForm1.FormBorderStyle = FormBorderStyle.None;
+            childForm1.Dock = DockStyle.Fill;
+            tabPage1.Controls.Add(childForm1);
+            tabPage1.Tag = childForm1;
+            childForm1.BringToFront();
+            childForm1.Show();
+
+            activeForm = childForm2;
+            childForm2.TopLevel = false;
+            childForm2.FormBorderStyle = FormBorderStyle.None;
+            childForm2.Dock = DockStyle.Fill;
+            tabPage2.Controls.Add(childForm2);
+            tabPage2.Tag = childForm2;
+            childForm2.BringToFront();
+            childForm2.Show();
+
+        }
+
 
         private void showSubMenu(Panel subMenu)
         {
@@ -52,14 +81,18 @@ namespace Projet_Onssa
         {
             if (Program.OG.TypeCompte.Equals("cord"))
             {
+
                 btnPcord(true);
+                btn_Oi_Click(sender, e);
             }
             else
             {
                 if(Program.OG.TypeCompte.Equals("csrs"))
                 {
+                   
                     btnPcsrs(true);
                     btnMcsrs(false);
+                    btn_Consultation_Click(sender, e);
                 }
                 else
                 {
@@ -156,12 +189,14 @@ namespace Projet_Onssa
         {
             if (Program.OG.TypeCompte.Equals("cord"))
             {
+                btn_Oi_Click(sender, e);
                 btnPcord(true);
             }
             else
             {
                 if (Program.OG.TypeCompte.Equals("csrs"))
                 {
+                    btn_Consultation_Click(sender, e);
                     btnPcsrs(true);
                     btnMcsrs(false);
                 }
@@ -171,7 +206,9 @@ namespace Projet_Onssa
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
-            openchildform(new ConsultationForm());
+            openchildformtab(new LectureConsultation(), new ConsultationForm());
+            tabPage1.Text = "Lecture Consultation";
+            tabPage2.Text = "Gestion Consultation";
             label_txt.Text = "Consultation";
         }
 
@@ -213,7 +250,7 @@ namespace Projet_Onssa
 
         private void btn_Oi_Click(object sender, EventArgs e)
         {
-            openchildform(new OiForm());
+            openchildformtab(new LectureOi(), new OiForm());
             label_txt.Text = "Ordre d'imputation";
         }
 
@@ -225,13 +262,18 @@ namespace Projet_Onssa
 
         private void btn_Ov_Click(object sender, EventArgs e)
         {
-            openchildform(new OvForm());
+            openchildformtab(new LectureOv(),new OvForm());
+            tabPage1.Text = "Lecture Ordre de virement";
+            tabPage2.Text = "Gestion Ordre de virement";
             label_txt.Text = "Ordre de virement";
         }
 
         private void btn_Op_Click(object sender, EventArgs e)
         {
-            openchildform(new OpForm());
+
+            openchildformtab(new LectureOp(), new OpForm());
+            tabPage1.Text = "Lecture Ordre de paiement";
+            tabPage2.Text = "Gestion Ordre de paiement";
             label_txt.Text = "Ordre de paiement";
         }
     }

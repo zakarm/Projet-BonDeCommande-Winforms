@@ -148,7 +148,7 @@ namespace Projet_Onssa
                     txt_Delai.Text = bc.DelaiExecution;
                     txt_Destination.Text = bc.Destination;
                     date_Bc.Value = bc.DateBC;
-                    cb_Morasse.SelectedValue = bc.InfoMorasse.Code;
+                    cb_Morasse.SelectedValue = bc.InfoMorasse.CodeMorasse;
                     cb_Pvj.SelectedValue = bc.InfoPVJ.IdPVJ;
 
                 }

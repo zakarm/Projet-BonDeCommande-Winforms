@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/01/2021 14:15:43
--- Generated from EDMX file: C:\Users\Minfo\Desktop\Projet Stage\Projet-Onssa\Projet Onssa\OnssaModel.edmx
+-- Date Created: 05/03/2021 22:35:54
+-- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -232,7 +232,7 @@ CREATE TABLE [dbo].[BCSet] (
     [Destination] nvarchar(max)  NOT NULL,
     [DelaiExecution] nvarchar(max)  NOT NULL,
     [DateBC] datetime  NOT NULL,
-    [InfoMorasse_Code] int  NOT NULL,
+    [InfoMorasse_CodeMorasse] int  NOT NULL,
     [InfoPVJ_IdPVJ] int  NOT NULL
 );
 GO
@@ -251,12 +251,11 @@ GO
 
 -- Creating table 'MorasseSet'
 CREATE TABLE [dbo].[MorasseSet] (
-    [Code] int IDENTITY(1,1) NOT NULL,
+    [CodeMorasse] int  NOT NULL,
     [Exercice] nvarchar(max)  NOT NULL,
     [Budget] nvarchar(max)  NOT NULL,
-    [PAR] int  NOT NULL,
-    [LRG] int  NOT NULL,
-    [Description] nvarchar(max)  NOT NULL
+    [Description] nvarchar(max)  NOT NULL,
+    [Ligne_CodeLigne] int  NOT NULL
 );
 GO
 
@@ -300,6 +299,29 @@ CREATE TABLE [dbo].[GestionCompteSet] (
     [Nom] nvarchar(max)  NOT NULL,
     [MotDePasse] nvarchar(max)  NOT NULL,
     [TypeCompte] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'LigneSet'
+CREATE TABLE [dbo].[LigneSet] (
+    [CodeLigne] int  NOT NULL,
+    [DescriptionLigne] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'ParagrapheSet'
+CREATE TABLE [dbo].[ParagrapheSet] (
+    [CodePar] int  NOT NULL,
+    [DescriptionPar] nvarchar(max)  NOT NULL
+);
+GO
+
+-- Creating table 'LrgSet'
+CREATE TABLE [dbo].[LrgSet] (
+    [CodeLrg] int  NOT NULL,
+    [DescriptionLrg] nvarchar(max)  NOT NULL,
+    [InfoParagraphe_CodePar] int  NOT NULL,
+    [Ligne_CodeLigne] int  NOT NULL
 );
 GO
 
@@ -396,10 +418,10 @@ ADD CONSTRAINT [PK_FESet]
     PRIMARY KEY CLUSTERED ([IdFE] ASC);
 GO
 
--- Creating primary key on [Code] in table 'MorasseSet'
+-- Creating primary key on [CodeMorasse] in table 'MorasseSet'
 ALTER TABLE [dbo].[MorasseSet]
 ADD CONSTRAINT [PK_MorasseSet]
-    PRIMARY KEY CLUSTERED ([Code] ASC);
+    PRIMARY KEY CLUSTERED ([CodeMorasse] ASC);
 GO
 
 -- Creating primary key on [IdOI] in table 'OISet'
@@ -424,6 +446,24 @@ GO
 ALTER TABLE [dbo].[GestionCompteSet]
 ADD CONSTRAINT [PK_GestionCompteSet]
     PRIMARY KEY CLUSTERED ([Id] ASC);
+GO
+
+-- Creating primary key on [CodeLigne] in table 'LigneSet'
+ALTER TABLE [dbo].[LigneSet]
+ADD CONSTRAINT [PK_LigneSet]
+    PRIMARY KEY CLUSTERED ([CodeLigne] ASC);
+GO
+
+-- Creating primary key on [CodePar] in table 'ParagrapheSet'
+ALTER TABLE [dbo].[ParagrapheSet]
+ADD CONSTRAINT [PK_ParagrapheSet]
+    PRIMARY KEY CLUSTERED ([CodePar] ASC);
+GO
+
+-- Creating primary key on [CodeLrg] in table 'LrgSet'
+ALTER TABLE [dbo].[LrgSet]
+ADD CONSTRAINT [PK_LrgSet]
+    PRIMARY KEY CLUSTERED ([CodeLrg] ASC);
 GO
 
 -- Creating primary key on [ListPVJ1_IdPVJ], [ListFournisseursRepondu_IdFournisseur] in table 'PVJFournisseur'
@@ -670,19 +710,19 @@ ON [dbo].[FESet]
     ([InfoBC_IdBC]);
 GO
 
--- Creating foreign key on [InfoMorasse_Code] in table 'BCSet'
+-- Creating foreign key on [InfoMorasse_CodeMorasse] in table 'BCSet'
 ALTER TABLE [dbo].[BCSet]
 ADD CONSTRAINT [FK_BCMorasse]
-    FOREIGN KEY ([InfoMorasse_Code])
+    FOREIGN KEY ([InfoMorasse_CodeMorasse])
     REFERENCES [dbo].[MorasseSet]
-        ([Code])
+        ([CodeMorasse])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_BCMorasse'
 CREATE INDEX [IX_FK_BCMorasse]
 ON [dbo].[BCSet]
-    ([InfoMorasse_Code]);
+    ([InfoMorasse_CodeMorasse]);
 GO
 
 -- Creating foreign key on [InfoOP_IdOP] in table 'OVSet'
@@ -743,6 +783,51 @@ GO
 CREATE INDEX [IX_FK_ModeleDevisConsultation]
 ON [dbo].[ModeleDevisSet]
     ([InfoConsultation_IdConsultation]);
+GO
+
+-- Creating foreign key on [InfoParagraphe_CodePar] in table 'LrgSet'
+ALTER TABLE [dbo].[LrgSet]
+ADD CONSTRAINT [FK_ParagrapheLrg]
+    FOREIGN KEY ([InfoParagraphe_CodePar])
+    REFERENCES [dbo].[ParagrapheSet]
+        ([CodePar])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_ParagrapheLrg'
+CREATE INDEX [IX_FK_ParagrapheLrg]
+ON [dbo].[LrgSet]
+    ([InfoParagraphe_CodePar]);
+GO
+
+-- Creating foreign key on [Ligne_CodeLigne] in table 'LrgSet'
+ALTER TABLE [dbo].[LrgSet]
+ADD CONSTRAINT [FK_LigneLrg]
+    FOREIGN KEY ([Ligne_CodeLigne])
+    REFERENCES [dbo].[LigneSet]
+        ([CodeLigne])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_LigneLrg'
+CREATE INDEX [IX_FK_LigneLrg]
+ON [dbo].[LrgSet]
+    ([Ligne_CodeLigne]);
+GO
+
+-- Creating foreign key on [Ligne_CodeLigne] in table 'MorasseSet'
+ALTER TABLE [dbo].[MorasseSet]
+ADD CONSTRAINT [FK_MorasseLigne]
+    FOREIGN KEY ([Ligne_CodeLigne])
+    REFERENCES [dbo].[LigneSet]
+        ([CodeLigne])
+    ON DELETE NO ACTION ON UPDATE NO ACTION;
+GO
+
+-- Creating non-clustered index for FOREIGN KEY 'FK_MorasseLigne'
+CREATE INDEX [IX_FK_MorasseLigne]
+ON [dbo].[MorasseSet]
+    ([Ligne_CodeLigne]);
 GO
 
 -- --------------------------------------------------

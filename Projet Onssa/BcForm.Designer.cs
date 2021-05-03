@@ -47,25 +47,25 @@ namespace Projet_Onssa
             this.date_Bc = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label_objet = new System.Windows.Forms.Label();
+            this.label_thttva = new System.Windows.Forms.Label();
+            this.label_tva = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label_ttc = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label_fournisseur = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label_tva = new System.Windows.Forms.Label();
-            this.label_thttva = new System.Windows.Forms.Label();
-            this.label_objet = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
@@ -347,6 +347,45 @@ namespace Projet_Onssa
             this.panel7.Size = new System.Drawing.Size(896, 90);
             this.panel7.TabIndex = 168;
             // 
+            // label_objet
+            // 
+            this.label_objet.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_objet.AutoSize = true;
+            this.label_objet.Location = new System.Drawing.Point(633, 23);
+            this.label_objet.Name = "label_objet";
+            this.label_objet.Size = new System.Drawing.Size(41, 13);
+            this.label_objet.TabIndex = 169;
+            this.label_objet.Text = "label12";
+            // 
+            // label_thttva
+            // 
+            this.label_thttva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_thttva.AutoSize = true;
+            this.label_thttva.Location = new System.Drawing.Point(227, 26);
+            this.label_thttva.Name = "label_thttva";
+            this.label_thttva.Size = new System.Drawing.Size(41, 13);
+            this.label_thttva.TabIndex = 168;
+            this.label_thttva.Text = "label12";
+            // 
+            // label_tva
+            // 
+            this.label_tva.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label_tva.AutoSize = true;
+            this.label_tva.Location = new System.Drawing.Point(369, 25);
+            this.label_tva.Name = "label_tva";
+            this.label_tva.Size = new System.Drawing.Size(41, 13);
+            this.label_tva.TabIndex = 167;
+            this.label_tva.Text = "label12";
+            // 
+            // panel6
+            // 
+            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel6.Location = new System.Drawing.Point(604, -9);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1, 200);
+            this.panel6.TabIndex = 165;
+            // 
             // label_ttc
             // 
             this.label_ttc.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -414,6 +453,37 @@ namespace Projet_Onssa
             this.panel2.Size = new System.Drawing.Size(896, 69);
             this.panel2.TabIndex = 167;
             // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(621, 26);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(251, 19);
+            this.label11.TabIndex = 168;
+            this.label11.Text = "  Objet du Bon de Commande ";
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel11.Location = new System.Drawing.Point(604, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1, 200);
+            this.panel11.TabIndex = 166;
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(365, 26);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(92, 19);
+            this.label9.TabIndex = 167;
+            this.label9.Text = "TVA 20 %";
+            // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -473,73 +543,6 @@ namespace Projet_Onssa
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1, 200);
             this.panel5.TabIndex = 161;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(365, 26);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(92, 19);
-            this.label9.TabIndex = 167;
-            this.label9.Text = "TVA 20 %";
-            // 
-            // panel6
-            // 
-            this.panel6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel6.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel6.Location = new System.Drawing.Point(604, -9);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1, 200);
-            this.panel6.TabIndex = 165;
-            // 
-            // panel11
-            // 
-            this.panel11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel11.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel11.Location = new System.Drawing.Point(604, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1, 200);
-            this.panel11.TabIndex = 166;
-            // 
-            // label11
-            // 
-            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(621, 26);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(251, 19);
-            this.label11.TabIndex = 168;
-            this.label11.Text = "  Objet du Bon de Commande ";
-            // 
-            // label_tva
-            // 
-            this.label_tva.AutoSize = true;
-            this.label_tva.Location = new System.Drawing.Point(369, 25);
-            this.label_tva.Name = "label_tva";
-            this.label_tva.Size = new System.Drawing.Size(41, 13);
-            this.label_tva.TabIndex = 167;
-            this.label_tva.Text = "label12";
-            // 
-            // label_thttva
-            // 
-            this.label_thttva.AutoSize = true;
-            this.label_thttva.Location = new System.Drawing.Point(227, 26);
-            this.label_thttva.Name = "label_thttva";
-            this.label_thttva.Size = new System.Drawing.Size(41, 13);
-            this.label_thttva.TabIndex = 168;
-            this.label_thttva.Text = "label12";
-            // 
-            // label_objet
-            // 
-            this.label_objet.AutoSize = true;
-            this.label_objet.Location = new System.Drawing.Point(633, 23);
-            this.label_objet.Name = "label_objet";
-            this.label_objet.Size = new System.Drawing.Size(41, 13);
-            this.label_objet.TabIndex = 169;
-            this.label_objet.Text = "label12";
             // 
             // panel12
             // 

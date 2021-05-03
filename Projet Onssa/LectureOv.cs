@@ -12,38 +12,13 @@ namespace Projet_Onssa
 {
     public partial class LectureOv : Form
     {
-        DataSetReport ds = new DataSetReport();
-        DataSetReportTableAdapters.ProduitSetTableAdapter dap = new DataSetReportTableAdapters.ProduitSetTableAdapter();
-        DataSetReportTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetReportTableAdapters.ModeleDevisSetTableAdapter();
-        DataSetReportTableAdapters.ModeleDevisProduitTableAdapter damp = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
-        DataSetReportTableAdapters.OVSetTableAdapter daov = new DataSetReportTableAdapters.OVSetTableAdapter();
-        DataSetReportTableAdapters.OISetTableAdapter daoi = new DataSetReportTableAdapters.OISetTableAdapter();
-        DataSetReportTableAdapters.BCSetTableAdapter dabc = new DataSetReportTableAdapters.BCSetTableAdapter();
-        DataSetReportTableAdapters.OPSetTableAdapter daop = new DataSetReportTableAdapters.OPSetTableAdapter();
-        DataSetReportTableAdapters.FESetTableAdapter dafe = new DataSetReportTableAdapters.FESetTableAdapter();
-        DataSetReportTableAdapters.PVJSetTableAdapter dapvj = new DataSetReportTableAdapters.PVJSetTableAdapter();
-        DataSetReportTableAdapters.FournisseurSetTableAdapter daf = new DataSetReportTableAdapters.FournisseurSetTableAdapter();
-        DataSetReportTableAdapters.ConsultationSetTableAdapter dcon = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
-        DataSetReportTableAdapters.PVJFournisseurTableAdapter dapvjf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
-        public LectureOv()
+      public LectureOv()
         {
             InitializeComponent();
         }
 
         private void LectureOv_Load(object sender, EventArgs e)
         {
-            dabc.Fill(ds.BCSet);
-            dafe.Fill(ds.FESet);
-            dapvj.Fill(ds.PVJSet);
-            daf.Fill(ds.FournisseurSet);
-            dapvjf.Fill(ds.PVJFournisseur) ;
-            dap.Fill(ds.ProduitSet); 
-            daov.Fill(ds.OVSet);
-            daop.Fill(ds.OPSet);
-            daoi.Fill(ds.OISet);
-            damp.Fill(ds.ModeleDevisProduit);
-           dam.Fill(ds.ModeleDevisSet);
-            dcon.Fill(ds.ConsultationSet);
 
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
@@ -68,17 +43,29 @@ namespace Projet_Onssa
                             join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                             join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                             m.InfoFournisseur.IdFournisseur
+                            join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
+                            
                             where ov.IdOV == (int)cb_Ov.SelectedValue && m.InfoConsultation.IdConsultation== pvj.InfoConsultation.IdConsultation
                             select new
                             {
                                 ttc = m.Ttc,
+                                nom = fr.Nom,
+                                compte = fr.Compte_bancaire_n,
+                                numop = op.NumOP,
+                                sou = ov.SousOrdonnateur,
+                                tr = ov.TresorierPayeur,
+                                numov = ov.NumOV,
                             };
 
-                int i = int.Parse(cb_Ov.SelectedValue.ToString());
-                daov.FillByOV(ds.OVSet, i);
-                 CrystalReportOv ce = new CrystalReportOv();
-                ce.SetDataSource(ds);
+                
+                CrystalReportOv ce = new CrystalReportOv();
                 ce.SetParameterValue("ttc", query.FirstOrDefault().ttc.ToString());
+                ce.SetParameterValue("nom", query.FirstOrDefault().nom.ToString());
+                ce.SetParameterValue("compte", query.FirstOrDefault().compte.ToString());
+                ce.SetParameterValue("numop", query.FirstOrDefault().numop.ToString());
+                ce.SetParameterValue("sou", query.FirstOrDefault().sou.ToString());
+                ce.SetParameterValue("tr", query.FirstOrDefault().tr.ToString());
+                ce.SetParameterValue("numov", query.FirstOrDefault().numov.ToString());
                 crystalReportViewer1.ReportSource = ce;
                 crystalReportViewer1.Refresh();
             }

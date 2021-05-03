@@ -44,6 +44,9 @@ namespace Projet_Onssa
             this.dgv_Fournisseur = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.card = new MaterialSkin.Controls.MaterialCard();
+            this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_NumC = new System.Windows.Forms.ComboBox();
             this.txtarea_DateString = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_Adresse = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumPvj = new System.Windows.Forms.ComboBox();
@@ -52,12 +55,9 @@ namespace Projet_Onssa
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.cb_NumC = new System.Windows.Forms.ComboBox();
-            this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_fchoisie = new System.Windows.Forms.ComboBox();
+            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
             this.card.SuspendLayout();
@@ -313,6 +313,49 @@ namespace Projet_Onssa
             this.card.Size = new System.Drawing.Size(444, 450);
             this.card.TabIndex = 159;
             // 
+            // date_Pvj
+            // 
+            this.date_Pvj.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.date_Pvj.BackColor = System.Drawing.Color.Transparent;
+            this.date_Pvj.BorderRadius = 0;
+            this.date_Pvj.ForeColor = System.Drawing.Color.Black;
+            this.date_Pvj.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date_Pvj.FormatCustom = null;
+            this.date_Pvj.Location = new System.Drawing.Point(37, 335);
+            this.date_Pvj.Name = "date_Pvj";
+            this.date_Pvj.Size = new System.Drawing.Size(364, 30);
+            this.date_Pvj.TabIndex = 159;
+            this.date_Pvj.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderThickness = 1;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(32, 328);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox3.TabIndex = 158;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_NumC
+            // 
+            this.cb_NumC.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumC.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumC.FormattingEnabled = true;
+            this.cb_NumC.Location = new System.Drawing.Point(43, 155);
+            this.cb_NumC.Name = "cb_NumC";
+            this.cb_NumC.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumC.TabIndex = 157;
+            // 
             // txtarea_DateString
             // 
             this.txtarea_DateString.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -427,49 +470,6 @@ namespace Projet_Onssa
             this.label11.TabIndex = 98;
             this.label11.Text = "Date  ";
             // 
-            // cb_NumC
-            // 
-            this.cb_NumC.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumC.Font = new System.Drawing.Font("Roboto", 12F);
-            this.cb_NumC.FormattingEnabled = true;
-            this.cb_NumC.Location = new System.Drawing.Point(43, 155);
-            this.cb_NumC.Name = "cb_NumC";
-            this.cb_NumC.Size = new System.Drawing.Size(358, 27);
-            this.cb_NumC.TabIndex = 157;
-            // 
-            // date_Pvj
-            // 
-            this.date_Pvj.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.date_Pvj.BackColor = System.Drawing.Color.Transparent;
-            this.date_Pvj.BorderRadius = 0;
-            this.date_Pvj.ForeColor = System.Drawing.Color.Black;
-            this.date_Pvj.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.date_Pvj.FormatCustom = null;
-            this.date_Pvj.Location = new System.Drawing.Point(37, 335);
-            this.date_Pvj.Name = "date_Pvj";
-            this.date_Pvj.Size = new System.Drawing.Size(364, 30);
-            this.date_Pvj.TabIndex = 159;
-            this.date_Pvj.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
-            // 
-            // bunifuMetroTextbox3
-            // 
-            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderThickness = 1;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(32, 328);
-            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
-            this.bunifuMetroTextbox3.TabIndex = 158;
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // materialCard1
             // 
             this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -493,6 +493,18 @@ namespace Projet_Onssa
             this.materialCard1.Size = new System.Drawing.Size(454, 450);
             this.materialCard1.TabIndex = 160;
             // 
+            // cb_fchoisie
+            // 
+            this.cb_fchoisie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cb_fchoisie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_fchoisie.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_fchoisie.FormattingEnabled = true;
+            this.cb_fchoisie.Location = new System.Drawing.Point(32, 393);
+            this.cb_fchoisie.Name = "cb_fchoisie";
+            this.cb_fchoisie.Size = new System.Drawing.Size(381, 27);
+            this.cb_fchoisie.TabIndex = 171;
+            this.cb_fchoisie.Click += new System.EventHandler(this.cb_fchoisie_Click_1);
+            // 
             // bunifuMetroTextbox2
             // 
             this.bunifuMetroTextbox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -510,17 +522,6 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox2.Size = new System.Drawing.Size(400, 44);
             this.bunifuMetroTextbox2.TabIndex = 160;
             this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // cb_fchoisie
-            // 
-            this.cb_fchoisie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.cb_fchoisie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_fchoisie.Font = new System.Drawing.Font("Roboto", 12F);
-            this.cb_fchoisie.FormattingEnabled = true;
-            this.cb_fchoisie.Location = new System.Drawing.Point(31, 393);
-            this.cb_fchoisie.Name = "cb_fchoisie";
-            this.cb_fchoisie.Size = new System.Drawing.Size(381, 27);
-            this.cb_fchoisie.TabIndex = 171;
             // 
             // PvjForm
             // 

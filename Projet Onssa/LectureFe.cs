@@ -52,7 +52,7 @@ namespace Projet_Onssa
                                 NumBc = bc.NumBc,
                                 NomFr = fr.Nom,
                                 DateBc = bc.DateBC,
-                                Code = bc.InfoMorasse.Code,
+                                Code = bc.InfoMorasse.CodeMorasse,
                                 Objet = m.InfoConsultation.ObjetConsultation,
                                 Exercice = bc.InfoMorasse.Exercice,
                                 Compte = fr.Compte_bancaire_n,

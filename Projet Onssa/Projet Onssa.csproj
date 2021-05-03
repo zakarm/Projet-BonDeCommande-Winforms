@@ -206,6 +206,12 @@
     <Compile Include="LectureOv.Designer.cs">
       <DependentUpon>LectureOv.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ligne.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Lrg.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModeleDevis.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -260,6 +266,9 @@
     </Compile>
     <Compile Include="OvForm.Designer.cs">
       <DependentUpon>OvForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paragraphe.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Produit.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>

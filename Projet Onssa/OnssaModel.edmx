@@ -20,6 +20,9 @@
     <EntitySet Name="OPSet" EntityType="OnssaModel.Store.OPSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="OVSet" EntityType="OnssaModel.Store.OVSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="GestionCompteSet" EntityType="OnssaModel.Store.GestionCompteSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LigneSet" EntityType="OnssaModel.Store.LigneSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ParagrapheSet" EntityType="OnssaModel.Store.ParagrapheSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LrgSet" EntityType="OnssaModel.Store.LrgSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PVJFournisseur" EntityType="OnssaModel.Store.PVJFournisseur" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PVJCommission" EntityType="OnssaModel.Store.PVJCommission" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ModeleDevisProduit" EntityType="OnssaModel.Store.ModeleDevisProduit" store:Type="Tables" Schema="dbo" />
@@ -109,6 +112,18 @@
       <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
       <End Role="Consultation" EntitySet="ConsultationSet" />
     </AssociationSet>
+    <AssociationSet Name="ParagrapheLrg" Association="OnssaModel.Store.ParagrapheLrg">
+      <End Role="Paragraphe" EntitySet="ParagrapheSet" />
+      <End Role="Lrg" EntitySet="LrgSet" />
+    </AssociationSet>
+    <AssociationSet Name="LigneLrg" Association="OnssaModel.Store.LigneLrg">
+      <End Role="Ligne" EntitySet="LigneSet" />
+      <End Role="Lrg" EntitySet="LrgSet" />
+    </AssociationSet>
+    <AssociationSet Name="MorasseLigne" Association="OnssaModel.Store.MorasseLigne">
+      <End Role="Morasse" EntitySet="MorasseSet" />
+      <End Role="Ligne" EntitySet="LigneSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="FournisseurSet">
     <Key>
@@ -197,7 +212,7 @@
     <Property Name="Destination" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DelaiExecution" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DateBC" Type="datetime" Nullable="false" />
-    <Property Name="InfoMorasse_Code" Type="int" Nullable="false" />
+    <Property Name="InfoMorasse_CodeMorasse" Type="int" Nullable="false" />
     <Property Name="InfoPVJ_IdPVJ" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="FESet">
@@ -214,14 +229,13 @@
   </EntityType>
   <EntityType Name="MorasseSet">
     <Key>
-      <PropertyRef Name="Code" />
+      <PropertyRef Name="CodeMorasse" />
     </Key>
-    <Property Name="Code" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CodeMorasse" Type="int" Nullable="false" />
     <Property Name="Exercice" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Budget" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="PAR" Type="int" Nullable="false" />
-    <Property Name="LRG" Type="int" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ligne_CodeLigne" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="OISet">
     <Key>
@@ -265,6 +279,29 @@
     <Property Name="Nom" Type="nvarchar(max)" Nullable="false" />
     <Property Name="MotDePasse" Type="nvarchar(max)" Nullable="false" />
     <Property Name="TypeCompte" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LigneSet">
+    <Key>
+      <PropertyRef Name="CodeLigne" />
+    </Key>
+    <Property Name="CodeLigne" Type="int" Nullable="false" />
+    <Property Name="DescriptionLigne" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ParagrapheSet">
+    <Key>
+      <PropertyRef Name="CodePar" />
+    </Key>
+    <Property Name="CodePar" Type="int" Nullable="false" />
+    <Property Name="DescriptionPar" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LrgSet">
+    <Key>
+      <PropertyRef Name="CodeLrg" />
+    </Key>
+    <Property Name="CodeLrg" Type="int" Nullable="false" />
+    <Property Name="DescriptionLrg" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="InfoParagraphe_CodePar" Type="int" Nullable="false" />
+    <Property Name="Ligne_CodeLigne" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PVJFournisseur">
     <Key>
@@ -383,10 +420,10 @@
     <End Role="Morasse" Type="OnssaModel.Store.MorasseSet" Multiplicity="1" />
     <ReferentialConstraint>
       <Principal Role="Morasse">
-        <PropertyRef Name="Code" />
+        <PropertyRef Name="CodeMorasse" />
       </Principal>
       <Dependent Role="BC">
-        <PropertyRef Name="InfoMorasse_Code" />
+        <PropertyRef Name="InfoMorasse_CodeMorasse" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -435,6 +472,42 @@
       </Principal>
       <Dependent Role="ModeleDevis">
         <PropertyRef Name="InfoConsultation_IdConsultation" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ParagrapheLrg">
+    <End Role="Paragraphe" Type="OnssaModel.Store.ParagrapheSet" Multiplicity="1" />
+    <End Role="Lrg" Type="OnssaModel.Store.LrgSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Paragraphe">
+        <PropertyRef Name="CodePar" />
+      </Principal>
+      <Dependent Role="Lrg">
+        <PropertyRef Name="InfoParagraphe_CodePar" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="LigneLrg">
+    <End Role="Ligne" Type="OnssaModel.Store.LigneSet" Multiplicity="1" />
+    <End Role="Lrg" Type="OnssaModel.Store.LrgSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ligne">
+        <PropertyRef Name="CodeLigne" />
+      </Principal>
+      <Dependent Role="Lrg">
+        <PropertyRef Name="Ligne_CodeLigne" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MorasseLigne">
+    <End Role="Morasse" Type="OnssaModel.Store.MorasseSet" Multiplicity="*" />
+    <End Role="Ligne" Type="OnssaModel.Store.LigneSet" Multiplicity="1" />
+    <ReferentialConstraint>
+      <Principal Role="Ligne">
+        <PropertyRef Name="CodeLigne" />
+      </Principal>
+      <Dependent Role="Morasse">
+        <PropertyRef Name="Ligne_CodeLigne" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -641,6 +714,21 @@
             <End Role="ModeleDevis" EntitySet="ModeleDevisSet" />
             <End Role="Consultation" EntitySet="ConsultationSet" />
           </AssociationSet>
+          <EntitySet Name="LigneSet" EntityType="OnssaModel.Ligne" />
+          <EntitySet Name="ParagrapheSet" EntityType="OnssaModel.Paragraphe" />
+          <EntitySet Name="LrgSet" EntityType="OnssaModel.Lrg" />
+          <AssociationSet Name="ParagrapheLrg" Association="OnssaModel.ParagrapheLrg">
+            <End Role="Paragraphe" EntitySet="ParagrapheSet" />
+            <End Role="Lrg" EntitySet="LrgSet" />
+          </AssociationSet>
+          <AssociationSet Name="LigneLrg" Association="OnssaModel.LigneLrg">
+            <End Role="Ligne" EntitySet="LigneSet" />
+            <End Role="Lrg" EntitySet="LrgSet" />
+          </AssociationSet>
+          <AssociationSet Name="MorasseLigne" Association="OnssaModel.MorasseLigne">
+            <End Role="Morasse" EntitySet="MorasseSet" />
+            <End Role="Ligne" EntitySet="LigneSet" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Fournisseur">
           <Key>
@@ -763,15 +851,14 @@
         </EntityType>
         <EntityType Name="Morasse">
           <Key>
-            <PropertyRef Name="Code" />
+            <PropertyRef Name="CodeMorasse" />
           </Key>
-          <Property Name="Code" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CodeMorasse" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="Exercice" Type="String" Nullable="false" />
           <Property Name="Budget" Type="String" Nullable="false" />
-          <Property Name="PAR" Type="Int32" Nullable="false" />
-          <Property Name="LRG" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" />
           <NavigationProperty Name="InfoBC" Relationship="OnssaModel.BCMorasse" FromRole="Morasse" ToRole="BC" />
+          <NavigationProperty Name="Ligne" Relationship="OnssaModel.MorasseLigne" FromRole="Morasse" ToRole="Ligne" />
         </EntityType>
         <EntityType Name="OI">
           <Key>
@@ -882,6 +969,44 @@
         <Association Name="ModeleDevisConsultation">
           <End Type="OnssaModel.ModeleDevis" Role="ModeleDevis" Multiplicity="*" />
           <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="1" />
+        </Association>
+        <EntityType Name="Ligne">
+          <Key>
+            <PropertyRef Name="CodeLigne" />
+          </Key>
+          <Property Name="CodeLigne" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="DescriptionLigne" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoLrg" Relationship="OnssaModel.LigneLrg" FromRole="Ligne" ToRole="Lrg" />
+          <NavigationProperty Name="Morasse" Relationship="OnssaModel.MorasseLigne" FromRole="Ligne" ToRole="Morasse" />
+        </EntityType>
+        <EntityType Name="Paragraphe">
+          <Key>
+            <PropertyRef Name="CodePar" />
+          </Key>
+          <Property Name="CodePar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="DescriptionPar" Type="String" Nullable="false" />
+          <NavigationProperty Name="Lrg" Relationship="OnssaModel.ParagrapheLrg" FromRole="Paragraphe" ToRole="Lrg" />
+        </EntityType>
+        <EntityType Name="Lrg">
+          <Key>
+            <PropertyRef Name="CodeLrg" />
+          </Key>
+          <Property Name="CodeLrg" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
+          <Property Name="DescriptionLrg" Type="String" Nullable="false" />
+          <NavigationProperty Name="InfoParagraphe" Relationship="OnssaModel.ParagrapheLrg" FromRole="Lrg" ToRole="Paragraphe" />
+          <NavigationProperty Name="Ligne" Relationship="OnssaModel.LigneLrg" FromRole="Lrg" ToRole="Ligne" />
+        </EntityType>
+        <Association Name="ParagrapheLrg">
+          <End Type="OnssaModel.Paragraphe" Role="Paragraphe" Multiplicity="1" />
+          <End Type="OnssaModel.Lrg" Role="Lrg" Multiplicity="0..1" />
+        </Association>
+        <Association Name="LigneLrg">
+          <End Type="OnssaModel.Ligne" Role="Ligne" Multiplicity="1" />
+          <End Type="OnssaModel.Lrg" Role="Lrg" Multiplicity="0..1" />
+        </Association>
+        <Association Name="MorasseLigne">
+          <End Type="OnssaModel.Morasse" Role="Morasse" Multiplicity="0..1" />
+          <End Type="OnssaModel.Ligne" Role="Ligne" Multiplicity="1" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
@@ -995,11 +1120,9 @@
     <EntitySetMapping Name="MorasseSet">
       <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Morasse)">
         <MappingFragment StoreEntitySet="MorasseSet">
-          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="CodeMorasse" ColumnName="CodeMorasse" />
           <ScalarProperty Name="Exercice" ColumnName="Exercice" />
           <ScalarProperty Name="Budget" ColumnName="Budget" />
-          <ScalarProperty Name="PAR" ColumnName="PAR" />
-          <ScalarProperty Name="LRG" ColumnName="LRG" />
           <ScalarProperty Name="Description" ColumnName="Description" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -1045,6 +1168,30 @@
           <ScalarProperty Name="Nom" ColumnName="Nom" />
           <ScalarProperty Name="MotDePasse" ColumnName="MotDePasse" />
           <ScalarProperty Name="TypeCompte" ColumnName="TypeCompte" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LigneSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Ligne)">
+        <MappingFragment StoreEntitySet="LigneSet">
+          <ScalarProperty Name="CodeLigne" ColumnName="CodeLigne" />
+          <ScalarProperty Name="DescriptionLigne" ColumnName="DescriptionLigne" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ParagrapheSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Paragraphe)">
+        <MappingFragment StoreEntitySet="ParagrapheSet">
+          <ScalarProperty Name="CodePar" ColumnName="CodePar" />
+          <ScalarProperty Name="DescriptionPar" ColumnName="DescriptionPar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LrgSet">
+      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.Lrg)">
+        <MappingFragment StoreEntitySet="LrgSet">
+          <ScalarProperty Name="CodeLrg" ColumnName="CodeLrg" />
+          <ScalarProperty Name="DescriptionLrg" ColumnName="DescriptionLrg" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1138,7 +1285,7 @@
     </AssociationSetMapping>
     <AssociationSetMapping Name="BCMorasse" TypeName="OnssaModel.BCMorasse" StoreEntitySet="BCSet">
       <EndProperty Name="Morasse">
-        <ScalarProperty Name="Code" ColumnName="InfoMorasse_Code" />
+        <ScalarProperty Name="CodeMorasse" ColumnName="InfoMorasse_CodeMorasse" />
       </EndProperty>
       <EndProperty Name="BC">
         <ScalarProperty Name="IdBC" ColumnName="IdBC" />
@@ -1174,6 +1321,30 @@
       </EndProperty>
       <EndProperty Name="ModeleDevis">
         <ScalarProperty Name="IdModeleDevis" ColumnName="IdModeleDevis" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ParagrapheLrg" TypeName="OnssaModel.ParagrapheLrg" StoreEntitySet="LrgSet">
+      <EndProperty Name="Paragraphe">
+        <ScalarProperty Name="CodePar" ColumnName="InfoParagraphe_CodePar" />
+      </EndProperty>
+      <EndProperty Name="Lrg">
+        <ScalarProperty Name="CodeLrg" ColumnName="CodeLrg" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="LigneLrg" TypeName="OnssaModel.LigneLrg" StoreEntitySet="LrgSet">
+      <EndProperty Name="Ligne">
+        <ScalarProperty Name="CodeLigne" ColumnName="Ligne_CodeLigne" />
+      </EndProperty>
+      <EndProperty Name="Lrg">
+        <ScalarProperty Name="CodeLrg" ColumnName="CodeLrg" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MorasseLigne" TypeName="OnssaModel.MorasseLigne" StoreEntitySet="MorasseSet">
+      <EndProperty Name="Ligne">
+        <ScalarProperty Name="CodeLigne" ColumnName="Ligne_CodeLigne" />
+      </EndProperty>
+      <EndProperty Name="Morasse">
+        <ScalarProperty Name="CodeMorasse" ColumnName="CodeMorasse" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

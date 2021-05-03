@@ -12,21 +12,12 @@ namespace Projet_Onssa
     using System;
     using System.Collections.Generic;
     
-    public partial class Morasse
+    public partial class Lrg
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Morasse()
-        {
-            this.InfoBC = new HashSet<BC>();
-        }
+        public int CodeLrg { get; set; }
+        public string DescriptionLrg { get; set; }
     
-        public int CodeMorasse { get; set; }
-        public string Exercice { get; set; }
-        public string Budget { get; set; }
-        public string Description { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<BC> InfoBC { get; set; }
+        public virtual Paragraphe InfoParagraphe { get; set; }
         public virtual Ligne Ligne { get; set; }
     }
 }

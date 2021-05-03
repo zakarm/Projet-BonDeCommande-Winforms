@@ -39,5 +39,8 @@ namespace Projet_Onssa
         public virtual DbSet<OP> OPSet { get; set; }
         public virtual DbSet<OV> OVSet { get; set; }
         public virtual DbSet<GestionCompte> GestionCompteSet { get; set; }
+        public virtual DbSet<Ligne> LigneSet { get; set; }
+        public virtual DbSet<Paragraphe> ParagrapheSet { get; set; }
+        public virtual DbSet<Lrg> LrgSet { get; set; }
     }
 }

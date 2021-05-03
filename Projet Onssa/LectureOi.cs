@@ -50,7 +50,7 @@ namespace Projet_Onssa
                                 DateBc = bc.DateBC,
                                 NumCompte = oi.NumCompteDebit,
                                 DateOi = oi.DateOI,
-                                Code = bc.InfoMorasse.Code,
+                                Code = bc.InfoMorasse.CodeMorasse,
                                 Objet = m.InfoConsultation.ObjetConsultation,
                                 Exercice = bc.InfoMorasse.Exercice,
                                 Compte = fr.Compte_bancaire_n,

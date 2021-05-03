@@ -15,9 +15,9 @@
         <EntityTypeShape EntityType="OnssaModel.BC" Width="1.5" PointX="1.75" PointY="11.5" />
         <EntityTypeShape EntityType="OnssaModel.FE" Width="1.5" PointX="6.125" PointY="10.375" />
         <EntityTypeShape EntityType="OnssaModel.Morasse" Width="1.5" PointX="0.875" PointY="15.375" />
-        <EntityTypeShape EntityType="OnssaModel.OI" Width="1.5" PointX="5.125" PointY="15.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="OnssaModel.OP" Width="1.5" PointX="5.875" PointY="20.375" />
-        <EntityTypeShape EntityType="OnssaModel.OV" Width="1.5" PointX="9.75" PointY="16.75" />
+        <EntityTypeShape EntityType="OnssaModel.OI" Width="1.5" PointX="7.75" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="OnssaModel.OP" Width="1.5" PointX="10.625" PointY="18" />
+        <EntityTypeShape EntityType="OnssaModel.OV" Width="1.5" PointX="13.5" PointY="16.875" />
         <EntityTypeShape EntityType="OnssaModel.GestionCompte" Width="1.5" PointX="11.375" PointY="4.375" />
         <AssociationConnector Association="OnssaModel.PVJFournisseur" />
         <AssociationConnector Association="OnssaModel.ModeleDevisFournisseur" ManuallyRouted="false" >
@@ -37,6 +37,12 @@
         <AssociationConnector Association="OnssaModel.PVJBC" />
         <AssociationConnector Association="OnssaModel.PVJFournisseur1" />
         <AssociationConnector Association="OnssaModel.ModeleDevisConsultation" />
+        <EntityTypeShape EntityType="OnssaModel.Ligne" Width="1.5" PointX="0.75" PointY="18.75" />
+        <EntityTypeShape EntityType="OnssaModel.Paragraphe" Width="1.5" PointX="6" PointY="19.625" />
+        <EntityTypeShape EntityType="OnssaModel.Lrg" Width="1.5" PointX="3.25" PointY="19.375" />
+        <AssociationConnector Association="OnssaModel.ParagrapheLrg" />
+        <AssociationConnector Association="OnssaModel.LigneLrg" />
+        <AssociationConnector Association="OnssaModel.MorasseLigne" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
