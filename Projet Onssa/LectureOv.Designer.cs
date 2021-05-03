@@ -49,7 +49,7 @@ namespace Projet_Onssa
             // 
             this.cb_Ov.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Ov.FormattingEnabled = true;
-            this.cb_Ov.Location = new System.Drawing.Point(618, 5);
+            this.cb_Ov.Location = new System.Drawing.Point(651, 7);
             this.cb_Ov.Name = "cb_Ov";
             this.cb_Ov.Size = new System.Drawing.Size(155, 21);
             this.cb_Ov.TabIndex = 2;
@@ -59,10 +59,11 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(512, 10);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(499, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(142, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Ordre de virement";
             // 

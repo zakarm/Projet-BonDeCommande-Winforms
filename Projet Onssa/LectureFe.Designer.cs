@@ -50,10 +50,11 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(492, 8);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label1.Location = new System.Drawing.Point(488, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 13);
+            this.label1.Size = new System.Drawing.Size(155, 19);
             this.label1.TabIndex = 11;
             this.label1.Text = "Fiche d\'engagement";
             // 
@@ -61,10 +62,11 @@ namespace Projet_Onssa
             // 
             this.cb_Fe.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Fe.FormattingEnabled = true;
-            this.cb_Fe.Location = new System.Drawing.Point(598, 3);
+            this.cb_Fe.Location = new System.Drawing.Point(648, 8);
             this.cb_Fe.Name = "cb_Fe";
             this.cb_Fe.Size = new System.Drawing.Size(155, 21);
             this.cb_Fe.TabIndex = 10;
+            this.cb_Fe.SelectedIndexChanged += new System.EventHandler(this.cb_Fe_SelectedIndexChanged);
             // 
             // crystalReportViewer2
             // 
@@ -88,6 +90,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "LectureFe";
             this.Text = "LectureFe";
+            this.Load += new System.EventHandler(this.LectureFe_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -114,7 +114,9 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_NumFe_SelectedIndexChanged(object sender, EventArgs e)
+       
+
+        private void cb_NumFe_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -133,6 +135,32 @@ namespace Projet_Onssa
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        
+
+        private void cb_Bc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                var query = from bc in ctx.BCSet 
+                             join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
+                             join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
+                             m.InfoFournisseur.IdFournisseur
+                             join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
+                            where bc.IdBC == (int)cb_Bc.SelectedValue
+                             select new
+                             {
+                                 ttc = m.Ttc,
+                                 nom = fr.Nom,
+
+                             };
+                label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
+                label_ttc.Text = query.FirstOrDefault().ttc.ToString();
+                label_bc.Text = cb_Bc.Text;
+
+            }
+            
         }
     }
     

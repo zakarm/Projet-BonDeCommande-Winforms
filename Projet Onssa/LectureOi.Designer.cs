@@ -49,10 +49,11 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label1.Location = new System.Drawing.Point(492, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
+            this.label1.Size = new System.Drawing.Size(144, 19);
             this.label1.TabIndex = 8;
             this.label1.Text = "Ordre d\'imputation";
             // 
@@ -60,7 +61,7 @@ namespace Projet_Onssa
             // 
             this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.Location = new System.Drawing.Point(598, 3);
+            this.cb_Oi.Location = new System.Drawing.Point(642, 8);
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(155, 21);
             this.cb_Oi.TabIndex = 7;

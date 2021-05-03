@@ -61,23 +61,7 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                f = ctx.FournisseurSet.Find(cb_Nom.SelectedValue);
-
-                txt_Adresse.Text = f.Adresse;
-                txt_Rcn.Text = f.RC_n.ToString();
-                txt_Patenten.Text = f.Patente_n.ToString();
-                txt_Ifn.Text = f.IF_n.ToString();
-                txt_cnss.Text = f.CNSS_n.ToString();
-                txt_CmptBancaire.Text = f.Compte_bancaire_n.ToString();
-                txt_Ice.Text = f.ICE.ToString();
-                txt_Ville.Text = f.Ville.ToString();
-                txt_Banque.Text = f.Banque.ToString();
-            }
-        }
+        
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
@@ -133,6 +117,25 @@ namespace Projet_Onssa
             }
         }
 
-      
+        private void cb_Nom_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                    f = ctx.FournisseurSet.Find(cb_Nom.SelectedValue);
+
+                    txt_Adresse.Text = f.Adresse;
+                    txt_Rcn.Text = f.RC_n.ToString();
+                    txt_Patenten.Text = f.Patente_n.ToString();
+                    txt_Ifn.Text = f.IF_n.ToString();
+                    txt_cnss.Text = f.CNSS_n.ToString();
+                    txt_CmptBancaire.Text = f.Compte_bancaire_n.ToString();
+                    txt_Ice.Text = f.ICE.ToString();
+                    txt_Ville.Text = f.Ville.ToString();
+                    txt_Banque.Text = f.Banque.ToString();
+                }
+            }
+        }
     }
 }

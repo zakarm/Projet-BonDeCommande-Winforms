@@ -268,8 +268,10 @@ namespace Projet_Onssa
         }
 
         //---------------------------------------------Recherche-with-Combo----------------------------
-        private void cb_NumPvj_SelectedIndexChanged_1(object sender, EventArgs e)
+        
+        private void cb_NumPvj_SelectedIndexChanged(object sender, EventArgs e)
         {
+
             try
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())

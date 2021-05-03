@@ -159,6 +159,33 @@ namespace Projet_Onssa
             }
         }
 
-       
+        private void cb_Pvj_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                var query = from  pvj in ctx.PVJSet
+                            join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
+                            m.InfoFournisseur.IdFournisseur
+                            join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
+                            join con in ctx.ConsultationSet on pvj.InfoConsultation.IdConsultation equals con.IdConsultation
+                            where pvj.IdPVJ == (int)cb_Pvj.SelectedValue
+                            select new
+                            {
+                                ttc = m.Ttc,
+                                nom = fr.Nom,
+                                tva = m.Tva,
+                                thttva = m.Total,
+                                objet = con.ObjetConsultation,
+
+                            };
+
+                label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
+                label_ttc.Text = query.FirstOrDefault().ttc.ToString();
+               label_tva.Text = query.FirstOrDefault().tva.ToString();
+                label_thttva.Text = query.FirstOrDefault().thttva.ToString();
+                label_objet.Text = query.FirstOrDefault().objet.ToString();
+
+            }
+        }
     }
 }

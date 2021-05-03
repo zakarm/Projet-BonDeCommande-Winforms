@@ -49,10 +49,11 @@ namespace Projet_Onssa
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
-            this.label1.Location = new System.Drawing.Point(512, 10);
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(248)))), ((int)(((byte)(248)))));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F);
+            this.label1.Location = new System.Drawing.Point(495, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 13);
+            this.label1.Size = new System.Drawing.Size(146, 19);
             this.label1.TabIndex = 6;
             this.label1.Text = "Ordre de Paiement";
             // 
@@ -60,7 +61,7 @@ namespace Projet_Onssa
             // 
             this.cb_Op.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Op.FormattingEnabled = true;
-            this.cb_Op.Location = new System.Drawing.Point(618, 5);
+            this.cb_Op.Location = new System.Drawing.Point(649, 8);
             this.cb_Op.Name = "cb_Op";
             this.cb_Op.Size = new System.Drawing.Size(155, 21);
             this.cb_Op.TabIndex = 5;
