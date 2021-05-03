@@ -119,8 +119,7 @@ namespace Projet_Onssa
 
         private void cb_Nom_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            private void cb_Nom_SelectedIndexChanged(object sender, EventArgs e)
-            {
+          
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     f = ctx.FournisseurSet.Find(cb_Nom.SelectedValue);
@@ -135,7 +134,7 @@ namespace Projet_Onssa
                     txt_Ville.Text = f.Ville.ToString();
                     txt_Banque.Text = f.Banque.ToString();
                 }
-            }
+            
         }
     }
 }
