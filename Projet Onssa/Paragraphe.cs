@@ -14,7 +14,7 @@ namespace Projet_Onssa
     
     public partial class Paragraphe
     {
-        public int CodePar { get; set; }
+        public int NumPar { get; set; }
         public string DescriptionPar { get; set; }
     
         public virtual Lrg Lrg { get; set; }

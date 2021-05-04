@@ -145,7 +145,7 @@ namespace Projet_Onssa
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 c = ctx.CommissionSet.Find(cb_Nom.SelectedValue);
-
+                
                 txt_Prenom.Text = c.Prenom;
                 txt_Fonction.Text = c.Fonction;
                 txt_Affectation.Text = c.Affectation;

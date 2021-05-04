@@ -55,6 +55,7 @@ namespace Projet_Onssa
                                 sou = ov.SousOrdonnateur,
                                 tr = ov.TresorierPayeur,
                                 numov = ov.NumOV,
+                                banque = fr.Banque,
                             };
 
                 
@@ -66,6 +67,7 @@ namespace Projet_Onssa
                 ce.SetParameterValue("sou", query.FirstOrDefault().sou.ToString());
                 ce.SetParameterValue("tr", query.FirstOrDefault().tr.ToString());
                 ce.SetParameterValue("numov", query.FirstOrDefault().numov.ToString());
+                ce.SetParameterValue("banque", query.FirstOrDefault().banque.ToString());
                 crystalReportViewer1.ReportSource = ce;
                 crystalReportViewer1.Refresh();
             }

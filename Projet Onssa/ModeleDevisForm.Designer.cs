@@ -50,18 +50,21 @@ namespace Projet_Onssa
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCards2 = new Bunifu.Framework.UI.BunifuCards();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cb_consultation = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).BeginInit();
             this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cb_NumMdevis
             // 
+            this.cb_NumMdevis.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumMdevis.BackColor = System.Drawing.Color.Gainsboro;
             this.cb_NumMdevis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_NumMdevis.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.cb_NumMdevis.FormattingEnabled = true;
             this.cb_NumMdevis.ItemHeight = 25;
-            this.cb_NumMdevis.Location = new System.Drawing.Point(26, 116);
+            this.cb_NumMdevis.Location = new System.Drawing.Point(26, 76);
             this.cb_NumMdevis.Name = "cb_NumMdevis";
             this.cb_NumMdevis.Size = new System.Drawing.Size(376, 33);
             this.cb_NumMdevis.TabIndex = 66;
@@ -69,10 +72,11 @@ namespace Projet_Onssa
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(26, 83);
+            this.label7.Location = new System.Drawing.Point(26, 43);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(220, 19);
             this.label7.TabIndex = 65;
@@ -80,13 +84,14 @@ namespace Projet_Onssa
             // 
             // date_MDevis
             // 
+            this.date_MDevis.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.date_MDevis.BackColor = System.Drawing.Color.Gainsboro;
             this.date_MDevis.BorderRadius = 0;
             this.date_MDevis.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.date_MDevis.ForeColor = System.Drawing.Color.Black;
             this.date_MDevis.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_MDevis.FormatCustom = null;
-            this.date_MDevis.Location = new System.Drawing.Point(30, 280);
+            this.date_MDevis.Location = new System.Drawing.Point(30, 291);
             this.date_MDevis.Margin = new System.Windows.Forms.Padding(4);
             this.date_MDevis.Name = "date_MDevis";
             this.date_MDevis.Size = new System.Drawing.Size(374, 44);
@@ -95,10 +100,11 @@ namespace Projet_Onssa
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(26, 257);
+            this.label1.Location = new System.Drawing.Point(26, 268);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 19);
             this.label1.TabIndex = 61;
@@ -106,12 +112,13 @@ namespace Projet_Onssa
             // 
             // cb_NumF
             // 
+            this.cb_NumF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumF.BackColor = System.Drawing.Color.Gainsboro;
             this.cb_NumF.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_NumF.Font = new System.Drawing.Font("Roboto", 15.75F);
             this.cb_NumF.FormattingEnabled = true;
             this.cb_NumF.ItemHeight = 25;
-            this.cb_NumF.Location = new System.Drawing.Point(26, 197);
+            this.cb_NumF.Location = new System.Drawing.Point(30, 220);
             this.cb_NumF.Name = "cb_NumF";
             this.cb_NumF.Size = new System.Drawing.Size(376, 33);
             this.cb_NumF.TabIndex = 59;
@@ -226,10 +233,11 @@ namespace Projet_Onssa
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(26, 173);
+            this.label4.Location = new System.Drawing.Point(30, 196);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(197, 19);
             this.label4.TabIndex = 54;
@@ -324,9 +332,7 @@ namespace Projet_Onssa
             this.dgv_Produits.AllowUserToOrderColumns = true;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgv_Produits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Produits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Produits.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgv_Produits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Produits.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Produits.BackgroundColor = System.Drawing.Color.Gainsboro;
@@ -395,6 +401,8 @@ namespace Projet_Onssa
             this.bunifuCards2.BorderRadius = 50;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuCards2.Controls.Add(this.label3);
+            this.bunifuCards2.Controls.Add(this.cb_consultation);
             this.bunifuCards2.Controls.Add(this.dgv_Produits);
             this.bunifuCards2.Controls.Add(this.bunifuFlatButton2);
             this.bunifuCards2.Controls.Add(this.bunifuFlatButton1);
@@ -412,6 +420,31 @@ namespace Projet_Onssa
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(905, 422);
             this.bunifuCards2.TabIndex = 151;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(26, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(207, 19);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Numéro de Consultation";
+            // 
+            // cb_consultation
+            // 
+            this.cb_consultation.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_consultation.BackColor = System.Drawing.Color.Gainsboro;
+            this.cb_consultation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_consultation.Font = new System.Drawing.Font("Roboto", 15.75F);
+            this.cb_consultation.FormattingEnabled = true;
+            this.cb_consultation.ItemHeight = 25;
+            this.cb_consultation.Location = new System.Drawing.Point(26, 146);
+            this.cb_consultation.Name = "cb_consultation";
+            this.cb_consultation.Size = new System.Drawing.Size(376, 33);
+            this.cb_consultation.TabIndex = 71;
             // 
             // ModeleDevisForm
             // 
@@ -453,5 +486,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Bunifu.Framework.UI.BunifuCards bunifuCards2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cb_consultation;
     }
 }

@@ -71,7 +71,6 @@ namespace Projet_Onssa
                
 
                 CrystalReportOp ce = new CrystalReportOp();
-                //ce.SetDataSource(ds);
 
                 ce.SetParameterValue("ttc", query.FirstOrDefault().total.ToString());
                 ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());

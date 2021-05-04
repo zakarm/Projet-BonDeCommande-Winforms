@@ -28,6 +28,10 @@ namespace Projet_Onssa
                 cb_NumF.ValueMember = "IdFournisseur";
                 cb_NumF.DisplayMember = "Nom";
                 cb_NumF.DataSource = ctx.FournisseurSet.ToList();
+
+                cb_consultation.ValueMember = "IdConsultation";
+                cb_consultation.DisplayMember = "NumConsultation";
+                cb_consultation.DataSource = ctx.ConsultationSet.ToList();
             }
         }
 
@@ -39,11 +43,13 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     ModeleDevis m = new ModeleDevis();
+                    Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
                     Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
                     Produit p;
                     m.NumDevis = cb_NumMdevis.Text;
                     m.InfoFournisseur = f;
                     m.Date = date_MDevis.Value;
+                    m.InfoConsultation = con;
                    
                     foreach (DataGridViewRow dr in dgv_Produits.Rows)
                     {
@@ -113,9 +119,9 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
-                    cb_NumF.Text = md.InfoFournisseur.Nom;
+                    cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
                     date_MDevis.Value = md.Date;
-
+                    cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
                     foreach (Produit m in md.ListProduit)
                     {
 
@@ -144,11 +150,13 @@ namespace Projet_Onssa
                     {
                         ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
                         Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                        Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
                         Produit p;
 
                         md.NumDevis = cb_NumMdevis.Text;
                         md.InfoFournisseur = f;
                         md.Date = date_MDevis.Value;
+                        md.InfoConsultation = con;
                         md.ListProduit.Clear();
 
                         foreach (DataGridViewRow dr in dgv_Produits.Rows)

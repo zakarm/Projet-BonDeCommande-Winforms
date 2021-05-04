@@ -110,7 +110,7 @@ namespace Projet_Onssa
                     cb_Nom.DataSource = ctx.FournisseurSet.ToList();
                 }
 
-            }
+        }
             catch (Exception o)
             {
                 MessageBox.Show(o.Message);

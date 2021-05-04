@@ -16,6 +16,7 @@ namespace Projet_Onssa
     {
         public int CodeLrg { get; set; }
         public string DescriptionLrg { get; set; }
+        public string NumLrg { get; set; }
     
         public virtual Paragraphe InfoParagraphe { get; set; }
         public virtual Ligne Ligne { get; set; }

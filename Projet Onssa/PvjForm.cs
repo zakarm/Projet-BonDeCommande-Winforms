@@ -303,7 +303,7 @@ namespace Projet_Onssa
                 {
                     foreach (DataGridViewRow dr in dgv_Fournisseur.Rows)
                     {
-                        if ((bool)dr.Cells[4].FormattedValue.Equals(true))
+                        if ((bool)dr.Cells["ck_btn"].FormattedValue.Equals(true))
                         {
                             test.Add(int.Parse(dr.Cells["Num"].FormattedValue.ToString()), dr.Cells["Nom"].FormattedValue.ToString());
                         }
@@ -318,6 +318,11 @@ namespace Projet_Onssa
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void cb_fchoisie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

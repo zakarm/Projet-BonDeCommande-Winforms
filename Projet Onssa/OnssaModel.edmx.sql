@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/03/2021 22:35:54
+-- Date Created: 05/04/2021 03:46:27
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -80,6 +80,15 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_ModeleDevisConsultation]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ModeleDevisSet] DROP CONSTRAINT [FK_ModeleDevisConsultation];
 GO
+IF OBJECT_ID(N'[dbo].[FK_ParagrapheLrg]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LrgSet] DROP CONSTRAINT [FK_ParagrapheLrg];
+GO
+IF OBJECT_ID(N'[dbo].[FK_LigneLrg]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[LigneSet] DROP CONSTRAINT [FK_LigneLrg];
+GO
+IF OBJECT_ID(N'[dbo].[FK_MorasseLigne]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[MorasseSet] DROP CONSTRAINT [FK_MorasseLigne];
+GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -126,6 +135,15 @@ IF OBJECT_ID(N'[dbo].[OVSet]', 'U') IS NOT NULL
 GO
 IF OBJECT_ID(N'[dbo].[GestionCompteSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[GestionCompteSet];
+GO
+IF OBJECT_ID(N'[dbo].[LigneSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LigneSet];
+GO
+IF OBJECT_ID(N'[dbo].[ParagrapheSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[ParagrapheSet];
+GO
+IF OBJECT_ID(N'[dbo].[LrgSet]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[LrgSet];
 GO
 IF OBJECT_ID(N'[dbo].[PVJFournisseur]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PVJFournisseur];
@@ -305,13 +323,14 @@ GO
 -- Creating table 'LigneSet'
 CREATE TABLE [dbo].[LigneSet] (
     [CodeLigne] int  NOT NULL,
-    [DescriptionLigne] nvarchar(max)  NOT NULL
+    [DescriptionLigne] nvarchar(max)  NOT NULL,
+    [InfoLrg_CodeLrg] int  NOT NULL
 );
 GO
 
 -- Creating table 'ParagrapheSet'
 CREATE TABLE [dbo].[ParagrapheSet] (
-    [CodePar] int  NOT NULL,
+    [NumPar] int  NOT NULL,
     [DescriptionPar] nvarchar(max)  NOT NULL
 );
 GO
@@ -320,8 +339,8 @@ GO
 CREATE TABLE [dbo].[LrgSet] (
     [CodeLrg] int  NOT NULL,
     [DescriptionLrg] nvarchar(max)  NOT NULL,
-    [InfoParagraphe_CodePar] int  NOT NULL,
-    [Ligne_CodeLigne] int  NOT NULL
+    [NumLrg] nvarchar(max)  NOT NULL,
+    [InfoParagraphe_NumPar] int  NOT NULL
 );
 GO
 
@@ -454,10 +473,10 @@ ADD CONSTRAINT [PK_LigneSet]
     PRIMARY KEY CLUSTERED ([CodeLigne] ASC);
 GO
 
--- Creating primary key on [CodePar] in table 'ParagrapheSet'
+-- Creating primary key on [NumPar] in table 'ParagrapheSet'
 ALTER TABLE [dbo].[ParagrapheSet]
 ADD CONSTRAINT [PK_ParagrapheSet]
-    PRIMARY KEY CLUSTERED ([CodePar] ASC);
+    PRIMARY KEY CLUSTERED ([NumPar] ASC);
 GO
 
 -- Creating primary key on [CodeLrg] in table 'LrgSet'
@@ -785,34 +804,34 @@ ON [dbo].[ModeleDevisSet]
     ([InfoConsultation_IdConsultation]);
 GO
 
--- Creating foreign key on [InfoParagraphe_CodePar] in table 'LrgSet'
+-- Creating foreign key on [InfoParagraphe_NumPar] in table 'LrgSet'
 ALTER TABLE [dbo].[LrgSet]
 ADD CONSTRAINT [FK_ParagrapheLrg]
-    FOREIGN KEY ([InfoParagraphe_CodePar])
+    FOREIGN KEY ([InfoParagraphe_NumPar])
     REFERENCES [dbo].[ParagrapheSet]
-        ([CodePar])
+        ([NumPar])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_ParagrapheLrg'
 CREATE INDEX [IX_FK_ParagrapheLrg]
 ON [dbo].[LrgSet]
-    ([InfoParagraphe_CodePar]);
+    ([InfoParagraphe_NumPar]);
 GO
 
--- Creating foreign key on [Ligne_CodeLigne] in table 'LrgSet'
-ALTER TABLE [dbo].[LrgSet]
+-- Creating foreign key on [InfoLrg_CodeLrg] in table 'LigneSet'
+ALTER TABLE [dbo].[LigneSet]
 ADD CONSTRAINT [FK_LigneLrg]
-    FOREIGN KEY ([Ligne_CodeLigne])
-    REFERENCES [dbo].[LigneSet]
-        ([CodeLigne])
+    FOREIGN KEY ([InfoLrg_CodeLrg])
+    REFERENCES [dbo].[LrgSet]
+        ([CodeLrg])
     ON DELETE NO ACTION ON UPDATE NO ACTION;
 GO
 
 -- Creating non-clustered index for FOREIGN KEY 'FK_LigneLrg'
 CREATE INDEX [IX_FK_LigneLrg]
-ON [dbo].[LrgSet]
-    ([Ligne_CodeLigne]);
+ON [dbo].[LigneSet]
+    ([InfoLrg_CodeLrg]);
 GO
 
 -- Creating foreign key on [Ligne_CodeLigne] in table 'MorasseSet'
