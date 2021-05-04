@@ -70,7 +70,6 @@ namespace Projet_Onssa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_header = new System.Windows.Forms.Panel();
             this.label_txt = new System.Windows.Forms.Label();
-            this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
@@ -900,8 +899,8 @@ namespace Projet_Onssa
             // panel_header
             // 
             this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.panel_header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel_header.Controls.Add(this.label_txt);
-            this.panel_header.Controls.Add(this.bunifuTextbox1);
             this.panel_header.Controls.Add(this.bunifuFlatButton3);
             this.panel_header.Controls.Add(this.panel_slide);
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -920,20 +919,6 @@ namespace Projet_Onssa
             this.label_txt.Size = new System.Drawing.Size(114, 32);
             this.label_txt.TabIndex = 30;
             this.label_txt.Text = "Accueil";
-            // 
-            // bunifuTextbox1
-            // 
-            this.bunifuTextbox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuTextbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.bunifuTextbox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.BackgroundImage")));
-            this.bunifuTextbox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.bunifuTextbox1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextbox1.Icon")));
-            this.bunifuTextbox1.Location = new System.Drawing.Point(672, 34);
-            this.bunifuTextbox1.Name = "bunifuTextbox1";
-            this.bunifuTextbox1.Size = new System.Drawing.Size(205, 31);
-            this.bunifuTextbox1.TabIndex = 0;
-            this.bunifuTextbox1.text = "";
             // 
             // bunifuFlatButton3
             // 
@@ -957,7 +942,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 60D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(882, 30);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(880, 30);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -1027,6 +1012,7 @@ namespace Projet_Onssa
             this.Controls.Add(this.panel_header);
             this.Controls.Add(this.panel_submenu);
             this.Controls.Add(this.panel6);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(1098, 588);
             this.Name = "Accueil";
             this.ShowIcon = false;
@@ -1091,7 +1077,6 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton btn_Co;
         private System.Windows.Forms.Panel panel_Commission;
         private System.Windows.Forms.Label label_txt;
-        private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;

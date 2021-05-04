@@ -51,7 +51,7 @@ namespace Projet_Onssa
             // 
             this.cb_Consultation.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Consultation.FormattingEnabled = true;
-            this.cb_Consultation.Location = new System.Drawing.Point(474, 16);
+            this.cb_Consultation.Location = new System.Drawing.Point(474, 24);
             this.cb_Consultation.Name = "cb_Consultation";
             this.cb_Consultation.Size = new System.Drawing.Size(155, 21);
             this.cb_Consultation.TabIndex = 1;
@@ -61,7 +61,7 @@ namespace Projet_Onssa
             // 
             this.cb_Fournisseur.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cb_Fournisseur.FormattingEnabled = true;
-            this.cb_Fournisseur.Location = new System.Drawing.Point(635, 16);
+            this.cb_Fournisseur.Location = new System.Drawing.Point(634, 23);
             this.cb_Fournisseur.Name = "cb_Fournisseur";
             this.cb_Fournisseur.Size = new System.Drawing.Size(155, 21);
             this.cb_Fournisseur.TabIndex = 2;
@@ -72,9 +72,10 @@ namespace Projet_Onssa
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label1.Location = new System.Drawing.Point(472, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 13);
+            this.label1.Size = new System.Drawing.Size(100, 19);
             this.label1.TabIndex = 4;
             this.label1.Text = "Consultation";
             // 
@@ -83,9 +84,10 @@ namespace Projet_Onssa
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F);
             this.label2.Location = new System.Drawing.Point(632, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 13);
+            this.label2.Size = new System.Drawing.Size(98, 19);
             this.label2.TabIndex = 5;
             this.label2.Text = "Fournniseur";
             // 
