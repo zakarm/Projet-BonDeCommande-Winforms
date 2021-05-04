@@ -121,6 +121,7 @@ namespace Projet_Onssa
 
         private void btn_Mamber_Click(object sender, EventArgs e)
         {
+            panel_submenu.Visible = true;
             btnPcsrs(false);
             btnMcsrs(true);
             
@@ -146,7 +147,6 @@ namespace Projet_Onssa
             panel_Fr.Visible = false;
             btn_GestionCompte.Visible = false;
             btn_Mamber.Visible = false;
-
             btn_Pvr.Visible = s;
             panel_Pvr.Visible = s;
             btn_Op.Visible = s;
@@ -187,8 +187,10 @@ namespace Projet_Onssa
 
         private void btn_Gpaiement_Click(object sender, EventArgs e)
         {
+            panel_submenu.Visible = true;
             if (Program.OG.TypeCompte.Equals("cord"))
             {
+               
                 btn_Oi_Click(sender, e);
                 btnPcord(true);
             }
@@ -196,6 +198,7 @@ namespace Projet_Onssa
             {
                 if (Program.OG.TypeCompte.Equals("csrs"))
                 {
+
                     btn_Consultation_Click(sender, e);
                     btnPcsrs(true);
                     btnMcsrs(false);
@@ -275,6 +278,12 @@ namespace Projet_Onssa
             tabPage1.Text = "Lecture Ordre de paiement";
             tabPage2.Text = "Gestion Ordre de paiement";
             label_txt.Text = "Ordre de paiement";
+        }
+
+        private void btn_GestionCompte_Click(object sender, EventArgs e)
+        {
+            openchildform(new GestionCompteForm());
+            panel_submenu.Visible = false;
         }
     }
 }

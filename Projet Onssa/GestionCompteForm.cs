@@ -28,17 +28,7 @@ namespace Projet_Onssa
         }
 
         GestionCompte og;
-        private void cb_Numcompte_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                og = ctx.GestionCompteSet.Find(cb_Numcompte.SelectedValue);
-
-                txt_motdepasse.Text = og.MotDePasse.ToString();
-                txt_typeccompte.Text = og.TypeCompte.ToString();
-                txt_conf_mot_de_passe.Text= og.MotDePasse.ToString();
-            }
-        }
+        
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
@@ -118,6 +108,16 @@ namespace Projet_Onssa
             }
         }
 
-        
+        private void cb_Numcompte_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                og = ctx.GestionCompteSet.Find(cb_Numcompte.SelectedValue);
+
+                txt_motdepasse.Text = og.MotDePasse.ToString();
+                txt_typeccompte.Text = og.TypeCompte.ToString();
+                txt_conf_mot_de_passe.Text = og.MotDePasse.ToString();
+            }
+        }
     }
 }

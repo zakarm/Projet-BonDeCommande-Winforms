@@ -139,6 +139,7 @@ namespace Projet_Onssa
             this.btn_GestionCompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_GestionCompte.Textcolor = System.Drawing.Color.White;
             this.btn_GestionCompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GestionCompte.Click += new System.EventHandler(this.btn_GestionCompte_Click);
             // 
             // panel_Mamber
             // 
@@ -914,7 +915,7 @@ namespace Projet_Onssa
             this.label_txt.AutoSize = true;
             this.label_txt.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_txt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.label_txt.Location = new System.Drawing.Point(12, 31);
+            this.label_txt.Location = new System.Drawing.Point(31, 35);
             this.label_txt.Name = "label_txt";
             this.label_txt.Size = new System.Drawing.Size(114, 32);
             this.label_txt.TabIndex = 30;
