@@ -10,6 +10,7 @@ using Bunifu.Framework.Lib;
 using Bunifu.Framework;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
+using Bunifu.Framework;
 
 namespace Projet_Onssa
 {
@@ -26,19 +27,19 @@ namespace Projet_Onssa
                 }
                 else
                 {
-                    if (c is MaterialTextBox)
+                    if (c is BunifuMetroTextbox)
                     {
-                        MaterialTextBox t = (MaterialTextBox)c;
+                        BunifuMetroTextbox t = (BunifuMetroTextbox)c;
                         t.Text = "";
                     }
                     else
                     {
-                        if (c is MaterialTextBox)
+                        if (c is ComboBox)
                         {
-                            MaterialTextBox t = (MaterialTextBox)c;
-                            t.Clear();
+                            ComboBox t = (ComboBox)c;
+                            t.Text ="";
                         }
-
+                        
                     }
                 }
                 if (c.Controls.Count != 0)

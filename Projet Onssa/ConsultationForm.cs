@@ -88,6 +88,7 @@ namespace Projet_Onssa
             
             try
             { 
+                
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     Consultation con = new Consultation();
@@ -102,20 +103,26 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
                         MessageBox.Show("Ajouté avec succès");
+                        DeclarationGlobale.vider(this);
                         
                         
                     }
                     else
                     {
-                        MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
 
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            
            
         }
 
@@ -132,7 +139,9 @@ namespace Projet_Onssa
                     ctx.ConsultationSet.Remove(c);
                     ctx.SaveChanges();
                     cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                    
                 }
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {
@@ -166,7 +175,8 @@ namespace Projet_Onssa
                     {
                         MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
+               }
+               DeclarationGlobale.vider(this);
             }
             catch(Exception ex)
             {

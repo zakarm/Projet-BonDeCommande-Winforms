@@ -83,7 +83,7 @@ namespace Projet_Onssa
         private bool check(DataGridView dv, PVJ pv, OnssaModelContainer4 ctx)
         {
             bool test = false;
-            dv.CurrentCell = dv.Rows[0].Cells[0];
+            dv.CurrentCell = dv.Rows[0].Cells["Num"];
 
             try
             {
@@ -128,36 +128,46 @@ namespace Projet_Onssa
         //---------------------------------------------Ajouter-----------------------------------------
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            try
             {
-                PVJ pv = new PVJ();
-                Consultation c ;
-                Fournisseur f ;
-                NumToString tr = new NumToString();
-                if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur, pv, ctx) == true)
+
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                    PVJ pv = new PVJ();
+                    Consultation c;
+                    Fournisseur f;
+                    NumToString tr = new NumToString();
 
                    
-                    f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
 
-                    pv.NumPvj = cb_NumPvj.Text;
-                    pv.InfoConsultation = c;
-                    pv.DateString = txtarea_DateString.Text;
-                    pv.DatePvj = date_Pvj.Value;
-                    pv.InfoFournisseur = f;
+                    if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur, pv, ctx) == true)
+                    {
+                        c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
 
-                    ctx.PVJSet.Add(pv);
 
-                    ctx.SaveChanges();
-                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
-                    MessageBox.Show("Ajouté avec succès");
+                        f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
+
+                        pv.NumPvj = cb_NumPvj.Text;
+                        pv.InfoConsultation = c;
+                        pv.DateString = txtarea_DateString.Text;
+                        pv.DatePvj = date_Pvj.Value;
+                        pv.InfoFournisseur = f;
+
+                        ctx.PVJSet.Add(pv);
+
+                        ctx.SaveChanges();
+                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                        MessageBox.Show("Ajouté avec succès");
+                    }
+                    else
+                    {
+                        MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
-                else
-                {
-                    MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
+            }catch(Exception ex )
+            {
+                MessageBox.Show(ex.Message);
             }
 
         }
