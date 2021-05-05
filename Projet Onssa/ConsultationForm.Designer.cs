@@ -53,7 +53,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(25, 135);
+            this.label2.Location = new System.Drawing.Point(36, 135);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 21);
             this.label2.TabIndex = 18;
@@ -173,7 +173,7 @@ namespace Projet_Onssa
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.label1.Location = new System.Drawing.Point(644, 439);
+            this.label1.Location = new System.Drawing.Point(626, 439);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(263, 17);
             this.label1.TabIndex = 13;
@@ -213,12 +213,12 @@ namespace Projet_Onssa
             this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
             this.dgv_Fournisseur.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Fournisseur.Location = new System.Drawing.Point(29, 159);
+            this.dgv_Fournisseur.Location = new System.Drawing.Point(40, 159);
             this.dgv_Fournisseur.Name = "dgv_Fournisseur";
             this.dgv_Fournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Fournisseur.RowHeadersWidth = 5;
             this.dgv_Fournisseur.RowTemplate.Height = 50;
-            this.dgv_Fournisseur.Size = new System.Drawing.Size(878, 277);
+            this.dgv_Fournisseur.Size = new System.Drawing.Size(849, 277);
             this.dgv_Fournisseur.TabIndex = 33;
             // 
             // materialCard1
@@ -255,10 +255,10 @@ namespace Projet_Onssa
             this.txtarea_Objet.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtarea_Objet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtarea_Objet.isPassword = false;
-            this.txtarea_Objet.Location = new System.Drawing.Point(503, 63);
+            this.txtarea_Objet.Location = new System.Drawing.Point(514, 72);
             this.txtarea_Objet.Margin = new System.Windows.Forms.Padding(4);
             this.txtarea_Objet.Name = "txtarea_Objet";
-            this.txtarea_Objet.Size = new System.Drawing.Size(375, 44);
+            this.txtarea_Objet.Size = new System.Drawing.Size(375, 35);
             this.txtarea_Objet.TabIndex = 145;
             this.txtarea_Objet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -266,7 +266,7 @@ namespace Projet_Onssa
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(500, 39);
+            this.label6.Location = new System.Drawing.Point(510, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(186, 20);
             this.label6.TabIndex = 142;
@@ -277,7 +277,7 @@ namespace Projet_Onssa
             this.cb_Num.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Num.Font = new System.Drawing.Font("Roboto", 12F);
             this.cb_Num.FormattingEnabled = true;
-            this.cb_Num.Location = new System.Drawing.Point(37, 72);
+            this.cb_Num.Location = new System.Drawing.Point(52, 77);
             this.cb_Num.Name = "cb_Num";
             this.cb_Num.Size = new System.Drawing.Size(358, 27);
             this.cb_Num.TabIndex = 144;
@@ -293,10 +293,10 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(28, 63);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(43, 72);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox1.TabIndex = 130;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -304,7 +304,7 @@ namespace Projet_Onssa
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(25, 39);
+            this.label8.Location = new System.Drawing.Point(40, 48);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(203, 20);
             this.label8.TabIndex = 141;

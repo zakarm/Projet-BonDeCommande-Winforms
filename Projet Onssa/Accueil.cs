@@ -20,7 +20,6 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        
         private Form activeForm = null;
         private void openchildform(Form childForm)
         {
@@ -190,7 +189,6 @@ namespace Projet_Onssa
             panel_submenu.Visible = true;
             if (Program.OG.TypeCompte.Equals("cord"))
             {
-               
                 btn_Oi_Click(sender, e);
                 btnPcord(true);
             }
@@ -209,10 +207,12 @@ namespace Projet_Onssa
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
+
             openchildformtab(new LectureConsultation(), new ConsultationForm());
             tabPage1.Text = "Lecture Consultation";
             tabPage2.Text = "Gestion Consultation";
             label_txt.Text = "Consultation";
+            
         }
 
         private void btn_Fr_Click(object sender, EventArgs e)
@@ -284,6 +284,27 @@ namespace Projet_Onssa
         {
             openchildform(new GestionCompteForm());
             panel_submenu.Visible = false;
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (label_txt.Text)
+            {
+                case "Consultation":
+                    btn_Consultation_Click(sender, e);
+                    break;
+                case "Ordre de paiement":
+                    btn_Op_Click(sender, e);
+                    break;
+                case "Ordre d'imputation":
+                    btn_Oi_Click(sender, e);
+                    break;
+                case "Ordre de virement":
+                    btn_Ov_Click(sender, e);
+                    break;
+                
+            }
+
         }
     }
 }

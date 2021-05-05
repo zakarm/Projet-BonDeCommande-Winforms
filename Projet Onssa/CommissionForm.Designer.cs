@@ -59,7 +59,7 @@ namespace Projet_Onssa
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(17, 54);
+            this.label5.Location = new System.Drawing.Point(17, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(272, 20);
             this.label5.TabIndex = 145;

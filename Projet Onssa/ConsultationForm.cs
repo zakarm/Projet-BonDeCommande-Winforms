@@ -53,8 +53,9 @@ namespace Projet_Onssa
         private bool check (Consultation con, OnssaModelContainer4 ctx)
         {
             bool test = false;
-            dgv_Fournisseur.CurrentCell = dgv_Fournisseur.Rows[0].Cells[0];
 
+
+            dgv_Fournisseur.CurrentCell = dgv_Fournisseur.Rows[0].Cells["Num"];
             foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
             {
 
@@ -72,7 +73,7 @@ namespace Projet_Onssa
                         MessageBox.Show(ex.Message);
                     }
                 }
-                dgv_Fournisseur.ClearSelection();
+               this.dgv_Fournisseur.ClearSelection();
                 drm.Cells["ck_btn"].Value = false;
 
             }
@@ -83,7 +84,8 @@ namespace Projet_Onssa
         //---------------------------------------------Ajouter----------------------------------------
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-           
+
+            
             try
             { 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -142,6 +144,7 @@ namespace Projet_Onssa
         //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
+            
             try
             {   
                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
