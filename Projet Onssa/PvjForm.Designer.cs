@@ -29,19 +29,19 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dgv_Fournisseur = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgv_Fournisseur_Rep = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.card = new MaterialSkin.Controls.MaterialCard();
             this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -58,7 +58,7 @@ namespace Projet_Onssa
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.cb_fchoisie = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur_Rep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
             this.card.SuspendLayout();
             this.materialCard1.SuspendLayout();
@@ -206,51 +206,51 @@ namespace Projet_Onssa
             this.label8.TabIndex = 51;
             this.label8.Text = "Fournisseur Choisie";
             // 
-            // dgv_Fournisseur
+            // dgv_Fournisseur_Rep
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Fournisseur.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Fournisseur.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_Fournisseur_Rep.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_Fournisseur_Rep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Fournisseur.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Fournisseur.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_Fournisseur.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Fournisseur.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Fournisseur.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgv_Fournisseur.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Fournisseur.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Fournisseur.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Fournisseur.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Fournisseur.DoubleBuffered = true;
-            this.dgv_Fournisseur.EnableHeadersVisualStyles = false;
-            this.dgv_Fournisseur.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.dgv_Fournisseur.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Fournisseur.Location = new System.Drawing.Point(18, 206);
-            this.dgv_Fournisseur.Name = "dgv_Fournisseur";
-            this.dgv_Fournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Fournisseur.RowHeadersWidth = 5;
-            this.dgv_Fournisseur.Size = new System.Drawing.Size(422, 146);
-            this.dgv_Fournisseur.TabIndex = 170;
+            this.dgv_Fournisseur_Rep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Fournisseur_Rep.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgv_Fournisseur_Rep.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Fournisseur_Rep.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_Fournisseur_Rep.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgv_Fournisseur_Rep.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Fournisseur_Rep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgv_Fournisseur_Rep.ColumnHeadersHeight = 40;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 14.25F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Fournisseur_Rep.DefaultCellStyle = dataGridViewCellStyle9;
+            this.dgv_Fournisseur_Rep.DoubleBuffered = true;
+            this.dgv_Fournisseur_Rep.EnableHeadersVisualStyles = false;
+            this.dgv_Fournisseur_Rep.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.dgv_Fournisseur_Rep.HeaderForeColor = System.Drawing.Color.White;
+            this.dgv_Fournisseur_Rep.Location = new System.Drawing.Point(18, 206);
+            this.dgv_Fournisseur_Rep.Name = "dgv_Fournisseur_Rep";
+            this.dgv_Fournisseur_Rep.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgv_Fournisseur_Rep.RowHeadersWidth = 5;
+            this.dgv_Fournisseur_Rep.Size = new System.Drawing.Size(422, 146);
+            this.dgv_Fournisseur_Rep.TabIndex = 170;
             // 
             // dgv_Commission
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -259,23 +259,23 @@ namespace Projet_Onssa
             this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_Commission.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 14.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 14.25F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_Commission.DoubleBuffered = true;
             this.dgv_Commission.EnableHeadersVisualStyles = false;
             this.dgv_Commission.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -478,7 +478,7 @@ namespace Projet_Onssa
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.materialCard1.Controls.Add(this.cb_fchoisie);
             this.materialCard1.Controls.Add(this.bunifuMetroTextbox2);
-            this.materialCard1.Controls.Add(this.dgv_Fournisseur);
+            this.materialCard1.Controls.Add(this.dgv_Fournisseur_Rep);
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Controls.Add(this.label6);
             this.materialCard1.Controls.Add(this.label8);
@@ -501,7 +501,7 @@ namespace Projet_Onssa
             this.cb_fchoisie.FormattingEnabled = true;
             this.cb_fchoisie.Location = new System.Drawing.Point(32, 393);
             this.cb_fchoisie.Name = "cb_fchoisie";
-            this.cb_fchoisie.Size = new System.Drawing.Size(381, 27);
+            this.cb_fchoisie.Size = new System.Drawing.Size(394, 27);
             this.cb_fchoisie.TabIndex = 171;
             this.cb_fchoisie.SelectedIndexChanged += new System.EventHandler(this.cb_fchoisie_SelectedIndexChanged);
             this.cb_fchoisie.Click += new System.EventHandler(this.cb_fchoisie_Click_1);
@@ -520,7 +520,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox2.Location = new System.Drawing.Point(23, 383);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(400, 44);
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(413, 44);
             this.bunifuMetroTextbox2.TabIndex = 160;
             this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -538,7 +538,7 @@ namespace Projet_Onssa
             this.Name = "PvjForm";
             this.Text = "PvjForm";
             this.Load += new System.EventHandler(this.PvjForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur_Rep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
             this.card.ResumeLayout(false);
             this.card.PerformLayout();
@@ -555,7 +555,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label8;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Fournisseur;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Fournisseur_Rep;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
         private MaterialSkin.Controls.MaterialCard card;
         private System.Windows.Forms.ComboBox cb_NumC;

@@ -37,14 +37,13 @@ namespace Projet_Onssa
                             join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                             join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                             m.InfoFournisseur.IdFournisseur
-                            join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
-                            join pvr in ctx.PVRSet on oi.IdOI equals pvr.IdPVR
+                           
                             where oi.IdOI == (int)cb_Oi.SelectedValue && m.InfoConsultation.IdConsultation == pvj.InfoConsultation.IdConsultation
                             select new
                             {
                                 total = m.Ttc,
                                 NumBc = bc.NumBc,
-                                NomFr = fr.Nom,
+                                NomFr = m.InfoFournisseur.Nom,
                                 idoi = oi.IdOI,
                                 NumOi = oi.NumOi,
                                 DateBc = bc.DateBC,
@@ -53,8 +52,7 @@ namespace Projet_Onssa
                                 Code = bc.InfoMorasse.CodeMorasse,
                                 Objet = m.InfoConsultation.ObjetConsultation,
                                 Exercice = bc.InfoMorasse.Exercice,
-                                Compte = fr.Compte_bancaire_n,
-                                DatePvr = pvr.DatePVR,
+                                Compte = m.InfoFournisseur.Compte_bancaire_n,
                                 VisaContol = oi.VisaControle,
                                 Visacsrs = oi.VisaCsrs,
                                 DatePaiement = oi.DatePaiement,

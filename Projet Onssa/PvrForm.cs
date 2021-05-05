@@ -80,7 +80,7 @@ namespace Projet_Onssa
         private bool check(PVR pvr, OnssaModelContainer4 ctx)
         {
             bool test = false;
-            dgv_Commission.CurrentCell = dgv_Commission.Rows[0].Cells[0];
+            dgv_Commission.CurrentCell = dgv_Commission.Rows[0].Cells["Num"];
 
             foreach (DataGridViewRow drm in dgv_Commission.Rows)
             {
@@ -99,6 +99,7 @@ namespace Projet_Onssa
                         MessageBox.Show(ex.Message);
                     }
                 }
+
                 dgv_Commission.ClearSelection();
                 drm.Cells["ck_btn"].Value = false;
 
@@ -130,10 +131,11 @@ namespace Projet_Onssa
                     }
                     else
                     {
-                        MessageBox.Show("sélectionner une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Sélectionner une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                 }
+                DeclarationGlobale.vider(this);
 
             }
             catch (Exception ex)
@@ -153,6 +155,7 @@ namespace Projet_Onssa
                     ctx.SaveChanges();
                     cb_NumPvr.DataSource = ctx.PVRSet.ToList();
                 }
+                DeclarationGlobale.vider(this);
 
             }
             catch (Exception ex)
@@ -165,20 +168,25 @@ namespace Projet_Onssa
         {
             try
             {
+
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
+
+                   
+
                     p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
                     txt_dateString.Text = p.DateString;
                     data_Pvr.Value = p.DatePVR;
                     cb_Oi.SelectedValue = p.InfoOI.IdOI;
                     cb_NumPvr.SelectedValue = p.IdPVR;
 
+
                     foreach (DataGridViewRow drm in dgv_Commission.Rows)
                     {
                         drm.Cells["ck_btn"].Value = false;
                         foreach (Commission m in p.ListCommission)
                         {
-                            if (int.Parse(drm.Cells["Num"].Value.ToString()) == m.IdCommission)
+                            if ( int.Parse(drm.Cells["Num"].Value.ToString()) == m.IdCommission)
                             {
                                 drm.Cells["ck_btn"].Value = true;
 
@@ -186,9 +194,10 @@ namespace Projet_Onssa
                         }
                     }
 
+
                 }
 
-            }
+             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -210,6 +219,7 @@ namespace Projet_Onssa
                     dgv_Commission.Columns.Add(ck2);
                 }
 
+
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     var query = from oi in ctx.OISet
@@ -218,7 +228,7 @@ namespace Projet_Onssa
                                 join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                                 where oi.IdOI == (int)cb_Oi.SelectedValue
                                 select pvj.IdPVJ;
-                    MessageBox.Show(query.FirstOrDefault().ToString());
+
                     int idpvj = int.Parse(query.FirstOrDefault().ToString());
 
                     foreach (PVJ p in ctx.PVJSet)
@@ -235,11 +245,14 @@ namespace Projet_Onssa
                     }
 
                 }
-            }
+
+
+
+        }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-        }
+}
     }
 }

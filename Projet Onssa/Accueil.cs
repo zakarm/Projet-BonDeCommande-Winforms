@@ -20,6 +20,7 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
+        
         private Form activeForm = null;
         private void openchildform(Form childForm)
         {
@@ -207,12 +208,11 @@ namespace Projet_Onssa
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
-
-            openchildformtab(new LectureConsultation(), new ConsultationForm());
-            tabPage1.Text = "Lecture Consultation";
-            tabPage2.Text = "Gestion Consultation";
+            label_txt.Text = "con";
             label_txt.Text = "Consultation";
+            openchildformtab(new LectureConsultation(), new ConsultationForm());
             
+
         }
 
         private void btn_Fr_Click(object sender, EventArgs e)
@@ -253,8 +253,12 @@ namespace Projet_Onssa
 
         private void btn_Oi_Click(object sender, EventArgs e)
         {
-            openchildformtab(new LectureOi(), new OiForm());
             label_txt.Text = "Ordre d'imputation";
+            label_txt.Name = "oi";
+            openchildformtab(new LectureOi(), new OiForm());
+            tabPage1.Text = "Lecture Ordre d'imputation";
+            tabPage2.Text = "Gestion Ordre d'imputation";
+            
         }
 
         private void btn_Pvr_Click(object sender, EventArgs e)
@@ -265,19 +269,22 @@ namespace Projet_Onssa
 
         private void btn_Ov_Click(object sender, EventArgs e)
         {
+            label_txt.Text = "Ordre de virement";
+            label_txt.Name = "ov";
             openchildformtab(new LectureOv(),new OvForm());
             tabPage1.Text = "Lecture Ordre de virement";
             tabPage2.Text = "Gestion Ordre de virement";
-            label_txt.Text = "Ordre de virement";
+            
         }
 
         private void btn_Op_Click(object sender, EventArgs e)
         {
-
+            label_txt.Text = "Ordre de paiement";
+            
             openchildformtab(new LectureOp(), new OpForm());
             tabPage1.Text = "Lecture Ordre de paiement";
             tabPage2.Text = "Gestion Ordre de paiement";
-            label_txt.Text = "Ordre de paiement";
+            
         }
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)
@@ -288,22 +295,25 @@ namespace Projet_Onssa
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (label_txt.Text)
+            switch (label_txt.Name)
             {
-                case "Consultation":
+                case "con":
                     btn_Consultation_Click(sender, e);
                     break;
-                case "Ordre de paiement":
+                case "op":
                     btn_Op_Click(sender, e);
                     break;
-                case "Ordre d'imputation":
+                case "oi":
                     btn_Oi_Click(sender, e);
                     break;
-                case "Ordre de virement":
+                case "ov":
                     btn_Ov_Click(sender, e);
                     break;
                 
             }
+
+           
+            
 
         }
     }
