@@ -36,8 +36,8 @@ namespace Projet_Onssa
                 cb_NumBc.ValueMember = "IdBC";
                 cb_NumBc.DataSource = ctx.BCSet.ToList();
 
-                cb_Morasse.ValueMember = "Code";
-                cb_Morasse.DisplayMember = "Code";
+                cb_Morasse.ValueMember = "CodeMorasse";
+                cb_Morasse.DisplayMember = "CodeMorasse";
                 cb_Morasse.DataSource = ctx.MorasseSet.ToList();
 
                 cb_Pvj.ValueMember = "IdPVJ";

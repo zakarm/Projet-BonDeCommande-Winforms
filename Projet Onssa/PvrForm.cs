@@ -218,7 +218,7 @@ namespace Projet_Onssa
                                 join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                                 where oi.IdOI == (int)cb_Oi.SelectedValue
                                 select pvj.IdPVJ;
-
+                    MessageBox.Show(query.FirstOrDefault().ToString());
                     int idpvj = int.Parse(query.FirstOrDefault().ToString());
 
                     foreach (PVJ p in ctx.PVJSet)

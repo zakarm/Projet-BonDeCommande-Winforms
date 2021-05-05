@@ -42,15 +42,20 @@ namespace Projet_Onssa
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.cb_Oi = new System.Windows.Forms.ComboBox();
             this.txt_dateString = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_Destination = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumPvr = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.cb_Oi = new System.Windows.Forms.ComboBox();
-            this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
             this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -193,6 +198,12 @@ namespace Projet_Onssa
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Commission.ColumnHeadersHeight = 40;
+            this.dgv_Commission.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
@@ -237,6 +248,50 @@ namespace Projet_Onssa
             this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard1.Size = new System.Drawing.Size(422, 465);
             this.materialCard1.TabIndex = 169;
+            // 
+            // data_Pvr
+            // 
+            this.data_Pvr.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.data_Pvr.BackColor = System.Drawing.Color.Transparent;
+            this.data_Pvr.BorderRadius = 0;
+            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
+            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.data_Pvr.FormatCustom = null;
+            this.data_Pvr.Location = new System.Drawing.Point(27, 369);
+            this.data_Pvr.Name = "data_Pvr";
+            this.data_Pvr.Size = new System.Drawing.Size(364, 30);
+            this.data_Pvr.TabIndex = 169;
+            this.data_Pvr.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderThickness = 1;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(22, 362);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox3.TabIndex = 168;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // cb_Oi
+            // 
+            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Oi.FormattingEnabled = true;
+            this.cb_Oi.Location = new System.Drawing.Point(27, 188);
+            this.cb_Oi.Name = "cb_Oi";
+            this.cb_Oi.Size = new System.Drawing.Size(358, 27);
+            this.cb_Oi.TabIndex = 164;
+            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged_1);
             // 
             // txt_dateString
             // 
@@ -304,50 +359,6 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.TabIndex = 130;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // cb_Oi
-            // 
-            this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 12F);
-            this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.Location = new System.Drawing.Point(27, 188);
-            this.cb_Oi.Name = "cb_Oi";
-            this.cb_Oi.Size = new System.Drawing.Size(358, 27);
-            this.cb_Oi.TabIndex = 164;
-            this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged_1);
-            // 
-            // data_Pvr
-            // 
-            this.data_Pvr.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.data_Pvr.BackColor = System.Drawing.Color.Transparent;
-            this.data_Pvr.BorderRadius = 0;
-            this.data_Pvr.ForeColor = System.Drawing.Color.Black;
-            this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data_Pvr.FormatCustom = null;
-            this.data_Pvr.Location = new System.Drawing.Point(27, 369);
-            this.data_Pvr.Name = "data_Pvr";
-            this.data_Pvr.Size = new System.Drawing.Size(364, 30);
-            this.data_Pvr.TabIndex = 169;
-            this.data_Pvr.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
-            // 
-            // bunifuMetroTextbox3
-            // 
-            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderThickness = 1;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(22, 362);
-            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
-            this.bunifuMetroTextbox3.TabIndex = 168;
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // materialCard2
             // 
             this.materialCard2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -382,6 +393,31 @@ namespace Projet_Onssa
             this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
             this.materialCard3.Size = new System.Drawing.Size(506, 556);
             this.materialCard3.TabIndex = 171;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Id Commission";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Nom";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Prénom";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Fonction";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Affectation";
+            this.Column5.Name = "Column5";
             // 
             // PvrForm
             // 
@@ -424,5 +460,10 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
         private MaterialSkin.Controls.MaterialCard materialCard2;
         private MaterialSkin.Controls.MaterialCard materialCard3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }
