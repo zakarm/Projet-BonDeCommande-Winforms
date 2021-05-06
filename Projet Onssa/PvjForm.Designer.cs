@@ -29,12 +29,12 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,7 +43,6 @@ namespace Projet_Onssa
             this.label8 = new System.Windows.Forms.Label();
             this.dgv_Fournisseur_Rep = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.card = new MaterialSkin.Controls.MaterialCard();
             this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumC = new System.Windows.Forms.ComboBox();
@@ -55,13 +54,16 @@ namespace Projet_Onssa
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.cb_fchoisie = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur_Rep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
-            this.card.SuspendLayout();
-            this.materialCard1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_Supprimer
@@ -86,7 +88,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.IconVisible = true;
             this.btn_Supprimer.IconZoom = 90D;
             this.btn_Supprimer.IsTab = false;
-            this.btn_Supprimer.Location = new System.Drawing.Point(443, 490);
+            this.btn_Supprimer.Location = new System.Drawing.Point(437, 528);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -122,7 +124,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.IconVisible = true;
             this.btn_Ajouter.IconZoom = 90D;
             this.btn_Ajouter.IsTab = false;
-            this.btn_Ajouter.Location = new System.Drawing.Point(325, 490);
+            this.btn_Ajouter.Location = new System.Drawing.Point(319, 528);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -158,7 +160,7 @@ namespace Projet_Onssa
             this.btn_Modifier.IconVisible = true;
             this.btn_Modifier.IconZoom = 90D;
             this.btn_Modifier.IsTab = false;
-            this.btn_Modifier.Location = new System.Drawing.Point(561, 490);
+            this.btn_Modifier.Location = new System.Drawing.Point(555, 528);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -177,7 +179,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(14, 182);
+            this.label2.Location = new System.Drawing.Point(2, 132);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(190, 21);
             this.label2.TabIndex = 34;
@@ -188,7 +190,7 @@ namespace Projet_Onssa
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(14, 17);
+            this.label6.Location = new System.Drawing.Point(2, 1);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(118, 21);
             this.label6.TabIndex = 47;
@@ -200,7 +202,7 @@ namespace Projet_Onssa
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(20, 361);
+            this.label8.Location = new System.Drawing.Point(282, 5);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(145, 20);
             this.label8.TabIndex = 51;
@@ -208,110 +210,85 @@ namespace Projet_Onssa
             // 
             // dgv_Fournisseur_Rep
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Fournisseur_Rep.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgv_Fournisseur_Rep.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Fournisseur_Rep.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Fournisseur_Rep.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Fournisseur_Rep.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Fournisseur_Rep.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Fournisseur_Rep.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Fournisseur_Rep.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Fournisseur_Rep.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Fournisseur_Rep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Fournisseur_Rep.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Fournisseur_Rep.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 14.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Fournisseur_Rep.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Fournisseur_Rep.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_Fournisseur_Rep.DoubleBuffered = true;
             this.dgv_Fournisseur_Rep.EnableHeadersVisualStyles = false;
+            this.dgv_Fournisseur_Rep.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur_Rep.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur_Rep.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Fournisseur_Rep.Location = new System.Drawing.Point(18, 206);
+            this.dgv_Fournisseur_Rep.Location = new System.Drawing.Point(3, 157);
             this.dgv_Fournisseur_Rep.Name = "dgv_Fournisseur_Rep";
             this.dgv_Fournisseur_Rep.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Fournisseur_Rep.RowHeadersWidth = 5;
-            this.dgv_Fournisseur_Rep.Size = new System.Drawing.Size(422, 146);
+            this.dgv_Fournisseur_Rep.RowTemplate.Height = 80;
+            this.dgv_Fournisseur_Rep.Size = new System.Drawing.Size(891, 104);
             this.dgv_Fournisseur_Rep.TabIndex = 170;
             // 
             // dgv_Commission
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgv_Commission.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgv_Commission.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Commission.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Commission.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgv_Commission.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dgv_Commission.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_Commission.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgv_Commission.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Commission.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Commission.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 14.25F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Commission.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Commission.DoubleBuffered = true;
             this.dgv_Commission.EnableHeadersVisualStyles = false;
+            this.dgv_Commission.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Commission.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Commission.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Commission.Location = new System.Drawing.Point(18, 41);
+            this.dgv_Commission.Location = new System.Drawing.Point(3, 25);
             this.dgv_Commission.Name = "dgv_Commission";
             this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Commission.RowHeadersWidth = 5;
-            this.dgv_Commission.Size = new System.Drawing.Size(422, 132);
+            this.dgv_Commission.RowTemplate.Height = 80;
+            this.dgv_Commission.Size = new System.Drawing.Size(891, 104);
             this.dgv_Commission.TabIndex = 169;
-            // 
-            // card
-            // 
-            this.card.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.card.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.card.Controls.Add(this.date_Pvj);
-            this.card.Controls.Add(this.bunifuMetroTextbox3);
-            this.card.Controls.Add(this.cb_NumC);
-            this.card.Controls.Add(this.txtarea_DateString);
-            this.card.Controls.Add(this.txt_Adresse);
-            this.card.Controls.Add(this.cb_NumPvj);
-            this.card.Controls.Add(this.bunifuMetroTextbox1);
-            this.card.Controls.Add(this.label5);
-            this.card.Controls.Add(this.label9);
-            this.card.Controls.Add(this.label10);
-            this.card.Controls.Add(this.label11);
-            this.card.Depth = 0;
-            this.card.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.card.Location = new System.Drawing.Point(23, 23);
-            this.card.Margin = new System.Windows.Forms.Padding(14);
-            this.card.MouseState = MaterialSkin.MouseState.HOVER;
-            this.card.Name = "card";
-            this.card.Padding = new System.Windows.Forms.Padding(14);
-            this.card.Size = new System.Drawing.Size(444, 450);
-            this.card.TabIndex = 159;
             // 
             // date_Pvj
             // 
@@ -321,7 +298,7 @@ namespace Projet_Onssa
             this.date_Pvj.ForeColor = System.Drawing.Color.Black;
             this.date_Pvj.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_Pvj.FormatCustom = null;
-            this.date_Pvj.Location = new System.Drawing.Point(37, 335);
+            this.date_Pvj.Location = new System.Drawing.Point(509, 29);
             this.date_Pvj.Name = "date_Pvj";
             this.date_Pvj.Size = new System.Drawing.Size(364, 30);
             this.date_Pvj.TabIndex = 159;
@@ -338,10 +315,10 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(32, 328);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(504, 27);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox3.TabIndex = 158;
             this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -349,11 +326,11 @@ namespace Projet_Onssa
             // 
             this.cb_NumC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumC.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumC.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_NumC.FormattingEnabled = true;
-            this.cb_NumC.Location = new System.Drawing.Point(43, 155);
+            this.cb_NumC.Location = new System.Drawing.Point(32, 92);
             this.cb_NumC.Name = "cb_NumC";
-            this.cb_NumC.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumC.Size = new System.Drawing.Size(358, 25);
             this.cb_NumC.TabIndex = 157;
             // 
             // txtarea_DateString
@@ -367,10 +344,10 @@ namespace Projet_Onssa
             this.txtarea_DateString.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtarea_DateString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtarea_DateString.isPassword = false;
-            this.txtarea_DateString.Location = new System.Drawing.Point(34, 235);
+            this.txtarea_DateString.Location = new System.Drawing.Point(509, 88);
             this.txtarea_DateString.Margin = new System.Windows.Forms.Padding(4);
             this.txtarea_DateString.Name = "txtarea_DateString";
-            this.txtarea_DateString.Size = new System.Drawing.Size(375, 44);
+            this.txtarea_DateString.Size = new System.Drawing.Size(375, 35);
             this.txtarea_DateString.TabIndex = 149;
             this.txtarea_DateString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -385,10 +362,10 @@ namespace Projet_Onssa
             this.txt_Adresse.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Adresse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Adresse.isPassword = false;
-            this.txt_Adresse.Location = new System.Drawing.Point(34, 144);
+            this.txt_Adresse.Location = new System.Drawing.Point(23, 88);
             this.txt_Adresse.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Adresse.Name = "txt_Adresse";
-            this.txt_Adresse.Size = new System.Drawing.Size(375, 44);
+            this.txt_Adresse.Size = new System.Drawing.Size(375, 35);
             this.txt_Adresse.TabIndex = 148;
             this.txt_Adresse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -396,11 +373,11 @@ namespace Projet_Onssa
             // 
             this.cb_NumPvj.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumPvj.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumPvj.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumPvj.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_NumPvj.FormattingEnabled = true;
-            this.cb_NumPvj.Location = new System.Drawing.Point(43, 69);
+            this.cb_NumPvj.Location = new System.Drawing.Point(32, 29);
             this.cb_NumPvj.Name = "cb_NumPvj";
-            this.cb_NumPvj.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumPvj.Size = new System.Drawing.Size(358, 25);
             this.cb_NumPvj.TabIndex = 145;
             this.cb_NumPvj.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvj_SelectedIndexChanged);
             // 
@@ -415,10 +392,10 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(34, 60);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(24, 24);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox1.TabIndex = 131;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -428,7 +405,7 @@ namespace Projet_Onssa
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(30, 35);
+            this.label5.Location = new System.Drawing.Point(20, 3);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(132, 21);
             this.label5.TabIndex = 90;
@@ -440,7 +417,7 @@ namespace Projet_Onssa
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(30, 119);
+            this.label9.Location = new System.Drawing.Point(19, 66);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(120, 21);
             this.label9.TabIndex = 89;
@@ -452,7 +429,7 @@ namespace Projet_Onssa
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(30, 210);
+            this.label10.Location = new System.Drawing.Point(505, 66);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(53, 21);
             this.label10.TabIndex = 96;
@@ -464,44 +441,21 @@ namespace Projet_Onssa
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(30, 303);
+            this.label11.Location = new System.Drawing.Point(502, 7);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 21);
             this.label11.TabIndex = 98;
             this.label11.Text = "Date  ";
             // 
-            // materialCard1
-            // 
-            this.materialCard1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.cb_fchoisie);
-            this.materialCard1.Controls.Add(this.bunifuMetroTextbox2);
-            this.materialCard1.Controls.Add(this.dgv_Fournisseur_Rep);
-            this.materialCard1.Controls.Add(this.label2);
-            this.materialCard1.Controls.Add(this.label6);
-            this.materialCard1.Controls.Add(this.label8);
-            this.materialCard1.Controls.Add(this.dgv_Commission);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(489, 23);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(454, 450);
-            this.materialCard1.TabIndex = 160;
-            // 
             // cb_fchoisie
             // 
             this.cb_fchoisie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cb_fchoisie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_fchoisie.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_fchoisie.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_fchoisie.FormattingEnabled = true;
-            this.cb_fchoisie.Location = new System.Drawing.Point(32, 393);
+            this.cb_fchoisie.Location = new System.Drawing.Point(286, 30);
             this.cb_fchoisie.Name = "cb_fchoisie";
-            this.cb_fchoisie.Size = new System.Drawing.Size(394, 27);
+            this.cb_fchoisie.Size = new System.Drawing.Size(362, 25);
             this.cb_fchoisie.TabIndex = 171;
             this.cb_fchoisie.SelectedIndexChanged += new System.EventHandler(this.cb_fchoisie_SelectedIndexChanged);
             this.cb_fchoisie.Click += new System.EventHandler(this.cb_fchoisie_Click_1);
@@ -517,21 +471,74 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(23, 383);
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(277, 26);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(413, 44);
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox2.TabIndex = 160;
             this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.date_Pvj);
+            this.panel1.Controls.Add(this.bunifuMetroTextbox3);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.cb_NumC);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.Controls.Add(this.txtarea_DateString);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txt_Adresse);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.cb_NumPvj);
+            this.panel1.Controls.Add(this.bunifuMetroTextbox1);
+            this.panel1.Location = new System.Drawing.Point(27, 23);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(899, 137);
+            this.panel1.TabIndex = 161;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dgv_Fournisseur_Rep);
+            this.panel2.Controls.Add(this.dgv_Commission);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Location = new System.Drawing.Point(27, 168);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(899, 270);
+            this.panel2.TabIndex = 162;
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.cb_fchoisie);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.bunifuMetroTextbox2);
+            this.panel4.Location = new System.Drawing.Point(27, 445);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(898, 73);
+            this.panel4.TabIndex = 171;
             // 
             // PvjForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(954, 575);
-            this.Controls.Add(this.materialCard1);
-            this.Controls.Add(this.card);
+            this.ClientSize = new System.Drawing.Size(938, 588);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_Supprimer);
             this.Controls.Add(this.btn_Ajouter);
             this.Controls.Add(this.btn_Modifier);
@@ -540,10 +547,12 @@ namespace Projet_Onssa
             this.Load += new System.EventHandler(this.PvjForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur_Rep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).EndInit();
-            this.card.ResumeLayout(false);
-            this.card.PerformLayout();
-            this.materialCard1.ResumeLayout(false);
-            this.materialCard1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -557,7 +566,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label8;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Fournisseur_Rep;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
-        private MaterialSkin.Controls.MaterialCard card;
         private System.Windows.Forms.ComboBox cb_NumC;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtarea_DateString;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Adresse;
@@ -569,8 +577,10 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuDatepicker date_Pvj;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
-        private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.ComboBox cb_fchoisie;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

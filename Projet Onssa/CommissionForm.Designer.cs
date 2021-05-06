@@ -207,7 +207,7 @@ namespace Projet_Onssa
             this.txt_Affectation.Location = new System.Drawing.Point(40, 329);
             this.txt_Affectation.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Affectation.Name = "txt_Affectation";
-            this.txt_Affectation.Size = new System.Drawing.Size(375, 44);
+            this.txt_Affectation.Size = new System.Drawing.Size(375, 35);
             this.txt_Affectation.TabIndex = 148;
             this.txt_Affectation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -236,7 +236,7 @@ namespace Projet_Onssa
             this.txt_Fonction.Location = new System.Drawing.Point(41, 246);
             this.txt_Fonction.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Fonction.Name = "txt_Fonction";
-            this.txt_Fonction.Size = new System.Drawing.Size(375, 44);
+            this.txt_Fonction.Size = new System.Drawing.Size(375, 35);
             this.txt_Fonction.TabIndex = 146;
             this.txt_Fonction.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -254,7 +254,7 @@ namespace Projet_Onssa
             this.txt_Prenom.Location = new System.Drawing.Point(40, 165);
             this.txt_Prenom.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Prenom.Name = "txt_Prenom";
-            this.txt_Prenom.Size = new System.Drawing.Size(375, 44);
+            this.txt_Prenom.Size = new System.Drawing.Size(375, 35);
             this.txt_Prenom.TabIndex = 145;
             this.txt_Prenom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -275,7 +275,7 @@ namespace Projet_Onssa
             this.cb_Nom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Nom.Font = new System.Drawing.Font("Roboto", 12F);
             this.cb_Nom.FormattingEnabled = true;
-            this.cb_Nom.Location = new System.Drawing.Point(49, 95);
+            this.cb_Nom.Location = new System.Drawing.Point(49, 90);
             this.cb_Nom.Name = "cb_Nom";
             this.cb_Nom.Size = new System.Drawing.Size(358, 27);
             this.cb_Nom.TabIndex = 144;
@@ -306,7 +306,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Location = new System.Drawing.Point(40, 86);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox1.TabIndex = 130;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 

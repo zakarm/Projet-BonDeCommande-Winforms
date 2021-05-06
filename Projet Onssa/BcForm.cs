@@ -45,6 +45,7 @@ namespace Projet_Onssa
                 cb_Pvj.DataSource = ctx.PVJSet.ToList();
 
             }
+            DeclarationGlobale.vider(this);
         }
 
         private void viderToolStripMenuItem_Click(object sender, EventArgs e)

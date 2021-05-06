@@ -77,6 +77,8 @@ namespace Projet_Onssa
                 ck2.HeaderText = "Select";
                 ck2.Name = "ck_btn";
                 dgv_Fournisseur_Rep.Columns.Add(ck2);
+                DeclarationGlobale.vider(this);
+
             }
         }
 

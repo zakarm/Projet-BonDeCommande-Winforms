@@ -210,6 +210,8 @@ namespace Projet_Onssa
         {
             label_txt.Text = "con";
             label_txt.Text = "Consultation";
+            tabPage1.Text = "Lecture Consultation";
+            tabPage2.Text = "Gestion Consultation";
             openchildformtab(new LectureConsultation(), new ConsultationForm());
             
 
@@ -315,6 +317,83 @@ namespace Projet_Onssa
            
             
 
+        }
+
+        private void panel6_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void panelControl_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void panelControl_MouseLeave(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+
+        }
+
+        private void btn_Accueil_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749);
+        }
+
+        private void btn_Accueil_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Accueil_MouseLeave(object sender, EventArgs e)
+        {
+            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Gpaiement_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Gpaiement_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Gpaiement_MouseLeave(object sender, EventArgs e)
+        {
+            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Mamber_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Mamber_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_Mamber_MouseLeave(object sender, EventArgs e)
+        {
+            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_GestionCompte_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+        }
+
+        private void btn_GestionCompte_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+
+        }
+
+        private void btn_GestionCompte_MouseLeave(object sender, EventArgs e)
+        {
+            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
         }
     }
 }

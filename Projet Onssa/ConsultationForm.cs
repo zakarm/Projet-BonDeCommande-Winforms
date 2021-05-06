@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Entity;
+using Bunifu.Framework;
 
 namespace Projet_Onssa
 {
@@ -44,7 +45,9 @@ namespace Projet_Onssa
                 ck.HeaderText = "Select";
                 ck.Name = "ck_btn";
                 dgv_Fournisseur.Columns.Add(ck);
-               
+
+                DeclarationGlobale.vider(this);
+
             }
 
         }
@@ -112,6 +115,7 @@ namespace Projet_Onssa
                         MessageBox.Show("Sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
+                
 
             }
             catch(FormatException)
@@ -139,7 +143,7 @@ namespace Projet_Onssa
                     ctx.ConsultationSet.Remove(c);
                     ctx.SaveChanges();
                     cb_Num.DataSource = ctx.ConsultationSet.ToList();
-                    
+                    MessageBox.Show("Supprimé avec succès");
                 }
                 DeclarationGlobale.vider(this);
             }
@@ -170,13 +174,14 @@ namespace Projet_Onssa
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
                         MessageBox.Show("Modifié avec succès");
+                        DeclarationGlobale.vider(this);
                     }
                     else
                     {
                         MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                }
-               DeclarationGlobale.vider(this);
+               
             }
             catch(Exception ex)
             {

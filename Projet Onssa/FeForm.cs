@@ -56,6 +56,7 @@ namespace Projet_Onssa
 
                    
                 }
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {
@@ -77,6 +78,7 @@ namespace Projet_Onssa
                     cb_NumFe.DataSource = ctx.FESet.ToList();
 
                 }
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {
@@ -107,6 +109,7 @@ namespace Projet_Onssa
                     cb_NumFe.DataSource = ctx.FESet.ToList();
 
                 }
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {

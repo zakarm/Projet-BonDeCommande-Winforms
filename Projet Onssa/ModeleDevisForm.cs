@@ -37,56 +37,66 @@ namespace Projet_Onssa
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
-            if (dgv_Produits.Rows.Count > 1)
+            try
             {
-                dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+
+
+                if (dgv_Produits.Rows.Count > 1)
                 {
-                    ModeleDevis m = new ModeleDevis();
-                    Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
-                    Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
-                    Produit p;
-                    m.NumDevis = cb_NumMdevis.Text;
-                    m.InfoFournisseur = f;
-                    m.Date = date_MDevis.Value;
-                    m.InfoConsultation = con;
-                   
-                    foreach (DataGridViewRow dr in dgv_Produits.Rows)
+                    dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                     {
-                        if (dr.Cells[1].Value != null)
+                        ModeleDevis m = new ModeleDevis();
+                        Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
+                        Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                        Produit p;
+                        m.NumDevis = cb_NumMdevis.Text;
+                        m.InfoFournisseur = f;
+                        m.Date = date_MDevis.Value;
+                        m.InfoConsultation = con;
+
+                        foreach (DataGridViewRow dr in dgv_Produits.Rows)
                         {
-                            p = new Produit();
-                            p.Designation = dr.Cells[0].Value.ToString();
-                            p.Unite = dr.Cells[1].Value.ToString();
-                            p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
-                            p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
-                            p.Prix_Total =  p.Prix_Unitaire * p.Quantite;
-                            m.ListProduit.Add(p);
+                            if (dr.Cells[1].Value != null)
+                            {
+                                p = new Produit();
+                                p.Designation = dr.Cells[0].Value.ToString();
+                                p.Unite = dr.Cells[1].Value.ToString();
+                                p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
+                                p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                                p.Prix_Total = p.Prix_Unitaire * p.Quantite;
+                                m.ListProduit.Add(p);
+                            }
                         }
+
+                        double total = 0;
+
+                        foreach (Produit pr in m.ListProduit)
+                        {
+                            total = pr.Prix_Total + total;
+                        }
+
+                        m.Total = total;
+                        m.Tva = total * 20 / 100;
+                        m.Ttc = m.Tva + m.Total;
+
+
+                        ctx.ModeleDevisSet.Add(m);
+                        ctx.SaveChanges();
+                        cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                        dgv_Produits.Rows.Clear();
+                        MessageBox.Show("Ajouté avec succès");
                     }
-
-                    double total = 0;
-
-                    foreach(Produit pr in m.ListProduit)
-                    {
-                        total = pr.Prix_Total + total;
-                    }
-
-                    m.Total = total;
-                    m.Tva = total * 20 / 100;
-                    m.Ttc = m.Tva + m.Total;
-
-
-                    ctx.ModeleDevisSet.Add(m);
-                    ctx.SaveChanges();
-                    cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
-                    dgv_Produits.Rows.Clear();
-                    MessageBox.Show("Ajouté avec succès");
+                    DeclarationGlobale.vider(this);
+                }
+                else
+                {
+                    MessageBox.Show("Modèle de devis sans produit !");
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Modèle de devis sans produit !");
+                MessageBox.Show(ex.Message);
             }
 
         }
@@ -104,6 +114,8 @@ namespace Projet_Onssa
                     cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
 
                 }
+                DeclarationGlobale.vider(this);
+
             }
             catch (Exception ex)
             {
@@ -111,31 +123,7 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_NumMdevis_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                dgv_Produits.Rows.Clear();
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-                {
-                    md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
-                    cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
-                    date_MDevis.Value = md.Date;
-                    cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
-                    foreach (Produit m in md.ListProduit)
-                    {
-
-                        dgv_Produits.Rows.Add(m.Designation, m.Unite, m.Quantite, m.Prix_Unitaire);
-
-                    }
-
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+       
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
@@ -176,8 +164,9 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
                         dgv_Produits.Rows.Clear();
-                        MessageBox.Show("Modifier avec succès");
+                        MessageBox.Show("Modifié avec succès");
                     }
+                    DeclarationGlobale.vider(this);
                 }
                 else
                 {
@@ -221,5 +210,35 @@ namespace Projet_Onssa
             dgv_Produits.Rows.Clear();
 
         }
+
+        private void cb_NumPvr_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+                try
+                {
+                    dgv_Produits.Rows.Clear();
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                    {
+                        md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
+                        cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
+                        date_MDevis.Value = md.Date;
+                        cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
+                        foreach (Produit m in md.ListProduit)
+                        {
+
+                            dgv_Produits.Rows.Add(m.Designation, m.Unite, m.Quantite, m.Prix_Unitaire);
+
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            
+        }
+
+      
     }
 }

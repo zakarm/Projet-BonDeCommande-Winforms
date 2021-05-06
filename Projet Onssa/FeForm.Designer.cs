@@ -75,7 +75,7 @@ namespace Projet_Onssa
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(509, 127);
+            this.label7.Location = new System.Drawing.Point(488, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(276, 21);
             this.label7.TabIndex = 142;
@@ -86,7 +86,7 @@ namespace Projet_Onssa
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(509, 216);
+            this.label4.Location = new System.Drawing.Point(488, 221);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 144;
@@ -97,7 +97,7 @@ namespace Projet_Onssa
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(509, 39);
+            this.label3.Location = new System.Drawing.Point(488, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 21);
             this.label3.TabIndex = 143;
@@ -114,10 +114,10 @@ namespace Projet_Onssa
             this.txt_Dispo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Dispo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Dispo.isPassword = false;
-            this.txt_Dispo.Location = new System.Drawing.Point(507, 241);
+            this.txt_Dispo.Location = new System.Drawing.Point(486, 246);
             this.txt_Dispo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dispo.Name = "txt_Dispo";
-            this.txt_Dispo.Size = new System.Drawing.Size(375, 44);
+            this.txt_Dispo.Size = new System.Drawing.Size(407, 35);
             this.txt_Dispo.TabIndex = 147;
             this.txt_Dispo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -132,10 +132,10 @@ namespace Projet_Onssa
             this.txt_engagementDP.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_engagementDP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_engagementDP.isPassword = false;
-            this.txt_engagementDP.Location = new System.Drawing.Point(507, 152);
+            this.txt_engagementDP.Location = new System.Drawing.Point(486, 157);
             this.txt_engagementDP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_engagementDP.Name = "txt_engagementDP";
-            this.txt_engagementDP.Size = new System.Drawing.Size(375, 44);
+            this.txt_engagementDP.Size = new System.Drawing.Size(407, 35);
             this.txt_engagementDP.TabIndex = 145;
             this.txt_engagementDP.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -150,10 +150,10 @@ namespace Projet_Onssa
             this.txt_DepensesE.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_DepensesE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_DepensesE.isPassword = false;
-            this.txt_DepensesE.Location = new System.Drawing.Point(507, 63);
+            this.txt_DepensesE.Location = new System.Drawing.Point(486, 68);
             this.txt_DepensesE.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DepensesE.Name = "txt_DepensesE";
-            this.txt_DepensesE.Size = new System.Drawing.Size(375, 44);
+            this.txt_DepensesE.Size = new System.Drawing.Size(407, 35);
             this.txt_DepensesE.TabIndex = 130;
             this.txt_DepensesE.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -394,11 +394,11 @@ namespace Projet_Onssa
             // 
             this.cb_Bc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Bc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Bc.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Bc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Bc.FormattingEnabled = true;
-            this.cb_Bc.Location = new System.Drawing.Point(32, 161);
+            this.cb_Bc.Location = new System.Drawing.Point(30, 157);
             this.cb_Bc.Name = "cb_Bc";
-            this.cb_Bc.Size = new System.Drawing.Size(358, 27);
+            this.cb_Bc.Size = new System.Drawing.Size(393, 25);
             this.cb_Bc.TabIndex = 148;
             this.cb_Bc.SelectedIndexChanged += new System.EventHandler(this.cb_Bc_SelectedIndexChanged);
             // 
@@ -416,7 +416,7 @@ namespace Projet_Onssa
             this.txt_Budgetaires.Location = new System.Drawing.Point(22, 241);
             this.txt_Budgetaires.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Budgetaires.Name = "txt_Budgetaires";
-            this.txt_Budgetaires.Size = new System.Drawing.Size(375, 44);
+            this.txt_Budgetaires.Size = new System.Drawing.Size(407, 35);
             this.txt_Budgetaires.TabIndex = 147;
             this.txt_Budgetaires.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -445,7 +445,7 @@ namespace Projet_Onssa
             this.txtarea_Objet.Location = new System.Drawing.Point(21, 152);
             this.txtarea_Objet.Margin = new System.Windows.Forms.Padding(4);
             this.txtarea_Objet.Name = "txtarea_Objet";
-            this.txtarea_Objet.Size = new System.Drawing.Size(375, 44);
+            this.txtarea_Objet.Size = new System.Drawing.Size(407, 35);
             this.txtarea_Objet.TabIndex = 145;
             this.txtarea_Objet.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -464,11 +464,11 @@ namespace Projet_Onssa
             // 
             this.cb_NumFe.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumFe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumFe.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumFe.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_NumFe.FormattingEnabled = true;
-            this.cb_NumFe.Location = new System.Drawing.Point(36, 68);
+            this.cb_NumFe.Location = new System.Drawing.Point(35, 65);
             this.cb_NumFe.Name = "cb_NumFe";
-            this.cb_NumFe.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumFe.Size = new System.Drawing.Size(389, 25);
             this.cb_NumFe.TabIndex = 144;
             this.cb_NumFe.SelectedIndexChanged += new System.EventHandler(this.cb_NumFe_SelectedIndexChanged_1);
             // 
@@ -486,7 +486,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Location = new System.Drawing.Point(22, 60);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(407, 35);
             this.bunifuMetroTextbox1.TabIndex = 130;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
