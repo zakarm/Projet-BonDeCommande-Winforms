@@ -49,10 +49,11 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         MessageBox.Show("Ajouté avec succès");
                         cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
+                        DeclarationGlobale.vider(this);
                     }
                     else
                     {
-                        MessageBox.Show("Confi");
+                        MessageBox.Show("Veuillez confirmer votre mot de passe !");
                     }
                 }
             }
@@ -79,9 +80,11 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         MessageBox.Show("Modifié avec succès");
                         cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
+                        DeclarationGlobale.vider(this);
                     }
                     else
-                        MessageBox.Show("Erreur");
+                        MessageBox.Show("Veuillez confirmer votre mot de passe !");
+
                 }
             }
             catch (Exception ex)
@@ -101,6 +104,8 @@ namespace Projet_Onssa
                     ctx.SaveChanges();
                     cb_Numcompte.DataSource = ctx.GestionCompteSet.ToList();
                 }
+                MessageBox.Show("Supprimé avec succès");
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {
@@ -110,14 +115,23 @@ namespace Projet_Onssa
 
         private void cb_Numcompte_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                og = ctx.GestionCompteSet.Find(cb_Numcompte.SelectedValue);
+            try
+            { 
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
+                        og = ctx.GestionCompteSet.Find(cb_Numcompte.SelectedValue);
 
-                txt_motdepasse.Text = og.MotDePasse.ToString();
-                txt_typeccompte.Text = og.TypeCompte.ToString();
-                txt_conf_mot_de_passe.Text = og.MotDePasse.ToString();
+                        txt_motdepasse.Text = og.MotDePasse.ToString();
+                        txt_typeccompte.Text = og.TypeCompte.ToString();
+                        txt_conf_mot_de_passe.Text = og.MotDePasse.ToString();
+                }
+
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

@@ -40,7 +40,7 @@ namespace Projet_Onssa
                             join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                             m.InfoFournisseur.IdFournisseur
                             join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
-                            join pvr in ctx.PVRSet on oi.IdOI equals pvr.IdPVR
+                           // join pvr in ctx.PVRSet on oi.IdOI equals pvr.IdPVR
                             where op.IdOP == (int)cb_Op.SelectedValue && m.InfoConsultation.IdConsultation == pvj.InfoConsultation.IdConsultation
                             select new
                             {
@@ -58,7 +58,7 @@ namespace Projet_Onssa
                                 Objet = m.InfoConsultation.ObjetConsultation,
                                 Exercice = bc.InfoMorasse.Exercice,
                                 Compte = fr.Compte_bancaire_n,
-                                DatePvr = pvr.DatePVR,
+                                //DatePvr = pvr.DatePVR,
                                 VisaContol = oi.VisaControle,
                                 Visacsrs = oi.VisaCsrs,
                                 DatePaiement = oi.DatePaiement,
@@ -85,7 +85,7 @@ namespace Projet_Onssa
                 ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
                 ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
                 ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
-                ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
+               // ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
                 ce.SetParameterValue("lettre", cc.Ninetotwelvedigit(query.FirstOrDefault().total.ToString()));
                 ce.SetParameterValue("visacontrol", query.FirstOrDefault().VisaContol.ToString());
                 ce.SetParameterValue("visacsrs", query.FirstOrDefault().Visacsrs.ToString());

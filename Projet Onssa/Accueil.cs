@@ -149,9 +149,9 @@ namespace Projet_Onssa
             btn_Mamber.Visible = false;
             btn_Pvr.Visible = s;
             panel_Pvr.Visible = s;
-            btn_Op.Visible = s;
-            panel_Op.Visible = s;
             btn_Ov.Visible = s;
+            panel_Op.Visible = s;
+            btn_Op.Visible = s;
             panel_Ov.Visible = s;
         }
 
@@ -172,9 +172,9 @@ namespace Projet_Onssa
             panel_Oi.Visible = s;
             btn_Pvr.Visible = s;
             panel_Pvr.Visible = s;
-            btn_Op.Visible = s;
-            panel_Op.Visible = s;
             btn_Ov.Visible = s;
+            panel_Op.Visible = s;
+            btn_Op.Visible = s;
             panel_Ov.Visible = s;
         }
         private void btnMcsrs(bool s)
@@ -271,22 +271,23 @@ namespace Projet_Onssa
 
         private void btn_Ov_Click(object sender, EventArgs e)
         {
+               label_txt.Text = "Ordre de paiement";
+            
+            openchildformtab(new LectureOp(), new OpForm());
+            tabPage1.Text = "Lecture Ordre de paiement";
+            tabPage2.Text = "Gestion Ordre de paiement";
+            
+        }
+
+        private void btn_Op_Click(object sender, EventArgs e)
+        { 
             label_txt.Text = "Ordre de virement";
             label_txt.Name = "ov";
             openchildformtab(new LectureOv(),new OvForm());
             tabPage1.Text = "Lecture Ordre de virement";
             tabPage2.Text = "Gestion Ordre de virement";
             
-        }
-
-        private void btn_Op_Click(object sender, EventArgs e)
-        {
-            label_txt.Text = "Ordre de paiement";
-            
-            openchildformtab(new LectureOp(), new OpForm());
-            tabPage1.Text = "Lecture Ordre de paiement";
-            tabPage2.Text = "Gestion Ordre de paiement";
-            
+        
         }
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)
@@ -314,24 +315,21 @@ namespace Projet_Onssa
                 
             }
 
-           
-            
-
         }
 
         private void panel6_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(64, 749); 
         }
 
         private void panelControl_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(64, 749); 
         }
 
         private void panelControl_MouseLeave(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(64, 749);
 
         }
 
@@ -342,58 +340,291 @@ namespace Projet_Onssa
 
         private void btn_Accueil_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
         }
 
-        private void btn_Accueil_MouseLeave(object sender, EventArgs e)
-        {
-            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
-        }
 
         private void btn_Gpaiement_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
         }
 
         private void btn_Gpaiement_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
         }
 
-        private void btn_Gpaiement_MouseLeave(object sender, EventArgs e)
-        {
-            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
-        }
-
+        
         private void btn_Mamber_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749);
         }
 
         private void btn_Mamber_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
-        }
-
-        private void btn_Mamber_MouseLeave(object sender, EventArgs e)
-        {
-            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
         }
 
         private void btn_GestionCompte_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
         }
 
         private void btn_GestionCompte_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(180, 749); 
 
         }
 
-        private void btn_GestionCompte_MouseLeave(object sender, EventArgs e)
+        private void panel_logo_MouseEnter(object sender, EventArgs e)
         {
-            //panelControl.Size = new Size(64, 749); bunifuTransition1.ShowSync(panelControl);
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_logo_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_headermenu_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_headermenu_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Consultation_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Pvj_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Pvj_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Consultation_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Consultation_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Consultation_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_submenu_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_submenu_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Pvj_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Pvj_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Mdevis_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Mdevis_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Mdevis_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Mdevis_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Bc_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Bc_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Bc_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Bc_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Fe_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Fe_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Commission_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Commission_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Co_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Co_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Fr_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+
+        }
+
+        private void panel_Fr_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Fr_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Fr_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Op_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Op_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Op_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Op_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Ov_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Ov_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Ov_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Ov_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Pvr_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Pvr_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Pvr_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Pvr_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Oi_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Oi_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Oi_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void btn_Oi_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Fe_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel_Fe_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(64, 749);
         }
     }
 }

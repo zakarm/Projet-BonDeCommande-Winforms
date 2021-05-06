@@ -54,9 +54,9 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox4 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.date_MDevis = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.cb_NumMdevis = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox5 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -465,6 +465,7 @@ namespace Projet_Onssa
             // 
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cb_NumMdevis);
             this.panel1.Controls.Add(this.bunifuMetroTextbox5);
@@ -482,21 +483,6 @@ namespace Projet_Onssa
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 186);
             this.panel1.TabIndex = 161;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.bunifuFlatButton1);
-            this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Controls.Add(this.dgv_Produits);
-            this.panel2.Location = new System.Drawing.Point(12, 204);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(930, 305);
-            this.panel2.TabIndex = 162;
             // 
             // cb_NumMdevis
             // 
@@ -528,11 +514,27 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox5.TabIndex = 161;
             this.bunifuMetroTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.bunifuFlatButton1);
+            this.panel2.Controls.Add(this.bunifuFlatButton2);
+            this.panel2.Controls.Add(this.dgv_Produits);
+            this.panel2.Location = new System.Drawing.Point(12, 204);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(930, 305);
+            this.panel2.TabIndex = 162;
+            // 
             // ModeleDevisForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(954, 575);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

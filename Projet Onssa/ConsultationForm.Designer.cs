@@ -37,7 +37,6 @@ namespace Projet_Onssa
             this.btn_Modifier = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Ajouter = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btn_Supprimer = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.dgv_Fournisseur = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.txtarea_Objet = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -45,8 +44,10 @@ namespace Projet_Onssa
             this.cb_Num = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).BeginInit();
             this.materialCard1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -168,18 +169,6 @@ namespace Projet_Onssa
             this.btn_Supprimer.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.label1.Location = new System.Drawing.Point(626, 439);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 17);
-            this.label1.TabIndex = 13;
-            this.label1.Text = "VeuIillez Choisir Les Societes à Consulter";
-            // 
             // dgv_Fournisseur
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -214,7 +203,7 @@ namespace Projet_Onssa
             this.dgv_Fournisseur.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Fournisseur.HeaderForeColor = System.Drawing.SystemColors.Window;
-            this.dgv_Fournisseur.Location = new System.Drawing.Point(40, 159);
+            this.dgv_Fournisseur.Location = new System.Drawing.Point(3, 3);
             this.dgv_Fournisseur.Name = "dgv_Fournisseur";
             this.dgv_Fournisseur.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -228,7 +217,7 @@ namespace Projet_Onssa
             this.dgv_Fournisseur.RowHeadersWidth = 5;
             this.dgv_Fournisseur.RowTemplate.Height = 80;
             this.dgv_Fournisseur.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgv_Fournisseur.Size = new System.Drawing.Size(849, 277);
+            this.dgv_Fournisseur.Size = new System.Drawing.Size(839, 267);
             this.dgv_Fournisseur.TabIndex = 33;
             // 
             // materialCard1
@@ -237,10 +226,10 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialCard1.Controls.Add(this.panel1);
             this.materialCard1.Controls.Add(this.txtarea_Objet);
-            this.materialCard1.Controls.Add(this.dgv_Fournisseur);
             this.materialCard1.Controls.Add(this.label6);
-            this.materialCard1.Controls.Add(this.label1);
             this.materialCard1.Controls.Add(this.cb_Num);
             this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Controls.Add(this.bunifuMetroTextbox1);
@@ -321,6 +310,18 @@ namespace Projet_Onssa
             this.label8.TabIndex = 141;
             this.label8.Text = "Numéro de la Consultation";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.dgv_Fournisseur);
+            this.panel1.Location = new System.Drawing.Point(43, 174);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(847, 275);
+            this.panel1.TabIndex = 146;
+            // 
             // ConsultationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -338,6 +339,7 @@ namespace Projet_Onssa
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Fournisseur)).EndInit();
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -347,7 +349,6 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton btn_Modifier;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Ajouter;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Supprimer;
-        private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Fournisseur;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtarea_Objet;
@@ -355,5 +356,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.ComboBox cb_Num;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

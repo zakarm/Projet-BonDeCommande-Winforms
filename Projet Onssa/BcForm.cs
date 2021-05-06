@@ -77,6 +77,7 @@ namespace Projet_Onssa
                     
 
                 }
+                DeclarationGlobale.vider(this);
 
             }
             catch (Exception ex)
@@ -100,6 +101,7 @@ namespace Projet_Onssa
                     cb_NumBc.DataSource = ctx.BCSet.ToList();
 
                 }
+                DeclarationGlobale.vider(this);
             }
             catch(Exception ex)
             {
@@ -130,6 +132,7 @@ namespace Projet_Onssa
                     cb_NumBc.DataSource = ctx.BCSet.ToList();
 
                 }
+                DeclarationGlobale.vider(this);
             }
             catch (Exception ex)
             {
@@ -188,5 +191,7 @@ namespace Projet_Onssa
 
             }
         }
+
+       
     }
 }

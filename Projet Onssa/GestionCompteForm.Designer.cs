@@ -69,7 +69,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(150, 24);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(159, 22);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -105,7 +105,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 90D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(32, 24);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(41, 22);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -141,7 +141,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 90D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(268, 24);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(277, 22);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -169,7 +169,7 @@ namespace Projet_Onssa
             this.txt_typeccompte.Location = new System.Drawing.Point(22, 314);
             this.txt_typeccompte.Margin = new System.Windows.Forms.Padding(4);
             this.txt_typeccompte.Name = "txt_typeccompte";
-            this.txt_typeccompte.Size = new System.Drawing.Size(375, 44);
+            this.txt_typeccompte.Size = new System.Drawing.Size(375, 35);
             this.txt_typeccompte.TabIndex = 150;
             this.txt_typeccompte.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -187,7 +187,7 @@ namespace Projet_Onssa
             this.txt_conf_mot_de_passe.Location = new System.Drawing.Point(22, 228);
             this.txt_conf_mot_de_passe.Margin = new System.Windows.Forms.Padding(4);
             this.txt_conf_mot_de_passe.Name = "txt_conf_mot_de_passe";
-            this.txt_conf_mot_de_passe.Size = new System.Drawing.Size(375, 44);
+            this.txt_conf_mot_de_passe.Size = new System.Drawing.Size(375, 35);
             this.txt_conf_mot_de_passe.TabIndex = 149;
             this.txt_conf_mot_de_passe.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -205,7 +205,7 @@ namespace Projet_Onssa
             this.txt_motdepasse.Location = new System.Drawing.Point(22, 137);
             this.txt_motdepasse.Margin = new System.Windows.Forms.Padding(4);
             this.txt_motdepasse.Name = "txt_motdepasse";
-            this.txt_motdepasse.Size = new System.Drawing.Size(375, 44);
+            this.txt_motdepasse.Size = new System.Drawing.Size(375, 35);
             this.txt_motdepasse.TabIndex = 148;
             this.txt_motdepasse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -213,11 +213,11 @@ namespace Projet_Onssa
             // 
             this.cb_Numcompte.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Numcompte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Numcompte.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Numcompte.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Numcompte.FormattingEnabled = true;
-            this.cb_Numcompte.Location = new System.Drawing.Point(31, 62);
+            this.cb_Numcompte.Location = new System.Drawing.Point(31, 58);
             this.cb_Numcompte.Name = "cb_Numcompte";
-            this.cb_Numcompte.Size = new System.Drawing.Size(358, 27);
+            this.cb_Numcompte.Size = new System.Drawing.Size(358, 25);
             this.cb_Numcompte.TabIndex = 145;
             this.cb_Numcompte.SelectedIndexChanged += new System.EventHandler(this.cb_Numcompte_SelectedIndexChanged_1);
             // 
@@ -235,7 +235,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Location = new System.Drawing.Point(22, 53);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);
+            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox1.TabIndex = 131;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -301,7 +301,7 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.cb_Numcompte);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bunifuMetroTextbox1);
-            this.panel1.Location = new System.Drawing.Point(264, 28);
+            this.panel1.Location = new System.Drawing.Point(283, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(428, 401);
             this.panel1.TabIndex = 151;
@@ -309,12 +309,12 @@ namespace Projet_Onssa
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.bunifuFlatButton3);
             this.panel2.Controls.Add(this.bunifuFlatButton1);
             this.panel2.Controls.Add(this.bunifuFlatButton2);
-            this.panel2.Location = new System.Drawing.Point(264, 450);
+            this.panel2.Location = new System.Drawing.Point(283, 438);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(428, 101);
             this.panel2.TabIndex = 152;
@@ -323,6 +323,7 @@ namespace Projet_Onssa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(954, 575);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

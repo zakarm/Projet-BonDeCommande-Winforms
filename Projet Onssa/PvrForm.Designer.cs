@@ -38,6 +38,11 @@ namespace Projet_Onssa
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Affectation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
             this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -47,15 +52,10 @@ namespace Projet_Onssa
             this.cb_NumPvr = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
-            this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Prenom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fonction = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Affectation = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
+            this.materialCard3 = new MaterialSkin.Controls.MaterialCard();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commission)).BeginInit();
             this.materialCard1.SuspendLayout();
             this.materialCard2.SuspendLayout();
@@ -163,6 +163,31 @@ namespace Projet_Onssa
             this.dgv_Commission.RowHeadersWidth = 5;
             this.dgv_Commission.Size = new System.Drawing.Size(484, 491);
             this.dgv_Commission.TabIndex = 170;
+            // 
+            // Num
+            // 
+            this.Num.HeaderText = "Num";
+            this.Num.Name = "Num";
+            // 
+            // Nom
+            // 
+            this.Nom.HeaderText = "Nom";
+            this.Nom.Name = "Nom";
+            // 
+            // Prenom
+            // 
+            this.Prenom.HeaderText = "Prénom";
+            this.Prenom.Name = "Prenom";
+            // 
+            // Fonction
+            // 
+            this.Fonction.HeaderText = "Fonction";
+            this.Fonction.Name = "Fonction";
+            // 
+            // Affectation
+            // 
+            this.Affectation.HeaderText = "Affectation";
+            this.Affectation.Name = "Affectation";
             // 
             // materialCard1
             // 
@@ -317,49 +342,6 @@ namespace Projet_Onssa
             this.materialCard2.Size = new System.Drawing.Size(422, 85);
             this.materialCard2.TabIndex = 170;
             // 
-            // materialCard3
-            // 
-            this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard3.Controls.Add(this.dgv_Commission);
-            this.materialCard3.Controls.Add(this.label3);
-            this.materialCard3.Depth = 0;
-            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard3.Location = new System.Drawing.Point(444, 9);
-            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard3.Name = "materialCard3";
-            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard3.Size = new System.Drawing.Size(506, 556);
-            this.materialCard3.TabIndex = 171;
-            // 
-            // Num
-            // 
-            this.Num.HeaderText = "Num";
-            this.Num.Name = "Num";
-            // 
-            // Nom
-            // 
-            this.Nom.HeaderText = "Nom";
-            this.Nom.Name = "Nom";
-            // 
-            // Prenom
-            // 
-            this.Prenom.HeaderText = "Prénom";
-            this.Prenom.Name = "Prenom";
-            // 
-            // Fonction
-            // 
-            this.Fonction.HeaderText = "Fonction";
-            this.Fonction.Name = "Fonction";
-            // 
-            // Affectation
-            // 
-            this.Affectation.HeaderText = "Affectation";
-            this.Affectation.Name = "Affectation";
-            // 
             // btn_Modifier
             // 
             this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
@@ -368,7 +350,7 @@ namespace Projet_Onssa
             this.btn_Modifier.FlatAppearance.BorderSize = 0;
             this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(271, 12);
+            this.btn_Modifier.Location = new System.Drawing.Point(271, 17);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -388,7 +370,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(151, 11);
+            this.btn_Supprimer.Location = new System.Drawing.Point(151, 16);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -408,7 +390,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.FlatAppearance.BorderSize = 0;
             this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(31, 11);
+            this.btn_Ajouter.Location = new System.Drawing.Point(31, 16);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -419,6 +401,24 @@ namespace Projet_Onssa
             this.btn_Ajouter.TextColor = System.Drawing.Color.White;
             this.btn_Ajouter.UseVisualStyleBackColor = false;
             this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
+            // 
+            // materialCard3
+            // 
+            this.materialCard3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialCard3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard3.Controls.Add(this.dgv_Commission);
+            this.materialCard3.Controls.Add(this.label3);
+            this.materialCard3.Depth = 0;
+            this.materialCard3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard3.Location = new System.Drawing.Point(444, 9);
+            this.materialCard3.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard3.Name = "materialCard3";
+            this.materialCard3.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard3.Size = new System.Drawing.Size(506, 556);
+            this.materialCard3.TabIndex = 171;
             // 
             // PvrForm
             // 

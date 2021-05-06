@@ -24,7 +24,11 @@ namespace Projet_Onssa
         //---------------------------------------------Load-Form--------------------------------------
         private void ConsultationForm_Load(object sender, EventArgs e)
         {
-            using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+
+           
+
+           
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 cb_Num.DisplayMember = "NumConsultation";
                 cb_Num.ValueMember = "IdConsultation";

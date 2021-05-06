@@ -67,9 +67,9 @@ namespace Projet_Onssa
             this.label10 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btn_Supprimer = new Projet_Onssa.Button_WOC();
-            this.btn_Ajouter = new Projet_Onssa.Button_WOC();
-            this.btn_Modifier = new Projet_Onssa.Button_WOC();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -555,76 +555,121 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.BackColor = System.Drawing.Color.White;
             this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel12.Controls.Add(this.btn_Supprimer);
-            this.panel12.Controls.Add(this.btn_Ajouter);
-            this.panel12.Controls.Add(this.btn_Modifier);
+            this.panel12.Controls.Add(this.bunifuFlatButton1);
+            this.panel12.Controls.Add(this.bunifuFlatButton3);
+            this.panel12.Controls.Add(this.bunifuFlatButton2);
             this.panel12.Location = new System.Drawing.Point(23, 442);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(896, 82);
             this.panel12.TabIndex = 169;
             // 
-            // btn_Supprimer
+            // bunifuFlatButton1
             // 
-            this.btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Supprimer.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Supprimer.FlatAppearance.BorderSize = 0;
-            this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(392, 20);
-            this.btn_Supprimer.Name = "btn_Supprimer";
-            this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Supprimer.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.Size = new System.Drawing.Size(114, 47);
-            this.btn_Supprimer.TabIndex = 144;
-            this.btn_Supprimer.Text = "SUPPRIMER";
-            this.btn_Supprimer.TextColor = System.Drawing.Color.White;
-            this.btn_Supprimer.UseVisualStyleBackColor = false;
-            this.btn_Supprimer.Click += new System.EventHandler(this.btn_Supprimer_Click);
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.bunifuFlatButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 7;
+            this.bunifuFlatButton1.ButtonText = "Supprimer";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = null;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(387, 17);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(112, 48);
+            this.bunifuFlatButton1.TabIndex = 148;
+            this.bunifuFlatButton1.Text = "Supprimer";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.btn_Supprimer_Click);
             // 
-            // btn_Ajouter
+            // bunifuFlatButton3
             // 
-            this.btn_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Ajouter.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Ajouter.FlatAppearance.BorderSize = 0;
-            this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(272, 20);
-            this.btn_Ajouter.Name = "btn_Ajouter";
-            this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Ajouter.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.Size = new System.Drawing.Size(114, 47);
-            this.btn_Ajouter.TabIndex = 143;
-            this.btn_Ajouter.Text = "AJOUTER";
-            this.btn_Ajouter.TextColor = System.Drawing.Color.White;
-            this.btn_Ajouter.UseVisualStyleBackColor = false;
-            this.btn_Ajouter.Click += new System.EventHandler(this.btn_Ajouter_Click);
+            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.bunifuFlatButton3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuFlatButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton3.BorderRadius = 7;
+            this.bunifuFlatButton3.ButtonText = "Modifier";
+            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton3.Iconimage = null;
+            this.bunifuFlatButton3.Iconimage_right = null;
+            this.bunifuFlatButton3.Iconimage_right_Selected = null;
+            this.bunifuFlatButton3.Iconimage_Selected = null;
+            this.bunifuFlatButton3.IconMarginLeft = 0;
+            this.bunifuFlatButton3.IconMarginRight = 0;
+            this.bunifuFlatButton3.IconRightVisible = true;
+            this.bunifuFlatButton3.IconRightZoom = 0D;
+            this.bunifuFlatButton3.IconVisible = true;
+            this.bunifuFlatButton3.IconZoom = 90D;
+            this.bunifuFlatButton3.IsTab = false;
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(505, 17);
+            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
+            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.selected = false;
+            this.bunifuFlatButton3.Size = new System.Drawing.Size(112, 48);
+            this.bunifuFlatButton3.TabIndex = 146;
+            this.bunifuFlatButton3.Text = "Modifier";
+            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton3.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
-            // btn_Modifier
+            // bunifuFlatButton2
             // 
-            this.btn_Modifier.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_Modifier.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.BorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.ButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Modifier.FlatAppearance.BorderSize = 0;
-            this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(512, 20);
-            this.btn_Modifier.Name = "btn_Modifier";
-            this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.btn_Modifier.OnHoverTextColor = System.Drawing.Color.White;
-            this.btn_Modifier.Size = new System.Drawing.Size(114, 47);
-            this.btn_Modifier.TabIndex = 145;
-            this.btn_Modifier.Text = "MODIFIER";
-            this.btn_Modifier.TextColor = System.Drawing.Color.White;
-            this.btn_Modifier.UseVisualStyleBackColor = false;
-            this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
+            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.bunifuFlatButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuFlatButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton2.BorderRadius = 7;
+            this.bunifuFlatButton2.ButtonText = "Ajouter";
+            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton2.Iconimage = null;
+            this.bunifuFlatButton2.Iconimage_right = null;
+            this.bunifuFlatButton2.Iconimage_right_Selected = null;
+            this.bunifuFlatButton2.Iconimage_Selected = null;
+            this.bunifuFlatButton2.IconMarginLeft = 0;
+            this.bunifuFlatButton2.IconMarginRight = 0;
+            this.bunifuFlatButton2.IconRightVisible = true;
+            this.bunifuFlatButton2.IconRightZoom = 0D;
+            this.bunifuFlatButton2.IconVisible = true;
+            this.bunifuFlatButton2.IconZoom = 90D;
+            this.bunifuFlatButton2.IsTab = false;
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(269, 17);
+            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
+            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.selected = false;
+            this.bunifuFlatButton2.Size = new System.Drawing.Size(112, 48);
+            this.bunifuFlatButton2.TabIndex = 147;
+            this.bunifuFlatButton2.Text = "Ajouter";
+            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
             // BcForm
             // 
@@ -656,9 +701,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private Button_WOC btn_Modifier;
-        private Button_WOC btn_Ajouter;
-        private Button_WOC btn_Supprimer;
         private System.Windows.Forms.ComboBox cb_NumBc;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Delai;
@@ -692,5 +734,8 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label_tva;
         private System.Windows.Forms.Label label_objet;
         private System.Windows.Forms.Panel panel12;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
     }
 }

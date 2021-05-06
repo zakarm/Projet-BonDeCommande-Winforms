@@ -121,7 +121,8 @@ namespace Projet_Onssa
             }
         }
 
-        private void cb_NumOi_SelectedIndexChanged(object sender, EventArgs e)
+      
+        private void cb_NumOi_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             try
             {
@@ -143,5 +144,7 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
         }
+
+      
     }
 }
