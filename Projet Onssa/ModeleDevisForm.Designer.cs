@@ -47,8 +47,6 @@ namespace Projet_Onssa
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label3 = new System.Windows.Forms.Label();
-            this.cb_NumMdevis = new System.Windows.Forms.ComboBox();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_consultation = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumF = new System.Windows.Forms.ComboBox();
@@ -57,6 +55,8 @@ namespace Projet_Onssa
             this.date_MDevis = new Bunifu.Framework.UI.BunifuDatepicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cb_NumMdevis = new System.Windows.Forms.ComboBox();
+            this.bunifuMetroTextbox5 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Produits)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -369,36 +369,6 @@ namespace Projet_Onssa
             this.label3.TabIndex = 70;
             this.label3.Text = "Numéro de Consultation";
             // 
-            // cb_NumMdevis
-            // 
-            this.cb_NumMdevis.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cb_NumMdevis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumMdevis.Font = new System.Drawing.Font("Roboto", 12F);
-            this.cb_NumMdevis.FormattingEnabled = true;
-            this.cb_NumMdevis.Location = new System.Drawing.Point(95, 43);
-            this.cb_NumMdevis.Name = "cb_NumMdevis";
-            this.cb_NumMdevis.Size = new System.Drawing.Size(358, 27);
-            this.cb_NumMdevis.TabIndex = 153;
-            this.cb_NumMdevis.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged);
-            // 
-            // bunifuMetroTextbox1
-            // 
-            this.bunifuMetroTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(85, 39);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
-            this.bunifuMetroTextbox1.TabIndex = 152;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // cb_consultation
             // 
             this.cb_consultation.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -496,6 +466,8 @@ namespace Projet_Onssa
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cb_NumMdevis);
+            this.panel1.Controls.Add(this.bunifuMetroTextbox5);
             this.panel1.Controls.Add(this.date_MDevis);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.bunifuMetroTextbox4);
@@ -505,9 +477,7 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.bunifuMetroTextbox3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cb_consultation);
-            this.panel1.Controls.Add(this.bunifuMetroTextbox1);
             this.panel1.Controls.Add(this.bunifuMetroTextbox2);
-            this.panel1.Controls.Add(this.cb_NumMdevis);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 186);
@@ -527,6 +497,36 @@ namespace Projet_Onssa
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(930, 305);
             this.panel2.TabIndex = 162;
+            // 
+            // cb_NumMdevis
+            // 
+            this.cb_NumMdevis.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cb_NumMdevis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_NumMdevis.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumMdevis.FormattingEnabled = true;
+            this.cb_NumMdevis.Location = new System.Drawing.Point(97, 48);
+            this.cb_NumMdevis.Name = "cb_NumMdevis";
+            this.cb_NumMdevis.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumMdevis.TabIndex = 162;
+            this.cb_NumMdevis.SelectedIndexChanged += new System.EventHandler(this.cb_NumMdevis_SelectedIndexChanged);
+            // 
+            // bunifuMetroTextbox5
+            // 
+            this.bunifuMetroTextbox5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox5.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox5.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox5.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox5.BorderThickness = 1;
+            this.bunifuMetroTextbox5.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox5.isPassword = false;
+            this.bunifuMetroTextbox5.Location = new System.Drawing.Point(86, 43);
+            this.bunifuMetroTextbox5.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox5.Name = "bunifuMetroTextbox5";
+            this.bunifuMetroTextbox5.Size = new System.Drawing.Size(375, 35);
+            this.bunifuMetroTextbox5.TabIndex = 161;
+            this.bunifuMetroTextbox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // ModeleDevisForm
             // 
@@ -567,8 +567,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb_NumMdevis;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.ComboBox cb_NumF;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
         private System.Windows.Forms.ComboBox cb_consultation;
@@ -577,5 +575,7 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuDatepicker date_MDevis;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.ComboBox cb_NumMdevis;
+        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox5;
     }
 }

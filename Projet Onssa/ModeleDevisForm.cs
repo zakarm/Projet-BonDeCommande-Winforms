@@ -211,34 +211,32 @@ namespace Projet_Onssa
 
         }
 
-        private void cb_NumPvr_SelectedIndexChanged(object sender, EventArgs e)
+   
+
+        private void cb_NumMdevis_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
-                try
+            try
+            {
+                dgv_Produits.Rows.Clear();
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    dgv_Produits.Rows.Clear();
-                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                    md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
+                    cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
+                    date_MDevis.Value = md.Date;
+                    cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
+                    foreach (Produit m in md.ListProduit)
                     {
-                        md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
-                        cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
-                        date_MDevis.Value = md.Date;
-                        cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
-                        foreach (Produit m in md.ListProduit)
-                        {
 
-                            dgv_Produits.Rows.Add(m.Designation, m.Unite, m.Quantite, m.Prix_Unitaire);
-
-                        }
+                        dgv_Produits.Rows.Add(m.Designation, m.Unite, m.Quantite, m.Prix_Unitaire);
 
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            
-        }
 
-      
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }
