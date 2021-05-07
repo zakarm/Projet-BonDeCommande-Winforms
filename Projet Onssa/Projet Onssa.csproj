@@ -137,6 +137,12 @@
       <DependentUpon>CrystalReportOv.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportPvr.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportPvr.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DataSetReport.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -343,6 +349,10 @@
     <EmbeddedResource Include="CrystalReportOv.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportOv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportPvr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportPvr.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FeForm.resx">
       <DependentUpon>FeForm.cs</DependentUpon>

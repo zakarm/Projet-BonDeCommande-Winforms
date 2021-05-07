@@ -65,7 +65,7 @@ namespace Projet_Onssa
                                     Objet = m.InfoConsultation.ObjetConsultation,
                                     Exercice = bc.InfoMorasse.Exercice,
                                     Compte = m.InfoFournisseur.Compte_bancaire_n,
-                                    Lrg = bc.InfoMorasse.Ligne.InfoLrg.CodeLrg,
+                                    Lrg = bc.InfoMorasse.Ligne.InfoLrg.NumLrg,
                                     Par = bc.InfoMorasse.Ligne.InfoLrg.InfoParagraphe.NumPar,
                                     Ligne = bc.InfoMorasse.Ligne.CodeLigne,
                                     Credit = fe.CreditsBudgetaires,
