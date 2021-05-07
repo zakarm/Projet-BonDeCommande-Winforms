@@ -8,7 +8,51 @@ namespace Projet_Onssa
 {
   public class NumToString
    {
+           public string virgule(string f)
+           {
+                 bool test = false ;
+                string ph="";
+                string part1 ="";
+                string part2 ="";
+                int index = 0;
+                foreach(char c in f)
+                {
+                    if(c != ',')
+                    {
+                         ph = ph + c;
+                    }
+                    else
+                    {
+                        index = f.IndexOf(c);
+                        part1 = Ninetotwelvedigit(ph);
+                        test = true;
 
+                    }
+                }
+
+                 ph = "";
+
+                 foreach(char c in f )
+                 {
+                    if (f.IndexOf(c) > index)
+                    {
+                        ph = ph + c;
+                    }
+                   
+                 }
+                 part2 = Ninetotwelvedigit(ph);
+
+                 if(test == false )
+                 {
+                    return Ninetotwelvedigit(f);   
+                 }
+                 else
+                 {
+                    return part1 + " Virgule " + part2;
+                 }
+
+                
+           }
             private string SingleDigite(string singledigit)
 
             {

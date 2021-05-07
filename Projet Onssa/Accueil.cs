@@ -243,8 +243,11 @@ namespace Projet_Onssa
 
         private void btn_Bc_Click(object sender, EventArgs e)
         {
-            openchildform(new BcForm());
             label_txt.Text = "Bon de commande";
+            label_txt.Name = "bc";
+            openchildformtab(new LectureBc(), new BcForm());
+            tabPage1.Text = "Lecture Bon de commande";
+            tabPage2.Text = "Gestion Bon de commande";
         }
 
         private void btn_Fe_Click(object sender, EventArgs e)
@@ -316,6 +319,9 @@ namespace Projet_Onssa
                     break;
                 case "fe":
                     btn_Fe_Click(sender, e);
+                    break;
+                case "bc":
+                    btn_Bc_Click(sender, e);
                     break;
                 
             }

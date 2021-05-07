@@ -14268,12 +14268,20 @@ SELECT IdProduit, Designation, Unite, Quantite, Prix_Unitaire, Prix_Total FROM P
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdProduit, Designation, Unite, Quantite, Prix_Unitaire, Prix_Total FROM db" +
                 "o.ProduitSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        ProduitSet.IdProduit, ProduitSet.Designation, ProduitSet.Unite, ProduitSet.Quantite, ProduitSet.Prix_Unitaire, ProduitSet.Prix_Total
+FROM            ProduitSet INNER JOIN
+                         ModeleDevisProduit ON ModeleDevisProduit.ListProduit_IdProduit = ProduitSet.IdProduit
+WHERE        (ModeleDevisProduit.ListModeleDevis_IdModeleDevis = @num)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ListModeleDevis_IdModeleDevis", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -14295,6 +14303,32 @@ SELECT IdProduit, Designation, Unite, Quantite, Prix_Unitaire, Prix_Total FROM P
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetReport.ProduitSetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetReport.ProduitSetDataTable dataTable = new DataSetReport.ProduitSetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByMd(DataSetReport.ProduitSetDataTable dataTable, int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetReport.ProduitSetDataTable GetDataByMd(int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
             DataSetReport.ProduitSetDataTable dataTable = new DataSetReport.ProduitSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
