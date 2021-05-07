@@ -208,7 +208,7 @@ namespace Projet_Onssa
 
         private void btn_Consultation_Click(object sender, EventArgs e)
         {
-            label_txt.Text = "con";
+            label_txt.Name = "con";
             label_txt.Text = "Consultation";
             tabPage1.Text = "Lecture Consultation";
             tabPage2.Text = "Gestion Consultation";
@@ -249,7 +249,9 @@ namespace Projet_Onssa
 
         private void btn_Fe_Click(object sender, EventArgs e)
         {
-            openchildform(new FeForm());
+            label_txt.Text = "Fiche d'engagement";
+            label_txt.Name = "fe";
+            openchildformtab(new LectureFe(), new FeForm());
             label_txt.Text = "Fiche d'engagement";
         }
 
@@ -311,6 +313,9 @@ namespace Projet_Onssa
                     break;
                 case "ov":
                     btn_Ov_Click(sender, e);
+                    break;
+                case "fe":
+                    btn_Fe_Click(sender, e);
                     break;
                 
             }

@@ -107,10 +107,10 @@
       <DependentUpon>CrystalReportConsultation.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="CrystalReportFE.cs">
+    <Compile Include="CrystalReportFe.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CrystalReportFE.rpt</DependentUpon>
+      <DependentUpon>CrystalReportFe.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="CrystalReportOi.cs">
@@ -312,9 +312,9 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportConsultation.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrystalReportFE.rpt">
+    <EmbeddedResource Include="CrystalReportFe.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>CrystalReportFE.cs</LastGenOutput>
+      <LastGenOutput>CrystalReportFe.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportOi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

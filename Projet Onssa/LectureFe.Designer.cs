@@ -32,7 +32,6 @@ namespace Projet_Onssa
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.label1 = new System.Windows.Forms.Label();
             this.cb_Fe = new System.Windows.Forms.ComboBox();
-            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -68,17 +67,6 @@ namespace Projet_Onssa
             this.cb_Fe.TabIndex = 10;
             this.cb_Fe.SelectedIndexChanged += new System.EventHandler(this.cb_Fe_SelectedIndexChanged);
             // 
-            // crystalReportViewer2
-            // 
-            this.crystalReportViewer2.ActiveViewIndex = -1;
-            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
-            this.crystalReportViewer2.Name = "crystalReportViewer2";
-            this.crystalReportViewer2.Size = new System.Drawing.Size(968, 575);
-            this.crystalReportViewer2.TabIndex = 9;
-            // 
             // LectureFe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,7 +74,6 @@ namespace Projet_Onssa
             this.ClientSize = new System.Drawing.Size(968, 575);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cb_Fe);
-            this.Controls.Add(this.crystalReportViewer2);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "LectureFe";
             this.Text = "LectureFe";
@@ -101,6 +88,5 @@ namespace Projet_Onssa
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cb_Fe;
-        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
     }
 }

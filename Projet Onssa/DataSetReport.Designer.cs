@@ -12332,12 +12332,18 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation FROM ConsultationSet W
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdConsultation, ObjetConsultation, NumConsultation FROM dbo.ConsultationSe" +
                 "t";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT IdConsultation, ObjetConsultation, NumConsultation FROM dbo.ConsultationSe" +
+                "t\r\nwhere IdConsultation = @num";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -12359,6 +12365,32 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation FROM ConsultationSet W
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetReport.ConsultationSetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetReport.ConsultationSetDataTable dataTable = new DataSetReport.ConsultationSetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByCon(DataSetReport.ConsultationSetDataTable dataTable, int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetReport.ConsultationSetDataTable GetDataByCon(int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
             DataSetReport.ConsultationSetDataTable dataTable = new DataSetReport.ConsultationSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -16080,12 +16112,22 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFourniss" +
                 "eur, InfoConsultation_IdConsultation FROM dbo.ModeleDevisSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        ModeleDevisSet.IdModeleDevis, ModeleDevisSet.NumDevis, ModeleDevisSet.Date, ModeleDevisSet.Total, ModeleDevisSet.Tva, ModeleDevisSet.Ttc, ModeleDevisSet.InfoFournisseur_IdFournisseur, 
+                         ModeleDevisSet.InfoConsultation_IdConsultation
+FROM            ModeleDevisSet INNER JOIN
+                         PVJFournisseur ON PVJFournisseur.ListFournisseursRepondu_IdFournisseur = ModeleDevisSet.InfoFournisseur_IdFournisseur
+WHERE        (PVJFournisseur.ListPVJ1_IdPVJ = @num) AND (ModeleDevisSet.InfoConsultation_IdConsultation = @num2)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "ListPVJ1_IdPVJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num2", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "InfoConsultation_IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16107,6 +16149,34 @@ SELECT IdModeleDevis, NumDevis, Date, Total, Tva, Ttc, InfoFournisseur_IdFournis
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetReport.ModeleDevisSetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetReport.ModeleDevisSetDataTable dataTable = new DataSetReport.ModeleDevisSetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillBypvj(DataSetReport.ModeleDevisSetDataTable dataTable, int num, int num2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(num2));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetReport.ModeleDevisSetDataTable GetDataBypvj(int num, int num2) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
+            this.Adapter.SelectCommand.Parameters[1].Value = ((int)(num2));
             DataSetReport.ModeleDevisSetDataTable dataTable = new DataSetReport.ModeleDevisSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

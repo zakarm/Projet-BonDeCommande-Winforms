@@ -20,7 +20,6 @@ namespace Projet_Onssa
         DataSetReport ds = new DataSetReport();
         DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
         DataSetReportTableAdapters.ConsultationFournisseurTableAdapter dacf = new DataSetReportTableAdapters.ConsultationFournisseurTableAdapter();
-        
         DataSetReportTableAdapters.FournisseurSetTableAdapter daf = new DataSetReportTableAdapters.FournisseurSetTableAdapter();
         
 
@@ -67,7 +66,7 @@ namespace Projet_Onssa
             
             int i = int.Parse(cb_Fournisseur.SelectedValue.ToString()); 
             daf.FillByFournniseur(ds.FournisseurSet,i);
-
+            dac.FillByCon(ds.ConsultationSet, (int)cb_Consultation.SelectedValue);
             CrystalReportConsultation ce = new CrystalReportConsultation();
 
             ce.SetDataSource(ds);
