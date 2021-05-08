@@ -14,11 +14,18 @@ namespace Projet_Onssa
     
     public partial class Lrg
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Lrg()
+        {
+            this.Ligne = new HashSet<Ligne>();
+        }
+    
         public int CodeLrg { get; set; }
         public string DescriptionLrg { get; set; }
         public string NumLrg { get; set; }
     
         public virtual Paragraphe InfoParagraphe { get; set; }
-        public virtual Ligne Ligne { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Ligne> Ligne { get; set; }
     }
 }

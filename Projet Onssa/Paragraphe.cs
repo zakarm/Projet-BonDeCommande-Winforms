@@ -14,9 +14,16 @@ namespace Projet_Onssa
     
     public partial class Paragraphe
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Paragraphe()
+        {
+            this.Lrg = new HashSet<Lrg>();
+        }
+    
         public int NumPar { get; set; }
         public string DescriptionPar { get; set; }
     
-        public virtual Lrg Lrg { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Lrg> Lrg { get; set; }
     }
 }

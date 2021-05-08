@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/04/2021 03:46:27
--- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
+-- Date Created: 05/07/2021 23:18:58
+-- Generated from EDMX file: C:\Users\Minfo\Desktop\Projet Stage\Projet-Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -81,10 +81,10 @@ IF OBJECT_ID(N'[dbo].[FK_ModeleDevisConsultation]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ModeleDevisSet] DROP CONSTRAINT [FK_ModeleDevisConsultation];
 GO
 IF OBJECT_ID(N'[dbo].[FK_ParagrapheLrg]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LrgSet] DROP CONSTRAINT [FK_ParagrapheLrg];
+    ALTER TABLE [dbo].[ParagrapheSet] DROP CONSTRAINT [FK_ParagrapheLrg];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LigneLrg]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LigneSet] DROP CONSTRAINT [FK_LigneLrg];
+    ALTER TABLE [dbo].[LrgSet] DROP CONSTRAINT [FK_LigneLrg];
 GO
 IF OBJECT_ID(N'[dbo].[FK_MorasseLigne]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MorasseSet] DROP CONSTRAINT [FK_MorasseLigne];
@@ -324,7 +324,7 @@ GO
 CREATE TABLE [dbo].[LigneSet] (
     [CodeLigne] int  NOT NULL,
     [DescriptionLigne] nvarchar(max)  NOT NULL,
-    [InfoLrg_CodeLrg] int  NOT NULL
+    [InfoLrg_CodeLrg] int  NULL
 );
 GO
 
@@ -340,7 +340,7 @@ CREATE TABLE [dbo].[LrgSet] (
     [CodeLrg] int  NOT NULL,
     [DescriptionLrg] nvarchar(max)  NOT NULL,
     [NumLrg] nvarchar(max)  NOT NULL,
-    [InfoParagraphe_NumPar] int  NOT NULL
+    [InfoParagraphe_NumPar] int  NULL
 );
 GO
 
