@@ -32,6 +32,7 @@ namespace Projet_Onssa
                     {
 
                         OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
+                        p.NumPvr = cb_NumPvr.Text;
                         p.DatePVR = data_Pvr.Value;
                         p.DateString = txt_dateString.Text;
                         p.InfoOI = oi;
@@ -62,7 +63,7 @@ namespace Projet_Onssa
                     cb_Oi.ValueMember = "IdOI";
                     cb_Oi.DataSource = ctx.OISet.ToList();
 
-                    cb_NumPvr.DisplayMember = "IdPvr";
+                    cb_NumPvr.DisplayMember = "NumPvr";
                     cb_NumPvr.ValueMember = "IdPvr";
                     cb_NumPvr.DataSource = ctx.PVRSet.ToList();
                 }
@@ -120,6 +121,7 @@ namespace Projet_Onssa
                     if (check(pvr, ctx) == true)
                     {
                         OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
+                        pvr.NumPvr = cb_NumPvr.Text;
                         pvr.DatePVR = data_Pvr.Value;
                         pvr.DateString = txt_dateString.Text;
                         pvr.InfoOI = oi;
@@ -179,6 +181,7 @@ namespace Projet_Onssa
                     data_Pvr.Value = p.DatePVR;
                     cb_Oi.SelectedValue = p.InfoOI.IdOI;
                     cb_NumPvr.SelectedValue = p.IdPVR;
+                    
 
 
                     foreach (DataGridViewRow drm in dgv_Commission.Rows)

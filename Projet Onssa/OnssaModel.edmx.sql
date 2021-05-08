@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/07/2021 23:18:58
--- Generated from EDMX file: C:\Users\Minfo\Desktop\Projet Stage\Projet-Onssa\Projet Onssa\OnssaModel.edmx
+-- Date Created: 05/08/2021 01:09:20
+-- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -81,10 +81,10 @@ IF OBJECT_ID(N'[dbo].[FK_ModeleDevisConsultation]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[ModeleDevisSet] DROP CONSTRAINT [FK_ModeleDevisConsultation];
 GO
 IF OBJECT_ID(N'[dbo].[FK_ParagrapheLrg]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[ParagrapheSet] DROP CONSTRAINT [FK_ParagrapheLrg];
+    ALTER TABLE [dbo].[LrgSet] DROP CONSTRAINT [FK_ParagrapheLrg];
 GO
 IF OBJECT_ID(N'[dbo].[FK_LigneLrg]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LrgSet] DROP CONSTRAINT [FK_LigneLrg];
+    ALTER TABLE [dbo].[LigneSet] DROP CONSTRAINT [FK_LigneLrg];
 GO
 IF OBJECT_ID(N'[dbo].[FK_MorasseLigne]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MorasseSet] DROP CONSTRAINT [FK_MorasseLigne];
@@ -239,6 +239,7 @@ CREATE TABLE [dbo].[PVRSet] (
     [IdPVR] int IDENTITY(1,1) NOT NULL,
     [DateString] nvarchar(max)  NOT NULL,
     [DatePVR] datetime  NOT NULL,
+    [NumPvr] nvarchar(max)  NOT NULL,
     [InfoOI_IdOI] int  NOT NULL
 );
 GO

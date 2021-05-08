@@ -201,6 +201,7 @@
     <Property Name="IdPVR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DatePVR" Type="datetime" Nullable="false" />
+    <Property Name="NumPvr" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoOI_IdOI" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="BCSet">
@@ -823,6 +824,7 @@
           <Property Name="DatePVR" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="ListCommission" Relationship="OnssaModel.CommissionPVR" FromRole="PVR" ToRole="Commission" />
           <NavigationProperty Name="InfoOI" Relationship="OnssaModel.OIPVR" FromRole="PVR" ToRole="OI" />
+          <Property Name="NumPvr" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="BC">
           <Key>
@@ -1093,6 +1095,7 @@
           <ScalarProperty Name="IdPVR" ColumnName="IdPVR" />
           <ScalarProperty Name="DateString" ColumnName="DateString" />
           <ScalarProperty Name="DatePVR" ColumnName="DatePVR" />
+          <ScalarProperty Name="NumPvr" ColumnName="NumPvr" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -86,7 +86,7 @@ namespace Projet_Onssa
                 ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
                 ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
                // ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
-                ce.SetParameterValue("lettre", cc.Ninetotwelvedigit(query.FirstOrDefault().total.ToString()));
+                ce.SetParameterValue("lettre", cc.virgule(query.FirstOrDefault().total.ToString()));
                 ce.SetParameterValue("visacontrol", query.FirstOrDefault().VisaContol.ToString());
                 ce.SetParameterValue("visacsrs", query.FirstOrDefault().Visacsrs.ToString());
                 ce.SetParameterValue("datepaiement", query.FirstOrDefault().DatePaiement.ToString());

@@ -227,6 +227,12 @@
     <Compile Include="LectureOv.Designer.cs">
       <DependentUpon>LectureOv.cs</DependentUpon>
     </Compile>
+    <Compile Include="LecturePvr.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LecturePvr.Designer.cs">
+      <DependentUpon>LecturePvr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ligne.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -404,6 +410,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LectureOv.resx">
       <DependentUpon>LectureOv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LecturePvr.resx">
+      <DependentUpon>LecturePvr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LigneForm.resx">
       <DependentUpon>LigneForm.cs</DependentUpon>

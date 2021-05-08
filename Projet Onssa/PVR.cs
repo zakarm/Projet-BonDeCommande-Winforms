@@ -23,6 +23,7 @@ namespace Projet_Onssa
         public int IdPVR { get; set; }
         public string DateString { get; set; }
         public System.DateTime DatePVR { get; set; }
+        public string NumPvr { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Commission> ListCommission { get; set; }
