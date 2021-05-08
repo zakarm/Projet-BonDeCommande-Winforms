@@ -40,14 +40,17 @@ namespace Projet_Onssa
             this.cb_Numlrg = new System.Windows.Forms.ComboBox();
             this.cb_codelrg = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // cb_codeligne
             // 
+            this.cb_codeligne.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_codeligne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_codeligne.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_codeligne.FormattingEnabled = true;
-            this.cb_codeligne.Location = new System.Drawing.Point(58, 31);
+            this.cb_codeligne.Location = new System.Drawing.Point(100, 80);
             this.cb_codeligne.Name = "cb_codeligne";
             this.cb_codeligne.Size = new System.Drawing.Size(358, 25);
             this.cb_codeligne.TabIndex = 192;
@@ -55,6 +58,7 @@ namespace Projet_Onssa
             // 
             // cb_codel
             // 
+            this.cb_codel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_codel.BackColor = System.Drawing.Color.White;
             this.cb_codel.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.cb_codel.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -64,7 +68,7 @@ namespace Projet_Onssa
             this.cb_codel.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_codel.ForeColor = System.Drawing.Color.White;
             this.cb_codel.isPassword = false;
-            this.cb_codel.Location = new System.Drawing.Point(49, 26);
+            this.cb_codel.Location = new System.Drawing.Point(91, 75);
             this.cb_codel.Margin = new System.Windows.Forms.Padding(4);
             this.cb_codel.Name = "cb_codel";
             this.cb_codel.Size = new System.Drawing.Size(375, 35);
@@ -73,9 +77,10 @@ namespace Projet_Onssa
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 2);
+            this.label2.Location = new System.Drawing.Point(88, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(94, 20);
             this.label2.TabIndex = 191;
@@ -84,7 +89,7 @@ namespace Projet_Onssa
             // btn_Supprimer
             // 
             this.btn_Supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
-            this.btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Supprimer.BorderRadius = 7;
@@ -103,7 +108,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.IconVisible = true;
             this.btn_Supprimer.IconZoom = 90D;
             this.btn_Supprimer.IsTab = false;
-            this.btn_Supprimer.Location = new System.Drawing.Point(177, 424);
+            this.btn_Supprimer.Location = new System.Drawing.Point(226, 340);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -120,7 +125,7 @@ namespace Projet_Onssa
             // btn_Ajouter
             // 
             this.btn_Ajouter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
-            this.btn_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Ajouter.BorderRadius = 7;
@@ -139,7 +144,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.IconVisible = true;
             this.btn_Ajouter.IconZoom = 90D;
             this.btn_Ajouter.IsTab = false;
-            this.btn_Ajouter.Location = new System.Drawing.Point(59, 424);
+            this.btn_Ajouter.Location = new System.Drawing.Point(108, 340);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -156,7 +161,7 @@ namespace Projet_Onssa
             // btn_Modifier
             // 
             this.btn_Modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
-            this.btn_Modifier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btn_Modifier.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Modifier.BorderRadius = 7;
@@ -175,7 +180,7 @@ namespace Projet_Onssa
             this.btn_Modifier.IconVisible = true;
             this.btn_Modifier.IconZoom = 90D;
             this.btn_Modifier.IsTab = false;
-            this.btn_Modifier.Location = new System.Drawing.Point(295, 424);
+            this.btn_Modifier.Location = new System.Drawing.Point(344, 340);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -191,6 +196,7 @@ namespace Projet_Onssa
             // 
             // txtarea_desc
             // 
+            this.txtarea_desc.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtarea_desc.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.txtarea_desc.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtarea_desc.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -199,18 +205,19 @@ namespace Projet_Onssa
             this.txtarea_desc.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtarea_desc.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtarea_desc.isPassword = false;
-            this.txtarea_desc.Location = new System.Drawing.Point(50, 187);
+            this.txtarea_desc.Location = new System.Drawing.Point(92, 242);
             this.txtarea_desc.Margin = new System.Windows.Forms.Padding(4);
             this.txtarea_desc.Name = "txtarea_desc";
-            this.txtarea_desc.Size = new System.Drawing.Size(375, 155);
+            this.txtarea_desc.Size = new System.Drawing.Size(375, 38);
             this.txtarea_desc.TabIndex = 183;
             this.txtarea_desc.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(46, 163);
+            this.label6.Location = new System.Drawing.Point(88, 218);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 20);
             this.label6.TabIndex = 181;
@@ -218,16 +225,18 @@ namespace Projet_Onssa
             // 
             // cb_Numlrg
             // 
+            this.cb_Numlrg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Numlrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Numlrg.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Numlrg.FormattingEnabled = true;
-            this.cb_Numlrg.Location = new System.Drawing.Point(58, 118);
+            this.cb_Numlrg.Location = new System.Drawing.Point(100, 167);
             this.cb_Numlrg.Name = "cb_Numlrg";
             this.cb_Numlrg.Size = new System.Drawing.Size(358, 25);
             this.cb_Numlrg.TabIndex = 182;
             // 
             // cb_codelrg
             // 
+            this.cb_codelrg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_codelrg.BackColor = System.Drawing.Color.White;
             this.cb_codelrg.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.cb_codelrg.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -237,7 +246,7 @@ namespace Projet_Onssa
             this.cb_codelrg.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_codelrg.ForeColor = System.Drawing.Color.White;
             this.cb_codelrg.isPassword = false;
-            this.cb_codelrg.Location = new System.Drawing.Point(49, 113);
+            this.cb_codelrg.Location = new System.Drawing.Point(91, 162);
             this.cb_codelrg.Margin = new System.Windows.Forms.Padding(4);
             this.cb_codelrg.Name = "cb_codelrg";
             this.cb_codelrg.Size = new System.Drawing.Size(375, 35);
@@ -246,35 +255,51 @@ namespace Projet_Onssa
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(46, 89);
+            this.label8.Location = new System.Drawing.Point(88, 138);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 20);
             this.label8.TabIndex = 180;
             this.label8.Text = "Numéro de Lrg";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cb_Numlrg);
+            this.panel1.Controls.Add(this.cb_codeligne);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.cb_codel);
+            this.panel1.Controls.Add(this.cb_codelrg);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.btn_Supprimer);
+            this.panel1.Controls.Add(this.txtarea_desc);
+            this.panel1.Controls.Add(this.btn_Ajouter);
+            this.panel1.Controls.Add(this.btn_Modifier);
+            this.panel1.Location = new System.Drawing.Point(223, 66);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(553, 462);
+            this.panel1.TabIndex = 193;
+            // 
             // LigneForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(734, 498);
-            this.Controls.Add(this.cb_codeligne);
-            this.Controls.Add(this.cb_codel);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_Supprimer);
-            this.Controls.Add(this.btn_Ajouter);
-            this.Controls.Add(this.btn_Modifier);
-            this.Controls.Add(this.txtarea_desc);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cb_Numlrg);
-            this.Controls.Add(this.cb_codelrg);
-            this.Controls.Add(this.label8);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
+            this.ClientSize = new System.Drawing.Size(938, 588);
+            this.Controls.Add(this.panel1);
             this.Name = "LigneForm";
             this.Text = "LigneForm";
             this.Load += new System.EventHandler(this.LigneForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -291,5 +316,6 @@ namespace Projet_Onssa
         private System.Windows.Forms.ComboBox cb_Numlrg;
         private Bunifu.Framework.UI.BunifuMetroTextbox cb_codelrg;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel1;
     }
 }

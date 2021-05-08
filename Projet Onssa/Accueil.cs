@@ -237,7 +237,10 @@ namespace Projet_Onssa
 
         private void btn_Mdevis_Click(object sender, EventArgs e)
         {
-            openchildform(new ModeleDevisForm());
+            tabPage1.Text = "Lecture Modele Devis";
+            tabPage2.Text = "Gestion Modele Devis";
+            label_txt.Name = "md";
+            openchildformtab(new LectureMd(),new ModeleDevisForm());
             label_txt.Text = "Modele Devis";
         }
 
@@ -270,7 +273,10 @@ namespace Projet_Onssa
 
         private void btn_Pvr_Click(object sender, EventArgs e)
         {
-            openchildform(new PvrForm());
+            tabPage1.Text = "Lecture Procès verbal de reception";
+            tabPage2.Text = "Gestion Procès verbal de reception";
+            label_txt.Name = "pvr";
+            openchildformtab(new LecturePvr(),new PvrForm());
             label_txt.Text = "Procès verbal de reception";
         }
 
@@ -322,6 +328,12 @@ namespace Projet_Onssa
                     break;
                 case "bc":
                     btn_Bc_Click(sender, e);
+                    break;
+                case "md":
+                    btn_Mdevis_Click(sender, e);
+                    break;
+                case "pvr":
+                    btn_Pvr_Click(sender, e);
                     break;
                 
             }

@@ -119,6 +119,12 @@
       <DependentUpon>CrystalReportFe.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CrystalReportMd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportMd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="CrystalReportOi.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,6 +215,12 @@
     <Compile Include="LectureFe.Designer.cs">
       <DependentUpon>LectureFe.cs</DependentUpon>
     </Compile>
+    <Compile Include="LectureMd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LectureMd.Designer.cs">
+      <DependentUpon>LectureMd.cs</DependentUpon>
+    </Compile>
     <Compile Include="LectureOi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +274,12 @@
     </Compile>
     <Compile Include="Morasse.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MorasseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MorasseForm.Designer.cs">
+      <DependentUpon>MorasseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="NumToString.cs" />
     <Compile Include="OI.cs">
@@ -362,6 +380,10 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportFe.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportMd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportMd.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrystalReportOi.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportOi.cs</LastGenOutput>
@@ -402,6 +424,9 @@
     <EmbeddedResource Include="LectureFe.resx">
       <DependentUpon>LectureFe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LectureMd.resx">
+      <DependentUpon>LectureMd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LectureOi.resx">
       <DependentUpon>LectureOi.cs</DependentUpon>
     </EmbeddedResource>
@@ -422,6 +447,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ModeleDevisForm.resx">
       <DependentUpon>ModeleDevisForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MorasseForm.resx">
+      <DependentUpon>MorasseForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OiForm.resx">
       <DependentUpon>OiForm.cs</DependentUpon>

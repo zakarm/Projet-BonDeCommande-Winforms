@@ -27,14 +27,7 @@ namespace Projet_Onssa
             }
         }
         Paragraphe p;
-        private void cb_Num_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-            {
-                p = ctx.ParagrapheSet.Find(cb_Num.SelectedValue);
-                txtarea_desc.Text = p.DescriptionPar;
-            }
-        }
+       
 
         private void btn_Ajouter_Click(object sender, EventArgs e)
         {
@@ -93,6 +86,15 @@ namespace Projet_Onssa
                 {
                     MessageBox.Show(o.Message);
                 }
+            }
+        }
+
+        private void cb_Num_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                p = ctx.ParagrapheSet.Find(cb_Num.SelectedValue);
+                txtarea_desc.Text = p.DescriptionPar;
             }
         }
     }
