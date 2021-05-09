@@ -21,6 +21,7 @@ namespace Projet_Onssa
         DataSetReportTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetReportTableAdapters.ModeleDevisSetTableAdapter();
         DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
         DataSetReportTableAdapters.ModeleDevisProduitTableAdapter dap = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
+       
         private void LectureFe_Load(object sender, EventArgs e)
         {
             dapf.Fill(ds.PVJFournisseur);
