@@ -83,6 +83,7 @@ namespace Projet_Onssa
             {
 
                 btnPcord(true);
+                btnLcsrs(false);
                 btn_Oi_Click(sender, e);
             }
             else
@@ -92,6 +93,7 @@ namespace Projet_Onssa
                    
                     btnPcsrs(true);
                     btnMcsrs(false);
+                    btnLcsrs(false);
                     btn_Consultation_Click(sender, e);
                 }
                 else
@@ -101,6 +103,7 @@ namespace Projet_Onssa
                         btnMcsrs(false);
                         btnPcsrs(false);
                         btnPcord(false);
+                        btnLcsrs(false);
                         btn_Gpaiement.Visible = false;
                     }
                 }
@@ -155,6 +158,18 @@ namespace Projet_Onssa
             panel_Ov.Visible = s;
         }
 
+        private void btnLcsrs(bool s)
+        {
+            btn_ligne.Visible = s;
+            panel_Ligne.Visible = s;
+            btn_Lrg.Visible = s;
+            panel_LRG.Visible = s;
+            btn_Par.Visible = s;
+            panel_Par.Visible = s;
+            btn_Morasse.Visible = s;
+            panel_Morasse.Visible = s;
+
+        }
         private void btnPcsrs(bool s)
         {
 
@@ -201,6 +216,14 @@ namespace Projet_Onssa
                     btn_Consultation_Click(sender, e);
                     btnPcsrs(true);
                     btnMcsrs(false);
+                    btnLcsrs(false);
+                }
+                else
+                {
+                    if(Program.OG.TypeCompte.Equals("dr"))
+                    {
+                        tabPage2.Controls.Clear();
+                    }
                 }
             }
 
@@ -231,7 +254,10 @@ namespace Projet_Onssa
 
         private void btn_Pvj_Click(object sender, EventArgs e)
         {
-            openchildform(new PvjForm());
+            tabPage1.Text = "Lecture Procès verbal de jugement";
+            tabPage2.Text = "Gestion Procès verbal de jugement";
+            label_txt.Name = "pvj";
+            openchildformtab(new LecturePvj(),new PvjForm());
             label_txt.Text = "Procès verbal de jugement";
         }
 
@@ -304,7 +330,9 @@ namespace Projet_Onssa
         private void btn_GestionCompte_Click(object sender, EventArgs e)
         {
             openchildform(new GestionCompteForm());
-            panel_submenu.Visible = false;
+            btnPcsrs(false);
+            btnLcsrs(false);
+            btnMcsrs(false);
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -335,7 +363,10 @@ namespace Projet_Onssa
                 case "pvr":
                     btn_Pvr_Click(sender, e);
                     break;
-                
+                case "pvj":
+                    btn_Pvj_Click(sender, e);
+                    break;
+
             }
 
         }
@@ -358,44 +389,44 @@ namespace Projet_Onssa
 
         private void btn_Accueil_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749);
+            panelControl.Size = new Size(130, 749);
         }
 
         private void btn_Accueil_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
         }
 
 
         private void btn_Gpaiement_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
         }
 
         private void btn_Gpaiement_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
         }
 
         
         private void btn_Mamber_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749);
+            panelControl.Size = new Size(130, 749);
         }
 
         private void btn_Mamber_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
         }
 
         private void btn_GestionCompte_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
         }
 
         private void btn_GestionCompte_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(180, 749); 
+            panelControl.Size = new Size(130, 749); 
 
         }
 
@@ -648,6 +679,93 @@ namespace Projet_Onssa
         private void panel_Fe_MouseHover(object sender, EventArgs e)
         {
             panelControl.Size = new Size(64, 749);
+        }
+
+        private void panel1_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_GestionCompte_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void bunifuFlatButton1_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void bunifuFlatButton1_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            btnLcsrs(true);
+            btnMcsrs(false);
+            btnPcsrs(false);
+        }
+
+        private void panel_Gpaiement_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Gpaiement_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Mamber_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Mamber_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Accueil_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Accueil_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel5_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel5_MouseHover(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Lrg_Click(object sender, EventArgs e)
+        {
+            openchildform(new LrgForm());
+        }
+
+        private void btn_Par_Click(object sender, EventArgs e)
+        {
+            openchildform(new ParagrapheForm());
+        }
+
+        private void btn_ligne_Click(object sender, EventArgs e)
+        {
+            openchildform(new LigneForm());
+        }
+
+        private void btn_Morasse_Click(object sender, EventArgs e)
+        {
+            openchildform(new MorasseForm());
         }
     }
 }

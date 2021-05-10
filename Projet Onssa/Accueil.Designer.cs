@@ -31,6 +31,8 @@ namespace Projet_Onssa
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Accueil));
             this.panelControl = new System.Windows.Forms.Panel();
+            this.btn_Lois = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_GestionCompte = new System.Windows.Forms.Panel();
             this.btn_GestionCompte = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Mamber = new System.Windows.Forms.Panel();
             this.btn_Mamber = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -77,8 +79,14 @@ namespace Projet_Onssa
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btn_Par = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Par = new System.Windows.Forms.Panel();
+            this.btn_Lrg = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_LRG = new System.Windows.Forms.Panel();
+            this.btn_ligne = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Ligne = new System.Windows.Forms.Panel();
+            this.btn_Morasse = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Morasse = new System.Windows.Forms.Panel();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -94,8 +102,8 @@ namespace Projet_Onssa
             // panelControl
             // 
             this.panelControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.panelControl.Controls.Add(this.bunifuFlatButton1);
-            this.panelControl.Controls.Add(this.panel1);
+            this.panelControl.Controls.Add(this.btn_Lois);
+            this.panelControl.Controls.Add(this.panel_GestionCompte);
             this.panelControl.Controls.Add(this.btn_GestionCompte);
             this.panelControl.Controls.Add(this.panel_Mamber);
             this.panelControl.Controls.Add(this.btn_Mamber);
@@ -114,13 +122,61 @@ namespace Projet_Onssa
             this.panelControl.MouseLeave += new System.EventHandler(this.panelControl_MouseLeave);
             this.panelControl.MouseHover += new System.EventHandler(this.panelControl_MouseHover);
             // 
+            // btn_Lois
+            // 
+            this.btn_Lois.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Lois.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Lois.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Lois.BorderRadius = 0;
+            this.btn_Lois.ButtonText = "   Morasse";
+            this.btn_Lois.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Lois.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Lois.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Lois.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Lois.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Lois.Iconimage")));
+            this.btn_Lois.Iconimage_right = null;
+            this.btn_Lois.Iconimage_right_Selected = null;
+            this.btn_Lois.Iconimage_Selected = null;
+            this.btn_Lois.IconMarginLeft = 20;
+            this.btn_Lois.IconMarginRight = 0;
+            this.btn_Lois.IconRightVisible = true;
+            this.btn_Lois.IconRightZoom = 0D;
+            this.btn_Lois.IconVisible = true;
+            this.btn_Lois.IconZoom = 50D;
+            this.btn_Lois.IsTab = false;
+            this.btn_Lois.Location = new System.Drawing.Point(0, 338);
+            this.btn_Lois.Name = "btn_Lois";
+            this.btn_Lois.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.btn_Lois.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Lois.OnHoverTextColor = System.Drawing.Color.White;
+            this.btn_Lois.selected = false;
+            this.btn_Lois.Size = new System.Drawing.Size(66, 48);
+            this.btn_Lois.TabIndex = 16;
+            this.btn_Lois.Text = "   Morasse";
+            this.btn_Lois.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Lois.Textcolor = System.Drawing.Color.White;
+            this.btn_Lois.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Lois.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
+            this.btn_Lois.MouseEnter += new System.EventHandler(this.bunifuFlatButton1_MouseEnter);
+            this.btn_Lois.MouseHover += new System.EventHandler(this.bunifuFlatButton1_MouseHover);
+            // 
+            // panel_GestionCompte
+            // 
+            this.panel_GestionCompte.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_GestionCompte.Location = new System.Drawing.Point(0, 328);
+            this.panel_GestionCompte.Name = "panel_GestionCompte";
+            this.panel_GestionCompte.Size = new System.Drawing.Size(66, 10);
+            this.panel_GestionCompte.TabIndex = 15;
+            this.panel_GestionCompte.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel_GestionCompte.MouseHover += new System.EventHandler(this.panel_GestionCompte_MouseHover);
+            // 
             // btn_GestionCompte
             // 
             this.btn_GestionCompte.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_GestionCompte.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_GestionCompte.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_GestionCompte.BorderRadius = 0;
-            this.btn_GestionCompte.ButtonText = "";
+            this.btn_GestionCompte.ButtonText = "   Comptes";
             this.btn_GestionCompte.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_GestionCompte.DisabledColor = System.Drawing.Color.Gray;
             this.btn_GestionCompte.Dock = System.Windows.Forms.DockStyle.Top;
@@ -144,6 +200,7 @@ namespace Projet_Onssa
             this.btn_GestionCompte.selected = false;
             this.btn_GestionCompte.Size = new System.Drawing.Size(66, 48);
             this.btn_GestionCompte.TabIndex = 14;
+            this.btn_GestionCompte.Text = "   Comptes";
             this.btn_GestionCompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_GestionCompte.Textcolor = System.Drawing.Color.White;
             this.btn_GestionCompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,6 +215,8 @@ namespace Projet_Onssa
             this.panel_Mamber.Name = "panel_Mamber";
             this.panel_Mamber.Size = new System.Drawing.Size(66, 10);
             this.panel_Mamber.TabIndex = 13;
+            this.panel_Mamber.MouseEnter += new System.EventHandler(this.panel_Mamber_MouseEnter);
+            this.panel_Mamber.MouseHover += new System.EventHandler(this.panel_Mamber_MouseHover);
             // 
             // btn_Mamber
             // 
@@ -165,7 +224,7 @@ namespace Projet_Onssa
             this.btn_Mamber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Mamber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Mamber.BorderRadius = 0;
-            this.btn_Mamber.ButtonText = "";
+            this.btn_Mamber.ButtonText = "   Mambre";
             this.btn_Mamber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Mamber.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Mamber.Dock = System.Windows.Forms.DockStyle.Top;
@@ -189,6 +248,7 @@ namespace Projet_Onssa
             this.btn_Mamber.selected = false;
             this.btn_Mamber.Size = new System.Drawing.Size(66, 48);
             this.btn_Mamber.TabIndex = 12;
+            this.btn_Mamber.Text = "   Mambre";
             this.btn_Mamber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Mamber.Textcolor = System.Drawing.Color.White;
             this.btn_Mamber.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,6 +298,8 @@ namespace Projet_Onssa
             this.panel_Gpaiement.Name = "panel_Gpaiement";
             this.panel_Gpaiement.Size = new System.Drawing.Size(66, 10);
             this.panel_Gpaiement.TabIndex = 8;
+            this.panel_Gpaiement.MouseEnter += new System.EventHandler(this.panel_Gpaiement_MouseEnter);
+            this.panel_Gpaiement.MouseHover += new System.EventHandler(this.panel_Gpaiement_MouseHover);
             // 
             // btn_Gpaiement
             // 
@@ -245,7 +307,7 @@ namespace Projet_Onssa
             this.btn_Gpaiement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Gpaiement.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Gpaiement.BorderRadius = 0;
-            this.btn_Gpaiement.ButtonText = "";
+            this.btn_Gpaiement.ButtonText = "   Gestion";
             this.btn_Gpaiement.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Gpaiement.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Gpaiement.Dock = System.Windows.Forms.DockStyle.Top;
@@ -269,6 +331,7 @@ namespace Projet_Onssa
             this.btn_Gpaiement.selected = false;
             this.btn_Gpaiement.Size = new System.Drawing.Size(66, 48);
             this.btn_Gpaiement.TabIndex = 7;
+            this.btn_Gpaiement.Text = "   Gestion";
             this.btn_Gpaiement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Gpaiement.Textcolor = System.Drawing.Color.White;
             this.btn_Gpaiement.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -283,6 +346,8 @@ namespace Projet_Onssa
             this.panel_Accueil.Name = "panel_Accueil";
             this.panel_Accueil.Size = new System.Drawing.Size(66, 10);
             this.panel_Accueil.TabIndex = 6;
+            this.panel_Accueil.MouseEnter += new System.EventHandler(this.panel_Accueil_MouseEnter);
+            this.panel_Accueil.MouseHover += new System.EventHandler(this.panel_Accueil_MouseHover);
             // 
             // btn_Accueil
             // 
@@ -338,6 +403,8 @@ namespace Projet_Onssa
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(66, 106);
             this.panel5.TabIndex = 5;
+            this.panel5.MouseEnter += new System.EventHandler(this.panel5_MouseEnter);
+            this.panel5.MouseHover += new System.EventHandler(this.panel5_MouseHover);
             // 
             // button18
             // 
@@ -355,6 +422,7 @@ namespace Projet_Onssa
             // panel_submenu
             // 
             this.panel_submenu.AutoScroll = true;
+            this.panel_submenu.AutoScrollMargin = new System.Drawing.Size(0, 1000);
             this.panel_submenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_submenu.Controls.Add(this.panel_subsubmenu);
             this.panel_submenu.Controls.Add(this.panel_logo);
@@ -369,6 +437,14 @@ namespace Projet_Onssa
             // panel_subsubmenu
             // 
             this.panel_subsubmenu.AutoScroll = true;
+            this.panel_subsubmenu.Controls.Add(this.panel_Morasse);
+            this.panel_subsubmenu.Controls.Add(this.btn_Morasse);
+            this.panel_subsubmenu.Controls.Add(this.panel_Ligne);
+            this.panel_subsubmenu.Controls.Add(this.btn_ligne);
+            this.panel_subsubmenu.Controls.Add(this.panel_LRG);
+            this.panel_subsubmenu.Controls.Add(this.btn_Lrg);
+            this.panel_subsubmenu.Controls.Add(this.panel_Par);
+            this.panel_subsubmenu.Controls.Add(this.btn_Par);
             this.panel_subsubmenu.Controls.Add(this.panel_Commission);
             this.panel_subsubmenu.Controls.Add(this.btn_Co);
             this.panel_subsubmenu.Controls.Add(this.panel_Fr);
@@ -395,7 +471,7 @@ namespace Projet_Onssa
             this.panel_subsubmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_subsubmenu.Location = new System.Drawing.Point(0, 96);
             this.panel_subsubmenu.Name = "panel_subsubmenu";
-            this.panel_subsubmenu.Size = new System.Drawing.Size(254, 653);
+            this.panel_subsubmenu.Size = new System.Drawing.Size(237, 1000);
             this.panel_subsubmenu.TabIndex = 1;
             // 
             // panel_Commission
@@ -963,7 +1039,7 @@ namespace Projet_Onssa
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(254, 96);
+            this.panel_logo.Size = new System.Drawing.Size(237, 96);
             this.panel_logo.TabIndex = 0;
             this.panel_logo.MouseEnter += new System.EventHandler(this.panel_logo_MouseEnter);
             this.panel_logo.MouseHover += new System.EventHandler(this.panel_logo_MouseHover);
@@ -1024,7 +1100,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 60D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(880, 30);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(942, 30);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -1085,47 +1161,185 @@ namespace Projet_Onssa
             this.tabPage2.Text = "Gestion ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // btn_Par
             // 
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 328);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(66, 10);
-            this.panel1.TabIndex = 15;
+            this.btn_Par.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Par.BorderRadius = 0;
+            this.btn_Par.ButtonText = "Paragraphe";
+            this.btn_Par.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Par.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Par.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Par.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Par.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Par.Iconimage")));
+            this.btn_Par.Iconimage_right = null;
+            this.btn_Par.Iconimage_right_Selected = null;
+            this.btn_Par.Iconimage_Selected = null;
+            this.btn_Par.IconMarginLeft = 0;
+            this.btn_Par.IconMarginRight = 0;
+            this.btn_Par.IconRightVisible = true;
+            this.btn_Par.IconRightZoom = 0D;
+            this.btn_Par.IconVisible = true;
+            this.btn_Par.IconZoom = 45D;
+            this.btn_Par.IsTab = false;
+            this.btn_Par.Location = new System.Drawing.Point(0, 670);
+            this.btn_Par.Name = "btn_Par";
+            this.btn_Par.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Par.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Par.selected = false;
+            this.btn_Par.Size = new System.Drawing.Size(237, 53);
+            this.btn_Par.TabIndex = 45;
+            this.btn_Par.Text = "Paragraphe";
+            this.btn_Par.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Par.Textcolor = System.Drawing.Color.White;
+            this.btn_Par.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Par.Click += new System.EventHandler(this.btn_Par_Click);
             // 
-            // bunifuFlatButton1
+            // panel_Par
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 20;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 50D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 338);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(66, 48);
-            this.bunifuFlatButton1.TabIndex = 16;
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Par.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Par.Location = new System.Drawing.Point(0, 723);
+            this.panel_Par.Name = "panel_Par";
+            this.panel_Par.Size = new System.Drawing.Size(237, 7);
+            this.panel_Par.TabIndex = 46;
+            // 
+            // btn_Lrg
+            // 
+            this.btn_Lrg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Lrg.BorderRadius = 0;
+            this.btn_Lrg.ButtonText = "LRG";
+            this.btn_Lrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Lrg.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Lrg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Lrg.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Lrg.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Lrg.Iconimage")));
+            this.btn_Lrg.Iconimage_right = null;
+            this.btn_Lrg.Iconimage_right_Selected = null;
+            this.btn_Lrg.Iconimage_Selected = null;
+            this.btn_Lrg.IconMarginLeft = 0;
+            this.btn_Lrg.IconMarginRight = 0;
+            this.btn_Lrg.IconRightVisible = true;
+            this.btn_Lrg.IconRightZoom = 0D;
+            this.btn_Lrg.IconVisible = true;
+            this.btn_Lrg.IconZoom = 45D;
+            this.btn_Lrg.IsTab = false;
+            this.btn_Lrg.Location = new System.Drawing.Point(0, 730);
+            this.btn_Lrg.Name = "btn_Lrg";
+            this.btn_Lrg.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Lrg.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Lrg.selected = false;
+            this.btn_Lrg.Size = new System.Drawing.Size(237, 53);
+            this.btn_Lrg.TabIndex = 47;
+            this.btn_Lrg.Text = "LRG";
+            this.btn_Lrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Lrg.Textcolor = System.Drawing.Color.White;
+            this.btn_Lrg.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Lrg.Click += new System.EventHandler(this.btn_Lrg_Click);
+            // 
+            // panel_LRG
+            // 
+            this.panel_LRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_LRG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_LRG.Location = new System.Drawing.Point(0, 783);
+            this.panel_LRG.Name = "panel_LRG";
+            this.panel_LRG.Size = new System.Drawing.Size(237, 7);
+            this.panel_LRG.TabIndex = 48;
+            // 
+            // btn_ligne
+            // 
+            this.btn_ligne.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ligne.BorderRadius = 0;
+            this.btn_ligne.ButtonText = "Ligne";
+            this.btn_ligne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ligne.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_ligne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ligne.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_ligne.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ligne.Iconimage")));
+            this.btn_ligne.Iconimage_right = null;
+            this.btn_ligne.Iconimage_right_Selected = null;
+            this.btn_ligne.Iconimage_Selected = null;
+            this.btn_ligne.IconMarginLeft = 0;
+            this.btn_ligne.IconMarginRight = 0;
+            this.btn_ligne.IconRightVisible = true;
+            this.btn_ligne.IconRightZoom = 0D;
+            this.btn_ligne.IconVisible = true;
+            this.btn_ligne.IconZoom = 45D;
+            this.btn_ligne.IsTab = false;
+            this.btn_ligne.Location = new System.Drawing.Point(0, 790);
+            this.btn_ligne.Name = "btn_ligne";
+            this.btn_ligne.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_ligne.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_ligne.selected = false;
+            this.btn_ligne.Size = new System.Drawing.Size(237, 53);
+            this.btn_ligne.TabIndex = 49;
+            this.btn_ligne.Text = "Ligne";
+            this.btn_ligne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_ligne.Textcolor = System.Drawing.Color.White;
+            this.btn_ligne.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ligne.Click += new System.EventHandler(this.btn_ligne_Click);
+            // 
+            // panel_Ligne
+            // 
+            this.panel_Ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Ligne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Ligne.Location = new System.Drawing.Point(0, 843);
+            this.panel_Ligne.Name = "panel_Ligne";
+            this.panel_Ligne.Size = new System.Drawing.Size(237, 7);
+            this.panel_Ligne.TabIndex = 50;
+            // 
+            // btn_Morasse
+            // 
+            this.btn_Morasse.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Morasse.BorderRadius = 0;
+            this.btn_Morasse.ButtonText = "Morasse";
+            this.btn_Morasse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Morasse.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Morasse.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Morasse.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Morasse.Iconimage")));
+            this.btn_Morasse.Iconimage_right = null;
+            this.btn_Morasse.Iconimage_right_Selected = null;
+            this.btn_Morasse.Iconimage_Selected = null;
+            this.btn_Morasse.IconMarginLeft = 0;
+            this.btn_Morasse.IconMarginRight = 0;
+            this.btn_Morasse.IconRightVisible = true;
+            this.btn_Morasse.IconRightZoom = 0D;
+            this.btn_Morasse.IconVisible = true;
+            this.btn_Morasse.IconZoom = 45D;
+            this.btn_Morasse.IsTab = false;
+            this.btn_Morasse.Location = new System.Drawing.Point(0, 850);
+            this.btn_Morasse.Name = "btn_Morasse";
+            this.btn_Morasse.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Morasse.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Morasse.selected = false;
+            this.btn_Morasse.Size = new System.Drawing.Size(237, 53);
+            this.btn_Morasse.TabIndex = 51;
+            this.btn_Morasse.Text = "Morasse";
+            this.btn_Morasse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Morasse.Textcolor = System.Drawing.Color.White;
+            this.btn_Morasse.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Morasse.Click += new System.EventHandler(this.btn_Morasse_Click);
+            // 
+            // panel_Morasse
+            // 
+            this.panel_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Morasse.Location = new System.Drawing.Point(0, 903);
+            this.panel_Morasse.Name = "panel_Morasse";
+            this.panel_Morasse.Size = new System.Drawing.Size(237, 7);
+            this.panel_Morasse.TabIndex = 52;
             // 
             // Accueil
             // 
@@ -1208,7 +1422,15 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_Gpaiement;
         private System.Windows.Forms.Panel panel_Accueil;
         private System.Windows.Forms.Button button18;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private System.Windows.Forms.Panel panel1;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Lois;
+        private System.Windows.Forms.Panel panel_GestionCompte;
+        private System.Windows.Forms.Panel panel_Morasse;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Morasse;
+        private System.Windows.Forms.Panel panel_Ligne;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_ligne;
+        private System.Windows.Forms.Panel panel_LRG;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Lrg;
+        private System.Windows.Forms.Panel panel_Par;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Par;
     }
 }
