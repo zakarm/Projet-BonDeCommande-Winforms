@@ -58,9 +58,13 @@ namespace Projet_Onssa
                     ctx.OISet.Add(Oiajoute);
                     ctx.SaveChanges();
                     MessageBox.Show("Ajouté avec succès");
-
+                    DeclarationGlobale.vider(this);
                     cb_NumOi.DataSource = ctx.OISet.ToList();
                 }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -70,54 +74,67 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
+                    try
+                    {
+                        ctx.Entry(oi).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.OISet.Remove(oi);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumOi.DataSource = ctx.OISet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
-                    ctx.Entry(oi).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.OISet.Remove(oi);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    cb_NumOi.DataSource = ctx.OISet.ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
+                    try
+                    {
+                        ctx.Entry(oi).State = System.Data.Entity.EntityState.Modified;
 
-                    ctx.Entry(oi).State = System.Data.Entity.EntityState.Modified;
+                        FE fE = ctx.FESet.Find(cb_Fe.SelectedValue);
 
-                    FE fE = ctx.FESet.Find(cb_Fe.SelectedValue);
+                        oi.NumOi = cb_NumOi.Text;
+                        oi.NumCompteDebit = txt_Compte.Text;
+                        oi.VisaControle = txt_VisaControl.Text;
+                        oi.VisaCsrs = txt_VisaCsrs.Text;
+                        oi.VisaSordonnateur = txt_VisaSordonnateur.Text;
+                        oi.VisaTresorierPayeur = txt_VisaTresorier.Text;
+                        oi.DatePaiement = data_Paiement.Value;
+                        oi.DateOI = date_Oi.Value;
+                        oi.InfoFE = fE;
 
-                    oi.NumOi = cb_NumOi.Text;
-                    oi.NumCompteDebit = txt_Compte.Text;
-                    oi.VisaControle = txt_VisaControl.Text;
-                    oi.VisaCsrs = txt_VisaCsrs.Text;
-                    oi.VisaSordonnateur = txt_VisaSordonnateur.Text;
-                    oi.VisaTresorierPayeur = txt_VisaTresorier.Text;
-                    oi.DatePaiement = data_Paiement.Value;
-                    oi.DateOI = date_Oi.Value;
-                    oi.InfoFE = fE;
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifé avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumOi.DataSource = ctx.OISet.ToList();
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
-                    ctx.SaveChanges();
-                    MessageBox.Show("Modifé avec succès");
-
-                    cb_NumOi.DataSource = ctx.OISet.ToList();
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

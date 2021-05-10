@@ -139,21 +139,26 @@ namespace Projet_Onssa
        //---------------------------------------------Supprimer----------------------------------------
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.ConsultationSet.Remove(c);
-                    ctx.SaveChanges();
-                    cb_Num.DataSource = ctx.ConsultationSet.ToList();
-                    MessageBox.Show("Supprimé avec succès");
+                    try
+                    {
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.ConsultationSet.Remove(c);
+                        ctx.SaveChanges();
+                        cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                        MessageBox.Show("Supprimé avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
                 DeclarationGlobale.vider(this);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
             
         }
@@ -161,19 +166,19 @@ namespace Projet_Onssa
         //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            
-            try
-            {   
-               using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
-               {
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                {
                     ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                     c.ListFournisseur.Clear();
 
-                    if(check(c, ctx)==true)
+                    if (check(c, ctx) == true)
                     {
                         c.NumConsultation = cb_Num.Text;
                         c.ObjetConsultation = txtarea_Objet.Text;
-                                                    
+
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
@@ -184,12 +189,7 @@ namespace Projet_Onssa
                     {
                         MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-               }
-               
-            }
-            catch(Exception ex)
-            {
-                 MessageBox.Show(ex.Message);
+                }
             }
            
         }

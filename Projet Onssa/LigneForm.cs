@@ -50,9 +50,14 @@ namespace Projet_Onssa
 
                     ctx.LigneSet.Add(ol);
                     ctx.SaveChanges();
-                    MessageBox.Show("ok");
+                    MessageBox.Show("Ajouté avec succès");
+                    DeclarationGlobale.vider(this);
                     cb_codeligne.DataSource = ctx.LigneSet.ToList();
 
+                }
+                catch (FormatException)
+                {
+                    MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception o)
                 {
@@ -64,22 +69,31 @@ namespace Projet_Onssa
         Ligne oll;
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    
-                    ctx.Entry(oll).State = System.Data.Entity.EntityState.Modified;
-                    oll.DescriptionLigne = txtarea_desc.Text;
-                    oll.InfoLrg = ctx.LrgSet.Find(cb_Numlrg.SelectedValue);
-                    
-                    ctx.SaveChanges();
-                    MessageBox.Show("ok");
+                    try
+                    {
+                        ctx.Entry(oll).State = System.Data.Entity.EntityState.Modified;
+                        oll.DescriptionLigne = txtarea_desc.Text;
+                        oll.InfoLrg = ctx.LrgSet.Find(cb_Numlrg.SelectedValue);
 
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifier avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_codeligne.DataSource = ctx.LigneSet.ToList();
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
             }
         }
@@ -105,24 +119,31 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(oll).State = System.Data.Entity.EntityState.Deleted;
+                    try
+                    {
+                        ctx.Entry(oll).State = System.Data.Entity.EntityState.Deleted;
 
-                    ctx.LigneSet.Remove(oll);
+                        ctx.LigneSet.Remove(oll);
 
-                    ctx.SaveChanges();
+                        ctx.SaveChanges();
 
-                    MessageBox.Show("ok");
+                        MessageBox.Show("Supprimer avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_codeligne.DataSource = ctx.LigneSet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
                 }
             }
+
         }
     }
 }

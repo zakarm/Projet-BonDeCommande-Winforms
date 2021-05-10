@@ -170,7 +170,12 @@ namespace Projet_Onssa
 
 
                 }
-            }catch(Exception ex )
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex )
             {
                 MessageBox.Show(ex.Message);
             }
@@ -181,44 +186,51 @@ namespace Projet_Onssa
         //---------------------------------------------Supprimer----------------------------------------
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(pn).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.PVJSet.Remove(pn);
-                    ctx.SaveChanges();
-                    cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                    try
+                    {
+                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.PVJSet.Remove(pn);
+                        ctx.SaveChanges();
+                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+
+                        MessageBox.Show("Supprimer avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
-
                 DeclarationGlobale.vider(this);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
         //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-
-                    ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
-                    Consultation c = c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
-                    Fournisseur f;
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
-                    pn.ListFournisseursRepondu.Clear();
-                    pn.ListCommissions.Clear();
-
-                    if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
+                    try
                     {
-                        
-                        
+                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
+                        Consultation c = c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                        Fournisseur f;
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        pn.ListFournisseursRepondu.Clear();
+                        pn.ListCommissions.Clear();
+
+                        if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
+                        {
+
+
                             f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
@@ -230,23 +242,27 @@ namespace Projet_Onssa
 
                             cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                             MessageBox.Show("Modifié avec succès");
-                       
 
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+
+                        DeclarationGlobale.vider(this);
                     }
-                    else
+                    catch (FormatException)
                     {
-                        MessageBox.Show("sélectionner un fournisseur et une commission d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    DeclarationGlobale.vider(this);
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
        

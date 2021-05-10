@@ -27,8 +27,6 @@ namespace Projet_Onssa
         {
             try
             {
-
-
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     var query = from  bc in ctx.BCSet join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ

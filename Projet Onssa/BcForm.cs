@@ -45,7 +45,6 @@ namespace Projet_Onssa
                 cb_Pvj.DataSource = ctx.PVJSet.ToList();
 
             }
-            DeclarationGlobale.vider(this);
         }
 
         private void viderToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,6 +79,10 @@ namespace Projet_Onssa
                 DeclarationGlobale.vider(this);
 
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -89,55 +92,67 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                using(OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-
-                    ctx.Entry(bc).State = System.Data.Entity.EntityState.Deleted;
+                    try
+                    {
+                       ctx.Entry(bc).State = System.Data.Entity.EntityState.Deleted;
                     ctx.BCSet.Remove(bc);
                     ctx.SaveChanges();
                     MessageBox.Show("Supprimé avec succès");
                     cb_NumBc.DataSource = ctx.BCSet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
-                DeclarationGlobale.vider(this);
             }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
         
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-
-                    ctx.Entry(bc).State = System.Data.Entity.EntityState.Modified;
-                    PVJ p = ctx.PVJSet.Find(cb_Pvj.SelectedValue);
-                    Morasse m = ctx.MorasseSet.Find(cb_Morasse.SelectedValue);
-                    bc.NumBc = cb_NumBc.Text;
-                    bc.DateBC = date_Bc.Value;
-                    bc.DelaiExecution = txt_Delai.Text;
-                    bc.Destination = txt_Destination.Text;
-                    bc.InfoMorasse = m;
-                    bc.InfoPVJ = p;
-                    ctx.SaveChanges();
-                    MessageBox.Show("Modifié avec succès");
-                    cb_NumBc.DataSource = ctx.BCSet.ToList();
-
+                    try
+                    {
+                        ctx.Entry(bc).State = System.Data.Entity.EntityState.Modified;
+                        PVJ p = ctx.PVJSet.Find(cb_Pvj.SelectedValue);
+                        Morasse m = ctx.MorasseSet.Find(cb_Morasse.SelectedValue);
+                        bc.NumBc = cb_NumBc.Text;
+                        bc.DateBC = date_Bc.Value;
+                        bc.DelaiExecution = txt_Delai.Text;
+                        bc.Destination = txt_Destination.Text;
+                        bc.InfoMorasse = m;
+                        bc.InfoPVJ = p;
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifié avec succès");
+                        cb_NumBc.DataSource = ctx.BCSet.ToList();
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+                    
                 }
-                DeclarationGlobale.vider(this);
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            else DeclarationGlobale.vider(this);
+
         }
 
        
@@ -167,31 +182,30 @@ namespace Projet_Onssa
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
-                var query = from  pvj in ctx.PVJSet
-                            join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
-                            m.InfoFournisseur.IdFournisseur
-                            join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
-                            join con in ctx.ConsultationSet on pvj.InfoConsultation.IdConsultation equals con.IdConsultation
-                            where pvj.IdPVJ == (int)cb_Pvj.SelectedValue
-                            select new
-                            {
-                                ttc = m.Ttc,
-                                nom = fr.Nom,
-                                tva = m.Tva,
-                                thttva = m.Total,
-                                objet = con.ObjetConsultation,
+                var query = from pvj in ctx.PVJSet
+                                join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
+                                m.InfoFournisseur.IdFournisseur
+                                join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
+                                join con in ctx.ConsultationSet on pvj.InfoConsultation.IdConsultation equals con.IdConsultation
+                                where pvj.IdPVJ == (int)cb_Pvj.SelectedValue
+                                select new
+                                {
+                                    ttc = m.Ttc,
+                                    nom = fr.Nom,
+                                    tva = m.Tva,
+                                    thttva = m.Total,
+                                    objet = con.ObjetConsultation,
 
-                            };
+                                };
 
-                label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
-                label_ttc.Text = query.FirstOrDefault().ttc.ToString();
-               label_tva.Text = query.FirstOrDefault().tva.ToString();
-                label_thttva.Text = query.FirstOrDefault().thttva.ToString();
-                label_objet.Text = query.FirstOrDefault().objet.ToString();
-
+                    label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
+                    label_ttc.Text = query.FirstOrDefault().ttc.ToString();
+                    label_tva.Text = query.FirstOrDefault().tva.ToString();
+                    label_thttva.Text = query.FirstOrDefault().thttva.ToString();
+                    label_objet.Text = query.FirstOrDefault().objet.ToString();
             }
+                
         }
-
-       
     }
+
 }

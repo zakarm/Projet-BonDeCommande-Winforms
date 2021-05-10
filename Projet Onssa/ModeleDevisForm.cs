@@ -94,7 +94,11 @@ namespace Projet_Onssa
                     MessageBox.Show("Modèle de devis sans produit !");
                 }
             }
-            catch(Exception ex)
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -103,23 +107,25 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(md).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.ModeleDevisSet.Remove(md);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                    try
+                    {
+                        ctx.Entry(md).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.ModeleDevisSet.Remove(md);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimé avec succès");
+                        cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
-                DeclarationGlobale.vider(this);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 
@@ -127,58 +133,63 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-
-
-                if (dgv_Produits.Rows.Count > 1)
+                try
                 {
-                    dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
-                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+
+                    if (dgv_Produits.Rows.Count > 1)
                     {
-                        ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
-                        Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
-                        Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
-                        Produit p;
-
-                        md.NumDevis = cb_NumMdevis.Text;
-                        md.InfoFournisseur = f;
-                        md.Date = date_MDevis.Value;
-                        md.InfoConsultation = con;
-                        md.ListProduit.Clear();
-
-                        foreach (DataGridViewRow dr in dgv_Produits.Rows)
+                        dgv_Produits.CurrentCell = dgv_Produits.Rows[0].Cells[0];
+                        using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                         {
-                            if (dr.Cells[1].Value != null)
+                            ctx.Entry(md).State = System.Data.Entity.EntityState.Modified;
+                            Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
+                            Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
+                            Produit p;
+
+                            md.NumDevis = cb_NumMdevis.Text;
+                            md.InfoFournisseur = f;
+                            md.Date = date_MDevis.Value;
+                            md.InfoConsultation = con;
+                            md.ListProduit.Clear();
+
+                            foreach (DataGridViewRow dr in dgv_Produits.Rows)
                             {
-                                p = new Produit();
-                                p.Designation = dr.Cells[0].Value.ToString();
-                                p.Unite = dr.Cells[1].Value.ToString();
-                                p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
-                                p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
-                                md.ListProduit.Add(p);
+                                if (dr.Cells[1].Value != null)
+                                {
+                                    p = new Produit();
+                                    p.Designation = dr.Cells[0].Value.ToString();
+                                    p.Unite = dr.Cells[1].Value.ToString();
+                                    p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
+                                    p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                                    md.ListProduit.Add(p);
+                                }
+
                             }
 
+                            ctx.SaveChanges();
+                            cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                            dgv_Produits.Rows.Clear();
+                            MessageBox.Show("Modifié avec succès");
                         }
-
-                        ctx.SaveChanges();
-                        cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
-                        dgv_Produits.Rows.Clear();
-                        MessageBox.Show("Modifié avec succès");
                     }
-                    DeclarationGlobale.vider(this);
+                    else
+                    {
+                        MessageBox.Show("Modèle de devis sans produit !");
+                    }
                 }
-                else
+                catch (FormatException)
                 {
-                    MessageBox.Show("Modèle de devis sans produit !");
+                    MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-
         }
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
@@ -221,9 +232,9 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     md = ctx.ModeleDevisSet.Find(cb_NumMdevis.SelectedValue);
-                    cb_NumF.SelectedValue = md.InfoFournisseur.IdFournisseur;
+                    cb_NumF.Text = md.InfoFournisseur.Nom.ToString();
                     date_MDevis.Value = md.Date;
-                    cb_consultation.SelectedValue = md.InfoConsultation.IdConsultation;
+                    cb_consultation.Text = md.InfoConsultation.NumConsultation.ToString();
                     foreach (Produit m in md.ListProduit)
                     {
 

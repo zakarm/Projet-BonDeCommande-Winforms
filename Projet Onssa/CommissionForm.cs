@@ -91,51 +91,61 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if(r==DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.CommissionSet.Remove(c);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    cb_Nom.DataSource = ctx.CommissionSet.ToList();
-                }
+                    try
+                    {
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.CommissionSet.Remove(c);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimé avec succès");
+                        cb_Nom.DataSource = ctx.CommissionSet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
+                }
             }
-            catch (Exception o)
-            {
-                MessageBox.Show(o.Message);
-            }
+                        
             remplir_DGV();
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
-            {
 
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
+            {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    c.Nom = cb_Nom.Text;
-                    c.Prenom = txt_Prenom.Text;
-                    c.Affectation = txt_Affectation.Text;
-                    c.Fonction = txt_Fonction.Text;
+                    try
+                    {
+                        c.Nom = cb_Nom.Text;
+                        c.Prenom = txt_Prenom.Text;
+                        c.Affectation = txt_Affectation.Text;
+                        c.Fonction = txt_Fonction.Text;
 
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
 
-                    ctx.SaveChanges();
+                        ctx.SaveChanges();
 
-                    cb_Nom.DataSource = ctx.CommissionSet.ToList();
+                        cb_Nom.DataSource = ctx.CommissionSet.ToList();
 
-                    MessageBox.Show("Modifier avec succès");
+                        MessageBox.Show("Modifier avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
             }
 
-            catch (Exception o)
-            {
-                MessageBox.Show(o.Message);
-            }
             remplir_DGV();
         }
 

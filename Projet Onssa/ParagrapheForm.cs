@@ -40,7 +40,8 @@ namespace Projet_Onssa
                     Op.DescriptionPar = txtarea_desc.Text;
                     ctx.ParagrapheSet.Add(Op);
                     ctx.SaveChanges();
-                    MessageBox.Show("ok");
+                    MessageBox.Show("Ajouté avec succès");
+                    DeclarationGlobale.vider(this);
                     cb_Num.DataSource = ctx.ParagrapheSet.ToList();
 
                 }
@@ -53,40 +54,60 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
-                    p.DescriptionPar = txtarea_desc.Text;
-                    ctx.SaveChanges();
-                    MessageBox.Show("ok");
-                    cb_Num.DataSource = ctx.ParagrapheSet.ToList();
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
+                    try
+                    {
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                        p.DescriptionPar = txtarea_desc.Text;
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifier avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_Num.DataSource = ctx.ParagrapheSet.ToList();
+
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
             }
+
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.SaveChanges();
-                    MessageBox.Show("ok");
-                    cb_Num.DataSource = ctx.ParagrapheSet.ToList();
+                    try
+                    {
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.SaveChanges();
+                        DeclarationGlobale.vider(this);
+                        cb_Num.DataSource = ctx.ParagrapheSet.ToList();
+
+
+                        MessageBox.Show("Supprimer avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
-                }
             }
+
         }
 
         private void cb_Num_SelectedIndexChanged_1(object sender, EventArgs e)

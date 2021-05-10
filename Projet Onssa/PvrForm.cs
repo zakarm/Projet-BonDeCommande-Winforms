@@ -21,36 +21,48 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
-                    p.ListCommission.Clear();
-
-                    if (check(p, ctx) == true)
+                    try
                     {
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                        p.ListCommission.Clear();
 
-                        OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
-                        p.NumPvr = cb_NumPvr.Text;
-                        p.DatePVR = data_Pvr.Value;
-                        p.DateString = txt_dateString.Text;
-                        p.InfoOI = oi;
-                        ctx.SaveChanges();
-                        cb_NumPvr.DataSource = ctx.PVRSet.ToList();
+                        if (check(p, ctx) == true)
+                        {
 
-                        MessageBox.Show("Modifié avec succès");
+                            OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
+                            p.NumPvr = cb_NumPvr.Text;
+                            p.DatePVR = data_Pvr.Value;
+                            p.DateString = txt_dateString.Text;
+                            p.InfoOI = oi;
+                            ctx.SaveChanges();
+                            cb_NumPvr.DataSource = ctx.PVRSet.ToList();
+
+                            MessageBox.Show("Modifié avec succès");
+                            DeclarationGlobale.vider(this);
+                        }
+                        else
+                        {
+                            MessageBox.Show("sélectionner une commissionr d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
-                    else
+                    catch (FormatException)
                     {
-                        MessageBox.Show("sélectionner une commissionr d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            }else DeclarationGlobale.vider(this);
+
         }
 
         private void PvrForm_Load(object sender, EventArgs e)
@@ -140,6 +152,10 @@ namespace Projet_Onssa
                 DeclarationGlobale.vider(this);
 
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -148,21 +164,26 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.PVRSet.Remove(p);
-                    ctx.SaveChanges();
-                    cb_NumPvr.DataSource = ctx.PVRSet.ToList();
-                }
-                DeclarationGlobale.vider(this);
+                    try
+                    {
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.PVRSet.Remove(p);
+                        ctx.SaveChanges();
+                        cb_NumPvr.DataSource = ctx.PVRSet.ToList();
 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
+                        MessageBox.Show("Supprimer avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
+                }
             }
         }
 
@@ -173,9 +194,6 @@ namespace Projet_Onssa
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-
-                   
-
                     p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
                     txt_dateString.Text = p.DateString;
                     data_Pvr.Value = p.DatePVR;

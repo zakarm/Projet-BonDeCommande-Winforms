@@ -32,7 +32,8 @@ namespace Projet_Onssa
                     m.Description = txt_description.Text;
                     ctx.MorasseSet.Add(m);
                     ctx.SaveChanges();
-                    MessageBox.Show("Ok");
+                    MessageBox.Show("Ajouté avec succès");
+                    DeclarationGlobale.vider(this);
                     cb_Morasse.DataSource = ctx.MorasseSet.ToList();
 
                 }
@@ -105,42 +106,57 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(om).State = System.Data.Entity.EntityState.Deleted;
+                    try
+                    {
+                        ctx.Entry(om).State = System.Data.Entity.EntityState.Deleted;
 
-                    ctx.MorasseSet.Remove(om);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supp ok");
-                    cb_Morasse.DataSource = ctx.MorasseSet.ToList();
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
+                        ctx.MorasseSet.Remove(om);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimer avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_Morasse.DataSource = ctx.MorasseSet.ToList();
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
             }
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                try
+                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(om).State = System.Data.Entity.EntityState.Modified;
-                    om.Budget = txt_budget.Text;
-                    om.Exercice = txt_exercice.Text;
-                    om.Description = txt_description.Text;
-                    ctx.SaveChanges();
-                    MessageBox.Show("Modi Ok");
-                    cb_Morasse.DataSource = ctx.MorasseSet.ToList();
+                    try
+                    {
+                        ctx.Entry(om).State = System.Data.Entity.EntityState.Modified;
+                        om.Budget = txt_budget.Text;
+                        om.Exercice = txt_exercice.Text;
+                        om.Description = txt_description.Text;
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifier avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_Morasse.DataSource = ctx.MorasseSet.ToList();
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
-                }
-                catch (Exception o)
-                {
-                    MessageBox.Show(o.Message);
                 }
             }
         }

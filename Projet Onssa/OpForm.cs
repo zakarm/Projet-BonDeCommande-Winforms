@@ -59,6 +59,10 @@ namespace Projet_Onssa
 
                 }
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -67,48 +71,63 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
+                    try
+                    {
 
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.OPSet.Remove(p);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    cb_NumOp.DataSource = ctx.OPSet.ToList();
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.OPSet.Remove(p);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumOp.DataSource = ctx.OPSet.ToList();
+
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
       
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-
-                    ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
-                    OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
-                    p.NumOP = cb_NumOp.Text;
-                    p.DateOP = date_Op.Value;
-                    p.InfoOI = oi;
-                    ctx.SaveChanges();
-                    MessageBox.Show("Modifié avec succès");
-                    cb_NumOp.DataSource = ctx.OPSet.ToList();
+                    try
+                    {
+                        ctx.Entry(p).State = System.Data.Entity.EntityState.Modified;
+                        OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
+                        p.NumOP = cb_NumOp.Text;
+                        p.DateOP = date_Op.Value;
+                        p.InfoOI = oi;
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifié avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumOp.DataSource = ctx.OPSet.ToList();
+                    }
+                    catch (FormatException)
+                    {
+                        MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
 
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
             }
         }
 

@@ -55,6 +55,10 @@ namespace Projet_Onssa
                     MessageBox.Show("Ajouté avec succès");
                 }
             }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception o)
             {
                 MessageBox.Show(o.Message);
@@ -65,56 +69,67 @@ namespace Projet_Onssa
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    f.Nom = cb_Nom.Text;
-                    f.Adresse = txt_Adresse.Text;
-                    f.RC_n = int.Parse(txt_Rcn.Text);
-                    f.Patente_n = txt_Patenten.Text;
-                    f.IF_n = int.Parse(txt_Ifn.Text);
-                    f.CNSS_n = int.Parse(txt_cnss.Text);
-                    f.Compte_bancaire_n = txt_CmptBancaire.Text;
-                    f.ICE = txt_Ice.Text;
-                    f.Ville = txt_Ville.Text;
-                    f.Banque = txt_Banque.Text;
+                    try
+                    {
+                        f.Nom = cb_Nom.Text;
+                        f.Adresse = txt_Adresse.Text;
+                        f.RC_n = int.Parse(txt_Rcn.Text);
+                        f.Patente_n = txt_Patenten.Text;
+                        f.IF_n = int.Parse(txt_Ifn.Text);
+                        f.CNSS_n = int.Parse(txt_cnss.Text);
+                        f.Compte_bancaire_n = txt_CmptBancaire.Text;
+                        f.ICE = txt_Ice.Text;
+                        f.Ville = txt_Ville.Text;
+                        f.Banque = txt_Banque.Text;
 
-                    ctx.Entry(f).State = System.Data.Entity.EntityState.Modified;
+                        ctx.Entry(f).State = System.Data.Entity.EntityState.Modified;
 
-                    ctx.SaveChanges();
+                        ctx.SaveChanges();
 
-                    cb_Nom.DataSource = ctx.FournisseurSet.ToList();
+                        cb_Nom.DataSource = ctx.FournisseurSet.ToList();
 
-                    MessageBox.Show("Modifier avec succès");
+                        MessageBox.Show("Modifier avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
             }
 
-            catch (Exception o)
-            {
-                MessageBox.Show(o.Message);
-            }
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    ctx.Entry(f).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.FournisseurSet.Remove(f);
-                    ctx.SaveChanges();
+                    try
+                    {
+                        ctx.Entry(f).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.FournisseurSet.Remove(f);
+                        ctx.SaveChanges();
 
-                    cb_Nom.DataSource = ctx.FournisseurSet.ToList();
+                        cb_Nom.DataSource = ctx.FournisseurSet.ToList();
+
+                        MessageBox.Show("Supprimer avec succès");
+                    }
+                    catch (Exception o)
+                    {
+                        MessageBox.Show(o.Message);
+                    }
+
                 }
-
-        }
-            catch (Exception o)
-            {
-                MessageBox.Show(o.Message);
             }
+
         }
 
         private void cb_Nom_SelectedIndexChanged_1(object sender, EventArgs e)
