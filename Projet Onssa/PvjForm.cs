@@ -196,9 +196,13 @@ namespace Projet_Onssa
                         ctx.Entry(pn).State = System.Data.Entity.EntityState.Deleted;
                         ctx.PVJSet.Remove(pn);
                         ctx.SaveChanges();
-                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
-
                         MessageBox.Show("Supprimer avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumPvj.DataSource = ctx.PVJSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Pvj déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {

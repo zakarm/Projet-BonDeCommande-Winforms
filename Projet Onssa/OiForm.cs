@@ -88,6 +88,10 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumOi.DataSource = ctx.OISet.ToList();
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette OI déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
                     catch (Exception o)
                     {
                         MessageBox.Show(o.Message);
@@ -162,6 +166,9 @@ namespace Projet_Onssa
             }
         }
 
-      
+        private void cb_Fe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

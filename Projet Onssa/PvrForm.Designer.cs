@@ -147,7 +147,7 @@ namespace Projet_Onssa
             this.Affectation});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
@@ -251,11 +251,11 @@ namespace Projet_Onssa
             // 
             this.cb_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Oi.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Oi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_Oi.FormattingEnabled = true;
             this.cb_Oi.Location = new System.Drawing.Point(27, 188);
             this.cb_Oi.Name = "cb_Oi";
-            this.cb_Oi.Size = new System.Drawing.Size(358, 27);
+            this.cb_Oi.Size = new System.Drawing.Size(358, 28);
             this.cb_Oi.TabIndex = 164;
             this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged_1);
             // 
@@ -294,16 +294,17 @@ namespace Projet_Onssa
             this.txt_Destination.Size = new System.Drawing.Size(375, 44);
             this.txt_Destination.TabIndex = 145;
             this.txt_Destination.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Destination.OnValueChanged += new System.EventHandler(this.txt_Destination_OnValueChanged);
             // 
             // cb_NumPvr
             // 
             this.cb_NumPvr.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_NumPvr.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_NumPvr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_NumPvr.FormattingEnabled = true;
             this.cb_NumPvr.Location = new System.Drawing.Point(29, 98);
             this.cb_NumPvr.Name = "cb_NumPvr";
-            this.cb_NumPvr.Size = new System.Drawing.Size(358, 27);
+            this.cb_NumPvr.Size = new System.Drawing.Size(358, 28);
             this.cb_NumPvr.TabIndex = 144;
             this.cb_NumPvr.SelectedIndexChanged += new System.EventHandler(this.cb_NumPvr_SelectedIndexChanged_1);
             // 

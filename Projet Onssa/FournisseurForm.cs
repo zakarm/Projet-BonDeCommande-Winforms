@@ -121,6 +121,11 @@ namespace Projet_Onssa
                         cb_Nom.DataSource = ctx.FournisseurSet.ToList();
 
                         MessageBox.Show("Supprimer avec succès");
+                        DeclarationGlobale.vider(this);
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Fournisseur déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {

@@ -300,7 +300,8 @@ namespace Projet_Onssa
             label_txt.Text = "Fiche d'engagement";
             label_txt.Name = "fe";
             openchildformtab(new LectureFe(), new FeForm());
-            label_txt.Text = "Fiche d'engagement";
+            tabPage1.Text = "Lecture Fiche d'engagement";
+            tabPage2.Text = "Gestion Fiche d'engagement";
         }
 
         private void btn_Oi_Click(object sender, EventArgs e)
@@ -322,25 +323,24 @@ namespace Projet_Onssa
             label_txt.Text = "Procès verbal de reception";
         }
 
-        private void btn_Ov_Click(object sender, EventArgs e)
+        private void btn_Op_Click(object sender, EventArgs e)
         {
-               label_txt.Text = "Ordre de paiement";
-            
-            openchildformtab(new LectureOp(), new OpForm());
-            tabPage1.Text = "Lecture Ordre de paiement";
-            tabPage2.Text = "Gestion Ordre de paiement";
+            label_txt.Text = "Ordre de virement";
+            label_txt.Name = "ov";
+            openchildformtab(new LectureOv(), new OvForm());
+            tabPage1.Text = "Lecture Ordre de virement";
+            tabPage2.Text = "Gestion Ordre de virement";
+
             
         }
 
-        private void btn_Op_Click(object sender, EventArgs e)
-        { 
-            label_txt.Text = "Ordre de virement";
-            label_txt.Name = "ov";
-            openchildformtab(new LectureOv(),new OvForm());
-            tabPage1.Text = "Lecture Ordre de virement";
-            tabPage2.Text = "Gestion Ordre de virement";
-            
-        
+        private void btn_Ov_Click(object sender, EventArgs e)
+        {
+            label_txt.Text = "Ordre de paiement";
+            label_txt.Name = "Op";
+            openchildformtab(new LectureOp(), new OpForm());
+            tabPage1.Text = "Lecture Ordre de paiement";
+            tabPage2.Text = "Gestion Ordre de paiement";
         }
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)

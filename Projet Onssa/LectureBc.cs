@@ -62,35 +62,38 @@ namespace Projet_Onssa
 
                                 };
 
-
-                    int NumDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
-                    NumToString cc = new NumToString();
-                    dapr.FillByMd(ds.ProduitSet, NumDevis);
-                    CrystalReportBC ce = new CrystalReportBC();
-                    ce.SetDataSource(ds);
-                    ce.SetParameterValue("numdevis", query.FirstOrDefault().NumDevis.ToString());
-                    ce.SetParameterValue("ice", query.FirstOrDefault().Ice.ToString());
-                    ce.SetParameterValue("rc", query.FirstOrDefault().Rc.ToString());
-                    ce.SetParameterValue("budget", query.FirstOrDefault().Budget.ToString());
-                    ce.SetParameterValue("if", query.FirstOrDefault().Ifn.ToString());
-                    ce.SetParameterValue("cnss", query.FirstOrDefault().Cnss.ToString());
-                    ce.SetParameterValue("patente", query.FirstOrDefault().Patente.ToString());
-                    ce.SetParameterValue("lrg", query.FirstOrDefault().Lrg.ToString());
-                    ce.SetParameterValue("par", query.FirstOrDefault().Par.ToString());
-                    ce.SetParameterValue("ligne", query.FirstOrDefault().Ligne.ToString());
-                    ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
-                    ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
-                    ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
-                    ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
-                    ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
-                    ce.SetParameterValue("adresse", query.FirstOrDefault().AdresseFour.ToString());
-                    ce.SetParameterValue("thc", query.FirstOrDefault().thc.ToString());
-                    ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
-                    ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
-                    ce.SetParameterValue("datebc", query.FirstOrDefault().DateBc.ToString());
-                    ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
-                    crystalReportViewer1.ReportSource = ce;
-                    crystalReportViewer1.Refresh();
+                    if(query.FirstOrDefault()!=null)
+                    {
+                        int NumDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
+                        NumToString cc = new NumToString();
+                        dapr.FillByMd(ds.ProduitSet, NumDevis);
+                        CrystalReportBC ce = new CrystalReportBC();
+                        ce.SetDataSource(ds);
+                        ce.SetParameterValue("numdevis", query.FirstOrDefault().NumDevis.ToString());
+                        ce.SetParameterValue("ice", query.FirstOrDefault().Ice.ToString());
+                        ce.SetParameterValue("rc", query.FirstOrDefault().Rc.ToString());
+                        ce.SetParameterValue("budget", query.FirstOrDefault().Budget.ToString());
+                        ce.SetParameterValue("if", query.FirstOrDefault().Ifn.ToString());
+                        ce.SetParameterValue("cnss", query.FirstOrDefault().Cnss.ToString());
+                        ce.SetParameterValue("patente", query.FirstOrDefault().Patente.ToString());
+                        ce.SetParameterValue("lrg", query.FirstOrDefault().Lrg.ToString());
+                        ce.SetParameterValue("par", query.FirstOrDefault().Par.ToString());
+                        ce.SetParameterValue("ligne", query.FirstOrDefault().Ligne.ToString());
+                        ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
+                        ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
+                        ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
+                        ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
+                        ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
+                        ce.SetParameterValue("adresse", query.FirstOrDefault().AdresseFour.ToString());
+                        ce.SetParameterValue("thc", query.FirstOrDefault().thc.ToString());
+                        ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
+                        ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
+                        ce.SetParameterValue("datebc", query.FirstOrDefault().DateBc.ToString());
+                        ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
+                        crystalReportViewer1.ReportSource = ce;
+                        crystalReportViewer1.Refresh();
+                    }
+                    
                 }
             }
             catch (Exception ex)

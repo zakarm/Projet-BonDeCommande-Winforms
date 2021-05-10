@@ -75,10 +75,15 @@ namespace Projet_Onssa
                     ctx.FESet.Remove(ff);
                     ctx.SaveChanges();
                     MessageBox.Show("Supprimé avec succès");
+                    DeclarationGlobale.vider(this);
                     cb_NumFe.DataSource = ctx.FESet.ToList();
-
+                    
                 }
-                DeclarationGlobale.vider(this);
+                
+            }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+            {
+                MessageBox.Show("cette FE déja Utilisé dans autre form Ne peut pas etre supprimer");
             }
             catch (Exception ex)
             {
@@ -158,9 +163,12 @@ namespace Projet_Onssa
                                  nom = fr.Nom,
 
                              };
-                label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
-                label_ttc.Text = query.FirstOrDefault().ttc.ToString();
-                label_bc.Text = cb_Bc.Text;
+                if(query.FirstOrDefault()!=null)
+                {
+                    label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
+                    label_ttc.Text = query.FirstOrDefault().ttc.ToString();
+                    label_bc.Text = cb_Bc.Text;
+                }
 
             }
             

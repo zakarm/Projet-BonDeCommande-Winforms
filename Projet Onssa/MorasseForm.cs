@@ -121,6 +121,10 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_Morasse.DataSource = ctx.MorasseSet.ToList();
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Morasse déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
                     catch (Exception o)
                     {
                         MessageBox.Show(o.Message);

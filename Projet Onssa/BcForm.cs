@@ -100,10 +100,15 @@ namespace Projet_Onssa
                     try
                     {
                        ctx.Entry(bc).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.BCSet.Remove(bc);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    cb_NumBc.DataSource = ctx.BCSet.ToList();
+                       ctx.BCSet.Remove(bc);
+                       ctx.SaveChanges();
+                       MessageBox.Show("Supprimé avec succès");
+                       DeclarationGlobale.vider(this);
+                       cb_NumBc.DataSource = ctx.BCSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette BC déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {
@@ -168,7 +173,7 @@ namespace Projet_Onssa
                     txt_Destination.Text = bc.Destination;
                     date_Bc.Value = bc.DateBC;
                     cb_Morasse.Text = bc.InfoMorasse.CodeMorasse.ToString();
-                    cb_Pvj.Text = bc.InfoPVJ.IdPVJ.ToString();
+                    cb_Pvj.Text = bc.InfoPVJ.NumPvj.ToString();
 
                 }
             }
@@ -197,12 +202,14 @@ namespace Projet_Onssa
                                     objet = con.ObjetConsultation,
 
                                 };
-
+                if(query.FirstOrDefault()!=null)
+                {
                     label_fournisseur.Text = query.FirstOrDefault().nom.ToString();
                     label_ttc.Text = query.FirstOrDefault().ttc.ToString();
                     label_tva.Text = query.FirstOrDefault().tva.ToString();
                     label_thttva.Text = query.FirstOrDefault().thttva.ToString();
-                    label_objet.Text = query.FirstOrDefault().objet.ToString();
+                }
+                                                  
             }
                 
         }

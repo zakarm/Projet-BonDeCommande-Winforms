@@ -87,6 +87,10 @@ namespace Projet_Onssa
                         cb_NumOp.DataSource = ctx.OPSet.ToList();
 
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette OP déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
                     catch (Exception o)
                     {
                         MessageBox.Show(o.Message);

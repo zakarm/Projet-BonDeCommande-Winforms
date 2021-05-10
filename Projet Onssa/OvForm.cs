@@ -147,6 +147,10 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumOv.DataSource = ctx.OPSet.ToList();
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette OV déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
                     catch (Exception o)
                     {
                         MessageBox.Show(o.Message);

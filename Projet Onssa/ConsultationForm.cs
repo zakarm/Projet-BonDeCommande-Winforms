@@ -151,10 +151,16 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         cb_Num.DataSource = ctx.ConsultationSet.ToList();
                         MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
                     }
-                    catch (Exception o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette consultation déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
+                    catch(Exception o)
                     {
                         MessageBox.Show(o.Message);
+
                     }
 
                 }

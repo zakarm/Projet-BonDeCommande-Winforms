@@ -118,7 +118,12 @@ namespace Projet_Onssa
                         ctx.ModeleDevisSet.Remove(md);
                         ctx.SaveChanges();
                         MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
                         cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette ModeleDevis déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {

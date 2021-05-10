@@ -42,19 +42,19 @@ namespace Projet_Onssa
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.date_Oi = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_VisaTresorier = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_VisaCsrs = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_VisaSordonnateur = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.data_Paiement = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_VisaControl = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_Compte = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_Fe = new System.Windows.Forms.ComboBox();
             this.txt_Adresse = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumOi = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.data_Paiement = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txt_VisaCsrs = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txt_VisaSordonnateur = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txt_VisaTresorier = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.date_Oi = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -256,6 +256,124 @@ namespace Projet_Onssa
             this.panel1.Size = new System.Drawing.Size(916, 429);
             this.panel1.TabIndex = 171;
             // 
+            // date_Oi
+            // 
+            this.date_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.date_Oi.BackColor = System.Drawing.Color.Transparent;
+            this.date_Oi.BorderRadius = 0;
+            this.date_Oi.ForeColor = System.Drawing.Color.Black;
+            this.date_Oi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.date_Oi.FormatCustom = null;
+            this.date_Oi.Location = new System.Drawing.Point(512, 343);
+            this.date_Oi.Name = "date_Oi";
+            this.date_Oi.Size = new System.Drawing.Size(364, 30);
+            this.date_Oi.TabIndex = 177;
+            this.date_Oi.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // bunifuMetroTextbox2
+            // 
+            this.bunifuMetroTextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox2.BorderThickness = 1;
+            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox2.isPassword = false;
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(504, 341);
+            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
+            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 35);
+            this.bunifuMetroTextbox2.TabIndex = 176;
+            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txt_VisaTresorier
+            // 
+            this.txt_VisaTresorier.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_VisaTresorier.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaTresorier.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaTresorier.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaTresorier.BorderThickness = 1;
+            this.txt_VisaTresorier.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_VisaTresorier.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_VisaTresorier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaTresorier.isPassword = false;
+            this.txt_VisaTresorier.Location = new System.Drawing.Point(504, 255);
+            this.txt_VisaTresorier.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_VisaTresorier.Name = "txt_VisaTresorier";
+            this.txt_VisaTresorier.Size = new System.Drawing.Size(375, 35);
+            this.txt_VisaTresorier.TabIndex = 175;
+            this.txt_VisaTresorier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txt_VisaCsrs
+            // 
+            this.txt_VisaCsrs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_VisaCsrs.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaCsrs.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaCsrs.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaCsrs.BorderThickness = 1;
+            this.txt_VisaCsrs.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_VisaCsrs.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_VisaCsrs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaCsrs.isPassword = false;
+            this.txt_VisaCsrs.Location = new System.Drawing.Point(502, 64);
+            this.txt_VisaCsrs.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_VisaCsrs.Name = "txt_VisaCsrs";
+            this.txt_VisaCsrs.Size = new System.Drawing.Size(375, 35);
+            this.txt_VisaCsrs.TabIndex = 174;
+            this.txt_VisaCsrs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txt_VisaSordonnateur
+            // 
+            this.txt_VisaSordonnateur.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_VisaSordonnateur.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaSordonnateur.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaSordonnateur.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_VisaSordonnateur.BorderThickness = 1;
+            this.txt_VisaSordonnateur.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_VisaSordonnateur.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_VisaSordonnateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_VisaSordonnateur.isPassword = false;
+            this.txt_VisaSordonnateur.Location = new System.Drawing.Point(502, 158);
+            this.txt_VisaSordonnateur.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_VisaSordonnateur.Name = "txt_VisaSordonnateur";
+            this.txt_VisaSordonnateur.Size = new System.Drawing.Size(375, 35);
+            this.txt_VisaSordonnateur.TabIndex = 174;
+            this.txt_VisaSordonnateur.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // data_Paiement
+            // 
+            this.data_Paiement.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.data_Paiement.BackColor = System.Drawing.Color.Transparent;
+            this.data_Paiement.BorderRadius = 0;
+            this.data_Paiement.ForeColor = System.Drawing.Color.Black;
+            this.data_Paiement.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.data_Paiement.FormatCustom = null;
+            this.data_Paiement.Location = new System.Drawing.Point(31, 351);
+            this.data_Paiement.Name = "data_Paiement";
+            this.data_Paiement.Size = new System.Drawing.Size(364, 30);
+            this.data_Paiement.TabIndex = 173;
+            this.data_Paiement.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
+            // 
+            // bunifuMetroTextbox3
+            // 
+            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.bunifuMetroTextbox3.BorderThickness = 1;
+            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuMetroTextbox3.isPassword = false;
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(23, 349);
+            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
+            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 35);
+            this.bunifuMetroTextbox3.TabIndex = 172;
+            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // txt_VisaControl
             // 
             this.txt_VisaControl.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -302,6 +420,7 @@ namespace Projet_Onssa
             this.cb_Fe.Name = "cb_Fe";
             this.cb_Fe.Size = new System.Drawing.Size(358, 25);
             this.cb_Fe.TabIndex = 163;
+            this.cb_Fe.SelectedIndexChanged += new System.EventHandler(this.cb_Fe_SelectedIndexChanged);
             // 
             // txt_Adresse
             // 
@@ -350,124 +469,6 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
             this.bunifuMetroTextbox1.TabIndex = 160;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // data_Paiement
-            // 
-            this.data_Paiement.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.data_Paiement.BackColor = System.Drawing.Color.Transparent;
-            this.data_Paiement.BorderRadius = 0;
-            this.data_Paiement.ForeColor = System.Drawing.Color.Black;
-            this.data_Paiement.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.data_Paiement.FormatCustom = null;
-            this.data_Paiement.Location = new System.Drawing.Point(31, 351);
-            this.data_Paiement.Name = "data_Paiement";
-            this.data_Paiement.Size = new System.Drawing.Size(364, 30);
-            this.data_Paiement.TabIndex = 173;
-            this.data_Paiement.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
-            // 
-            // bunifuMetroTextbox3
-            // 
-            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox3.BorderThickness = 1;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(23, 349);
-            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 35);
-            this.bunifuMetroTextbox3.TabIndex = 172;
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txt_VisaCsrs
-            // 
-            this.txt_VisaCsrs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_VisaCsrs.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaCsrs.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaCsrs.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaCsrs.BorderThickness = 1;
-            this.txt_VisaCsrs.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_VisaCsrs.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_VisaCsrs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaCsrs.isPassword = false;
-            this.txt_VisaCsrs.Location = new System.Drawing.Point(502, 64);
-            this.txt_VisaCsrs.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_VisaCsrs.Name = "txt_VisaCsrs";
-            this.txt_VisaCsrs.Size = new System.Drawing.Size(375, 35);
-            this.txt_VisaCsrs.TabIndex = 174;
-            this.txt_VisaCsrs.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txt_VisaSordonnateur
-            // 
-            this.txt_VisaSordonnateur.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_VisaSordonnateur.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaSordonnateur.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaSordonnateur.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaSordonnateur.BorderThickness = 1;
-            this.txt_VisaSordonnateur.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_VisaSordonnateur.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_VisaSordonnateur.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaSordonnateur.isPassword = false;
-            this.txt_VisaSordonnateur.Location = new System.Drawing.Point(502, 158);
-            this.txt_VisaSordonnateur.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_VisaSordonnateur.Name = "txt_VisaSordonnateur";
-            this.txt_VisaSordonnateur.Size = new System.Drawing.Size(375, 35);
-            this.txt_VisaSordonnateur.TabIndex = 174;
-            this.txt_VisaSordonnateur.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txt_VisaTresorier
-            // 
-            this.txt_VisaTresorier.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_VisaTresorier.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaTresorier.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaTresorier.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_VisaTresorier.BorderThickness = 1;
-            this.txt_VisaTresorier.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_VisaTresorier.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_VisaTresorier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_VisaTresorier.isPassword = false;
-            this.txt_VisaTresorier.Location = new System.Drawing.Point(504, 255);
-            this.txt_VisaTresorier.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_VisaTresorier.Name = "txt_VisaTresorier";
-            this.txt_VisaTresorier.Size = new System.Drawing.Size(375, 35);
-            this.txt_VisaTresorier.TabIndex = 175;
-            this.txt_VisaTresorier.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // date_Oi
-            // 
-            this.date_Oi.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.date_Oi.BackColor = System.Drawing.Color.Transparent;
-            this.date_Oi.BorderRadius = 0;
-            this.date_Oi.ForeColor = System.Drawing.Color.Black;
-            this.date_Oi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.date_Oi.FormatCustom = null;
-            this.date_Oi.Location = new System.Drawing.Point(512, 343);
-            this.date_Oi.Name = "date_Oi";
-            this.date_Oi.Size = new System.Drawing.Size(364, 30);
-            this.date_Oi.TabIndex = 177;
-            this.date_Oi.Value = new System.DateTime(2021, 4, 30, 14, 1, 42, 86);
-            // 
-            // bunifuMetroTextbox2
-            // 
-            this.bunifuMetroTextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox2.BorderThickness = 1;
-            this.bunifuMetroTextbox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(504, 341);
-            this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
-            this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 35);
-            this.bunifuMetroTextbox2.TabIndex = 176;
-            this.bunifuMetroTextbox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel2
             // 

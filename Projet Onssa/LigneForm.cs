@@ -136,6 +136,10 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_codeligne.DataSource = ctx.LigneSet.ToList();
                     }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Ligne déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    }
                     catch (Exception o)
                     {
                         MessageBox.Show(o.Message);

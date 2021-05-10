@@ -132,9 +132,14 @@ namespace Projet_Onssa
                         ctx.Entry(lr).State = System.Data.Entity.EntityState.Modified;
                         ctx.LrgSet.Remove(lr);
                         ctx.SaveChanges();
-                        cb_code.DataSource = ctx.LrgSet.ToList();
+                        
                         MessageBox.Show("Supprimer avec succès");
                         DeclarationGlobale.vider(this);
+                        cb_code.DataSource = ctx.LrgSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Lrg déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {

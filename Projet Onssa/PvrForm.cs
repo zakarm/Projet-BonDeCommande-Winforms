@@ -174,9 +174,13 @@ namespace Projet_Onssa
                         ctx.Entry(p).State = System.Data.Entity.EntityState.Deleted;
                         ctx.PVRSet.Remove(p);
                         ctx.SaveChanges();
-                        cb_NumPvr.DataSource = ctx.PVRSet.ToList();
-
                         MessageBox.Show("Supprimer avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumPvr.DataSource = ctx.PVRSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Pvr déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {
@@ -275,5 +279,10 @@ namespace Projet_Onssa
                 MessageBox.Show(ex.Message);
             }
 }
+
+        private void txt_Destination_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

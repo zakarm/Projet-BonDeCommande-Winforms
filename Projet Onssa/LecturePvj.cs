@@ -69,29 +69,32 @@ namespace Projet_Onssa
                     
                     NumToString cc = new NumToString();
                     
+                    if(query.FirstOrDefault()!=null)
+                    {
+                        int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
+                        daf.FillByConsultation(ds.FournisseurSet, IdCon);
 
-                    int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
-                    daf.FillByConsultation(ds.FournisseurSet, IdCon);
+                        int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
+                        dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
 
-                    int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
-                    dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
+                        int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
+                        dam.FillByConsultation(ds.ModeleDevisSet, IdDevis);
 
-                    int IdDevis= int.Parse(query.FirstOrDefault().IdDevis.ToString());
-                    dam.FillByConsultation(ds.ModeleDevisSet, IdDevis);
+                        dac.FillByPvj(ds.CommissionSet, IdPvj);
 
-                    dac.FillByPvj(ds.CommissionSet, IdPvj);
-
-                    CrystalReportPvj ce = new CrystalReportPvj();
-                    ce.SetDataSource(ds);
-                    ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
-                    ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
-                    ce.SetParameterValue("thc", query.FirstOrDefault().thc.ToString());
-                    ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
-                    ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
-                    ce.SetParameterValue("datepvj", query.FirstOrDefault().DatePvj.ToString());
-                    ce.SetParameterValue("numm",cc.virgule( query.FirstOrDefault().Ttc.ToString()));
-                    crystalReportViewer1.ReportSource = ce;
-                    crystalReportViewer1.Refresh();
+                        CrystalReportPvj ce = new CrystalReportPvj();
+                        ce.SetDataSource(ds);
+                        ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
+                        ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
+                        ce.SetParameterValue("thc", query.FirstOrDefault().thc.ToString());
+                        ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
+                        ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
+                        ce.SetParameterValue("datepvj", query.FirstOrDefault().DatePvj.ToString());
+                        ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
+                        crystalReportViewer1.ReportSource = ce;
+                        crystalReportViewer1.Refresh();
+                    }
+                    
                 }
             }
             catch (Exception ex)

@@ -102,7 +102,12 @@ namespace Projet_Onssa
                         ctx.CommissionSet.Remove(c);
                         ctx.SaveChanges();
                         MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
                         cb_Nom.DataSource = ctx.CommissionSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    {
+                        MessageBox.Show("cette Commission déja Utilisé dans autre form Ne peut pas etre supprimer");
                     }
                     catch (Exception o)
                     {
