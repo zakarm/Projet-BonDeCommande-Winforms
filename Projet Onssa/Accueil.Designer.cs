@@ -46,6 +46,14 @@ namespace Projet_Onssa
             this.button18 = new System.Windows.Forms.Button();
             this.panel_submenu = new System.Windows.Forms.Panel();
             this.panel_subsubmenu = new System.Windows.Forms.Panel();
+            this.panel_Morasse = new System.Windows.Forms.Panel();
+            this.btn_Morasse = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Ligne = new System.Windows.Forms.Panel();
+            this.btn_ligne = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_LRG = new System.Windows.Forms.Panel();
+            this.btn_Lrg = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Par = new System.Windows.Forms.Panel();
+            this.btn_Par = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Commission = new System.Windows.Forms.Panel();
             this.btn_Co = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Fr = new System.Windows.Forms.Panel();
@@ -79,14 +87,6 @@ namespace Projet_Onssa
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.btn_Par = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_Par = new System.Windows.Forms.Panel();
-            this.btn_Lrg = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_LRG = new System.Windows.Forms.Panel();
-            this.btn_ligne = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_Ligne = new System.Windows.Forms.Panel();
-            this.btn_Morasse = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_Morasse = new System.Windows.Forms.Panel();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -422,7 +422,6 @@ namespace Projet_Onssa
             // panel_submenu
             // 
             this.panel_submenu.AutoScroll = true;
-            this.panel_submenu.AutoScrollMargin = new System.Drawing.Size(0, 1000);
             this.panel_submenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.panel_submenu.Controls.Add(this.panel_subsubmenu);
             this.panel_submenu.Controls.Add(this.panel_logo);
@@ -471,8 +470,188 @@ namespace Projet_Onssa
             this.panel_subsubmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_subsubmenu.Location = new System.Drawing.Point(0, 96);
             this.panel_subsubmenu.Name = "panel_subsubmenu";
-            this.panel_subsubmenu.Size = new System.Drawing.Size(237, 1000);
+            this.panel_subsubmenu.Size = new System.Drawing.Size(254, 653);
             this.panel_subsubmenu.TabIndex = 1;
+            // 
+            // panel_Morasse
+            // 
+            this.panel_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Morasse.Location = new System.Drawing.Point(0, 903);
+            this.panel_Morasse.Name = "panel_Morasse";
+            this.panel_Morasse.Size = new System.Drawing.Size(237, 7);
+            this.panel_Morasse.TabIndex = 52;
+            // 
+            // btn_Morasse
+            // 
+            this.btn_Morasse.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Morasse.BorderRadius = 0;
+            this.btn_Morasse.ButtonText = "Morasse";
+            this.btn_Morasse.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Morasse.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Morasse.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Morasse.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Morasse.Iconimage")));
+            this.btn_Morasse.Iconimage_right = null;
+            this.btn_Morasse.Iconimage_right_Selected = null;
+            this.btn_Morasse.Iconimage_Selected = null;
+            this.btn_Morasse.IconMarginLeft = 0;
+            this.btn_Morasse.IconMarginRight = 0;
+            this.btn_Morasse.IconRightVisible = true;
+            this.btn_Morasse.IconRightZoom = 0D;
+            this.btn_Morasse.IconVisible = true;
+            this.btn_Morasse.IconZoom = 45D;
+            this.btn_Morasse.IsTab = false;
+            this.btn_Morasse.Location = new System.Drawing.Point(0, 850);
+            this.btn_Morasse.Name = "btn_Morasse";
+            this.btn_Morasse.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Morasse.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Morasse.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Morasse.selected = false;
+            this.btn_Morasse.Size = new System.Drawing.Size(237, 53);
+            this.btn_Morasse.TabIndex = 51;
+            this.btn_Morasse.Text = "Morasse";
+            this.btn_Morasse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Morasse.Textcolor = System.Drawing.Color.White;
+            this.btn_Morasse.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Morasse.Click += new System.EventHandler(this.btn_Morasse_Click);
+            // 
+            // panel_Ligne
+            // 
+            this.panel_Ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Ligne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Ligne.Location = new System.Drawing.Point(0, 843);
+            this.panel_Ligne.Name = "panel_Ligne";
+            this.panel_Ligne.Size = new System.Drawing.Size(237, 7);
+            this.panel_Ligne.TabIndex = 50;
+            // 
+            // btn_ligne
+            // 
+            this.btn_ligne.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_ligne.BorderRadius = 0;
+            this.btn_ligne.ButtonText = "Ligne";
+            this.btn_ligne.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ligne.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_ligne.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_ligne.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_ligne.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ligne.Iconimage")));
+            this.btn_ligne.Iconimage_right = null;
+            this.btn_ligne.Iconimage_right_Selected = null;
+            this.btn_ligne.Iconimage_Selected = null;
+            this.btn_ligne.IconMarginLeft = 0;
+            this.btn_ligne.IconMarginRight = 0;
+            this.btn_ligne.IconRightVisible = true;
+            this.btn_ligne.IconRightZoom = 0D;
+            this.btn_ligne.IconVisible = true;
+            this.btn_ligne.IconZoom = 45D;
+            this.btn_ligne.IsTab = false;
+            this.btn_ligne.Location = new System.Drawing.Point(0, 790);
+            this.btn_ligne.Name = "btn_ligne";
+            this.btn_ligne.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_ligne.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_ligne.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_ligne.selected = false;
+            this.btn_ligne.Size = new System.Drawing.Size(237, 53);
+            this.btn_ligne.TabIndex = 49;
+            this.btn_ligne.Text = "Ligne";
+            this.btn_ligne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_ligne.Textcolor = System.Drawing.Color.White;
+            this.btn_ligne.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ligne.Click += new System.EventHandler(this.btn_ligne_Click);
+            // 
+            // panel_LRG
+            // 
+            this.panel_LRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_LRG.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_LRG.Location = new System.Drawing.Point(0, 783);
+            this.panel_LRG.Name = "panel_LRG";
+            this.panel_LRG.Size = new System.Drawing.Size(237, 7);
+            this.panel_LRG.TabIndex = 48;
+            // 
+            // btn_Lrg
+            // 
+            this.btn_Lrg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Lrg.BorderRadius = 0;
+            this.btn_Lrg.ButtonText = "LRG";
+            this.btn_Lrg.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Lrg.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Lrg.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Lrg.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Lrg.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Lrg.Iconimage")));
+            this.btn_Lrg.Iconimage_right = null;
+            this.btn_Lrg.Iconimage_right_Selected = null;
+            this.btn_Lrg.Iconimage_Selected = null;
+            this.btn_Lrg.IconMarginLeft = 0;
+            this.btn_Lrg.IconMarginRight = 0;
+            this.btn_Lrg.IconRightVisible = true;
+            this.btn_Lrg.IconRightZoom = 0D;
+            this.btn_Lrg.IconVisible = true;
+            this.btn_Lrg.IconZoom = 45D;
+            this.btn_Lrg.IsTab = false;
+            this.btn_Lrg.Location = new System.Drawing.Point(0, 730);
+            this.btn_Lrg.Name = "btn_Lrg";
+            this.btn_Lrg.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Lrg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Lrg.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Lrg.selected = false;
+            this.btn_Lrg.Size = new System.Drawing.Size(237, 53);
+            this.btn_Lrg.TabIndex = 47;
+            this.btn_Lrg.Text = "LRG";
+            this.btn_Lrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Lrg.Textcolor = System.Drawing.Color.White;
+            this.btn_Lrg.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Lrg.Click += new System.EventHandler(this.btn_Lrg_Click);
+            // 
+            // panel_Par
+            // 
+            this.panel_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Par.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Par.Location = new System.Drawing.Point(0, 723);
+            this.panel_Par.Name = "panel_Par";
+            this.panel_Par.Size = new System.Drawing.Size(237, 7);
+            this.panel_Par.TabIndex = 46;
+            // 
+            // btn_Par
+            // 
+            this.btn_Par.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Par.BorderRadius = 0;
+            this.btn_Par.ButtonText = "Paragraphe";
+            this.btn_Par.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Par.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Par.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Par.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Par.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Par.Iconimage")));
+            this.btn_Par.Iconimage_right = null;
+            this.btn_Par.Iconimage_right_Selected = null;
+            this.btn_Par.Iconimage_Selected = null;
+            this.btn_Par.IconMarginLeft = 0;
+            this.btn_Par.IconMarginRight = 0;
+            this.btn_Par.IconRightVisible = true;
+            this.btn_Par.IconRightZoom = 0D;
+            this.btn_Par.IconVisible = true;
+            this.btn_Par.IconZoom = 45D;
+            this.btn_Par.IsTab = false;
+            this.btn_Par.Location = new System.Drawing.Point(0, 670);
+            this.btn_Par.Name = "btn_Par";
+            this.btn_Par.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Par.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Par.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Par.selected = false;
+            this.btn_Par.Size = new System.Drawing.Size(237, 53);
+            this.btn_Par.TabIndex = 45;
+            this.btn_Par.Text = "Paragraphe";
+            this.btn_Par.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Par.Textcolor = System.Drawing.Color.White;
+            this.btn_Par.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Par.Click += new System.EventHandler(this.btn_Par_Click);
             // 
             // panel_Commission
             // 
@@ -1039,7 +1218,7 @@ namespace Projet_Onssa
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
             this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(237, 96);
+            this.panel_logo.Size = new System.Drawing.Size(254, 96);
             this.panel_logo.TabIndex = 0;
             this.panel_logo.MouseEnter += new System.EventHandler(this.panel_logo_MouseEnter);
             this.panel_logo.MouseHover += new System.EventHandler(this.panel_logo_MouseHover);
@@ -1160,186 +1339,6 @@ namespace Projet_Onssa
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Gestion ";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // btn_Par
-            // 
-            this.btn_Par.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Par.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Par.BorderRadius = 0;
-            this.btn_Par.ButtonText = "Paragraphe";
-            this.btn_Par.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Par.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Par.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Par.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Par.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Par.Iconimage")));
-            this.btn_Par.Iconimage_right = null;
-            this.btn_Par.Iconimage_right_Selected = null;
-            this.btn_Par.Iconimage_Selected = null;
-            this.btn_Par.IconMarginLeft = 0;
-            this.btn_Par.IconMarginRight = 0;
-            this.btn_Par.IconRightVisible = true;
-            this.btn_Par.IconRightZoom = 0D;
-            this.btn_Par.IconVisible = true;
-            this.btn_Par.IconZoom = 45D;
-            this.btn_Par.IsTab = false;
-            this.btn_Par.Location = new System.Drawing.Point(0, 670);
-            this.btn_Par.Name = "btn_Par";
-            this.btn_Par.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Par.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Par.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Par.selected = false;
-            this.btn_Par.Size = new System.Drawing.Size(237, 53);
-            this.btn_Par.TabIndex = 45;
-            this.btn_Par.Text = "Paragraphe";
-            this.btn_Par.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Par.Textcolor = System.Drawing.Color.White;
-            this.btn_Par.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Par.Click += new System.EventHandler(this.btn_Par_Click);
-            // 
-            // panel_Par
-            // 
-            this.panel_Par.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_Par.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Par.Location = new System.Drawing.Point(0, 723);
-            this.panel_Par.Name = "panel_Par";
-            this.panel_Par.Size = new System.Drawing.Size(237, 7);
-            this.panel_Par.TabIndex = 46;
-            // 
-            // btn_Lrg
-            // 
-            this.btn_Lrg.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Lrg.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Lrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Lrg.BorderRadius = 0;
-            this.btn_Lrg.ButtonText = "LRG";
-            this.btn_Lrg.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Lrg.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Lrg.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Lrg.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Lrg.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Lrg.Iconimage")));
-            this.btn_Lrg.Iconimage_right = null;
-            this.btn_Lrg.Iconimage_right_Selected = null;
-            this.btn_Lrg.Iconimage_Selected = null;
-            this.btn_Lrg.IconMarginLeft = 0;
-            this.btn_Lrg.IconMarginRight = 0;
-            this.btn_Lrg.IconRightVisible = true;
-            this.btn_Lrg.IconRightZoom = 0D;
-            this.btn_Lrg.IconVisible = true;
-            this.btn_Lrg.IconZoom = 45D;
-            this.btn_Lrg.IsTab = false;
-            this.btn_Lrg.Location = new System.Drawing.Point(0, 730);
-            this.btn_Lrg.Name = "btn_Lrg";
-            this.btn_Lrg.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Lrg.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Lrg.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Lrg.selected = false;
-            this.btn_Lrg.Size = new System.Drawing.Size(237, 53);
-            this.btn_Lrg.TabIndex = 47;
-            this.btn_Lrg.Text = "LRG";
-            this.btn_Lrg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Lrg.Textcolor = System.Drawing.Color.White;
-            this.btn_Lrg.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Lrg.Click += new System.EventHandler(this.btn_Lrg_Click);
-            // 
-            // panel_LRG
-            // 
-            this.panel_LRG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_LRG.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_LRG.Location = new System.Drawing.Point(0, 783);
-            this.panel_LRG.Name = "panel_LRG";
-            this.panel_LRG.Size = new System.Drawing.Size(237, 7);
-            this.panel_LRG.TabIndex = 48;
-            // 
-            // btn_ligne
-            // 
-            this.btn_ligne.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_ligne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_ligne.BorderRadius = 0;
-            this.btn_ligne.ButtonText = "Ligne";
-            this.btn_ligne.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_ligne.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_ligne.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_ligne.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_ligne.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_ligne.Iconimage")));
-            this.btn_ligne.Iconimage_right = null;
-            this.btn_ligne.Iconimage_right_Selected = null;
-            this.btn_ligne.Iconimage_Selected = null;
-            this.btn_ligne.IconMarginLeft = 0;
-            this.btn_ligne.IconMarginRight = 0;
-            this.btn_ligne.IconRightVisible = true;
-            this.btn_ligne.IconRightZoom = 0D;
-            this.btn_ligne.IconVisible = true;
-            this.btn_ligne.IconZoom = 45D;
-            this.btn_ligne.IsTab = false;
-            this.btn_ligne.Location = new System.Drawing.Point(0, 790);
-            this.btn_ligne.Name = "btn_ligne";
-            this.btn_ligne.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_ligne.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_ligne.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_ligne.selected = false;
-            this.btn_ligne.Size = new System.Drawing.Size(237, 53);
-            this.btn_ligne.TabIndex = 49;
-            this.btn_ligne.Text = "Ligne";
-            this.btn_ligne.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_ligne.Textcolor = System.Drawing.Color.White;
-            this.btn_ligne.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ligne.Click += new System.EventHandler(this.btn_ligne_Click);
-            // 
-            // panel_Ligne
-            // 
-            this.panel_Ligne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_Ligne.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Ligne.Location = new System.Drawing.Point(0, 843);
-            this.panel_Ligne.Name = "panel_Ligne";
-            this.panel_Ligne.Size = new System.Drawing.Size(237, 7);
-            this.panel_Ligne.TabIndex = 50;
-            // 
-            // btn_Morasse
-            // 
-            this.btn_Morasse.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Morasse.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Morasse.BorderRadius = 0;
-            this.btn_Morasse.ButtonText = "Morasse";
-            this.btn_Morasse.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Morasse.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Morasse.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Morasse.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Morasse.Iconimage")));
-            this.btn_Morasse.Iconimage_right = null;
-            this.btn_Morasse.Iconimage_right_Selected = null;
-            this.btn_Morasse.Iconimage_Selected = null;
-            this.btn_Morasse.IconMarginLeft = 0;
-            this.btn_Morasse.IconMarginRight = 0;
-            this.btn_Morasse.IconRightVisible = true;
-            this.btn_Morasse.IconRightZoom = 0D;
-            this.btn_Morasse.IconVisible = true;
-            this.btn_Morasse.IconZoom = 45D;
-            this.btn_Morasse.IsTab = false;
-            this.btn_Morasse.Location = new System.Drawing.Point(0, 850);
-            this.btn_Morasse.Name = "btn_Morasse";
-            this.btn_Morasse.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Morasse.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Morasse.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Morasse.selected = false;
-            this.btn_Morasse.Size = new System.Drawing.Size(237, 53);
-            this.btn_Morasse.TabIndex = 51;
-            this.btn_Morasse.Text = "Morasse";
-            this.btn_Morasse.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Morasse.Textcolor = System.Drawing.Color.White;
-            this.btn_Morasse.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Morasse.Click += new System.EventHandler(this.btn_Morasse_Click);
-            // 
-            // panel_Morasse
-            // 
-            this.panel_Morasse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_Morasse.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Morasse.Location = new System.Drawing.Point(0, 903);
-            this.panel_Morasse.Name = "panel_Morasse";
-            this.panel_Morasse.Size = new System.Drawing.Size(237, 7);
-            this.panel_Morasse.TabIndex = 52;
             // 
             // Accueil
             // 

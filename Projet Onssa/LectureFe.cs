@@ -75,7 +75,8 @@ namespace Projet_Onssa
                                     Enga = fe.EngagementDepensesPropose,
                                     NumPvj = pvj.IdPVJ,
                                     NumCon = pvj.InfoConsultation.IdConsultation,
-                                    
+                                    Rc = m.InfoFournisseur.RC_n,
+
                                 };
 
 
@@ -107,6 +108,8 @@ namespace Projet_Onssa
                     ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
                     ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
                     ce.SetParameterValue("adresse", query.FirstOrDefault().AdresseFour.ToString());
+                    ce.SetParameterValue("rc", query.FirstOrDefault().Rc.ToString());
+
 
                     crystalReportViewer1.ReportSource = ce;
                     crystalReportViewer1.Refresh();

@@ -29,10 +29,10 @@ namespace Projet_Onssa
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    var query = from  bc in ctx.BCSet join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
+                    var query = from bc in ctx.BCSet join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                                 join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                                 m.InfoFournisseur.IdFournisseur
-                                where bc.IdBC== (int)cb_Bc.SelectedValue && m.InfoConsultation.IdConsultation == pvj.InfoConsultation.IdConsultation
+                                where bc.IdBC == (int)cb_Bc.SelectedValue && m.InfoConsultation.IdConsultation == pvj.InfoConsultation.IdConsultation
                                 select new
                                 {
                                     AdresseFour = m.InfoFournisseur.Adresse,
@@ -58,6 +58,7 @@ namespace Projet_Onssa
                                     Tva = m.Tva,
                                     Ttc = m.Ttc,
                                     thc = m.Total,
+                                    DateBc = bc.DateBC,
 
                                 };
 
@@ -86,6 +87,7 @@ namespace Projet_Onssa
                     ce.SetParameterValue("thc", query.FirstOrDefault().thc.ToString());
                     ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
                     ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
+                    ce.SetParameterValue("datebc", query.FirstOrDefault().DateBc.ToString());
                     ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
                     crystalReportViewer1.ReportSource = ce;
                     crystalReportViewer1.Refresh();

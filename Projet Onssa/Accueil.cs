@@ -84,6 +84,11 @@ namespace Projet_Onssa
 
                 btnPcord(true);
                 btnLcsrs(false);
+                btnMcsrs(false);
+                panel_Mamber.Visible = false;
+                btn_Lois.Visible = false;
+                btn_Mamber.Visible = false;
+                btn_GestionCompte.Visible = false;
                 btn_Oi_Click(sender, e);
             }
             else
@@ -100,11 +105,16 @@ namespace Projet_Onssa
                 {
                     if(Program.OG.TypeCompte.Equals("dr"))
                     {
+                        btn_Gpaiement_Click(sender, e);
+                        btnPcsrs(true);
                         btnMcsrs(false);
-                        btnPcsrs(false);
-                        btnPcord(false);
                         btnLcsrs(false);
-                        btn_Gpaiement.Visible = false;
+                        btn_Lois.Visible = false;
+                        btn_Mamber.Visible = false;
+                        panel_Mamber.Visible = false;
+                        btn_GestionCompte.Visible = false;
+                        panel_GestionCompte.Visible = false;
+                        btn_Consultation_Click(sender, e);
                     }
                 }
             }
@@ -207,6 +217,8 @@ namespace Projet_Onssa
             {
                 btn_Oi_Click(sender, e);
                 btnPcord(true);
+                btnMcsrs(false);
+                
             }
             else
             {
@@ -222,7 +234,11 @@ namespace Projet_Onssa
                 {
                     if(Program.OG.TypeCompte.Equals("dr"))
                     {
-                        tabPage2.Controls.Clear();
+                        btn_Consultation_Click(sender, e);
+                        btnPcsrs(true);
+                        tabControl1.TabPages.Remove(tabPage2);
+                        
+                        
                     }
                 }
             }
