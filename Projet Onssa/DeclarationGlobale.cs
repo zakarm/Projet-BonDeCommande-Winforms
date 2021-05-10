@@ -11,6 +11,7 @@ using Bunifu.Framework;
 using System.Windows.Forms;
 using MaterialSkin.Controls;
 using Bunifu.Framework;
+using System.ComponentModel;
 
 namespace Projet_Onssa
 {
@@ -56,9 +57,20 @@ namespace Projet_Onssa
            
         }
 
-        
-       
 
+        //public static void test_txt(Control txt, string msg, ErrorProvider ep, CancelEventArgs e)
+        //{
+        //    if (string.IsNullOrEmpty(txt.Text))
+        //    {
+        //        e.Cancel = true;
+        //        ep.SetError(txt, msg);
+        //    }
+        //    else
+        //    {
+        //        e.Cancel = false;
+        //        ep.SetError(txt, null);
+        //    }
+        //}
 
     }
 }

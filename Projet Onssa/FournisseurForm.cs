@@ -34,26 +34,27 @@ namespace Projet_Onssa
             {
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
-                    Fournisseur of = new Fournisseur();
+                        Fournisseur of = new Fournisseur();
 
-                    of.Nom = cb_Nom.Text;
-                    of.Adresse = txt_Adresse.Text;
-                    of.RC_n = int.Parse(txt_Rcn.Text);
-                    of.Patente_n = txt_Patenten.Text;
-                    of.IF_n = int.Parse(txt_Ifn.Text);
-                    of.CNSS_n = int.Parse(txt_cnss.Text);
-                    of.Compte_bancaire_n = txt_CmptBancaire.Text;
-                    of.ICE = txt_Ice.Text;
-                    of.Ville = txt_Ville.Text;
-                    of.Banque = txt_Banque.Text;
+                        of.Nom = cb_Nom.Text;
+                        of.Adresse = txt_Adresse.Text;
+                        of.RC_n = int.Parse(txt_Rcn.Text);
+                        of.Patente_n = txt_Patenten.Text;
+                        of.IF_n = int.Parse(txt_Ifn.Text);
+                        of.CNSS_n = int.Parse(txt_cnss.Text);
+                        of.Compte_bancaire_n = txt_CmptBancaire.Text;
+                        of.ICE = txt_Ice.Text;
+                        of.Ville = txt_Ville.Text;
+                        of.Banque = txt_Banque.Text;
 
-                    ctx.FournisseurSet.Add(of);
-                    ctx.SaveChanges();
+                        ctx.FournisseurSet.Add(of);
+                        ctx.SaveChanges();
 
-                    cb_Nom.DataSource = ctx.FournisseurSet.ToList();
+                        cb_Nom.DataSource = ctx.FournisseurSet.ToList();
 
-                    MessageBox.Show("Ajouté avec succès");
+                        MessageBox.Show("Ajouté avec succès");
                 }
+                    
             }
             catch (FormatException)
             {
@@ -155,6 +156,36 @@ namespace Projet_Onssa
                     txt_Banque.Text = f.Banque.ToString();
                 }
             
+        }
+
+        private void cb_Nom_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void txt_Adresse_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void txt_Patenten_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void txt_CmptBancaire_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void txt_Ice_Validating(object sender, CancelEventArgs e)
+        {
+        }
+
+        private void txt_Ville_Validating(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void txt_Banque_Validating(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

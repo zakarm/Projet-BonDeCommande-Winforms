@@ -339,6 +339,7 @@ namespace Projet_Onssa
             this.txt_Banque.Size = new System.Drawing.Size(375, 44);
             this.txt_Banque.TabIndex = 156;
             this.txt_Banque.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Banque.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Banque_Validating);
             // 
             // txt_Ville
             // 
@@ -357,6 +358,7 @@ namespace Projet_Onssa
             this.txt_Ville.Size = new System.Drawing.Size(375, 44);
             this.txt_Ville.TabIndex = 155;
             this.txt_Ville.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Ville.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Ville_Validating);
             // 
             // txt_Ice
             // 
@@ -375,6 +377,7 @@ namespace Projet_Onssa
             this.txt_Ice.Size = new System.Drawing.Size(375, 44);
             this.txt_Ice.TabIndex = 154;
             this.txt_Ice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Ice.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Ice_Validating);
             // 
             // txt_CmptBancaire
             // 
@@ -393,6 +396,7 @@ namespace Projet_Onssa
             this.txt_CmptBancaire.Size = new System.Drawing.Size(375, 44);
             this.txt_CmptBancaire.TabIndex = 153;
             this.txt_CmptBancaire.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_CmptBancaire.Validating += new System.ComponentModel.CancelEventHandler(this.txt_CmptBancaire_Validating);
             // 
             // txt_cnss
             // 
@@ -447,6 +451,7 @@ namespace Projet_Onssa
             this.txt_Patenten.Size = new System.Drawing.Size(375, 44);
             this.txt_Patenten.TabIndex = 150;
             this.txt_Patenten.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Patenten.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Patenten_Validating);
             // 
             // txt_Rcn
             // 
@@ -483,18 +488,20 @@ namespace Projet_Onssa
             this.txt_Adresse.Size = new System.Drawing.Size(375, 44);
             this.txt_Adresse.TabIndex = 148;
             this.txt_Adresse.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Adresse.Validating += new System.ComponentModel.CancelEventHandler(this.txt_Adresse_Validating);
             // 
             // cb_Nom
             // 
             this.cb_Nom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Nom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_Nom.Font = new System.Drawing.Font("Roboto", 12F);
+            this.cb_Nom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_Nom.FormattingEnabled = true;
             this.cb_Nom.Location = new System.Drawing.Point(46, 61);
             this.cb_Nom.Name = "cb_Nom";
-            this.cb_Nom.Size = new System.Drawing.Size(358, 27);
+            this.cb_Nom.Size = new System.Drawing.Size(358, 28);
             this.cb_Nom.TabIndex = 145;
             this.cb_Nom.SelectedIndexChanged += new System.EventHandler(this.cb_Nom_SelectedIndexChanged_1);
+            this.cb_Nom.Validating += new System.ComponentModel.CancelEventHandler(this.cb_Nom_Validating);
             // 
             // bunifuMetroTextbox1
             // 

@@ -174,12 +174,15 @@ namespace Projet_Onssa
             catch (FormatException)
             {
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }catch (System.Data.Entity.Infrastructure.DbUpdateException )
+            {
+                MessageBox.Show("Cette consultation est déjà utilisée dans un autre procès verbale de jugement !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            catch (Exception ex )
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
+            DeclarationGlobale.vider(this);
         }
 
 
@@ -260,6 +263,10 @@ namespace Projet_Onssa
                     catch (FormatException)
                     {
                         MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette consultation est déjà utilisée dans un autre procès verbale de jugement !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (Exception o)
                     {
@@ -362,6 +369,11 @@ namespace Projet_Onssa
         private void cb_fchoisie_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void cb_NumC_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cb_fchoisie.Text = "";
         }
     }
 }

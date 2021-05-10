@@ -333,6 +333,7 @@ namespace Projet_Onssa
             this.cb_NumC.Name = "cb_NumC";
             this.cb_NumC.Size = new System.Drawing.Size(358, 25);
             this.cb_NumC.TabIndex = 157;
+            this.cb_NumC.SelectedIndexChanged += new System.EventHandler(this.cb_NumC_SelectedIndexChanged);
             // 
             // txtarea_DateString
             // 
