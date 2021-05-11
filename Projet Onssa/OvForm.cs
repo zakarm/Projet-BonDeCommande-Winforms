@@ -54,6 +54,14 @@ namespace Projet_Onssa
 
                 }
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette OP est déjà utilisée dans un autre OV !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -117,6 +125,10 @@ namespace Projet_Onssa
                         cb_NumOv.DataSource = ctx.OVSet.ToList();
 
                         MessageBox.Show("Modifier avec succès");
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette OP est déjà utilisée dans un autre OV !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {

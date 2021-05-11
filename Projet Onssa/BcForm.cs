@@ -79,6 +79,10 @@ namespace Projet_Onssa
                 DeclarationGlobale.vider(this);
 
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -87,7 +91,7 @@ namespace Projet_Onssa
             {
                 MessageBox.Show(ex.Message);
             }
-           
+
         }
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
@@ -144,6 +148,10 @@ namespace Projet_Onssa
                         ctx.SaveChanges();
                         MessageBox.Show("Modifié avec succès");
                         cb_NumBc.DataSource = ctx.BCSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {

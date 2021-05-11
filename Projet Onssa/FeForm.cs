@@ -58,6 +58,10 @@ namespace Projet_Onssa
                 }
                 DeclarationGlobale.vider(this);
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette bon de commande est déjà utilisée dans un autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -66,60 +70,73 @@ namespace Projet_Onssa
 
         private void btn_Supprimer_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                try
                 {
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                    {
 
-                    ctx.Entry(ff).State = System.Data.Entity.EntityState.Deleted;
-                    ctx.FESet.Remove(ff);
-                    ctx.SaveChanges();
-                    MessageBox.Show("Supprimé avec succès");
-                    DeclarationGlobale.vider(this);
-                    cb_NumFe.DataSource = ctx.FESet.ToList();
-                    
+                        ctx.Entry(ff).State = System.Data.Entity.EntityState.Deleted;
+                        ctx.FESet.Remove(ff);
+                        ctx.SaveChanges();
+                        MessageBox.Show("Supprimé avec succès");
+                        DeclarationGlobale.vider(this);
+                        cb_NumFe.DataSource = ctx.FESet.ToList();
+
+                    }
+
                 }
+                catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                {
+                    MessageBox.Show("cette FE déja Utilisé dans autre form Ne peut pas etre supprimer");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
                 
-            }
-            catch (System.Data.Entity.Infrastructure.DbUpdateException o)
-            {
-                MessageBox.Show("cette FE déja Utilisé dans autre form Ne peut pas etre supprimer");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            try
+            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir supprimer ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.Yes)
             {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                try
                 {
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+                    {
 
-                    ctx.Entry(ff).State = System.Data.Entity.EntityState.Modified;
+                        ctx.Entry(ff).State = System.Data.Entity.EntityState.Modified;
 
-                    BC bc = ctx.BCSet.Find(cb_Bc.SelectedValue);
-                    ff.NumFe = cb_NumFe.Text;
-                    ff.CreditsBudgetaires = int.Parse(txt_Budgetaires.Text);
-                    ff.DepensesEngagees = int.Parse(txt_DepensesE.Text);
-                    ff.Disponible = int.Parse(txt_Dispo.Text);
-                    ff.EngagementDepensesPropose = int.Parse(txt_engagementDP.Text);
-                    ff.InfoBC = bc;
+                        BC bc = ctx.BCSet.Find(cb_Bc.SelectedValue);
+                        ff.NumFe = cb_NumFe.Text;
+                        ff.CreditsBudgetaires = int.Parse(txt_Budgetaires.Text);
+                        ff.DepensesEngagees = int.Parse(txt_DepensesE.Text);
+                        ff.Disponible = int.Parse(txt_Dispo.Text);
+                        ff.EngagementDepensesPropose = int.Parse(txt_engagementDP.Text);
+                        ff.InfoBC = bc;
 
-                    ctx.SaveChanges();
-                    MessageBox.Show("Modifé avec succès");
+                        ctx.SaveChanges();
+                        MessageBox.Show("Modifé avec succès");
 
-                    cb_NumFe.DataSource = ctx.FESet.ToList();
+                        cb_NumFe.DataSource = ctx.FESet.ToList();
 
+                    }
+                    DeclarationGlobale.vider(this);
                 }
-                DeclarationGlobale.vider(this);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                {
+                    MessageBox.Show("Cette bon de commande est déjà utilisée dans un autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }               
         }
 
        
@@ -135,7 +152,7 @@ namespace Projet_Onssa
                     txt_DepensesE.Text = ff.DepensesEngagees.ToString();
                     txt_Dispo.Text = ff.Disponible.ToString();
                     txt_engagementDP.Text = ff.EngagementDepensesPropose.ToString();
-                    cb_Bc.SelectedValue = ff.InfoBC.IdBC;
+                    cb_Bc.Text = ff.InfoBC.NumBc.ToString();
 
                 }
             }

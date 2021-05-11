@@ -37,7 +37,7 @@ namespace Projet_Onssa
 
         private void cb_Pvr_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
             try
             {
 
@@ -61,8 +61,9 @@ namespace Projet_Onssa
                                     Datebc = bc.DateBC,
                                     NumPvr = pvr.IdPVR,
                                 };
-
-                    dac.FillByPvr(ds.CommissionSet,int.Parse(query.FirstOrDefault().NumPvr.ToString()));
+                    if (query.FirstOrDefault() != null)
+                    {
+                        dac.FillByPvr(ds.CommissionSet,int.Parse(query.FirstOrDefault().NumPvr.ToString()));
                     CrystalReportPvr ce = new CrystalReportPvr();
                     ce.SetDataSource(ds);
                     ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
@@ -71,6 +72,9 @@ namespace Projet_Onssa
                     ce.SetParameterValue("datebc", query.FirstOrDefault().Datebc.ToString());
                     crystalReportViewer1.ReportSource = ce;
                     crystalReportViewer1.Refresh();
+
+                    }
+                    
                 }
             }
             catch (Exception ex)

@@ -59,6 +59,10 @@ namespace Projet_Onssa
 
                 }
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette OI est déjà utilisée dans un autre OP !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -121,6 +125,10 @@ namespace Projet_Onssa
                         MessageBox.Show("Modifié avec succès");
                         DeclarationGlobale.vider(this);
                         cb_NumOp.DataSource = ctx.OPSet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette OI est déjà utilisée dans un autre OP !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {

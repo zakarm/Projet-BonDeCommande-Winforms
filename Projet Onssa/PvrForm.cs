@@ -41,15 +41,19 @@ namespace Projet_Onssa
                             p.DateString = txt_dateString.Text;
                             p.InfoOI = oi;
                             ctx.SaveChanges();
-                            cb_NumPvr.DataSource = ctx.PVRSet.ToList();
+                            
 
                             MessageBox.Show("Modifié avec succès");
                             DeclarationGlobale.vider(this);
+                            cb_NumPvr.DataSource = ctx.PVRSet.ToList();
                         }
                         else
                         {
                             MessageBox.Show("sélectionner une commissionr d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
+                    }catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette OI est déjà utilisée dans un autre Pvr!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {
@@ -152,6 +156,10 @@ namespace Projet_Onssa
                 DeclarationGlobale.vider(this);
 
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette OI est déjà utilisée dans un autre Pvr!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -201,7 +209,7 @@ namespace Projet_Onssa
                     p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
                     txt_dateString.Text = p.DateString;
                     data_Pvr.Value = p.DatePVR;
-                    cb_Oi.SelectedValue = p.InfoOI.IdOI;
+                    cb_Oi.Text = p.InfoOI.NumOi.ToString();
                     cb_NumPvr.SelectedValue = p.IdPVR;
                     
 

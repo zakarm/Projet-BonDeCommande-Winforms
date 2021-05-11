@@ -39,11 +39,11 @@ namespace Projet_Onssa
                 {
                     Paragraphe Op = ctx.ParagrapheSet.Find(cb_numpara.SelectedValue);
                     Lrg olrg = new Lrg();
-                    olrg.NumLrg = cb_Num.Text.ToString();
+                    olrg.NumLrg = txt_num.Text.ToString();
                     olrg.InfoParagraphe = Op;
                     olrg.DescriptionLrg = txtarea_desc.Text;
 
-                    olrg.CodeLrg = int.Parse(Op.NumPar.ToString() + cb_Num.Text.ToString());
+                    olrg.CodeLrg = int.Parse(Op.NumPar.ToString() + txt_num.Text.ToString());
 
                     ctx.LrgSet.Add(olrg);
                     ctx.SaveChanges();
@@ -72,7 +72,7 @@ namespace Projet_Onssa
                 {
                     lr = ctx.LrgSet.Find(cb_code.SelectedValue);
 
-                    cb_Num.Text = lr.NumLrg.ToString();
+                    txt_num.Text = lr.NumLrg.ToString();
                     cb_numpara.Text = lr.InfoParagraphe.NumPar.ToString();
                     txtarea_desc.Text = lr.DescriptionLrg;
 
@@ -96,11 +96,11 @@ namespace Projet_Onssa
                         ctx.Entry(lr).State = System.Data.Entity.EntityState.Modified;
                         Paragraphe Op = ctx.ParagrapheSet.Find(cb_numpara.SelectedValue);
 
-                        lr.NumLrg = cb_Num.Text.ToString();
+                        lr.NumLrg = txt_num.Text.ToString();
                         lr.InfoParagraphe = Op;
                         lr.DescriptionLrg = txtarea_desc.Text;
 
-                        lr.CodeLrg = int.Parse(Op.NumPar.ToString() + cb_Num.Text.ToString());
+                        lr.CodeLrg = int.Parse(Op.NumPar.ToString() + txt_num.Text.ToString());
 
                         ctx.SaveChanges();
                         MessageBox.Show("Modifier avec succès");

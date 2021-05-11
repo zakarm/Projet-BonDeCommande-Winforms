@@ -41,7 +41,7 @@ namespace Projet_Onssa
             this.txtarea_desc = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.cb_Num = new System.Windows.Forms.ComboBox();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.txt_num = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -279,24 +279,24 @@ namespace Projet_Onssa
             this.cb_Num.Size = new System.Drawing.Size(358, 25);
             this.cb_Num.TabIndex = 168;
             // 
-            // bunifuMetroTextbox1
+            // txt_num
             // 
-            this.bunifuMetroTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(103, 179);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
-            this.bunifuMetroTextbox1.TabIndex = 165;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_num.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_num.BackColor = System.Drawing.Color.White;
+            this.txt_num.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_num.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_num.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_num.BorderThickness = 1;
+            this.txt_num.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_num.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_num.ForeColor = System.Drawing.Color.Black;
+            this.txt_num.isPassword = false;
+            this.txt_num.Location = new System.Drawing.Point(103, 179);
+            this.txt_num.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_num.Name = "txt_num";
+            this.txt_num.Size = new System.Drawing.Size(375, 35);
+            this.txt_num.TabIndex = 165;
+            this.txt_num.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label8
             // 
@@ -323,7 +323,7 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btn_Modifier);
             this.panel1.Controls.Add(this.bunifuMetroTextbox3);
-            this.panel1.Controls.Add(this.bunifuMetroTextbox1);
+            this.panel1.Controls.Add(this.txt_num);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.cb_Num);
             this.panel1.Controls.Add(this.cb_numpara);
@@ -365,7 +365,7 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuMetroTextbox txtarea_desc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cb_Num;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_num;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel1;
     }

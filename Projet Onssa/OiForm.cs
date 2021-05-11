@@ -62,6 +62,10 @@ namespace Projet_Onssa
                     cb_NumOi.DataSource = ctx.OISet.ToList();
                 }
             }
+            catch (System.Data.Entity.Infrastructure.DbUpdateException)
+            {
+                MessageBox.Show("Cette Fiche d'engagement est déjà utilisée dans un autre OI !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             catch (FormatException)
             {
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -128,6 +132,10 @@ namespace Projet_Onssa
                         MessageBox.Show("Modifé avec succès");
                         DeclarationGlobale.vider(this);
                         cb_NumOi.DataSource = ctx.OISet.ToList();
+                    }
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
+                    {
+                        MessageBox.Show("Cette Fiche d'engagement est déjà utilisée dans un autre OI !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {
