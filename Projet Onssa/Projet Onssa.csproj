@@ -170,6 +170,12 @@
     <Compile Include="FeForm.Designer.cs">
       <DependentUpon>FeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuideApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuideApplication.Designer.cs">
+      <DependentUpon>GuideApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="LectureBc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -433,6 +439,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GestionCompteForm.resx">
       <DependentUpon>GestionCompteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuideApplication.resx">
+      <DependentUpon>GuideApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LectureBc.resx">
       <DependentUpon>LectureBc.cs</DependentUpon>
