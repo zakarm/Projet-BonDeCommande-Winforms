@@ -783,5 +783,10 @@ namespace Projet_Onssa
         {
             openchildform(new MorasseForm());
         }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            openchildform(new GuideApplication());
+        }
     }
 }

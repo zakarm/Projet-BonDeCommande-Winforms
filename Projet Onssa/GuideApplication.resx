@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="label4.Text" xml:space="preserve">
+    <value> cliquez sur le button Gestion sur votre Menu. 
+
+        - Une fenêtre menu va s’ouvrir.
+        - NOTE ! il faut suivre les étapes et l'ordre de processus
+
+        - Cliquez sur Le button "Consultation" pour choisir des fournisseurs puis "Onglet de Gestion" ; 
+           =&gt;  on vous demandera alors de Tapez  un numéro de consultation et l'objet de consultation dans un textbox (obligatoire).
+           =&gt; Cliquez sur Le button "Ajouter" 
+
+        - Pour créer un Modele devis, cliquez sur le button "Modele devis" puis "Onglet de Gestion " ; 
+            =&gt;  on vous demandera alors de choisir un numéro de consultation et un numéro de fournisseur  dans deux combobox (obligatoire) 
+                   puis tapez les produit dans (datagridview) .
+            =&gt; Cliquez sur Le button "Ajouter" 
+
+        - Pour créer un Procès-verbal de jugment , cliquez sur le button "Procès-verbal de jugment" puis "Onglet de Gestion "  ; 
+            =&gt;  on vous demandera alors de choisir un numéro de consultation dans un combobox (obligatoire) 
+                   puis les mambres de commission, les fournisseurs repondu et le fournisseur choisie .
+            =&gt; Cliquez sur Le button "Ajouter" 
+
+         - Pour créer une Bon de commande , cliquez sur le button "Bon de Commande" puis "Onglet de Gestion " ; 
+            =&gt;  on vous demandera alors de choisir un numéro de Procès-verbal de jugment et le code morasse dans deux combo-box différentes (obligatoire) 
+                   puis remplir les informations nécessaires.
+            =&gt; Cliquez sur Le button "Ajouter" 
+
+         - Pour créer une Fiche d'engagement, cliquez sur le button "Fiche d'engagement"  puis "Onglet de Gestion "  ; 
+              =&gt;  on vous demandera alors de choisir un numéro de Bon de commande dans un combobox (obligatoire) 
+                   puis remplir les informations nécessaires.
+             =&gt; Cliquez sur Le button "Ajouter" 
+
+          - Pour créer une Ordre d'imputation, cliquez sur le button "Ordre d'imputation"  puis "Onglet de Gestion " ; 
+             =&gt;  on vous demandera alors de choisir un numéro de Fiche d'engagement dans un combobox (obligatoire) 
+                   puis remplir les informations nécessaires.
+             =&gt; Cliquez sur Le button "Ajouter" 
+
+          - Pour créer un Procès verbale de reception , cliquez sur le button "Procès verbale de reception " puis "Onglet de Gestion" ; 
+              =&gt;  on vous demandera alors de choisir un numéro d'Ordre d'impuatation dans un combobox (obligatoire)
+                   puis choisir les mambres de commission.
+              =&gt; Cliquez sur Le button "Ajouter" 
+
+           - Pour créer un Ordre de paiement, cliquez sur le button " Ordre de paiement" puis "Onglet de Gestion " ; 
+               =&gt;  on vous demandera alors de choisir un numéro d'Ordre d'impuatation dans un combobox (obligatoire)
+                    puis remplir les informations nécessaires.
+               =&gt; Cliquez sur Le button "Ajouter" 
+
+           - Pour créer un Ordre de virement, cliquez sur le button " Ordre de virement" puis "Onglet de Gestion " ; 
+               =&gt;  on vous demandera alors de choisir un numéro d'Ordre de paiement dans un combobox (obligatoire)
+                    puis remplir les informations nécessaires.
+               =&gt; Cliquez sur Le button "Ajouter" 
+</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Dans le moment de Suppression où modification il faut prendre en considération les contraints suivante :      
+
+    1- Vous ne pouvez pas supprimer les donnés d'un fournisseur ou un mambre de commission qui apparaitre dans une consultation ou un procès verbale de jugement (etc) .
+       &gt; Solution : il faut supprimer les fichiers (Consultation / Procès verbale de jugement )qui contiennent les informations de ce fournisseur ou se membre de commission 
+
+    2- Vous ne pouvez pas choisir une consultation qui deja existe dans un autre procès verbale de jugement .
+
+
+     
+</value>
+  </data>
+</root>
