@@ -81,7 +81,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cette Procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException)
             {
