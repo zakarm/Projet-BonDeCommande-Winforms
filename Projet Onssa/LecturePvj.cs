@@ -78,7 +78,7 @@ namespace Projet_Onssa
                         dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
 
                         int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
-                        dam.FillByConsultation(ds.ModeleDevisSet, IdDevis);
+                        dam.FillByConsultation(ds.ModeleDevisSet, IdCon);
 
                         dac.FillByPvj(ds.CommissionSet, IdPvj);
 
