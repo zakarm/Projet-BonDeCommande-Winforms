@@ -41,8 +41,8 @@ namespace Projet_Onssa
 
         private void cb_Pvj_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //try
-            //{
+            try
+            {
 
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -96,11 +96,11 @@ namespace Projet_Onssa
                     }
                     
                 }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
