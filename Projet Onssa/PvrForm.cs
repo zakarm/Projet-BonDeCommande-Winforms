@@ -158,7 +158,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette OI est déjà utilisée dans un autre Pvr!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("lordre d'imputation est déjà utilisée dans un autre procès verbal de reception!");
             }
             catch (FormatException)
             {
@@ -188,7 +188,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Pvr déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("Procès verbal de reception déja Utilisé ");
                     }
                     catch (Exception o)
                     {

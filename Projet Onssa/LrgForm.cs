@@ -139,7 +139,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Lrg déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("Lrg sélectionné est déja Utilisé dans une ligne");
                     }
                     catch (Exception o)
                     {

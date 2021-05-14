@@ -36,9 +36,9 @@ namespace Projet_Onssa
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_Cnx = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel_banner = new System.Windows.Forms.Panel();
+            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel_content.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,13 +47,13 @@ namespace Projet_Onssa
             this.panel_content.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel_content.BackColor = System.Drawing.Color.White;
+            this.panel_content.Controls.Add(this.bunifuMaterialTextbox3);
             this.panel_content.Controls.Add(this.label4);
             this.panel_content.Controls.Add(this.bunifuCheckbox1);
             this.panel_content.Controls.Add(this.label3);
             this.panel_content.Controls.Add(this.label2);
             this.panel_content.Controls.Add(this.label1);
             this.panel_content.Controls.Add(this.btn_Cnx);
-            this.panel_content.Controls.Add(this.bunifuMaterialTextbox3);
             this.panel_content.Controls.Add(this.bunifuMaterialTextbox4);
             this.panel_content.Location = new System.Drawing.Point(0, 0);
             this.panel_content.Name = "panel_content";
@@ -88,7 +88,7 @@ namespace Projet_Onssa
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.label3.Location = new System.Drawing.Point(33, 254);
+            this.label3.Location = new System.Drawing.Point(32, 262);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 14;
@@ -152,25 +152,6 @@ namespace Projet_Onssa
             this.btn_Cnx.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cnx.Click += new System.EventHandler(this.btn_Cnx_Click);
             // 
-            // bunifuMaterialTextbox3
-            // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = true;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(36, 275);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(335, 44);
-            this.bunifuMaterialTextbox3.TabIndex = 10;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // bunifuMaterialTextbox4
             // 
             this.bunifuMaterialTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -203,6 +184,25 @@ namespace Projet_Onssa
             this.panel_banner.Size = new System.Drawing.Size(463, 521);
             this.panel_banner.TabIndex = 0;
             // 
+            // bunifuMaterialTextbox3
+            // 
+            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
+            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox3.HintText = "";
+            this.bunifuMaterialTextbox3.isPassword = true;
+            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineThickness = 3;
+            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(36, 287);
+            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
+            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(335, 44);
+            this.bunifuMaterialTextbox3.TabIndex = 17;
+            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,12 +229,12 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_content;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Cnx;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox4;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox bunifuMaterialTextbox3;
     }
 }
 

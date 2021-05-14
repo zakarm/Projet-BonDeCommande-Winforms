@@ -61,7 +61,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette OI est déjà utilisée dans un autre OP !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("l'Ordre d'imputation est déjà utilisée dans un autre ordre de paiement !");
             }
             catch (FormatException)
             {
@@ -93,7 +93,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette OP déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("l'ordre de paiement est déja utilisé ");
                     }
                     catch (Exception o)
                     {
@@ -128,7 +128,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
-                        MessageBox.Show("Cette OI est déjà utilisée dans un autre OP !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("l'ordre d'imputation est déjà utilisée dans un autre ordre de paiement !");
                     }
                     catch (FormatException)
                     {

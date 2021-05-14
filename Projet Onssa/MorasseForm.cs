@@ -123,7 +123,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Morasse déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show(" Morasse déja Utilisé ");
                     }
                     catch (Exception o)
                     {

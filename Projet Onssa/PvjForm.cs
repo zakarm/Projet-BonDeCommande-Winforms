@@ -176,7 +176,7 @@ namespace Projet_Onssa
                 MessageBox.Show("Format text non valide !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }catch (System.Data.Entity.Infrastructure.DbUpdateException )
             {
-                MessageBox.Show("Cette consultation est déjà utilisée dans un autre procès verbale de jugement !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Cette consultation est déjà utilisée dans un autre procès verbale de jugement !");
             }
             catch (Exception ex)
             {
@@ -205,7 +205,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Pvj déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("le procès verbal de jugement est déja Utilisé ");
                     }
                     catch (Exception o)
                     {

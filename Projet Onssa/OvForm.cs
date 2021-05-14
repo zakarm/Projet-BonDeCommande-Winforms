@@ -56,7 +56,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette OP est déjà utilisée dans un autre OV !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("l'ordre de paiement est déjà utilisée dans un autre ordre de virment !");
             }
             catch (FormatException)
             {
@@ -128,7 +128,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
-                        MessageBox.Show("Cette OP est déjà utilisée dans un autre OV !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("l'ordre de paiement est déjà utilisée dans un autre ordre de virement !");
                     }
                     catch (FormatException)
                     {
@@ -161,7 +161,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette OV déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("lordre de virement est déja utilisé ");
                     }
                     catch (Exception o)
                     {

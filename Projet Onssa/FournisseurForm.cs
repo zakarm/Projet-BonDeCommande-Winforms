@@ -126,7 +126,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Fournisseur déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("le Fournisseur est déja utilisé dans un procès verbal de jugement ou dans un consultation");
                     }
                     catch (Exception o)
                     {

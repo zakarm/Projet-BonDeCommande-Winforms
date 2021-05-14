@@ -102,7 +102,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Paragraphe déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show(" Paragraphe déja Utilisé ");
                     }
                     catch (Exception o)
                     {

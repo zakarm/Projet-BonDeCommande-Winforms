@@ -155,7 +155,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette consultation déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("consultation déja utilisé dans un procès verbal de jugment ou dans un modele de devis");
                     }
                     catch(Exception o)
                     {

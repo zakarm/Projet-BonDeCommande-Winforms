@@ -89,7 +89,7 @@ namespace Projet_Onssa
                 btn_Lois.Visible = false;
                 btn_Mamber.Visible = false;
                 btn_GestionCompte.Visible = false;
-                btn_Oi_Click(sender, e);
+                openchildform(new Statistique());
             }
             else
             {
@@ -99,7 +99,8 @@ namespace Projet_Onssa
                     btnPcsrs(true);
                     btnMcsrs(false);
                     btnLcsrs(false);
-                    btn_Consultation_Click(sender, e);
+                    openchildform(new Statistique());
+
                 }
                 else
                 {
@@ -114,7 +115,7 @@ namespace Projet_Onssa
                         panel_Mamber.Visible = false;
                         btn_GestionCompte.Visible = false;
                         panel_GestionCompte.Visible = false;
-                        btn_Consultation_Click(sender, e);
+                        openchildform(new Statistique());
                     }
                 }
             }
@@ -345,6 +346,7 @@ namespace Projet_Onssa
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)
         {
+            label_txt.Name = "Gestion Compte";
             openchildform(new GestionCompteForm());
             btnPcsrs(false);
             btnLcsrs(false);
@@ -766,27 +768,37 @@ namespace Projet_Onssa
 
         private void btn_Lrg_Click(object sender, EventArgs e)
         {
+            label_txt.Name = "Lrg";
             openchildform(new LrgForm());
         }
 
         private void btn_Par_Click(object sender, EventArgs e)
         {
+            label_txt.Name = "Paragraphe";
             openchildform(new ParagrapheForm());
         }
 
         private void btn_ligne_Click(object sender, EventArgs e)
         {
+            label_txt.Name = "Ligne";
             openchildform(new LigneForm());
         }
 
         private void btn_Morasse_Click(object sender, EventArgs e)
         {
+            label_txt.Name = "Morasse";
             openchildform(new MorasseForm());
         }
 
         private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
         {
+            label_txt.Name = "Guide";
             openchildform(new GuideApplication());
+        }
+
+        private void btn_Accueil_Click(object sender, EventArgs e)
+        {
+            openchildform(new Statistique());
         }
     }
 }

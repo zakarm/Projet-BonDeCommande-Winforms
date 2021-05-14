@@ -64,7 +64,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette Fiche d'engagement est déjà utilisée dans un autre OI !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(" Fiche d'engagement est déjà utilisée dans un autre Ordre d'imputation !");
             }
             catch (FormatException)
             {
@@ -94,7 +94,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette OI déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("ordre d'imputation déja utilisé ");
                     }
                     catch (Exception o)
                     {
@@ -135,7 +135,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
-                        MessageBox.Show("Cette Fiche d'engagement est déjà utilisée dans un autre OI !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Cette fiche d'engagement est déjà utilisée dans un autre ordre d'imputation !");
                     }
                     catch (FormatException)
                     {

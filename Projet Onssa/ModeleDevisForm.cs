@@ -123,7 +123,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette ModeleDevis déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("le ModeleDevis est déja utilisé ");
                     }
                     catch (Exception o)
                     {

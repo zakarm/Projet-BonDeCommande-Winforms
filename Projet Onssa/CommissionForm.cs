@@ -107,7 +107,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Commission déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("La commission est déja utilisé dans un procès verbal ");
                     }
                     catch (Exception o)
                     {

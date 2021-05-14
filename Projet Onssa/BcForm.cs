@@ -81,7 +81,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette Procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Le procès verbale de jugement est déjà utilisée dans une autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (FormatException)
             {
@@ -112,7 +112,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette BC déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("Bon de commande déja utilisé dans une Fiche d'engagement");
                     }
                     catch (Exception o)
                     {
@@ -151,7 +151,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
-                        MessageBox.Show("Cette procès verbale de jugement est déjà utilisée dans un autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Le procès verbale de jugement est déjà utilisée dans une autre bon de commande !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     catch (FormatException)
                     {

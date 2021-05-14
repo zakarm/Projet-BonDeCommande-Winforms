@@ -60,7 +60,7 @@ namespace Projet_Onssa
             }
             catch (System.Data.Entity.Infrastructure.DbUpdateException)
             {
-                MessageBox.Show("Cette bon de commande est déjà utilisée dans un autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("bon de commande est déjà utilisée dans une autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {
@@ -90,7 +90,7 @@ namespace Projet_Onssa
                 }
                 catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                 {
-                    MessageBox.Show("cette FE déja Utilisé dans autre form Ne peut pas etre supprimer");
+                    MessageBox.Show("la Fiche d'engagement est déja Utilisé dans un ordre d'imputation");
                 }
                 catch (Exception ex)
                 {
@@ -130,7 +130,7 @@ namespace Projet_Onssa
                 }
                 catch (System.Data.Entity.Infrastructure.DbUpdateException)
                 {
-                    MessageBox.Show("Cette bon de commande est déjà utilisée dans un autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("la bon de commande est déjà utilisée dans une autre Fiche d'engagement!", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 catch (Exception ex)
                 {

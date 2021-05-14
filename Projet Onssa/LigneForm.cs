@@ -138,7 +138,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException o)
                     {
-                        MessageBox.Show("cette Ligne déja Utilisé dans autre form Ne peut pas etre supprimer");
+                        MessageBox.Show("la Ligne est déja utilisé dans une morasse");
                     }
                     catch (Exception o)
                     {

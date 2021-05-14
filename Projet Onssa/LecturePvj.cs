@@ -69,7 +69,7 @@ namespace Projet_Onssa
                     
                     NumToString cc = new NumToString();
                     
-                    if(query.FirstOrDefault()!=null)
+                    if(query.FirstOrDefault().NumDevis!=null)
                     {
                         int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
                         daf.FillByConsultation(ds.FournisseurSet, IdCon);
@@ -93,6 +93,10 @@ namespace Projet_Onssa
                         ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
                         crystalReportViewer1.ReportSource = ce;
                         crystalReportViewer1.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("le fournisseur choisie n'a pas un modele de devis");
                     }
                     
                 }
