@@ -118,7 +118,7 @@ namespace Projet_Onssa
             this.panelControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelControl.Location = new System.Drawing.Point(0, 0);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(66, 749);
+            this.panelControl.Size = new System.Drawing.Size(66, 756);
             this.panelControl.TabIndex = 2;
             this.panelControl.MouseEnter += new System.EventHandler(this.panel6_MouseEnter);
             this.panelControl.MouseLeave += new System.EventHandler(this.panelControl_MouseLeave);
@@ -146,7 +146,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 653);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 660);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
@@ -315,7 +315,7 @@ namespace Projet_Onssa
             this.btn_Out.IconVisible = true;
             this.btn_Out.IconZoom = 50D;
             this.btn_Out.IsTab = false;
-            this.btn_Out.Location = new System.Drawing.Point(0, 701);
+            this.btn_Out.Location = new System.Drawing.Point(0, 708);
             this.btn_Out.Name = "btn_Out";
             this.btn_Out.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Out.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
@@ -466,7 +466,7 @@ namespace Projet_Onssa
             this.panel_submenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_submenu.Location = new System.Drawing.Point(66, 0);
             this.panel_submenu.Name = "panel_submenu";
-            this.panel_submenu.Size = new System.Drawing.Size(254, 749);
+            this.panel_submenu.Size = new System.Drawing.Size(254, 756);
             this.panel_submenu.TabIndex = 3;
             this.panel_submenu.MouseEnter += new System.EventHandler(this.panel_submenu_MouseEnter);
             this.panel_submenu.MouseHover += new System.EventHandler(this.panel_submenu_MouseHover);
@@ -508,7 +508,7 @@ namespace Projet_Onssa
             this.panel_subsubmenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_subsubmenu.Location = new System.Drawing.Point(0, 96);
             this.panel_subsubmenu.Name = "panel_subsubmenu";
-            this.panel_subsubmenu.Size = new System.Drawing.Size(254, 653);
+            this.panel_subsubmenu.Size = new System.Drawing.Size(254, 660);
             this.panel_subsubmenu.TabIndex = 1;
             // 
             // panel_Morasse
@@ -1281,7 +1281,7 @@ namespace Projet_Onssa
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(320, 0);
             this.panel_header.Name = "panel_header";
-            this.panel_header.Size = new System.Drawing.Size(962, 96);
+            this.panel_header.Size = new System.Drawing.Size(1025, 96);
             this.panel_header.TabIndex = 2;
             // 
             // label_txt
@@ -1317,7 +1317,7 @@ namespace Projet_Onssa
             this.bunifuFlatButton3.IconVisible = true;
             this.bunifuFlatButton3.IconZoom = 60D;
             this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(912, 26);
+            this.bunifuFlatButton3.Location = new System.Drawing.Point(975, 26);
             this.bunifuFlatButton3.Name = "bunifuFlatButton3";
             this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
             this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
@@ -1343,7 +1343,7 @@ namespace Projet_Onssa
             this.panel_childform.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_childform.Location = new System.Drawing.Point(320, 96);
             this.panel_childform.Name = "panel_childform";
-            this.panel_childform.Size = new System.Drawing.Size(962, 653);
+            this.panel_childform.Size = new System.Drawing.Size(1025, 660);
             this.panel_childform.TabIndex = 4;
             // 
             // tabControl1
@@ -1354,7 +1354,7 @@ namespace Projet_Onssa
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(962, 653);
+            this.tabControl1.Size = new System.Drawing.Size(1025, 660);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
@@ -1363,7 +1363,7 @@ namespace Projet_Onssa
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(954, 627);
+            this.tabPage1.Size = new System.Drawing.Size(1017, 634);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Lecture";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1383,7 +1383,7 @@ namespace Projet_Onssa
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1282, 749);
+            this.ClientSize = new System.Drawing.Size(1345, 756);
             this.Controls.Add(this.panel_childform);
             this.Controls.Add(this.panel_header);
             this.Controls.Add(this.panel_submenu);

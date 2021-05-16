@@ -30,23 +30,19 @@ namespace Projet_Onssa
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Statistique));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.label_Compte = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
+            this.label_taille = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
+            this.label_mounth = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.label_mounth2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label19 = new System.Windows.Forms.Label();
+            this.label_NumBcMounth = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.button22 = new System.Windows.Forms.Button();
@@ -58,12 +54,8 @@ namespace Projet_Onssa
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel6.SuspendLayout();
+            this.dataSetReport1 = new Projet_Onssa.DataSetReport();
+            this.cartesianChart = new LiveCharts.WinForms.CartesianChart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -71,28 +63,15 @@ namespace Projet_Onssa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReport1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(181)))), ((int)(((byte)(39)))));
-            this.panel6.Controls.Add(this.pictureBox10);
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Controls.Add(this.label16);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Location = new System.Drawing.Point(675, 177);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(250, 110);
-            this.panel6.TabIndex = 110;
             // 
             // pictureBox10
             // 
             this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(150, 13);
+            this.pictureBox10.Location = new System.Drawing.Point(174, 46);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(87, 81);
+            this.pictureBox10.Size = new System.Drawing.Size(92, 78);
             this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox10.TabIndex = 6;
             this.pictureBox10.TabStop = false;
@@ -102,143 +81,145 @@ namespace Projet_Onssa
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label11.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label11.Location = new System.Drawing.Point(14, 80);
+            this.label11.Location = new System.Drawing.Point(9, 118);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 15);
+            this.label11.Size = new System.Drawing.Size(131, 15);
             this.label11.TabIndex = 5;
-            this.label11.Text = "25 New Users";
+            this.label11.Text = "1 nouveaux utilisateurs ";
             // 
-            // label16
+            // label_Compte
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.label16.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label16.Location = new System.Drawing.Point(3, 29);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(80, 46);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "120";
+            this.label_Compte.AutoSize = true;
+            this.label_Compte.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label_Compte.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_Compte.Location = new System.Drawing.Point(8, 46);
+            this.label_Compte.Name = "label_Compte";
+            this.label_Compte.Size = new System.Drawing.Size(40, 46);
+            this.label_Compte.TabIndex = 4;
+            this.label_Compte.Text = "0";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F);
+            this.label17.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label17.Location = new System.Drawing.Point(14, 7);
+            this.label17.Location = new System.Drawing.Point(3, 3);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(59, 23);
+            this.label17.Size = new System.Drawing.Size(214, 25);
             this.label17.TabIndex = 0;
-            this.label17.Text = "USERS";
+            this.label17.Text = "Utilisateurs d\'application";
             // 
             // panel8
             // 
+            this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(162)))), ((int)(((byte)(197)))), ((int)(((byte)(23)))));
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Controls.Add(this.label18);
-            this.panel8.Controls.Add(this.label22);
-            this.panel8.Location = new System.Drawing.Point(675, 47);
+            this.panel8.Controls.Add(this.label_taille);
+            this.panel8.Location = new System.Drawing.Point(797, 64);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(250, 110);
+            this.panel8.Size = new System.Drawing.Size(276, 149);
             this.panel8.TabIndex = 109;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(-2, 4);
+            this.label13.Location = new System.Drawing.Point(6, 10);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(156, 23);
+            this.label13.Size = new System.Drawing.Size(176, 25);
             this.label13.TabIndex = 7;
             this.label13.Text = "Database Size(GB) : ";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(150, 13);
+            this.pictureBox1.Location = new System.Drawing.Point(183, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(82, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // label18
+            // label_taille
             // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label18.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label18.Location = new System.Drawing.Point(14, 80);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(98, 15);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Bounce Rate 25%";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.label22.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label22.Location = new System.Drawing.Point(12, 30);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(86, 46);
-            this.label22.TabIndex = 4;
-            this.label22.Text = "1GB";
+            this.label_taille.AutoSize = true;
+            this.label_taille.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label_taille.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_taille.Location = new System.Drawing.Point(8, 56);
+            this.label_taille.Name = "label_taille";
+            this.label_taille.Size = new System.Drawing.Size(40, 46);
+            this.label_taille.TabIndex = 4;
+            this.label_taille.Text = "0";
             // 
             // panel9
             // 
+            this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(124)))), ((int)(((byte)(199)))));
-            this.panel9.Controls.Add(this.label14);
+            this.panel9.Controls.Add(this.label_mounth);
+            this.panel9.Controls.Add(this.label_mounth2);
             this.panel9.Controls.Add(this.pictureBox2);
-            this.panel9.Controls.Add(this.label19);
+            this.panel9.Controls.Add(this.label_NumBcMounth);
             this.panel9.Controls.Add(this.label21);
-            this.panel9.Location = new System.Drawing.Point(675, 309);
+            this.panel9.Location = new System.Drawing.Point(797, 428);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(250, 110);
+            this.panel9.Size = new System.Drawing.Size(276, 147);
             this.panel9.TabIndex = 108;
             // 
-            // label14
+            // label_mounth
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(0, 6);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(144, 23);
-            this.label14.TabIndex = 7;
-            this.label14.Text = "First Report Date :";
+            this.label_mounth.AutoSize = true;
+            this.label_mounth.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F);
+            this.label_mounth.ForeColor = System.Drawing.Color.White;
+            this.label_mounth.Location = new System.Drawing.Point(8, 35);
+            this.label_mounth.Name = "label_mounth";
+            this.label_mounth.Size = new System.Drawing.Size(82, 25);
+            this.label_mounth.TabIndex = 114;
+            this.label_mounth.Text = "du mois ";
+            // 
+            // label_mounth2
+            // 
+            this.label_mounth2.AutoSize = true;
+            this.label_mounth2.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F);
+            this.label_mounth2.ForeColor = System.Drawing.Color.White;
+            this.label_mounth2.Location = new System.Drawing.Point(7, 6);
+            this.label_mounth2.Name = "label_mounth2";
+            this.label_mounth2.Size = new System.Drawing.Size(259, 25);
+            this.label_mounth2.TabIndex = 113;
+            this.label_mounth2.Text = "Nombre de bon de commande";
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(150, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(174, 56);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 81);
+            this.pictureBox2.Size = new System.Drawing.Size(91, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // label19
+            // label_NumBcMounth
             // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.label19.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label19.Location = new System.Drawing.Point(14, 29);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(115, 46);
-            this.label19.TabIndex = 4;
-            this.label19.Text = "01/09";
+            this.label_NumBcMounth.AutoSize = true;
+            this.label_NumBcMounth.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
+            this.label_NumBcMounth.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label_NumBcMounth.Location = new System.Drawing.Point(8, 63);
+            this.label_NumBcMounth.Name = "label_NumBcMounth";
+            this.label_NumBcMounth.Size = new System.Drawing.Size(40, 46);
+            this.label_NumBcMounth.TabIndex = 4;
+            this.label_NumBcMounth.Text = "0";
             // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.label21.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label21.Location = new System.Drawing.Point(14, 80);
+            this.label21.Location = new System.Drawing.Point(4, 121);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 30);
+            this.label21.Size = new System.Drawing.Size(109, 15);
             this.label21.TabIndex = 5;
-            this.label21.Text = "15 New File\r\n\r\n";
+            this.label21.Text = "2 nouveaux fichiers";
             // 
             // panel11
             // 
@@ -252,7 +233,7 @@ namespace Projet_Onssa
             this.panel11.Controls.Add(this.button27);
             this.panel11.Controls.Add(this.button28);
             this.panel11.Controls.Add(this.button29);
-            this.panel11.Location = new System.Drawing.Point(159, 451);
+            this.panel11.Location = new System.Drawing.Point(234, 441);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(0, 0);
             this.panel11.TabIndex = 107;
@@ -371,92 +352,47 @@ namespace Projet_Onssa
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(13)))), ((int)(((byte)(31)))));
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(675, 441);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.pictureBox10);
+            this.panel1.Controls.Add(this.label17);
+            this.panel1.Controls.Add(this.label_Compte);
+            this.panel1.Location = new System.Drawing.Point(797, 244);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 110);
+            this.panel1.Size = new System.Drawing.Size(278, 149);
             this.panel1.TabIndex = 109;
             // 
-            // label1
+            // dataSetReport1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(0, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 23);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "First Report Date :";
+            this.dataSetReport1.DataSetName = "DataSetReport";
+            this.dataSetReport1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pictureBox3
+            // cartesianChart
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(150, 13);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(87, 81);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(14, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 46);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "01/09";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(14, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 30);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "15 New File\r\n\r\n";
-            // 
-            // chart1
-            // 
-            this.chart1.BorderlineColor = System.Drawing.Color.Black;
-            this.chart1.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.DashDot;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(43, 47);
-            this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(600, 504);
-            this.chart1.TabIndex = 111;
-            this.chart1.Text = "chart1";
+            this.cartesianChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cartesianChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
+            this.cartesianChart.Location = new System.Drawing.Point(45, 55);
+            this.cartesianChart.Name = "cartesianChart";
+            this.cartesianChart.Size = new System.Drawing.Size(734, 520);
+            this.cartesianChart.TabIndex = 113;
+            this.cartesianChart.Text = "cartesianChart";
             // 
             // Statistique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(946, 614);
-            this.Controls.Add(this.chart1);
+            this.ClientSize = new System.Drawing.Size(1096, 595);
+            this.Controls.Add(this.cartesianChart);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel11);
             this.Name = "Statistique";
             this.Text = "Statistique";
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
+            this.Load += new System.EventHandler(this.Statistique_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -467,28 +403,23 @@ namespace Projet_Onssa
             this.panel11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReport1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label_Compte;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label_taille;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label_NumBcMounth;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Button button22;
@@ -500,10 +431,9 @@ namespace Projet_Onssa
         private System.Windows.Forms.Button button28;
         private System.Windows.Forms.Button button29;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private Bunifu.Framework.UI.BunifuCustomLabel label_mounth2;
+        private Bunifu.Framework.UI.BunifuCustomLabel label_mounth;
+        private DataSetReport dataSetReport1;
+        private LiveCharts.WinForms.CartesianChart cartesianChart;
     }
 }

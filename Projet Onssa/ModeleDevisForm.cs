@@ -170,10 +170,22 @@ namespace Projet_Onssa
                                     p.Unite = dr.Cells[1].Value.ToString();
                                     p.Quantite = int.Parse(dr.Cells[2].Value.ToString());
                                     p.Prix_Unitaire = int.Parse(dr.Cells[3].Value.ToString());
+                                    p.Prix_Total = p.Prix_Unitaire * p.Quantite;
                                     md.ListProduit.Add(p);
                                 }
 
                             }
+
+                            double total = 0;
+
+                            foreach (Produit pr in md.ListProduit)
+                            {
+                                total = pr.Prix_Total + total;
+                            }
+
+                            md.Total = total;
+                            md.Tva = total * 20 / 100;
+                            md.Ttc = md.Tva + md.Total;
 
                             ctx.SaveChanges();
                             cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
