@@ -22,7 +22,6 @@ namespace Projet_Onssa
         DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
         DataSetReportTableAdapters.ModeleDevisProduitTableAdapter dap = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
         DataSetReportTableAdapters.ProduitSetTableAdapter dapr = new DataSetReportTableAdapters.ProduitSetTableAdapter();
-        
         private void cb_Bc_SelectedIndexChanged(object sender, EventArgs e)
         {
             try

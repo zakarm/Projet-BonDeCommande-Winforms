@@ -137,7 +137,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_code.DataSource = ctx.LrgSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("Lrg sélectionné est déja Utilisé dans une ligne");
                     }

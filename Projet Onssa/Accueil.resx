@@ -214,20 +214,6 @@
         LazwyN5o/AeJH4tCzHWk8gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_Accueil.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAgJJREFUWEft
-        ls9KG1EUxuMurnXbB/ANpDaFKorU2mpXFkqJLyDuooggpQXd+AYidNesuyilr9PWdf/ZihJ/39xzZ8aZ
-        TO6Y3Ozyg4/JfOfce76ZSRwbE0ah1+s9kOy0BLUZdIDeoxWz48CGz9A/05rZd8A/RZ7/aNpKo8FGr9C1
-        djWu0KaVU/DOkmrGrJWGh03WkK5a+DsgdHxqbQmcxw3ABlvIX/kv9Bgto78yQHdiw9rjBmBxabiVVFOQ
-        3ypAGoJjnAAsLA5vmb+HOva5FAKNHoBFm0gbivzw48RxHJlXDPHVfUy5XwAW1BnuyYdQr7ixo6d+AJqL
-        wx+Zr9teRf5x+BB56gWgsWp4vysv0u9OeMIBaMoP/4nuM9zjQ7RQPsRr+ZXQEGO4p18I/Tl+Lr8EBf1s
-        8sMXzB/0zEP478TgEBhVw4e58iJVd2JdvgpP0KVc+IOWzI8x3HNse66i/KyWzA/JqTMWrfEkceLSL0RX
-        xhw6Rw+tYR8NQm+9T6hbkDz/Zqxiz2born9E8zpPwQgNFzvWXoLarmsZSBKiBIVtVw/ywpaUUM21BGnb
-        kgzMus89RoATW5Ih09WCTAJMAowtwDtXC/LGlpSg1nYtQd7akgzMl64W5Bs6RJ2C5H1HdUj/dU/BnEJf
-        kvJ4+YymbOxdKDSRvgsXKDY/kN6wTRsHjcYtEL9t27TYUYYAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="button18.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -553,7 +539,7 @@
         cg/3iHc8DqhUTgAheQxHbgGRNAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_Mdevis.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Pvj.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAmFJREFUWEft
         lz2I1EAUx+MHKPgBilp4iCKCWNhYKrZiZyOIvcUhWApyjdvokkk2uUwuK+rMRE/hYA87C0WsLBQLQRC0
@@ -569,7 +555,7 @@
         PwF1RnxPplUq+gAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btn_Pvj.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Mddevis.Iconimage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAArxJREFUWEfV
         Vz2IE0EUPkFRUVAU0dZCxEYbFfwDRfxBFMXSXkW0EUEFLSJCdGcnyc5MUoSdmTUiiIeFna2IWoigFido

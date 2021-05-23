@@ -38,11 +38,13 @@
         <AssociationConnector Association="OnssaModel.PVJFournisseur1" />
         <AssociationConnector Association="OnssaModel.ModeleDevisConsultation" />
         <EntityTypeShape EntityType="OnssaModel.Ligne" Width="1.5" PointX="0.75" PointY="18.75" />
-        <EntityTypeShape EntityType="OnssaModel.Paragraphe" Width="1.5" PointX="6" PointY="19.625" />
-        <EntityTypeShape EntityType="OnssaModel.Lrg" Width="1.5" PointX="3.25" PointY="19.375" />
+        <EntityTypeShape EntityType="OnssaModel.Paragraphe" Width="1.5" PointX="4.5" PointY="24.125" />
+        <EntityTypeShape EntityType="OnssaModel.Lrg" Width="1.5" PointX="0.75" PointY="23.625" />
         <AssociationConnector Association="OnssaModel.ParagrapheLrg" />
         <AssociationConnector Association="OnssaModel.LigneLrg" />
         <AssociationConnector Association="OnssaModel.MorasseLigne" />
+        <EntityTypeShape EntityType="OnssaModel.LettreConsultation" Width="1.5" PointX="0.5" PointY="1.875" />
+        <AssociationConnector Association="OnssaModel.LettreConsultationConsultation" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

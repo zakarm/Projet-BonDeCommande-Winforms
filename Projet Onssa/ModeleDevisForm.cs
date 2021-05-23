@@ -121,7 +121,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("le ModeleDevis est déja utilisé ");
                     }
@@ -190,6 +190,7 @@ namespace Projet_Onssa
                             ctx.SaveChanges();
                             cb_NumMdevis.DataSource = ctx.ModeleDevisSet.ToList();
                             dgv_Produits.Rows.Clear();
+                            DeclarationGlobale.vider(this);
                             MessageBox.Show("Modifié avec succès");
                         }
                     }

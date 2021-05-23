@@ -49,7 +49,7 @@ namespace Projet_Onssa
 
                         ctx.FournisseurSet.Add(of);
                         ctx.SaveChanges();
-
+                         DeclarationGlobale.vider(this);
                         cb_Nom.DataSource = ctx.FournisseurSet.ToList();
 
                         MessageBox.Show("Ajouté avec succès");
@@ -91,6 +91,7 @@ namespace Projet_Onssa
                         ctx.Entry(f).State = System.Data.Entity.EntityState.Modified;
 
                         ctx.SaveChanges();
+                        DeclarationGlobale.vider(this);
 
                         cb_Nom.DataSource = ctx.FournisseurSet.ToList();
 
@@ -124,7 +125,7 @@ namespace Projet_Onssa
                         MessageBox.Show("Supprimer avec succès");
                         DeclarationGlobale.vider(this);
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("le Fournisseur est déja utilisé dans un procès verbal de jugement ou dans un consultation");
                     }

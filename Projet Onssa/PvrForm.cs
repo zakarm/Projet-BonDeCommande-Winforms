@@ -186,7 +186,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumPvr.DataSource = ctx.PVRSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
                         MessageBox.Show("Procès verbal de reception déja Utilisé ");
                     }

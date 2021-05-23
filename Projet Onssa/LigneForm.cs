@@ -136,7 +136,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_codeligne.DataSource = ctx.LigneSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("la Ligne est déja utilisé dans une morasse");
                     }

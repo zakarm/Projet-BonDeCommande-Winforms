@@ -110,13 +110,13 @@ namespace Projet_Onssa
                        DeclarationGlobale.vider(this);
                        cb_NumBc.DataSource = ctx.BCSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
                         MessageBox.Show("Bon de commande déja utilisé dans une Fiche d'engagement");
                     }
-                    catch (Exception o)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(o.Message);
+                        MessageBox.Show(ex.Message);
                     }
 
                 }

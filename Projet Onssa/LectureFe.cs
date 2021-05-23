@@ -21,11 +21,15 @@ namespace Projet_Onssa
         DataSetReportTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetReportTableAdapters.ModeleDevisSetTableAdapter();
         DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
         DataSetReportTableAdapters.ModeleDevisProduitTableAdapter dap = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
-       
+        DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
+        DataSetReportTableAdapters.LettreConsultationSetTableAdapter dl = new DataSetReportTableAdapters.LettreConsultationSetTableAdapter();
+
         private void LectureFe_Load(object sender, EventArgs e)
         {
             dapf.Fill(ds.PVJFournisseur);
             dap.Fill(ds.ModeleDevisProduit);
+            dl.Fill(ds.LettreConsultationSet);
+
 
 
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -82,12 +86,13 @@ namespace Projet_Onssa
 
                     int NumPvj = int.Parse(query.FirstOrDefault().NumPvj.ToString());
                     int NumCon= int.Parse(query.FirstOrDefault().NumCon.ToString());
+
                     //var query2 = from m in ctx.ModeleDevisSet
                     //             join con in ctx.ConsultationSet
                     //                on m.InfoConsultation.IdConsultation equals con.IdConsultation
                     //             where con.IdConsultation == i
                     //             select m;
-
+                    dac.FillByCon(ds.ConsultationSet, NumCon);
                     dam.FillBypvj(ds.ModeleDevisSet, NumPvj, NumCon);
                     CrystalReportFe ce = new CrystalReportFe();
                     ce.SetDataSource(ds);

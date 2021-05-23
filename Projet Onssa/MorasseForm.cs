@@ -121,7 +121,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_Morasse.DataSource = ctx.MorasseSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show(" Morasse déja Utilisé ");
                     }

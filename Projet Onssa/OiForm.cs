@@ -92,7 +92,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumOi.DataSource = ctx.OISet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("ordre d'imputation déja utilisé ");
                     }

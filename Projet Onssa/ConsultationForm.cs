@@ -104,6 +104,7 @@ namespace Projet_Onssa
                     {
                         con.NumConsultation = cb_Num.Text;
                         con.ObjetConsultation = txtarea_Objet.Text;
+                        lettreEnvoi(con);
                         ctx.Entry(con).State = System.Data.Entity.EntityState.Added;
                         ctx.ConsultationSet.Add(con);
 
@@ -153,13 +154,13 @@ namespace Projet_Onssa
                         MessageBox.Show("Supprimé avec succès");
                         DeclarationGlobale.vider(this);
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException)
                     {
                         MessageBox.Show("consultation déja utilisé dans un procès verbal de jugment ou dans un modele de devis");
                     }
-                    catch(Exception o)
+                    catch(Exception ex)
                     {
-                        MessageBox.Show(o.Message);
+                        MessageBox.Show(ex.Message);
 
                     }
 
@@ -168,34 +169,60 @@ namespace Projet_Onssa
             }
             
         }
+        public void lettreEnvoi(Consultation cc)
+        {
+
+            LettreConsultation l = new LettreConsultation();
+            int numEnvoi = int.Parse(txt_numenvoi.Text);
+            int somme = 0;
+            l.DateLettre = DateTime.Parse(date_envoi.Value.ToString());
+
+            foreach (Fournisseur f in cc.ListFournisseur)
+            {
+                l.IdLettre = numEnvoi + somme;
+                cc.LettreConsultation.Add(l);
+                somme++;
+            }
+        }
 
         //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (r == DialogResult.Yes)
+            try
             {
-                using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+
+
+                DialogResult r = MessageBox.Show("Êtes-vous sûr de vouloir Modifier ?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (r == DialogResult.Yes)
                 {
-                    ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
-                    c.ListFournisseur.Clear();
-
-                    if (check(c, ctx) == true)
+                    using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                     {
-                        c.NumConsultation = cb_Num.Text;
-                        c.ObjetConsultation = txtarea_Objet.Text;
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        c.ListFournisseur.Clear();
+                        c.LettreConsultation.Clear();
 
-                        ctx.SaveChanges();
-                        cb_Num.DataSource = ctx.ConsultationSet.ToList();
+                        if (check(c, ctx) == true)
+                        {
+                            
+                            c.NumConsultation = cb_Num.Text;
+                            c.ObjetConsultation = txtarea_Objet.Text;
+                            lettreEnvoi(c);
+                            ctx.SaveChanges();
+                            cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
-                        MessageBox.Show("Modifié avec succès");
-                        DeclarationGlobale.vider(this);
-                    }
-                    else
-                    {
-                        MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Modifié avec succès");
+                            DeclarationGlobale.vider(this);
+                        }
+                        else
+                        {
+                            MessageBox.Show("sélectionner un fournisseur d'abord !", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
            
         }
@@ -210,6 +237,8 @@ namespace Projet_Onssa
                 {
                     c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
                     txtarea_Objet.Text = c.ObjetConsultation;
+                    txt_numenvoi.Text = c.LettreConsultation.FirstOrDefault().IdLettre.ToString();
+                    date_envoi.Value = c.LettreConsultation.FirstOrDefault().DateLettre;
 
                     foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
                     {

@@ -88,7 +88,7 @@ namespace Projet_Onssa
                     }
 
                 }
-                catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                catch (System.Data.Entity.Infrastructure.DbUpdateException )
                 {
                     MessageBox.Show("la Fiche d'engagement est déja Utilisé dans un ordre d'imputation");
                 }

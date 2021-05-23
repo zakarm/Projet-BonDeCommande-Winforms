@@ -88,7 +88,7 @@ namespace Projet_Onssa
             // 
             // btn_Supprimer
             // 
-            this.btn_Supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -124,7 +124,7 @@ namespace Projet_Onssa
             // 
             // btn_Ajouter
             // 
-            this.btn_Ajouter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Ajouter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -160,7 +160,7 @@ namespace Projet_Onssa
             // 
             // btn_Modifier
             // 
-            this.btn_Modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -211,7 +211,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(22, 25);
+            this.label2.Location = new System.Drawing.Point(22, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 21);
             this.label2.TabIndex = 51;
@@ -299,7 +299,7 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Produits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Produits.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_Produits.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgv_Produits.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Produits.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_Produits.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -329,12 +329,12 @@ namespace Projet_Onssa
             this.dgv_Produits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Produits.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.dgv_Produits.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Produits.Location = new System.Drawing.Point(26, 53);
+            this.dgv_Produits.Location = new System.Drawing.Point(26, 54);
             this.dgv_Produits.Name = "dgv_Produits";
             this.dgv_Produits.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dgv_Produits.RowHeadersWidth = 5;
             this.dgv_Produits.RowTemplate.Height = 80;
-            this.dgv_Produits.Size = new System.Drawing.Size(875, 184);
+            this.dgv_Produits.Size = new System.Drawing.Size(875, 182);
             this.dgv_Produits.TabIndex = 69;
             // 
             // Column1

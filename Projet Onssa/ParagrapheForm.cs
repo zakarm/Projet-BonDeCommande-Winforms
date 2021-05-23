@@ -100,7 +100,7 @@ namespace Projet_Onssa
 
                         MessageBox.Show("Supprimer avec succès");
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show(" Paragraphe déja Utilisé ");
                     }

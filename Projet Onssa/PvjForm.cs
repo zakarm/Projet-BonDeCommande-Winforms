@@ -203,7 +203,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("le procès verbal de jugement est déja Utilisé ");
                     }

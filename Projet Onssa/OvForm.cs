@@ -159,13 +159,13 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_NumOv.DataSource = ctx.OPSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("lordre de virement est déja utilisé ");
                     }
-                    catch (Exception o)
+                    catch (Exception ex)
                     {
-                        MessageBox.Show(o.Message);
+                        MessageBox.Show(ex.Message);
                     }
 
                 }

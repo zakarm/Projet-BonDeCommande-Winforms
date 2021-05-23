@@ -179,7 +179,7 @@ namespace Projet_Onssa
             // 
             // btn_Supprimer
             // 
-            this.btn_Supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Supprimer.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Supprimer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -215,7 +215,7 @@ namespace Projet_Onssa
             // 
             // btn_Ajouter
             // 
-            this.btn_Ajouter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Ajouter.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Ajouter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -251,7 +251,7 @@ namespace Projet_Onssa
             // 
             // btn_Modifier
             // 
-            this.btn_Modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));
+            this.btn_Modifier.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn_Modifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

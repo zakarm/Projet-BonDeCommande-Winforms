@@ -91,7 +91,7 @@ namespace Projet_Onssa
                         cb_NumOp.DataSource = ctx.OPSet.ToList();
 
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("l'ordre de paiement est déja utilisé ");
                     }

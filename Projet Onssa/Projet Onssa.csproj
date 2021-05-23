@@ -115,6 +115,9 @@
     <Compile Include="CommissionForm.Designer.cs">
       <DependentUpon>CommissionForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Consultation.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="CrystalReportBC.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,11 +181,20 @@
       <DependentUpon>DataSetReport.xsd</DependentUpon>
     </Compile>
     <Compile Include="DeclarationGlobale.cs" />
+    <Compile Include="FE.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="FeForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FeForm.Designer.cs">
       <DependentUpon>FeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fournisseur.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="GestionCompte.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GuideApplication.cs">
       <SubType>Form</SubType>
@@ -214,23 +226,11 @@
     <Compile Include="Connexion.Designer.cs">
       <DependentUpon>Connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Consultation.cs">
-      <DependentUpon>OnssaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="ConsultationForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ConsultationForm.Designer.cs">
       <DependentUpon>ConsultationForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FE.cs">
-      <DependentUpon>OnssaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Fournisseur.cs">
-      <DependentUpon>OnssaModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="GestionCompte.cs">
-      <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="GestionCompteForm.cs">
       <SubType>Form</SubType>
@@ -279,6 +279,9 @@
     </Compile>
     <Compile Include="LecturePvr.Designer.cs">
       <DependentUpon>LecturePvr.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LettreConsultation.cs">
+      <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Ligne.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
@@ -590,6 +593,9 @@
       <LastGenOutput>OnssaModel.cs</LastGenOutput>
       <DependentUpon>OnssaModel.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\icons8_homeb_321.png" />
+    <None Include="Resources\icons8_homeb_16.png" />
+    <None Include="Resources\icons8_homeb_32.png" />
     <None Include="Resources\onssa-logo-2518B6FC5C-seeklogo.com.png" />
     <None Include="Resources\dd_32.png" />
     <None Include="Resources\icons8_exit_32.png" />

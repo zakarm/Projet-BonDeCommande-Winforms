@@ -105,7 +105,7 @@ namespace Projet_Onssa
                         DeclarationGlobale.vider(this);
                         cb_Nom.DataSource = ctx.CommissionSet.ToList();
                     }
-                    catch (System.Data.Entity.Infrastructure.DbUpdateException o)
+                    catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
                         MessageBox.Show("La commission est déja utilisé dans un procès verbal ");
                     }

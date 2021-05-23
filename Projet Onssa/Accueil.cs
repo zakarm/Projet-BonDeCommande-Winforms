@@ -145,9 +145,9 @@ namespace Projet_Onssa
         {
             btn_Consultation.Visible = false;
             panel_Consultation.Visible = false;
-            btn_Pvj.Visible = false;
+            btn_Mddevis.Visible = false;
             panel_Pvj.Visible = false;
-            btn_Mdevis.Visible = false;
+            btn_Pvj.Visible = false;
             panel_Mdevis.Visible = false;
             btn_Bc.Visible = false;
             panel_Bc.Visible = false;
@@ -186,9 +186,9 @@ namespace Projet_Onssa
 
             btn_Consultation.Visible = s;
             panel_Consultation.Visible = s;
-            btn_Pvj.Visible = s;
+            btn_Mddevis.Visible = s;
             panel_Pvj.Visible = s;
-            btn_Mdevis.Visible = s;
+            btn_Pvj.Visible = s;
             panel_Mdevis.Visible = s;
             btn_Bc.Visible = s;
             panel_Bc.Visible =s;
@@ -269,23 +269,9 @@ namespace Projet_Onssa
             label_txt.Text = "Commission";
         }
 
-        private void btn_Pvj_Click(object sender, EventArgs e)
-        {
-            tabPage1.Text = "Lecture Procès verbal de jugement";
-            tabPage2.Text = "Gestion Procès verbal de jugement";
-            label_txt.Name = "pvj";
-            openchildformtab(new LecturePvj(),new PvjForm());
-            label_txt.Text = "Procès verbal de jugement";
-        }
+       
 
-        private void btn_Mdevis_Click(object sender, EventArgs e)
-        {
-            tabPage1.Text = "Lecture Modele Devis";
-            tabPage2.Text = "Gestion Modele Devis";
-            label_txt.Name = "md";
-            openchildformtab(new LectureMd(),new ModeleDevisForm());
-            label_txt.Text = "Modele Devis";
-        }
+       
 
         private void btn_Bc_Click(object sender, EventArgs e)
         {
@@ -376,13 +362,13 @@ namespace Projet_Onssa
                     btn_Bc_Click(sender, e);
                     break;
                 case "md":
-                    btn_Mdevis_Click(sender, e);
+                    btn_Mddevis_Click(sender, e);
                     break;
                 case "pvr":
                     btn_Pvr_Click(sender, e);
                     break;
                 case "pvj":
-                    btn_Pvj_Click(sender, e);
+                    btn_Pvj_Click_1(sender, e);
                     break;
 
             }
@@ -799,6 +785,24 @@ namespace Projet_Onssa
         private void btn_Accueil_Click(object sender, EventArgs e)
         {
             openchildform(new Statistique());
+        }
+
+        private void btn_Pvj_Click_1(object sender, EventArgs e)
+        {
+            tabPage1.Text = "Lecture Procès verbal de jugement";
+            tabPage2.Text = "Gestion Procès verbal de jugement";
+            label_txt.Name = "pvj";
+            openchildformtab(new LecturePvj(), new PvjForm());
+            label_txt.Text = "Procès verbal de jugement";
+        }
+
+        private void btn_Mddevis_Click(object sender, EventArgs e)
+        {
+            tabPage1.Text = "Lecture Modele Devis";
+            tabPage2.Text = "Gestion Modele Devis";
+            label_txt.Name = "md";
+            openchildformtab(new LectureMd(), new ModeleDevisForm());
+            label_txt.Text = "Modele Devis";
         }
     }
 }

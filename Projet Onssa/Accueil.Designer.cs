@@ -72,9 +72,9 @@ namespace Projet_Onssa
             this.panel_Bc = new System.Windows.Forms.Panel();
             this.btn_Bc = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Mdevis = new System.Windows.Forms.Panel();
-            this.btn_Mdevis = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel_Pvj = new System.Windows.Forms.Panel();
             this.btn_Pvj = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel_Pvj = new System.Windows.Forms.Panel();
+            this.btn_Mddevis = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_Consultation = new System.Windows.Forms.Panel();
             this.btn_Consultation = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_headermenu = new System.Windows.Forms.Panel();
@@ -392,12 +392,12 @@ namespace Projet_Onssa
             this.btn_Accueil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Accueil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Accueil.BorderRadius = 0;
-            this.btn_Accueil.ButtonText = "     Accueil";
+            this.btn_Accueil.ButtonText = "   Accueil";
             this.btn_Accueil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Accueil.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Accueil.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Accueil.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Accueil.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Accueil.Iconimage")));
+            this.btn_Accueil.Iconimage = global::Projet_Onssa.Properties.Resources.icons8_homeb_321;
             this.btn_Accueil.Iconimage_right = null;
             this.btn_Accueil.Iconimage_right_Selected = null;
             this.btn_Accueil.Iconimage_Selected = null;
@@ -416,7 +416,7 @@ namespace Projet_Onssa
             this.btn_Accueil.selected = false;
             this.btn_Accueil.Size = new System.Drawing.Size(66, 48);
             this.btn_Accueil.TabIndex = 5;
-            this.btn_Accueil.Text = "     Accueil";
+            this.btn_Accueil.Text = "   Accueil";
             this.btn_Accueil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Accueil.Textcolor = System.Drawing.Color.White;
             this.btn_Accueil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -499,9 +499,9 @@ namespace Projet_Onssa
             this.panel_subsubmenu.Controls.Add(this.panel_Bc);
             this.panel_subsubmenu.Controls.Add(this.btn_Bc);
             this.panel_subsubmenu.Controls.Add(this.panel_Mdevis);
-            this.panel_subsubmenu.Controls.Add(this.btn_Mdevis);
-            this.panel_subsubmenu.Controls.Add(this.panel_Pvj);
             this.panel_subsubmenu.Controls.Add(this.btn_Pvj);
+            this.panel_subsubmenu.Controls.Add(this.panel_Pvj);
+            this.panel_subsubmenu.Controls.Add(this.btn_Mddevis);
             this.panel_subsubmenu.Controls.Add(this.panel_Consultation);
             this.panel_subsubmenu.Controls.Add(this.btn_Consultation);
             this.panel_subsubmenu.Controls.Add(this.panel_headermenu);
@@ -1100,56 +1100,6 @@ namespace Projet_Onssa
             this.panel_Mdevis.MouseEnter += new System.EventHandler(this.panel_Mdevis_MouseEnter);
             this.panel_Mdevis.MouseHover += new System.EventHandler(this.panel_Mdevis_MouseHover);
             // 
-            // btn_Mdevis
-            // 
-            this.btn_Mdevis.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Mdevis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Mdevis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_Mdevis.BorderRadius = 0;
-            this.btn_Mdevis.ButtonText = "Modele de devis";
-            this.btn_Mdevis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_Mdevis.DisabledColor = System.Drawing.Color.Gray;
-            this.btn_Mdevis.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Mdevis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.btn_Mdevis.Iconcolor = System.Drawing.Color.Transparent;
-            this.btn_Mdevis.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Mdevis.Iconimage")));
-            this.btn_Mdevis.Iconimage_right = null;
-            this.btn_Mdevis.Iconimage_right_Selected = null;
-            this.btn_Mdevis.Iconimage_Selected = null;
-            this.btn_Mdevis.IconMarginLeft = -1;
-            this.btn_Mdevis.IconMarginRight = 0;
-            this.btn_Mdevis.IconRightVisible = true;
-            this.btn_Mdevis.IconRightZoom = 0D;
-            this.btn_Mdevis.IconVisible = true;
-            this.btn_Mdevis.IconZoom = 40D;
-            this.btn_Mdevis.IsTab = false;
-            this.btn_Mdevis.Location = new System.Drawing.Point(0, 130);
-            this.btn_Mdevis.Name = "btn_Mdevis";
-            this.btn_Mdevis.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.btn_Mdevis.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.btn_Mdevis.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.btn_Mdevis.selected = false;
-            this.btn_Mdevis.Size = new System.Drawing.Size(237, 53);
-            this.btn_Mdevis.TabIndex = 27;
-            this.btn_Mdevis.Text = "Modele de devis";
-            this.btn_Mdevis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_Mdevis.Textcolor = System.Drawing.Color.White;
-            this.btn_Mdevis.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Mdevis.Click += new System.EventHandler(this.btn_Mdevis_Click);
-            this.btn_Mdevis.MouseEnter += new System.EventHandler(this.btn_Mdevis_MouseEnter);
-            this.btn_Mdevis.MouseHover += new System.EventHandler(this.btn_Mdevis_MouseHover);
-            // 
-            // panel_Pvj
-            // 
-            this.panel_Pvj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.panel_Pvj.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_Pvj.Location = new System.Drawing.Point(0, 123);
-            this.panel_Pvj.Name = "panel_Pvj";
-            this.panel_Pvj.Size = new System.Drawing.Size(237, 7);
-            this.panel_Pvj.TabIndex = 26;
-            this.panel_Pvj.MouseEnter += new System.EventHandler(this.panel_Pvj_MouseEnter);
-            this.panel_Pvj.MouseHover += new System.EventHandler(this.panel_Pvj_MouseHover);
-            // 
             // btn_Pvj
             // 
             this.btn_Pvj.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
@@ -1173,21 +1123,71 @@ namespace Projet_Onssa
             this.btn_Pvj.IconVisible = true;
             this.btn_Pvj.IconZoom = 40D;
             this.btn_Pvj.IsTab = false;
-            this.btn_Pvj.Location = new System.Drawing.Point(0, 70);
+            this.btn_Pvj.Location = new System.Drawing.Point(0, 130);
             this.btn_Pvj.Name = "btn_Pvj";
             this.btn_Pvj.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Pvj.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
             this.btn_Pvj.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
             this.btn_Pvj.selected = false;
             this.btn_Pvj.Size = new System.Drawing.Size(237, 53);
-            this.btn_Pvj.TabIndex = 25;
+            this.btn_Pvj.TabIndex = 27;
             this.btn_Pvj.Text = "Procès verbal de jugement";
             this.btn_Pvj.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Pvj.Textcolor = System.Drawing.Color.White;
             this.btn_Pvj.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Pvj.Click += new System.EventHandler(this.btn_Pvj_Click);
-            this.btn_Pvj.MouseEnter += new System.EventHandler(this.btn_Pvj_MouseEnter);
-            this.btn_Pvj.MouseHover += new System.EventHandler(this.btn_Pvj_MouseHover);
+            this.btn_Pvj.Click += new System.EventHandler(this.btn_Pvj_Click_1);
+            this.btn_Pvj.MouseEnter += new System.EventHandler(this.btn_Mdevis_MouseEnter);
+            this.btn_Pvj.MouseHover += new System.EventHandler(this.btn_Mdevis_MouseHover);
+            // 
+            // panel_Pvj
+            // 
+            this.panel_Pvj.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.panel_Pvj.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Pvj.Location = new System.Drawing.Point(0, 123);
+            this.panel_Pvj.Name = "panel_Pvj";
+            this.panel_Pvj.Size = new System.Drawing.Size(237, 7);
+            this.panel_Pvj.TabIndex = 26;
+            this.panel_Pvj.MouseEnter += new System.EventHandler(this.panel_Pvj_MouseEnter);
+            this.panel_Pvj.MouseHover += new System.EventHandler(this.panel_Pvj_MouseHover);
+            // 
+            // btn_Mddevis
+            // 
+            this.btn_Mddevis.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Mddevis.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Mddevis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_Mddevis.BorderRadius = 0;
+            this.btn_Mddevis.ButtonText = "Modele de devis";
+            this.btn_Mddevis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_Mddevis.DisabledColor = System.Drawing.Color.Gray;
+            this.btn_Mddevis.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Mddevis.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.btn_Mddevis.Iconcolor = System.Drawing.Color.Transparent;
+            this.btn_Mddevis.Iconimage = ((System.Drawing.Image)(resources.GetObject("btn_Mddevis.Iconimage")));
+            this.btn_Mddevis.Iconimage_right = null;
+            this.btn_Mddevis.Iconimage_right_Selected = null;
+            this.btn_Mddevis.Iconimage_Selected = null;
+            this.btn_Mddevis.IconMarginLeft = -1;
+            this.btn_Mddevis.IconMarginRight = 0;
+            this.btn_Mddevis.IconRightVisible = true;
+            this.btn_Mddevis.IconRightZoom = 0D;
+            this.btn_Mddevis.IconVisible = true;
+            this.btn_Mddevis.IconZoom = 40D;
+            this.btn_Mddevis.IsTab = false;
+            this.btn_Mddevis.Location = new System.Drawing.Point(0, 70);
+            this.btn_Mddevis.Name = "btn_Mddevis";
+            this.btn_Mddevis.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
+            this.btn_Mddevis.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
+            this.btn_Mddevis.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
+            this.btn_Mddevis.selected = false;
+            this.btn_Mddevis.Size = new System.Drawing.Size(237, 53);
+            this.btn_Mddevis.TabIndex = 25;
+            this.btn_Mddevis.Text = "Modele de devis";
+            this.btn_Mddevis.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btn_Mddevis.Textcolor = System.Drawing.Color.White;
+            this.btn_Mddevis.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mddevis.Click += new System.EventHandler(this.btn_Mddevis_Click);
+            this.btn_Mddevis.MouseEnter += new System.EventHandler(this.btn_Pvj_MouseEnter);
+            this.btn_Mddevis.MouseHover += new System.EventHandler(this.btn_Pvj_MouseHover);
             // 
             // panel_Consultation
             // 
@@ -1373,7 +1373,7 @@ namespace Projet_Onssa
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(954, 627);
+            this.tabPage2.Size = new System.Drawing.Size(1017, 634);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Gestion ";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -1442,9 +1442,9 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_Bc;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Bc;
         private System.Windows.Forms.Panel panel_Mdevis;
-        private Bunifu.Framework.UI.BunifuFlatButton btn_Mdevis;
-        private System.Windows.Forms.Panel panel_Pvj;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Pvj;
+        private System.Windows.Forms.Panel panel_Pvj;
+        private Bunifu.Framework.UI.BunifuFlatButton btn_Mddevis;
         private System.Windows.Forms.Panel panel_Consultation;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Consultation;
         private System.Windows.Forms.Panel panel_headermenu;
