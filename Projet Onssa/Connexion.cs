@@ -22,6 +22,8 @@ namespace Projet_Onssa
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
+                //connection string= &quot; Data Source=DESKTOP-IRG7UCK\SQLEXPRESS;Initial Catalog=Onssa_Projet;Integrated Security=True; MultipleActiveResultSets=True;App=EntityFramework&quot;
+                // connectionString="&quot; Data Source=DESKTOP-IRG7UCK\SQLEXPRESS;Initial Catalog=Onssa_Projet;Integrated Security=True"
                 ///////////methode recherche simple//////////////
 
                 //bool teste = false;
