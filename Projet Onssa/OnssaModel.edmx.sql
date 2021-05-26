@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/23/2021 14:44:45
+-- Date Created: 05/26/2021 17:50:14
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -355,6 +355,7 @@ GO
 CREATE TABLE [dbo].[LettreConsultationSet] (
     [IdLettre] int  NOT NULL,
     [DateLettre] datetime  NOT NULL,
+    [DateDelai] datetime  NOT NULL,
     [Consultation_IdConsultation] int  NULL
 );
 GO

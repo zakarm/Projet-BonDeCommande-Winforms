@@ -316,6 +316,7 @@
     </Key>
     <Property Name="IdLettre" Type="int" Nullable="false" />
     <Property Name="DateLettre" Type="datetime" Nullable="false" />
+    <Property Name="DateDelai" Type="datetime" Nullable="false" />
     <Property Name="Consultation_IdConsultation" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="PVJFournisseur">
@@ -1050,6 +1051,7 @@
           <Property Name="IdLettre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <Property Name="DateLettre" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="Consultation" Relationship="OnssaModel.LettreConsultationConsultation" FromRole="LettreConsultation" ToRole="Consultation" />
+          <Property Name="DateDelai" Type="DateTime" Nullable="false" />
         </EntityType>
         <Association Name="LettreConsultationConsultation">
           <End Type="OnssaModel.LettreConsultation" Role="LettreConsultation" Multiplicity="*" />
@@ -1249,6 +1251,7 @@
         <MappingFragment StoreEntitySet="LettreConsultationSet">
           <ScalarProperty Name="IdLettre" ColumnName="IdLettre" />
           <ScalarProperty Name="DateLettre" ColumnName="DateLettre" />
+          <ScalarProperty Name="DateDelai" ColumnName="DateDelai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

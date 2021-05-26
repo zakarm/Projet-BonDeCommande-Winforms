@@ -16,6 +16,7 @@ namespace Projet_Onssa
     {
         public int IdLettre { get; set; }
         public System.DateTime DateLettre { get; set; }
+        public System.DateTime DateDelai { get; set; }
     
         public virtual Consultation Consultation { get; set; }
     }

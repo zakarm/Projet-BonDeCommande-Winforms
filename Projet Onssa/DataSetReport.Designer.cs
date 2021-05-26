@@ -7459,6 +7459,8 @@ namespace Projet_Onssa {
             
             private global::System.Data.DataColumn columnDateLettre;
             
+            private global::System.Data.DataColumn columnDateDelai;
+            
             private global::System.Data.DataColumn columnConsultation_IdConsultation;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7512,6 +7514,14 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DateDelaiColumn {
+                get {
+                    return this.columnDateDelai;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public global::System.Data.DataColumn Consultation_IdConsultationColumn {
                 get {
                     return this.columnConsultation_IdConsultation;
@@ -7555,14 +7565,15 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public LettreConsultationSetRow AddLettreConsultationSetRow(int IdLettre, System.DateTime DateLettre, ConsultationSetRow parentConsultationSetRowByFK_LettreConsultationConsultation) {
+            public LettreConsultationSetRow AddLettreConsultationSetRow(int IdLettre, System.DateTime DateLettre, System.DateTime DateDelai, ConsultationSetRow parentConsultationSetRowByFK_LettreConsultationConsultation) {
                 LettreConsultationSetRow rowLettreConsultationSetRow = ((LettreConsultationSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         IdLettre,
                         DateLettre,
+                        DateDelai,
                         null};
                 if ((parentConsultationSetRowByFK_LettreConsultationConsultation != null)) {
-                    columnValuesArray[2] = parentConsultationSetRowByFK_LettreConsultationConsultation[0];
+                    columnValuesArray[3] = parentConsultationSetRowByFK_LettreConsultationConsultation[0];
                 }
                 rowLettreConsultationSetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowLettreConsultationSetRow);
@@ -7595,6 +7606,7 @@ namespace Projet_Onssa {
             internal void InitVars() {
                 this.columnIdLettre = base.Columns["IdLettre"];
                 this.columnDateLettre = base.Columns["DateLettre"];
+                this.columnDateDelai = base.Columns["DateDelai"];
                 this.columnConsultation_IdConsultation = base.Columns["Consultation_IdConsultation"];
             }
             
@@ -7605,6 +7617,8 @@ namespace Projet_Onssa {
                 base.Columns.Add(this.columnIdLettre);
                 this.columnDateLettre = new global::System.Data.DataColumn("DateLettre", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateLettre);
+                this.columnDateDelai = new global::System.Data.DataColumn("DateDelai", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDateDelai);
                 this.columnConsultation_IdConsultation = new global::System.Data.DataColumn("Consultation_IdConsultation", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnConsultation_IdConsultation);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -7612,6 +7626,7 @@ namespace Projet_Onssa {
                 this.columnIdLettre.AllowDBNull = false;
                 this.columnIdLettre.Unique = true;
                 this.columnDateLettre.AllowDBNull = false;
+                this.columnDateDelai.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9750,6 +9765,17 @@ namespace Projet_Onssa {
                 }
                 set {
                     this[this.tableLettreConsultationSet.DateLettreColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public System.DateTime DateDelai {
+                get {
+                    return ((global::System.DateTime)(this[this.tableLettreConsultationSet.DateDelaiColumn]));
+                }
+                set {
+                    this[this.tableLettreConsultationSet.DateDelaiColumn] = value;
                 }
             }
             
@@ -17526,34 +17552,39 @@ FROM            FournisseurSet INNER JOIN
             tableMapping.DataSetTable = "LettreConsultationSet";
             tableMapping.ColumnMappings.Add("IdLettre", "IdLettre");
             tableMapping.ColumnMappings.Add("DateLettre", "DateLettre");
+            tableMapping.ColumnMappings.Add("DateDelai", "DateDelai");
             tableMapping.ColumnMappings.Add("Consultation_IdConsultation", "Consultation_IdConsultation");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[LettreConsultationSet] WHERE (([IdLettre] = @Original_IdLettre) AND ([DateLettre] = @Original_DateLettre) AND ((@IsNull_Consultation_IdConsultation = 1 AND [Consultation_IdConsultation] IS NULL) OR ([Consultation_IdConsultation] = @Original_Consultation_IdConsultation)))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[LettreConsultationSet] WHERE (([IdLettre] = @Original_IdLettre) AND ([DateLettre] = @Original_DateLettre) AND ([DateDelai] = @Original_DateDelai) AND ((@IsNull_Consultation_IdConsultation = 1 AND [Consultation_IdConsultation] IS NULL) OR ([Consultation_IdConsultation] = @Original_Consultation_IdConsultation)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdLettre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[LettreConsultationSet] ([IdLettre], [DateLettre], [Consultation_IdConsultation]) VALUES (@IdLettre, @DateLettre, @Consultation_IdConsultation);
-SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultationSet WHERE (IdLettre = @IdLettre)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[LettreConsultationSet] ([IdLettre], [DateLettre], [DateDelai], [Consultation_IdConsultation]) VALUES (@IdLettre, @DateLettre, @DateDelai, @Consultation_IdConsultation);
+SELECT IdLettre, DateLettre, DateDelai, Consultation_IdConsultation FROM LettreConsultationSet WHERE (IdLettre = @IdLettre)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdLettre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[LettreConsultationSet] SET [IdLettre] = @IdLettre, [DateLettre] = @DateLettre, [Consultation_IdConsultation] = @Consultation_IdConsultation WHERE (([IdLettre] = @Original_IdLettre) AND ([DateLettre] = @Original_DateLettre) AND ((@IsNull_Consultation_IdConsultation = 1 AND [Consultation_IdConsultation] IS NULL) OR ([Consultation_IdConsultation] = @Original_Consultation_IdConsultation)));
-SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultationSet WHERE (IdLettre = @IdLettre)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[LettreConsultationSet] SET [IdLettre] = @IdLettre, [DateLettre] = @DateLettre, [DateDelai] = @DateDelai, [Consultation_IdConsultation] = @Consultation_IdConsultation WHERE (([IdLettre] = @Original_IdLettre) AND ([DateLettre] = @Original_DateLettre) AND ([DateDelai] = @Original_DateDelai) AND ((@IsNull_Consultation_IdConsultation = 1 AND [Consultation_IdConsultation] IS NULL) OR ([Consultation_IdConsultation] = @Original_Consultation_IdConsultation)));
+SELECT IdLettre, DateLettre, DateDelai, Consultation_IdConsultation FROM LettreConsultationSet WHERE (IdLettre = @IdLettre)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdLettre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdLettre", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Consultation_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Consultation_IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
@@ -17571,8 +17602,8 @@ SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultation
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM dbo.LettreConsultat" +
-                "ionSet";
+            this._commandCollection[0].CommandText = "SELECT IdLettre, DateLettre, DateDelai, Consultation_IdConsultation FROM dbo.Lett" +
+                "reConsultationSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -17633,16 +17664,17 @@ SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdLettre, System.DateTime Original_DateLettre, global::System.Nullable<int> Original_Consultation_IdConsultation) {
+        public virtual int Delete(int Original_IdLettre, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, global::System.Nullable<int> Original_Consultation_IdConsultation) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdLettre));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DateLettre));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateDelai));
             if ((Original_Consultation_IdConsultation.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Consultation_IdConsultation.Value));
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Consultation_IdConsultation.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17664,14 +17696,15 @@ SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int IdLettre, System.DateTime DateLettre, global::System.Nullable<int> Consultation_IdConsultation) {
+        public virtual int Insert(int IdLettre, System.DateTime DateLettre, System.DateTime DateDelai, global::System.Nullable<int> Consultation_IdConsultation) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((int)(IdLettre));
             this.Adapter.InsertCommand.Parameters[1].Value = ((System.DateTime)(DateLettre));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateDelai));
             if ((Consultation_IdConsultation.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Consultation_IdConsultation.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Consultation_IdConsultation.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17693,24 +17726,26 @@ SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int IdLettre, System.DateTime DateLettre, global::System.Nullable<int> Consultation_IdConsultation, int Original_IdLettre, System.DateTime Original_DateLettre, global::System.Nullable<int> Original_Consultation_IdConsultation) {
+        public virtual int Update(int IdLettre, System.DateTime DateLettre, System.DateTime DateDelai, global::System.Nullable<int> Consultation_IdConsultation, int Original_IdLettre, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, global::System.Nullable<int> Original_Consultation_IdConsultation) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(IdLettre));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((System.DateTime)(DateLettre));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateDelai));
             if ((Consultation_IdConsultation.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Consultation_IdConsultation.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Consultation_IdConsultation.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_IdLettre));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(Original_DateLettre));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Original_IdLettre));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(Original_DateLettre));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_DateDelai));
             if ((Original_Consultation_IdConsultation.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_Consultation_IdConsultation.Value));
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Consultation_IdConsultation.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -17732,8 +17767,8 @@ SELECT IdLettre, DateLettre, Consultation_IdConsultation FROM LettreConsultation
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime DateLettre, global::System.Nullable<int> Consultation_IdConsultation, int Original_IdLettre, System.DateTime Original_DateLettre, global::System.Nullable<int> Original_Consultation_IdConsultation) {
-            return this.Update(Original_IdLettre, DateLettre, Consultation_IdConsultation, Original_IdLettre, Original_DateLettre, Original_Consultation_IdConsultation);
+        public virtual int Update(System.DateTime DateLettre, System.DateTime DateDelai, global::System.Nullable<int> Consultation_IdConsultation, int Original_IdLettre, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, global::System.Nullable<int> Original_Consultation_IdConsultation) {
+            return this.Update(Original_IdLettre, DateLettre, DateDelai, Consultation_IdConsultation, Original_IdLettre, Original_DateLettre, Original_DateDelai, Original_Consultation_IdConsultation);
         }
     }
     

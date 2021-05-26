@@ -176,6 +176,7 @@ namespace Projet_Onssa
             int numEnvoi = int.Parse(txt_numenvoi.Text);
             int somme = 0;
             l.DateLettre = DateTime.Parse(date_envoi.Value.ToString());
+            l.DateDelai = DateTime.Parse(date_delai.Value.ToString());
 
             foreach (Fournisseur f in cc.ListFournisseur)
             {

@@ -21,7 +21,7 @@ namespace Projet_Onssa
         DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
         DataSetReportTableAdapters.ConsultationFournisseurTableAdapter dacf = new DataSetReportTableAdapters.ConsultationFournisseurTableAdapter();
         DataSetReportTableAdapters.FournisseurSetTableAdapter daf = new DataSetReportTableAdapters.FournisseurSetTableAdapter();
-        
+        DataSetReportTableAdapters.LettreConsultationSetTableAdapter dal = new DataSetReportTableAdapters.LettreConsultationSetTableAdapter();
 
         private void cb_Consultation_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -67,6 +67,7 @@ namespace Projet_Onssa
             int i = int.Parse(cb_Fournisseur.SelectedValue.ToString()); 
             daf.FillByFournniseur(ds.FournisseurSet,i);
             dac.FillByCon(ds.ConsultationSet, (int)cb_Consultation.SelectedValue);
+            dal.Fill(ds.LettreConsultationSet);
             CrystalReportConsultation ce = new CrystalReportConsultation();
 
             ce.SetDataSource(ds);
