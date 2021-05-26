@@ -36,7 +36,6 @@ namespace Projet_Onssa
             this.label9 = new System.Windows.Forms.Label();
             this.Numé = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.dgv_Commission = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.Num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +46,6 @@ namespace Projet_Onssa
             this.data_Pvr = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_Oi = new System.Windows.Forms.ComboBox();
-            this.txt_dateString = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_Destination = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumPvr = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -77,7 +75,7 @@ namespace Projet_Onssa
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(23, 339);
+            this.label9.Location = new System.Drawing.Point(20, 265);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 168;
@@ -88,7 +86,7 @@ namespace Projet_Onssa
             this.Numé.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Numé.AutoSize = true;
             this.Numé.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numé.Location = new System.Drawing.Point(20, 156);
+            this.Numé.Location = new System.Drawing.Point(20, 169);
             this.Numé.Name = "Numé";
             this.Numé.Size = new System.Drawing.Size(168, 21);
             this.Numé.TabIndex = 165;
@@ -104,17 +102,6 @@ namespace Projet_Onssa
             this.label1.Size = new System.Drawing.Size(335, 21);
             this.label1.TabIndex = 163;
             this.label1.Text = "Numéro du Procès verbal de reception";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 247);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
-            this.label2.TabIndex = 164;
-            this.label2.Text = "DateS";
             // 
             // dgv_Commission
             // 
@@ -197,14 +184,12 @@ namespace Projet_Onssa
             this.materialCard1.Controls.Add(this.data_Pvr);
             this.materialCard1.Controls.Add(this.bunifuMetroTextbox3);
             this.materialCard1.Controls.Add(this.cb_Oi);
-            this.materialCard1.Controls.Add(this.txt_dateString);
             this.materialCard1.Controls.Add(this.txt_Destination);
             this.materialCard1.Controls.Add(this.cb_NumPvr);
             this.materialCard1.Controls.Add(this.bunifuMetroTextbox1);
             this.materialCard1.Controls.Add(this.label9);
             this.materialCard1.Controls.Add(this.label1);
             this.materialCard1.Controls.Add(this.Numé);
-            this.materialCard1.Controls.Add(this.label2);
             this.materialCard1.Depth = 0;
             this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialCard1.Location = new System.Drawing.Point(12, 9);
@@ -223,7 +208,7 @@ namespace Projet_Onssa
             this.data_Pvr.ForeColor = System.Drawing.Color.Black;
             this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.data_Pvr.FormatCustom = null;
-            this.data_Pvr.Location = new System.Drawing.Point(27, 369);
+            this.data_Pvr.Location = new System.Drawing.Point(24, 295);
             this.data_Pvr.Name = "data_Pvr";
             this.data_Pvr.Size = new System.Drawing.Size(364, 30);
             this.data_Pvr.TabIndex = 169;
@@ -240,7 +225,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(22, 362);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(19, 288);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
@@ -253,29 +238,11 @@ namespace Projet_Onssa
             this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Oi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.Location = new System.Drawing.Point(27, 188);
+            this.cb_Oi.Location = new System.Drawing.Point(27, 201);
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(358, 28);
             this.cb_Oi.TabIndex = 164;
             this.cb_Oi.SelectedIndexChanged += new System.EventHandler(this.cb_Oi_SelectedIndexChanged_1);
-            // 
-            // txt_dateString
-            // 
-            this.txt_dateString.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_dateString.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_dateString.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_dateString.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_dateString.BorderThickness = 1;
-            this.txt_dateString.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_dateString.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_dateString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_dateString.isPassword = false;
-            this.txt_dateString.Location = new System.Drawing.Point(21, 270);
-            this.txt_dateString.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_dateString.Name = "txt_dateString";
-            this.txt_dateString.Size = new System.Drawing.Size(375, 44);
-            this.txt_dateString.TabIndex = 146;
-            this.txt_dateString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // txt_Destination
             // 
@@ -288,7 +255,7 @@ namespace Projet_Onssa
             this.txt_Destination.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Destination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Destination.isPassword = false;
-            this.txt_Destination.Location = new System.Drawing.Point(20, 178);
+            this.txt_Destination.Location = new System.Drawing.Point(20, 191);
             this.txt_Destination.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Destination.Name = "txt_Destination";
             this.txt_Destination.Size = new System.Drawing.Size(375, 44);
@@ -449,12 +416,10 @@ namespace Projet_Onssa
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label Numé;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
         private MaterialSkin.Controls.MaterialCard materialCard1;
         private System.Windows.Forms.ComboBox cb_Oi;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txt_dateString;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Destination;
         private System.Windows.Forms.ComboBox cb_NumPvr;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2021 17:50:14
+-- Date Created: 05/26/2021 19:31:31
 -- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
@@ -208,7 +208,6 @@ GO
 -- Creating table 'PVJSet'
 CREATE TABLE [dbo].[PVJSet] (
     [IdPVJ] int IDENTITY(1,1) NOT NULL,
-    [DateString] nvarchar(max)  NOT NULL,
     [DatePvj] datetime  NOT NULL,
     [NumPvj] nvarchar(max)  NOT NULL,
     [InfoConsultation_IdConsultation] int  NOT NULL,
@@ -243,7 +242,6 @@ GO
 -- Creating table 'PVRSet'
 CREATE TABLE [dbo].[PVRSet] (
     [IdPVR] int IDENTITY(1,1) NOT NULL,
-    [DateString] nvarchar(max)  NOT NULL,
     [DatePVR] datetime  NOT NULL,
     [NumPvr] nvarchar(max)  NOT NULL,
     [InfoOI_IdOI] int  NOT NULL

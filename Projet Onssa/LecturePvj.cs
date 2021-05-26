@@ -82,6 +82,11 @@ namespace Projet_Onssa
 
                         dac.FillByPvj(ds.CommissionSet, IdPvj);
 
+
+                        DateTime d = query.FirstOrDefault().DatePvj;
+                        NumToString num = new NumToString();
+                        DateToString dt = new DateToString();
+                        string s = "L'an "+ num.Ninetotwelvedigit(d.Year.ToString())+" le "+num.Ninetotwelvedigit(d.Day.ToString()) +" du mois de "+ dt.DateMounth(d.Month);
                         CrystalReportPvj ce = new CrystalReportPvj();
                         ce.SetDataSource(ds);
                         ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
@@ -90,6 +95,8 @@ namespace Projet_Onssa
                         ce.SetParameterValue("tva", query.FirstOrDefault().Tva.ToString());
                         ce.SetParameterValue("ttc", query.FirstOrDefault().Ttc.ToString());
                         ce.SetParameterValue("datepvj", query.FirstOrDefault().DatePvj.ToString());
+                        ce.SetParameterValue("numcon", query.FirstOrDefault().NumCon.ToString());
+                        ce.SetParameterValue("date", s);
                         ce.SetParameterValue("numm", cc.virgule(query.FirstOrDefault().Ttc.ToString()));
                         crystalReportViewer1.ReportSource = ce;
                         crystalReportViewer1.Refresh();

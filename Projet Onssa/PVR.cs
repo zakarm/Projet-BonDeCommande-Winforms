@@ -21,7 +21,6 @@ namespace Projet_Onssa
         }
     
         public int IdPVR { get; set; }
-        public string DateString { get; set; }
         public System.DateTime DatePVR { get; set; }
         public string NumPvr { get; set; }
     

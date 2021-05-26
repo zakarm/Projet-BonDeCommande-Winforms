@@ -49,7 +49,7 @@ namespace Projet_Onssa
                         ModeleDevis m = new ModeleDevis();
                         Consultation con = ctx.ConsultationSet.Find(cb_consultation.SelectedValue);
                         Fournisseur f = ctx.FournisseurSet.Find(cb_NumF.SelectedValue);
-                        Produit p;
+                        
                         m.NumDevis = cb_NumMdevis.Text;
                         m.InfoFournisseur = f;
                         m.Date = date_MDevis.Value;
@@ -59,7 +59,7 @@ namespace Projet_Onssa
                         {
                             if (dr.Cells[1].Value != null)
                             {
-                                p = new Produit();
+                                Produit  p = new Produit();
                                 p.Designation = dr.Cells[0].Value.ToString();
                                 p.Unite = dr.Cells[1].Value.ToString();
                                 p.Quantite = int.Parse(dr.Cells[2].Value.ToString());

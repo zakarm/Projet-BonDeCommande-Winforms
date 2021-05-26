@@ -47,7 +47,7 @@ namespace Projet_Onssa
                     var query = from pvr in ctx.PVRSet
                                 join oi in ctx.OISet on pvr.InfoOI.IdOI equals oi.IdOI
                                 join fe in ctx.FESet on oi.InfoFE.IdFE equals fe.IdFE
-                                join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC 
+                                join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC
                                 join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
                                 join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                                 m.InfoFournisseur.IdFournisseur
@@ -60,18 +60,28 @@ namespace Projet_Onssa
                                     Objet = m.InfoConsultation.ObjetConsultation,
                                     Datebc = bc.DateBC,
                                     NumPvr = pvr.IdPVR,
+                                    DatePvr = pvr.DatePVR,
                                 };
                     if (query.FirstOrDefault() != null)
                     {
                         dac.FillByPvr(ds.CommissionSet,int.Parse(query.FirstOrDefault().NumPvr.ToString()));
-                    CrystalReportPvr ce = new CrystalReportPvr();
-                    ce.SetDataSource(ds);
-                    ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
-                    ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
-                    ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
-                    ce.SetParameterValue("datebc", query.FirstOrDefault().Datebc.ToString());
-                    crystalReportViewer1.ReportSource = ce;
-                    crystalReportViewer1.Refresh();
+
+
+                        DateTime d = query.FirstOrDefault().DatePvr;
+                        NumToString num = new NumToString();
+                        DateToString dt = new DateToString();
+                        string s = "L'an " + num.Ninetotwelvedigit(d.Year.ToString()) + " le " + num.Ninetotwelvedigit(d.Day.ToString()) + " du mois de " + dt.DateMounth(d.Month);
+
+
+                        CrystalReportPvr ce = new CrystalReportPvr();
+                        ce.SetDataSource(ds);
+                        ce.SetParameterValue("date", s);
+                        ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
+                        ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
+                        ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
+                        ce.SetParameterValue("datebc", query.FirstOrDefault().Datebc.ToString());
+                        crystalReportViewer1.ReportSource = ce;
+                        crystalReportViewer1.Refresh();
 
                     }
                     

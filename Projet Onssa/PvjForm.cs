@@ -151,7 +151,6 @@ namespace Projet_Onssa
 
                         pv.NumPvj = cb_NumPvj.Text;
                         pv.InfoConsultation = c;
-                        pv.DateString = txtarea_DateString.Text;
                         pv.DatePvj = date_Pvj.Value;
                         pv.InfoFournisseur = f;
 
@@ -241,7 +240,6 @@ namespace Projet_Onssa
                             f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
-                            pn.DateString = txtarea_DateString.Text;
                             pn.DatePvj = date_Pvj.Value;
                             pn.InfoFournisseur = f;
 
@@ -296,7 +294,6 @@ namespace Projet_Onssa
                 {
                     pn = ctx.PVJSet.Find(cb_NumPvj.SelectedValue);
                     cb_NumC.Text = pn.InfoConsultation.NumConsultation;
-                    txtarea_DateString.Text = pn.DateString;
                     date_Pvj.Value = pn.DatePvj;
                     cb_fchoisie.Text = pn.InfoFournisseur.Nom;
 

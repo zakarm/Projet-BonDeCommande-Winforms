@@ -38,7 +38,6 @@ namespace Projet_Onssa
                             OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
                             p.NumPvr = cb_NumPvr.Text;
                             p.DatePVR = data_Pvr.Value;
-                            p.DateString = txt_dateString.Text;
                             p.InfoOI = oi;
                             ctx.SaveChanges();
                             
@@ -139,7 +138,6 @@ namespace Projet_Onssa
                         OI oi = ctx.OISet.Find(cb_Oi.SelectedValue);
                         pvr.NumPvr = cb_NumPvr.Text;
                         pvr.DatePVR = data_Pvr.Value;
-                        pvr.DateString = txt_dateString.Text;
                         pvr.InfoOI = oi;
                         ctx.PVRSet.Add(pvr);
                         ctx.SaveChanges();
@@ -207,7 +205,6 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     p = ctx.PVRSet.Find(cb_NumPvr.SelectedValue);
-                    txt_dateString.Text = p.DateString;
                     data_Pvr.Value = p.DatePVR;
                     cb_Oi.Text = p.InfoOI.NumOi.ToString();
                     cb_NumPvr.SelectedValue = p.IdPVR;

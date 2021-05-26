@@ -46,13 +46,11 @@ namespace Projet_Onssa
             this.date_Pvj = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumC = new System.Windows.Forms.ComboBox();
-            this.txtarea_DateString = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txt_Adresse = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumPvj = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label5 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.cb_fchoisie = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -335,24 +333,6 @@ namespace Projet_Onssa
             this.cb_NumC.TabIndex = 157;
             this.cb_NumC.SelectedIndexChanged += new System.EventHandler(this.cb_NumC_SelectedIndexChanged);
             // 
-            // txtarea_DateString
-            // 
-            this.txtarea_DateString.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtarea_DateString.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txtarea_DateString.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtarea_DateString.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txtarea_DateString.BorderThickness = 1;
-            this.txtarea_DateString.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtarea_DateString.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtarea_DateString.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtarea_DateString.isPassword = false;
-            this.txtarea_DateString.Location = new System.Drawing.Point(522, 101);
-            this.txtarea_DateString.Margin = new System.Windows.Forms.Padding(4);
-            this.txtarea_DateString.Name = "txtarea_DateString";
-            this.txtarea_DateString.Size = new System.Drawing.Size(375, 35);
-            this.txtarea_DateString.TabIndex = 149;
-            this.txtarea_DateString.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // txt_Adresse
             // 
             this.txt_Adresse.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -425,18 +405,6 @@ namespace Projet_Onssa
             this.label9.TabIndex = 89;
             this.label9.Text = "Consultation ";
             // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(521, 79);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(53, 21);
-            this.label10.TabIndex = 96;
-            this.label10.Text = "Date";
-            // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -490,8 +458,6 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.bunifuMetroTextbox3);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.cb_NumC);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.txtarea_DateString);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.txt_Adresse);
             this.panel1.Controls.Add(this.label5);
@@ -569,13 +535,11 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Fournisseur_Rep;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Commission;
         private System.Windows.Forms.ComboBox cb_NumC;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtarea_DateString;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Adresse;
         private System.Windows.Forms.ComboBox cb_NumPvj;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuDatepicker date_Pvj;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;

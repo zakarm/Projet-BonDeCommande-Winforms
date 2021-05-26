@@ -169,7 +169,6 @@
       <PropertyRef Name="IdPVJ" />
     </Key>
     <Property Name="IdPVJ" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DatePvj" Type="datetime" Nullable="false" />
     <Property Name="NumPvj" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoConsultation_IdConsultation" Type="int" Nullable="false" />
@@ -204,7 +203,6 @@
       <PropertyRef Name="IdPVR" />
     </Key>
     <Property Name="IdPVR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="DateString" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DatePVR" Type="datetime" Nullable="false" />
     <Property Name="NumPvr" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoOI_IdOI" Type="int" Nullable="false" />
@@ -812,7 +810,6 @@
             <PropertyRef Name="IdPVJ" />
           </Key>
           <Property Name="IdPVJ" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DateString" Type="String" Nullable="false" />
           <Property Name="DatePvj" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="ListFournisseursRepondu" Relationship="OnssaModel.PVJFournisseur" FromRole="PVJ" ToRole="Fournisseur" />
           <NavigationProperty Name="ListCommissions" Relationship="OnssaModel.PVJCommission" FromRole="PVJ" ToRole="Commission" />
@@ -852,7 +849,6 @@
             <PropertyRef Name="IdPVR" />
           </Key>
           <Property Name="IdPVR" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="DateString" Type="String" Nullable="false" />
           <Property Name="DatePVR" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="ListCommission" Relationship="OnssaModel.CommissionPVR" FromRole="PVR" ToRole="Commission" />
           <NavigationProperty Name="InfoOI" Relationship="OnssaModel.OIPVR" FromRole="PVR" ToRole="OI" />
@@ -1104,7 +1100,6 @@
       <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.PVJ)">
         <MappingFragment StoreEntitySet="PVJSet">
           <ScalarProperty Name="IdPVJ" ColumnName="IdPVJ" />
-          <ScalarProperty Name="DateString" ColumnName="DateString" />
           <ScalarProperty Name="DatePvj" ColumnName="DatePvj" />
           <ScalarProperty Name="NumPvj" ColumnName="NumPvj" />
         </MappingFragment>
@@ -1138,7 +1133,6 @@
       <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.PVR)">
         <MappingFragment StoreEntitySet="PVRSet">
           <ScalarProperty Name="IdPVR" ColumnName="IdPVR" />
-          <ScalarProperty Name="DateString" ColumnName="DateString" />
           <ScalarProperty Name="DatePVR" ColumnName="DatePVR" />
           <ScalarProperty Name="NumPvr" ColumnName="NumPvr" />
         </MappingFragment>

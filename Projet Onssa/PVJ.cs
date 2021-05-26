@@ -22,7 +22,6 @@ namespace Projet_Onssa
         }
     
         public int IdPVJ { get; set; }
-        public string DateString { get; set; }
         public System.DateTime DatePvj { get; set; }
         public string NumPvj { get; set; }
     
