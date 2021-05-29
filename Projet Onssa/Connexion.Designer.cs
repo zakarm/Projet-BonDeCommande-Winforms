@@ -30,6 +30,7 @@ namespace Projet_Onssa
         private void InitializeComponent()
         {
             this.panel_content = new System.Windows.Forms.Panel();
+            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@ namespace Projet_Onssa
             this.btn_Cnx = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMaterialTextbox4 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel_banner = new System.Windows.Forms.Panel();
-            this.bunifuMaterialTextbox3 = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel_content.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,6 +60,25 @@ namespace Projet_Onssa
             this.panel_content.Size = new System.Drawing.Size(418, 521);
             this.panel_content.TabIndex = 1;
             // 
+            // bunifuMaterialTextbox3
+            // 
+            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
+            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
+            this.bunifuMaterialTextbox3.HintText = "";
+            this.bunifuMaterialTextbox3.isPassword = true;
+            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.LightGray;
+            this.bunifuMaterialTextbox3.LineThickness = 3;
+            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(36, 287);
+            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
+            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(335, 44);
+            this.bunifuMaterialTextbox3.TabIndex = 17;
+            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -73,7 +92,7 @@ namespace Projet_Onssa
             // 
             // bunifuCheckbox1
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.Gainsboro;
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.Gainsboro;
             this.bunifuCheckbox1.Checked = false;
             this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
@@ -184,25 +203,6 @@ namespace Projet_Onssa
             this.panel_banner.Size = new System.Drawing.Size(463, 521);
             this.panel_banner.TabIndex = 0;
             // 
-            // bunifuMaterialTextbox3
-            // 
-            this.bunifuMaterialTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMaterialTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMaterialTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(105)))), ((int)(((byte)(112)))));
-            this.bunifuMaterialTextbox3.HintForeColor = System.Drawing.Color.Empty;
-            this.bunifuMaterialTextbox3.HintText = "";
-            this.bunifuMaterialTextbox3.isPassword = true;
-            this.bunifuMaterialTextbox3.LineFocusedColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineIdleColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineMouseHoverColor = System.Drawing.Color.LightGray;
-            this.bunifuMaterialTextbox3.LineThickness = 3;
-            this.bunifuMaterialTextbox3.Location = new System.Drawing.Point(36, 287);
-            this.bunifuMaterialTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMaterialTextbox3.Name = "bunifuMaterialTextbox3";
-            this.bunifuMaterialTextbox3.Size = new System.Drawing.Size(335, 44);
-            this.bunifuMaterialTextbox3.TabIndex = 17;
-            this.bunifuMaterialTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // Connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,6 +217,7 @@ namespace Projet_Onssa
             this.Name = "Connexion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.Connexion_Load);
             this.panel_content.ResumeLayout(false);
             this.panel_content.PerformLayout();
             this.ResumeLayout(false);

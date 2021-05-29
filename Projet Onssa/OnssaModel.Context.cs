@@ -42,6 +42,5 @@ namespace Projet_Onssa
         public virtual DbSet<Ligne> LigneSet { get; set; }
         public virtual DbSet<Paragraphe> ParagrapheSet { get; set; }
         public virtual DbSet<Lrg> LrgSet { get; set; }
-        public virtual DbSet<LettreConsultation> LettreConsultationSet { get; set; }
     }
 }

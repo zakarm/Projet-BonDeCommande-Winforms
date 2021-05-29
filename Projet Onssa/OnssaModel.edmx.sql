@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2021 19:31:31
--- Generated from EDMX file: C:\Users\lenovo\Desktop\Projet Onssa\Projet Onssa\OnssaModel.edmx
+-- Date Created: 05/29/2021 02:10:40
+-- Generated from EDMX file: C:\Users\lenovo\Desktop\Stage\Projet Onssa\Projet Onssa\OnssaModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -89,9 +89,6 @@ GO
 IF OBJECT_ID(N'[dbo].[FK_MorasseLigne]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[MorasseSet] DROP CONSTRAINT [FK_MorasseLigne];
 GO
-IF OBJECT_ID(N'[dbo].[FK_LettreConsultationConsultation]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[LettreConsultationSet] DROP CONSTRAINT [FK_LettreConsultationConsultation];
-GO
 
 -- --------------------------------------------------
 -- Dropping existing tables
@@ -148,9 +145,6 @@ GO
 IF OBJECT_ID(N'[dbo].[LrgSet]', 'U') IS NOT NULL
     DROP TABLE [dbo].[LrgSet];
 GO
-IF OBJECT_ID(N'[dbo].[LettreConsultationSet]', 'U') IS NOT NULL
-    DROP TABLE [dbo].[LettreConsultationSet];
-GO
 IF OBJECT_ID(N'[dbo].[PVJFournisseur]', 'U') IS NOT NULL
     DROP TABLE [dbo].[PVJFournisseur];
 GO
@@ -201,7 +195,10 @@ GO
 CREATE TABLE [dbo].[ConsultationSet] (
     [IdConsultation] int IDENTITY(1,1) NOT NULL,
     [ObjetConsultation] nvarchar(max)  NOT NULL,
-    [NumConsultation] nvarchar(max)  NOT NULL
+    [NumConsultation] nvarchar(max)  NOT NULL,
+    [DateLettre] datetime  NOT NULL,
+    [DateDelai] datetime  NOT NULL,
+    [NumEnvoi] nvarchar(max)  NOT NULL
 );
 GO
 
@@ -349,15 +346,6 @@ CREATE TABLE [dbo].[LrgSet] (
 );
 GO
 
--- Creating table 'LettreConsultationSet'
-CREATE TABLE [dbo].[LettreConsultationSet] (
-    [IdLettre] int  NOT NULL,
-    [DateLettre] datetime  NOT NULL,
-    [DateDelai] datetime  NOT NULL,
-    [Consultation_IdConsultation] int  NULL
-);
-GO
-
 -- Creating table 'PVJFournisseur'
 CREATE TABLE [dbo].[PVJFournisseur] (
     [ListPVJ1_IdPVJ] int  NOT NULL,
@@ -497,12 +485,6 @@ GO
 ALTER TABLE [dbo].[LrgSet]
 ADD CONSTRAINT [PK_LrgSet]
     PRIMARY KEY CLUSTERED ([CodeLrg] ASC);
-GO
-
--- Creating primary key on [IdLettre] in table 'LettreConsultationSet'
-ALTER TABLE [dbo].[LettreConsultationSet]
-ADD CONSTRAINT [PK_LettreConsultationSet]
-    PRIMARY KEY CLUSTERED ([IdLettre] ASC);
 GO
 
 -- Creating primary key on [ListPVJ1_IdPVJ], [ListFournisseursRepondu_IdFournisseur] in table 'PVJFournisseur'
@@ -867,21 +849,6 @@ GO
 CREATE INDEX [IX_FK_MorasseLigne]
 ON [dbo].[MorasseSet]
     ([Ligne_CodeLigne]);
-GO
-
--- Creating foreign key on [Consultation_IdConsultation] in table 'LettreConsultationSet'
-ALTER TABLE [dbo].[LettreConsultationSet]
-ADD CONSTRAINT [FK_LettreConsultationConsultation]
-    FOREIGN KEY ([Consultation_IdConsultation])
-    REFERENCES [dbo].[ConsultationSet]
-        ([IdConsultation])
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
-GO
-
--- Creating non-clustered index for FOREIGN KEY 'FK_LettreConsultationConsultation'
-CREATE INDEX [IX_FK_LettreConsultationConsultation]
-ON [dbo].[LettreConsultationSet]
-    ([Consultation_IdConsultation]);
 GO
 
 -- --------------------------------------------------

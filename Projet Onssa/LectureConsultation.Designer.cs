@@ -31,9 +31,9 @@ namespace Projet_Onssa
         {
             this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.cb_Consultation = new System.Windows.Forms.ComboBox();
-            this.cb_Fournisseur = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cb_Fournisseur = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // crystalReportViewer1
@@ -58,16 +58,6 @@ namespace Projet_Onssa
             this.cb_Consultation.TabIndex = 1;
             this.cb_Consultation.SelectedIndexChanged += new System.EventHandler(this.cb_Consultation_SelectedIndexChanged);
             // 
-            // cb_Fournisseur
-            // 
-            this.cb_Fournisseur.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.cb_Fournisseur.FormattingEnabled = true;
-            this.cb_Fournisseur.Location = new System.Drawing.Point(634, 23);
-            this.cb_Fournisseur.Name = "cb_Fournisseur";
-            this.cb_Fournisseur.Size = new System.Drawing.Size(155, 21);
-            this.cb_Fournisseur.TabIndex = 2;
-            this.cb_Fournisseur.SelectedIndexChanged += new System.EventHandler(this.cb_Fournisseur_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -86,20 +76,30 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(251)))), ((int)(((byte)(251)))));
             this.label2.Font = new System.Drawing.Font("Bahnschrift", 12F);
-            this.label2.Location = new System.Drawing.Point(632, 3);
+            this.label2.Location = new System.Drawing.Point(633, 3);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 19);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Fournniseur";
+            this.label2.Size = new System.Drawing.Size(97, 19);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Fournisseur";
+            // 
+            // cb_Fournisseur
+            // 
+            this.cb_Fournisseur.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cb_Fournisseur.FormattingEnabled = true;
+            this.cb_Fournisseur.Location = new System.Drawing.Point(635, 25);
+            this.cb_Fournisseur.Name = "cb_Fournisseur";
+            this.cb_Fournisseur.Size = new System.Drawing.Size(155, 21);
+            this.cb_Fournisseur.TabIndex = 7;
+            this.cb_Fournisseur.SelectedIndexChanged += new System.EventHandler(this.cb_Fournisseur_SelectedIndexChanged);
             // 
             // LectureConsultation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(984, 614);
+            this.Controls.Add(this.cb_Fournisseur);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cb_Fournisseur);
             this.Controls.Add(this.cb_Consultation);
             this.Controls.Add(this.crystalReportViewer1);
             this.Name = "LectureConsultation";
@@ -114,8 +114,8 @@ namespace Projet_Onssa
 
         private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
         private System.Windows.Forms.ComboBox cb_Consultation;
-        private System.Windows.Forms.ComboBox cb_Fournisseur;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cb_Fournisseur;
     }
 }

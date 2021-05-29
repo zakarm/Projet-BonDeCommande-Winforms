@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -278,9 +293,6 @@
     <Compile Include="LecturePvr.Designer.cs">
       <DependentUpon>LecturePvr.cs</DependentUpon>
     </Compile>
-    <Compile Include="LettreConsultation.cs">
-      <DependentUpon>OnssaModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Ligne.cs">
       <DependentUpon>OnssaModel.tt</DependentUpon>
     </Compile>
@@ -391,6 +403,12 @@
     </Compile>
     <Compile Include="PvrForm.Designer.cs">
       <DependentUpon>PvrForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Statistique.cs">
       <SubType>Form</SubType>
@@ -531,6 +549,9 @@
     <EmbeddedResource Include="PvrForm.resx">
       <DependentUpon>PvrForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Statistique.resx">
       <DependentUpon>Statistique.cs</DependentUpon>
     </EmbeddedResource>
@@ -591,6 +612,8 @@
       <LastGenOutput>OnssaModel.cs</LastGenOutput>
       <DependentUpon>OnssaModel.edmx</DependentUpon>
     </Content>
+    <None Include="Resources\Sans titre-11.png" />
+    <None Include="Resources\Sans titre-1.png" />
     <None Include="Resources\icons8_homeb_321.png" />
     <None Include="Resources\icons8_homeb_16.png" />
     <None Include="Resources\icons8_homeb_32.png" />
@@ -598,6 +621,18 @@
     <None Include="Resources\dd_32.png" />
     <None Include="Resources\icons8_exit_32.png" />
     <None Include="Resources\icons8_notification_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

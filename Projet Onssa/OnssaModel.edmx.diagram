@@ -43,8 +43,6 @@
         <AssociationConnector Association="OnssaModel.ParagrapheLrg" />
         <AssociationConnector Association="OnssaModel.LigneLrg" />
         <AssociationConnector Association="OnssaModel.MorasseLigne" />
-        <EntityTypeShape EntityType="OnssaModel.LettreConsultation" Width="1.5" PointX="0.5" PointY="1.875" />
-        <AssociationConnector Association="OnssaModel.LettreConsultationConsultation" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

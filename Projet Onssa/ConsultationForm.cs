@@ -104,7 +104,9 @@ namespace Projet_Onssa
                     {
                         con.NumConsultation = cb_Num.Text;
                         con.ObjetConsultation = txtarea_Objet.Text;
-                        lettreEnvoi(con);
+                        con.NumEnvoi = txt_numenvoi.Text;
+                        con.DateLettre = date_envoi.Value;
+                        con.DateDelai = date_delai.Value;
                         ctx.Entry(con).State = System.Data.Entity.EntityState.Added;
                         ctx.ConsultationSet.Add(con);
 
@@ -169,22 +171,7 @@ namespace Projet_Onssa
             }
             
         }
-        public void lettreEnvoi(Consultation cc)
-        {
-
-            LettreConsultation l = new LettreConsultation();
-            int numEnvoi = int.Parse(txt_numenvoi.Text);
-            int somme = 0;
-            l.DateLettre = DateTime.Parse(date_envoi.Value.ToString());
-            l.DateDelai = DateTime.Parse(date_delai.Value.ToString());
-
-            foreach (Fournisseur f in cc.ListFournisseur)
-            {
-                l.IdLettre = numEnvoi + somme;
-                cc.LettreConsultation.Add(l);
-                somme++;
-            }
-        }
+        
 
         //---------------------------------------------Modifier----------------------------------------
         private void btn_Modifier_Click(object sender, EventArgs e)
@@ -200,14 +187,17 @@ namespace Projet_Onssa
                     {
                         ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                         c.ListFournisseur.Clear();
-                        c.LettreConsultation.Clear();
+                        
 
                         if (check(c, ctx) == true)
                         {
                             
                             c.NumConsultation = cb_Num.Text;
                             c.ObjetConsultation = txtarea_Objet.Text;
-                            lettreEnvoi(c);
+                            c.NumEnvoi = txt_numenvoi.Text;
+                            c.DateLettre = date_envoi.Value;
+                            c.DateDelai = date_delai.Value;
+
                             ctx.SaveChanges();
                             cb_Num.DataSource = ctx.ConsultationSet.ToList();
 
@@ -238,9 +228,9 @@ namespace Projet_Onssa
                 {
                     c = ctx.ConsultationSet.Find(cb_Num.SelectedValue);
                     txtarea_Objet.Text = c.ObjetConsultation;
-                    txt_numenvoi.Text = c.LettreConsultation.FirstOrDefault().IdLettre.ToString();
-                    date_envoi.Value = c.LettreConsultation.FirstOrDefault().DateLettre;
-
+                    txt_numenvoi.Text = c.NumEnvoi.ToString();
+                    date_envoi.Value = c.DateLettre;
+                    date_delai.Value = c.DateDelai;
                     foreach (DataGridViewRow drm in dgv_Fournisseur.Rows)
                     {
                         drm.Cells["ck_btn"].Value = false;

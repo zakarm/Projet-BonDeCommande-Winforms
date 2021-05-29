@@ -22,13 +22,11 @@ namespace Projet_Onssa
         DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
         DataSetReportTableAdapters.ModeleDevisProduitTableAdapter dap = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
         DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
-        DataSetReportTableAdapters.LettreConsultationSetTableAdapter dl = new DataSetReportTableAdapters.LettreConsultationSetTableAdapter();
 
         private void LectureFe_Load(object sender, EventArgs e)
         {
             dapf.Fill(ds.PVJFournisseur);
             dap.Fill(ds.ModeleDevisProduit);
-            dl.Fill(ds.LettreConsultationSet);
 
 
 

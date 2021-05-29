@@ -23,7 +23,6 @@
     <EntitySet Name="LigneSet" EntityType="OnssaModel.Store.LigneSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ParagrapheSet" EntityType="OnssaModel.Store.ParagrapheSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="LrgSet" EntityType="OnssaModel.Store.LrgSet" store:Type="Tables" Schema="dbo" />
-    <EntitySet Name="LettreConsultationSet" EntityType="OnssaModel.Store.LettreConsultationSet" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PVJFournisseur" EntityType="OnssaModel.Store.PVJFournisseur" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="PVJCommission" EntityType="OnssaModel.Store.PVJCommission" store:Type="Tables" Schema="dbo" />
     <EntitySet Name="ModeleDevisProduit" EntityType="OnssaModel.Store.ModeleDevisProduit" store:Type="Tables" Schema="dbo" />
@@ -125,10 +124,6 @@
       <End Role="Morasse" EntitySet="MorasseSet" />
       <End Role="Ligne" EntitySet="LigneSet" />
     </AssociationSet>
-    <AssociationSet Name="LettreConsultationConsultation" Association="OnssaModel.Store.LettreConsultationConsultation">
-      <End Role="LettreConsultation" EntitySet="LettreConsultationSet" />
-      <End Role="Consultation" EntitySet="ConsultationSet" />
-    </AssociationSet>
   </EntityContainer>
   <EntityType Name="FournisseurSet">
     <Key>
@@ -163,6 +158,9 @@
     <Property Name="IdConsultation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ObjetConsultation" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NumConsultation" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DateLettre" Type="datetime" Nullable="false" />
+    <Property Name="DateDelai" Type="datetime" Nullable="false" />
+    <Property Name="NumEnvoi" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="PVJSet">
     <Key>
@@ -307,15 +305,6 @@
     <Property Name="DescriptionLrg" Type="nvarchar(max)" Nullable="false" />
     <Property Name="NumLrg" Type="nvarchar(max)" Nullable="false" />
     <Property Name="InfoParagraphe_NumPar" Type="int" Nullable="true" />
-  </EntityType>
-  <EntityType Name="LettreConsultationSet">
-    <Key>
-      <PropertyRef Name="IdLettre" />
-    </Key>
-    <Property Name="IdLettre" Type="int" Nullable="false" />
-    <Property Name="DateLettre" Type="datetime" Nullable="false" />
-    <Property Name="DateDelai" Type="datetime" Nullable="false" />
-    <Property Name="Consultation_IdConsultation" Type="int" Nullable="true" />
   </EntityType>
   <EntityType Name="PVJFournisseur">
     <Key>
@@ -522,18 +511,6 @@
       </Principal>
       <Dependent Role="Morasse">
         <PropertyRef Name="Ligne_CodeLigne" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="LettreConsultationConsultation">
-    <End Role="LettreConsultation" Type="OnssaModel.Store.LettreConsultationSet" Multiplicity="*" />
-    <End Role="Consultation" Type="OnssaModel.Store.ConsultationSet" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="Consultation">
-        <PropertyRef Name="IdConsultation" />
-      </Principal>
-      <Dependent Role="LettreConsultation">
-        <PropertyRef Name="Consultation_IdConsultation" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -755,11 +732,6 @@
             <End Role="Morasse" EntitySet="MorasseSet" />
             <End Role="Ligne" EntitySet="LigneSet" />
           </AssociationSet>
-          <EntitySet Name="LettreConsultationSet" EntityType="OnssaModel.LettreConsultation" />
-          <AssociationSet Name="LettreConsultationConsultation" Association="OnssaModel.LettreConsultationConsultation">
-            <End Role="LettreConsultation" EntitySet="LettreConsultationSet" />
-            <End Role="Consultation" EntitySet="ConsultationSet" />
-          </AssociationSet>
         </EntityContainer>
         <EntityType Name="Fournisseur">
           <Key>
@@ -802,8 +774,10 @@
           <NavigationProperty Name="InfoPVJ" Relationship="OnssaModel.PVJConsultation" FromRole="Consultation" ToRole="PVJ" />
           <NavigationProperty Name="ListFournisseur" Relationship="OnssaModel.ConsultationFournisseur" FromRole="Consultation" ToRole="Fournisseur" />
           <NavigationProperty Name="ListModeleDevis" Relationship="OnssaModel.ModeleDevisConsultation" FromRole="Consultation" ToRole="ModeleDevis" />
-          <NavigationProperty Name="LettreConsultation" Relationship="OnssaModel.LettreConsultationConsultation" FromRole="Consultation" ToRole="LettreConsultation" />
           <Property Name="NumConsultation" Type="String" Nullable="false" />
+          <Property Name="DateLettre" Type="DateTime" Nullable="false" />
+          <Property Name="DateDelai" Type="DateTime" Nullable="false" />
+          <Property Name="NumEnvoi" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="PVJ">
           <Key>
@@ -1040,19 +1014,6 @@
           <End Type="OnssaModel.Morasse" Role="Morasse" Multiplicity="0..1" />
           <End Type="OnssaModel.Ligne" Role="Ligne" Multiplicity="1" />
         </Association>
-        <EntityType Name="LettreConsultation">
-          <Key>
-            <PropertyRef Name="IdLettre" />
-          </Key>
-          <Property Name="IdLettre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="None" />
-          <Property Name="DateLettre" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="Consultation" Relationship="OnssaModel.LettreConsultationConsultation" FromRole="LettreConsultation" ToRole="Consultation" />
-          <Property Name="DateDelai" Type="DateTime" Nullable="false" />
-        </EntityType>
-        <Association Name="LettreConsultationConsultation">
-          <End Type="OnssaModel.LettreConsultation" Role="LettreConsultation" Multiplicity="*" />
-          <End Type="OnssaModel.Consultation" Role="Consultation" Multiplicity="0..1" />
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1093,6 +1054,9 @@
           <ScalarProperty Name="IdConsultation" ColumnName="IdConsultation" />
           <ScalarProperty Name="ObjetConsultation" ColumnName="ObjetConsultation" />
           <ScalarProperty Name="NumConsultation" ColumnName="NumConsultation" />
+          <ScalarProperty Name="DateLettre" ColumnName="DateLettre" />
+          <ScalarProperty Name="DateDelai" ColumnName="DateDelai" />
+          <ScalarProperty Name="NumEnvoi" ColumnName="NumEnvoi" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1237,15 +1201,6 @@
           <ScalarProperty Name="CodeLrg" ColumnName="CodeLrg" />
           <ScalarProperty Name="DescriptionLrg" ColumnName="DescriptionLrg" />
           <ScalarProperty Name="NumLrg" ColumnName="NumLrg" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="LettreConsultationSet">
-      <EntityTypeMapping TypeName="IsTypeOf(OnssaModel.LettreConsultation)">
-        <MappingFragment StoreEntitySet="LettreConsultationSet">
-          <ScalarProperty Name="IdLettre" ColumnName="IdLettre" />
-          <ScalarProperty Name="DateLettre" ColumnName="DateLettre" />
-          <ScalarProperty Name="DateDelai" ColumnName="DateDelai" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -1402,15 +1357,6 @@
       <EndProperty Name="Morasse">
         <ScalarProperty Name="CodeMorasse" ColumnName="CodeMorasse" />
       </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="LettreConsultationConsultation" TypeName="OnssaModel.LettreConsultationConsultation" StoreEntitySet="LettreConsultationSet">
-      <EndProperty Name="Consultation">
-        <ScalarProperty Name="IdConsultation" ColumnName="Consultation_IdConsultation" />
-      </EndProperty>
-      <EndProperty Name="LettreConsultation">
-        <ScalarProperty Name="IdLettre" ColumnName="IdLettre" />
-      </EndProperty>
-      <Condition ColumnName="Consultation_IdConsultation" IsNull="false" />
     </AssociationSetMapping>
   </EntityContainerMapping>
 </Mapping></edmx:Mappings>

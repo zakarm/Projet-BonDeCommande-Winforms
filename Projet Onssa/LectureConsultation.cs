@@ -17,12 +17,12 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
+     
+
         DataSetReport ds = new DataSetReport();
         DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
         DataSetReportTableAdapters.ConsultationFournisseurTableAdapter dacf = new DataSetReportTableAdapters.ConsultationFournisseurTableAdapter();
         DataSetReportTableAdapters.FournisseurSetTableAdapter daf = new DataSetReportTableAdapters.FournisseurSetTableAdapter();
-        DataSetReportTableAdapters.LettreConsultationSetTableAdapter dal = new DataSetReportTableAdapters.LettreConsultationSetTableAdapter();
-
         private void cb_Consultation_SelectedIndexChanged(object sender, EventArgs e)
         {
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
@@ -39,10 +39,11 @@ namespace Projet_Onssa
                                 Nom = f.Nom,
                                 Num = f.IdFournisseur,
                             };
+
                 cb_Fournisseur.DisplayMember = "Nom";
                 cb_Fournisseur.ValueMember = "Num";
                 cb_Fournisseur.DataSource = query.ToList();
-                           
+                
             }
         }
 
@@ -53,26 +54,43 @@ namespace Projet_Onssa
 
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
-                cb_Consultation.DisplayMember = "Numconsultation";
-                cb_Consultation.ValueMember = "idconsultation";
+                cb_Consultation.DisplayMember = "NumConsultation";
+                cb_Consultation.ValueMember = "IdConsultation";
                 cb_Consultation.DataSource= ctx.ConsultationSet.ToList();
 
             }
 
         }
 
+        
+
+
         private void cb_Fournisseur_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            int i = int.Parse(cb_Fournisseur.SelectedValue.ToString()); 
-            daf.FillByFournniseur(ds.FournisseurSet,i);
+            int i = int.Parse(cb_Fournisseur.SelectedValue.ToString());
+            daf.FillByFournniseur(ds.FournisseurSet, i);
             dac.FillByCon(ds.ConsultationSet, (int)cb_Consultation.SelectedValue);
-            dal.Fill(ds.LettreConsultationSet);
-            CrystalReportConsultation ce = new CrystalReportConsultation();
 
-            ce.SetDataSource(ds);
-            crystalReportViewer1.ReportSource = ce;
-            crystalReportViewer1.Refresh();
+            using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
+            {
+                var query = from c in ctx.ConsultationSet
+                            where c.IdConsultation == (int)cb_Consultation.SelectedValue
+                            select new
+                            {
+                                l = c.NumEnvoi
+                            };
+
+
+
+                CrystalReportConsultation ce = new CrystalReportConsultation();
+                int sum = int.Parse(query.FirstOrDefault().l) + cb_Fournisseur.SelectedIndex ;
+                ce.SetDataSource(ds);
+                ce.SetParameterValue("nm", sum.ToString());
+                crystalReportViewer1.ReportSource = ce;
+                crystalReportViewer1.Refresh();
+
+
+            }
         }
     }
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace Projet_Onssa
 {
@@ -15,7 +16,11 @@ namespace Projet_Onssa
     {
         public Connexion()
         {
+            Thread t = new Thread(new ThreadStart(StartForm));
+            t.Start();
+            Thread.Sleep(5000);
             InitializeComponent();
+            t.Abort();
         }
 
         private void btn_Cnx_Click(object sender, EventArgs e)
@@ -67,6 +72,14 @@ namespace Projet_Onssa
             }
         }
 
-      
+        public void StartForm()
+        {
+            Application.Run(new SplashScreen());
+        }
+
+        private void Connexion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
