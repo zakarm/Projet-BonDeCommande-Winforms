@@ -104,7 +104,7 @@ namespace Projet_Onssa
                     {
                         con.NumConsultation = cb_Num.Text;
                         con.ObjetConsultation = txtarea_Objet.Text;
-                        con.NumEnvoi = txt_numenvoi.Text;
+                        con.NumEnvoi = int.Parse( txt_numenvoi.Text);
                         con.DateLettre = date_envoi.Value;
                         con.DateDelai = date_delai.Value;
                         ctx.Entry(con).State = System.Data.Entity.EntityState.Added;
@@ -194,7 +194,7 @@ namespace Projet_Onssa
                             
                             c.NumConsultation = cb_Num.Text;
                             c.ObjetConsultation = txtarea_Objet.Text;
-                            c.NumEnvoi = txt_numenvoi.Text;
+                            c.NumEnvoi = int.Parse(txt_numenvoi.Text); 
                             c.DateLettre = date_envoi.Value;
                             c.DateDelai = date_delai.Value;
 

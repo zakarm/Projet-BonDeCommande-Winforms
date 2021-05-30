@@ -76,6 +76,7 @@ namespace Projet_Onssa
                         CrystalReportPvr ce = new CrystalReportPvr();
                         ce.SetDataSource(ds);
                         ce.SetParameterValue("date", s);
+                        ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
                         ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
                         ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
                         ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());

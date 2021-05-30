@@ -140,7 +140,6 @@ namespace Projet_Onssa
                     Fournisseur f;
                     NumToString tr = new NumToString();
 
-                   
 
                     if (check(dgv_Commission, pv, ctx) == true && check(dgv_Fournisseur_Rep, pv, ctx) == true)
                     {
@@ -229,9 +228,9 @@ namespace Projet_Onssa
                         ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
                         Consultation c = c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
                         Fournisseur f;
-                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                         pn.ListFournisseursRepondu.Clear();
                         pn.ListCommissions.Clear();
+
 
                         if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
                         {

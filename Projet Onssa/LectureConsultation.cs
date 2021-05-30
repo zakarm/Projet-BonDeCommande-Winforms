@@ -83,7 +83,7 @@ namespace Projet_Onssa
 
 
                 CrystalReportConsultation ce = new CrystalReportConsultation();
-                int sum = int.Parse(query.FirstOrDefault().l) + cb_Fournisseur.SelectedIndex ;
+                int sum = query.FirstOrDefault().l + cb_Fournisseur.SelectedIndex ;
                 ce.SetDataSource(ds);
                 ce.SetParameterValue("nm", sum.ToString());
                 crystalReportViewer1.ReportSource = ce;

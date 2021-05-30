@@ -160,7 +160,7 @@
     <Property Name="NumConsultation" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DateLettre" Type="datetime" Nullable="false" />
     <Property Name="DateDelai" Type="datetime" Nullable="false" />
-    <Property Name="NumEnvoi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="NumEnvoi" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="PVJSet">
     <Key>
@@ -777,7 +777,7 @@
           <Property Name="NumConsultation" Type="String" Nullable="false" />
           <Property Name="DateLettre" Type="DateTime" Nullable="false" />
           <Property Name="DateDelai" Type="DateTime" Nullable="false" />
-          <Property Name="NumEnvoi" Type="String" Nullable="false" />
+          <Property Name="NumEnvoi" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="PVJ">
           <Key>

@@ -242,9 +242,33 @@ namespace Projet_Onssa {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_rpt2_numenvoi {
+        public CrystalDecisions.Shared.IParameterField Parameter_lrgD {
             get {
                 return this.DataDefinition.ParameterFields[19];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_ParD {
+            get {
+                return this.DataDefinition.ParameterFields[20];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_ligneD {
+            get {
+                return this.DataDefinition.ParameterFields[21];
+            }
+        }
+        
+        [Browsable(false)]
+        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
+        public CrystalDecisions.Shared.IParameterField Parameter_rpt2_numenvoi {
+            get {
+                return this.DataDefinition.ParameterFields[22];
             }
         }
     }

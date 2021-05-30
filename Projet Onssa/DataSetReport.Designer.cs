@@ -62,6 +62,8 @@ namespace Projet_Onssa {
         
         private ConsultationSetDataTable tableConsultationSet;
         
+        private LettreDataTable tableLettre;
+        
         private global::System.Data.DataRelation relationFK_BCMorasse;
         
         private global::System.Data.DataRelation relationFK_CommissionPVR_Commission;
@@ -196,6 +198,9 @@ namespace Projet_Onssa {
                 }
                 if ((ds.Tables["ConsultationSet"] != null)) {
                     base.Tables.Add(new ConsultationSetDataTable(ds.Tables["ConsultationSet"]));
+                }
+                if ((ds.Tables["Lettre"] != null)) {
+                    base.Tables.Add(new LettreDataTable(ds.Tables["Lettre"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -407,6 +412,16 @@ namespace Projet_Onssa {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public LettreDataTable Lettre {
+            get {
+                return this.tableLettre;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -528,6 +543,9 @@ namespace Projet_Onssa {
                 }
                 if ((ds.Tables["ConsultationSet"] != null)) {
                     base.Tables.Add(new ConsultationSetDataTable(ds.Tables["ConsultationSet"]));
+                }
+                if ((ds.Tables["Lettre"] != null)) {
+                    base.Tables.Add(new LettreDataTable(ds.Tables["Lettre"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -676,6 +694,12 @@ namespace Projet_Onssa {
                     this.tableConsultationSet.InitVars();
                 }
             }
+            this.tableLettre = ((LettreDataTable)(base.Tables["Lettre"]));
+            if ((initTable == true)) {
+                if ((this.tableLettre != null)) {
+                    this.tableLettre.InitVars();
+                }
+            }
             this.relationFK_BCMorasse = this.Relations["FK_BCMorasse"];
             this.relationFK_CommissionPVR_Commission = this.Relations["FK_CommissionPVR_Commission"];
             this.relationFK_BCFE = this.Relations["FK_BCFE"];
@@ -749,6 +773,8 @@ namespace Projet_Onssa {
             base.Tables.Add(this.tablePVRSet);
             this.tableConsultationSet = new ConsultationSetDataTable();
             base.Tables.Add(this.tableConsultationSet);
+            this.tableLettre = new LettreDataTable();
+            base.Tables.Add(this.tableLettre);
             this.relationFK_BCMorasse = new global::System.Data.DataRelation("FK_BCMorasse", new global::System.Data.DataColumn[] {
                         this.tableMorasseSet.CodeColumn}, new global::System.Data.DataColumn[] {
                         this.tableBCSet.InfoMorasse_CodeColumn}, false);
@@ -967,6 +993,12 @@ namespace Projet_Onssa {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializeLettre() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1076,6 +1108,9 @@ namespace Projet_Onssa {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public delegate void ConsultationSetRowChangeEventHandler(object sender, ConsultationSetRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void LettreRowChangeEventHandler(object sender, LettreRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -7437,6 +7472,253 @@ namespace Projet_Onssa {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class LettreDataTable : global::System.Data.TypedTableBase<LettreRow> {
+            
+            private global::System.Data.DataColumn columnNumL;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreDataTable() {
+                this.TableName = "Lettre";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal LettreDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected LettreDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn NumLColumn {
+                get {
+                    return this.columnNumL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreRow this[int index] {
+                get {
+                    return ((LettreRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event LettreRowChangeEventHandler LettreRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event LettreRowChangeEventHandler LettreRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event LettreRowChangeEventHandler LettreRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event LettreRowChangeEventHandler LettreRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddLettreRow(LettreRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreRow AddLettreRow(string NumL) {
+                LettreRow rowLettreRow = ((LettreRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        NumL};
+                rowLettreRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLettreRow);
+                return rowLettreRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                LettreDataTable cln = ((LettreDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new LettreDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnNumL = base.Columns["NumL"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnNumL = new global::System.Data.DataColumn("NumL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNumL);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreRow NewLettreRow() {
+                return ((LettreRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new LettreRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(LettreRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.LettreRowChanged != null)) {
+                    this.LettreRowChanged(this, new LettreRowChangeEvent(((LettreRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.LettreRowChanging != null)) {
+                    this.LettreRowChanging(this, new LettreRowChangeEvent(((LettreRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.LettreRowDeleted != null)) {
+                    this.LettreRowDeleted(this, new LettreRowChangeEvent(((LettreRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.LettreRowDeleting != null)) {
+                    this.LettreRowDeleting(this, new LettreRowChangeEvent(((LettreRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemoveLettreRow(LettreRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSetReport ds = new DataSetReport();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "LettreDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class BCSetRow : global::System.Data.DataRow {
@@ -9427,6 +9709,49 @@ namespace Projet_Onssa {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class LettreRow : global::System.Data.DataRow {
+            
+            private LettreDataTable tableLettre;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal LettreRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableLettre = ((LettreDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string NumL {
+                get {
+                    try {
+                        return ((string)(this[this.tableLettre.NumLColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'NumL\' dans la table \'Lettre\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableLettre.NumLColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsNumLNull() {
+                return this.IsNull(this.tableLettre.NumLColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetNumLNull() {
+                this[this.tableLettre.NumLColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -10058,6 +10383,40 @@ namespace Projet_Onssa {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ConsultationSetRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class LettreRowChangeEvent : global::System.EventArgs {
+            
+            private LettreRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreRowChangeEvent(LettreRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public LettreRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -17526,15 +17885,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._fournisseurReponduSetTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.FournisseurReponduSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -17550,6 +17900,15 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._fournisseurSetTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17607,15 +17966,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._oPSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._oPSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._modeleDevisSetTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.ModeleDevisSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -17625,12 +17975,12 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._commissionSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._oPSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._commissionSetTableAdapter.Update(updatedRows));
+                    result = (result + this._oPSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17643,21 +17993,12 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._commissionSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._pVJFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._pVJFournisseurTableAdapter.Update(updatedRows));
+                    result = (result + this._commissionSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17670,12 +18011,21 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pVJFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(updatedRows));
+                    result = (result + this._pVJFournisseurTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._consultationFournisseurTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17697,6 +18047,15 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._oVSetTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             return result;
         }
         
@@ -17707,14 +18066,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._fournisseurReponduSetTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.FournisseurReponduSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -17728,6 +18079,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._fournisseurSetTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17779,14 +18138,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._oPSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._oPSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._modeleDevisSetTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.ModeleDevisSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -17795,11 +18146,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._commissionSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._oPSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._commissionSetTableAdapter.Update(addedRows));
+                    result = (result + this._oPSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17811,19 +18162,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._commissionSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._pVJFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._pVJFournisseurTableAdapter.Update(addedRows));
+                    result = (result + this._commissionSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17835,11 +18178,19 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pVJFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(addedRows));
+                    result = (result + this._pVJFournisseurTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._consultationFournisseurTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -17859,6 +18210,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._oVSetTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             return result;
         }
         
@@ -17869,6 +18228,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._oVSetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._commissionPVRTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CommissionPVR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -17885,19 +18252,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._pVJCommissionTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._pVJCommissionTableAdapter.Update(deletedRows));
+                    result = (result + this._consultationFournisseurTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17909,19 +18268,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pVJCommissionTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._produitSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ProduitSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._produitSetTableAdapter.Update(deletedRows));
+                    result = (result + this._pVJCommissionTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17933,11 +18284,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._modeleDevisSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ModeleDevisSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._produitSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ProduitSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._modeleDevisSetTableAdapter.Update(deletedRows));
+                    result = (result + this._produitSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17946,6 +18297,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._oPSetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._modeleDevisSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ModeleDevisSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._modeleDevisSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -17997,6 +18356,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._fournisseurSetTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.FournisseurSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -18010,14 +18377,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._fournisseurReponduSetTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

@@ -1798,6 +1798,13 @@ WHERE        (IdConsultation = @num)</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Lettre" msprop:Generator_TableClassName="LettreDataTable" msprop:Generator_TableVarName="tableLettre" msprop:Generator_TablePropName="Lettre" msprop:Generator_RowDeletingName="LettreRowDeleting" msprop:Generator_RowChangingName="LettreRowChanging" msprop:Generator_RowEvHandlerName="LettreRowChangeEventHandler" msprop:Generator_RowDeletedName="LettreRowDeleted" msprop:Generator_UserTableName="Lettre" msprop:Generator_RowChangedName="LettreRowChanged" msprop:Generator_RowEvArgName="LettreRowChangeEvent" msprop:Generator_RowClassName="LettreRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NumL" msprop:Generator_ColumnVarNameInTable="columnNumL" msprop:Generator_ColumnPropNameInRow="NumL" msprop:Generator_ColumnPropNameInTable="NumLColumn" msprop:Generator_UserColumnName="NumL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">

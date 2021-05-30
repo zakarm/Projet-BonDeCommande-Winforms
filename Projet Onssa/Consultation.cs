@@ -26,7 +26,7 @@ namespace Projet_Onssa
         public string NumConsultation { get; set; }
         public System.DateTime DateLettre { get; set; }
         public System.DateTime DateDelai { get; set; }
-        public string NumEnvoi { get; set; }
+        public int NumEnvoi { get; set; }
     
         public virtual PVJ InfoPVJ { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

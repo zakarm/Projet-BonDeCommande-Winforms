@@ -324,7 +324,7 @@ namespace Projet_Onssa
         private void btn_Ov_Click(object sender, EventArgs e)
         {
             label_txt.Text = "Ordre de paiement";
-            label_txt.Name = "Op";
+            label_txt.Name = "op";
             openchildformtab(new LectureOp(), new OpForm());
             tabPage1.Text = "Lecture Ordre de paiement";
             tabPage2.Text = "Gestion Ordre de paiement";

@@ -18,11 +18,11 @@ namespace Projet_Onssa
         }
 
         DataSetReport ds = new DataSetReport();
+        DataRow row;
         DataSetReportTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetReportTableAdapters.ModeleDevisSetTableAdapter();
         DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
         DataSetReportTableAdapters.ModeleDevisProduitTableAdapter dap = new DataSetReportTableAdapters.ModeleDevisProduitTableAdapter();
         DataSetReportTableAdapters.ConsultationSetTableAdapter dac = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
-
         private void LectureFe_Load(object sender, EventArgs e)
         {
             dapf.Fill(ds.PVJFournisseur);
@@ -43,9 +43,11 @@ namespace Projet_Onssa
 
         private void cb_Fe_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+
             try
             {
-
+                
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
@@ -78,10 +80,23 @@ namespace Projet_Onssa
                                     NumPvj = pvj.IdPVJ,
                                     NumCon = pvj.InfoConsultation.IdConsultation,
                                     Rc = m.InfoFournisseur.RC_n,
+                                    idCon = pvj.InfoConsultation.IdConsultation,
+                                    lrgD = bc.InfoMorasse.Ligne.InfoLrg.DescriptionLrg,
+                                    ligneD = bc.InfoMorasse.Ligne.DescriptionLigne,
+                                    ParD = bc.InfoMorasse.Ligne.InfoLrg.InfoParagraphe.DescriptionPar,
+
 
                                 };
-
-
+                    int s = 0;
+                    foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().NumCon).ListFournisseur)
+                    {
+                       
+                        row = ds.Lettre.NewRow();
+                        row[0] = ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).NumEnvoi + s;
+                        ds.Lettre.Rows.Add(row);
+                        s++;
+                    }
+                   
                     int NumPvj = int.Parse(query.FirstOrDefault().NumPvj.ToString());
                     int NumCon= int.Parse(query.FirstOrDefault().NumCon.ToString());
 
@@ -90,10 +105,16 @@ namespace Projet_Onssa
                     //                on m.InfoConsultation.IdConsultation equals con.IdConsultation
                     //             where con.IdConsultation == i
                     //             select m;
+
                     dac.FillByCon(ds.ConsultationSet, NumCon);
+
                     dam.FillBypvj(ds.ModeleDevisSet, NumPvj, NumCon);
+
                     CrystalReportFe ce = new CrystalReportFe();
                     ce.SetDataSource(ds);
+                    ce.SetParameterValue("lrgD", query.FirstOrDefault().lrgD.ToString());
+                    ce.SetParameterValue("ligneD", query.FirstOrDefault().ligneD.ToString());
+                    ce.SetParameterValue("ParD", query.FirstOrDefault().ParD.ToString());
                     ce.SetParameterValue("numfe", query.FirstOrDefault().Numfe.ToString());
                     ce.SetParameterValue("if", query.FirstOrDefault().Ifn.ToString());
                     ce.SetParameterValue("cnss", query.FirstOrDefault().Cnss.ToString());

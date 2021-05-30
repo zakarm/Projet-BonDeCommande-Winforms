@@ -71,16 +71,21 @@ namespace Projet_Onssa
                     
                     if(query.FirstOrDefault().NumDevis!=null)
                     {
-                        int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
-                        daf.FillByConsultation(ds.FournisseurSet, IdCon);
+                        //int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
+                        //daf.FillByConsultation(ds.FournisseurSet, IdCon);
 
                         int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
                         dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
 
-                        int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
-                        dam.FillByConsultation(ds.ModeleDevisSet, IdCon);
+                        //int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
+                        //dam.FillByConsultation(ds.ModeleDevisSet, IdCon);
 
-                        dac.FillByPvj(ds.CommissionSet, IdPvj);
+                        //dac.FillByPvj(ds.CommissionSet, IdPvj);
+
+                        daf.Fill(ds.FournisseurSet);
+                        dac.Fill(ds.CommissionSet);
+                        dam.Fill(ds.ModeleDevisSet);
+
 
 
                         DateTime d = query.FirstOrDefault().DatePvj;

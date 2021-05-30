@@ -58,12 +58,20 @@ namespace Projet_Onssa
                                 DatePaiement = oi.DatePaiement,
                                 VisaSousOrdo = oi.VisaSordonnateur,
                                 VisaTresorier = oi.VisaTresorierPayeur,
+                                Lrg = bc.InfoMorasse.Ligne.InfoLrg.NumLrg,
+                                Par = bc.InfoMorasse.Ligne.InfoLrg.InfoParagraphe.NumPar,
+                                Ligne = bc.InfoMorasse.Ligne.CodeLigne,
+
                             };
 
                 NumToString cc = new NumToString();
 
                 CrystalReportOi ce = new CrystalReportOi();
-               
+
+
+                ce.SetParameterValue("lrg", query.FirstOrDefault().Lrg.ToString());
+                ce.SetParameterValue("par", query.FirstOrDefault().Par.ToString());
+                ce.SetParameterValue("ligne", query.FirstOrDefault().Ligne.ToString());
                 ce.SetParameterValue("ttc", query.FirstOrDefault().total.ToString());
                 ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
                 ce.SetParameterValue("nomfr", query.FirstOrDefault().NomFr.ToString());
