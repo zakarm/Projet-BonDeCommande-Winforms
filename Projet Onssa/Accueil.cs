@@ -117,6 +117,23 @@ namespace Projet_Onssa
                         panel_GestionCompte.Visible = false;
                         openchildform(new Statistique());
                     }
+                    else
+                    {
+
+                        if (Program.OG.TypeCompte.Equals("ca") || Program.OG.TypeCompte.Equals("srs"))
+                        {
+
+                            btnCcord(true);
+                            btnLcsrs(false);
+                            btnMcsrs(false);
+                            panel_Mamber.Visible = false;
+                            btn_Lois.Visible = false;
+                            btn_Mamber.Visible = false;
+                            btn_GestionCompte.Visible = false;
+                            openchildform(new Statistique());
+                        }
+
+                    }
                 }
             }
         }
@@ -139,6 +156,35 @@ namespace Projet_Onssa
             btnPcsrs(false);
             btnMcsrs(true);
             
+        }
+
+        private void btnCcord(bool s)
+        {
+            btn_Consultation.Visible = s;
+            panel_Consultation.Visible = s;
+            btn_Mddevis.Visible = false;
+            panel_Pvj.Visible = s;
+            btn_Pvj.Visible = s;
+            panel_Mdevis.Visible = false;
+            btn_Bc.Visible = s;
+            panel_Bc.Visible = s;
+            btn_Fe.Visible = s;
+            panel_Fe.Visible = s;
+            btn_Oi.Visible = false;
+            panel_Oi.Visible = false;
+            btn_Mamber.Visible = false;
+            btn_Co.Visible = false;
+            btn_Fr.Visible = false;
+            panel_Fr.Visible = false;
+            btn_GestionCompte.Visible = false;
+            btn_Mamber.Visible = false;
+            btn_Pvr.Visible = false;
+            panel_Pvr.Visible = false;
+            btn_Ov.Visible = false;
+            panel_Op.Visible =false;
+            btn_Op.Visible = false;
+            panel_Ov.Visible = false;
+
         }
 
         private void btnPcord(bool s)
