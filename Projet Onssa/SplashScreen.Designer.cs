@@ -29,6 +29,7 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SplashScreen));
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,16 +42,16 @@ namespace Projet_Onssa
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(14, 361);
+            this.label1.Location = new System.Drawing.Point(12, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(368, 64);
+            this.label1.Size = new System.Drawing.Size(368, 48);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Copyright ©  2021\r\nOffice national de sécurité sanitaire des produits alimentaire" +
-    "s\r\nProtected by international agreements\r\nAll rights reserved";
+            this.label1.Text = "Office national de sécurité sanitaire des produits alimentaires\r\nProtected by int" +
+    "ernational agreements\r\nCopyright ©  2021";
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 431);
+            this.progressBar1.Location = new System.Drawing.Point(12, 199);
             this.progressBar1.MarqueeAnimationSpeed = 50;
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(471, 23);
@@ -59,11 +60,12 @@ namespace Projet_Onssa
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::Projet_Onssa.Properties.Resources.Sans_titre_12;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(471, 345);
+            this.pictureBox1.Size = new System.Drawing.Size(470, 136);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -72,7 +74,7 @@ namespace Projet_Onssa
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(495, 466);
+            this.ClientSize = new System.Drawing.Size(495, 233);
             this.ControlBox = false;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.progressBar1);

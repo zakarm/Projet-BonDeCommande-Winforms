@@ -806,12 +806,7 @@ namespace Projet_Onssa
             openchildform(new MorasseForm());
         }
 
-        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
-        {
-            label_txt.Name = "Guide";
-            openchildform(new GuideApplication());
-        }
-
+        
         private void btn_Accueil_Click(object sender, EventArgs e)
         {
             openchildform(new Statistique());
@@ -949,6 +944,42 @@ namespace Projet_Onssa
         }
 
         private void btn_Lois_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void bunifuFlatButton1_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Guide(object sender, EventArgs e)
+        {
+            label_txt.Name = "Guide";
+            openchildform(new GuideApplication());
+        }
+
+        private void bunifuFlatButton1_MouseHover_1(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void bunifuFlatButton1_MouseEnter_1(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Out_MouseEnter(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Out_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Out_MouseHover(object sender, EventArgs e)
         {
             panelControl.Size = new Size(130, 749);
         }
