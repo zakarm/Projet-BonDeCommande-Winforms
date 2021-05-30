@@ -29,11 +29,6 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dgv_Info = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.date_Op = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -48,58 +43,9 @@ namespace Projet_Onssa
             this.btn_Modifier = new Projet_Onssa.Button_WOC();
             this.btn_Ajouter = new Projet_Onssa.Button_WOC();
             this.btn_Supprimer = new Projet_Onssa.Button_WOC();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Info)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dgv_Info
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgv_Info.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_Info.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_Info.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Info.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dgv_Info.BackgroundColor = System.Drawing.Color.White;
-            this.dgv_Info.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Info.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgv_Info.ColumnHeadersHeight = 40;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 14.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Info.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_Info.DoubleBuffered = true;
-            this.dgv_Info.EnableHeadersVisualStyles = false;
-            this.dgv_Info.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
-            this.dgv_Info.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_Info.Location = new System.Drawing.Point(32, 329);
-            this.dgv_Info.Name = "dgv_Info";
-            this.dgv_Info.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgv_Info.RowHeadersWidth = 5;
-            this.dgv_Info.Size = new System.Drawing.Size(375, 62);
-            this.dgv_Info.TabIndex = 168;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(28, 297);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(254, 20);
-            this.label2.TabIndex = 167;
-            this.label2.Text = "Information de processus d\'achat";
             // 
             // panel1
             // 
@@ -108,8 +54,6 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dgv_Info);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.date_Op);
             this.panel1.Controls.Add(this.bunifuMetroTextbox3);
             this.panel1.Controls.Add(this.label4);
@@ -119,7 +63,7 @@ namespace Projet_Onssa
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.cb_NumOp);
             this.panel1.Controls.Add(this.bunifuMetroTextbox1);
-            this.panel1.Location = new System.Drawing.Point(273, 28);
+            this.panel1.Location = new System.Drawing.Point(268, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 433);
             this.panel1.TabIndex = 169;
@@ -132,7 +76,7 @@ namespace Projet_Onssa
             this.date_Op.ForeColor = System.Drawing.Color.Black;
             this.date_Op.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_Op.FormatCustom = null;
-            this.date_Op.Location = new System.Drawing.Point(40, 225);
+            this.date_Op.Location = new System.Drawing.Point(42, 294);
             this.date_Op.Name = "date_Op";
             this.date_Op.Size = new System.Drawing.Size(364, 30);
             this.date_Op.TabIndex = 166;
@@ -149,7 +93,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(32, 223);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(34, 292);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 35);
@@ -161,7 +105,7 @@ namespace Projet_Onssa
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 199);
+            this.label4.Location = new System.Drawing.Point(31, 268);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 164;
@@ -173,7 +117,7 @@ namespace Projet_Onssa
             this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Oi.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.Location = new System.Drawing.Point(37, 153);
+            this.cb_Oi.Location = new System.Drawing.Point(43, 220);
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(358, 25);
             this.cb_Oi.TabIndex = 163;
@@ -184,7 +128,7 @@ namespace Projet_Onssa
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(24, 127);
+            this.label3.Location = new System.Drawing.Point(30, 194);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 21);
             this.label3.TabIndex = 158;
@@ -201,7 +145,7 @@ namespace Projet_Onssa
             this.txt_Adresse.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Adresse.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Adresse.isPassword = false;
-            this.txt_Adresse.Location = new System.Drawing.Point(29, 149);
+            this.txt_Adresse.Location = new System.Drawing.Point(35, 216);
             this.txt_Adresse.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Adresse.Name = "txt_Adresse";
             this.txt_Adresse.Size = new System.Drawing.Size(375, 35);
@@ -214,7 +158,7 @@ namespace Projet_Onssa
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(25, 53);
+            this.label5.Location = new System.Drawing.Point(31, 113);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(241, 21);
             this.label5.TabIndex = 159;
@@ -226,7 +170,7 @@ namespace Projet_Onssa
             this.cb_NumOp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_NumOp.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_NumOp.FormattingEnabled = true;
-            this.cb_NumOp.Location = new System.Drawing.Point(37, 79);
+            this.cb_NumOp.Location = new System.Drawing.Point(43, 139);
             this.cb_NumOp.Name = "cb_NumOp";
             this.cb_NumOp.Size = new System.Drawing.Size(358, 25);
             this.cb_NumOp.TabIndex = 161;
@@ -243,7 +187,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(29, 74);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(35, 134);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 35);
@@ -259,7 +203,7 @@ namespace Projet_Onssa
             this.panel3.Controls.Add(this.btn_Modifier);
             this.panel3.Controls.Add(this.btn_Ajouter);
             this.panel3.Controls.Add(this.btn_Supprimer);
-            this.panel3.Location = new System.Drawing.Point(273, 477);
+            this.panel3.Location = new System.Drawing.Point(268, 477);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(437, 72);
             this.panel3.TabIndex = 170;
@@ -273,7 +217,7 @@ namespace Projet_Onssa
             this.btn_Modifier.FlatAppearance.BorderSize = 0;
             this.btn_Modifier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Modifier.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Modifier.Location = new System.Drawing.Point(272, 15);
+            this.btn_Modifier.Location = new System.Drawing.Point(282, 15);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Modifier.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -294,7 +238,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.FlatAppearance.BorderSize = 0;
             this.btn_Ajouter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ajouter.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Ajouter.Location = new System.Drawing.Point(32, 14);
+            this.btn_Ajouter.Location = new System.Drawing.Point(42, 14);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Ajouter.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -315,7 +259,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.FlatAppearance.BorderSize = 0;
             this.btn_Supprimer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Supprimer.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_Supprimer.Location = new System.Drawing.Point(152, 14);
+            this.btn_Supprimer.Location = new System.Drawing.Point(162, 14);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.OnHoverBorderColor = System.Drawing.Color.Transparent;
             this.btn_Supprimer.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -337,7 +281,6 @@ namespace Projet_Onssa
             this.Name = "OpForm";
             this.Text = "OpForm";
             this.Load += new System.EventHandler(this.OpForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_Info)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -349,8 +292,6 @@ namespace Projet_Onssa
         private Button_WOC btn_Modifier;
         private Button_WOC btn_Ajouter;
         private Button_WOC btn_Supprimer;
-        private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgv_Info;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cb_Oi;
         private System.Windows.Forms.Label label3;

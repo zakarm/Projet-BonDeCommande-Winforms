@@ -835,7 +835,7 @@ namespace Projet_Onssa
             this.btn_Ov.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Ov.Textcolor = System.Drawing.Color.White;
             this.btn_Ov.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Ov.Click += new System.EventHandler(this.btn_Op_Click);
+            this.btn_Ov.Click += new System.EventHandler(this.btn_Ov_Click);
             this.btn_Ov.MouseEnter += new System.EventHandler(this.btn_Op_MouseEnter);
             this.btn_Ov.MouseHover += new System.EventHandler(this.btn_Op_MouseHover);
             // 
@@ -885,7 +885,7 @@ namespace Projet_Onssa
             this.btn_Op.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Op.Textcolor = System.Drawing.Color.White;
             this.btn_Op.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Op.Click += new System.EventHandler(this.btn_Ov_Click);
+            this.btn_Op.Click += new System.EventHandler(this.btn_Op_Click);
             this.btn_Op.MouseEnter += new System.EventHandler(this.btn_Ov_MouseEnter);
             this.btn_Op.MouseHover += new System.EventHandler(this.btn_Ov_MouseHover);
             // 

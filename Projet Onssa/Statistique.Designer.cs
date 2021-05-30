@@ -54,6 +54,7 @@ namespace Projet_Onssa
             this.button28 = new System.Windows.Forms.Button();
             this.button29 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.cartesianChart = new LiveCharts.WinForms.CartesianChart();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel8.SuspendLayout();
@@ -62,6 +63,7 @@ namespace Projet_Onssa
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox10
@@ -111,10 +113,11 @@ namespace Projet_Onssa
             // 
             this.panel8.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(239)))));
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label13);
             this.panel8.Controls.Add(this.pictureBox1);
             this.panel8.Controls.Add(this.label_taille);
-            this.panel8.Location = new System.Drawing.Point(797, 82);
+            this.panel8.Location = new System.Drawing.Point(797, 59);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(276, 133);
             this.panel8.TabIndex = 109;
@@ -155,12 +158,13 @@ namespace Projet_Onssa
             // 
             this.panel9.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(239)))));
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label_mounth);
             this.panel9.Controls.Add(this.label_mounth2);
             this.panel9.Controls.Add(this.pictureBox2);
             this.panel9.Controls.Add(this.label_NumBcMounth);
             this.panel9.Controls.Add(this.label21);
-            this.panel9.Location = new System.Drawing.Point(797, 416);
+            this.panel9.Location = new System.Drawing.Point(797, 430);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(276, 134);
             this.panel9.TabIndex = 108;
@@ -352,33 +356,42 @@ namespace Projet_Onssa
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(225)))), ((int)(((byte)(239)))));
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.pictureBox10);
             this.panel1.Controls.Add(this.label17);
             this.panel1.Controls.Add(this.label_Compte);
-            this.panel1.Location = new System.Drawing.Point(797, 248);
+            this.panel1.Location = new System.Drawing.Point(797, 245);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(278, 133);
             this.panel1.TabIndex = 109;
             // 
-            // cartesianChart
+            // panel2
             // 
-            this.cartesianChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cartesianChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)), true);
-            this.cartesianChart.Location = new System.Drawing.Point(45, 55);
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.cartesianChart);
+            this.panel2.Location = new System.Drawing.Point(25, 59);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(742, 505);
+            this.panel2.TabIndex = 114;
+            // 
+            // cartesianChart
+            // 
+            this.cartesianChart.Location = new System.Drawing.Point(15, 10);
             this.cartesianChart.Name = "cartesianChart";
-            this.cartesianChart.Size = new System.Drawing.Size(734, 520);
-            this.cartesianChart.TabIndex = 113;
-            this.cartesianChart.Text = "cartesianChart";
+            this.cartesianChart.Size = new System.Drawing.Size(709, 485);
+            this.cartesianChart.TabIndex = 0;
+            this.cartesianChart.Text = "cartesianChart1";
             // 
             // Statistique
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1096, 595);
-            this.Controls.Add(this.cartesianChart);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel9);
@@ -396,6 +409,7 @@ namespace Projet_Onssa
             this.panel11.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -425,6 +439,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuCustomLabel label_mounth2;
         private Bunifu.Framework.UI.BunifuCustomLabel label_mounth;
+        private System.Windows.Forms.Panel panel2;
         private LiveCharts.WinForms.CartesianChart cartesianChart;
     }
 }

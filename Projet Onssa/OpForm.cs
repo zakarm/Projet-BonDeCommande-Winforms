@@ -154,20 +154,7 @@ namespace Projet_Onssa
                         cb_Oi.Text = p.InfoOI.NumOi;
                         date_Op.Value = p.DateOP;
 
-                        var query = from op in ctx.OPSet
-                                    join oi in ctx.OISet on op.InfoOI.IdOI equals oi.IdOI
-                                    join fe in ctx.FESet on oi.InfoFE.IdFE equals fe.IdFE
-                                    join bc in ctx.BCSet on fe.InfoBC.IdBC equals bc.IdBC
-                                    join pvj in ctx.PVJSet on bc.InfoPVJ.IdPVJ equals pvj.IdPVJ
-                                    select new
-                                    {
-                                        OI = oi.NumOi,
-                                        FE = fe.NumFe,
-                                        BC = bc.NumBc,
-                                        PVJ = pvj.IdPVJ,
-                                    };
-
-                        dgv_Info.DataSource = query.ToList();
+                        
                     }
                 }
                 catch (Exception ex)

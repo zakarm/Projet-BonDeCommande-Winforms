@@ -94,9 +94,9 @@ namespace Projet_Onssa
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(37, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(213, 20);
             this.label1.TabIndex = 141;
-            this.label1.Text = "Num BC";
+            this.label1.Text = "Numéro bon de commande";
             // 
             // label2
             // 
@@ -125,7 +125,7 @@ namespace Projet_Onssa
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(43, 89);
+            this.label6.Location = new System.Drawing.Point(38, 89);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(209, 20);
             this.label6.TabIndex = 143;

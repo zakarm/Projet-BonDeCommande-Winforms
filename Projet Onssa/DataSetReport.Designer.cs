@@ -7268,7 +7268,7 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ConsultationSetRow AddConsultationSetRow(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, string NumEnvoi) {
+            public ConsultationSetRow AddConsultationSetRow(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, int NumEnvoi) {
                 ConsultationSetRow rowConsultationSetRow = ((ConsultationSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -7327,7 +7327,7 @@ namespace Projet_Onssa {
                 base.Columns.Add(this.columnDateLettre);
                 this.columnDateDelai = new global::System.Data.DataColumn("DateDelai", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDateDelai);
-                this.columnNumEnvoi = new global::System.Data.DataColumn("NumEnvoi", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnNumEnvoi = new global::System.Data.DataColumn("NumEnvoi", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNumEnvoi);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnIdConsultation}, true));
@@ -7344,7 +7344,6 @@ namespace Projet_Onssa {
                 this.columnDateLettre.AllowDBNull = false;
                 this.columnDateDelai.AllowDBNull = false;
                 this.columnNumEnvoi.AllowDBNull = false;
-                this.columnNumEnvoi.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9665,9 +9664,9 @@ namespace Projet_Onssa {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string NumEnvoi {
+            public int NumEnvoi {
                 get {
-                    return ((string)(this[this.tableConsultationSet.NumEnvoiColumn]));
+                    return ((int)(this[this.tableConsultationSet.NumEnvoiColumn]));
                 }
                 set {
                     this[this.tableConsultationSet.NumEnvoiColumn] = value;
@@ -16510,12 +16509,18 @@ SELECT IdPVJ, DatePvj, NumPvj, InfoConsultation_IdConsultation, InfoFournisseur_
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT IdPVJ, DatePvj, NumPvj, InfoConsultation_IdConsultation, InfoFournisseur_I" +
                 "dFournisseur FROM dbo.PVJSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT IdPVJ, DatePvj, NumPvj, InfoConsultation_IdConsultation, InfoFournisseur_I" +
+                "dFournisseur FROM dbo.PVJSet\r\nwhere  IdPVJ = @num";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@num", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdPVJ", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -16537,6 +16542,32 @@ SELECT IdPVJ, DatePvj, NumPvj, InfoConsultation_IdConsultation, InfoFournisseur_
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual DataSetReport.PVJSetDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSetReport.PVJSetDataTable dataTable = new DataSetReport.PVJSetDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByPvj(DataSetReport.PVJSetDataTable dataTable, int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetReport.PVJSetDataTable GetDataByPvj(int num) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(num));
             DataSetReport.PVJSetDataTable dataTable = new DataSetReport.PVJSetDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
@@ -17124,11 +17155,12 @@ SELECT IdPVR, DatePVR, NumPvr, InfoOI_IdOI FROM PVRSet WHERE (IdPVR = @IdPVR)";
             this._adapter.DeleteCommand.Connection = this.Connection;
             this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[ConsultationSet] WHERE (([IdConsultation] = @Original_IdConsul" +
                 "tation) AND ([DateLettre] = @Original_DateLettre) AND ([DateDelai] = @Original_D" +
-                "ateDelai))";
+                "ateDelai) AND ([NumEnvoi] = @Original_NumEnvoi))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumEnvoi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
             this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[ConsultationSet] ([ObjetConsultation], [NumConsultation], [DateLettre], [DateDelai], [NumEnvoi]) VALUES (@ObjetConsultation, @NumConsultation, @DateLettre, @DateDelai, @NumEnvoi);
@@ -17138,20 +17170,21 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumConsultation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumEnvoi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumEnvoi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ConsultationSet] SET [ObjetConsultation] = @ObjetConsultation, [NumConsultation] = @NumConsultation, [DateLettre] = @DateLettre, [DateDelai] = @DateDelai, [NumEnvoi] = @NumEnvoi WHERE (([IdConsultation] = @Original_IdConsultation) AND ([DateLettre] = @Original_DateLettre) AND ([DateDelai] = @Original_DateDelai));
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[ConsultationSet] SET [ObjetConsultation] = @ObjetConsultation, [NumConsultation] = @NumConsultation, [DateLettre] = @DateLettre, [DateDelai] = @DateDelai, [NumEnvoi] = @NumEnvoi WHERE (([IdConsultation] = @Original_IdConsultation) AND ([DateLettre] = @Original_DateLettre) AND ([DateDelai] = @Original_DateDelai) AND ([NumEnvoi] = @Original_NumEnvoi));
 SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai, NumEnvoi FROM ConsultationSet WHERE (IdConsultation = @IdConsultation)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@ObjetConsultation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "ObjetConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumConsultation", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumEnvoi", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NumEnvoi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_IdConsultation", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "IdConsultation", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateLettre", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateLettre", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DateDelai", global::System.Data.SqlDbType.DateTime, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DateDelai", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NumEnvoi", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NumEnvoi", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IdConsultation", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "IdConsultation", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -17263,10 +17296,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai) {
+        public virtual int Delete(int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, int Original_NumEnvoi) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_IdConsultation));
             this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_DateLettre));
             this.Adapter.DeleteCommand.Parameters[2].Value = ((System.DateTime)(Original_DateDelai));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_NumEnvoi));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17287,7 +17321,7 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, string NumEnvoi) {
+        public virtual int Insert(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, int NumEnvoi) {
             if ((ObjetConsultation == null)) {
                 throw new global::System.ArgumentNullException("ObjetConsultation");
             }
@@ -17302,12 +17336,7 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
             }
             this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(DateLettre));
             this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(DateDelai));
-            if ((NumEnvoi == null)) {
-                throw new global::System.ArgumentNullException("NumEnvoi");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(NumEnvoi));
-            }
+            this.Adapter.InsertCommand.Parameters[4].Value = ((int)(NumEnvoi));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17328,7 +17357,7 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, string NumEnvoi, int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, int IdConsultation) {
+        public virtual int Update(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, int NumEnvoi, int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, int Original_NumEnvoi, int IdConsultation) {
             if ((ObjetConsultation == null)) {
                 throw new global::System.ArgumentNullException("ObjetConsultation");
             }
@@ -17343,16 +17372,12 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
             }
             this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(DateLettre));
             this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(DateDelai));
-            if ((NumEnvoi == null)) {
-                throw new global::System.ArgumentNullException("NumEnvoi");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(NumEnvoi));
-            }
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(NumEnvoi));
             this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_IdConsultation));
             this.Adapter.UpdateCommand.Parameters[6].Value = ((System.DateTime)(Original_DateLettre));
             this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_DateDelai));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(IdConsultation));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_NumEnvoi));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(IdConsultation));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -17373,8 +17398,8 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, string NumEnvoi, int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai) {
-            return this.Update(ObjetConsultation, NumConsultation, DateLettre, DateDelai, NumEnvoi, Original_IdConsultation, Original_DateLettre, Original_DateDelai, Original_IdConsultation);
+        public virtual int Update(string ObjetConsultation, string NumConsultation, System.DateTime DateLettre, System.DateTime DateDelai, int NumEnvoi, int Original_IdConsultation, System.DateTime Original_DateLettre, System.DateTime Original_DateDelai, int Original_NumEnvoi) {
+            return this.Update(ObjetConsultation, NumConsultation, DateLettre, DateDelai, NumEnvoi, Original_IdConsultation, Original_DateLettre, Original_DateDelai, Original_NumEnvoi, Original_IdConsultation);
         }
     }
     
@@ -17885,6 +17910,15 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateUpdatedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._fournisseurReponduSetTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.FournisseurReponduSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -17900,15 +17934,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._fournisseurSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17957,12 +17982,12 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._pVRSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._oPSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._pVRSetTableAdapter.Update(updatedRows));
+                    result = (result + this._oPSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17975,12 +18000,21 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._oPSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._commissionSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._oPSetTableAdapter.Update(updatedRows));
+                    result = (result + this._commissionSetTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._pVRSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._pVRSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -17993,21 +18027,12 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._commissionSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._commissionSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._pVJCommissionTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._pVJCommissionTableAdapter.Update(updatedRows));
+                    result = (result + this._consultationFournisseurTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -18020,12 +18045,21 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pVJCommissionTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(updatedRows));
+                    result = (result + this._pVJCommissionTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._oVSetTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -18047,15 +18081,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -18066,6 +18091,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateInsertedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._fournisseurReponduSetTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.FournisseurReponduSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -18079,14 +18112,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._fournisseurSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -18130,11 +18155,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._pVRSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._oPSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._pVRSetTableAdapter.Update(addedRows));
+                    result = (result + this._oPSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -18146,11 +18171,19 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._oPSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._commissionSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._oPSetTableAdapter.Update(addedRows));
+                    result = (result + this._commissionSetTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._pVRSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._pVRSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -18162,19 +18195,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._commissionSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._commissionSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._pVJCommissionTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._pVJCommissionTableAdapter.Update(addedRows));
+                    result = (result + this._consultationFournisseurTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -18186,11 +18211,19 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pVJCommissionTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PVJCommission.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(addedRows));
+                    result = (result + this._pVJCommissionTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._oVSetTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -18210,14 +18243,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -18228,14 +18253,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(DataSetReport dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._oVSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._oVSetTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._commissionPVRTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CommissionPVR.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -18252,19 +18269,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._consultationFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._oVSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.OVSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._consultationFournisseurTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._pVJFournisseurTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._pVJFournisseurTableAdapter.Update(deletedRows));
+                    result = (result + this._oVSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18276,11 +18285,19 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._commissionSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pVJFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PVJFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._commissionSetTableAdapter.Update(deletedRows));
+                    result = (result + this._pVJFournisseurTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._consultationFournisseurTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationFournisseur.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._consultationFournisseurTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18292,11 +18309,19 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._oPSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pVRSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._oPSetTableAdapter.Update(deletedRows));
+                    result = (result + this._pVRSetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._commissionSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CommissionSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._commissionSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18308,11 +18333,11 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._pVRSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.PVRSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._oPSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.OPSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._pVRSetTableAdapter.Update(deletedRows));
+                    result = (result + this._oPSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -18356,14 +18381,6 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._consultationSetTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._consultationSetTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._fournisseurSetTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.FournisseurSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -18377,6 +18394,14 @@ SELECT IdConsultation, ObjetConsultation, NumConsultation, DateLettre, DateDelai
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._fournisseurReponduSetTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._consultationSetTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ConsultationSet.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._consultationSetTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

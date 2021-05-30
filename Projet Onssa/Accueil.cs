@@ -79,7 +79,7 @@ namespace Projet_Onssa
         }
         private void Accueil_Load(object sender, EventArgs e)
         {
-            if (Program.OG.TypeCompte.Equals("cord"))
+            if (Program.OG.TypeCompte.Equals("cord") || Program.OG.TypeCompte.Equals("Cord") || Program.OG.TypeCompte.Equals("CORD"))
             {
 
                 btnPcord(true);
@@ -93,7 +93,7 @@ namespace Projet_Onssa
             }
             else
             {
-                if(Program.OG.TypeCompte.Equals("csrs"))
+                if(Program.OG.TypeCompte.Equals("csrs") || Program.OG.TypeCompte.Equals("CSRS") || Program.OG.TypeCompte.Equals("Csrs"))
                 {
                    
                     btnPcsrs(true);
@@ -104,7 +104,7 @@ namespace Projet_Onssa
                 }
                 else
                 {
-                    if(Program.OG.TypeCompte.Equals("dr"))
+                    if(Program.OG.TypeCompte.Equals("dr") || Program.OG.TypeCompte.Equals("Dr") || Program.OG.TypeCompte.Equals("DR"))
                     {
                         btn_Gpaiement_Click(sender, e);
                         btnPcsrs(true);
@@ -120,7 +120,8 @@ namespace Projet_Onssa
                     else
                     {
 
-                        if (Program.OG.TypeCompte.Equals("ca") || Program.OG.TypeCompte.Equals("srs"))
+                        if (Program.OG.TypeCompte.Equals("ca") || Program.OG.TypeCompte.Equals("srs") || Program.OG.TypeCompte.Equals("CA") || 
+                            Program.OG.TypeCompte.Equals("SRS") || Program.OG.TypeCompte.Equals("Ca") || Program.OG.TypeCompte.Equals("Srs"))
                         {
 
                             btnCcord(true);
@@ -356,25 +357,8 @@ namespace Projet_Onssa
             label_txt.Text = "Procès verbal de reception";
         }
 
-        private void btn_Op_Click(object sender, EventArgs e)
-        {
-            label_txt.Text = "Ordre de virement";
-            label_txt.Name = "ov";
-            openchildformtab(new LectureOv(), new OvForm());
-            tabPage1.Text = "Lecture Ordre de virement";
-            tabPage2.Text = "Gestion Ordre de virement";
-
-            
-        }
-
-        private void btn_Ov_Click(object sender, EventArgs e)
-        {
-            label_txt.Text = "Ordre de paiement";
-            label_txt.Name = "op";
-            openchildformtab(new LectureOp(), new OpForm());
-            tabPage1.Text = "Lecture Ordre de paiement";
-            tabPage2.Text = "Gestion Ordre de paiement";
-        }
+       
+       
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)
         {
@@ -849,6 +833,24 @@ namespace Projet_Onssa
             label_txt.Name = "md";
             openchildformtab(new LectureMd(), new ModeleDevisForm());
             label_txt.Text = "Modele Devis";
+        }
+
+        private void btn_Op_Click(object sender, EventArgs e)
+        {
+            label_txt.Text = "Ordre de paiement";
+            label_txt.Name = "op";
+            openchildformtab(new LectureOp(), new OpForm());
+            tabPage1.Text = "Lecture Ordre de paiement";
+            tabPage2.Text = "Gestion Ordre de paiement";
+        }
+
+        private void btn_Ov_Click(object sender, EventArgs e)
+        {
+            label_txt.Text = "Ordre de virement";
+            label_txt.Name = "ov";
+            openchildformtab(new LectureOv(), new OvForm());
+            tabPage1.Text = "Lecture Ordre de virement";
+            tabPage2.Text = "Gestion Ordre de virement";
         }
     }
 }

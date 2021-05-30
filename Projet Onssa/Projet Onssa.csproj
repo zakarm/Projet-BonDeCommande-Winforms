@@ -184,6 +184,14 @@
       <DependentUpon>CrystalReportPvr.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DataSetPvj.cs">
+      <DependentUpon>DataSetPvj.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPvj.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPvj.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetReport.cs">
       <DependentUpon>DataSetReport.xsd</DependentUpon>
     </Compile>
@@ -559,6 +567,17 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>OnssaModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DataSetPvj.xsc">
+      <DependentUpon>DataSetPvj.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPvj.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPvj.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPvj.xss">
+      <DependentUpon>DataSetPvj.xsd</DependentUpon>
+    </None>
     <None Include="DataSetReport.xsc">
       <DependentUpon>DataSetReport.xsd</DependentUpon>
     </None>

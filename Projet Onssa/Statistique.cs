@@ -123,6 +123,8 @@ namespace Projet_Onssa
                                        orderby bc.DateBC.Month ascending
                                        select m;
 
+                           
+
                             if (data.FirstOrDefault() != null)
                             {
                                 valueD = data.AsEnumerable().Sum(o => o.Ttc);
@@ -140,8 +142,10 @@ namespace Projet_Onssa
                     }
                     
                 }
+               
 
-            
+
+
             }
             catch (Exception ex)
             {

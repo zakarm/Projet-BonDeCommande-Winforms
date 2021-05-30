@@ -17,20 +17,22 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        DataSetReport ds = new DataSetReport();
-        DataSetReportTableAdapters.CommissionSetTableAdapter dac = new DataSetReportTableAdapters.CommissionSetTableAdapter();
-        DataSetReportTableAdapters.PVJCommissionTableAdapter dacp = new DataSetReportTableAdapters.PVJCommissionTableAdapter();
-        DataSetReportTableAdapters.FournisseurSetTableAdapter daf = new DataSetReportTableAdapters.FournisseurSetTableAdapter();
-        DataSetReportTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetReportTableAdapters.PVJFournisseurTableAdapter();
-        DataSetReportTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetReportTableAdapters.ModeleDevisSetTableAdapter();
-        DataSetReportTableAdapters.FournisseurReponduSetTableAdapter dafr = new DataSetReportTableAdapters.FournisseurReponduSetTableAdapter();
-        DataSetReportTableAdapters.ConsultationFournisseurTableAdapter daconf = new DataSetReportTableAdapters.ConsultationFournisseurTableAdapter();
-        DataSetReportTableAdapters.ConsultationSetTableAdapter dacon = new DataSetReportTableAdapters.ConsultationSetTableAdapter();
+        DataSetPvj ds = new DataSetPvj();
+
+
+        DataSetPvjTableAdapters.CommissionSetTableAdapter dac = new DataSetPvjTableAdapters.CommissionSetTableAdapter();
+        DataSetPvjTableAdapters.PVJCommissionTableAdapter dacp = new DataSetPvjTableAdapters.PVJCommissionTableAdapter();
+        DataSetPvjTableAdapters.FournisseurSetTableAdapter daf = new DataSetPvjTableAdapters.FournisseurSetTableAdapter();
+        DataSetPvjTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetPvjTableAdapters.PVJFournisseurTableAdapter();
+        DataSetPvjTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetPvjTableAdapters.ModeleDevisSetTableAdapter();
+       // DataSetPvjTableAdapters.FournisseurReponduSetTableAdapter dafr = new DataSetPvjTableAdapters.FournisseurReponduSetTableAdapter();
+        DataSetPvjTableAdapters.ConsultationFournisseurTableAdapter daconf = new DataSetPvjTableAdapters.ConsultationFournisseurTableAdapter();
+        DataSetPvjTableAdapters.ConsultationSetTableAdapter dacon = new DataSetPvjTableAdapters.ConsultationSetTableAdapter();
+        DataSetPvjTableAdapters.PVJSetTableAdapter dapvj = new DataSetPvjTableAdapters.PVJSetTableAdapter();
+
         private void LecturePvj_Load(object sender, EventArgs e)
         {
-            dacp.Fill(ds.PVJCommission);
-            dapf.Fill(ds.PVJFournisseur);
-            daconf.Fill(ds.ConsultationFournisseur);
+
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
                 cb_Pvj.ValueMember = "IdPVJ";
@@ -70,21 +72,32 @@ namespace Projet_Onssa
                     NumToString cc = new NumToString();
                     
                     if(query.FirstOrDefault().NumDevis!=null)
-                    {
+                    { 
+                        int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
+
+
+                        daf.Fill(ds.FournisseurSet);
+                        dac.Fill(ds.CommissionSet);
+                        dam.Fill(ds.ModeleDevisSet);
+                        dapvj.Fill(ds.PVJSet);
+                       // dafr.Fill(ds.FournisseurReponduSet);
+                        dacp.Fill(ds.PVJCommission);
+                        dapf.Fill(ds.PVJFournisseur);
+                        daconf.Fill(ds.ConsultationFournisseur);
+                        dacon.Fill(ds.ConsultationSet);
+
                         //int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
                         //daf.FillByConsultation(ds.FournisseurSet, IdCon);
 
-                        int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
-                        dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
+                        dapvj.FillByPvj(ds.PVJSet,IdPvj);
+                      //dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
 
                         //int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
                         //dam.FillByConsultation(ds.ModeleDevisSet, IdCon);
 
                         //dac.FillByPvj(ds.CommissionSet, IdPvj);
 
-                        daf.Fill(ds.FournisseurSet);
-                        dac.Fill(ds.CommissionSet);
-                        dam.Fill(ds.ModeleDevisSet);
+
 
 
 

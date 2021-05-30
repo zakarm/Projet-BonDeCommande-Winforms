@@ -75,7 +75,7 @@ namespace Projet_Onssa
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(488, 132);
+            this.label7.Location = new System.Drawing.Point(488, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(276, 21);
             this.label7.TabIndex = 142;
@@ -86,7 +86,7 @@ namespace Projet_Onssa
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(488, 221);
+            this.label4.Location = new System.Drawing.Point(488, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 21);
             this.label4.TabIndex = 144;
@@ -97,7 +97,7 @@ namespace Projet_Onssa
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(488, 44);
+            this.label3.Location = new System.Drawing.Point(488, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(179, 21);
             this.label3.TabIndex = 143;
@@ -114,7 +114,7 @@ namespace Projet_Onssa
             this.txt_Dispo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Dispo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Dispo.isPassword = false;
-            this.txt_Dispo.Location = new System.Drawing.Point(486, 246);
+            this.txt_Dispo.Location = new System.Drawing.Point(486, 241);
             this.txt_Dispo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Dispo.Name = "txt_Dispo";
             this.txt_Dispo.Size = new System.Drawing.Size(407, 35);
@@ -132,7 +132,7 @@ namespace Projet_Onssa
             this.txt_engagementDP.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_engagementDP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_engagementDP.isPassword = false;
-            this.txt_engagementDP.Location = new System.Drawing.Point(486, 157);
+            this.txt_engagementDP.Location = new System.Drawing.Point(486, 152);
             this.txt_engagementDP.Margin = new System.Windows.Forms.Padding(4);
             this.txt_engagementDP.Name = "txt_engagementDP";
             this.txt_engagementDP.Size = new System.Drawing.Size(407, 35);
@@ -150,7 +150,7 @@ namespace Projet_Onssa
             this.txt_DepensesE.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_DepensesE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_DepensesE.isPassword = false;
-            this.txt_DepensesE.Location = new System.Drawing.Point(486, 68);
+            this.txt_DepensesE.Location = new System.Drawing.Point(486, 60);
             this.txt_DepensesE.Margin = new System.Windows.Forms.Padding(4);
             this.txt_DepensesE.Name = "txt_DepensesE";
             this.txt_DepensesE.Size = new System.Drawing.Size(407, 35);

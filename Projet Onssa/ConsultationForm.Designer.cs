@@ -311,7 +311,7 @@ namespace Projet_Onssa
             this.date_envoi.ForeColor = System.Drawing.Color.Black;
             this.date_envoi.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.date_envoi.FormatCustom = null;
-            this.date_envoi.Location = new System.Drawing.Point(486, 112);
+            this.date_envoi.Location = new System.Drawing.Point(480, 112);
             this.date_envoi.Name = "date_envoi";
             this.date_envoi.Size = new System.Drawing.Size(364, 30);
             this.date_envoi.TabIndex = 151;
@@ -328,7 +328,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(480, 109);
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(474, 109);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
             this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 35);
@@ -340,7 +340,7 @@ namespace Projet_Onssa
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(476, 85);
+            this.label3.Location = new System.Drawing.Point(470, 85);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 149;

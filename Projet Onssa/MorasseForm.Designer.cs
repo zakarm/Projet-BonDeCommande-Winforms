@@ -85,7 +85,7 @@ namespace Projet_Onssa
             this.txt_description.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_description.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_description.isPassword = false;
-            this.txt_description.Location = new System.Drawing.Point(115, 376);
+            this.txt_description.Location = new System.Drawing.Point(115, 368);
             this.txt_description.Margin = new System.Windows.Forms.Padding(4);
             this.txt_description.Name = "txt_description";
             this.txt_description.Size = new System.Drawing.Size(375, 37);
@@ -97,7 +97,7 @@ namespace Projet_Onssa
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(113, 352);
+            this.label3.Location = new System.Drawing.Point(113, 344);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 20);
             this.label3.TabIndex = 166;
@@ -109,7 +109,7 @@ namespace Projet_Onssa
             this.cb_Ligne.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Ligne.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Ligne.FormattingEnabled = true;
-            this.cb_Ligne.Location = new System.Drawing.Point(122, 169);
+            this.cb_Ligne.Location = new System.Drawing.Point(122, 161);
             this.cb_Ligne.Name = "cb_Ligne";
             this.cb_Ligne.Size = new System.Drawing.Size(358, 25);
             this.cb_Ligne.TabIndex = 165;
@@ -126,7 +126,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.isPassword = false;
-            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(113, 163);
+            this.bunifuMetroTextbox2.Location = new System.Drawing.Point(113, 155);
             this.bunifuMetroTextbox2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox2.Name = "bunifuMetroTextbox2";
             this.bunifuMetroTextbox2.Size = new System.Drawing.Size(375, 36);
@@ -138,7 +138,7 @@ namespace Projet_Onssa
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(110, 140);
+            this.label1.Location = new System.Drawing.Point(110, 132);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(48, 20);
             this.label1.TabIndex = 161;
@@ -155,7 +155,7 @@ namespace Projet_Onssa
             this.txt_budget.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_budget.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_budget.isPassword = false;
-            this.txt_budget.Location = new System.Drawing.Point(113, 305);
+            this.txt_budget.Location = new System.Drawing.Point(113, 297);
             this.txt_budget.Margin = new System.Windows.Forms.Padding(4);
             this.txt_budget.Name = "txt_budget";
             this.txt_budget.Size = new System.Drawing.Size(375, 37);
@@ -167,7 +167,7 @@ namespace Projet_Onssa
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(113, 282);
+            this.label2.Location = new System.Drawing.Point(113, 274);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 162;
@@ -180,7 +180,7 @@ namespace Projet_Onssa
             this.cb_Morasse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Morasse.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Morasse.FormattingEnabled = true;
-            this.cb_Morasse.Location = new System.Drawing.Point(121, 93);
+            this.cb_Morasse.Location = new System.Drawing.Point(121, 85);
             this.cb_Morasse.Name = "cb_Morasse";
             this.cb_Morasse.Size = new System.Drawing.Size(358, 25);
             this.cb_Morasse.TabIndex = 160;
@@ -197,7 +197,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(112, 87);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(112, 79);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 36);
@@ -226,7 +226,7 @@ namespace Projet_Onssa
             this.btn_Modifier.IconVisible = true;
             this.btn_Modifier.IconZoom = 90D;
             this.btn_Modifier.IsTab = false;
-            this.btn_Modifier.Location = new System.Drawing.Point(367, 453);
+            this.btn_Modifier.Location = new System.Drawing.Point(367, 449);
             this.btn_Modifier.Name = "btn_Modifier";
             this.btn_Modifier.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Modifier.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -262,7 +262,7 @@ namespace Projet_Onssa
             this.btn_Supprimer.IconVisible = true;
             this.btn_Supprimer.IconZoom = 90D;
             this.btn_Supprimer.IsTab = false;
-            this.btn_Supprimer.Location = new System.Drawing.Point(249, 453);
+            this.btn_Supprimer.Location = new System.Drawing.Point(249, 449);
             this.btn_Supprimer.Name = "btn_Supprimer";
             this.btn_Supprimer.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Supprimer.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -281,7 +281,7 @@ namespace Projet_Onssa
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(109, 64);
+            this.label8.Location = new System.Drawing.Point(109, 56);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(117, 20);
             this.label8.TabIndex = 152;
@@ -309,7 +309,7 @@ namespace Projet_Onssa
             this.btn_Ajouter.IconVisible = true;
             this.btn_Ajouter.IconZoom = 90D;
             this.btn_Ajouter.IsTab = false;
-            this.btn_Ajouter.Location = new System.Drawing.Point(131, 453);
+            this.btn_Ajouter.Location = new System.Drawing.Point(131, 449);
             this.btn_Ajouter.Name = "btn_Ajouter";
             this.btn_Ajouter.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(38)))), ((int)(((byte)(50)))));
             this.btn_Ajouter.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -334,7 +334,7 @@ namespace Projet_Onssa
             this.txt_exercice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_exercice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_exercice.isPassword = false;
-            this.txt_exercice.Location = new System.Drawing.Point(114, 233);
+            this.txt_exercice.Location = new System.Drawing.Point(114, 225);
             this.txt_exercice.Margin = new System.Windows.Forms.Padding(4);
             this.txt_exercice.Name = "txt_exercice";
             this.txt_exercice.Size = new System.Drawing.Size(375, 37);
@@ -346,7 +346,7 @@ namespace Projet_Onssa
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(111, 211);
+            this.label6.Location = new System.Drawing.Point(111, 203);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 20);
             this.label6.TabIndex = 153;

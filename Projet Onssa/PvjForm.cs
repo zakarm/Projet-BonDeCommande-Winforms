@@ -225,18 +225,19 @@ namespace Projet_Onssa
                 {
                     try
                     {
-                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
-                        Consultation c = c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
-                        Fournisseur f;
+                        
+                        Consultation c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                        Fournisseur f  = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
                         pn.ListFournisseursRepondu.Clear();
                         pn.ListCommissions.Clear();
+                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
 
 
                         if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
                         {
 
 
-                            f = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
+                            
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
                             pn.DatePvj = date_Pvj.Value;
