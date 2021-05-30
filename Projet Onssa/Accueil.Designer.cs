@@ -193,9 +193,11 @@ namespace Projet_Onssa
             this.btn_Lois.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Lois.Textcolor = System.Drawing.Color.White;
             this.btn_Lois.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Lois.MouseUp += new System.EventHandler(this.btn_Lois_MouseUp);
             this.btn_Lois.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             this.btn_Lois.MouseEnter += new System.EventHandler(this.bunifuFlatButton1_MouseEnter);
             this.btn_Lois.MouseHover += new System.EventHandler(this.bunifuFlatButton1_MouseHover);
+            this.btn_Lois.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Lois_MouseMove);
             // 
             // panel_GestionCompte
             // 
@@ -206,6 +208,8 @@ namespace Projet_Onssa
             this.panel_GestionCompte.TabIndex = 15;
             this.panel_GestionCompte.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel_GestionCompte.MouseHover += new System.EventHandler(this.panel_GestionCompte_MouseHover);
+            this.panel_GestionCompte.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_GestionCompte_MouseMove);
+            this.panel_GestionCompte.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_GestionCompte_MouseUp);
             // 
             // btn_GestionCompte
             // 
@@ -241,9 +245,11 @@ namespace Projet_Onssa
             this.btn_GestionCompte.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_GestionCompte.Textcolor = System.Drawing.Color.White;
             this.btn_GestionCompte.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_GestionCompte.MouseUp += new System.EventHandler(this.btn_GestionCompte_MouseUp);
             this.btn_GestionCompte.Click += new System.EventHandler(this.btn_GestionCompte_Click);
             this.btn_GestionCompte.MouseEnter += new System.EventHandler(this.btn_GestionCompte_MouseEnter);
             this.btn_GestionCompte.MouseHover += new System.EventHandler(this.btn_GestionCompte_MouseHover);
+            this.btn_GestionCompte.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_GestionCompte_MouseMove);
             // 
             // panel_Mamber
             // 
@@ -254,6 +260,8 @@ namespace Projet_Onssa
             this.panel_Mamber.TabIndex = 13;
             this.panel_Mamber.MouseEnter += new System.EventHandler(this.panel_Mamber_MouseEnter);
             this.panel_Mamber.MouseHover += new System.EventHandler(this.panel_Mamber_MouseHover);
+            this.panel_Mamber.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Mamber_MouseMove);
+            this.panel_Mamber.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Mamber_MouseUp);
             // 
             // btn_Mamber
             // 
@@ -289,9 +297,11 @@ namespace Projet_Onssa
             this.btn_Mamber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Mamber.Textcolor = System.Drawing.Color.White;
             this.btn_Mamber.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Mamber.MouseUp += new System.EventHandler(this.btn_Mamber_MouseUp);
             this.btn_Mamber.Click += new System.EventHandler(this.btn_Mamber_Click);
             this.btn_Mamber.MouseEnter += new System.EventHandler(this.btn_Mamber_MouseEnter);
             this.btn_Mamber.MouseHover += new System.EventHandler(this.btn_Mamber_MouseHover);
+            this.btn_Mamber.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Mamber_MouseMove);
             // 
             // btn_Out
             // 
@@ -337,6 +347,8 @@ namespace Projet_Onssa
             this.panel_Gpaiement.TabIndex = 8;
             this.panel_Gpaiement.MouseEnter += new System.EventHandler(this.panel_Gpaiement_MouseEnter);
             this.panel_Gpaiement.MouseHover += new System.EventHandler(this.panel_Gpaiement_MouseHover);
+            this.panel_Gpaiement.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Gpaiement_MouseMove);
+            this.panel_Gpaiement.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Gpaiement_MouseUp);
             // 
             // btn_Gpaiement
             // 
@@ -372,9 +384,11 @@ namespace Projet_Onssa
             this.btn_Gpaiement.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Gpaiement.Textcolor = System.Drawing.Color.White;
             this.btn_Gpaiement.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gpaiement.MouseUp += new System.EventHandler(this.btn_Gpaiement_MouseUp);
             this.btn_Gpaiement.Click += new System.EventHandler(this.btn_Gpaiement_Click);
             this.btn_Gpaiement.MouseEnter += new System.EventHandler(this.btn_Gpaiement_MouseEnter);
             this.btn_Gpaiement.MouseHover += new System.EventHandler(this.btn_Gpaiement_MouseHover);
+            this.btn_Gpaiement.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Gpaiement_MouseMove);
             // 
             // panel_Accueil
             // 
@@ -385,6 +399,8 @@ namespace Projet_Onssa
             this.panel_Accueil.TabIndex = 6;
             this.panel_Accueil.MouseEnter += new System.EventHandler(this.panel_Accueil_MouseEnter);
             this.panel_Accueil.MouseHover += new System.EventHandler(this.panel_Accueil_MouseHover);
+            this.panel_Accueil.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_Accueil_MouseMove);
+            this.panel_Accueil.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel_Accueil_MouseUp);
             // 
             // btn_Accueil
             // 
@@ -420,9 +436,11 @@ namespace Projet_Onssa
             this.btn_Accueil.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Accueil.Textcolor = System.Drawing.Color.White;
             this.btn_Accueil.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Accueil.MouseUp += new System.EventHandler(this.btn_Accueil_MouseUp);
             this.btn_Accueil.Click += new System.EventHandler(this.btn_Accueil_Click);
             this.btn_Accueil.MouseEnter += new System.EventHandler(this.btn_Accueil_MouseEnter);
             this.btn_Accueil.MouseHover += new System.EventHandler(this.btn_Accueil_MouseHover);
+            this.btn_Accueil.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_Accueil_MouseMove);
             // 
             // panel3
             // 
@@ -443,6 +461,8 @@ namespace Projet_Onssa
             this.panel5.TabIndex = 5;
             this.panel5.MouseEnter += new System.EventHandler(this.panel5_MouseEnter);
             this.panel5.MouseHover += new System.EventHandler(this.panel5_MouseHover);
+            this.panel5.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseMove);
+            this.panel5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.panel5_MouseUp);
             // 
             // button18
             // 

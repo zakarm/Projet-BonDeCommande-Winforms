@@ -407,17 +407,17 @@ namespace Projet_Onssa
 
         private void panel6_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
         private void panelControl_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
         private void panelControl_MouseLeave(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(64, 749);
+            panelControl.Size = new Size(130, 749);
 
         }
 
@@ -851,6 +851,106 @@ namespace Projet_Onssa
             openchildformtab(new LectureOv(), new OvForm());
             tabPage1.Text = "Lecture Ordre de virement";
             tabPage2.Text = "Gestion Ordre de virement";
+        }
+
+        private void btn_Mamber_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Gpaiement_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Mamber_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_GestionCompte_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_GestionCompte_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Lois_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Gpaiement_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Accueil_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Accueil_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel5_MouseMove(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Accueil_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel5_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Accueil_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Gpaiement_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Gpaiement_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Mamber_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_Mamber_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_GestionCompte_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void panel_GestionCompte_MouseUp(object sender, MouseEventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
+        }
+
+        private void btn_Lois_MouseUp(object sender, EventArgs e)
+        {
+            panelControl.Size = new Size(130, 749);
         }
     }
 }
