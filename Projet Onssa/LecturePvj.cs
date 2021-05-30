@@ -17,19 +17,7 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        DataSetPvj ds = new DataSetPvj();
-
-
-        DataSetPvjTableAdapters.CommissionSetTableAdapter dac = new DataSetPvjTableAdapters.CommissionSetTableAdapter();
-        DataSetPvjTableAdapters.PVJCommissionTableAdapter dacp = new DataSetPvjTableAdapters.PVJCommissionTableAdapter();
-        DataSetPvjTableAdapters.FournisseurSetTableAdapter daf = new DataSetPvjTableAdapters.FournisseurSetTableAdapter();
-        DataSetPvjTableAdapters.PVJFournisseurTableAdapter dapf = new DataSetPvjTableAdapters.PVJFournisseurTableAdapter();
-        DataSetPvjTableAdapters.ModeleDevisSetTableAdapter dam = new DataSetPvjTableAdapters.ModeleDevisSetTableAdapter();
-       // DataSetPvjTableAdapters.FournisseurReponduSetTableAdapter dafr = new DataSetPvjTableAdapters.FournisseurReponduSetTableAdapter();
-        DataSetPvjTableAdapters.ConsultationFournisseurTableAdapter daconf = new DataSetPvjTableAdapters.ConsultationFournisseurTableAdapter();
-        DataSetPvjTableAdapters.ConsultationSetTableAdapter dacon = new DataSetPvjTableAdapters.ConsultationSetTableAdapter();
-        DataSetPvjTableAdapters.PVJSetTableAdapter dapvj = new DataSetPvjTableAdapters.PVJSetTableAdapter();
-
+        
         private void LecturePvj_Load(object sender, EventArgs e)
         {
 
@@ -46,6 +34,8 @@ namespace Projet_Onssa
             try
             {
 
+                DataSetPvj ds = new DataSetPvj();
+                DataRow row;
 
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
@@ -71,36 +61,64 @@ namespace Projet_Onssa
                     
                     NumToString cc = new NumToString();
                     
-                    if(query.FirstOrDefault().NumDevis!=null)
-                    { 
-                        int IdPvj = int.Parse(query.FirstOrDefault().IdPvj.ToString());
+                    if(query.FirstOrDefault() !=null)
+                    {
 
+                        foreach (Fournisseur f in ctx.PVJSet.Find(query.FirstOrDefault().IdPvj).ListFournisseursRepondu)
+                        {
+                            row = ds.FournisseurReponduSet.NewRow();
+                            row[0] = f.Nom;
+                            ds.FournisseurReponduSet.Rows.Add(row);
+                            
+                        }
 
-                        daf.Fill(ds.FournisseurSet);
-                        dac.Fill(ds.CommissionSet);
-                        dam.Fill(ds.ModeleDevisSet);
-                        dapvj.Fill(ds.PVJSet);
-                       // dafr.Fill(ds.FournisseurReponduSet);
-                        dacp.Fill(ds.PVJCommission);
-                        dapf.Fill(ds.PVJFournisseur);
-                        daconf.Fill(ds.ConsultationFournisseur);
-                        dacon.Fill(ds.ConsultationSet);
+                        //foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().IdCon).ListFournisseur)
+                        //{
 
-                        //int IdCon = int.Parse(query.FirstOrDefault().IdCon.ToString());
-                        //daf.FillByConsultation(ds.FournisseurSet, IdCon);
+                            
+                            
+                        //}
 
-                        dapvj.FillByPvj(ds.PVJSet,IdPvj);
-                      //dafr.FillByPvj(ds.FournisseurReponduSet, IdPvj);
+                        foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().IdCon).ListFournisseur)
+                        {
+                            
+                            
+                            row = ds.FournisseurCon.NewRow();
+                            row[0] = f.Nom;
+                            ds.FournisseurCon.Rows.Add(row);
 
-                        //int IdDevis = int.Parse(query.FirstOrDefault().IdDevis.ToString());
-                        //dam.FillByConsultation(ds.ModeleDevisSet, IdCon);
+                            var query2 = from  md in ctx.ModeleDevisSet 
+                                        where md.InfoFournisseur.IdFournisseur == f.IdFournisseur && md.InfoConsultation.IdConsultation == query.FirstOrDefault().IdCon
+                                         select new
+                                        {
+                                            IdDevis = md.IdModeleDevis,
+                                        };
 
-                        //dac.FillByPvj(ds.CommissionSet, IdPvj);
+                            if (query2.FirstOrDefault() != null)
+                            {
+                                ModeleDevis m = ctx.ModeleDevisSet.Find(query2.FirstOrDefault().IdDevis);
+                                row = ds.Devis.NewRow();
+                                row[0] = m.InfoFournisseur.Nom;
+                                row[1] = m.IdModeleDevis;
+                                row[2] = m.Date;
+                                row[3] = m.Ttc;
+                                ds.Devis.Rows.Add(row);
+                            }
 
+                        }
 
+                        foreach (Commission c in ctx.PVJSet.Find(query.FirstOrDefault().IdPvj).ListCommissions)
+                        {
+                           
+                            row = ds.CommissionSet.NewRow();
+                            row[1] = c.Nom;
+                            row[2] =c.Prenom;
+                            row[3] = c.Fonction;
+                            row[4] = c.Affectation;
+                            ds.CommissionSet.Rows.Add(row);
+                        }
 
-
-
+                        
                         DateTime d = query.FirstOrDefault().DatePvj;
                         NumToString num = new NumToString();
                         DateToString dt = new DateToString();

@@ -88,7 +88,7 @@ namespace Projet_Onssa
 
                                 };
                     int s = 0;
-                    foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().NumCon).ListFournisseur)
+                    foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).ListFournisseur)
                     {
                        
                         row = ds.Lettre.NewRow();
