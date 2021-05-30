@@ -90,6 +90,7 @@ namespace Projet_Onssa
                 btn_Mamber.Visible = false;
                 btn_GestionCompte.Visible = false;
                 openchildform(new Statistique());
+                label_cnx.Text = Program.OG.Nom[0].ToString();
             }
             else
             {
@@ -100,6 +101,7 @@ namespace Projet_Onssa
                     btnMcsrs(false);
                     btnLcsrs(false);
                     openchildform(new Statistique());
+                    label_cnx.Text = Program.OG.Nom[0].ToString();
 
                 }
                 else
@@ -116,6 +118,7 @@ namespace Projet_Onssa
                         btn_GestionCompte.Visible = false;
                         panel_GestionCompte.Visible = false;
                         openchildform(new Statistique());
+                        label_cnx.Text = Program.OG.Nom[0].ToString();
                     }
                     else
                     {
@@ -132,6 +135,7 @@ namespace Projet_Onssa
                             btn_Mamber.Visible = false;
                             btn_GestionCompte.Visible = false;
                             openchildform(new Statistique());
+                            label_cnx.Text = Program.OG.Nom[0].ToString();
                         }
 
                     }

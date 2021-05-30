@@ -82,12 +82,13 @@ namespace Projet_Onssa
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_header = new System.Windows.Forms.Panel();
             this.label_txt = new System.Windows.Forms.Label();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel_slide = new System.Windows.Forms.Panel();
             this.panel_childform = new System.Windows.Forms.Panel();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label_cnx = new System.Windows.Forms.Label();
             this.panelControl.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -98,6 +99,7 @@ namespace Projet_Onssa
             this.panel_header.SuspendLayout();
             this.panel_childform.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl
@@ -1300,8 +1302,9 @@ namespace Projet_Onssa
             // 
             this.panel_header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(245)))), ((int)(((byte)(250)))));
             this.panel_header.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_header.Controls.Add(this.label_cnx);
+            this.panel_header.Controls.Add(this.pictureBox2);
             this.panel_header.Controls.Add(this.label_txt);
-            this.panel_header.Controls.Add(this.bunifuFlatButton3);
             this.panel_header.Controls.Add(this.panel_slide);
             this.panel_header.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_header.Location = new System.Drawing.Point(320, 0);
@@ -1319,40 +1322,6 @@ namespace Projet_Onssa
             this.label_txt.Size = new System.Drawing.Size(114, 32);
             this.label_txt.TabIndex = 30;
             this.label_txt.Text = "Accueil";
-            // 
-            // bunifuFlatButton3
-            // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.LightGray;
-            this.bunifuFlatButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = global::Projet_Onssa.Properties.Resources.dd_32;
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 7;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = true;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = true;
-            this.bunifuFlatButton3.IconZoom = 60D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(975, 26);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(233)))), ((int)(((byte)(235)))));
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(74)))), ((int)(((byte)(163)))));
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(45, 37);
-            this.bunifuFlatButton3.TabIndex = 14;
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(146)))), ((int)(((byte)(157)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel_slide
             // 
@@ -1403,6 +1372,26 @@ namespace Projet_Onssa
             this.tabPage2.Text = "Gestion ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(950, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 45);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label_cnx
+            // 
+            this.label_cnx.AutoSize = true;
+            this.label_cnx.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_cnx.Location = new System.Drawing.Point(964, 33);
+            this.label_cnx.Name = "label_cnx";
+            this.label_cnx.Size = new System.Drawing.Size(23, 25);
+            this.label_cnx.TabIndex = 31;
+            this.label_cnx.Text = "A";
+            // 
             // Accueil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1431,6 +1420,7 @@ namespace Projet_Onssa
             this.panel_header.PerformLayout();
             this.panel_childform.ResumeLayout(false);
             this.tabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1476,7 +1466,6 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton btn_Co;
         private System.Windows.Forms.Panel panel_Commission;
         private System.Windows.Forms.Label label_txt;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -1495,5 +1484,7 @@ namespace Projet_Onssa
         private System.Windows.Forms.Panel panel_Par;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Par;
         private Bunifu.Framework.UI.BunifuFlatButton btn_Gguide;
+        private System.Windows.Forms.Label label_cnx;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
