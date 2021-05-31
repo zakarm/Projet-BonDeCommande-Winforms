@@ -3376,7 +3376,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Onssa"
         "ProductCode" = "8:{D7C452F2-0246-4DA5-89A8-2CF38E2937B7}"
-        "PackageCode" = "8:{468C20F3-8713-40CA-A3F9-C59A0E4CC0F2}"
+        "PackageCode" = "8:{76B7CB57-5D75-4C08-A06D-F8BA1CDC93BA}"
         "UpgradeCode" = "8:{81831590-043C-403F-A0E7-589DB3FC55F6}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

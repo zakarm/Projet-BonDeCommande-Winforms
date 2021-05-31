@@ -63,6 +63,7 @@ namespace Projet_Onssa
             catch (Exception o)
             {
                 MessageBox.Show(o.Message);
+                
             }
         }
 
