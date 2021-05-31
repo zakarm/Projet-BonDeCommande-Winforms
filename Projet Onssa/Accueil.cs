@@ -1,16 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-using MaterialSkin;
-using MaterialSkin.Controls;
-using MaterialSkin.Properties;
 namespace Projet_Onssa
 {
     public partial class Accueil : Form
@@ -20,7 +11,7 @@ namespace Projet_Onssa
             InitializeComponent();
         }
 
-        
+
         private Form activeForm = null;
         private void openchildform(Form childForm)
         {
@@ -40,13 +31,13 @@ namespace Projet_Onssa
 
         }
 
-        private void openchildformtab(Form childForm1,Form childForm2)
+        private void openchildformtab(Form childForm1, Form childForm2)
         {
             if (activeForm != null)
             {
                 activeForm.Close();
             }
-            activeForm = childForm1 ;
+            activeForm = childForm1;
             childForm1.TopLevel = false;
             childForm1.FormBorderStyle = FormBorderStyle.None;
             childForm1.Dock = DockStyle.Fill;
@@ -94,9 +85,9 @@ namespace Projet_Onssa
             }
             else
             {
-                if(Program.OG.TypeCompte.Equals("csrs") || Program.OG.TypeCompte.Equals("CSRS") || Program.OG.TypeCompte.Equals("Csrs"))
+                if (Program.OG.TypeCompte.Equals("csrs") || Program.OG.TypeCompte.Equals("CSRS") || Program.OG.TypeCompte.Equals("Csrs"))
                 {
-                   
+
                     btnPcsrs(true);
                     btnMcsrs(false);
                     btnLcsrs(false);
@@ -106,7 +97,7 @@ namespace Projet_Onssa
                 }
                 else
                 {
-                    if(Program.OG.TypeCompte.Equals("dr") || Program.OG.TypeCompte.Equals("Dr") || Program.OG.TypeCompte.Equals("DR"))
+                    if (Program.OG.TypeCompte.Equals("dr") || Program.OG.TypeCompte.Equals("Dr") || Program.OG.TypeCompte.Equals("DR"))
                     {
                         btn_Gpaiement_Click(sender, e);
                         btnPcsrs(true);
@@ -123,7 +114,7 @@ namespace Projet_Onssa
                     else
                     {
 
-                        if (Program.OG.TypeCompte.Equals("ca") || Program.OG.TypeCompte.Equals("srs") || Program.OG.TypeCompte.Equals("CA") || 
+                        if (Program.OG.TypeCompte.Equals("ca") || Program.OG.TypeCompte.Equals("srs") || Program.OG.TypeCompte.Equals("CA") ||
                             Program.OG.TypeCompte.Equals("SRS") || Program.OG.TypeCompte.Equals("Ca") || Program.OG.TypeCompte.Equals("Srs"))
                         {
 
@@ -143,14 +134,14 @@ namespace Projet_Onssa
             }
         }
 
-        
+
         private void btn_Out_Click(object sender, EventArgs e)
         {
             this.Hide();
 
             Connexion c = new Connexion();
             c.Show();
- 
+
             Accueil a = new Accueil();
             a.Close();
         }
@@ -160,7 +151,7 @@ namespace Projet_Onssa
             panel_submenu.Visible = true;
             btnPcsrs(false);
             btnMcsrs(true);
-            
+
         }
 
         private void btnCcord(bool s)
@@ -186,7 +177,7 @@ namespace Projet_Onssa
             btn_Pvr.Visible = false;
             panel_Pvr.Visible = false;
             btn_Ov.Visible = false;
-            panel_Op.Visible =false;
+            panel_Op.Visible = false;
             btn_Op.Visible = false;
             panel_Ov.Visible = false;
 
@@ -242,7 +233,7 @@ namespace Projet_Onssa
             btn_Pvj.Visible = s;
             panel_Mdevis.Visible = s;
             btn_Bc.Visible = s;
-            panel_Bc.Visible =s;
+            panel_Bc.Visible = s;
             btn_Fe.Visible = s;
             panel_Fe.Visible = s;
             btn_Oi.Visible = s;
@@ -270,7 +261,7 @@ namespace Projet_Onssa
                 btn_Oi_Click(sender, e);
                 btnPcord(true);
                 btnMcsrs(false);
-                
+
             }
             else
             {
@@ -284,13 +275,13 @@ namespace Projet_Onssa
                 }
                 else
                 {
-                    if(Program.OG.TypeCompte.Equals("dr"))
+                    if (Program.OG.TypeCompte.Equals("dr"))
                     {
                         btn_Consultation_Click(sender, e);
                         btnPcsrs(true);
                         tabControl1.TabPages.Remove(tabPage2);
-                        
-                        
+
+
                     }
                 }
             }
@@ -304,7 +295,7 @@ namespace Projet_Onssa
             tabPage1.Text = "Lecture Consultation";
             tabPage2.Text = "Gestion Consultation";
             openchildformtab(new LectureConsultation(), new ConsultationForm());
-            
+
 
         }
 
@@ -320,9 +311,9 @@ namespace Projet_Onssa
             label_txt.Text = "Commission";
         }
 
-       
 
-       
+
+
 
         private void btn_Bc_Click(object sender, EventArgs e)
         {
@@ -349,7 +340,7 @@ namespace Projet_Onssa
             openchildformtab(new LectureOi(), new OiForm());
             tabPage1.Text = "Lecture Ordre d'imputation";
             tabPage2.Text = "Gestion Ordre d'imputation";
-            
+
         }
 
         private void btn_Pvr_Click(object sender, EventArgs e)
@@ -357,12 +348,12 @@ namespace Projet_Onssa
             tabPage1.Text = "Lecture Procès verbal de reception";
             tabPage2.Text = "Gestion Procès verbal de reception";
             label_txt.Name = "pvr";
-            openchildformtab(new LecturePvr(),new PvrForm());
+            openchildformtab(new LecturePvr(), new PvrForm());
             label_txt.Text = "Procès verbal de reception";
         }
 
-       
-       
+
+
 
         private void btn_GestionCompte_Click(object sender, EventArgs e)
         {
@@ -432,21 +423,21 @@ namespace Projet_Onssa
 
         private void btn_Accueil_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
 
         private void btn_Gpaiement_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
         private void btn_Gpaiement_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
-        
+
         private void btn_Mamber_MouseEnter(object sender, EventArgs e)
         {
             panelControl.Size = new Size(130, 749);
@@ -454,17 +445,17 @@ namespace Projet_Onssa
 
         private void btn_Mamber_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
         private void btn_GestionCompte_MouseEnter(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
         }
 
         private void btn_GestionCompte_MouseHover(object sender, EventArgs e)
         {
-            panelControl.Size = new Size(130, 749); 
+            panelControl.Size = new Size(130, 749);
 
         }
 
@@ -810,7 +801,7 @@ namespace Projet_Onssa
             openchildform(new MorasseForm());
         }
 
-        
+
         private void btn_Accueil_Click(object sender, EventArgs e)
         {
             openchildform(new Statistique());

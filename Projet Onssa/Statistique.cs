@@ -57,7 +57,7 @@ namespace Projet_Onssa
 
 
 
-                    using (SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-IRG7UCK\SQLEXPRESS;Initial Catalog=Onssa_Projet;Integrated Security=True"))
+                    using (SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30"))
                     {
 
 
