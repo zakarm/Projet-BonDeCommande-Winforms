@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -184,16 +184,10 @@
       <DependentUpon>CrystalReportPvr.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="DataSetPvj.cs">
-      <DependentUpon>DataSetPvj.xsd</DependentUpon>
-    </Compile>
     <Compile Include="DataSetPvj.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetPvj.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="DataSetReport.cs">
-      <DependentUpon>DataSetReport.xsd</DependentUpon>
     </Compile>
     <Compile Include="DataSetReport.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -631,6 +625,13 @@
       <LastGenOutput>OnssaModel.cs</LastGenOutput>
       <DependentUpon>OnssaModel.edmx</DependentUpon>
     </Content>
+    <Content Include="Onssa_Db.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Onssa_Db_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Onssa_Db.mdf</DependentUpon>
+    </Content>
     <None Include="Resources\Sans titre-11.png" />
     <None Include="Resources\Sans titre-1.png" />
     <None Include="Resources\icons8_homeb_321.png" />
@@ -652,6 +653,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
