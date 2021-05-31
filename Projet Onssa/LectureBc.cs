@@ -92,6 +92,11 @@ namespace Projet_Onssa
                         crystalReportViewer1.ReportSource = ce;
                         crystalReportViewer1.Refresh();
                     }
+                    else
+                    {
+                       MessageBox.Show("Erreur dans le procès verbal de jugement choisie dans la bon de commande");
+
+                    }
                     
                 }
             }

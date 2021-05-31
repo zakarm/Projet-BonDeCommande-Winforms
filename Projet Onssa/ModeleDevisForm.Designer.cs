@@ -82,9 +82,9 @@ namespace Projet_Onssa
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(481, 96);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 21);
+            this.label1.Size = new System.Drawing.Size(201, 21);
             this.label1.TabIndex = 61;
-            this.label1.Text = "Date  ";
+            this.label1.Text = "Date de Modele Devis";
             // 
             // btn_Supprimer
             // 

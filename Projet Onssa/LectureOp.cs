@@ -40,7 +40,7 @@ namespace Projet_Onssa
                             join m in ctx.ModeleDevisSet on pvj.InfoFournisseur.IdFournisseur equals
                             m.InfoFournisseur.IdFournisseur
                             join fr in ctx.FournisseurSet on m.InfoFournisseur.IdFournisseur equals fr.IdFournisseur
-                           // join pvr in ctx.PVRSet on oi.IdOI equals pvr.IdPVR
+                            join pvr in ctx.PVRSet on oi.IdOI equals pvr.IdPVR
                             where op.IdOP == (int)cb_Op.SelectedValue && m.InfoConsultation.IdConsultation == pvj.InfoConsultation.IdConsultation
                             select new
                             {
@@ -58,7 +58,7 @@ namespace Projet_Onssa
                                 Objet = m.InfoConsultation.ObjetConsultation,
                                 Exercice = bc.InfoMorasse.Exercice,
                                 Compte = fr.Compte_bancaire_n,
-                                //DatePvr = pvr.DatePVR,
+                                DatePvr = pvr.DatePVR,
                                 VisaContol = oi.VisaControle,
                                 Visacsrs = oi.VisaCsrs,
                                 DatePaiement = oi.DatePaiement,
@@ -67,33 +67,38 @@ namespace Projet_Onssa
 
                             };
 
-                NumToString cc = new NumToString();
-               
 
-                CrystalReportOp ce = new CrystalReportOp();
-
-                ce.SetParameterValue("ttc", query.FirstOrDefault().total.ToString());
-                ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
-                ce.SetParameterValue("nomfr", query.FirstOrDefault().NomFr.ToString());
-                ce.SetParameterValue("numoi", query.FirstOrDefault().NumOi.ToString());
-                ce.SetParameterValue("numcompte", query.FirstOrDefault().NumCompte.ToString());
-                ce.SetParameterValue("dateoi", query.FirstOrDefault().DateOi.ToString());
-                ce.SetParameterValue("numop", query.FirstOrDefault().NumOp.ToString());
-                ce.SetParameterValue("code", query.FirstOrDefault().Code.ToString());
-                ce.SetParameterValue("dateop", query.FirstOrDefault().DateOp.ToString());
-                ce.SetParameterValue("datebc", query.FirstOrDefault().DateBc.ToString());
-                ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
-                ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
-                ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
-               // ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
-                ce.SetParameterValue("lettre", cc.virgule(query.FirstOrDefault().total.ToString()));
-                ce.SetParameterValue("visacontrol", query.FirstOrDefault().VisaContol.ToString());
-                ce.SetParameterValue("visacsrs", query.FirstOrDefault().Visacsrs.ToString());
-                ce.SetParameterValue("datepaiement", query.FirstOrDefault().DatePaiement.ToString());
-                ce.SetParameterValue("visasous", query.FirstOrDefault().VisaSousOrdo.ToString());
-                ce.SetParameterValue("visatr", query.FirstOrDefault().VisaTresorier.ToString());
-                crystalReportViewer1.ReportSource = ce;
-                crystalReportViewer1.Refresh();
+                if (query.FirstOrDefault() != null)
+                {
+                    NumToString cc = new NumToString();
+                    CrystalReportOp ce = new CrystalReportOp();
+                    ce.SetParameterValue("ttc", query.FirstOrDefault().total.ToString());
+                    ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
+                    ce.SetParameterValue("nomfr", query.FirstOrDefault().NomFr.ToString());
+                    ce.SetParameterValue("numoi", query.FirstOrDefault().NumOi.ToString());
+                    ce.SetParameterValue("numcompte", query.FirstOrDefault().NumCompte.ToString());
+                    ce.SetParameterValue("dateoi", query.FirstOrDefault().DateOi.ToString());
+                    ce.SetParameterValue("numop", query.FirstOrDefault().NumOp.ToString());
+                    ce.SetParameterValue("code", query.FirstOrDefault().Code.ToString());
+                    ce.SetParameterValue("dateop", query.FirstOrDefault().DateOp.ToString());
+                    ce.SetParameterValue("datebc", query.FirstOrDefault().DateBc.ToString());
+                    ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
+                    ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
+                    ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
+                    ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
+                    ce.SetParameterValue("lettre", cc.virgule(query.FirstOrDefault().total.ToString()));
+                    ce.SetParameterValue("visacontrol", query.FirstOrDefault().VisaContol.ToString());
+                    ce.SetParameterValue("visacsrs", query.FirstOrDefault().Visacsrs.ToString());
+                    ce.SetParameterValue("datepaiement", query.FirstOrDefault().DatePaiement.ToString());
+                    ce.SetParameterValue("visasous", query.FirstOrDefault().VisaSousOrdo.ToString());
+                    ce.SetParameterValue("visatr", query.FirstOrDefault().VisaTresorier.ToString());
+                    crystalReportViewer1.ReportSource = ce;
+                    crystalReportViewer1.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Établis un procès-verbal de réception choisissant le même ordre imputation !");
+                }
             }
         }
     }

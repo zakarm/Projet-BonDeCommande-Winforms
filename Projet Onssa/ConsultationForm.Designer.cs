@@ -63,7 +63,7 @@ namespace Projet_Onssa
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(38, 229);
+            this.label2.Location = new System.Drawing.Point(38, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 21);
             this.label2.TabIndex = 18;
@@ -382,7 +382,7 @@ namespace Projet_Onssa
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.dgv_Fournisseur);
-            this.panel1.Location = new System.Drawing.Point(38, 253);
+            this.panel1.Location = new System.Drawing.Point(38, 260);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(878, 242);
             this.panel1.TabIndex = 146;

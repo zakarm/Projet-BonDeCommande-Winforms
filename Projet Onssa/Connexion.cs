@@ -25,36 +25,13 @@ namespace Projet_Onssa
 
         private void btn_Cnx_Click(object sender, EventArgs e)
         {
+
             using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
             {
-                //connection string= &quot; Data Source=DESKTOP-IRG7UCK\SQLEXPRESS;Initial Catalog=Onssa_Projet;Integrated Security=True; MultipleActiveResultSets=True;App=EntityFramework&quot;
-                // connectionString="&quot; Data Source=DESKTOP-IRG7UCK\SQLEXPRESS;Initial Catalog=Onssa_Projet;Integrated Security=True"
-                ///////////methode recherche simple//////////////
 
-                //bool teste = false;
-                //foreach(GestionCompte OG in o.GestionCompteSet)
-                //{
-                //    if(OG.Nom== bunifuMaterialTextbox4.Text && OG.MotDePasse== bunifuMaterialTextbox3.Text)
-                //    {
-                //        Program.typeCompte = OG.TypeCompte;
-                //        teste = true;
-                //        break;
-                //    }
-                //}
-
-                //if (teste == true)
-                //{
-                //    Accueil FormAcc = new Accueil();
-                //    this.Hide();
-                //    FormAcc.Show();
-                //}
-
-                //else
-                //    MessageBox.Show("had Lcompte makanch", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                ///////////methode recherche linq//////////////
+                txt_Password.isPassword = true;
                 var query = from g in ctx.GestionCompteSet
-                            where g.Nom == bunifuMaterialTextbox4.Text && g.MotDePasse == bunifuMaterialTextbox3.Text
+                            where g.Nom == txt_Nom.Text && g.MotDePasse == txt_Password.Text
                             select g ;
 
                 Program.OG = query.FirstOrDefault();
@@ -72,6 +49,7 @@ namespace Projet_Onssa
             }
         }
 
+
         public void StartForm()
         {
             Application.Run(new SplashScreen());
@@ -79,7 +57,12 @@ namespace Projet_Onssa
 
         private void Connexion_Load(object sender, EventArgs e)
         {
+            txt_Password.isPassword = true;
+        }
 
+        private void txt_Password_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

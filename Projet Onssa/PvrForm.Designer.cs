@@ -75,18 +75,18 @@ namespace Projet_Onssa
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(20, 265);
+            this.label9.Location = new System.Drawing.Point(20, 284);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(84, 21);
+            this.label9.Size = new System.Drawing.Size(313, 21);
             this.label9.TabIndex = 168;
-            this.label9.Text = "Date Pvr";
+            this.label9.Text = "Date du Procès verbal de reception";
             // 
             // Numé
             // 
             this.Numé.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Numé.AutoSize = true;
             this.Numé.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Numé.Location = new System.Drawing.Point(20, 169);
+            this.Numé.Location = new System.Drawing.Point(20, 188);
             this.Numé.Name = "Numé";
             this.Numé.Size = new System.Drawing.Size(168, 21);
             this.Numé.TabIndex = 165;
@@ -97,7 +97,7 @@ namespace Projet_Onssa
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(16, 67);
+            this.label1.Location = new System.Drawing.Point(16, 86);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 21);
             this.label1.TabIndex = 163;
@@ -148,7 +148,7 @@ namespace Projet_Onssa
             this.dgv_Commission.Name = "dgv_Commission";
             this.dgv_Commission.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Commission.RowHeadersWidth = 5;
-            this.dgv_Commission.Size = new System.Drawing.Size(484, 491);
+            this.dgv_Commission.Size = new System.Drawing.Size(484, 484);
             this.dgv_Commission.TabIndex = 170;
             // 
             // Num
@@ -208,7 +208,7 @@ namespace Projet_Onssa
             this.data_Pvr.ForeColor = System.Drawing.Color.Black;
             this.data_Pvr.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.data_Pvr.FormatCustom = null;
-            this.data_Pvr.Location = new System.Drawing.Point(24, 295);
+            this.data_Pvr.Location = new System.Drawing.Point(24, 314);
             this.data_Pvr.Name = "data_Pvr";
             this.data_Pvr.Size = new System.Drawing.Size(364, 30);
             this.data_Pvr.TabIndex = 169;
@@ -225,7 +225,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(19, 288);
+            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(19, 307);
             this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
             this.bunifuMetroTextbox3.Size = new System.Drawing.Size(375, 44);
@@ -238,7 +238,7 @@ namespace Projet_Onssa
             this.cb_Oi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Oi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_Oi.FormattingEnabled = true;
-            this.cb_Oi.Location = new System.Drawing.Point(27, 201);
+            this.cb_Oi.Location = new System.Drawing.Point(27, 220);
             this.cb_Oi.Name = "cb_Oi";
             this.cb_Oi.Size = new System.Drawing.Size(358, 28);
             this.cb_Oi.TabIndex = 164;
@@ -255,7 +255,7 @@ namespace Projet_Onssa
             this.txt_Destination.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txt_Destination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_Destination.isPassword = false;
-            this.txt_Destination.Location = new System.Drawing.Point(20, 191);
+            this.txt_Destination.Location = new System.Drawing.Point(20, 210);
             this.txt_Destination.Margin = new System.Windows.Forms.Padding(4);
             this.txt_Destination.Name = "txt_Destination";
             this.txt_Destination.Size = new System.Drawing.Size(375, 44);
@@ -269,7 +269,7 @@ namespace Projet_Onssa
             this.cb_NumPvr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_NumPvr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cb_NumPvr.FormattingEnabled = true;
-            this.cb_NumPvr.Location = new System.Drawing.Point(29, 98);
+            this.cb_NumPvr.Location = new System.Drawing.Point(29, 117);
             this.cb_NumPvr.Name = "cb_NumPvr";
             this.cb_NumPvr.Size = new System.Drawing.Size(358, 28);
             this.cb_NumPvr.TabIndex = 144;
@@ -286,7 +286,7 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(20, 89);
+            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(20, 108);
             this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
             this.bunifuMetroTextbox1.Size = new System.Drawing.Size(375, 44);

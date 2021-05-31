@@ -49,7 +49,7 @@ namespace Projet_Onssa
                                     NomFr = m.InfoFournisseur.Nom,
                                     Objet = m.InfoConsultation.ObjetConsultation,
                                     IdPvj = pvj.IdPVJ,
-                                    NumCon = pvj.InfoConsultation.IdConsultation,
+                                    NumCon = pvj.InfoConsultation.NumConsultation,
                                     NumDevis = m.NumDevis,
                                     IdDevis = m.IdModeleDevis,
                                     Tva = m.Tva,
@@ -71,13 +71,6 @@ namespace Projet_Onssa
                             ds.FournisseurReponduSet.Rows.Add(row);
                             
                         }
-
-                        //foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().IdCon).ListFournisseur)
-                        //{
-
-                            
-                            
-                        //}
 
                         foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().IdCon).ListFournisseur)
                         {
@@ -139,7 +132,7 @@ namespace Projet_Onssa
                     }
                     else
                     {
-                        MessageBox.Show("le fournisseur choisie n'a pas un modele de devis");
+                        MessageBox.Show("le fournisseur choisie dans le procès verbal de jugement n'a pas un modele de devis");
                     }
                     
                 }

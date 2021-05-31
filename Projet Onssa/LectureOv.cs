@@ -58,22 +58,31 @@ namespace Projet_Onssa
                                 banque = fr.Banque,
                             };
 
-                
-                CrystalReportOv ce = new CrystalReportOv();
-                ce.SetParameterValue("ttc", query.FirstOrDefault().ttc.ToString());
-                ce.SetParameterValue("nom", query.FirstOrDefault().nom.ToString());
-                ce.SetParameterValue("compte", query.FirstOrDefault().compte.ToString());
-                ce.SetParameterValue("numop", query.FirstOrDefault().numop.ToString());
-                ce.SetParameterValue("sou", query.FirstOrDefault().sou.ToString());
-                ce.SetParameterValue("tr", query.FirstOrDefault().tr.ToString());
-                ce.SetParameterValue("numov", query.FirstOrDefault().numov.ToString());
-                ce.SetParameterValue("banque", query.FirstOrDefault().banque.ToString());
-                crystalReportViewer1.ReportSource = ce;
-                crystalReportViewer1.Refresh();
-            }
+                if (query.FirstOrDefault() != null)
+                {
 
 
+                    CrystalReportOv ce = new CrystalReportOv();
+                    ce.SetParameterValue("ttc", query.FirstOrDefault().ttc.ToString());
+                    ce.SetParameterValue("nom", query.FirstOrDefault().nom.ToString());
+                    ce.SetParameterValue("compte", query.FirstOrDefault().compte.ToString());
+                    ce.SetParameterValue("numop", query.FirstOrDefault().numop.ToString());
+                    ce.SetParameterValue("sou", query.FirstOrDefault().sou.ToString());
+                    ce.SetParameterValue("tr", query.FirstOrDefault().tr.ToString());
+                    ce.SetParameterValue("numov", query.FirstOrDefault().numov.ToString());
+                    ce.SetParameterValue("banque", query.FirstOrDefault().banque.ToString());
+                    crystalReportViewer1.ReportSource = ce;
+                    crystalReportViewer1.Refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Erreur dans l'ordre de paiement choisie ");
+                }
 
         }
+
+
+
+    }
     }
 }

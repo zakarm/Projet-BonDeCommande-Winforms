@@ -389,9 +389,9 @@ namespace Projet_Onssa
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(36, 12);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(132, 21);
+            this.label5.Size = new System.Drawing.Size(333, 21);
             this.label5.TabIndex = 90;
-            this.label5.Text = "Numéro de Pvj";
+            this.label5.Text = "Numéro de Procès verbal de jugement";
             // 
             // label9
             // 
@@ -413,9 +413,9 @@ namespace Projet_Onssa
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.Location = new System.Drawing.Point(518, 16);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(63, 21);
+            this.label11.Size = new System.Drawing.Size(311, 21);
             this.label11.TabIndex = 98;
-            this.label11.Text = "Date  ";
+            this.label11.Text = "Date de Procès verbal de jugement";
             // 
             // cb_fchoisie
             // 

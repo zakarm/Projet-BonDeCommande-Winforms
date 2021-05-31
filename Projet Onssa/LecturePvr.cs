@@ -57,6 +57,7 @@ namespace Projet_Onssa
                                     NumBc = bc.NumBc,
                                     NomFr = m.InfoFournisseur.Nom,
                                     Code = bc.InfoMorasse.CodeMorasse,
+                                    Mr = bc.InfoMorasse.Ligne.InfoLrg.DescriptionLrg,
                                     Objet = m.InfoConsultation.ObjetConsultation,
                                     Datebc = bc.DateBC,
                                     NumPvr = pvr.IdPVR,
@@ -76,6 +77,7 @@ namespace Projet_Onssa
                         CrystalReportPvr ce = new CrystalReportPvr();
                         ce.SetDataSource(ds);
                         ce.SetParameterValue("date", s);
+                        ce.SetParameterValue("mr", query.FirstOrDefault().Mr.ToString());
                         ce.SetParameterValue("datepvr", query.FirstOrDefault().DatePvr.ToString());
                         ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
                         ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());

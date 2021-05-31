@@ -960,6 +960,7 @@ namespace Projet_Onssa
         private void btn_Guide(object sender, EventArgs e)
         {
             label_txt.Name = "Guide";
+            label_txt.Name = "Guide";
             openchildform(new GuideApplication());
         }
 

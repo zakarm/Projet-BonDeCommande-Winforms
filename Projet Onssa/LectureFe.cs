@@ -87,56 +87,67 @@ namespace Projet_Onssa
 
 
                                 };
-                    int s = 0;
-                    foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).ListFournisseur)
+
+                    if(query.FirstOrDefault() != null)
                     {
+                    
+                        int s = 0;
+                        foreach (Fournisseur f in ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).ListFournisseur)
+                        {
                        
-                        row = ds.Lettre.NewRow();
-                        row[0] = ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).NumEnvoi + s;
-                        ds.Lettre.Rows.Add(row);
-                        s++;
-                    }
+                            row = ds.Lettre.NewRow();
+                            row[0] = ctx.ConsultationSet.Find(query.FirstOrDefault().idCon).NumEnvoi + s;
+                            ds.Lettre.Rows.Add(row);
+                            s++;
+                        }
                    
-                    int NumPvj = int.Parse(query.FirstOrDefault().NumPvj.ToString());
-                    int NumCon= int.Parse(query.FirstOrDefault().NumCon.ToString());
+                        int NumPvj = int.Parse(query.FirstOrDefault().NumPvj.ToString());
+                        int NumCon= int.Parse(query.FirstOrDefault().NumCon.ToString());
 
-                    //var query2 = from m in ctx.ModeleDevisSet
-                    //             join con in ctx.ConsultationSet
-                    //                on m.InfoConsultation.IdConsultation equals con.IdConsultation
-                    //             where con.IdConsultation == i
-                    //             select m;
+                        //var query2 = from m in ctx.ModeleDevisSet
+                        //             join con in ctx.ConsultationSet
+                        //                on m.InfoConsultation.IdConsultation equals con.IdConsultation
+                        //             where con.IdConsultation == i
+                        //             select m;
 
-                    dac.FillByCon(ds.ConsultationSet, NumCon);
+                        dac.FillByCon(ds.ConsultationSet, NumCon);
 
-                    dam.FillBypvj(ds.ModeleDevisSet, NumPvj, NumCon);
+                        dam.FillBypvj(ds.ModeleDevisSet, NumPvj, NumCon);
 
-                    CrystalReportFe ce = new CrystalReportFe();
-                    ce.SetDataSource(ds);
-                    ce.SetParameterValue("lrgD", query.FirstOrDefault().lrgD.ToString());
-                    ce.SetParameterValue("ligneD", query.FirstOrDefault().ligneD.ToString());
-                    ce.SetParameterValue("ParD", query.FirstOrDefault().ParD.ToString());
-                    ce.SetParameterValue("numfe", query.FirstOrDefault().Numfe.ToString());
-                    ce.SetParameterValue("if", query.FirstOrDefault().Ifn.ToString());
-                    ce.SetParameterValue("cnss", query.FirstOrDefault().Cnss.ToString());
-                    ce.SetParameterValue("enga", query.FirstOrDefault().Enga.ToString());
-                    ce.SetParameterValue("patent", query.FirstOrDefault().Patente.ToString());
-                    ce.SetParameterValue("dispo", query.FirstOrDefault().Dispo.ToString());
-                    ce.SetParameterValue("credit", query.FirstOrDefault().Credit.ToString());
-                    ce.SetParameterValue("depense", query.FirstOrDefault().Depense.ToString());
-                    ce.SetParameterValue("lrg", query.FirstOrDefault().Lrg.ToString());
-                    ce.SetParameterValue("par", query.FirstOrDefault().Par.ToString());
-                    ce.SetParameterValue("ligne", query.FirstOrDefault().Ligne.ToString());
-                    ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
-                    ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
-                    ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
-                    ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
-                    ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
-                    ce.SetParameterValue("adresse", query.FirstOrDefault().AdresseFour.ToString());
-                    ce.SetParameterValue("rc", query.FirstOrDefault().Rc.ToString());
+                        CrystalReportFe ce = new CrystalReportFe();
+                        ce.SetDataSource(ds);
+                        ce.SetParameterValue("lrgD", query.FirstOrDefault().lrgD.ToString());
+                        ce.SetParameterValue("ligneD", query.FirstOrDefault().ligneD.ToString());
+                        ce.SetParameterValue("ParD", query.FirstOrDefault().ParD.ToString());
+                        ce.SetParameterValue("numfe", query.FirstOrDefault().Numfe.ToString());
+                        ce.SetParameterValue("if", query.FirstOrDefault().Ifn.ToString());
+                        ce.SetParameterValue("cnss", query.FirstOrDefault().Cnss.ToString());
+                        ce.SetParameterValue("enga", query.FirstOrDefault().Enga.ToString());
+                        ce.SetParameterValue("patent", query.FirstOrDefault().Patente.ToString());
+                        ce.SetParameterValue("dispo", query.FirstOrDefault().Dispo.ToString());
+                        ce.SetParameterValue("credit", query.FirstOrDefault().Credit.ToString());
+                        ce.SetParameterValue("depense", query.FirstOrDefault().Depense.ToString());
+                        ce.SetParameterValue("lrg", query.FirstOrDefault().Lrg.ToString());
+                        ce.SetParameterValue("par", query.FirstOrDefault().Par.ToString());
+                        ce.SetParameterValue("ligne", query.FirstOrDefault().Ligne.ToString());
+                        ce.SetParameterValue("numbc", query.FirstOrDefault().NumBc.ToString());
+                        ce.SetParameterValue("nom", query.FirstOrDefault().NomFr.ToString());
+                        ce.SetParameterValue("objet", query.FirstOrDefault().Objet.ToString());
+                        ce.SetParameterValue("exercice", query.FirstOrDefault().Exercice.ToString());
+                        ce.SetParameterValue("compte", query.FirstOrDefault().Compte.ToString());
+                        ce.SetParameterValue("adresse", query.FirstOrDefault().AdresseFour.ToString());
+                        ce.SetParameterValue("rc", query.FirstOrDefault().Rc.ToString());
 
 
-                    crystalReportViewer1.ReportSource = ce;
-                    crystalReportViewer1.Refresh();
+                        crystalReportViewer1.ReportSource = ce;
+                        crystalReportViewer1.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur dans la bon de commande choisie dans la fiche d'engagement");
+
+                    }
+
                 }
             }
             catch(Exception ex)
