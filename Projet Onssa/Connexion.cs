@@ -64,5 +64,15 @@ namespace Projet_Onssa
         {
             txt_Password.isPassword = true;
         }
+
+        private void txt_Nom_Click(object sender, EventArgs e)
+        {
+            txt_Password.isPassword = true;
+        }
+
+        private void txt_Nom_Validated(object sender, EventArgs e)
+        {
+            txt_Password.isPassword = true;
+        }
     }
 }

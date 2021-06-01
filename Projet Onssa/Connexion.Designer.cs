@@ -164,6 +164,8 @@ namespace Projet_Onssa
             this.txt_Nom.Size = new System.Drawing.Size(335, 44);
             this.txt_Nom.TabIndex = 9;
             this.txt_Nom.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_Nom.Click += new System.EventHandler(this.txt_Nom_Click);
+            this.txt_Nom.Validated += new System.EventHandler(this.txt_Nom_Validated);
             // 
             // panel_banner
             // 
