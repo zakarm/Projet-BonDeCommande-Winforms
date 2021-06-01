@@ -132,7 +132,7 @@ namespace Projet_Onssa
             this.btn_Cnx.IconVisible = true;
             this.btn_Cnx.IconZoom = 90D;
             this.btn_Cnx.IsTab = false;
-            this.btn_Cnx.Location = new System.Drawing.Point(127, 387);
+            this.btn_Cnx.Location = new System.Drawing.Point(145, 386);
             this.btn_Cnx.Name = "btn_Cnx";
             this.btn_Cnx.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(38)))), ((int)(((byte)(77)))));
             this.btn_Cnx.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(117)))), ((int)(((byte)(253)))));

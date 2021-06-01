@@ -62,7 +62,7 @@ namespace Projet_Onssa
 
         private void txt_Password_Click(object sender, EventArgs e)
         {
-            
+            txt_Password.isPassword = true;
         }
     }
 }
