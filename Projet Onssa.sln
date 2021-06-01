@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Projet Onssa", "Projet Onssa\Projet Onssa.csproj", "{ACDA948D-F46F-4748-9868-32CDCC3E0E2F}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{38D56E3F-EF6C-47E8-A10F-F5759E9A8DF9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupOnssa", "SetupOnssa\SetupOnssa.vdproj", "{768E9BC0-3D66-41D6-AC0A-FC99925A82F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{ACDA948D-F46F-4748-9868-32CDCC3E0E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACDA948D-F46F-4748-9868-32CDCC3E0E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACDA948D-F46F-4748-9868-32CDCC3E0E2F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{38D56E3F-EF6C-47E8-A10F-F5759E9A8DF9}.Debug|Any CPU.ActiveCfg = Debug
-		{38D56E3F-EF6C-47E8-A10F-F5759E9A8DF9}.Release|Any CPU.ActiveCfg = Release
+		{768E9BC0-3D66-41D6-AC0A-FC99925A82F0}.Debug|Any CPU.ActiveCfg = Debug
+		{768E9BC0-3D66-41D6-AC0A-FC99925A82F0}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

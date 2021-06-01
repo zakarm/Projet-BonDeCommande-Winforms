@@ -614,6 +614,13 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Onssa_Db.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Onssa_Db_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>Onssa_Db.mdf</DependentUpon>
+    </Content>
     <Content Include="OnssaModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>OnssaModel.Context.cs</LastGenOutput>
@@ -624,13 +631,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>OnssaModel.cs</LastGenOutput>
       <DependentUpon>OnssaModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Onssa_Db.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Onssa_Db_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Onssa_Db.mdf</DependentUpon>
     </Content>
     <None Include="Resources\Sans titre-11.png" />
     <None Include="Resources\Sans titre-1.png" />

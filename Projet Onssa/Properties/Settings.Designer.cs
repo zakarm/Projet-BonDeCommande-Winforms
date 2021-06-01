@@ -28,16 +28,16 @@ namespace Projet_Onssa.Properties {
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Onssa_Db.mdf;" +
             "Integrated Security=True;Connect Timeout=30")]
-        public string Onssa_ProjetConnectionString1 {
+        public string Onssa_ProjetConnectionString {
             get {
-                return ((string)(this["Onssa_ProjetConnectionString1"]));
+                return ((string)(this["Onssa_ProjetConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Onssa_Db.mdf;" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;attachdbfilename=|DataDirectory|\\Onssa_Db.mdf;" +
             "Integrated Security=True;Connect Timeout=30")]
         public string Onssa_DbConnectionString {
             get {
@@ -48,11 +48,11 @@ namespace Projet_Onssa.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Onssa_Db.mdf;" +
-            "Integrated Security=True;Connect Timeout=30")]
-        public string Onssa_ProjetConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;attachdbfilename=|DataDirectory|\\App_Data\\Onss" +
+            "a_Db.mdf;Integrated Security=True;Connect Timeout=30")]
+        public string Onssa_ProjetConnectionString1 {
             get {
-                return ((string)(this["Onssa_ProjetConnectionString"]));
+                return ((string)(this["Onssa_ProjetConnectionString1"]));
             }
         }
     }
