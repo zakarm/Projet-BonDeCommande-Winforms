@@ -1317,7 +1317,7 @@ namespace Projet_Onssa
             this.label_cnx.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label_cnx.AutoSize = true;
             this.label_cnx.Font = new System.Drawing.Font("Bahnschrift SemiCondensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_cnx.Location = new System.Drawing.Point(966, 32);
+            this.label_cnx.Location = new System.Drawing.Point(967, 31);
             this.label_cnx.Name = "label_cnx";
             this.label_cnx.Size = new System.Drawing.Size(23, 25);
             this.label_cnx.TabIndex = 31;
