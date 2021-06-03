@@ -380,6 +380,9 @@ namespace Projet_Onssa
             // 
             // cartesianChart
             // 
+            this.cartesianChart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cartesianChart.Location = new System.Drawing.Point(15, 10);
             this.cartesianChart.Name = "cartesianChart";
             this.cartesianChart.Size = new System.Drawing.Size(709, 485);

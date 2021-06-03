@@ -805,6 +805,9 @@ namespace Projet_Onssa
         private void btn_Accueil_Click(object sender, EventArgs e)
         {
             openchildform(new Statistique());
+            btnPcsrs(false);
+            btnLcsrs(false);
+            btnMcsrs(false);
         }
 
         private void btn_Pvj_Click_1(object sender, EventArgs e)

@@ -262,7 +262,6 @@ namespace Projet_Onssa
             // 
             // date_delai
             // 
-            this.date_delai.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.date_delai.BackColor = System.Drawing.Color.Transparent;
             this.date_delai.BorderRadius = 0;
             this.date_delai.ForeColor = System.Drawing.Color.Black;
@@ -276,7 +275,6 @@ namespace Projet_Onssa
             // 
             // bunifuMetroTextbox3
             // 
-            this.bunifuMetroTextbox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -294,7 +292,6 @@ namespace Projet_Onssa
             // 
             // label4
             // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(32, 153);
@@ -305,7 +302,6 @@ namespace Projet_Onssa
             // 
             // date_envoi
             // 
-            this.date_envoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.date_envoi.BackColor = System.Drawing.Color.Transparent;
             this.date_envoi.BorderRadius = 0;
             this.date_envoi.ForeColor = System.Drawing.Color.Black;
@@ -319,7 +315,6 @@ namespace Projet_Onssa
             // 
             // bunifuMetroTextbox2
             // 
-            this.bunifuMetroTextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuMetroTextbox2.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuMetroTextbox2.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bunifuMetroTextbox2.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -337,7 +332,6 @@ namespace Projet_Onssa
             // 
             // label3
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(470, 85);
@@ -348,7 +342,6 @@ namespace Projet_Onssa
             // 
             // txt_numenvoi
             // 
-            this.txt_numenvoi.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_numenvoi.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.txt_numenvoi.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txt_numenvoi.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -366,7 +359,6 @@ namespace Projet_Onssa
             // 
             // label1
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(471, 15);
@@ -389,7 +381,6 @@ namespace Projet_Onssa
             // 
             // txtarea_Objet
             // 
-            this.txtarea_Objet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtarea_Objet.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.txtarea_Objet.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtarea_Objet.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
@@ -407,7 +398,6 @@ namespace Projet_Onssa
             // 
             // label6
             // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(31, 83);
@@ -418,7 +408,6 @@ namespace Projet_Onssa
             // 
             // cb_Num
             // 
-            this.cb_Num.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Num.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_Num.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.cb_Num.FormattingEnabled = true;
@@ -430,7 +419,6 @@ namespace Projet_Onssa
             // 
             // bunifuMetroTextbox1
             // 
-            this.bunifuMetroTextbox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bunifuMetroTextbox1.BackColor = System.Drawing.Color.White;
             this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -449,7 +437,6 @@ namespace Projet_Onssa
             // 
             // label8
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(31, 15);

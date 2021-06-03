@@ -57,7 +57,7 @@ namespace Projet_Onssa
 
 
 
-                    using (SqlConnection Conn = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30"))
+                    using (SqlConnection Conn = new SqlConnection(@"workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet"))
                     {
 
 
