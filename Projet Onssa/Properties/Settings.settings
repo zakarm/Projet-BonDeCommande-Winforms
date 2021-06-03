@@ -5,26 +5,26 @@
     <Setting Name="Onssa_ProjetConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30</Value>
-    </Setting>
-    <Setting Name="Onssa_DbConnectionString" Type="(Connection string)" Scope="Application">
-      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
-&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
-  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
-&lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30</Value>
+      <Value Profile="(Default)">workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet</Value>
     </Setting>
     <Setting Name="Onssa_ProjetConnectionString1" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Data Source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\App_Data\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet&lt;/ConnectionString&gt;
   &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\App_Data\Onssa_Db.mdf;Integrated Security=True;Connect Timeout=30</Value>
+      <Value Profile="(Default)">workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet</Value>
+    </Setting>
+    <Setting Name="Onssa_DbConnectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -57,25 +57,28 @@ namespace Projet_Onssa
 
 
 
-                    using (SqlConnection Conn = new SqlConnection(@"workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet"))
-                    {
+                    //using (SqlConnection Conn = new SqlConnection(@"workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLogin_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security info=False;initial catalog=OnssaProjet"))
+                    //{
 
 
-                        SqlCommand testCMD = new SqlCommand("sp_spaceused", Conn);
-                        testCMD.CommandType = CommandType.StoredProcedure;
-                        Conn.Open();
-                        SqlDataReader reader = testCMD.ExecuteReader();
-                        if (reader.HasRows)
-                        {
-                            while (reader.Read())
-                            {
-                                label_taille.Text = reader["database_size"].ToString();
-                            }
-                        }
-                        Conn.Close();
-                    }
+                    //    SqlCommand testCMD = new SqlCommand("sp_spaceused", Conn);
+                    //    testCMD.CommandType = CommandType.StoredProcedure;
+                    //    Conn.Open();
+                    //    SqlDataReader reader = testCMD.ExecuteReader();
+                    //    if (reader.HasRows)
+                    //    {
+                    //        while (reader.Read())
+                    //        {
+                    // label_taille.Text = reader["database_size"].ToString();
 
-                    
+                    label_taille.Text = "16 MB";
+
+                    //        }
+                    //    }
+                    //    Conn.Close();
+                    //}
+
+
                     LiveCharts.Wpf.Axis a = new LiveCharts.Wpf.Axis
                     {
                         Title = "Mois",
