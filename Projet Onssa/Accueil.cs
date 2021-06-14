@@ -151,6 +151,7 @@ namespace Projet_Onssa
             panel_submenu.Visible = true;
             btnPcsrs(false);
             btnMcsrs(true);
+            label_txt.Text = "Members";
 
         }
 
@@ -285,6 +286,7 @@ namespace Projet_Onssa
                     }
                 }
             }
+            label_txt.Text = "Gestion";
 
         }
 
@@ -359,7 +361,7 @@ namespace Projet_Onssa
         {
             label_txt.Name = "Gestion Compte";
             openchildform(new GestionCompteForm());
-            btnPcsrs(false);
+            btnPcsrs(true);
             btnLcsrs(false);
             btnMcsrs(false);
         }
@@ -732,6 +734,7 @@ namespace Projet_Onssa
 
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            label_txt.Text = "Morasse";
             btnLcsrs(true);
             btnMcsrs(false);
             btnPcsrs(false);
@@ -804,8 +807,9 @@ namespace Projet_Onssa
 
         private void btn_Accueil_Click(object sender, EventArgs e)
         {
+            label_txt.Text = "Accueil";
             openchildform(new Statistique());
-            btnPcsrs(false);
+            btnPcsrs(true);
             btnLcsrs(false);
             btnMcsrs(false);
         }

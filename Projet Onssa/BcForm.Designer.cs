@@ -29,7 +29,6 @@ namespace Projet_Onssa
         /// </summary>
         private void InitializeComponent()
         {
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -37,7 +36,6 @@ namespace Projet_Onssa
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_NumBc = new System.Windows.Forms.ComboBox();
             this.txt_Destination = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txt_Delai = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.cb_Morasse = new System.Windows.Forms.ComboBox();
             this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -70,22 +68,13 @@ namespace Projet_Onssa
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_Delai = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel12.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(35, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 20);
-            this.label3.TabIndex = 143;
-            this.label3.Text = "Delai Execution ";
             // 
             // label1
             // 
@@ -179,24 +168,6 @@ namespace Projet_Onssa
             this.txt_Destination.TabIndex = 145;
             this.txt_Destination.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // txt_Delai
-            // 
-            this.txt_Delai.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_Delai.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_Delai.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Delai.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
-            this.txt_Delai.BorderThickness = 1;
-            this.txt_Delai.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_Delai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txt_Delai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt_Delai.isPassword = false;
-            this.txt_Delai.Location = new System.Drawing.Point(39, 189);
-            this.txt_Delai.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_Delai.Name = "txt_Delai";
-            this.txt_Delai.Size = new System.Drawing.Size(375, 35);
-            this.txt_Delai.TabIndex = 146;
-            this.txt_Delai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // bunifuMetroTextbox2
             // 
             this.bunifuMetroTextbox2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -269,9 +240,9 @@ namespace Projet_Onssa
             this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(475, 165);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 20);
+            this.label5.Size = new System.Drawing.Size(69, 20);
             this.label5.TabIndex = 143;
-            this.label5.Text = "Delai Execution ";
+            this.label5.Text = "Date bc";
             // 
             // cb_Pvj
             // 
@@ -671,6 +642,35 @@ namespace Projet_Onssa
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold);
             this.bunifuFlatButton2.Click += new System.EventHandler(this.btn_Ajouter_Click);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(35, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 20);
+            this.label3.TabIndex = 143;
+            this.label3.Text = "Delai Execution ";
+            // 
+            // txt_Delai
+            // 
+            this.txt_Delai.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_Delai.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Delai.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Delai.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
+            this.txt_Delai.BorderThickness = 1;
+            this.txt_Delai.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_Delai.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txt_Delai.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt_Delai.isPassword = false;
+            this.txt_Delai.Location = new System.Drawing.Point(39, 189);
+            this.txt_Delai.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_Delai.Name = "txt_Delai";
+            this.txt_Delai.Size = new System.Drawing.Size(375, 35);
+            this.txt_Delai.TabIndex = 146;
+            this.txt_Delai.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // BcForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -696,14 +696,12 @@ namespace Projet_Onssa
         }
 
         #endregion
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cb_NumBc;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Delai;
         private Bunifu.Framework.UI.BunifuMetroTextbox txt_Destination;
         private System.Windows.Forms.ComboBox cb_Morasse;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
@@ -737,5 +735,7 @@ namespace Projet_Onssa
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txt_Delai;
+        private System.Windows.Forms.Label label3;
     }
 }

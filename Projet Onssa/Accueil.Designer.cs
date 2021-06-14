@@ -274,7 +274,7 @@ namespace Projet_Onssa
             this.btn_Mamber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(109)))), ((int)(((byte)(239)))));
             this.btn_Mamber.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btn_Mamber.BorderRadius = 0;
-            this.btn_Mamber.ButtonText = "   Mambre";
+            this.btn_Mamber.ButtonText = "   Membres";
             this.btn_Mamber.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_Mamber.DisabledColor = System.Drawing.Color.Gray;
             this.btn_Mamber.Dock = System.Windows.Forms.DockStyle.Top;
@@ -298,7 +298,7 @@ namespace Projet_Onssa
             this.btn_Mamber.selected = false;
             this.btn_Mamber.Size = new System.Drawing.Size(66, 48);
             this.btn_Mamber.TabIndex = 12;
-            this.btn_Mamber.Text = "   Mambre";
+            this.btn_Mamber.Text = "   Membres";
             this.btn_Mamber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_Mamber.Textcolor = System.Drawing.Color.White;
             this.btn_Mamber.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

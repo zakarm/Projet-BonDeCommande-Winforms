@@ -154,7 +154,6 @@ namespace Projet_Onssa
                         pv.InfoFournisseur = f;
 
                         ctx.PVJSet.Add(pv);
-
                         ctx.SaveChanges();
                         cb_NumPvj.DataSource = ctx.PVJSet.ToList();
                         MessageBox.Show("Ajouté avec succès");
@@ -230,7 +229,7 @@ namespace Projet_Onssa
                         Fournisseur f  = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
                         pn.ListFournisseursRepondu.Clear();
                         pn.ListCommissions.Clear();
-                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
+                        
 
 
                         if (check(dgv_Commission, pn, ctx) == true && check(dgv_Fournisseur_Rep, pn, ctx) == true && cb_fchoisie.Text != "")
@@ -241,7 +240,7 @@ namespace Projet_Onssa
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
                             pn.DatePvj = date_Pvj.Value;
-                            pn.InfoFournisseur = f;
+                            pn.InfoFournisseur = f;ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
 
                             ctx.SaveChanges();
 
