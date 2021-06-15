@@ -224,9 +224,15 @@ namespace Projet_Onssa
                 {
                     try
                     {
+
+                        
                         
                         Consultation c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                         Fournisseur f  = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
+                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+
+                        ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
                         pn.ListFournisseursRepondu.Clear();
                         pn.ListCommissions.Clear();
                         
@@ -236,11 +242,12 @@ namespace Projet_Onssa
                         {
 
 
-                            
+
+                           
                             pn.NumPvj = cb_NumPvj.Text;
                             pn.InfoConsultation = c;
                             pn.DatePvj = date_Pvj.Value;
-                            pn.InfoFournisseur = f;ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
+                            pn.InfoFournisseur = f;
 
                             ctx.SaveChanges();
 
@@ -292,7 +299,7 @@ namespace Projet_Onssa
                 using (OnssaModelContainer4 ctx = new OnssaModelContainer4())
                 {
                     pn = ctx.PVJSet.Find(cb_NumPvj.SelectedValue);
-                    cb_NumC.Text = pn.InfoConsultation.NumConsultation;
+                    cb_NumC.SelectedValue = pn.InfoConsultation.IdConsultation;
                     date_Pvj.Value = pn.DatePvj;
                     cb_fchoisie.Text = pn.InfoFournisseur.Nom;
 
