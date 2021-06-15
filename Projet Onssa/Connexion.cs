@@ -57,7 +57,8 @@ namespace Projet_Onssa
 
         private void Connexion_Load(object sender, EventArgs e)
         {
-            txt_Password.isPassword = true;
+            
+                txt_Password.isPassword = true;
         }
 
         private void txt_Password_Click(object sender, EventArgs e)

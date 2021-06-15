@@ -136,7 +136,7 @@ namespace Projet_Onssa
                 {
                     try
                     {
-                        ctx.Entry(bc).State = System.Data.Entity.EntityState.Modified;
+                        
                         PVJ p = ctx.PVJSet.Find(cb_Pvj.SelectedValue);
                         Morasse m = ctx.MorasseSet.Find(cb_Morasse.SelectedValue);
                         bc.NumBc = cb_NumBc.Text;
@@ -145,6 +145,7 @@ namespace Projet_Onssa
                         bc.Destination = txt_Destination.Text;
                         bc.InfoMorasse = m;
                         bc.InfoPVJ = p;
+                        ctx.Entry(bc).State = System.Data.Entity.EntityState.Modified;
                         ctx.SaveChanges();
                         MessageBox.Show("Modifié avec succès");
                         cb_NumBc.DataSource = ctx.BCSet.ToList();

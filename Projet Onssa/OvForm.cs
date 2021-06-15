@@ -128,7 +128,7 @@ namespace Projet_Onssa
                     }
                     catch (System.Data.Entity.Infrastructure.DbUpdateException )
                     {
-                        MessageBox.Show("lordre de virement est déja utilisé ");
+                        MessageBox.Show("l'ordre de virement est déja utilisé ");
                     }
                     catch (Exception ex)
                     {
