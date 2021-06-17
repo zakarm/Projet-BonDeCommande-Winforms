@@ -29,6 +29,17 @@ namespace Projet_Onssa.Properties {
         [global::System.Configuration.DefaultSettingValueAttribute("workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLog" +
             "in_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security inf" +
             "o=False;initial catalog=OnssaProjet")]
+        public string Onssa_DbConnectionString {
+            get {
+                return ((string)(this["Onssa_DbConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute(" Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Onssa_Db.mdf" +
+            ";Integrated Security=True;Connect Timeout=30")]
         public string Onssa_ProjetConnectionString {
             get {
                 return ((string)(this["Onssa_ProjetConnectionString"]));
@@ -38,24 +49,11 @@ namespace Projet_Onssa.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLog" +
-            "in_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security inf" +
-            "o=False;initial catalog=OnssaProjet")]
+        [global::System.Configuration.DefaultSettingValueAttribute(" Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Onssa_Db.mdf" +
+            ";Integrated Security=True;Connect Timeout=30")]
         public string Onssa_ProjetConnectionString1 {
             get {
                 return ((string)(this["Onssa_ProjetConnectionString1"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("workstation id=OnssaProjet.mssql.somee.com;packet size=4096;user id=zakarm_SQLLog" +
-            "in_1;pwd=g9b9ychmvx;data source=OnssaProjet.mssql.somee.com;persist security inf" +
-            "o=False;initial catalog=OnssaProjet")]
-        public string Onssa_DbConnectionString {
-            get {
-                return ((string)(this["Onssa_DbConnectionString"]));
             }
         }
     }
