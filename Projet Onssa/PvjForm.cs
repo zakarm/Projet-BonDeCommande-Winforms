@@ -230,7 +230,7 @@ namespace Projet_Onssa
                         Consultation c = ctx.ConsultationSet.Find(cb_NumC.SelectedValue);
                         ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
                         Fournisseur f  = ctx.FournisseurSet.Find(cb_fchoisie.SelectedValue);
-                        ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
+                        //ctx.Entry(c).State = System.Data.Entity.EntityState.Modified;
 
                         ctx.Entry(pn).State = System.Data.Entity.EntityState.Modified;
                         pn.ListFournisseursRepondu.Clear();
